@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import Link from 'next/link';
 import useWindowSize from '../../utils/ResizeHook';
 import {NavbarData} from '../../data/SiteData'
 
@@ -38,9 +39,13 @@ const Navbar = () => {
           </a>
           {
             NavbarData.map((navItem, _) => {
-              return <a href={navItem.link}>
-                  <div className="navbar-elem">{navItem.name}</div>
-                </a>
+              return (
+                <Link href={navItem.link}>
+                  <a>
+                    <div className="navbar-elem">{navItem.name}</div>
+                  </a>
+                </Link>
+              )
             })
           }
         </div>

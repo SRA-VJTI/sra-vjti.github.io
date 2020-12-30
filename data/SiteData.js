@@ -25,7 +25,7 @@ const NavbarData = [
   },
   {
     "name" : "Contact us",
-    "link" : "#"
+    "link" : "/contactus"
   },
 ];
 
@@ -51,7 +51,7 @@ const reachImgNames = [
   "10.png",
   "11.png",
   "12.png",
-  "13.jpg",
+  "13.png",
   "14.png",
   "15.jpg",
   "16.png",
