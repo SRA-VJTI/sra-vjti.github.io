@@ -5,7 +5,7 @@ const NavbarData = [
   },
   {
     "name" : "Teams",
-    "link" : "#"
+    "link" : "/teams"
   },
   {
     "name" : "Activities",

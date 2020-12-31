@@ -1,21 +1,21 @@
 import {notifData} from '../../data/SiteData'
+import styles from './HomeNotifs.module.scss'
 
 const HomeNotifs = () => {
 
   return (
     <>
-      <div id="notifs">
+      <div className={styles.notifs}>
         <h1>Notifications</h1>
-        <div id="notifs-main">
+        <div className={styles.notifsMain}>
           {
             notifData.map((notif, _) => {
-              return <div className="notif">{notif}</div>
+              return <div className={styles.notif}>{notif}</div>
             })
           }
         </div>
       </div>
-    </>
-    
+    </> 
   )
 }
 

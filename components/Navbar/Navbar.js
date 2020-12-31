@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import styles from './Navbar.module.scss';
 import Link from 'next/link';
 import useWindowSize from '../../utils/ResizeHook';
 import {NavbarData} from '../../data/SiteData'
@@ -9,8 +10,9 @@ const Navbar = () => {
   const size = useWindowSize();
 
   useEffect(() => {
-    if(isNavbarDown && size.width < 720){
-      setIsNavbarDown(false);
+    if(size.width > 720){
+      navbar.style.clipPath = "circle(150% at 100% 0%)";
+      setIsNavbarDown(true);
     }
   }, [size])
 
@@ -27,22 +29,25 @@ const Navbar = () => {
 
   return (
     <>
-      <nav id="navbar">
-        <div id="navbar-toggle">
-          <img onClick={onKhopdiClick} src="/static/images/KhopdiBaba.svg" id="khopdi" alt=""/>
+      <nav className={styles.navbar} id="navbar">
+        <div className={styles.navbarToggle} id="navbar-toggle">
+          <img onClick={onKhopdiClick} src="/static/images/KhopdiBaba.svg" className={styles.khopdi} id="khopdi" alt=""/>
         </div>
-        <div id="navbar-elem-list">
-          <a href="#">
-            <div className="navbar-elem" id="nav-home">
-              <img src={"/static/images/SRA_logo.png"} alt="" />
-            </div>
-          </a>
+        <div className={styles.navbarElemList} id="navbar-elem-list">
+          <Link href="/">
+            <a>
+              <div className={styles.navHome} id="nav-home">
+                <img className={styles.sraLogo} src={"/static/images/SRA_logo.png"} alt="" />
+              </div>
+            </a>
+          </Link>
+          
           {
             NavbarData.map((navItem, _) => {
               return (
                 <Link href={navItem.link}>
                   <a>
-                    <div className="navbar-elem">{navItem.name}</div>
+                    <div className={styles.navbarElem}>{navItem.name}</div>
                   </a>
                 </Link>
               )

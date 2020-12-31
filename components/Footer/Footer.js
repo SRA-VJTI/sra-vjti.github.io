@@ -1,3 +1,4 @@
+import styles from './Footer.module.scss'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import {socialMediaLinks} from '../../data/SiteData'
@@ -5,9 +6,9 @@ import {socialMediaLinks} from '../../data/SiteData'
 const Footer = () => {
   return (
     <>
-      <footer id="footer">
+      <footer className={styles.footer}>
         <h3>Connect with us</h3>
-        <div id="footer-icons">
+        <div className={styles.footerIcons}>
           <a href={socialMediaLinks.facebook} target="_blank">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
