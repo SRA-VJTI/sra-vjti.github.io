@@ -1,7 +1,7 @@
 const NavbarData = [
   {
     "name" : "Projects",
-    "link" : "#"
+    "link" : "/projects"
   },
   {
     "name" : "Teams",
@@ -72,4 +72,100 @@ const socialMediaLinks = {
   "instagram" : "https://www.instagram.com/sra_vjti"
 }
 
-export {NavbarData, HeroTags, aboutUsText, aboutUsTeamText, aboutUsAlumniText, reachImgNames, notifData, socialMediaLinks};
+
+const flagshipProjects = [
+  {
+    imgName : "proj-placeholder.jpg",
+    name: "Avitra",
+    sub: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, modi? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, repellendus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum sed ut nisi, rem distinctio porro perspiciatis rerum, ab amet necessitatibus quis, iure esse consectetur alias inventore tempore. Quia, nam.",
+    githubLink: ""
+  },
+  {
+    imgName : "proj-placeholder.jpg",
+    name: "Avitra",
+    sub: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, modi? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, repellendus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum sed ut nisi, rem distinctio porro perspiciatis rerum, ab amet necessitatibus quis, iure esse consectetur alias inventore tempore. Quia, nam.",
+    githubLink: ""
+  },
+  {
+    imgName : "proj-placeholder.jpg",
+    name: "Avitra",
+    sub: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, modi? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, repellendus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit harum sed ut nisi, rem distinctio porro perspiciatis rerum, ab amet necessitatibus quis, iure esse consectetur alias inventore tempore. Quia, nam.",
+    githubLink: ""
+  },
+]
+
+const eklavyaProjectList = [
+  {
+    "year" : "2019",
+    "projects" : [
+      {
+        name : "Gesture controlled mouse with OpenCV",
+        imgName : "trial-project.jpg",
+        sub: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, reiciendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, ab. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, cumque.",
+        githubLink: ""
+      },
+      {
+        name : "Gesture controlled mouse with OpenCV",
+        imgName : "trial-project.jpg",
+        sub: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, reiciendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, ab. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, cumque.",
+        githubLink: ""
+      },
+      {
+        name : "Gesture controlled mouse with OpenCV",
+        imgName : "trial-project.jpg",
+        sub: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, reiciendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, ab. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, cumque.",
+        githubLink: ""
+      },
+      {
+        name : "Gesture controlled mouse with OpenCV",
+        imgName : "trial-project.jpg",
+        sub: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, reiciendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, ab. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, cumque.",
+        githubLink: ""
+      },
+      {
+        name : "Gesture controlled mouse with OpenCV",
+        imgName : "trial-project.jpg",
+        sub: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, reiciendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, ab. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, cumque.",
+        githubLink: ""
+      },
+    ]
+  },
+  {
+    "year" : "2018",
+    "projects" : [
+      {
+        name : "Gesture controlled mouse with OpenCV",
+        imgName : "trial-project.jpg",
+        sub: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, reiciendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, ab. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, cumque.",
+        githubLink: ""
+      },
+      {
+        name : "Gesture controlled mouse with OpenCV",
+        imgName : "trial-project.jpg",
+        sub: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, reiciendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, ab. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, cumque.",
+        githubLink: ""
+      },
+      {
+        name : "Gesture controlled mouse with OpenCV",
+        imgName : "trial-project.jpg",
+        sub: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, reiciendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, ab. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, cumque.",
+        githubLink: ""
+      },
+      {
+        name : "Gesture controlled mouse with OpenCV",
+        imgName : "trial-project.jpg",
+        sub: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, reiciendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, ab. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, cumque.",
+        githubLink: ""
+      },
+      {
+        name : "Gesture controlled mouse with OpenCV",
+        imgName : "trial-project.jpg",
+        sub: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum, reiciendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, ab. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, cumque.",
+        githubLink: ""
+      },
+    ]
+  },
+  
+] 
+
+export {NavbarData, HeroTags, aboutUsText, aboutUsTeamText, aboutUsAlumniText, reachImgNames, notifData, socialMediaLinks, flagshipProjects, eklavyaProjectList};
