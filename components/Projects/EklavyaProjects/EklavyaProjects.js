@@ -7,17 +7,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useRef, useState } from 'react';
 
 const EklavyaProjects = () => {
-
-  
-
   return (
     <>
       <Hero imgName={"eklavya-hero-final.jpg"} backgroundPosition={"center top"} title={<>Eklavya Projects</>} subtitleList={["Nurturing the future"]} isHome={false}/>
       <div className={styles.eklavyaTotal} id="is">
         <div className={styles.eklavyaYearCloud}>
-          <a className={styles.eklavyaYearTag} href="#2019">2019</a>
-          <a className={styles.eklavyaYearTag} href="#2018">2018</a>
-          <a className={styles.eklavyaYearTag} href="#2017">2017</a>
+          {
+            eklavyaProjectList.map((year, _) => {
+              return <a className={styles.eklavyaYearTag} href={`#${year.year}`}>{year.year}</a>
+            })
+          }
         </div>
       </div>
       

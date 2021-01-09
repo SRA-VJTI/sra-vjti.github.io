@@ -9,20 +9,16 @@ const NavbarData = [
   },
   {
     "name" : "Activities",
-    "link" : "#"
-  },
-  {
-    "name" : "Startups",
-    "link" : "#"
+    "link" : "/activities"
   },
   {
     "name" : "Achievements",
-    "link" : "#"
+    "link" : "/achievements"
   },
-  {
-    "name" : "Blog",
-    "link" : "#"
-  },
+  // {
+  //   "name" : "Blog",
+  //   "link" : "#"
+  // },
   {
     "name" : "Contact us",
     "link" : "/contactus"
@@ -165,7 +161,201 @@ const eklavyaProjectList = [
       },
     ]
   },
-  
 ] 
 
-export {NavbarData, HeroTags, aboutUsText, aboutUsTeamText, aboutUsAlumniText, reachImgNames, notifData, socialMediaLinks, flagshipProjects, eklavyaProjectList};
+const activitiesList = [
+  {
+    name: "Workshops",
+    activities : [
+      {
+        imgName: "walle.jpg",
+        name : "Wall E",
+        sub: "The Wall-E workshop focuses on the concepts of line-following and self-balancing, using ESP32, a powerful micro-controller with features like inbuilt Wi-Fi support and BLE, with extensive application in several domains like IoT, RF, etc."
+      },
+      {
+        imgName: "walle.jpg",
+        name : "Wall E",
+        sub: "The Wall-E workshop focuses on the concepts of line-following and self-balancing, using ESP32, a powerful micro-controller with features like inbuilt Wi-Fi support and BLE, with extensive application in several domains like IoT, RF, etc."
+      },
+      {
+        imgName: "walle.jpg",
+        name : "Wall E",
+        sub: "The Wall-E workshop focuses on the concepts of line-following and self-balancing, using ESP32, a powerful micro-controller with features like inbuilt Wi-Fi support and BLE, with extensive application in several domains like IoT, RF, etc."
+      },
+    ]
+  },
+  {
+    name: "Competitions",
+    activities : [
+      {
+        imgName: "walle.jpg",
+        name : "Wall E",
+        sub: "The Wall-E workshop focuses on the concepts of line-following and self-balancing, using ESP32, a powerful micro-controller with features like inbuilt Wi-Fi support and BLE, with extensive application in several domains like IoT, RF, etc."
+      },
+      {
+        imgName: "walle.jpg",
+        name : "Wall E",
+        sub: "The Wall-E workshop focuses on the concepts of line-following and self-balancing, using ESP32, a powerful micro-controller with features like inbuilt Wi-Fi support and BLE, with extensive application in several domains like IoT, RF, etc."
+      },
+      {
+        imgName: "walle.jpg",
+        name : "Wall E",
+        sub: "The Wall-E workshop focuses on the concepts of line-following and self-balancing, using ESP32, a powerful micro-controller with features like inbuilt Wi-Fi support and BLE, with extensive application in several domains like IoT, RF, etc."
+      },
+    ]
+  },
+]
+
+const achsList = [
+  {
+    year : "2019",
+    achs : [
+      {
+        name : "Lorem Ipsum",
+        imgName : "ach-plac.jpg"
+      },
+      {
+        name : "Lorem Ipsum",
+        imgName : "ach-plac.jpg"
+      },
+      {
+        name : "Lorem Ipsum",
+        imgName : "ach-plac.jpg"
+      },
+      {
+        name : "Lorem Ipsum",
+        imgName : "ach-plac.jpg"
+      },
+      {
+        name : "Lorem Ipsum",
+        imgName : "ach-plac.jpg"
+      },
+      {
+        name : "Lorem Ipsum",
+        imgName : "ach-plac.jpg"
+      },
+    ]
+  },
+  {
+    year : "2018",
+    achs : [
+      {
+        name : "Lorem Ipsum",
+        imgName : "ach-plac.jpg"
+      },
+      {
+        name : "Lorem Ipsum",
+        imgName : "ach-plac.jpg"
+      },
+      {
+        name : "Lorem Ipsum",
+        imgName : "ach-plac.jpg"
+      },
+      {
+        name : "Lorem Ipsum",
+        imgName : "ach-plac.jpg"
+      },
+    ]
+  },
+]
+
+const teachersInchargeList = [
+  {
+    name : "Nikhil Jain",
+    imgName : "prof-plac1.jpg",
+    sub: <>Professor of Mathematics, VJTI. <br />
+    PhD in Informatics IIT Bombay.</>,
+    linkedInLink : "",
+    githubLink: ""
+  },
+  {
+    name : "Nikhil Jain",
+    imgName : "prof-plac1.jpg",
+    sub: <>Professor of Mathematics, VJTI. <br />
+    PhD in Informatics IIT Bombay.</>,
+    linkedInLink : "",
+    githubLink: ""
+  },
+  {
+    name : "Nikhil Jain",
+    imgName : "prof-plac1.jpg",
+    sub: <>Professor of Mathematics, VJTI. <br />
+    PhD in Informatics IIT Bombay.</>,
+    linkedInLink : "",
+    githubLink: ""
+  },
+]
+
+const currentList = [
+  {
+    name : "Nikhil Jain",
+    imgName : "prof-plac1.jpg",
+    sub: <>Professor of Mathematics, VJTI. <br />
+    PhD in Informatics IIT Bombay.</>,
+    linkedInLink : "",
+    githubLink: ""
+  },
+  {
+    name : "Nikhil Jain",
+    imgName : "prof-plac1.jpg",
+    sub: <>Professor of Mathematics, VJTI. <br />
+    PhD in Informatics IIT Bombay.</>,
+    linkedInLink : "",
+    githubLink: ""
+  },
+  {
+    name : "Nikhil Jain",
+    imgName : "prof-plac1.jpg",
+    sub: <>Professor of Mathematics, VJTI. <br />
+    PhD in Informatics IIT Bombay.</>,
+    linkedInLink : "",
+    githubLink: ""
+  },
+]
+
+const alumniList = [
+  {
+    "year" : "2019",
+    "alumnis" : [
+      {
+        name : "Nikhil Jain",
+        imgName : "alumnus1.jpg",
+        sub: <>Professor of Mathematics, VJTI. <br />
+        PhD in Informatics IIT Bombay.</>,
+        linkedInLink : "",
+        githubLink: ""
+      },
+      {
+        name : "Nikhil Jain",
+        imgName : "alumnus2.jpg",
+        sub: <>Professor of Mathematics, VJTI. <br />
+        PhD in Informatics IIT Bombay.</>,
+        linkedInLink : "",
+        githubLink: ""
+      }
+    ]
+  },
+  {
+    "year" : "2018",
+    "alumnis" : [
+      {
+        name : "Nikhil Jain",
+        imgName : "alumnus1.jpg",
+        sub: <>Professor of Mathematics, VJTI. <br />
+        PhD in Informatics IIT Bombay.</>,
+        linkedInLink : "",
+        githubLink: ""
+      },
+      {
+        name : "Nikhil Jain",
+        imgName : "alumnus2.jpg",
+        sub: <>Professor of Mathematics, VJTI. <br />
+        PhD in Informatics IIT Bombay.</>,
+        linkedInLink : "",
+        githubLink: ""
+      }
+    ]
+  }
+] 
+
+export {NavbarData, HeroTags, aboutUsText, aboutUsTeamText, aboutUsAlumniText, reachImgNames, notifData, socialMediaLinks, flagshipProjects, eklavyaProjectList, activitiesList, achsList, teachersInchargeList, currentList, alumniList};

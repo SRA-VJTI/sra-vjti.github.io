@@ -3,75 +3,22 @@ import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import Hero from '../../Hero/Hero';
 import styles from './Alumni.module.scss';
 import Person from '../../Person/Person';
+import { alumniList } from '../../../data/SiteData';
 
 const Alumni = () => {
-
-  const alumniList = [
-    {
-      "year" : "2019",
-      "alumnis" : [
-        {
-          name : "Nikhil Jain",
-          imgName : "alumnus1.jpg",
-          sub: <>Professor of Mathematics, VJTI. <br />
-          PhD in Informatics IIT Bombay.</>,
-          linkedInLink : "",
-          githubLink: ""
-        },
-        {
-          name : "Nikhil Jain",
-          imgName : "alumnus2.jpg",
-          sub: <>Professor of Mathematics, VJTI. <br />
-          PhD in Informatics IIT Bombay.</>,
-          linkedInLink : "",
-          githubLink: ""
-        }
-      ]
-    },
-    {
-      "year" : "2018",
-      "alumnis" : [
-        {
-          name : "Nikhil Jain",
-          imgName : "alumnus1.jpg",
-          sub: <>Professor of Mathematics, VJTI. <br />
-          PhD in Informatics IIT Bombay.</>,
-          linkedInLink : "",
-          githubLink: ""
-        },
-        {
-          name : "Nikhil Jain",
-          imgName : "alumnus2.jpg",
-          sub: <>Professor of Mathematics, VJTI. <br />
-          PhD in Informatics IIT Bombay.</>,
-          linkedInLink : "",
-          githubLink: ""
-        }
-      ]
-    }
-  ] 
-
   return (
     <>
       <Hero imgName={"alumni-hero-final.jpg"} title={<>Alumni</>} subtitleList={["Lighting the way for generations to come."]} isHome={false}/>
       
       <div className={styles.alumni}>
         <div className={styles.alumniCloud}>
-          <a href="#2019" className={styles.alumniCloudElem}>
-            <div>2019</div>
-          </a>
-          <a href="#2018" className={styles.alumniCloudElem}>
-            <div>2018</div>
-          </a>
-          <a href="#" className={styles.alumniCloudElem}>
-            <div>2017</div>
-          </a>
-          <a href="#" className={styles.alumniCloudElem}>
-            <div>2016</div>
-          </a>
-          <a href="#" className={styles.alumniCloudElem}>
-            <div>2015</div>
-          </a>
+          {
+            alumniList.map((year, _) => {
+              return <a href={`#${year.year}`} className={styles.alumniCloudElem}>
+                <div>{year.year}</div>
+              </a>
+            })
+          }
         </div>
         {
           alumniList.map((alumniYear, _) => {

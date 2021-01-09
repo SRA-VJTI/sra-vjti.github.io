@@ -1,0 +1,73 @@
+@import "../variables";
+
+.activitySectionTitle {
+	font-size: 2rem;
+	text-align: center;
+	width: 50%;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 1em;
+	padding-bottom: 0.5em;
+	border-bottom: 2px solid $light;
+}
+
+.activity {
+	width: 70%;
+	height: 45vh;
+	margin: 5em auto;
+  
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	.activityImg {
+		// margin-right: 1em;
+		width: 30%;
+		height: 100%;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.activityCont {
+		width: 70%;
+		height: 100%;
+		padding: 2em;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		line-height: 250%;
+		.activityContName {
+			font-size: 2rem;
+			margin-bottom: 20px;
+			padding-bottom: 0.15em;
+			transition: border-bottom 0.3s;
+			border-bottom: 1px solid $lightest;
+		}
+		.activityContSub {
+			font-size: 1rem;
+			margin-bottom: 10px;
+		}
+	}
+	&:hover {
+		.activityCont {
+			.activityContName {
+				border-bottom: 1px solid $light;
+			}
+		}
+	}
+	@media (max-width: 750px) {
+		width: 90%;
+		margin: 1em auto;
+		height: 100vh;
+		flex-direction: column;
+		.activityImg {
+			width: 100%;
+			// background-image: 100vw;
+		}
+		.activityCont {
+			width: 100%;
+			height: max-content;
+		}
+	}
+}
