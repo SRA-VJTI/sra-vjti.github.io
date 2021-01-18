@@ -43,7 +43,7 @@ const Hero = ({
 				)}
 			</div>
 			{isHome && (
-				<div className={styles.is}>
+				<div className={styles.is} id="is">
 					<div
 						style={{
 							backgroundImage: `linear-gradient(#00000081, #00000081),
