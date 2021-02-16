@@ -1,11 +1,11 @@
-import Achievements from "../components/Achievements/Achievements"
+import Achievements from '../components/Achievements/Achievements';
 
 const AchievementsPage = () => {
   return (
     <>
-			<Achievements />
-		</>
+      <Achievements />
+    </>
   );
-}
+};
 
 export default AchievementsPage;

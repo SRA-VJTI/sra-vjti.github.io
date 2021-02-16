@@ -1,9 +1,7 @@
-import ProjectSelection from "../../components/Projects/ProjectSelection/ProjectSelection";
+import ProjectSelection from '../../components/Projects/ProjectSelection/ProjectSelection';
 
 const ProjectSelectionPage = () => {
-  return (
-    <ProjectSelection />
-  );
-}
+  return <ProjectSelection />;
+};
 
 export default ProjectSelectionPage;

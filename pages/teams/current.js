@@ -1,4 +1,4 @@
-import Current from "../../components/Teams/Current/Current";
+import Current from '../../components/Teams/Current/Current';
 
 const CurrentPage = () => {
   return (
@@ -6,6 +6,6 @@ const CurrentPage = () => {
       <Current />
     </>
   );
-}
+};
 
 export default CurrentPage;

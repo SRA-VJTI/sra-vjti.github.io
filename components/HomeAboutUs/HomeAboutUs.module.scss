@@ -1,127 +1,127 @@
-@import "../variables";
+@import '../variables';
 
 .aboutUs {
-	width: 100%;
-	// background-color: rgb(49, 49, 49);
-	.aboutUsMain {
-		width: 100%;
-		background-image: linear-gradient(#00000081, #00000081),
-			url("/static/images/aboutus-final.jpg");
-		min-height: 60vh;
-		padding: 3em 0.5em;
-		background-position: center;
-		background-size: cover;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		font-family: "Oswald", sans-serif;
-		color: white;
-		h1 {
-			font-size: 3rem;
-			// color: $lightest;
-		}
-		p {
-			font-family: sans-serif;
-			font-size: 1.1rem;
-			width: 90%;
-			line-height: 165%;
-			padding: 1em;
-			text-align: center;
-			// margin-top: 20px;
-		}
-	}
+  width: 100%;
+  // background-color: rgb(49, 49, 49);
+  .aboutUsMain {
+    width: 100%;
+    background-image: linear-gradient(#00000081, #00000081),
+      url('/static/images/aboutus-final.jpg');
+    min-height: 60vh;
+    padding: 3em 0.5em;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    h1 {
+      font-size: 3rem;
+      // color: $lightest;
+    }
+    p {
+      font-family: sans-serif;
+      font-size: 1.1rem;
+      width: 90%;
+      line-height: 165%;
+      padding: 1em;
+      text-align: center;
+      // margin-top: 20px;
+    }
+  }
 
-	.aboutUsTeam,
-	.aboutUsAlumni {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		img {
-			width: 50%;
-			// height: 50vh;
-		}
+  .aboutUsTeam,
+  .aboutUsAlumni {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      width: 50%;
+      // height: 50vh;
+    }
 
-		p {
-			font-family: "Oswald", sans-serif;
-			// height: 100%;
-			// width: 20%;
-			text-align: center;
-			font-size: 1.3rem;
-			padding: 0 2rem;
-			transition: color 0.3s;
-		}
+    p {
+      font-family: 'Oswald', sans-serif;
+      // height: 100%;
+      // width: 20%;
+      text-align: center;
+      font-size: 1.3rem;
+      padding: 0 2rem;
+      transition: color 0.3s;
+    }
 
-		&:hover {
-			p {
-				color: $lightest;
-			}
-		}
-	}
+    &:hover {
+      p {
+        color: $lightest;
+      }
+    }
+  }
 
-	.aboutUsAlumni {
-		flex-direction: row-reverse;
-	}
+  .aboutUsAlumni {
+    flex-direction: row-reverse;
+  }
 
-	@media (max-width: 650px) {
-		.aboutUsTeam,
-		.aboutUsAlumni {
-			flex-direction: column;
-			p {
-				padding: 3em 1em;
-			}
-			img {
-				width: 100%;
-			}
-		}
-	}
+  @media (max-width: 650px) {
+    .aboutUsTeam,
+    .aboutUsAlumni {
+      flex-direction: column;
+      p {
+        padding: 3em 1em;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .ourProjects {
-	width: 100%;
-	// min-height: 60vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding: 2em;
-	color: white;
-	font-family: "Oswald", sans-serif;
+  width: 100%;
+  // min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  color: white;
+  font-family: 'Oswald', sans-serif;
 
-	background-image: linear-gradient(#000000ab, #000000ab),
-		url("/static/images/our-projects-final.jpg");
-	background-size: cover;
-	background-position: center;
+  background-image: linear-gradient(#000000ab, #000000ab),
+    url('/static/images/our-projects-final.jpg');
+  background-size: cover;
+  background-position: center;
 
-	h1 {
-		transition: color 0.3s;
-		padding: 1em;
-		font-size: 3rem;
-	}
-	button {
-		margin: 0.5em;
-		font-size: 1.3rem;
-		border: 2px solid white;
-		padding: 0.7em 1em;
-		transition: all 0.2s;
-		&:hover {
-			border-radius: 5px;
-			border-color: $lightest;
-			color: $lightest;
-		}
-	}
-	&:hover {
-		h1 {
-			color: $light;
-		}
-	}
+  h1 {
+    transition: color 0.3s;
+    padding: 1em;
+    font-size: 3rem;
+  }
+  button {
+    margin: 0.5em;
+    font-size: 1.3rem;
+    border: 2px solid white;
+    padding: 0.7em 1em;
+    transition: all 0.2s;
+    &:hover {
+      border-radius: 5px;
+      border-color: $lightest;
+      color: $lightest;
+    }
+  }
+  &:hover {
+    h1 {
+      color: $light;
+    }
+  }
 
-	@media (max-width: 650px) {
-		h1 {
-			font-size: 2rem;
-		}
-		button {
-			font-size: 1.2rem;
-		}
-	}
+  @media (max-width: 650px) {
+    h1 {
+      font-size: 2rem;
+    }
+    button {
+      font-size: 1.2rem;
+    }
+  }
 }

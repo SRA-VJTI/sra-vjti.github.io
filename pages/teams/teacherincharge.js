@@ -1,4 +1,4 @@
-import TeacherIncharge from "../../components/Teams/TeacherIncharge/TeacherIncharge"
+import TeacherIncharge from '../../components/Teams/TeacherIncharge/TeacherIncharge';
 
 const TeacherInchargePage = () => {
   return (
@@ -6,6 +6,6 @@ const TeacherInchargePage = () => {
       <TeacherIncharge />
     </>
   );
-}
+};
 
 export default TeacherInchargePage;

@@ -1,9 +1,7 @@
-import EklavyaProjects from "../../components/Projects/EklavyaProjects/EklavyaProjects";
+import EklavyaProjects from '../../components/Projects/EklavyaProjects/EklavyaProjects';
 
 const EklavyaProjectsPage = () => {
-  return (
-    <EklavyaProjects />
-  )
-}
+  return <EklavyaProjects />;
+};
 
 export default EklavyaProjectsPage;

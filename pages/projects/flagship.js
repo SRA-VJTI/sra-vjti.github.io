@@ -1,9 +1,7 @@
-import FlagshipProjects from "../../components/Projects/FlagshipProjects/FlagshipProjects";
+import FlagshipProjects from '../../components/Projects/FlagshipProjects/FlagshipProjects';
 
 const FlagshipProjectsPage = () => {
-  return (
-    <FlagshipProjects />
-  )
-}
+  return <FlagshipProjects />;
+};
 
 export default FlagshipProjectsPage;

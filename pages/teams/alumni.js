@@ -1,4 +1,4 @@
-import Alumni from "../../components/Teams/Alumni/Alumni";
+import Alumni from '../../components/Teams/Alumni/Alumni';
 
 const AlumniPage = () => {
   return (
@@ -6,6 +6,6 @@ const AlumniPage = () => {
       <Alumni />
     </>
   );
-}
+};
 
 export default AlumniPage;

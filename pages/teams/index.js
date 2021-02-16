@@ -3,9 +3,9 @@ import TeamsIndex from '../../components/Teams/TeamSelection/TeamsIndex';
 const TeamsPage = () => {
   return (
     <>
-			<TeamsIndex />
-		</>
+      <TeamsIndex />
+    </>
   );
-}
+};
 
 export default TeamsPage;
