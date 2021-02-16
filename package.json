@@ -1,11 +1,23 @@
 {
   "name": "sra-website",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
+  "author": "SRA Team",
+  "description": "SRA Official Website",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "prettier": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.1.1"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -16,5 +28,20 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "sass": "^1.30.0"
-  }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "pre-commit": [
+    "prettier"
+  ]
 }
