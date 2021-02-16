@@ -1,7 +1,7 @@
 import Hero from '../../Hero/Hero';
 import styles from './TeacherIncharge.module.scss';
 import Person from '../../Person/Person';
-import { teachersInchargeList } from '../../../data/SiteData';
+import { FacultyInchargeList } from '../../../data';
 
 const TeacherIncharge = () => {
   return (
@@ -14,9 +14,10 @@ const TeacherIncharge = () => {
         isHome={false}
       />
       <div className={styles.teachers} id='is'>
-        {teachersInchargeList.map((teacher, index) => {
+        {FacultyInchargeList.map((teacher, index) => {
           return (
             <Person
+              key={`farculty_incharge_${index}`}
               index={index}
               name={teacher.name}
               sub={teacher.sub}

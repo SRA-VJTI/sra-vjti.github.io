@@ -6,7 +6,7 @@ import {
   faInstagram,
   faYoutube,
 } from '@fortawesome/free-brands-svg-icons';
-import { socialMediaLinks } from '../../data/SiteData';
+import { SocialMediaLinks } from '../../data';
 
 const Footer = () => {
   return (
@@ -14,16 +14,16 @@ const Footer = () => {
       <footer className={styles.footer}>
         <h3>Connect with us</h3>
         <div className={styles.footerIcons}>
-          <a href={socialMediaLinks.facebook} target='_blank'>
+          <a href={SocialMediaLinks.facebook} target='_blank'>
             <FontAwesomeIcon icon={faFacebook} />
           </a>
-          <a href={socialMediaLinks.youtube} target='_blank'>
+          <a href={SocialMediaLinks.youtube} target='_blank'>
             <FontAwesomeIcon icon={faYoutube} />
           </a>
-          <a href={socialMediaLinks.twitter} target='_blank'>
+          <a href={SocialMediaLinks.twitter} target='_blank'>
             <FontAwesomeIcon icon={faTwitter} />
           </a>
-          <a href={socialMediaLinks.instagram} target='_blank'>
+          <a href={SocialMediaLinks.instagram} target='_blank'>
             <FontAwesomeIcon icon={faInstagram} />
           </a>
         </div>

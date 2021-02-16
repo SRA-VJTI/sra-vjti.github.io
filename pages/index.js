@@ -1,8 +1,8 @@
 import Hero from '../components/Hero/Hero';
 import HomeAboutUs from '../components/HomeAboutUs/HomeAboutUs';
-import HomeReach from '../components/HomeReach/HomeReach';
-import HomeNotifs from '../components/HomeNotifs/HomeNotifs';
-import { HeroTags } from '../data/SiteData';
+import OurReach from '../components/OurReach/OurReach';
+import HomeNotifications from '../components/HomeNotifications/HomeNotifications';
+import { HeroTags } from '../data';
 
 const Home = () => {
   return (
@@ -22,8 +22,8 @@ const Home = () => {
         isHome={true}
       />
       <HomeAboutUs />
-      <HomeReach />
-      <HomeNotifs />
+      <OurReach />
+      <HomeNotifications />
     </>
   );
 };

@@ -1,8 +1,9 @@
 import {
-  aboutUsText,
-  aboutUsTeamText,
-  aboutUsAlumniText,
-} from '../../data/SiteData';
+  AboutUsText,
+  AboutUsTeamText,
+  AboutUsAlumniText,
+  AboutUsImages,
+} from '../../data';
 import styles from './HomeAboutUs.module.scss';
 import Link from 'next/link';
 
@@ -12,19 +13,19 @@ const HomeAboutUs = () => {
       <div className={styles.aboutUs}>
         <div className={styles.aboutUsMain}>
           <h1>About Us</h1>
-          <p>{aboutUsText}</p>
+          <p>{AboutUsText}</p>
         </div>
         <div className={styles.aboutUsTeam}>
-          <p>{aboutUsTeamText}</p>
+          <p>{AboutUsTeamText}</p>
           <img
-            src='/static/images/group-new-final.jpg'
+            src={`/static/images/${AboutUsImages.newgroup}`}
             alt='SRA Team group photo'
           />
         </div>
         <div className={styles.aboutUsAlumni}>
-          <p>{aboutUsAlumniText}</p>
+          <p>{AboutUsAlumniText}</p>
           <img
-            src='/static/images/group-old-final.jpg'
+            src={`/static/images/${AboutUsImages.oldGroup}`}
             alt='SRA Team group photo'
           />
         </div>

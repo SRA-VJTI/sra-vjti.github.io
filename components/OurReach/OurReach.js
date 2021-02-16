@@ -1,18 +1,19 @@
-import { reachImgNames } from '../../data/SiteData';
+import { AlumniReachImgNames } from '../../data';
 import styles from './HomeReach.module.scss';
 
-const HomeReach = () => {
+const OurReach = () => {
   return (
     <>
       <div className={styles.reach}>
         <h1>Our Reach</h1>
         <div className={styles.reachGroup}>
-          {reachImgNames.map((name, i) => {
+          {AlumniReachImgNames.map((name, idx) => {
             return (
               <img
                 src={`/static/images/reach/${name}`}
                 alt=''
                 className={styles.reachImg}
+                key={`alumni_reach_${idx}`}
               />
             );
           })}
@@ -22,4 +23,4 @@ const HomeReach = () => {
   );
 };
 
-export default HomeReach;
+export default OurReach;

@@ -1,6 +1,6 @@
 import styles from './EklavyaProjects.module.scss';
 import Link from 'next/link';
-import { eklavyaProjectList } from '../../../data/SiteData';
+import { EklavyaProjectList } from '../../../data';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import Hero from '../../Hero/Hero';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,9 +18,13 @@ const EklavyaProjects = () => {
       />
       <div className={styles.eklavyaTotal} id='is'>
         <div className={styles.eklavyaYearCloud}>
-          {eklavyaProjectList.map((year, _) => {
+          {EklavyaProjectList.map((year, idx) => {
             return (
-              <a className={styles.eklavyaYearTag} href={`#${year.year}`}>
+              <a
+                key={`year_${idx}`}
+                className={styles.eklavyaYearTag}
+                href={`#${year.year}`}
+              >
                 {year.year}
               </a>
             );
@@ -28,13 +32,22 @@ const EklavyaProjects = () => {
         </div>
       </div>
 
-      {eklavyaProjectList.map((year, index) => {
+      {EklavyaProjectList.map((year, idx) => {
         return (
-          <div className={styles.eklavyaYear} id={year.year}>
+          <div
+            className={styles.eklavyaYear}
+            id={year.year}
+            key={`eklavya_projects_${year.year}`}
+          >
             <h2>{year.year}</h2>
             <div className={styles.eklavyaYearList}>
-              {year.projects.map((proj, _) => {
-                return <ProjectCard {...proj} />;
+              {year.projects.map((proj, idx) => {
+                return (
+                  <ProjectCard
+                    {...proj}
+                    key={`eklavya_project_${year.year}_${idx}`}
+                  />
+                );
               })}
             </div>
           </div>

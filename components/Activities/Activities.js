@@ -1,6 +1,6 @@
 import styles from './Activities.module.scss';
 import Hero from '../Hero/Hero';
-import { activitiesList } from '../../data/SiteData';
+import { ActivitiesList } from '../../data';
 
 const Activities = () => {
   return (
@@ -13,15 +13,17 @@ const Activities = () => {
         isHome={false}
       />
       <div className={styles.activityList} id='is'>
-        {activitiesList.map((activitySec, index) => {
+        {ActivitiesList.map((activitySec, idx) => {
           return (
             <>
-              <div className={styles.activitySection}>
+              <div className={styles.activitySection} key={`activity_${idx}`}>
                 <div className={styles.activitySectionTitle}>
                   {activitySec.name}
                 </div>
-                {activitySec.activities.map((activity, _) => {
-                  return <ActivityCard {...activity} />;
+                {activitySec.activities.map((activity, idx) => {
+                  return (
+                    <ActivityCard {...activity} key={`activity_card_${idx}`} />
+                  );
                 })}
               </div>
             </>

@@ -1,7 +1,7 @@
 import Hero from '../../Hero/Hero';
 import styles from './Current.module.scss';
 import Person from '../../Person/Person';
-import { currentList } from '../../../data/SiteData';
+import { SenateList } from '../../../data';
 
 const Current = () => {
   return (
@@ -14,9 +14,10 @@ const Current = () => {
         isHome={false}
       />
       <div className={styles.currentTeam} id='is'>
-        {currentList.map((person, index) => {
+        {SenateList.map((person, index) => {
           return (
             <Person
+              key={`senate_${index}`}
               index={index}
               name={person.name}
               sub={person.sub}

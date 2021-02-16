@@ -1,7 +1,6 @@
 import styles from './Hero.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
-import { HeroTags } from '../../data/SiteData';
 
 const Hero = ({
   imgName,
@@ -15,10 +14,10 @@ const Hero = ({
       <div
         style={{
           backgroundImage: `linear-gradient(
-			to bottom,
-			rgba(0, 0, 0, 0.5),
-			rgba(0, 0, 0, 0.5),
-			rgba(0, 0, 0, 0.5)), url("/static/images/${imgName}")`,
+                            to bottom,
+                            rgba(0, 0, 0, 0.5),
+                            rgba(0, 0, 0, 0.5),
+                            rgba(0, 0, 0, 0.5)), url("/static/images/${imgName}")`,
           backgroundPosition: backgroundPosition,
         }}
         className={styles.hero}
@@ -27,9 +26,11 @@ const Hero = ({
         <div className={styles.heroSub}>
           {subtitleList.map((heroTag, index) => {
             return subtitleList.length !== index + 1 ? (
-              <span>{heroTag}&nbsp;&nbsp;&bull;&nbsp;&nbsp;</span>
+              <span key={`hero_${index}`}>
+                {heroTag}&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+              </span>
             ) : (
-              <span>{heroTag}</span>
+              <span key={`hero_${index}`}>{heroTag}</span>
             );
           })}
         </div>

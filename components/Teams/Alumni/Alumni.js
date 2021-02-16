@@ -1,9 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import Hero from '../../Hero/Hero';
 import styles from './Alumni.module.scss';
 import Person from '../../Person/Person';
-import { alumniList } from '../../../data/SiteData';
+import { AlumniList } from '../../../data';
 
 const Alumni = () => {
   return (
@@ -17,21 +15,30 @@ const Alumni = () => {
 
       <div className={styles.alumni} id='is'>
         <div className={styles.alumniCloud}>
-          {alumniList.map((year, _) => {
+          {AlumniList.map((year, idx) => {
             return (
-              <a href={`#${year.year}`} className={styles.alumniCloudElem}>
+              <a
+                href={`#${year.year}`}
+                className={styles.alumniCloudElem}
+                key={`alumni_${year.year}`}
+              >
                 <div>{year.year}</div>
               </a>
             );
           })}
         </div>
-        {alumniList.map((alumniYear, _) => {
+        {AlumniList.map((alumniYear, idx) => {
           return (
-            <div className={styles.alumniGrp} id={alumniYear.year}>
+            <div
+              className={styles.alumniGrp}
+              id={alumniYear.year}
+              key={`alumni_list_${alumniYear.year}`}
+            >
               <div className={styles.alumniGrpHead}>{alumniYear.year}</div>
               {alumniYear.alumnis.map((alumni, index) => {
                 return (
                   <Person
+                    key={`alumni_member_${alumniYear.year}_${index}`}
                     index={index}
                     name={alumni.name}
                     sub={alumni.sub}

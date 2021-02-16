@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
 import useWindowSize from '../../utils/ResizeHook';
-import { NavbarData } from '../../data/SiteData';
+import { NavbarData } from '../../data';
 
 const Navbar = () => {
   const [isNavbarDown, setIsNavbarDown] = useState(false);
@@ -69,9 +69,9 @@ const Navbar = () => {
             </a>
           </Link>
 
-          {NavbarData.map((navItem, _) => {
+          {NavbarData.map((navItem, idx) => {
             return (
-              <Link href={navItem.link}>
+              <Link key={`link_${idx}`} href={navItem.link}>
                 <a>
                   <div className={styles.navbarElem}>{navItem.name}</div>
                 </a>

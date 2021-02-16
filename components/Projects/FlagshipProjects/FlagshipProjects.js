@@ -1,6 +1,6 @@
 import styles from './FlagshipProjects.module.scss';
 import Link from 'next/link';
-import { flagshipProjects } from '../../../data/SiteData';
+import { FlagshipProjectsData } from '../../../data';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import Hero from '../../Hero/Hero';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,9 +15,10 @@ const FlagshipProjects = () => {
         isHome={false}
       />
       <div className={styles.flagshipProjects} id='is'>
-        {flagshipProjects.map((proj, _) => {
+        {FlagshipProjectsData.map((proj, idx) => {
           return (
             <FlagshipProjectCard
+              key={`flagship_project_${idx}`}
               imgName={proj.imgName}
               name={proj.name}
               sub={proj.sub}
