@@ -1,35 +1,32 @@
 const FacultyInchargeList = [
   {
-    name: 'Nikhil Jain',
-    imgName: 'prof-plac1.jpg',
+    name: 'Dr. A. S. Rao',
+    imgName: 'Dr. A. S. Rao.jpg',
     sub: (
       <>
-        Professor of Mathematics, VJTI. <br />
-        PhD in Informatics IIT Bombay.
+        Faculty Coordinator
       </>
     ),
     linkedInLink: '',
     githubLink: '',
   },
   {
-    name: 'Nikhil Jain',
-    imgName: 'prof-plac1.jpg',
+    name: 'Dr. V. B. Suryawanshi',
+    imgName: 'Dr. V. B. Suryawanshi.jpg',
     sub: (
       <>
-        Professor of Mathematics, VJTI. <br />
-        PhD in Informatics IIT Bombay.
+        Vice-Chairman
       </>
     ),
     linkedInLink: '',
     githubLink: '',
   },
   {
-    name: 'Nikhil Jain',
-    imgName: 'prof-plac1.jpg',
+    name: 'Dr. S. A. Mastud',
+    imgName: 'Dr. S. A. Mastud.jpg',
     sub: (
       <>
-        Professor of Mathematics, VJTI. <br />
-        PhD in Informatics IIT Bombay.
+        Chairman
       </>
     ),
     linkedInLink: '',
