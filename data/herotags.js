@@ -1,3 +1,3 @@
-const HeroTags = ['Robotics', 'Machine Vision', 'Automation', 'Embedded'];
+const HeroTags = ['Ideate', 'Innovate', 'Inspire'];
 
 export default HeroTags;
