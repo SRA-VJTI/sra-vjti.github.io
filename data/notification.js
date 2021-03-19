@@ -1,7 +1,7 @@
 const NotificationData = [
-  'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores nobis ea modi quam, earum, repellendus ullam dignissimos odio voluptatibus ipsam doloremque facilis impedit. Ad necessitatibus rerum minus? Nihil, id quaerat! Necessitatibus dicta consequatur animi natus saepe, repudiandae libero nihil sunt.',
-  'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores nobis ea modi quam, earum, repellendus ullam dignissimos odio voluptatibus ipsam doloremque facilis impedit. Ad necessitatibus rerum minus? Nihil, id quaerat! Necessitatibus dicta consequatur animi natus saepe, repudiandae libero nihil sunt.',
-  'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores nobis ea modi quam, earum, repellendus ullam dignissimos odio voluptatibus ipsam doloremque facilis impedit. Ad necessitatibus rerum minus? Nihil, id quaerat! Necessitatibus dicta consequatur animi natus saepe, repudiandae libero nihil sunt.',
+  'March 21, 2021 - Seminar for First Years',
+  'April 11, 2021 - Wall-E Worshop',
+  'Mario Worshop for First Years',
 ];
 
 export default NotificationData;
