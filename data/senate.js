@@ -64,6 +64,13 @@ const SenateList = [
     githubLink: 'https://github.com/shan515',
   },
   {
+    name: 'Abhinav Venkatadri',
+    imgName: 'Team/Abhinav.jpg',
+    sub: <>B.Tech EXTC ' 22</>,
+    linkedInLink: 'https://www.linkedin.com/in/abhinavvenkatadri/',
+    githubLink: 'https://github.com/Abhinavvenkatadri',
+  },
+  {
     name: 'Rahul Singh',
     imgName: 'Team/Rahul.JPG',
     sub: <>B.Tech Electronics ' 22</>,
