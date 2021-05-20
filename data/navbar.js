@@ -15,10 +15,10 @@ const NavbarData = [
     name: 'Achievements',
     link: '/achievements',
   },
-  // {
-  //   "name" : "Blog",
-  //   "link" : "#"
-  // },
+  {
+    name: 'Internship Experiences',
+    link: '/blogs',
+  },
   {
     name: 'Contact us',
     link: '/contactus',

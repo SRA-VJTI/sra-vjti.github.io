@@ -15,8 +15,8 @@ jobs:
       - name: Install and Build
         uses: actions/setup-node@v1
       - run: npm install
-      - run: npm run build     # runs `next build`
-      - run: npm run export    # runs `next export`
+      - run: npm run build # runs `next build`
+      - run: npm run export # runs `next export`
         env:
           CI: true
           DEPLOY_TARGET: gh-pages
@@ -26,6 +26,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages  # The branch the action should deploy to.
-          FOLDER: out       # The folder the action should deploy.
-          CLEAN: true       # Automatically remove deleted files from the deploy branch
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: out # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
