@@ -2,6 +2,7 @@ import styles from './Blogs.module.scss';
 import Hero from '../Hero/Hero';
 import React from 'react';
 import BlogList from '../../data/blogs';
+import Link from 'next/link';
 
 const Blogs = () => {
   return (
@@ -20,27 +21,65 @@ const Blogs = () => {
         ]}
         isHome={false}
       />
-      <div id='is' class={styles.blogList}>
-        {BlogList.map((blog, i) => {
-          return <BlogCard {...blog} />;
+
+      <div id='is'>
+        <div className={styles.blogCloud}>
+          {BlogList.map((year, idx) => {
+            return (
+              <a
+                href={`#blogs_${year.year}`}
+                className={styles.blogCloudElem}
+                key={`cloudelem_${year.year}`}
+              >
+                <div>{year.year}</div>
+              </a>
+            );
+          })}
+        </div>
+        {BlogList.map((BlogYear) => {
+          return (
+            <div
+              className={styles.blogGrp}
+              id={`blogs_${BlogYear.year}`}
+              key={`bloggrp_${BlogYear.year}`}
+            >
+              <div className={styles.blogGrpHead}>{BlogYear.year}</div>
+              {BlogYear.blogs.map((blog, idx) => {
+                return (
+                  <Blog
+                    {...blog}
+                    key={`blog_${idx}`}
+                    year={BlogYear.year}
+                    blogNum={idx}
+                  />
+                );
+              })}
+            </div>
+          );
         })}
       </div>
     </React.Fragment>
   );
 };
 
-const BlogCard = ({ content, title, imgName }) => {
+const Blog = ({ title, photo, author, time, short, year, blogNum }) => {
   return (
-    <div className={styles.blog}>
-      <div
-        className={styles.blogImg}
-        style={{ backgroundImage: `url("/static/images/${imgName}")` }}
-      ></div>
-      <div className={styles.blogDetails}>
-        <div className={styles.blogTitle}>{title}</div>
-        <div className={styles.blogContent}>{content}</div>
+    <Link href={`/blogs/${year}/${blogNum}`}>
+      <div className={styles.blog}>
+        <div
+          className={styles.blogImage}
+          style={{ backgroundImage: `url(${photo})` }}
+        ></div>
+        <div className={styles.blogDetails}>
+          <div className={styles.blogTitle}>{title}</div>
+          <div className={styles.blogAuthor}>{author}</div>
+          <div className={styles.blogTime}>
+            <em>{time}</em>
+          </div>
+          <div className={styles.blogShort}>{short}</div>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 export default Blogs;
