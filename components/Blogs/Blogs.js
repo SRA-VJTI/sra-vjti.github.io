@@ -64,7 +64,7 @@ const Blogs = () => {
 
 const Blog = ({ title, photo, author, time, short, year, blogNum }) => {
   return (
-    <Link href={`/blogs/${year}/${blogNum}`}>
+    <Link href={`/internships/${year}/${blogNum}`}>
       <div className={styles.blog}>
         <div
           className={styles.blogImage}

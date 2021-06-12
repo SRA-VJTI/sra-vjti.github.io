@@ -17,7 +17,7 @@ const NavbarData = [
   },
   {
     name: 'Internship Experiences',
-    link: '/blogs',
+    link: '/internships',
   },
   {
     name: 'Contact us',
