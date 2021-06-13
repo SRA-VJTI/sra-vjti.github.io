@@ -4,9 +4,9 @@ const BlogList = [
     blogs: [
       {
         photo: '/static/images/blog/Vedant.jpg',
-        title: 'GSoC 2021 LibCamera',
+        title: 'GSoC 2021 with libcamera',
         author: 'Vedant Paranjape',
-        time: 'Feb-March 2021',
+        time: 'May-September 2021',
         short:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, temporibus quibusdam? Perspiciatis quis minima mollitia reiciendis enim hic, nihil tenetur, ad maiores dolorum magnam',
         content: [
@@ -36,9 +36,9 @@ const BlogList = [
       },
       {
         photo: '/static/images/blog/OmkarB.jpg',
-        title: 'GSoC 2021 BeagleBoard',
+        title: 'GSoC 2021 with BeagleBoard.org',
         author: 'Omkar Bhilare',
-        time: 'Feb-March 2021',
+        time: 'May-September 2021',
         short:
           'Onelier koi toh to describe the actual blogpost. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, temporibus quibusdam? Perspiciatis quis minima mollitia reiciendis enim hic, nihil tenetur, ad maiores dolorum',
         content: [
@@ -83,9 +83,9 @@ const BlogList = [
     blogs: [
       {
         photo: '/static/images/blog/Vedant.jpg',
-        title: 'GSoC 2020 BeagleBoard',
+        title: 'GSoC 2020 with BeagleBoard.org',
         author: 'Vedant Paranjape',
-        time: 'Feb-March 2020',
+        time: 'May-September 2020',
         short:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, temporibus quibusdam? Perspiciatis quis minima mollitia reiciendis enim hic, nihil tenetur, ad maiores dolorum magnam',
         content: [
