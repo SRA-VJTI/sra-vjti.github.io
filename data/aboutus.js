@@ -4,7 +4,7 @@ const AboutUsText =
 const AboutUsTeamText =
   'Our team constantly endeavours to encourage students to pursue robotics and attempts to help further the interest in the field as much as possible.';
 const AboutUsAlumniText =
-  'With our alumni in many renowed colleges and companies... our alumni network grows more diverse every year.';
+  'With our alumni in many renowned colleges and companies... our alumni network grows more diverse every year.';
 
 const AboutUsImages = {
   newgroup: 'group-new-final.jpg',
