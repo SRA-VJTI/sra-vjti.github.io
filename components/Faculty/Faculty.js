@@ -2,7 +2,7 @@ import styles from './Faculty.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
-const faculty = ({ index, imgName, name, sub, linkedInLink}) => {
+const faculty = ({ index, imgName, name, sub, linkedInLink }) => {
   return (
     <div className={index % 2 == 0 ? styles.faculty : styles.facultyr}>
       <div
