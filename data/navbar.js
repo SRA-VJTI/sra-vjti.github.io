@@ -23,6 +23,10 @@ const NavbarData = [
     name: 'Contact us',
     link: '/contactus',
   },
+  {
+    name: 'Blogs',
+    link: 'https://blog.sravjti.in/',
+  }
 ];
 
 export default NavbarData;
