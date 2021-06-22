@@ -5,7 +5,7 @@ const AlumniList = [
       {
         name: 'Shweta Kumaran',
         imgName: 'Shweta Kumaran.jpg',
-        sub: <>Electronics</>,
+        sub: <>Technology Consultant - Data and Analytics at PwC India</>,
         linkedInLink: 'https://www.linkedin.com/in/shweta-kumaran-b22773187/',
         githubLink: '',
       },
@@ -19,7 +19,12 @@ const AlumniList = [
       {
         name: 'Hiten Kothari',
         imgName: 'Hiten Kothari.jpg',
-        sub: <>Electronics</>,
+        sub: (
+          <>
+            Research Scientist at Society For Applied Microwave Electronic
+            Engineering And Research (SAMEER)
+          </>
+        ),
         linkedInLink: 'https://www.linkedin.com/in/hiten-kothari-793507161/',
         githubLink: '',
       },
@@ -33,14 +38,16 @@ const AlumniList = [
       {
         name: 'Shambhavi Kuthe',
         imgName: 'SHAMBHAVI KUTHE.jpg',
-        sub: <>Electronics</>,
+        sub: <>Schneider Electric India Pvt. Limited</>,
         linkedInLink: 'https://www.linkedin.com/in/shambhavikuthe/',
         githubLink: '',
       },
       {
         name: 'Aditya Gawali',
         imgName: 'Aditya Gawali.jpg',
-        sub: <>Magnes Motors</>,
+        sub: (
+          <>Electrical System Design Engineer at Larsen &#38; Toubro Defence</>
+        ),
         linkedInLink: 'https://www.linkedin.com/in/adityagawali/',
         githubLink: '',
       },
@@ -62,7 +69,12 @@ const AlumniList = [
       {
         name: 'Sankalp Vartak',
         imgName: 'sankalp vartak.jpg',
-        sub: <>Mechanical</>,
+        sub: (
+          <>
+            Graduate Engineering Trainee [Carbon Fibre] at Reliance Industries
+            Limited
+          </>
+        ),
         linkedInLink: 'https://www.linkedin.com/in/sankalpvartak/',
         githubLink: '',
       },

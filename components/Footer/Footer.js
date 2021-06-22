@@ -6,7 +6,7 @@ import {
   faInstagram,
   faYoutube,
   faGithub,
-  faLinkedinIn
+  faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons';
 import { SocialMediaLinks } from '../../data';
 
