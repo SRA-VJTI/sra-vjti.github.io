@@ -10,7 +10,7 @@ const Navbar = () => {
 
   useEffect(() => {
     let navbar = document.getElementById('navbar');
-    if (size.width > 720) {
+    if (size.width > 780) {
       setIsNavbarDown(true);
     } else {
       // navbar.style.clipPath = "circle(15% at 100% 0%)";
@@ -35,7 +35,7 @@ const Navbar = () => {
     }
   };
   const linkClick = () => {
-    if (!(size.width > 720) && isNavbarDown) {
+    if (!(size.width > 780) && isNavbarDown) {
       setIsNavbarDown(false);
     }
   };
