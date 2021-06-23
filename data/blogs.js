@@ -35,7 +35,7 @@ const BlogList = [
         ],
       },
       {
-        photo: '/static/images/blog/OmkarB.jpg',
+        photo: '/static/images/blog/OmkarB.png',
         title: 'GSoC 2021 with BeagleBoard.org',
         author: 'Omkar Bhilare',
         time: 'May-September 2021',
