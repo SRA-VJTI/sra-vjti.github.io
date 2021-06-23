@@ -13,16 +13,35 @@ const Person = ({ index, imgName, name, sub, linkedInLink, githubLink }) => {
         <div className={styles.personContName}>{name}</div>
         <div className={styles.personContSub}>{sub}</div>
         <div className={styles.links}>
-          <a href={linkedInLink}>
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </a>
-          <a href={githubLink}>
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
+          <LinkedInLink linkedInLink={linkedInLink} />
+          <GitHubLink githubLink={githubLink} />
         </div>
       </div>
     </div>
   );
 };
 
+const LinkedInLink = ({ linkedInLink }) => {
+  if (linkedInLink !== '') {
+    return (
+      <a href={linkedInLink} target='blank'>
+        <FontAwesomeIcon icon={faLinkedinIn} />
+      </a>
+    );
+  } else {
+    return null;
+  }
+};
+
+const GitHubLink = ({ githubLink }) => {
+  if (githubLink !== '') {
+    return (
+      <a href={githubLink} target='blank'>
+        <FontAwesomeIcon icon={faGithub} />
+      </a>
+    );
+  } else {
+    return null;
+  }
+};
 export default Person;

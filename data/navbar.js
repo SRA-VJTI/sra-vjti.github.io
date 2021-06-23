@@ -26,7 +26,7 @@ const NavbarData = [
   {
     name: 'Blogs',
     link: 'https://blog.sravjti.in/',
-  }
+  },
 ];
 
 export default NavbarData;
