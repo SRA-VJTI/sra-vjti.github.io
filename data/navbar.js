@@ -20,12 +20,12 @@ const NavbarData = [
     link: '/internships',
   },
   {
-    name: 'Contact us',
-    link: '/contactus',
-  },
-  {
     name: 'Blogs',
     link: 'https://blog.sravjti.in/',
+  },
+  {
+    name: 'Contact us',
+    link: '/contactus',
   },
 ];
 
