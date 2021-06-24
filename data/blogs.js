@@ -325,7 +325,7 @@ const BlogList = [
       },
       {
         photo: '/static/images/Team/Shantanu.jpg',
-        title: 'DU, New Delhi',
+        title: 'Airpix',
         author: 'Shantanu Pande',
         time: 'June-Sept 2020, Feb-July 2021',
         short:
