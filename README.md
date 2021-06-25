@@ -22,3 +22,12 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Contributing
+
+1) Create a fork
+2) Make the changes
+3) Compile the project and check if it works as expected without breaking any other functionality.
+4) Create a PR on the `contribute` branch on the upstream repo.
+5) Don't forgot to put a description in the PR, Pull requests without a description would be closed and buried 10m deep in the earth xD
+6) Commits should be atomic, and descriptive message is a must.
