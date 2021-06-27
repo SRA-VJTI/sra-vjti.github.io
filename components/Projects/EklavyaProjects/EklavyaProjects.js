@@ -10,7 +10,7 @@ const EklavyaProjects = () => {
   return (
     <>
       <Hero
-        imgName={'eklavya-hero-final.jpg'}
+        imgName={'eklavya-hero.jpg'}
         backgroundPosition={'center top'}
         title={<>Eklavya Projects</>}
         subtitleList={['Nurturing the future']}
