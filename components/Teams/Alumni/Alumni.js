@@ -7,7 +7,7 @@ const Alumni = () => {
   return (
     <>
       <Hero
-        imgName={'alumni-hero-final.jpg'}
+        imgName={'alumni-hero.jpg'}
         title={<>Alumni</>}
         subtitleList={['Lighting the way for generations to come.']}
         isHome={false}
