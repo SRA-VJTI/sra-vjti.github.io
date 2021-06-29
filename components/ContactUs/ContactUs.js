@@ -15,7 +15,7 @@ const ContactUs = () => {
       <div className={styles.contactForm}>
         <div className={styles.formOverlay}></div>
         <form action='/'>
-          <label for='name'>Name:</label>
+          <label htmlFor='name'>Name:</label>
           <input
             type='text'
             name=''
@@ -26,9 +26,9 @@ const ContactUs = () => {
             id='name'
             className={styles.name}
             placeholder='Name'
-            autocomplete='name'
+            autoComplete='name'
           />
-          <label for='email'>Email:</label>
+          <label htmlFor='email'>Email:</label>
           <input
             type='text'
             name=''
@@ -39,9 +39,9 @@ const ContactUs = () => {
             id='email'
             className={styles.email}
             placeholder='Email'
-            autocomplete='email'
+            autoComplete='email'
           />
-          <label for='message'>Message for us:</label>
+          <label htmlFor='message'>Message for us:</label>
           <textarea
             name=''
             id='message'
@@ -51,7 +51,7 @@ const ContactUs = () => {
               setMessage(e.target.value);
             }}
             placeholder='Message'
-            autocomplete='off'
+            autoComplete='off'
             rows='3'
           ></textarea>
 
