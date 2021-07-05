@@ -81,7 +81,7 @@ const AlumniList = [
       {
         name: 'Chirag Jaiswal',
         imgName: 'chirag jaiswal.jpg',
-        sub: <>Civil</>,
+        sub: <>MTech, Transportation and Highway Engineering, IIT Kanpur.</>,
         linkedInLink: 'https://www.linkedin.com/in/chirag-jaiswal-2462941a6/',
         githubLink: '',
       },
