@@ -54,7 +54,7 @@ const AlumniList = [
       {
         name: 'Shashank Deshmukh',
         imgName: 'SHASHANK DESHMUKH.jpg',
-        sub: <>On-site Intern, MSEDCL and Tata Distribution Substation</>,
+        sub: <>Graduate Student at Technical University of Denmark (DTU)</>,
         linkedInLink:
           'https://www.linkedin.com/in/shashank-deshmukh-97b70318a/',
         githubLink: '',
@@ -62,7 +62,7 @@ const AlumniList = [
       {
         name: 'Nikita Chaube',
         imgName: 'Nikita Chaube.jpg',
-        sub: <>Godrej Agrovet Ltd</>,
+        sub: <>Analyst - IQVIA</>,
         linkedInLink: 'https://www.linkedin.com/in/nikitachaube/',
         githubLink: '',
       },
@@ -104,7 +104,7 @@ const AlumniList = [
       {
         name: 'Pradeep Suresh',
         imgName: 'Pradeep Suresh.jpg',
-        sub: <>Graduate Student Researcher at University of Michigan</>,
+        sub: <>Autonomy Software Engineer at Torc Robotics</>,
         linkedInLink: 'https://www.linkedin.com/in/prad33p/',
         githubLink: '',
       },
@@ -135,7 +135,7 @@ const AlumniList = [
         name: 'Viraj Sonawane',
         imgName: 'Viraj Sonawane.jpg',
         sub: (
-          <>North Carolina State University Computer Engineering Grad Student</>
+          <>Graduate Software Engineer at ARM</>
         ),
         linkedInLink: 'https://www.linkedin.com/in/virajsonawane/',
         githubLink: '',
@@ -159,7 +159,7 @@ const AlumniList = [
       {
         name: 'Apoorva Gokhale',
         imgName: 'Apoorva Gokhale.jpg',
-        sub: <>Intern at Qualcomm AI Research</>,
+        sub: <>Machine Learning Engineer at Qualcomm</>,
         linkedInLink: 'https://www.linkedin.com/in/apoorva-gokhale-063973147/',
         githubLink: '',
       },
@@ -243,10 +243,7 @@ const AlumniList = [
         name: 'Ashish Kamble',
         imgName: 'Ashish Kamble.jpg',
         sub: (
-          <>
-            Research Engineer and Embedded Systems Developer <br />
-            Wireless Technologies and Robotics Enthusiast
-          </>
+          <>Design Engineer at Atomberg Technologies</>
         ),
         linkedInLink: 'https://www.linkedin.com/in/ashish-kamble-/',
         githubLink: '',
@@ -301,7 +298,7 @@ const AlumniList = [
       {
         name: 'Anshuman Singh',
         imgName: 'Anshuman Singh.jpg',
-        sub: <>Senior Software Engineer at CitiusTech</>,
+        sub: <>Senior Software Engineer at LearningMate</>,
         linkedInLink: 'https://www.linkedin.com/in/anshuman-singh-69004312a/',
         githubLink: '',
       },
@@ -309,10 +306,7 @@ const AlumniList = [
         name: 'Indranil Chandra',
         imgName: 'Indranil Chandra.jpg',
         sub: (
-          <>
-            Senior Manager in Business Intelligence Unit of Piramal Consumer
-            Finance
-          </>
+          <>Principal ML & Data Engineer at Upstox</>
         ),
         linkedInLink: 'https://www.linkedin.com/in/indranildchandra/',
         githubLink: '',
