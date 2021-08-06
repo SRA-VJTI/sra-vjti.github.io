@@ -1,3 +1,3 @@
-const SponsorListImages = ['espressif.png', 'PCB_Power.jpeg'];
+const SponsorListImages = ['espressif.png', 'texas.png', 'PCB_Power.jpeg'];
 
 export default SponsorListImages;
