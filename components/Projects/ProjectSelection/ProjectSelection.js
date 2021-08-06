@@ -12,6 +12,9 @@ const ProjectSelection = () => {
         <Link href='/projects/eklavya'>
           <a>Eklavya Projects</a>
         </Link>
+        <Link href='/projects/ongoing'>
+          <a>Ongoing Projects</a>
+        </Link>
       </div>
     </div>
   );

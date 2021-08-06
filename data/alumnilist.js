@@ -1,5 +1,39 @@
 const AlumniList = [
   {
+    year: '2021',
+    alumnis: [
+      {
+        name: 'Vishnu Parammal',
+        imgName: 'Team/Vishnu.png',
+        sub: <>B.Tech EXTC ' 21</>,
+        linkedInLink: 'https://www.linkedin.com/in/vishnu-parammal/',
+        githubLink: 'https://github.com/vishnuparammal',
+      },
+      {
+        name: 'Chinmay Nehate',
+        imgName: 'Team/Chinmay.jpg',
+        sub: <>B.Tech Electronics ' 21</>,
+        linkedInLink: 'https://www.linkedin.com/in/chinmay-nehate-3145a0184/',
+        githubLink: 'https://github.com/chinmaynehate',
+      },
+      {
+        name: 'Vednarayan Iyer',
+        imgName: 'Team/Vednarayan.jpg',
+        sub: <>B.Tech EXTC ' 21</>,
+        linkedInLink: 'https://www.linkedin.com/in/vednarayan-iyer',
+        githubLink: 'https://github.com/ved29',
+      },
+      {
+        name: 'Laukik Hase',
+        imgName: 'Team/laukik.png',
+        sub: <>B.Tech EXTC ' 21</>,
+        linkedInLink:
+          'https://www.linkedin.com/in/laukik-hase/detail/background-image/',
+        githubLink: 'https://github.com/laukik-hase',
+      },
+    ],
+  },
+  {
     year: '2020',
     alumnis: [
       {
@@ -134,9 +168,7 @@ const AlumniList = [
       {
         name: 'Viraj Sonawane',
         imgName: 'Viraj Sonawane.jpg',
-        sub: (
-          <>Graduate Software Engineer at ARM</>
-        ),
+        sub: <>Graduate Software Engineer at ARM</>,
         linkedInLink: 'https://www.linkedin.com/in/virajsonawane/',
         githubLink: '',
       },
@@ -242,9 +274,7 @@ const AlumniList = [
       {
         name: 'Ashish Kamble',
         imgName: 'Ashish Kamble.jpg',
-        sub: (
-          <>Design Engineer at Atomberg Technologies</>
-        ),
+        sub: <>Design Engineer at Atomberg Technologies</>,
         linkedInLink: 'https://www.linkedin.com/in/ashish-kamble-/',
         githubLink: '',
       },
@@ -305,9 +335,7 @@ const AlumniList = [
       {
         name: 'Indranil Chandra',
         imgName: 'Indranil Chandra.jpg',
-        sub: (
-          <>Principal ML & Data Engineer at Upstox</>
-        ),
+        sub: <>Principal ML & Data Engineer at Upstox</>,
         linkedInLink: 'https://www.linkedin.com/in/indranildchandra/',
         githubLink: '',
       },
