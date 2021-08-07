@@ -37,7 +37,7 @@ const SenateList = [
   },
   {
     name: 'Shreyas Atre',
-    imgName: 'Team/2023/Aman_Chhaparia.jpg',
+    imgName: 'Team/2023/Shreyas_Atre.jpg',
     sub: (
       <>
         Software Head <br />
@@ -108,6 +108,27 @@ const SenateList = [
     githubLink: 'https://github.com/chaitravi-ce',
   },
   {
+    name: 'Kush Kothari',
+    imgName: 'Team/2023/Kush_Kothari.jpg',
+    sub: <>B.Tech Computer Engineering ' 23</>,
+    linkedInLink: 'https://www.linkedin.com/in/kush-kothari-ba013218b/',
+    githubLink: 'https://github.com/kkothari2001',
+  },
+  {
+    name: 'Prathamesh Tagore',
+    imgName: 'Team/2023/Prathamesh_Profile.jpeg',
+    sub: <>B.Tech Electronics & Telecommunication ' 23</>,
+    linkedInLink: 'http://linkedin.com/in/prathamesh-tagore-61aa1a1b1/',
+    githubLink: 'https://github.com/meshtag',
+  },
+  {
+    name: 'Saurabh Powar',
+    imgName: 'Team/2023/Saurabh_Powar.jpeg',
+    sub: <>B.Tech Electronics ' 23</>,
+    linkedInLink: 'https://www.linkedin.com/in/saurabh-powar-72b4701b4/',
+    githubLink: 'https://github.com/Spnetic-5',
+  },
+  {
     name: 'Reshmika Nambiar',
     imgName: 'Team/2023/Reshmika_Nambiar.jpeg',
     sub: <>B.Tech Computer Engineering ' 23</>,
@@ -120,13 +141,6 @@ const SenateList = [
     sub: <>B.Tech Computer Engineering ' 23</>,
     linkedInLink: 'https://www.linkedin.com/in/kushal-shah-36b400203/',
     githubLink: 'https://github.com/Kushal-Ajay-Shah',
-  },
-  {
-    name: 'Saurabh Powar',
-    imgName: 'Team/2023/Saurabh_Powar.jpeg',
-    sub: <>B.Tech Electronics ' 23</>,
-    linkedInLink: 'https://www.linkedin.com/in/saurabh-powar-72b4701b4/',
-    githubLink: 'https://github.com/Spnetic-5',
   },
   {
     name: 'Sakshi Chikshe',
@@ -143,25 +157,11 @@ const SenateList = [
     githubLink: 'https://github.com/HarshShah03325',
   },
   {
-    name: 'Prathamesh Tagore',
-    imgName: 'Team/2023/Prathamesh_Profile.jpeg',
-    sub: <>B.Tech Electronics & Telecommunication ' 23</>,
-    linkedInLink: 'http://linkedin.com/in/prathamesh-tagore-61aa1a1b1/',
-    githubLink: 'https://github.com/meshtag',
-  },
-  {
     name: 'Mann Doshi',
     imgName: 'Team/2023/Mann.jpg',
     sub: <>B.Tech Information Technology ' 23</>,
     linkedInLink: 'https://www.linkedin.com/in/mann-doshi-35308b15a/',
     githubLink: 'https://github.com/MannDoshi',
-  },
-  {
-    name: 'Kush Kothari',
-    imgName: 'Team/2023/Kush_Kothari.jpg',
-    sub: <>B.Tech Computer Engineering ' 23</>,
-    linkedInLink: 'https://www.linkedin.com/in/kush-kothari-ba013218b/',
-    githubLink: 'https://github.com/kkothari2001',
   },
   {
     name: 'Ashutosh Gupta',
