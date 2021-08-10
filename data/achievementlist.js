@@ -1,5 +1,14 @@
 const AchievementsList = [
   {
+    year: '2021',
+    achs: [
+      {
+        name: '2nd prize in Delta International Manufacturing Contest',
+        imgName: 'delta2021.jpeg',
+      },
+    ],
+  },
+  {
     year: '2019',
     achs: [
       {
