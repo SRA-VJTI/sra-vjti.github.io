@@ -21,19 +21,20 @@ const OngoingProjectsData = [
   {
     imgName: 'smort.gif',
     name: 'SMORT',
-    sub:(
+    sub: (
       <>
-        Smart Multi-Object Realtime Tracking (SMORT) aims to study major types of
-        object tracking algorithms and finally build a robust object tracker which
-        can overcome some critical problems like occlusion, light Intensity difference,
-        re-identification etc.
+        Smart Multi-Object Realtime Tracking (SMORT) aims to study major types
+        of object tracking algorithms and finally build a robust object tracker
+        which can overcome some critical problems like occlusion, light
+        Intensity difference, re-identification etc.
         <br />
-        This is a research oriented project in which a pre-existing
-        algorithm is studied in great detail from its official research record and a
-        custom implementation is created from it. This helps us understand some intrinsic
-        details of the algorithm which prove useful while creating our original custom
-        tracker. Implementation of object tracking research papers.
-    </>
+        This is a research oriented project in which a pre-existing algorithm is
+        studied in great detail from its official research record and a custom
+        implementation is created from it. This helps us understand some
+        intrinsic details of the algorithm which prove useful while creating our
+        original custom tracker. Implementation of object tracking research
+        papers.
+      </>
     ),
     githubLink: 'https://github.com/saharshleo/OpenCV-Trackers',
   },
