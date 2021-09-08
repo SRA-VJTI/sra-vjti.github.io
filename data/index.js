@@ -12,6 +12,7 @@ import NavbarData from './navbar';
 import { AlumniReachImgNames, AlumniList } from './alumnilist';
 import Achievementlist from './achievementlist';
 import FlagshipProjectsData from './flagshipprojects';
+import OngoingProjectsData from './ongoingprojects';
 import EklavyaProjectList from './eklavyaprojects';
 import ActivitiesList from './activities';
 import FacultyInchargeList from './faculty';
@@ -28,6 +29,7 @@ export {
   NotificationData,
   SocialMediaLinks,
   FlagshipProjectsData,
+  OngoingProjectsData,
   EklavyaProjectList,
   ActivitiesList,
   Achievementlist,
