@@ -1,5 +1,6 @@
 import {
   AboutUsText,
+  AboutVJTI,
   AboutUsTeamText,
   AboutUsAlumniText,
   AboutUsImages,
@@ -14,6 +15,8 @@ const HomeAboutUs = () => {
         <div className={styles.aboutUsMain}>
           <h1>About Us</h1>
           <p>{AboutUsText}</p>
+          <h1>About VJTI</h1>
+          <p>{AboutVJTI}</p>
         </div>
         <div className={styles.aboutUsTeam}>
           <p>{AboutUsTeamText}</p>
