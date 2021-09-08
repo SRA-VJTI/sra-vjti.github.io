@@ -10,7 +10,7 @@ const TeacherIncharge = () => {
         imgName={'teachers-hero.jpg'}
         backgroundPosition={'center top'}
         title={<>Teachers Incharge</>}
-        subtitleList={["The OG's"]}
+        subtitleList={[""]}
         isHome={false}
       />
       <div className={styles.teachers} id='is'>

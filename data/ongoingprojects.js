@@ -21,21 +21,54 @@ const OngoingProjectsData = [
   {
     imgName: 'smort.gif',
     name: 'SMORT',
-    sub:(
+    sub: (
       <>
-        Smart Multi-Object Realtime Tracking (SMORT) aims to study major types of
-        object tracking algorithms and finally build a robust object tracker which
-        can overcome some critical problems like occlusion, light Intensity difference,
-        re-identification etc.
+        Smart Multi-Object Realtime Tracking (SMORT) aims to study major types
+        of object tracking algorithms and finally build a robust object tracker
+        which can overcome some critical problems like occlusion, light
+        Intensity difference, re-identification etc.
         <br />
-        This is a research oriented project in which a pre-existing
-        algorithm is studied in great detail from its official research record and a
-        custom implementation is created from it. This helps us understand some intrinsic
-        details of the algorithm which prove useful while creating our original custom
-        tracker. Implementation of object tracking research papers.
-    </>
+        This is a research oriented project in which a pre-existing algorithm is
+        studied in great detail from its official research record and a custom
+        implementation is created from it. This helps us understand some
+        intrinsic details of the algorithm which prove useful while creating our
+        original custom tracker. Implementation of object tracking research
+        papers.
+      </>
     ),
     githubLink: 'https://github.com/saharshleo/OpenCV-Trackers',
+  },
+  {
+    imgName: 'titan_legs.jpeg',
+    name: 'TitanLegs',
+    sub: (
+      <>
+        TitanLegs is a customly designed, small, mobile and economical quadruped 
+        robot specially for dynamic locomotion. It houses and is built on a powerful, 
+        efficient yet cost effective 3D printed BLDC(Brushless DC) Motor based Actuator. 
+        <br />
+        Minimising power wastage, producing robust robotic locomotion and good mobility 
+        are some of the achieved objectives. Our team has taken the approach of designing 
+        from scratch most of the components, including a cycloidal gearbox, PCB design; 
+        so as to get the most out of low-cost components.
+      </>
+    ),
+    githubLink: 'https://github.com/SRA-VJTI/TitanLegs',
+  },
+  {
+    imgName: 'mobman.jpeg',
+    name: 'TitanLegs',
+    sub: (
+      <>
+        MobMan project aims to build a model of a mobile manipulator
+        capable of performing various dexterous tasks autonomously.
+        The project is divided into two main components:
+        <br />
+        1. Manipulator Arm: Perform pick and place operations using object detection
+        2. Mobile Base: Perform SLAM for navigation.
+      </>
+    ),
+    githubLink: 'https://github.com/SRA-VJTI/TitanLegs',
   },
 ];
 
