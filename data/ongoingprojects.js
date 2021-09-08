@@ -38,6 +38,7 @@ const OngoingProjectsData = [
     ),
     githubLink: 'https://github.com/saharshleo/OpenCV-Trackers',
   },
+<<<<<<< HEAD
   {
     imgName: 'titan_legs.jpeg',
     name: 'TitanLegs',
@@ -72,6 +73,8 @@ const OngoingProjectsData = [
     ),
     githubLink: 'https://github.com/SRA-VJTI/TitanLegs',
   },
+=======
+>>>>>>> 52e85ca4de9139bc38c4f074ae0260d3c9ef6c22
 ];
 
 export default OngoingProjectsData;

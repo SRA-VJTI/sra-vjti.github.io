@@ -1,6 +1,10 @@
 const SenateList = [
   {
+<<<<<<< HEAD
     name: 'Gautam Agrawal ',
+=======
+    name: 'Gautam Agarwal ',
+>>>>>>> 52e85ca4de9139bc38c4f074ae0260d3c9ef6c22
     imgName: 'Team/2023/Gautam_Agrawal.jpeg',
     sub: (
       <>
