@@ -1,4 +1,6 @@
 import styles from './SingleBlog.module.scss';
+import dynamic from 'next/dynamic';
+import Markdown from 'markdown-to-jsx';
 
 const SingleBlog = ({ photo, title, author, time, short, content }) => {
   return (
@@ -9,22 +11,9 @@ const SingleBlog = ({ photo, title, author, time, short, content }) => {
         <div className={styles.blogAuthor}>- {author}</div>
       </div>
       <div className={styles.blogContent}>
-        {content &&
-          content.map((cell, idx) => {
-            if (cell.type == 'subtitle') {
-              return <p className={styles.blogSubtitle}>{cell.content}</p>;
-            } else if (cell.type == 'image') {
-              return (
-                <img
-                  src={cell.path}
-                  alt='Blog Image'
-                  className={styles.blogImg}
-                />
-              );
-            } else {
-              return <p className={styles.blogText}>{cell.content}</p>;
-            }
-          })}
+        <Markdown>
+          {content}
+        </Markdown>
       </div>
     </>
   );
