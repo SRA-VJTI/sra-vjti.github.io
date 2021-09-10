@@ -2,6 +2,7 @@ import styles from './Blogs.module.scss';
 import Hero from '../Hero/Hero';
 import React from 'react';
 import BlogList from '../../data/blogs';
+import {useRouter} from "next/router";
 import Link from 'next/link';
 
 const Blogs = () => {
@@ -63,8 +64,9 @@ const Blogs = () => {
 };
 
 const Blog = ({ title, photo, author, time, short, year, blogNum }) => {
+  const router=useRouter();
   return (
-    <Link href={`/internships/${year}/${blogNum}`}>
+    <div onClick={()=>router.push(`/internships/${year}/${blogNum}`)}>
       <div className={styles.blog}>
         <div
           className={styles.blogImage}
@@ -79,7 +81,8 @@ const Blog = ({ title, photo, author, time, short, year, blogNum }) => {
           <div className={styles.blogShort}>{short}</div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
+
 export default Blogs;
