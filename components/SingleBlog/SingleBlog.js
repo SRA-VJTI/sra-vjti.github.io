@@ -2,6 +2,14 @@ import styles from './SingleBlog.module.scss';
 import dynamic from 'next/dynamic';
 import Markdown from 'markdown-to-jsx';
 
+const Question = ({ children, ...props }) => (
+  <h1 {...props}>{children}<br/><br/></h1>
+  
+);
+const Answer = ({ children, ...props }) => (
+  <p {...props}>{children}<br/><br/></p>
+);
+
 const SingleBlog = ({ photo, title, author, time, short, content }) => {
   return (
     <>
@@ -11,7 +19,16 @@ const SingleBlog = ({ photo, title, author, time, short, content }) => {
         <div className={styles.blogAuthor}>- {author}</div>
       </div>
       <div className={styles.blogContent}>
-        <Markdown>
+        <Markdown  options={{
+              overrides: {
+                  h1: {
+                      component: Question
+                  },
+                  p: {
+                      component: Answer
+                  },
+              },
+          }}> 
           {content}
         </Markdown>
       </div>
