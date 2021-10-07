@@ -1,7 +1,6 @@
 import {
   AboutUsAlumniText,
   AboutUsText,
-  AboutVJTI,
   AboutUsTeamText,
   AboutUsImages,
 } from './aboutus';
@@ -22,7 +21,6 @@ export {
   NavbarData,
   HeroTags,
   AboutUsText,
-  AboutVJTI,
   AboutUsTeamText,
   AboutUsAlumniText,
   AboutUsImages,

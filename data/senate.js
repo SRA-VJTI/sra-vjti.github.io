@@ -1,6 +1,6 @@
 const SenateList = [
   {
-    name: 'Gautam Agrawal ',
+    name: 'Gautam Agarwal ',
     imgName: 'Team/2023/Gautam_Agrawal.jpeg',
     sub: (
       <>

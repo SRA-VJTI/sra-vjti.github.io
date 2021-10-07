@@ -38,40 +38,6 @@ const OngoingProjectsData = [
     ),
     githubLink: 'https://github.com/saharshleo/OpenCV-Trackers',
   },
-  {
-    imgName: 'titan_legs.jpeg',
-    name: 'TitanLegs',
-    sub: (
-      <>
-        TitanLegs is a customly designed, small, mobile and economical quadruped
-        robot specially for dynamic locomotion. It houses and is built on a
-        powerful, efficient yet cost effective 3D printed BLDC(Brushless DC)
-        Motor based Actuator.
-        <br />
-        Minimising power wastage, producing robust robotic locomotion and good
-        mobility are some of the achieved objectives. Our team has taken the
-        approach of designing from scratch most of the components, including a
-        cycloidal gearbox, PCB design; so as to get the most out of low-cost
-        components.
-      </>
-    ),
-    githubLink: 'https://github.com/SRA-VJTI/TitanLegs',
-  },
-  {
-    imgName: 'mobman.jpeg',
-    name: 'TitanLegs',
-    sub: (
-      <>
-        MobMan project aims to build a model of a mobile manipulator capable of
-        performing various dexterous tasks autonomously. The project is divided
-        into two main components:
-        <br />
-        1. Manipulator Arm: Perform pick and place operations using object
-        detection 2. Mobile Base: Perform SLAM for navigation.
-      </>
-    ),
-    githubLink: 'https://github.com/SRA-VJTI/TitanLegs',
-  },
 ];
 
 export default OngoingProjectsData;
