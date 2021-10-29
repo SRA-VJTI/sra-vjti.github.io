@@ -4,23 +4,23 @@ const EklavyaProjectList = [
     projects: [
       {
         name: 'Drone Design, Simulation and Control System',
-        imgName: 'Eklavya2021/Drone Design, Simulation and Control System - JASH SHAH.png',
+        imgName:
+          'Eklavya2021/Drone Design, Simulation and Control System - JASH SHAH.png',
         sub:
           'Designing a drone using SolidWorks, simulating in Gazebo, Control system for hovering at given co-ordinates.',
-        githubLink:
-          'https://github.com/Jash-Shah/Eklavya---Drone.git',
+        githubLink: 'https://github.com/Jash-Shah/Eklavya---Drone.git',
       },
       {
         name: 'Image Grouping',
         imgName: 'Eklavya2021/Image Grouping - YASH DESHPANDE.jpeg',
         sub:
           'Segregates images using ORB feature extraction and  K- Means Clustering algorithms.',
-        githubLink:
-          'https://github.com/shahpratham/Image_Grouping',
+        githubLink: 'https://github.com/shahpratham/Image_Grouping',
       },
       {
         name: 'Gesture Detection And Replication',
-        imgName: 'Eklavya2021/Gesture_Detection_and_Replication - DHRUV KUNJADIYA.png',
+        imgName:
+          'Eklavya2021/Gesture_Detection_and_Replication - DHRUV KUNJADIYA.png',
         sub:
           'Project was based on detecting gestures with help of opencv and replicating it on coppeliasim using a human arm like model.',
         githubLink:
@@ -31,44 +31,39 @@ const EklavyaProjectList = [
         imgName: 'Eklavya2021/Wall-E-Simulation-ROS2 - Marck koothoor.png',
         sub:
           'Self-Balancing and Line-Following WallE bot simulation using Gazebo and ROS2.',
-        githubLink:
-          'https://github.com/Aryaman22102002/Wall-e-simulation-ros2',
+        githubLink: 'https://github.com/Aryaman22102002/Wall-e-simulation-ros2',
       },
       {
         name: 'esp32-audio-router',
         imgName: 'Eklavya2021/esp32-audio-router - Moteen Shah.jpeg',
-        sub:
-          'Audio router to support 3.5mm jack.',
-        githubLink:
-          'https://github.com/Jamm02/esp32-audio-router',
+        sub: 'Audio router to support 3.5mm jack.',
+        githubLink: 'https://github.com/Jamm02/esp32-audio-router',
       },
       {
         name: 'Micromouse',
         imgName: 'Eklavya2021/Micromouse - KALYANI KASAR.png',
         sub:
           'A micromouse is a small, autonomous self-contained bot which can get to the centre of a 16x16 maze in the shortest possible time. ',
-        githubLink:
-          'https://github.com/KalyaniKasar1/Micromouse-Eklavya',
+        githubLink: 'https://github.com/KalyaniKasar1/Micromouse-Eklavya',
       },
       {
         name: 'Bluetooth Joystick',
         imgName: 'Eklavya2021/Bluetooth_Joystick.jpeg',
         sub:
           'The joystick which we are making is used as game controller which can be used in2-D games,The basic joystick module can be used in simple games for (UP and DOWN) control of the respective game or any 2 axis task.This gives a chance to use the ability of Bluetooth.',
-        githubLink:
-          'https://github.com/Krishna-13-cyber/BluetoothJoystick',
+        githubLink: 'https://github.com/Krishna-13-cyber/BluetoothJoystick',
       },
       {
         name: 'Live-CCTV',
         imgName: 'Eklavya2021/Live-CCTV - ARNAV ZUTSHI.png',
         sub:
           'The project aims at storing only relevant footage and detects and classifies the objects in the frame.',
-        githubLink:
-          'https://github.com/AsRaNi1/live-cctv',
+        githubLink: 'https://github.com/AsRaNi1/live-cctv',
       },
       {
         name: 'ESP32-chat-communication-over-wifi',
-        imgName: 'Eklavya2021/ESP32-chat-communication-over-wifi - RISHIKESH DONADKAR.png',
+        imgName:
+          'Eklavya2021/ESP32-chat-communication-over-wifi - RISHIKESH DONADKAR.png',
         sub:
           'This project is a chat communication system between two ESP32 development boards.The communication protocol used is ESP-NOW.',
         githubLink:
@@ -79,8 +74,7 @@ const EklavyaProjectList = [
         imgName: 'Eklavya2021/email_tui - Kunal WADHWA.jpeg',
         sub:
           'A terminal-based email client, created by integrating VMime and FTXUI libraries.',
-        githubLink:
-          'https://github.com/ParthShirole/email_tui',
+        githubLink: 'https://github.com/ParthShirole/email_tui',
       },
       {
         name: 'Delta-Pick-and-Place',
@@ -92,7 +86,8 @@ const EklavyaProjectList = [
       },
       {
         name: 'Quadruped-gait-analysis-ros',
-        imgName: 'Eklavya2021/Quadruped-gait-analysis-ros - ANIRUDDHA THAKRE.png',
+        imgName:
+          'Eklavya2021/Quadruped-gait-analysis-ros - ANIRUDDHA THAKRE.png',
         sub:
           'To study the gait analysis of quadruped not and perform teleportation.',
         githubLink:
@@ -103,51 +98,44 @@ const EklavyaProjectList = [
         imgName: 'Eklavya2021/sketch-to-paint.gif',
         sub:
           'A CGAN model which accepts a 256x256 px black and white sketch image and predicts the colored version of the image without knowing the ground truth.',
-        githubLink:
-          'https://github.com/KunalA18/Sketch-2-Paint',
+        githubLink: 'https://github.com/KunalA18/Sketch-2-Paint',
       },
       {
         name: '32-Bit RISC V CPU core',
         imgName: 'Eklavya2021/32-bit_riscv.jpg',
         sub:
           '32-bit RISC V processor core in Logisim software which can run Fibonacci series program',
-        githubLink:
-          'https://github.com/siddharth23-8/32-bit-RISC-V-Cpu-Core',
+        githubLink: 'https://github.com/siddharth23-8/32-bit-RISC-V-Cpu-Core',
       },
       {
         name: 'ARA - A DL library ',
         imgName: 'Eklavya2021/ara_deep_library.png',
         sub:
           'ARA is deep learning library which currently supports the training of  binary classification models,the project has a lot of potential for future work so stay tuned.',
-        githubLink:
-          'https://github.com/rishabh2002-lang/ARA',
+        githubLink: 'https://github.com/rishabh2002-lang/ARA',
       },
       {
         name: 'Reinforcement Learning (RLagents) ',
         imgName: 'Eklavya2021/Reinforcement_Learning_ - HIMANSHU CHOUGULE.png',
         sub:
           'Understanding Reinforcement Learning and Implementing RL agents for OpenAI Gym.',
-        githubLink:
-          'https://github.com/himanshu-02/rlagents',
+        githubLink: 'https://github.com/himanshu-02/rlagents',
       },
       {
         name: 'Noise Reduction ',
         imgName: 'Eklavya2021/noise_red.jpeg',
         sub:
-          'Designing a drone using SolidWorks, simulating in Gazebo, Control system for hovering at given co-ordinates.',
-        githubLink:
-          'https://github.com/Dhriti03/ai-noise-reduction',
+          'To reduce the environmental noise from the input audio signal in python using Digital Signal processing .',
+        githubLink: 'https://github.com/Dhriti03/ai-noise-reduction',
       },
       {
         name: 'Enter-Darknet',
         imgName: 'Eklavya2021/enter-darknet - SARRAH BASTAWALA.png',
         sub:
           'Exploring the darknet framework and using it to train a multilayer resnet image classifier model.',
-        githubLink:
-          'https://github.com/Utkarsh2401/Enter_Darknet',
-      }
-
-    ]
+        githubLink: 'https://github.com/Utkarsh2401/Enter_Darknet',
+      },
+    ],
   },
   {
     year: '2020',
