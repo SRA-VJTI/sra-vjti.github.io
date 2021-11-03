@@ -2,13 +2,9 @@ import styles from './Activities.module.scss';
 import Hero from '../Hero/Hero';
 import { ActivitiesList } from '../../data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faYoutube,
-  faGithub,
-} from '@fortawesome/free-brands-svg-icons';
+import { faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Activities = () => {
-
   return (
     <>
       <Hero
@@ -40,7 +36,7 @@ const Activities = () => {
   );
 };
 
-const ActivityCard = ({ imgName, name, sub, githubLink, youtubeLink}) => {
+const ActivityCard = ({ imgName, name, sub, githubLink, youtubeLink }) => {
   return (
     <div className={styles.activity}>
       <div
@@ -52,7 +48,7 @@ const ActivityCard = ({ imgName, name, sub, githubLink, youtubeLink}) => {
         <div className={styles.activityIcon}>
           <YoutubeLink youtubeLink={youtubeLink} />
           <GitHubLink githubLink={githubLink} />
-          </div>
+        </div>
         <div className={styles.activityContSub}>{sub}</div>
       </div>
     </div>
