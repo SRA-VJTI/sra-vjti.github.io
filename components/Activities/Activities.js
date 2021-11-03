@@ -1,8 +1,14 @@
 import styles from './Activities.module.scss';
 import Hero from '../Hero/Hero';
 import { ActivitiesList } from '../../data';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faYoutube,
+  faGithub,
+} from '@fortawesome/free-brands-svg-icons';
 
 const Activities = () => {
+
   return (
     <>
       <Hero
@@ -34,7 +40,7 @@ const Activities = () => {
   );
 };
 
-const ActivityCard = ({ imgName, name, sub }) => {
+const ActivityCard = ({ imgName, name, sub, githubLink, youtubeLink}) => {
   return (
     <div className={styles.activity}>
       <div
@@ -43,10 +49,38 @@ const ActivityCard = ({ imgName, name, sub }) => {
       ></div>
       <div className={styles.activityCont}>
         <div className={styles.activityContName}>{name}</div>
+        <div className={styles.activityIcon}>
+          <YoutubeLink youtubeLink={youtubeLink} />
+          <GitHubLink githubLink={githubLink} />
+          </div>
         <div className={styles.activityContSub}>{sub}</div>
       </div>
     </div>
   );
+};
+
+const YoutubeLink = ({ youtubeLink }) => {
+  if (youtubeLink !== '') {
+    return (
+      <a href={youtubeLink} target='blank'>
+        <FontAwesomeIcon icon={faYoutube} />
+      </a>
+    );
+  } else {
+    return null;
+  }
+};
+
+const GitHubLink = ({ githubLink }) => {
+  if (githubLink !== '') {
+    return (
+      <a href={githubLink} target='blank'>
+        <FontAwesomeIcon icon={faGithub} />
+      </a>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default Activities;
