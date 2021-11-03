@@ -44,7 +44,8 @@ const ActivityCard = ({ imgName, name, sub, githubLink, youtubeLink }) => {
         className={styles.activityImg}
       ></div>
       <div className={styles.activityCont}>
-        <div className={styles.activityContName}>{name}
+        <div className={styles.activityContName}>
+          {name}
           <div className={styles.activityIcon}>
             <YoutubeLink youtubeLink={youtubeLink} />
             <GitHubLink githubLink={githubLink} />
