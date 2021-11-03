@@ -49,6 +49,23 @@
       margin-bottom: 10px;
     }
   }
+
+  .activityIcon {
+    font-size: 1.2rem;
+    a {
+      margin: 0 10px;
+      transition: color 0.2s;
+      position: relative;
+      left: 89%;
+      bottom: 150%;
+      :hover {
+        color: $light;
+        animation: wiggle 0.3s forwards;
+        // transform: translateY(10px);
+      }
+    }
+  }
+
   &:hover {
     .activityCont {
       .activityContName {
