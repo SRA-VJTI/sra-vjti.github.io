@@ -42,3 +42,13 @@ button {
   width: 100%;
   height: 100vh;
 }
+
+.dialog {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 50px;
+  height: 100vh;
+  width:50vh;
+}

@@ -46,6 +46,18 @@
       margin-bottom: 10px;
       border-radius: 5px;
     }
+
+    input[type='email'] {
+      background-color: black;
+      color: white;
+      font-size: 1.2rem;
+      padding: 0.5em 1em;
+      border: 1px solid $lightest;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+
     textarea {
       background-color: black;
       color: white;
