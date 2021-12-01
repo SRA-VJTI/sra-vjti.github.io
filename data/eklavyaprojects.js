@@ -1,6 +1,5 @@
 const EklavyaProjectList = [
   {
-
     year: '2020',
     projects: [
       {
