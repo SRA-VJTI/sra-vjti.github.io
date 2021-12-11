@@ -8,7 +8,7 @@ const BlogList = [
         author: 'Vedant Paranjape',
         time: 'May-September 2020',
         short: 'Worked on creating a transpiled language called simpPRU',
-        content: require('./intern-exp/2020-01.md').default
+        content: require('./intern-exp/2020-01.md').default,
       },
       {
         photo: '/static/images/Team/Saharsh.jpg',

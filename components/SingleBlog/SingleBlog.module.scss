@@ -77,6 +77,33 @@
     margin-bottom: 50px;
   }
 
+  // Table
+  table,
+  th,
+  td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th,
+  td {
+    height: 40px;
+  }
+
+  // Code and codeblocks
+  code {
+    font-size: 18px;
+  }
+
+  // links
+  a {
+    color: blue;
+  }
+
   @media (max-width: 1000px) {
     width: 80%;
   }
