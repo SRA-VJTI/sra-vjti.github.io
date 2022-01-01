@@ -2,13 +2,44 @@ import styles from './SingleBlog.module.scss';
 import dynamic from 'next/dynamic';
 import Markdown from 'markdown-to-jsx';
 
+const QuestionStyle = {
+  lineHeight: "normal",
+  fontFamily: "sans-serif",
+  fontWeight: "normal",
+  fontSize: "1.5rem",
+  display: "inline-flex",
+  borderRadius: "0.1em",
+  backgroundColor: "white",
+  color: "black",
+  marginBottom: "0.5em",
+  paddingLeft: "0.3em",
+  paddingRight: "0.3em"
+};
+
+const AnswerStyle = {
+  lineHeight: "normal",
+  fontFamily: "Roboto",
+  fontWeight: "10",
+  fontSize: "1.1rem",
+  lineHeight: "1.5",
+};
+
+const LinkStyle = {
+  color: "#00FFFF",
+  textDecoration: "underline"
+};
+
 const Question = ({ children, ...props }) => (
-  <h1 {...props}>{children}<br/><br/></h1>
-  
+  <h1 style={QuestionStyle} {...props}>{children}<br/><br/></h1>
 );
+
 const Answer = ({ children, ...props }) => (
-  <p {...props}>{children}<br/><br/></p>
+  <p style={AnswerStyle} {...props}>{children}<br/><br/></p>
 );
+
+const Link = ({ children, ...props }) => (
+  <a style={LinkStyle} {...props}>{children}</a>
+); 
 
 const SingleBlog = ({ photo, title, author, time, short, content }) => {
   return (
@@ -26,6 +57,9 @@ const SingleBlog = ({ photo, title, author, time, short, content }) => {
                   },
                   p: {
                       component: Answer
+                  },
+                  a: {
+                    component: Link
                   },
               },
           }}> 
