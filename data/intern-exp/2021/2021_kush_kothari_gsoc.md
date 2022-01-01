@@ -22,8 +22,6 @@ $1500 USD, same for every Indian in GSoC '21
 
 My final [blog](https://kushkothari200-medium.com/gsoc-final-report-6fcade313d9f) is a good place to get started.
 
-
-
 # Suggestions to the fellow VJTIians who want to go for this internship.
 
 Keep a mentality of open source in mind, and the communication with your mentor is the most important for selection. Wise project selection is also a must.
