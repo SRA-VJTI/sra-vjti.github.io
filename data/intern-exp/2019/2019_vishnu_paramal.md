@@ -18,12 +18,12 @@ The application will be available on [https://www.ias.ac.in/](https://www.ias.ac
 # What was your project about ?
 
 Instruments used for measurement of voltage, current, power and resistance have to be precise, accurate and must comply with international regulations for measurement. In order to achieve this high measurement quality, every country has to maintain certain standards. For AC standards, India uses electrothermic instruments. Regular calibration of these instruments are of utmost importance to maintain the national standard. But the process is time consuming if done manually. My project was to automate the process of calibration which will reduce time and remove errors when compared with the conventional method.
- I had to develop a LabVIEW program to automate the AC DC transfer difference method of calibration and generate reports based on the result
+I had to develop a LabVIEW program to automate the AC DC transfer difference method of calibration and generate reports based on the result
 
 # How was the host University in terms of research and campus life ?
 
 The National Physical Laboratory had many research activities going on during my time of visit, some of the interesting ones included finding materials with electrical properties similar to human skin and tissues, research on improving NTP(Network Time Protocol), designing of 5G antennae, etc. They have their own journals and conferences for metrology which demonstrates their research.
- It has a really vibrant campus lush with greenery and regular sights of peacocks roaming around. Living arrangements have to be done by the students themselves.
+It has a really vibrant campus lush with greenery and regular sights of peacocks roaming around. Living arrangements have to be done by the students themselves.
 
 # How much was your stipend ?
 

@@ -32,6 +32,6 @@ This internship has some basic technical prerequisites along with the will to wo
 
 # What is the best way to contact you ?
 
-LinkedIn:[linkedin.com/in/shantanu-pande](https://in.linkedin.com/in/shantanu-pande) 
+LinkedIn:[linkedin.com/in/shantanu-pande](https://in.linkedin.com/in/shantanu-pande)
 
 Email: shantanupande898@gmail.com

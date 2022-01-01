@@ -168,7 +168,7 @@ const BlogList = [
         author: 'Vishnu Parammal',
         time: 'May-July 2019',
         short: 'Automated the process of calibration to reduce time and errors',
-        content: require('./intern-exp/2019/2019_vednarayan.md').default,
+        content: require('./intern-exp/2019/2019_vishnu_paramal.md').default,
       },
       {
         photo: '/static/images/Team/Vednarayan.jpg',
@@ -177,7 +177,7 @@ const BlogList = [
         time: 'Dec 2019- Jan 2020',
         short:
           'Tried to implement ‘Time Crystals’ as a scalar field for inflationary cosmology ',
-        content: require('./intern-exp/2019/2019_vishnu_paramal.md').default,
+        content: require('./intern-exp/2019/2019_vednarayan.md').default,
       },
     ],
   },

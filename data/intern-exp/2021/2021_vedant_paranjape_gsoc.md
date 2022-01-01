@@ -1,4 +1,5 @@
 # What was your internship about, and what was the duration of it ?
+
 Google summer of code is an international, annual program in which Google awards stipends to students who successfully complete a free and open-source software coding project during the summer. I was working with libcamera, which is an open source camera stack and framework for Linux, Android, and ChromeOS. It was a 10 week long program.
 
 # How do you approach the Organization/University ?
