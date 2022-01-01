@@ -1,14 +1,14 @@
-# 1) What was your internship about, and what was the duration of it ?
+# What was your internship about, and what was the duration of it ?
 
 [Airpix](https://airpix.in/) is a drone / unmanned aerial systems startup based in Navi Mumbai, India. [Airpix.io](https://airpix.io/) is an analytics platform that provides services in face recognition, video analytics, optical character recognition by Leveraging AI, Machine Learning &amp; Deep Learning technologies. [AIsyte](https://aisyte.com/) is the product that provides these analytics services.
 
-My position in internship was &#39;AI ML and Edge Computing Intern&#39;. The tasks were related to developing applications for Traffic monitoring, Face recognition, Pose estimation, etc. The position required knowledge in Python, Numpy, OpenCV, Deep Learning frameworks like Tensorflow, Keras, Pytorch, etc. It started with a 3 months unpaid internship. After that I was given the opportunity to continue the work with a paid internship. I worked under the guidance of Aniket Tatipamula.
+My position in internship was 'AI ML and Edge Computing Intern'. The tasks were related to developing applications for Traffic monitoring, Face recognition, Pose estimation, etc. The position required knowledge in Python, Numpy, OpenCV, Deep Learning frameworks like Tensorflow, Keras, Pytorch, etc. It started with a 3 months unpaid internship. After that I was given the opportunity to continue the work with a paid internship. I worked under the guidance of Aniket Tatipamula.
 
-# 2) How do you approach the Organization/University ?
+# How do you approach the Organization/University ?
 
 The application form was sent by my college. But you can also reach out to them via email or linkedin.
 
-# 3) What was your project about ?
+# What was your project about ?
 
 During the summer of 2020 I worked with the vehicle classification group. The task was to train a model which can detect, classify and localise Indian vehicles. Also the detected vehicles have to be tracked and counted. Further the Indian trucks had to be sub-classified according to the number of axles.
 
@@ -20,22 +20,22 @@ Weekly meetings took place and during that time the mentor discussed the work do
 
 After this my internship was extended and I was working during the semester. The task was to create a product so that the client can detect specific violations in a rtsp stream/ a video file. It was basically a culmination of the tasks that were done by the vehicle classification and the violation detection team. This product was to be deployed on an edge device. Also, the product had to be made such that it can run on all devices irrespective of the configuration.
 
-# 4) How was the host University in terms of research and campus life ?
+# How was the host University in terms of research and campus life ?
 
 It was a remote internship due to COVID.
 
-# 5) How much was your stipend ?
+# How much was your stipend ?
 
 Confidential
 
-# 6) Can you provide any resources to check out your project ?
+# Can you provide any resources to check out your project ?
 
 Confidential
 
-# 7) Suggestions to the fellow VJTIians who want to go for this internship.
+# Suggestions to the fellow VJTIians who want to go for this internship.
 
 Most probably you will receive the application form. If not then find the email on AIRPIX website and mail them. Remember: &quot;_You get what you ask_&quot;
 
-# 8) What is the best way to contact you ?
+# What is the best way to contact you ?
 
 Email: [sravanchittupalli7@gmail.com](mailto:sravanchittupalli7@gmail.com)
