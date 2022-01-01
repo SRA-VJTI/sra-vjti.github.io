@@ -1,0 +1,15 @@
+name: Add Internship Experience
+on:
+  workflow_dispatch:
+    inputs:
+      intern-exp-data:
+        description: 'stringifyed JSON containing intern exp'
+        required: true
+        default: 'missing (error) !'
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "${{ github.event.inputs.intern-exp-data }}"
