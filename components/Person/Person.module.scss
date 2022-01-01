@@ -37,7 +37,7 @@
     padding: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     line-height: 250%;
     .personContName {
       font-size: 3rem;
@@ -118,7 +118,7 @@
     padding: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     text-align: right;
     line-height: 250%;
     .personContName {
