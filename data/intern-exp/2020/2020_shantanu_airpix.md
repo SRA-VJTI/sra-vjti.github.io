@@ -26,12 +26,12 @@ Confidential
 
 Confidential
 
-# 7) Suggestions to the fellow VJTIians who want to go for this internship.**
+# 7) Suggestions to the fellow VJTIians who want to go for this internship.\*\*
 
 This internship has some basic technical prerequisites along with the will to work efficiently and with dedication. The team at Airpix is really good to work with and one can get a very good industrial exposure in the field of AI, ML and video analytics.
 
 # 8) What is the best way to contact you ?
 
-LinkedIn:[linkedin.com/in/shantanu-pande](https://in.linkedin.com/in/shantanu-pande) 
+LinkedIn:[linkedin.com/in/shantanu-pande](https://in.linkedin.com/in/shantanu-pande)
 
 Email: shantanupande898@gmail.com

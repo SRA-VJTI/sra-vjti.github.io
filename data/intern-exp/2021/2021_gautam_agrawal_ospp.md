@@ -13,6 +13,7 @@ Linux kernel 5.10 LTS is the long term support branch of linux kernel, i.e. supp
 # 4) How was the host University in terms of research and campus life ?
 
 It was remote.N/A
+
 # 5) How much was your stipend ?
 
 $1400

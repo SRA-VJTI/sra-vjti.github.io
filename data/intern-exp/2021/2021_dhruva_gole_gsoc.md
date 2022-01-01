@@ -9,9 +9,9 @@ I joined their IRC and slack channel, and communicated with my mentors about my 
 # 3) What was your project about ?
 
 As given on the official website, Bela is a hardware and software system for creating beautiful interaction with sensors and sound.
- Bela has a lot of analog and digital inputs and outputs for hooking up sensors and controlling other devices, and most importantly Bela has stereo audio i/o allowing you to interact with the world of sound.
- All Bela systems so far use the same Bela software. It uses a customized Debian distribution which - most notably - uses a Xenomai kernel instead of a stock kernel. Xenomai is co-kernel for Linux which allows to achieve hard real-time performance on Linux machines (ref: xenomai.org). It thus takes advantage of features of the BeagleBone computers and can achieve extremely low-latency audio and sensor processing times.
- Although the proposal Title mentions support for AI, I have developed a standardized setup that allows an easy jump across all TI chips.
+Bela has a lot of analog and digital inputs and outputs for hooking up sensors and controlling other devices, and most importantly Bela has stereo audio i/o allowing you to interact with the world of sound.
+All Bela systems so far use the same Bela software. It uses a customized Debian distribution which - most notably - uses a Xenomai kernel instead of a stock kernel. Xenomai is co-kernel for Linux which allows to achieve hard real-time performance on Linux machines (ref: xenomai.org). It thus takes advantage of features of the BeagleBone computers and can achieve extremely low-latency audio and sensor processing times.
+Although the proposal Title mentions support for AI, I have developed a standardized setup that allows an easy jump across all TI chips.
 
 # 4) How was the host University in terms of research and campus life ?
 
