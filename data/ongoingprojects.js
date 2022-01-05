@@ -67,12 +67,12 @@ const OngoingProjectsData = [
         into two main components:
         <br />
         1. Manipulator Arm: Perform pick and place operations using object
-        detection 
+        detection
         <br />
         2. Mobile Base: Perform SLAM for navigation.
       </>
     ),
-    githubLink: 'https://github.com/SRA-VJTI/TitanLegs',
+    githubLink: 'https://github.com/SRA-VJTI/Mobile_Manipulator',
   },
 ];
 
