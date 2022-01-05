@@ -45,6 +45,11 @@ const HomeAboutUs = () => {
             Eklavya Projects &nbsp;<span>&#8594;</span>
           </button>
         </Link>
+        <Link href='/projects/ongoing'>
+          <button>
+            Ongoing Projects &nbsp;<span>&#8594;</span>
+          </button>
+        </Link>
       </div>
     </>
   );
