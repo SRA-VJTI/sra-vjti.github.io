@@ -59,7 +59,7 @@ const OngoingProjectsData = [
   },
   {
     imgName: 'mobman.jpeg',
-    name: 'TitanLegs',
+    name: 'MobMan',
     sub: (
       <>
         MobMan project aims to build a model of a mobile manipulator capable of
@@ -67,7 +67,9 @@ const OngoingProjectsData = [
         into two main components:
         <br />
         1. Manipulator Arm: Perform pick and place operations using object
-        detection 2. Mobile Base: Perform SLAM for navigation.
+        detection 
+        <br />
+        2. Mobile Base: Perform SLAM for navigation.
       </>
     ),
     githubLink: 'https://github.com/SRA-VJTI/TitanLegs',
