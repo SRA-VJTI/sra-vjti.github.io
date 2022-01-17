@@ -24,7 +24,7 @@ const BlogList = [
       },
       {
         photo: '/static/images/Team/OmkarB.jpg',
-        title: 'RISE Labs, IIT Madras',
+        title: 'SHAKTI, RISE Group, IIT Madras',
         author: 'Omkar Bhilare',
         time: 'Mar - July 2021',
         short:
