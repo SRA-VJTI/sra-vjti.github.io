@@ -1,4 +1,4 @@
-const BlogList = [
+  const BlogList = [
   {
     year: '2021',
     blogs: [
@@ -18,7 +18,7 @@ const BlogList = [
         author: 'Omkar Bhilare',
         time: 'May - September 2021',
         short:
-          'Solved the known primary issue in Beaglewire was the interface between 32MB SDRAM and ICE40HX4K',
+          'Designed and Developed gateware for BeagleWire FPGA Cape.',
         content: require('./intern-exp/2021/2021_omkar_bhilare_gsoc.md')
           .default,
       },
@@ -28,7 +28,7 @@ const BlogList = [
         author: 'Omkar Bhilare',
         time: 'Mar - July 2021',
         short:
-          'Ran AAPG tests on an FPGA and compared the spikes golden signature dump with the FPGA signature dump',
+          'Designed and developed a FPGA framework to verify the SHAKTI processors on the FPGAs',
         content: require('./intern-exp/2021/2021_omkar_bhilare_iitm.md')
           .default,
       },
