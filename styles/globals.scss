@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 $black: #000000;
 $dark: #52057b;
@@ -17,7 +18,7 @@ $lightest: #bc6ff1;
 body {
   background-color: #000000;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 html {
   scroll-behavior: smooth;
