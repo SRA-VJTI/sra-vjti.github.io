@@ -1,31 +1,26 @@
 import styles from './SingleBlog.module.scss';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import Markdown from 'markdown-to-jsx';
 
 const QuestionStyle = {
-  lineHeight: 'normal',
-  fontFamily: 'sans-serif',
-  fontWeight: 'normal',
+  fontFamily: 'Oswald',
   fontSize: '1.5rem',
-  display: 'inline-flex',
-  borderRadius: '0.1em',
-  backgroundColor: 'white',
-  color: 'black',
-  marginBottom: '0.5em',
-  paddingLeft: '0.3em',
-  paddingRight: '0.3em',
+  // letterSpacing: '1px',
+  fontWeight: 'light',
+  paddingBottom: '0px',
+  color: '#892cdc',
+  lineHeight: '1.5',
 };
 
 const AnswerStyle = {
   lineHeight: 'normal',
-  fontFamily: 'Roboto',
-  fontWeight: '10',
-  fontSize: '1.1rem',
+  // fontSize: '1.1rem',
   lineHeight: '1.5',
+  marginBottom: '10px',
 };
 
 const LinkStyle = {
-  color: '#00FFFF',
+  fontWeight: 'bold',
   textDecoration: 'underline',
 };
 
