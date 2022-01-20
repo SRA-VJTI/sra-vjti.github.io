@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-      - run: python ./github/scripts/add-intern-exp.py "${{ github.event.inputs.intern-exp-data }}"
+      - run: python ./.github/scripts/add-intern-exp.py ${{ github.event.inputs.intern-exp-data }}
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Add Intern Experience of "${{ github.event.inputs.member-name }}"
