@@ -1,14 +1,21 @@
 import styles from './Hero.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
+import { useEffect, useState } from 'react';
 
-const Hero = ({
+function Hero({
   imgName,
   title,
   subtitleList,
   isHome,
   backgroundPosition = 'center',
-}) => {
+}) {
+  const [isLoad, setIsLoad] = useState('none');
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoad('');
+    }, 2000);
+  }, []);
   return (
     <>
       <div
@@ -38,7 +45,11 @@ const Hero = ({
           <div className={styles.scrollIndicator}></div>
         </a>
         {isHome && (
-          <a href='#notifs' className={styles.notif}>
+          <a
+            href='#notifs'
+            className={styles.notif}
+            style={{ display: isLoad }}
+          >
             <FontAwesomeIcon icon={faBell} />
           </a>
         )}
@@ -87,6 +98,6 @@ const Hero = ({
       )}
     </>
   );
-};
+}
 
 export default Hero;
