@@ -9,6 +9,10 @@
   margin-bottom: 1em;
   padding-bottom: 0.5em;
   border-bottom: 2px solid $light;
+
+  @media (max-width: 450px) {
+    width: 80%;
+  }
 }
 
 .activity {
