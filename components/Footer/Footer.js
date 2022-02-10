@@ -11,7 +11,7 @@ import {
 import { useEffect, useState } from 'react';
 import { SocialMediaLinks } from '../../data';
 
-function Footer(){
+function Footer() {
   const [isLoad, setIsLoad] = useState('none');
   useEffect(() => {
     setTimeout(() => {
@@ -23,28 +23,52 @@ function Footer(){
       <footer className={styles.footer}>
         <h3>Connect with us</h3>
         <div className={styles.footerIcons}>
-          <a href={SocialMediaLinks.github} target='_blank' style={{ display: isLoad }}>
+          <a
+            href={SocialMediaLinks.github}
+            target='_blank'
+            style={{ display: isLoad }}
+          >
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href={SocialMediaLinks.linkedin} target='_blank' style={{ display: isLoad }}>
+          <a
+            href={SocialMediaLinks.linkedin}
+            target='_blank'
+            style={{ display: isLoad }}
+          >
             <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
-          <a href={SocialMediaLinks.facebook} target='_blank' style={{ display: isLoad }}>
+          <a
+            href={SocialMediaLinks.facebook}
+            target='_blank'
+            style={{ display: isLoad }}
+          >
             <FontAwesomeIcon icon={faFacebook} />
           </a>
-          <a href={SocialMediaLinks.youtube} target='_blank' style={{ display: isLoad }}>
+          <a
+            href={SocialMediaLinks.youtube}
+            target='_blank'
+            style={{ display: isLoad }}
+          >
             <FontAwesomeIcon icon={faYoutube} />
           </a>
-          <a href={SocialMediaLinks.twitter} target='_blank' style={{ display: isLoad }}>
+          <a
+            href={SocialMediaLinks.twitter}
+            target='_blank'
+            style={{ display: isLoad }}
+          >
             <FontAwesomeIcon icon={faTwitter} />
           </a>
-          <a href={SocialMediaLinks.instagram} target='_blank' style={{ display: isLoad }}>
+          <a
+            href={SocialMediaLinks.instagram}
+            target='_blank'
+            style={{ display: isLoad }}
+          >
             <FontAwesomeIcon icon={faInstagram} />
           </a>
         </div>
       </footer>
     </>
   );
-};
+}
 
 export default Footer;
