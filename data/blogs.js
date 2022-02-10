@@ -1,4 +1,4 @@
-  const BlogList = [
+const BlogList = [
   {
     year: '2021',
     blogs: [
@@ -17,8 +17,7 @@
         title: 'GSoC 2021 with BeagleBoard.org',
         author: 'Omkar Bhilare',
         time: 'May - September 2021',
-        short:
-          'Designed and Developed gateware for BeagleWire FPGA Cape.',
+        short: 'Designed and Developed gateware for BeagleWire FPGA Cape.',
         content: require('./intern-exp/2021/2021_omkar_bhilare_gsoc.md')
           .default,
       },
