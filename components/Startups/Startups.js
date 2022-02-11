@@ -1,6 +1,6 @@
 import styles from './Startups.module.scss';
 import Hero from '../Hero/Hero';
-import { StartupsList } from "../../data";
+import { StartupsList } from '../../data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
 
