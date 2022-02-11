@@ -1,6 +1,6 @@
 import styles from './Startups.module.scss';
 import Hero from '../Hero/Hero';
-import { ActivitiesList } from '../../data';
+import { StartupsList } from "../../data";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -14,15 +14,15 @@ const Startups = () => {
         subtitleList={['All the fun, passed all along.']}
         isHome={false}
       />
-      <div className={styles.activityList} id='is'>
-        {ActivitiesList.map((activitySec, idx) => {
+      <div className={styles.startupsList} id='is'>
+        {StartupsList.map((startupSec, idx) => {
           return (
             <>
-              <div className={styles.activitySection} key={`activity_${idx}`}>
-                <div className={styles.activitySectionTitle}>
-                  {activitySec.name}
+              <div className={styles.startupSection} key={`activity_${idx}`}>
+                <div className={styles.startupsSectionTitle}>
+                  {startupSec.name}
                 </div>
-                {activitySec.activities.map((activity, idx) => {
+                {startupSec.startups.map((activity, idx) => {
                   return (
                     <ActivityCard {...activity} key={`activity_card_${idx}`} />
                   );
