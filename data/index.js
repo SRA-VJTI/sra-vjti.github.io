@@ -12,6 +12,7 @@ import HeroTags from './herotags';
 import NavbarData from './navbar';
 import { AlumniReachImgNames, AlumniList } from './alumnilist';
 import Achievementlist from './achievementlist';
+import StartupsList from './startups';
 import FlagshipProjectsData from './flagshipprojects';
 import OngoingProjectsData from './ongoingprojects';
 import EklavyaProjectList from './eklavyaprojects';
@@ -34,6 +35,7 @@ export {
   OngoingProjectsData,
   EklavyaProjectList,
   ActivitiesList,
+  StartupsList,
   Achievementlist,
   FacultyInchargeList,
   SenateList,
