@@ -6,11 +6,22 @@ const AboutUsTeamText =
   'Our team constantly endeavours to encourage students to pursue robotics and attempts to help further the interest in the field as much as possible.';
 const AboutUsAlumniText =
   'With our alumni in many renowned colleges and companies... our alumni network grows more diverse every year.';
-
 const AboutUsImages = {
   newgroup: 'group-new-final.jpg',
   oldGroup: 'group-old-final.jpg',
 };
+const AboutUsCurrentTextLeft = [
+  'Sample Data 1',
+  'Sample Data 3',
+  'Sample Data 5',
+  'Sample Data 7',
+];
+const AboutUsCurrentTextRight = [
+  'Sample Data 2',
+  'Sample Data 4',
+  'Sample Data 6',
+  'Sample Data 8',
+];
 
 export {
   AboutUsText,
@@ -18,4 +29,6 @@ export {
   AboutUsTeamText,
   AboutUsAlumniText,
   AboutUsImages,
+  AboutUsCurrentTextLeft,
+  AboutUsCurrentTextRight,
 };
