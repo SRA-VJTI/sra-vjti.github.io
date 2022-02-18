@@ -7,6 +7,10 @@ import {
 } from '../../data';
 import styles from './HomeAboutUs.module.scss';
 import Link from 'next/link';
+import {
+  AboutUsCurrentTextLeft,
+  AboutUsCurrentTextRight,
+} from '../../data/aboutus';
 
 const HomeAboutUs = () => {
   return (
@@ -31,6 +35,33 @@ const HomeAboutUs = () => {
             src={`/static/images/${AboutUsImages.oldGroup}`}
             alt='SRA Team group photo'
           />
+        </div>
+        <div className={styles.aboutUsCurrent} id='notifs'>
+          <h1> What is currently going on in SRA? </h1>
+          <div className={styles.aboutUsFlex}>
+            <div className={styles.left}>
+              <div className={styles.notifsMain}>
+                {AboutUsCurrentTextLeft.map((notif, idx) => {
+                  return (
+                    <div className={styles.notif} key={`notification_${idx}`}>
+                      {notif}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className={styles.right}>
+              <div className={styles.notifsMain}>
+                {AboutUsCurrentTextRight.map((notif, idx) => {
+                  return (
+                    <div className={styles.notif} key={`notification_${idx}`}>
+                      {notif}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div className={styles.ourProjects}>
