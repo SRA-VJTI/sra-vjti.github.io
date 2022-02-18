@@ -1,0 +1,29 @@
+name: Add Internship Experience
+on:
+  workflow_dispatch:
+    inputs:
+      member-name:
+        description: 'Name of the member'
+        required: true
+        default: 'missing (error) !'
+
+      intern-exp-data:
+        description: 'stringifyed JSON containing intern exp'
+        required: true
+        default: 'missing (error) !'
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 0
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - run: python ./github/scripts/add-intern-exp.py "${{ github.event.inputs.intern-exp-data }}"
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Add Intern Experience of "${{ github.event.inputs.member-name }}"
