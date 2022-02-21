@@ -2,13 +2,13 @@ import styles from './Startups.module.scss';
 import Hero from '../Hero/Hero';
 import { StartupsList } from '../../data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Startups = () => {
   return (
     <>
       <Hero
-        imgName={'activities-hero.jpg'}
+        imgName={'startups-hero.jpg'}
         backgroundPosition={'center top'}
         title={<>Startups</>}
         subtitleList={['All the fun, passed all along.']}
@@ -36,7 +36,7 @@ const Startups = () => {
   );
 };
 
-const ActivityCard = ({ imgName, name, sub, githubLink, youtubeLink }) => {
+const ActivityCard = ({ imgName, name, sub, externalLink}) => {
   return (
     <div className={styles.activity}>
       <div
@@ -47,8 +47,7 @@ const ActivityCard = ({ imgName, name, sub, githubLink, youtubeLink }) => {
         <div className={styles.activityContName}>
           {name}
           <div className={styles.activityIcon}>
-            <YoutubeLink youtubeLink={youtubeLink} />
-            <GitHubLink githubLink={githubLink} />
+            <ExternalLink externalLink={externalLink} />
           </div>
         </div>
         <div className={styles.activityContSub}>{sub}</div>
@@ -57,23 +56,11 @@ const ActivityCard = ({ imgName, name, sub, githubLink, youtubeLink }) => {
   );
 };
 
-const YoutubeLink = ({ youtubeLink }) => {
-  if (youtubeLink !== '') {
+const ExternalLink = ({ externalLink }) => {
+  if (externalLink !== '') {
     return (
-      <a href={youtubeLink} target='blank'>
-        <FontAwesomeIcon icon={faYoutube} />
-      </a>
-    );
-  } else {
-    return null;
-  }
-};
-
-const GitHubLink = ({ githubLink }) => {
-  if (githubLink !== '') {
-    return (
-      <a href={githubLink} target='blank'>
-        <FontAwesomeIcon icon={faGithub} />
+      <a href={externalLink} target='blank'>
+        <FontAwesomeIcon icon={faExternalLinkAlt} />
       </a>
     );
   } else {
