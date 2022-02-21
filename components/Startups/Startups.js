@@ -36,7 +36,7 @@ const Startups = () => {
   );
 };
 
-const ActivityCard = ({ imgName, name, sub, externalLink}) => {
+const ActivityCard = ({ imgName, name, sub, externalLink }) => {
   return (
     <div className={styles.activity}>
       <div
