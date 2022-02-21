@@ -24,10 +24,22 @@
   flex-direction: row;
   justify-content: space-between;
 
+  min-height: 300px;
+  cursor: pointer;
+  border: 2px solid $light;
+  align-items: center;
+  padding: 2em;
+  border-radius: 10px;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
   .activityImg {
     // margin-right: 1em;
     width: 30%;
-    // height: 100%;
+    height: 15em;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

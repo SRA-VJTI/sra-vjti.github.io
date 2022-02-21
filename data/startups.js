@@ -3,17 +3,17 @@ const StartupsList = [
     name: 'Companies',
     startups: [
       {
-        imgName: 'walle.jpg',
-        name: 'Wall E',
+        imgName: 'instamojo.png',
+        name: 'Aditya Sengupta',
         sub:
-          'The Wall-E workshop focuses on the concepts of line-following and self-balancing, using ESP32, a powerful micro-controller with features like inbuilt Wi-Fi support and BLE, with extensive application in several domains like IoT, RF, etc. The workshop entails various essential concepts such as PID Control, Embedded Communication Protocols, PWM, Filters, RTOS, etc. and gives its attendees (first-year students) a general idea about the world of robotics and embedded hardware.',
+          'Instamojo aims to solve one problem – make the internet a trustworthy place for a business to grow. Instamojo started with Payment Links – a simple URL that one can copy and paste anywhere on the internet and receive payments online via any payment mode. Today its an eCommerce platform that allows anyone to open their own online store on the platform in just a few clicks.',
         externalLink: 'https://www.instamojo.com/',
       },
       {
-        imgName: 'mario.jpg',
-        name: 'Mario',
+        imgName: 'creto.png',
+        name: 'Rohit Bhaskar',
         sub:
-          'In the MARIO workshop freshers design and implement a robotic manipulator(3-DOF Manipulator on ROS-based IO) using intricate concepts of forward and inverse kinematics, with Robot Operating System (ROS). ',
+          'Creto is a young startup from Mumbai, building ground-breaking technology for fast growing brands. They do this by bringing together data from various different brands into a common platform to gain valuable insights. They then use their proprietary machine learning algorithms to build tools and softwares that help our partner brands improve their conversions and on-site experiences.',
         externalLink: 'https://www.creto.club/',
       },
     ],
