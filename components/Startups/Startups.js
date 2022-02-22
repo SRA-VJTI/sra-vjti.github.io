@@ -1,8 +1,8 @@
 import styles from './Startups.module.scss';
 import Hero from '../Hero/Hero';
 import { StartupsList } from '../../data';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Startups = () => {
   return (
@@ -11,7 +11,7 @@ const Startups = () => {
         imgName={'startups-hero.jpg'}
         backgroundPosition={'center top'}
         title={<>Startups</>}
-        subtitleList={['All the fun, passed all along.']}
+        subtitleList={['lorem ipsum dolor sit am']}
         isHome={false}
       />
       <div className={styles.startupsList} id='is'>
@@ -38,7 +38,7 @@ const Startups = () => {
 
 const ActivityCard = ({ imgName, name, sub, externalLink }) => {
   return (
-    <div className={styles.activity}>
+    <div onClick={() => window.location = externalLink} className={styles.activity}>
       <div
         style={{ backgroundImage: `url("/static/images/${imgName}")` }}
         className={styles.activityImg}
@@ -46,9 +46,9 @@ const ActivityCard = ({ imgName, name, sub, externalLink }) => {
       <div className={styles.activityCont}>
         <div className={styles.activityContName}>
           {name}
-          <div className={styles.activityIcon}>
+          {/* <div className={styles.activityIcon}>
             <ExternalLink externalLink={externalLink} />
-          </div>
+          </div> */}
         </div>
         <div className={styles.activityContSub}>{sub}</div>
       </div>
@@ -56,16 +56,16 @@ const ActivityCard = ({ imgName, name, sub, externalLink }) => {
   );
 };
 
-const ExternalLink = ({ externalLink }) => {
-  if (externalLink !== '') {
-    return (
-      <a href={externalLink} target='blank'>
-        <FontAwesomeIcon icon={faExternalLinkAlt} />
-      </a>
-    );
-  } else {
-    return null;
-  }
-};
+// const ExternalLink = ({ externalLink }) => {
+//   if (externalLink !== '') {
+//     return (
+//       <a href={externalLink} target='blank'>
+//         <FontAwesomeIcon icon={faExternalLinkAlt} />
+//       </a>
+//     );
+//   } else {
+//     return null;
+//   }
+// };
 
 export default Startups;
