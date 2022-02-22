@@ -18,13 +18,13 @@ const Startups = () => {
         {StartupsList.map((startupSec, idx) => {
           return (
             <>
-              <div className={styles.startupSection} key={`activity_${idx}`}>
+              <div className={styles.startupSection} key={`startup_${idx}`}>
                 <div className={styles.startupsSectionTitle}>
                   {startupSec.name}
                 </div>
-                {startupSec.startups.map((activity, idx) => {
+                {startupSec.startups.map((startup, idx) => {
                   return (
-                    <ActivityCard {...activity} key={`activity_card_${idx}`} />
+                    <StartupCard {...startup} key={`startup_card_${idx}`} />
                   );
                 })}
               </div>
@@ -36,21 +36,24 @@ const Startups = () => {
   );
 };
 
-const ActivityCard = ({ imgName, name, sub, externalLink }) => {
+const StartupCard = ({ imgName, name, sub, externalLink }) => {
   return (
-    <div onClick={() => window.location = externalLink} className={styles.activity}>
+    <div
+      onClick={() => (window.location = externalLink)}
+      className={styles.startup}
+    >
       <div
         style={{ backgroundImage: `url("/static/images/${imgName}")` }}
-        className={styles.activityImg}
+        className={styles.startupImg}
       ></div>
-      <div className={styles.activityCont}>
-        <div className={styles.activityContName}>
+      <div className={styles.startupCont}>
+        <div className={styles.startupContName}>
           {name}
-          {/* <div className={styles.activityIcon}>
+          {/* <div className={styles.startupIcon}>
             <ExternalLink externalLink={externalLink} />
           </div> */}
         </div>
-        <div className={styles.activityContSub}>{sub}</div>
+        <div className={styles.startupContSub}>{sub}</div>
       </div>
     </div>
   );
