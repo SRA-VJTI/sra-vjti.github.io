@@ -1,4 +1,4 @@
-import { AlumniReachImgNames } from '../../data';
+import { AlumniReachImgNames, AlumniReachLinks } from '../../data';
 import styles from './HomeReach.module.scss';
 
 const OurReach = () => {
@@ -9,12 +9,14 @@ const OurReach = () => {
         <div className={styles.reachGroup}>
           {AlumniReachImgNames.map((name, idx) => {
             return (
-              <img
-                src={`/static/images/reach/${name}`}
-                alt=''
-                className={styles.reachImg}
-                key={`alumni_reach_${idx}`}
-              />
+              <a href={`${AlumniReachLinks[idx]}`}>
+                <img
+                  src={`/static/images/reach/${name}`}
+                  alt=''
+                  className={styles.reachImg}
+                  key={`alumni_reach_${idx}`}
+                ></img>
+              </a>
             );
           })}
         </div>
