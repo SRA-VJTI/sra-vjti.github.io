@@ -1,4 +1,3 @@
-import { SP } from 'next/dist/next-server/lib/utils';
 import { SponsorListImages, SponsorLinks } from '../../data/sponsors';
 import styles from './OurSponsors.module.scss';
 const OurSponsors = () => {
