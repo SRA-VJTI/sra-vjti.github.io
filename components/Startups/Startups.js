@@ -11,7 +11,7 @@ const Startups = () => {
         imgName={'startups-hero.jpg'}
         backgroundPosition={'center top'}
         title={<>Startups</>}
-        subtitleList={['lorem ipsum dolor sit am']}
+        subtitleList={['Launching... into space!']}
         isHome={false}
       />
       <div className={styles.startupsList} id='is'>
