@@ -406,4 +406,25 @@ const AlumniReachImgNames = [
   '18.png',
 ];
 
-export { AlumniList, AlumniReachImgNames };
+const AlumniReachLinks = [
+  'https://www.microsoft.com/en-in',
+  'https://umich.edu/',
+  'https://www.universityofcalifornia.edu/',
+  'https://www.cmu.edu/',
+  'https://www.tudelft.nl/',
+  'https://www.wpi.edu/',
+  'https://www.iitb.ac.in/',
+  'https://landing.ai/',
+  'https://www.espressif.com/',
+  'https://www.gatech.edu/',
+  'https://iisc.ac.in/',
+  'https://www.epfl.ch/en/',
+  'https://ucsd.edu/',
+  'https://www.uni-bonn.de/en',
+  'https://www.ncsu.edu/',
+  'https://airpix.in/',
+  'https://ut.ee/en',
+  'https://www.usc.edu/',
+];
+
+export { AlumniList, AlumniReachImgNames, AlumniReachLinks };

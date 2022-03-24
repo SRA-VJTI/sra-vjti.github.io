@@ -12,6 +12,10 @@ const NavbarData = [
     link: '/activities',
   },
   {
+    name: 'Startups',
+    link: '/startups',
+  },
+  {
     name: 'Achievements',
     link: '/achievements',
   },
