@@ -11,16 +11,20 @@ const AboutUsImages = {
   oldGroup: 'group-old-final.jpg',
 };
 const AboutUsCurrentTextLeft = [
-  'Sample Data 1',
-  'Sample Data 3',
-  'Sample Data 5',
-  'Sample Data 7',
+  '1. Mario 2020',
+  '3. Eklavya 2020',
+  '5. SAC 2020',
+  '7. Pixels 2021',
+  '9. Mario 2021',
+  '11. SAC 2021',
 ];
 const AboutUsCurrentTextRight = [
-  'Sample Data 2',
-  'Sample Data 4',
-  'Sample Data 6',
-  'Sample Data 8',
+  '2. Algocon 2020',
+  '4. Practice assignment solving in October',
+  '6. WallE 2021',
+  '8. Algocon 2021',
+  '10. Eklavya 2021',
+  '12. WallE 2022',
 ];
 
 export {
