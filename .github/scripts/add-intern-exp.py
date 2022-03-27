@@ -1,3 +1,4 @@
+import json
 from fileinput import filename
 import sys
 from datetime import datetime
@@ -13,25 +14,31 @@ intern_exp_body = dict()
 
 # convert the text data into a dict
 for i in range(1, len(sys.argv)):
-	intern_exp_body[sys.argv[i].split(":")[0]] = str(sys.argv[i].split(":")[1])
+    intern_exp_body[sys.argv[i].split(":")[0]] = str(sys.argv[i].split(":")[1])
 
 # convert the date in text to datetime object
-intern_exp_body["start-duration"] = datetime.strptime(intern_exp_body["start-duration"], "%m/%d/%Y")
-intern_exp_body["end-duration"] = datetime.strptime(intern_exp_body["end-duration"], "%m/%d/%Y")
+intern_exp_body["start-duration"] = datetime.strptime(
+    intern_exp_body["start-duration"], "%m/%d/%Y")
+intern_exp_body["end-duration"] = datetime.strptime(
+    intern_exp_body["end-duration"], "%m/%d/%Y")
 
 # check if the given year's folder exists
 if not os.path.exists(INTERN_EXP_BASE_PATH + str(intern_exp_body["start-duration"].year)):
-	os.mkdir(INTERN_EXP_BASE_PATH + str(intern_exp_body["start-duration"].year))
+    os.mkdir(INTERN_EXP_BASE_PATH +
+             str(intern_exp_body["start-duration"].year))
 else:
-	print(f"Directory for the year {intern_exp_body['start-duration'].year} already exists, skipping creation of new directory")
+    print(
+        f"Directory for the year {intern_exp_body['start-duration'].year} already exists, skipping creation of new directory")
 
 # create a filename from the data
-intern_exp_filename = str(intern_exp_body["start-duration"].year) + "_" + intern_exp_body["member-name"].split(" ")[0].lower() + "_" + intern_exp_body["member-name"].split(" ")[1].lower() + "_" + re.sub('\W+','', intern_exp_body["internship-name"]).lower() + ".md"
+intern_exp_filename = str(intern_exp_body["start-duration"].year) + "_" + intern_exp_body["member-name"].split(" ")[0].lower(
+) + "_" + intern_exp_body["member-name"].split(" ")[1].lower() + "_" + re.sub('\W+', '', intern_exp_body["internship-name"]).lower() + ".md"
 
 # TODO: check if markdown file of same name exists and accordingly a create markdown file
 # if os.path.exists(INTERN_EXP_BASE_PATH + str(intern_exp_body["start-duration"].year) + intern_exp_filename):
 
-file_handle = open(INTERN_EXP_BASE_PATH + str(intern_exp_body["start-duration"].year) + "/" + intern_exp_filename, "w+")
+file_handle = open(INTERN_EXP_BASE_PATH +
+                   str(intern_exp_body["start-duration"].year) + "/" + intern_exp_filename, "w+")
 
 file_output_string = f"""
 # What was your internship about, and what was the duration of it ?
@@ -71,3 +78,40 @@ file_handle.write(file_output_string)
 
 # print(file_output_string)
 print(intern_exp_body)
+
+
+sfile = None
+with open('./data/blog-data.json', 'r') as fp:
+    sfile = json.load(fp)
+
+new_year = True
+for i, year in enumerate(sfile):
+    if str(intern_exp_body["start-duration"].year) == sfile[i]["year"]:
+        blog = dict()
+        blog["photo"] = "/static/images/Team/Vedant.jpg"
+        blog["title"] = intern_exp_body["internship-name"]
+        blog["author"] = intern_exp_body["member-name"]
+        blog["time"] = str(intern_exp_body['start-duration'].month) + \
+            " - " + str(intern_exp_body['end-duration'].month)
+        blog["short"] = intern_exp_body["gist"]
+        with open(INTERN_EXP_BASE_PATH + str(intern_exp_body["start-duration"].year) + "/" + intern_exp_filename, 'r') as mdcontent:
+            blog["content"] = mdcontent.read()
+        sfile[-1]["blogs"].append(blog)
+        break
+else:
+    sfile.append(dict())
+    sfile[-1]["year"] = intern_exp_body["start-duration"].year
+    sfile[-1]["blogs"] = []
+    blog = dict()
+    blog["photo"] = "/static/images/Team/Vedant.jpg"
+    blog["title"] = intern_exp_body["internship-name"]
+    blog["author"] = intern_exp_body["member-name"]
+    blog["time"] = str(intern_exp_body['start-duration'].month) + \
+        " - " + str(intern_exp_body['end-duration'].month)
+    blog["short"] = intern_exp_body["gist"]
+    with open(INTERN_EXP_BASE_PATH + str(intern_exp_body["start-duration"].year) + "/" + intern_exp_filename, 'r') as mdcontent:
+        blog["content"] = mdcontent.read()
+    sfile[-1]["blogs"].append(blog)
+
+with open('./data/blog-data.json', 'w') as fp:
+    json.dump(sfile, fp)
