@@ -10,8 +10,13 @@ import SenateList from './senate';
 import SocialMediaLinks from './socialmedia';
 import HeroTags from './herotags';
 import NavbarData from './navbar';
-import { AlumniReachImgNames, AlumniList } from './alumnilist';
+import {
+  AlumniReachImgNames,
+  AlumniList,
+  AlumniReachLinks,
+} from './alumnilist';
 import Achievementlist from './achievementlist';
+import StartupsList from './startups';
 import FlagshipProjectsData from './flagshipprojects';
 import OngoingProjectsData from './ongoingprojects';
 import EklavyaProjectList from './eklavyaprojects';
@@ -28,12 +33,14 @@ export {
   AboutUsImages,
   AlumniReachImgNames,
   AlumniList,
+  AlumniReachLinks,
   NotificationData,
   SocialMediaLinks,
   FlagshipProjectsData,
   OngoingProjectsData,
   EklavyaProjectList,
   ActivitiesList,
+  StartupsList,
   Achievementlist,
   FacultyInchargeList,
   SenateList,

@@ -1,5 +1,19 @@
 const ActivitiesList = [
   {
+    name: '',
+    activities: [
+      {
+        imgName: 'sra_talks.jpg',
+        name: 'SRA Talks',
+        sub:
+          'SRA Talks is a new initiative where we have weekly talks within the SRA Core committee. The talks will be focused on projects everyone has been working on, and the presenter could take up this opportunity to further educate peers about their field of interest. ',
+        githubLink: '',
+        youtubeLink: '',
+      },
+    ],
+  },
+
+  {
     name: 'Workshops',
     activities: [
       {

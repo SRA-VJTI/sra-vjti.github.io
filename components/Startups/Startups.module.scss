@@ -1,6 +1,6 @@
 @import '../variables';
 
-.activitySectionTitle {
+.startupsSectionTitle {
   font-size: 2rem;
   text-align: center;
   width: 50%;
@@ -15,7 +15,7 @@
   }
 }
 
-.activity {
+.startup {
   width: 70%;
   height: auto;
   margin: 5em auto;
@@ -24,16 +24,28 @@
   flex-direction: row;
   justify-content: space-between;
 
-  .activityImg {
+  min-height: 300px;
+  cursor: pointer;
+  border: 2px solid $light;
+  align-items: center;
+  padding: 2em;
+  border-radius: 10px;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+
+  .startupImg {
     // margin-right: 1em;
     width: 30%;
-    // height: 100%;
+    height: 15em;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  .activityCont {
+  .startupCont {
     width: 70%;
     height: 100%;
     padding: 2em;
@@ -42,13 +54,13 @@
     justify-content: flex;
     line-height: 250%;
     text-align: justify;
-    .activityContName {
+    .startupContName {
       font-size: 2rem;
       margin-bottom: 20px;
       padding-bottom: 0.15em;
       transition: border-bottom 0.3s;
       border-bottom: 1px solid $lightest;
-      .activityIcon {
+      .startupIcon {
         font-size: 1.2rem;
         float: right;
         a {
@@ -62,21 +74,21 @@
         }
       }
     }
-    .activityContSub {
+    .startupContSub {
       font-size: 1rem;
       margin-bottom: 10px;
     }
   }
 
   &:hover {
-    .activityCont {
-      .activityContName {
+    .startupCont {
+      .startupContName {
         border-bottom: 1px solid $light;
       }
     }
   }
   @media (max-width: 900px) {
-    .activityImg {
+    .startupImg {
       height: auto;
       width: 50%;
     }
@@ -86,7 +98,7 @@
     margin: 1em auto;
     height: auto;
     flex-direction: column;
-    .activityImg {
+    .startupImg {
       height: 45vh;
       display: block;
       margin-left: auto;
@@ -94,13 +106,13 @@
       width: 80%;
       // background-image: 100vw;
     }
-    .activityCont {
+    .startupCont {
       width: 100%;
       height: max-content;
     }
   }
   @media (max-width: 375px) {
-    .activityImg {
+    .startupImg {
       width: 90%;
     }
   }
