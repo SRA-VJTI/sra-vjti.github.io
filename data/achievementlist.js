@@ -1,10 +1,39 @@
 const AchievementsList = [
   {
+    year: '2022',
+    achs: [
+      {
+        name: '3rd place in 2 Wheeled Self-Balancing Bike',
+        imgName: '2022-Eyantra1.jpg',
+      },
+      {
+        name: '4th place in Robotic Functional Weeder',
+        imgName: '2022-Eyantra2.jpg',
+      },
+      {
+        name: '20 selections in Google Summer of Code',
+        imgName: '2022-GSoC.jpg',
+      },
+      {
+        name: '3rd place at Data Centre AI',
+        imgName: '2022-Xilinx.jpg',
+      },
+    ],
+  },
+  {
     year: '2021',
     achs: [
       {
         name: '2nd prize in Delta International Manufacturing Contest',
         imgName: 'delta2021.jpeg',
+      },
+      {
+        name: '1st place in ML track of Datathon by KJSCE',
+        imgName: '2021-Datathon.jpg',
+      },
+      {
+        name: '1st place in Vision Beyond Limits in IIT Bombay, Techfest',
+        imgName: '2021-VBL.jpg',
       },
     ],
   },
