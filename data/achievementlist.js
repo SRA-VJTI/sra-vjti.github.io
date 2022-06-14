@@ -14,6 +14,10 @@ const AchievementsList = [
         name: '20 selections in Google Summer of Code',
         imgName: '2022-GSoC.jpg',
       },
+      {
+        name: '3rd place at Data Centre AI',
+        imgName: '2022-Xilinx.jpg',
+      },
     ],
   },
   {
@@ -30,10 +34,6 @@ const AchievementsList = [
       {
         name: '1st place in Vision Beyond Limits in IIT Bombay, Techfest',
         imgName: '2021-VBL.jpg',
-      },
-      {
-        name: '3rd place at Data Centre AI',
-        imgName: '2021-Xilinx.jpg',
       },
     ],
   },
