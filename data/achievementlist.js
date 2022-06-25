@@ -15,7 +15,7 @@ const AchievementsList = [
         imgName: '2022-GSoC.jpg',
       },
       {
-        name: '3rd place at Data Centre AI',
+        name: '3rd place in AMD Xilinx Adaptive computing challenge(Data Centre AI Track)',
         imgName: '2022-Xilinx.jpg',
       },
     ],
