@@ -3,11 +3,11 @@ const AchievementsList = [
     year: '2022',
     achs: [
       {
-        name: '3rd place in 2 Wheeled Self-Balancing Bike',
+        name: '3rd place in Dairy-Bike theme, Eyantra',
         imgName: '2022-Eyantra1.jpg',
       },
       {
-        name: '4th place in Robotic Functional Weeder',
+        name: '4th place in Robotic Functional Weeder theme, Eyantra',
         imgName: '2022-Eyantra2.jpg',
       },
       {
