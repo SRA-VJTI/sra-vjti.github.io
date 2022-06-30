@@ -231,7 +231,7 @@ const SenateList = [
   },
   {
     name: 'Gaurav kumar ',
-    imgName: 'Team/2024/Gaurav _Kumar_24.jpg',
+    imgName: 'Team/2024/Gaurav_Kumar_24.jpg',
     sub: <>B.Tech Textile ' 24</>,
     linkedInLink: 'https://www.linkedin.com/in/gaurav-kumar-b7298220a/',
     githubLink: 'https://github.com/GauravKumar9920',
@@ -239,63 +239,108 @@ const SenateList = [
   {
     name: 'Gautam Agrawal ',
     imgName: 'Team/2023/Gautam_Agrawal.jpeg',
-    sub: <>B.Tech Information Technology ' 23</>,
+    sub: (
+      <>
+        General Secretary <br />
+        B.Tech Information Technology ' 23
+      </>
+    ),
     linkedInLink: 'https://www.linkedin.com/in/gautam-agrawal-523240196/',
     githubLink: 'https://github.com/gautam-dev-maker',
   },
   {
     name: 'Anushree Sabnis',
     imgName: 'Team/2023/AnushreeSabnis.jpg',
-    sub: <>B.Tech Mechanical ' 23</>,
+    sub: (
+      <>
+        Jt. General Secretary <br />
+        B.Tech Mechanical ' 23
+      </>
+    ),
     linkedInLink: 'https://www.linkedin.com/in/anushreesabnis',
     githubLink: 'https://github.com/MOLOCH-dev',
   },
   {
     name: 'Dhairya Shah',
     imgName: 'Team/2023/Dhairya_Shah.jpg',
-    sub: <>B.Tech Electronics & Telecommunication ' 23</>,
+    sub: (
+      <>
+        Jt. General Secretary <br />
+        B.Tech Electronics & Telecommunication ' 23
+      </>
+    ),
     linkedInLink: 'https://www.linkedin.com/in/dhairya-shah-489a4b14b/',
     githubLink: 'https://github.com/dhairyashah1',
   },
   {
     name: 'Shreyas Atre',
     imgName: 'Team/2023/Shreyas_Atre.jpg',
-    sub: <>B.Tech Electronics & Telecommunication ' 23</>,
+    sub: (
+      <>
+        Software Head <br />
+        B.Tech Electronics & Telecommunication ' 23
+      </>
+    ),
     linkedInLink: 'https://www.linkedin.com/in/atreshreyas/',
     githubLink: 'https://github.com/SAtacker',
   },
   {
     name: 'Aman Chhaparia',
     imgName: 'Team/2023/Aman_Chhaparia.jpg',
-    sub: <>B.Tech Information Technology ' 23</>,
+    sub: (
+      <>
+        Software Head <br />
+        B.Tech Information Technology ' 23
+      </>
+    ),
     linkedInLink: 'https://www.linkedin.com/in/aman-chhaparia-903a97195/',
     githubLink: 'https://github.com/amanchhaparia',
   },
   {
     name: 'Saad Hashmi',
     imgName: 'Team/2023/Saad_Hashmi.jpg',
-    sub: <>B.Tech Mechanical ' 23</>,
+    sub: (
+      <>
+        Mechanical Head <br />
+        B.Tech Mechanical ' 23
+      </>
+    ),
     linkedInLink: 'https://www.linkedin.com/in/saad-hashmi-01722218b',
     githubLink: 'https://github.com/hashmis79',
   },
   {
     name: 'Ninad Jangle',
     imgName: 'Team/2023/ninadgsoc.jpg',
-    sub: <>B.Tech Electronics ' 23</>,
+    sub: (
+      <>
+        Electronics Head <br />
+        B.Tech Electronics ' 23
+      </>
+    ),
     linkedInLink: 'https://www.linkedin.com/in/ninad-jangle-1588bb147/',
     githubLink: 'https://github.com/ninja3011',
   },
   {
     name: 'Dhruvi Doshi',
     imgName: 'Team/2023/Dhruvi Doshi.jpg',
-    sub: <>B.Tech Computer Engineering ' 23</>,
+    sub: (
+      <>
+        PR Head <br />
+        B.Tech Computer Engineering ' 23
+      </>
+    ),
     linkedInLink: 'https://www.linkedin.com/in/dhruvi-doshi-5007801a0/',
     githubLink: 'https://github.com/dhruvi29/',
   },
   {
     name: 'Chaitravi Chalke',
     imgName: 'Team/2023/Chaitravi_Chalke.jpeg',
-    sub: <>B.Tech Electronics ' 23</>,
+    sub: (
+      <>
+        PR Head <br />
+        B.Tech Electronics ' 23
+      </>
+    ),
     linkedInLink: 'https://www.linkedin.com/in/chaitravi-chalke-6b4806190/',
     githubLink: 'https://github.com/chaitravi-ce',
   },
@@ -390,7 +435,7 @@ const SenateList = [
     sub: <>B.Tech Mechanical ' 23</>,
     linkedInLink: 'https://www.linkedin.com/in/karthik-swaminathan-24644a1a2/',
     githubLink: 'https://github.com/kart1802',
-  }
+  },
 ];
 
 export default SenateList;
