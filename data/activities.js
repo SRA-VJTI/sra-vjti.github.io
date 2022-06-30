@@ -34,6 +34,29 @@ const ActivitiesList = [
       },
     ],
   },
+
+  {
+    name: 'Seminars',
+    activities: [
+      {
+        imgName: 'pixels.png',
+        name: 'Pixels',
+        sub:
+          "The Pixels seminar focuses on the roots and concepts of Computer-Vision and Image-Processing which are a powerfull tool in today's world of over evergrowing AI and bleeding-edge computer vision techs. The workshop illuminates the very basics of Python and Git/GitHub. Together then we code our way to our very own blob detection algorithm that will help us easily track a particular object in a video/live camera.",
+        githubLink: 'https://github.com/SRA-VJTI/Pixels_Seminar/',
+        youtubeLink: '',
+      },
+      {
+        imgName: 'dimensions.png',
+        name: 'Dimensions',
+        sub:
+          'CAD is an essential skillset for many designers, is used in a plethora of interesting and cutting edge domains. The Dimensions wokshop is an online workshop on Solidworks. Here one learns 3D designing, make robotic parts and assemblies from scratch.',
+        githubLink: 'https://github.com/SRA-VJTI/Dimensions-v1.0',
+        youtubeLink: '',
+      },
+    ],
+  },
+
   {
     name: 'Competitions',
     activities: [
