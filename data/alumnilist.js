@@ -404,6 +404,12 @@ const AlumniReachImgNames = [
   '16.png',
   '17.png',
   '18.png',
+  '19.png',
+  '20.png',
+  '21.png',
+  '22.png',
+  '23.png',
+  '24.png',
 ];
 
 const AlumniReachLinks = [
@@ -425,6 +431,12 @@ const AlumniReachLinks = [
   'https://airpix.in/',
   'https://ut.ee/en',
   'https://www.usc.edu/',
+  'https://www.northeastern.edu/',
+  'https://www.nyu.edu/',
+  'https://www.ti.com/',
+  'https://www.qualcomm.com/home',
+  'https://www.arm.com/company',
+  'https://www.amd.com/en',
 ];
 
 export { AlumniList, AlumniReachImgNames, AlumniReachLinks };
