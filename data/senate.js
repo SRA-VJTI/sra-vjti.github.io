@@ -1,5 +1,242 @@
 const SenateList = [
   {
+    name: 'Moteen Shah',
+    imgName: 'Team/2024/Moteen_Shah_24.jpg',
+    sub: (
+      <>
+        General Secretary <br />
+        B.Tech Electronics & Telecommunication ' 24
+      </>
+    ),
+    linkedInLink: 'https://www.linkedin.com/in/moteen-shah-98997216b/',
+    githubLink: 'https://github.com/Jamm02',
+  },
+  {
+    name: 'Jash Shah',
+    imgName: 'Team/2024/Jash_Shah_24.jpg',
+    sub: (
+      <>
+        Jt. General Secretary <br />
+        B.Tech Computer Engineering ' 24
+      </>
+    ),
+    linkedInLink: 'https://www.linkedin.com/in/jash-shah-416173213/',
+    githubLink: 'https://github.com/Jash-Shah',
+  },
+  {
+    name: 'Chinmay Lonkar',
+    imgName: 'Team/2024/Chinmay_Lonkar_24.JPG',
+    sub: (
+      <>
+        Jt. General Secretary <br />
+        B.Tech Electrical ' 24
+      </>
+    ),
+    linkedInLink: 'https://in.linkedin.com/in/chinmay-lonkar-845207214',
+    githubLink: 'https://github.com/ChinmayLonkar',
+  },
+  {
+    name: 'Ayush Kaura',
+    imgName: 'Team/2024/ayush_kaura_24.jpg',
+    sub: (
+      <>
+        Software Head <br />
+        B.Tech Computer Engineering ' 24
+      </>
+    ),
+    linkedInLink: 'https://www.linkedin.com/in/ayush-kaura-422424227',
+    githubLink: 'https://github.com/Ayush-Kaura',
+  },
+  {
+    name: 'Aryaman Shardul',
+    imgName: 'Team/2024/Aryaman_Shardul_24.jpg',
+    sub: (
+      <>
+        Software Head <br />
+        B.Tech Computer Engineering ' 24
+      </>
+    ),
+    linkedInLink: 'https://www.linkedin.com/in/aryaman-shardul-31150a227/',
+    githubLink: 'https://github.com/Aryaman22102002',
+  },
+  {
+    name: 'Aniruddha Thakre',
+    imgName: 'Team/2024/Aniruddha_Thakre_24.jpg',
+    sub: (
+      <>
+        Mechanical Head <br />
+        B.Tech Production ' 24
+      </>
+    ),
+    linkedInLink: 'https://www.linkedin.com/in/aniruddha-thakre-992a92213/',
+    githubLink: 'https://github.com/Aniruddha1261',
+  },
+  {
+    name: 'Siddesh Patil',
+    imgName: 'Team/2024/Siddesh_Patil_24.jpg',
+    sub: (
+      <>
+        Electronics Head <br />
+        B.Tech Electronics ' 24
+      </>
+    ),
+    linkedInLink: 'https://www.linkedin.com/in/siddesh-patil-497b50206/',
+    githubLink: 'https://github.com/Sidshx',
+  },
+  {
+    name: 'Toshan Luktuke ',
+    imgName: 'Team/2024/Toshan_Luktuke_24.jpeg',
+    sub: (
+      <>
+        Sponsorship Head <br />
+        B.Tech Computer Engineering ' 24
+      </>
+    ),
+    linkedInLink: 'https://in.linkedin.com/in/toshan-luktuke-63ba7b1b8',
+    githubLink: 'https://github.com/toshan-luktuke',
+  },
+  {
+    name: 'Sarrah Bastawala',
+    imgName: 'Team/2024/Sarrah_Bastawala_24.jpg',
+    sub: (
+      <>
+        PR Head <br />
+        B.Tech Information Technology ' 24
+      </>
+    ),
+    linkedInLink: 'https://www.linkedin.com/in/sarrah-bastawala',
+    githubLink: 'https://github.com/sarrah-basta',
+  },
+  {
+    name: 'Himanshu Chougule',
+    imgName: 'Team/2024/Himanshu_Chougule_24.jpg',
+    sub: (
+      <>
+        Design Head <br />
+        B.Tech Information Technology ' 24
+      </>
+    ),
+    linkedInLink: 'https://www.linkedin.com/in/himanshu-chougule-1ba9a4181',
+    githubLink: 'https://github.com/himanshu-02',
+  },
+  {
+    name: 'Dhruv Kunjadiya',
+    imgName: 'Team/2024/Dhruv_Kunjadiya_24.jpeg',
+    sub: (
+      <>
+        Website Head <br />
+        B.Tech Computer Engineering ' 24
+      </>
+    ),
+    linkedInLink: 'https://www.linkedin.com/in/dhruv-kunjadiya-18b994227/',
+    githubLink: 'https://github.com/Dhruv454000',
+  },
+  {
+    name: 'Neel Shah',
+    imgName: 'Team/2024/Neel_Shah_24.jpg',
+    sub: <>B.Tech Computer Engineering ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/neel-shah-209997212/',
+    githubLink: 'https://github.com/Neel-Shah-29',
+  },
+  {
+    name: 'Kunal Agarwal',
+    imgName: 'Team/2024/Kunal_Agarwal_24.jpeg',
+    sub: <>B.Tech Computer Engineering ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/kunal-agarwal-274641200',
+    githubLink: 'https://github.com/KunalA18',
+  },
+  {
+    name: 'Pratham Shah',
+    imgName: 'Team/2024/Pratham_Shah_24.jpeg',
+    sub: <>B.Tech Information Technology ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/shahpratham',
+    githubLink: 'https://github.com/shahpratham',
+  },
+  {
+    name: 'Priyal Awankar',
+    imgName: 'Team/2024/Priyal_Awankar_24.jpg',
+    sub: <>B.Tech Information Technology ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/priyal-awankar-41193b1b0',
+    githubLink: 'https://github.com/Pixels123priyal',
+  },
+  {
+    name: 'Rishabh Bali',
+    imgName: 'Team/2024/rishabh_24.jpeg',
+    sub: <>B.Tech Computer Engineering ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/rishabh-bali-3ba925216/',
+    githubLink: 'https://github.com/Ris-Bali',
+  },
+  {
+    name: 'Utkarsh Gandhi',
+    imgName: 'Team/2024/Utkarsh_Gandhi_24.jpeg',
+    sub: <>B.Tech Electronics & Telecommunication ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/utkarsh-gandhi-804a82236/',
+    githubLink: 'https://github.com/Utkarsh2401',
+  },
+  {
+    name: 'Krishna Narayanan',
+    imgName: 'Team/2024/Krishna_Narayanan_24.jpg',
+    sub: <>B.Tech Electronics & Telecommunication ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/krishna-narayanan-295b57209/',
+    githubLink: 'https://github.com/Krishna-13-cyber',
+  },
+  {
+    name: 'Sagar Chotalia',
+    imgName: 'Team/2024/Sagar_Chotalia_2024.jpg',
+    sub: <>B.Tech Electronics & Telecommunication ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/sagar-chotalia/',
+    githubLink: 'https://github.com/sagarchotalia',
+  },
+  {
+    name: 'Rishikesh Donadkar',
+    imgName: 'Team/2024/Rishikesh_Donadkar_2024.jpg',
+    sub: <>B.Tech Electronics & Telecommunication ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/rishikesh-donadkar-a75320228/',
+    githubLink: 'https://github.com/RISHI27-dot',
+  },
+  {
+    name: 'Premraj Jadhav',
+    imgName: 'Team/2024/Premraj_Jadhav_24.jpg',
+    sub: <>B.Tech Electronics ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/premraj-jadhav-448a33233',
+    githubLink: 'https://github.com/Premraj02',
+  },
+  {
+    name: 'Marck Koothoor ',
+    imgName: 'Team/2024/Marck_Koothoor_24.jpg',
+    sub: <>B.Tech Production ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/marck-koothoor-ab0058225/',
+    githubLink: 'https://github.com/marck3131',
+  },
+  {
+    name: 'Viraj Jagadale',
+    imgName: 'Team/2024/Viraj_Jagadale_24.jpg',
+    sub: <>B.Tech Mechanical ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/viraj-jagadale-173b23231',
+    githubLink: 'https://github.com/Jviraj',
+  },
+  {
+    name: 'Om Sheladia ',
+    imgName: 'Team/2024/Om_Sheladia_24.jpg',
+    sub: <>B.Tech Electronics & Telecommunication ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/om-sheladia-227a96200/',
+    githubLink: 'https://github.com/omsheladia',
+  },
+  {
+    name: 'Kalyani Kasar',
+    imgName: 'Team/2024/Kalyani_Kasar_24.jpg',
+    sub: <>B.Tech Electronics ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/kalyani-kasar-120774212/',
+    githubLink: 'https://github.com/KalyaniKasar1',
+  },
+  {
+    name: 'Gaurav kumar ',
+    imgName: 'Team/2024/Gaurav_Kumar_24.jpg',
+    sub: <>B.Tech Textile ' 24</>,
+    linkedInLink: 'https://www.linkedin.com/in/gaurav-kumar-b7298220a/',
+    githubLink: 'https://github.com/GauravKumar9920',
+  },
+  {
     name: 'Gautam Agrawal ',
     imgName: 'Team/2023/Gautam_Agrawal.jpeg',
     sub: (
@@ -28,7 +265,7 @@ const SenateList = [
     imgName: 'Team/2023/Dhairya_Shah.jpg',
     sub: (
       <>
-        Treasurer <br />
+        Jt. General Secretary <br />
         B.Tech Electronics & Telecommunication ' 23
       </>
     ),
@@ -198,125 +435,6 @@ const SenateList = [
     sub: <>B.Tech Mechanical ' 23</>,
     linkedInLink: 'https://www.linkedin.com/in/karthik-swaminathan-24644a1a2/',
     githubLink: 'https://github.com/kart1802',
-  },
-  {
-    name: 'Saharsh Jain',
-    imgName: 'Team/Saharsh.jpg',
-    sub: <>B.Tech Information Technology ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/saharsh-jain/',
-    githubLink: 'https://github.com/saharshleo/',
-  },
-  {
-    name: 'Omkar Sargar',
-    imgName: 'Team/Omkar.jpeg',
-    sub: <>B.Tech Electronics ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/omkar-s-7ba8b3137',
-    githubLink: 'https://github.com/OSSome01',
-  },
-  {
-    name: 'Omkar Bhilare',
-    imgName: 'Team/OmkarB.jpg',
-    sub: <>B.Tech Electronics ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/omkar-bhilare-985aa2180',
-    githubLink: 'https://github.com/ombhilare999',
-  },
-  {
-    name: 'Vedant Paranjape',
-    imgName: 'Team/Vedant.jpg',
-    sub: <>B.Tech Electronics ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/vedantp16',
-    githubLink: 'https://github.com/vedantparanjape',
-  },
-  {
-    name: 'Dhruva Gole',
-    imgName: 'Team/Dhruva.jpeg',
-    sub: <>B.Tech Electrical ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/dhruva-g-75ab26a5/',
-    githubLink: 'https://github.com/DhruvaG2000',
-  },
-  {
-    name: 'Sravan Chittupalli',
-    imgName: 'Team/Sravan.jpeg',
-    sub: <>B.Tech Electronics ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/sravan-chittupalli-a3777b16a/',
-    githubLink: 'https://github.com/SravanChittupalli',
-  },
-  {
-    name: 'Shantanu Pande',
-    imgName: 'Team/Shantanu.jpg',
-    sub: <>B.Tech Electronics ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/shantanu-pande',
-    githubLink: 'https://github.com/shan515',
-  },
-  {
-    name: 'Abhinav Venkatadri',
-    imgName: 'Team/Abhinav.jpg',
-    sub: <>B.Tech EXTC ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/abhinavvenkatadri/',
-    githubLink: 'https://github.com/Abhinavvenkatadri',
-  },
-  {
-    name: 'Rahul Singh',
-    imgName: 'Team/Rahul.JPG',
-    sub: <>B.Tech Electronics ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/rahul-singh-005965188/',
-    githubLink: 'https://github.com/rahulsingh701',
-  },
-  {
-    name: 'Priti Jain',
-    imgName: 'Team/Priti.jpg',
-    sub: <>B.Tech Mechanical ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/priti-jain-006567173/',
-    githubLink: 'https://github.com/preetijain7681',
-  },
-  {
-    name: 'Shamit Savant',
-    imgName: 'Team/Shamit.jpg',
-    sub: <>B.Tech Electrical ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/shamit-savant/',
-    githubLink: 'https://github.com/ShaMiT19',
-  },
-  {
-    name: 'Sanath Menon',
-    imgName: 'Team/Sanath.jpeg',
-    sub: <>B.Tech Mechanical ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/sanath-menon-159043183/',
-    githubLink: 'https://github.com/sanathmenon',
-  },
-  {
-    name: 'Shubham Singh',
-    imgName: 'Team/Shubham.jpg',
-    sub: <>B.Tech Electrical ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/shubham-singh-520394168',
-    githubLink: 'https://github.com/shubham92000',
-  },
-  {
-    name: 'Lukesh Ankamwar',
-    imgName: 'Team/Lukesh.jpg',
-    sub: <>B.Tech Electronics ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/lukesh-ankamwar-212566173/',
-    githubLink: 'https://github.com/luke2103',
-  },
-  {
-    name: 'Jitesh Sonkusare',
-    imgName: 'Team/Jitesh.jpg',
-    sub: <>B.Tech Electrical ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/jitesh-sonkusare-11b118198/',
-    githubLink: 'https://github.com/jitesh3023',
-  },
-  {
-    name: 'Neha Kurian',
-    imgName: 'Team/Neha.jpg',
-    sub: <>B.Tech Mechanical ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/neha-kurian-469b791b3/',
-    githubLink: 'https://github.com/Neha-Kurian',
-  },
-  {
-    name: 'Maunil Shah',
-    imgName: 'Team/Maunil.jpg',
-    sub: <>B.Tech Mechanical ' 22</>,
-    linkedInLink: 'https://www.linkedin.com/in/maunil-shah-2987421a7/',
-    githubLink: 'https://github.com/Maunil2k',
   },
 ];
 
