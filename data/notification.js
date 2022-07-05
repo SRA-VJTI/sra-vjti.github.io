@@ -1,5 +1,5 @@
 const NotificationData = [
-  'Wall-E 2.3 : Learn how to build a Line following and Self Balancing Bot from scratch on 16th March. Looking forward to see you there! ',
+  'Eklavya-2k22 : Eklavya is a mentorship program conducted by Society of Robotics and Automation (SRA) where First Years will get an opportunity to work on full-fledged projects under the mentorship of SRA seniors. Looking forward towards your participation/seeing you there. ',
 ];
 
 export default NotificationData;
