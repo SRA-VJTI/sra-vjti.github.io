@@ -379,7 +379,6 @@ const SenateList = [
     linkedInLink: 'https://www.linkedin.com/in/mann-doshi-35308b15a/',
     githubLink: 'https://github.com/MannDoshi',
   },
-
   {
     name: 'Tejal Jain',
     imgName: 'Team/2023/Tejal_Jain.jpeg',
