@@ -28,7 +28,7 @@ const ActivitiesList = [
         imgName: 'mario_bot.jpg',
         name: 'Mario',
         sub:
-          'In the MARIO workshop freshers design and implement a robotic manipulator(3-DOF Manipulator on ROS-based IO) using intricate concepts of forward and inverse kinematics, with Robot Operating System (ROS). ',
+          'In the MARIO workshop freshers design and implement a robotic manipulator(4-DOF Manipulator with Gripper on ROS Based IO) using intricate concepts of forward and inverse kinematics, with Robot Operating System (ROS). ',
         githubLink: 'https://github.com/SRA-VJTI/ROS-Workshop-2.1',
         youtubeLink: 'https://www.youtube.com/watch?v=qkdTsRB-te4',
       },
