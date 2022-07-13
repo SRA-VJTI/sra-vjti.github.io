@@ -97,6 +97,15 @@ const AchievementsList = [
       },
     ],
   },
+  {
+    year: '2010',
+    achs: [
+      {
+        name: "SRA's humminger was awarded as one of the best nationally by DRDO.",
+        imgName: '2010-DRDO Aerial Vehicle.jpg',
+      },
+    ],
+  },
 ];
 
 export default AchievementsList;
