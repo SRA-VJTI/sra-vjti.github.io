@@ -373,27 +373,6 @@ const SenateList = [
     githubLink: 'https://github.com/Reshmika-Nambiar',
   },
   {
-    name: 'Kushal Shah',
-    imgName: 'Team/2023/Kushal.jpeg',
-    sub: <>B.Tech Computer Engineering ' 23</>,
-    linkedInLink: 'https://www.linkedin.com/in/kushal-shah-36b400203/',
-    githubLink: 'https://github.com/Kushal-Ajay-Shah',
-  },
-  {
-    name: 'Sakshi Chikshe',
-    imgName: 'Team/2023/Sakshi_Chikshe.jpeg',
-    sub: <>B.Tech Electronics ' 23</>,
-    linkedInLink: 'https://www.linkedin.com/in/sakshi-chikshe-66a0821a8/',
-    githubLink: 'https://github.com/Sakshi-0311',
-  },
-  {
-    name: 'Harsh Shah',
-    imgName: 'Team/2023/Harsh_Shah.jpeg',
-    sub: <>B.Tech Electronics & Telecommunication ' 23</>,
-    linkedInLink: 'https://www.linkedin.com/in/harsh-shah-b0a2461b4/',
-    githubLink: 'https://github.com/HarshShah03325',
-  },
-  {
     name: 'Mann Doshi',
     imgName: 'Team/2023/Mann.jpg',
     sub: <>B.Tech Information Technology ' 23</>,
@@ -401,33 +380,11 @@ const SenateList = [
     githubLink: 'https://github.com/MannDoshi',
   },
   {
-    name: 'Ashutosh Gupta',
-    imgName: 'Team/2023/Ashutosh.jpeg',
-    sub: <>B.Tech Electronics ' 23</>,
-    linkedInLink: '',
-    githubLink: '',
-  },
-  {
-    name: 'Sanghamitra Ranganathan',
-    imgName: 'Team/2023/Sanghamitra_Ranganathan.jpeg',
-    sub: <>B.Tech Electronics ' 23</>,
-    linkedInLink:
-      'https://www.linkedin.com/in/sanghamitra-ranganathan-03a98620b/',
-    githubLink: 'https://github.com/Sanghamitra22',
-  },
-  {
     name: 'Tejal Jain',
     imgName: 'Team/2023/Tejal_Jain.jpeg',
     sub: <>B.Tech Textile ' 23</>,
     linkedInLink: 'https://www.linkedin.com/in/tejal-bedmutha-283181197/',
     githubLink: 'https://github.com/Tejal-19',
-  },
-  {
-    name: 'Mayuri Angule',
-    imgName: 'Team/2023/Mayuri_Angule.jpeg',
-    sub: <>B.Tech Electronics ' 23</>,
-    linkedInLink: 'https://www.linkedin.com/in/mayuri-angule-37a19a212',
-    githubLink: 'https://github.com/MMAngule',
   },
   {
     name: 'Karthik Swaminathan',
