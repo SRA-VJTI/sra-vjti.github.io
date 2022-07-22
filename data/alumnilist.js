@@ -526,6 +526,7 @@ const AlumniReachImgNames = [
   '14.png',
   '15.png',
   '16.png',
+  '17.png',
 ];
 
 const AlumniReachLinks = [
@@ -545,6 +546,7 @@ const AlumniReachLinks = [
   'https://www.northeastern.edu/',
   'https://www.nyu.edu/',
   'https://oregonstate.edu/',
+  'https://www.epfl.ch/en/',
 ];
 
 const CorporateReachImgNames = [
@@ -556,14 +558,12 @@ const CorporateReachImgNames = [
   'c6.png',
   'c7.png',
   'c8.png',
-  'c9.png',
 ];
 
 const CorporateReachLinks = [
   'https://www.microsoft.com/en-in',
   'https://landing.ai/',
   'https://www.espressif.com/',
-  'https://www.epfl.ch/en/',
   'https://airpix.in/',
   'https://www.ti.com/',
   'https://www.qualcomm.com/home',
