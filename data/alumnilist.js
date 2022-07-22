@@ -525,6 +525,7 @@ const AlumniReachImgNames = [
   '13.png',
   '14.png',
   '15.png',
+  '16.png',
 ];
 
 const AlumniReachLinks = [
@@ -543,6 +544,7 @@ const AlumniReachLinks = [
   'https://www.usc.edu/',
   'https://www.northeastern.edu/',
   'https://www.nyu.edu/',
+  'https://oregonstate.edu/',
 ];
 
 const CorporateReachImgNames = [
@@ -568,4 +570,10 @@ const CorporateReachLinks = [
   'https://www.arm.com/company',
   'https://www.amd.com/en',
 ];
-export { AlumniList, AlumniReachImgNames, AlumniReachLinks, CorporateReachImgNames, CorporateReachLinks };
+export {
+  AlumniList,
+  AlumniReachImgNames,
+  AlumniReachLinks,
+  CorporateReachImgNames,
+  CorporateReachLinks,
+};
