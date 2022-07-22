@@ -17,7 +17,7 @@ const ActivitiesList = [
     name: 'Workshops',
     activities: [
       {
-        imgName: 'walle.jpg',
+        imgName: 'walle_bot.jpg',
         name: 'Wall E',
         sub:
           'The Wall-E workshop focuses on the concepts of line-following and self-balancing, using ESP32, a powerful micro-controller with features like inbuilt Wi-Fi support and BLE, with extensive application in several domains like IoT, RF, etc. The workshop entails various essential concepts such as PID Control, Embedded Communication Protocols, PWM, Filters, RTOS, etc. and gives its attendees (first-year students) a general idea about the world of robotics and embedded hardware.',
@@ -25,10 +25,10 @@ const ActivitiesList = [
         youtubeLink: 'https://www.youtube.com/watch?v=-AbwiFBjHl0&t=36s',
       },
       {
-        imgName: 'mario.jpg',
+        imgName: 'mario_bot.jpg',
         name: 'Mario',
         sub:
-          'In the MARIO workshop freshers design and implement a robotic manipulator(3-DOF Manipulator on ROS-based IO) using intricate concepts of forward and inverse kinematics, with Robot Operating System (ROS). ',
+          'In the MARIO workshop freshers design and implement a robotic manipulator(4-DOF Manipulator with Gripper on ROS Based IO) using intricate concepts of forward and inverse kinematics, with Robot Operating System (ROS). ',
         githubLink: 'https://github.com/SRA-VJTI/ROS-Workshop-2.1',
         youtubeLink: 'https://www.youtube.com/watch?v=qkdTsRB-te4',
       },
