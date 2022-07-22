@@ -14,6 +14,8 @@ import {
   AlumniReachImgNames,
   AlumniList,
   AlumniReachLinks,
+  CorporateReachImgNames,
+  CorporateReachLinks,
 } from './alumnilist';
 import Achievementlist from './achievementlist';
 import StartupsList from './startups';
@@ -34,6 +36,8 @@ export {
   AlumniReachImgNames,
   AlumniList,
   AlumniReachLinks,
+  CorporateReachImgNames,
+  CorporateReachLinks,
   NotificationData,
   SocialMediaLinks,
   FlagshipProjectsData,
