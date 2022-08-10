@@ -34,7 +34,7 @@ const HomeAboutUs = () => {
         </div>
       </div>
       <div className={styles.ourProjects}>
-        <h1>Our Projects</h1>
+        <h1>Projects</h1>
         <Link href='/projects/flagship'>
           <button>
             Flagship Projects &nbsp;<span>&#8594;</span>

@@ -5,7 +5,7 @@ const OurCorporates = () => {
   return (
     <>
       <div className={styles.reach}>
-        <h1>Our Corporates</h1>
+        <h1>Industrial Reach</h1>
         <div className={styles.reachGroup}>
           {CorporateReachImgNames.map((name, idx) => {
             return (

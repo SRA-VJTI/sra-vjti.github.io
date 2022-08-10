@@ -4,7 +4,7 @@ import Link from 'next/link';
 const ProjectSelection = () => {
   return (
     <div className={styles.projSelect}>
-      <h1>Our Projects</h1>
+      <h1>Projects</h1>
       <div className={styles.projSelList}>
         <Link href='/projects/flagship'>
           <a>Flagship Projects</a>
