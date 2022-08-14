@@ -1,7 +1,7 @@
 const SenateList = [
   {
     name: 'Moteen Shah',
-    imgName: 'Team/2024/Moteen_Shah_24.jpg',
+    imgName: 'Team/2024/Moteen_Shah_24.jpeg',
     sub: (
       <>
         General Secretary <br />

@@ -59,7 +59,7 @@ function Hero({
           <div
             style={{
               backgroundImage: `linear-gradient(#00000081, #00000081),
-		url("/static/images/ideate-final2.jpg")`,
+		url("/static/images/ideate.png")`,
             }}
             className={styles.caption}
           >
@@ -71,7 +71,7 @@ function Hero({
           <div
             style={{
               backgroundImage: `linear-gradient(#00000098, #00000098),
-		url("/static/images/innovate-final2.jpg")`,
+		url("/static/images/innovate.png")`,
             }}
             className={styles.caption}
           >
@@ -84,7 +84,7 @@ function Hero({
           <div
             style={{
               backgroundImage: `linear-gradient(#00000081, #00000081),
-		url("/static/images/inspire-final2.jpg")`,
+		url("/static/images/inspire.png")`,
             }}
             className={styles.caption}
           >
