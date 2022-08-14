@@ -2,6 +2,7 @@ import styles from './Hero.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
+import useWindowSize from '../../utils/ResizeHook'
 
 function Hero({
   imgName,
@@ -9,18 +10,24 @@ function Hero({
   subtitleList,
   isHome,
   backgroundPosition = 'center',
-  imgPath="landing-hero3.png",
-  imgwidth,
 }) {
   const [isLoad, setIsLoad] = useState('none');
-  const [path,setpath] = useState(imgPath)
+  const [path, setpath] = useState(imgName);
+
+  const size = useWindowSize();
+
+  useEffect(()=>{
+    if(size.width>780)
+    {
+      setpath('landing-hero3.png')
+    }
+    else{
+      setpath('landing-hero4.png')
+    }
+  },[size]);
   useEffect(() => {
     setTimeout(() => {
       setIsLoad('');
-      imgwidth=window.innerWidth;
-      console.log("dd",imgwidth);
-      if(imgwidth<600) setpath("landing-hero4.png");
-      console.log(imgPath)
     }, 2000);
   }, []);
   return (
