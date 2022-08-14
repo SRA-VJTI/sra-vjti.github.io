@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <Hero
-        imgName={'landing-hero2.jpg'}
+        imgName={'landing-hero3.png'}
         title={
           <>
             Society of

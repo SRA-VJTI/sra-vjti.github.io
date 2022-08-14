@@ -9,11 +9,18 @@ function Hero({
   subtitleList,
   isHome,
   backgroundPosition = 'center',
+  imgPath="landing-hero3.png",
+  imgwidth,
 }) {
   const [isLoad, setIsLoad] = useState('none');
+  const [path,setpath] = useState(imgPath)
   useEffect(() => {
     setTimeout(() => {
       setIsLoad('');
+      imgwidth=window.innerWidth;
+      console.log("dd",imgwidth);
+      if(imgwidth<600) setpath("landing-hero4.png");
+      console.log(imgPath)
     }, 2000);
   }, []);
   return (
@@ -24,7 +31,7 @@ function Hero({
                             to bottom,
                             rgba(0, 0, 0, 0.5),
                             rgba(0, 0, 0, 0.5),
-                            rgba(0, 0, 0, 0.5)), url("/static/images/hero/${imgName}")`,
+                            rgba(0, 0, 0, 0.5)), url("static/images/hero/${path}")`,
           backgroundPosition: backgroundPosition,
         }}
         className={styles.hero}
