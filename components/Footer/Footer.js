@@ -10,6 +10,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { useEffect, useState } from 'react';
 import { SocialMediaLinks } from '../../data';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function Footer() {
   const [isLoad, setIsLoad] = useState('none');
@@ -64,6 +65,15 @@ function Footer() {
             style={{ display: isLoad }}
           >
             <FontAwesomeIcon icon={faInstagram} />
+
+          </a>
+          <a
+            href={SocialMediaLinks.email}
+            target='_blank'
+            style={{ display: isLoad }}
+          >
+            <FontAwesomeIcon icon={faEnvelope} />
+            
           </a>
         </div>
       </footer>
