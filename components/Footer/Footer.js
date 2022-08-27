@@ -65,7 +65,6 @@ function Footer() {
             style={{ display: isLoad }}
           >
             <FontAwesomeIcon icon={faInstagram} />
-
           </a>
           <a
             href={SocialMediaLinks.email}
@@ -73,7 +72,6 @@ function Footer() {
             style={{ display: isLoad }}
           >
             <FontAwesomeIcon icon={faEnvelope} />
-            
           </a>
         </div>
       </footer>
