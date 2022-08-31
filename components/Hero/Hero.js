@@ -2,6 +2,7 @@ import styles from './Hero.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
+import useWindowSize from '../../utils/ResizeHook';
 
 function Hero({
   imgName,
@@ -11,6 +12,16 @@ function Hero({
   backgroundPosition = 'center',
 }) {
   const [isLoad, setIsLoad] = useState('none');
+  const [path, setpath] = useState(imgName);
+
+  const size = useWindowSize();
+
+  useEffect(() => {
+    if (size.width < 780) 
+    {
+      setpath('landing-hero4.png');
+    }
+  }, [size]);
   useEffect(() => {
     setTimeout(() => {
       setIsLoad('');
@@ -24,7 +35,7 @@ function Hero({
                             to bottom,
                             rgba(0, 0, 0, 0.5),
                             rgba(0, 0, 0, 0.5),
-                            rgba(0, 0, 0, 0.5)), url("/static/images/hero/${imgName}")`,
+                            rgba(0, 0, 0, 0.5)), url("/static/images/hero/${path}")`,
           backgroundPosition: backgroundPosition,
         }}
         className={styles.hero}
@@ -59,7 +70,7 @@ function Hero({
           <div
             style={{
               backgroundImage: `linear-gradient(#00000081, #00000081),
-		url("/static/images/ideate-final2.jpg")`,
+		url("/static/images/ideate.png")`,
             }}
             className={styles.caption}
           >
@@ -71,7 +82,7 @@ function Hero({
           <div
             style={{
               backgroundImage: `linear-gradient(#00000098, #00000098),
-		url("/static/images/innovate-final2.jpg")`,
+		url("/static/images/innovate.png")`,
             }}
             className={styles.caption}
           >
@@ -84,7 +95,7 @@ function Hero({
           <div
             style={{
               backgroundImage: `linear-gradient(#00000081, #00000081),
-		url("/static/images/inspire-final2.jpg")`,
+		url("/static/images/inspire.png")`,
             }}
             className={styles.caption}
           >
