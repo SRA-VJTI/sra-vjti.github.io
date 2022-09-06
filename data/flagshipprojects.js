@@ -4,7 +4,7 @@ const FlagshipProjectsData = [
     name: 'AVITRA',
     sub:
       "AVITRA is a 5-DOF Serial Manipulator retro-fitted on a holonomic drive platform capable of mapping unknown environments, autonomously navigating known environments and manipulating small objects of various shapes. It's driven by an Intel NUC, which gives the robot the ability to process the information around it with the help of industry-standard software like ROS due to which development and customization to fit various applications becomes more feasible.",
-    githubLink: 'https://github.com/SRA-VJTI/AVITRA',
+    githubLink: 'https://github.com/SRA-AVITRA',
   },
   {
     imgName: 'Venom.jpg',
