@@ -4,7 +4,7 @@ const OurSponsors = () => {
   return (
     <>
       <div className={styles.reach}>
-        <h1>Our Sponsors</h1>
+        <h1>Sponsors</h1>
         <div className={styles.reachGroup}>
           {SponsorListImages.map((name, idx) => {
             return (
