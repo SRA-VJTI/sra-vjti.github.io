@@ -41,7 +41,8 @@ const AlumniList = [
         name: 'Sravan Chittupalli',
         imgName: 'Team/Sravan.jpeg',
         sub: <>B.Tech Electronics ' 22</>,
-        linkedInLink: 'https://www.linkedin.com/in/sravan-chittupalli-a3777b16a/',
+        linkedInLink:
+          'https://www.linkedin.com/in/sravan-chittupalli-a3777b16a/',
         githubLink: 'https://github.com/SravanChittupalli',
       },
       {

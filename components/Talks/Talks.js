@@ -1,4 +1,4 @@
-import styles from './Talks.module.scss'
+import styles from './Talks.module.scss';
 import Hero from '../Hero/Hero';
 import React from 'react';
 import TalksList from '../../data/talks';
@@ -11,14 +11,12 @@ const Talks = () => {
       <Hero
         imgName={'talks1.png'}
         backgroundPosition={'center center'}
-        title={
-          <>
-            {/* Learn from the Best */}
-          </>
+        title={<>{/* Learn from the Best */}</>}
+        subtitleList={
+          [
+            // 'Learn from the Best',
+          ]
         }
-        subtitleList={[
-          // 'Learn from the Best',
-        ]}
         isHome={false}
       />
 

@@ -15,7 +15,8 @@ const AchievementsList = [
         imgName: '2022-GSoC.jpg',
       },
       {
-        name: '3rd place in AMD Xilinx Adaptive computing challenge (Data Centre AI Track)',
+        name:
+          '3rd place in AMD Xilinx Adaptive computing challenge (Data Centre AI Track)',
         imgName: '2022-Xilinx.jpg',
       },
     ],
@@ -101,7 +102,8 @@ const AchievementsList = [
     year: '2010',
     achs: [
       {
-        name: "SRA's humminger was awarded as one of the best nationally by DRDO.",
+        name:
+          "SRA's humminger was awarded as one of the best nationally by DRDO.",
         imgName: '2010-DRDO Aerial Vehicle.jpg',
       },
     ],
