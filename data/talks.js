@@ -67,7 +67,8 @@ const TalksList = [
         photo: '/static/images/talks/chinmay.png',
         title: 'Session on BioAmp EXG',
         author: 'Chinmay Lonkar, Moteen Shah',
-        content: require('./SRA-talks/2022/2022_chinmay_moteen_bioamp.md').default,
+        content: require('./SRA-talks/2022/2022_chinmay_moteen_bioamp.md')
+          .default,
       },
       {
         photo: '/static/images/talks/anushree_epfl.png',
