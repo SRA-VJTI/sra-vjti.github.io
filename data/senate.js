@@ -167,13 +167,6 @@ const SenateList = [
     githubLink: 'https://github.com/Ris-Bali',
   },
   {
-    name: 'Utkarsh Gandhi',
-    imgName: 'Team/2024/Utkarsh_Gandhi_24.jpeg',
-    sub: <>B.Tech Electronics & Telecommunication ' 24</>,
-    linkedInLink: 'https://www.linkedin.com/in/utkarsh-gandhi-804a82236/',
-    githubLink: 'https://github.com/Utkarsh2401',
-  },
-  {
     name: 'Krishna Narayanan',
     imgName: 'Team/2024/Krishna_Narayanan_24.jpg',
     sub: <>B.Tech Electronics & Telecommunication ' 24</>,
@@ -214,27 +207,6 @@ const SenateList = [
     sub: <>B.Tech Mechanical ' 24</>,
     linkedInLink: 'https://www.linkedin.com/in/viraj-jagadale-173b23231',
     githubLink: 'https://github.com/Jviraj',
-  },
-  {
-    name: 'Om Sheladia ',
-    imgName: 'Team/2024/Om_Sheladia_24.jpg',
-    sub: <>B.Tech Electronics & Telecommunication ' 24</>,
-    linkedInLink: 'https://www.linkedin.com/in/om-sheladia-227a96200/',
-    githubLink: 'https://github.com/omsheladia',
-  },
-  {
-    name: 'Kalyani Kasar',
-    imgName: 'Team/2024/Kalyani_Kasar_24.jpg',
-    sub: <>B.Tech Electronics ' 24</>,
-    linkedInLink: 'https://www.linkedin.com/in/kalyani-kasar-120774212/',
-    githubLink: 'https://github.com/KalyaniKasar1',
-  },
-  {
-    name: 'Gaurav kumar ',
-    imgName: 'Team/2024/Gaurav_Kumar_24.jpg',
-    sub: <>B.Tech Textile ' 24</>,
-    linkedInLink: 'https://www.linkedin.com/in/gaurav-kumar-b7298220a/',
-    githubLink: 'https://github.com/GauravKumar9920',
   },
   {
     name: 'Gautam Agrawal ',
