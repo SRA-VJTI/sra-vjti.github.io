@@ -4,6 +4,16 @@ const BlogList = [
     blogs: [
       {
         photo: '/static/images/Team/Vedant.jpg',
+        title: 'MITACS GRI 2021 @ Carleton University',
+        author: 'Vedant Paranjape',
+        time: 'May - September 2021',
+        short:
+          'Worked on simulating embedded systems before deploying them using DEVS formalism.',
+        content: require('./intern-exp/2021/2021_vedant_paranjape_mitacs.md')
+          .default,
+      },
+      {
+        photo: '/static/images/Team/Vedant.jpg',
         title: 'GSoC 2021 with LibCamera',
         author: 'Vedant Paranjape',
         time: 'May - September 2021',
