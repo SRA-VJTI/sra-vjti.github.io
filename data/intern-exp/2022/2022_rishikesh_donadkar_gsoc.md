@@ -6,10 +6,9 @@ Google Summer of Code is an international, annual program in which Google awards
 
 I approached the organization through their official IRC and mailing list. I posted a message introducing myself and the project I was interested in. In the application period I prepared a proposal and applied on the GSoC portal. The proposal was accepted by the organization.
 
-
 # What was your project about ?
 
-The project I worked on was Improving the gstreamer element to add support for properties. Gstreamer is a pipeline based multimedia framework and libcamera offers a video source element that acts as a video source in the pipeline. My project was based on adding support for colorimetry negotiation and framerate negotiation and control in the libcamera gstreamer element.  Writing code to manage negotiation between libcamerasrc and neighboring gstreamer elements, controlling framerate, and modifying libcamera ColorSpace in accordance with peer elements' preferences were the main focuses of my work.
+The project I worked on was Improving the gstreamer element to add support for properties. Gstreamer is a pipeline based multimedia framework and libcamera offers a video source element that acts as a video source in the pipeline. My project was based on adding support for colorimetry negotiation and framerate negotiation and control in the libcamera gstreamer element. Writing code to manage negotiation between libcamerasrc and neighboring gstreamer elements, controlling framerate, and modifying libcamera ColorSpace in accordance with peer elements' preferences were the main focuses of my work.
 
 # How was the host University in terms of research and campus life ?
 

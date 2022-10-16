@@ -2,11 +2,9 @@
 
 Google Summer of Code is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors. I was working with ROOT project which is a part of the umbrella organization CERN HSF.
 
-
 # How do you approach the Organization/University ?
 
 GSoC is an open source student program where students from all over the world participate by submitting proposals for projects they are interested in. Every org participating in GSoC will have an ideas page with many prospect ideas, also some unfinished ideas(or ideas requiring enhancement) from previous GSoC. Some orgs have you commit some code my creating a Pull Request(PR), some have you solve tasks, some may have no necessary criteria except for a proposal. The aspect common to all orgs/mentors is showing your enthusiasm for the project, and to learn. Also having a few(or even one in my case) commits to the org before submitting the proposal will go a long way.
-
 
 # What was your project about ?
 
@@ -15,7 +13,6 @@ Toolkit for Multivariate Analysis (TMVA) is a multi-purpose machine learning too
 # How was the host University in terms of research and campus life ?
 
 GSoC is remote. However, my organization,Root Project, was really good. My mentor Dr. Lorenzo Moneta was one of the best project leads I’ve seen. The environment and community of other developers were also very supportive and open and there were never any hard deadlines imposed upon me. We had weekly meetings every week for discussion and Round Table conference.
-
 
 # How much was your stipend ?
 
@@ -33,10 +30,8 @@ Project Final Report : https://gist.github.com/Neel-Shah-29/ea1efde4dd5a51522f4a
 
 Scout out which organizations you want to apply to in December itself and start contributing to them early. Once the projects are announced by the organization, contact the relevant mentors to get more details about your project. Remember to get your proposal reviewed by your mentors before submission.
 
-
 # What is the best way to contact you ?
 
 You can contact me at my email, [neelshah29042002@gmail.com](mailto:neelshah29042002@gmail.com)
 
 Connect with me on LinkedIn [https://www.linkedin.com/in/neel-shah-209997212/](https://www.linkedin.com/in/neel-shah-209997212/)
-

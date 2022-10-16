@@ -39,8 +39,7 @@ const BlogList = [
         time: 'June 2022 - September 2022',
         short:
           'My project was to create a Gnuastro Python package using Extension modules to enable use of the Gnuastro Library in Python.',
-        content: require('./intern-exp/2022/2022_jash_shah_gsoc.md')
-          .default,
+        content: require('./intern-exp/2022/2022_jash_shah_gsoc.md').default,
       },
       {
         photo: '/static/images/Team/2024/Krishna_Narayanan_24.jpg',
@@ -51,15 +50,15 @@ const BlogList = [
           'Adding features and more compatibility for simpPRU was the main aim of the project.',
         content: require('./intern-exp/2022/2022_krishna_narayanan_gsoc.md')
           .default,
-      },{
+      },
+      {
         photo: '/static/images/Team/2024/Neel_Shah_24.jpg',
         title: 'Google Summer of Code with CERN HSF(Root Project)',
         author: 'Neel Shah',
         time: 'June 2022 - October 2022',
         short:
           'Developing a fast inference system in TMVA, called SOFIE, that takes takes ONNX model as input and produces compilation-ready standalone C++ scripts as output.',
-        content: require('./intern-exp/2022/2022_neel_shah_gsoc.md')
-          .default,
+        content: require('./intern-exp/2022/2022_neel_shah_gsoc.md').default,
       },
       {
         photo: '/static/images/Team/2024/Pratham_Shah_24.jpeg',
@@ -68,8 +67,7 @@ const BlogList = [
         time: 'June 2022 - September 2022',
         short:
           'My project was about creating an algorithm to perform convolutions on fully memory-distributed data.',
-        content: require('./intern-exp/2022/2022_pratham_shah_gsoc.md')
-          .default,
+        content: require('./intern-exp/2022/2022_pratham_shah_gsoc.md').default,
       },
       {
         photo: '/static/images/Team/2024/Rishikesh_Donadkar_2024.jpg',

@@ -1,6 +1,6 @@
 # What was your internship about, and what was the duration of it ?
 
-e-Yantra is a robotics outreach program funded by the Ministry of Education and hosted at IIT Bombay. I was a Summer Intern at the eYantra Lab, IIT Bombay  working on a Robotics Project for a period of 6-7 weeks. Projects at eYantra Lab include a variety of domains including Robotics, Control Systems, Embedded Systems, Web Dev, AI/ML, Computer Vision.
+e-Yantra is a robotics outreach program funded by the Ministry of Education and hosted at IIT Bombay. I was a Summer Intern at the eYantra Lab, IIT Bombay working on a Robotics Project for a period of 6-7 weeks. Projects at eYantra Lab include a variety of domains including Robotics, Control Systems, Embedded Systems, Web Dev, AI/ML, Computer Vision.
 
 # How do you approach the Organization/University ?
 
@@ -12,8 +12,7 @@ Modeling and Control of Two-Legged Wheeled Robot: A two wheeled robot (with a hi
 
 # How was the host University in terms of research and campus life ?
 
-The campus experience at IIT Bombay was amazing. The facilities related to our work such as a good working space, required hardware for our project, etc were provided to us. Even the other on-campus facilities were great. Also, we had to team up with people from all over the country which was a great learning experience for all of us.  
-
+The campus experience at IIT Bombay was amazing. The facilities related to our work such as a good working space, required hardware for our project, etc were provided to us. Even the other on-campus facilities were great. Also, we had to team up with people from all over the country which was a great learning experience for all of us.
 
 # How much was your stipend ?
 
@@ -31,4 +30,3 @@ Research about the projects in your preference list before the interview, this w
 # What is the best way to contact you ?
 
 You can contact me at my email, [ayushkaura@gmail.com](mailto:ayushkaura@gmail.com)
-
