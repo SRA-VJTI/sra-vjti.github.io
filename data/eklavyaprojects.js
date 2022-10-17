@@ -4,48 +4,41 @@ const EklavyaProjectList = [
     projects: [
       {
         name: 'esp32-radio-tranceiver',
-        imgName:
-          'Eklavya/Eklavya2022/esp32_radio_Aryan Bawankar.jpg',
+        imgName: 'Eklavya/Eklavya2022/esp32_radio_Aryan Bawankar.jpg',
         sub:
           'Make a long range Transceiver using ESP32 boards and send control commands as well as messages over a long range.',
         githubLink: 'https://github.com/Pratham-Bot/GPGPU-with-GLES/tree/main',
       },
       {
         name: 'Wall-E on FPGA',
-        imgName:
-          'Eklavya/Eklavya2022/WallE on Fpga - Omkar Hatekar.jpg',
+        imgName: 'Eklavya/Eklavya2022/WallE on Fpga - Omkar Hatekar.jpg',
         sub:
           'This project aims to build Wall-E bot but instead of esp32, we will be using FPGA as the brain of bot. Final goal of this project is to demonstrate line following and self balancing by integrating LSA and MPU with FPGA.',
         githubLink: 'https://github.com/Kshitijpatil16/Eklavya-Wall-E-on-FPGA-',
       },
       {
         name: 'GPGPU with GLES',
-        imgName:
-          'Eklavya/Eklavya2022/GPGPU_WITH_GLES - Komal Sambhus.png',
+        imgName: 'Eklavya/Eklavya2022/GPGPU_WITH_GLES - Komal Sambhus.png',
         sub:
           'To perform general purpose computations on the GPU of BeagleBone Black using GLES 2.0.',
         githubLink: 'https://github.com/Pratham-Bot/GPGPU-with-GLES/tree/main',
       },
       {
         name: 'LQR Inverted Pendulum',
-        imgName:
-          'Eklavya/Eklavya2022/LQR_Inverted_Pendulum - Mahesh Tupe.jpg',
-        sub:
-          'Building a self balancing inverted pendulum using LQR',
+        imgName: 'Eklavya/Eklavya2022/LQR_Inverted_Pendulum - Mahesh Tupe.jpg',
+        sub: 'Building a self balancing inverted pendulum using LQR',
         githubLink: 'https://github.com/vrnimje/Inverted-LQR-Bot-Eklavya',
       },
       {
         name: 'Pothole-Detection',
-        imgName:
-          'Eklavya/Eklavya2022/pothole.jpeg',
+        imgName: 'Eklavya/Eklavya2022/pothole.jpeg',
         sub:
           'Using Oak-D camera to generate depth-map and detecting Potholes present on road from it.',
         githubLink: 'https://github.com/Dhruvanshu-Joshi/Pothole-Detection',
       },
       {
         name: 'Slam-OpenCV-Navigation',
-        imgName:
-          'Eklavya/Eklavya2022/Slam-CV-Nav - Advait Dhamorikar.png',
+        imgName: 'Eklavya/Eklavya2022/Slam-CV-Nav - Advait Dhamorikar.png',
         sub:
           'A Simulation of a Bot in Gazebo and RViz which creates a map of its environment and navigates through it while avoiding obstacles.',
         githubLink: 'https://github.com/notad22/SLAM-OpenCV-Navigation',
@@ -56,7 +49,8 @@ const EklavyaProjectList = [
           'Eklavya/Eklavya2022/drone-terrain-reconstruction - Soham Mulye.png',
         sub:
           '3D reconstruction and meshing of the terrain data collected from the drone',
-        githubLink: 'https://github.com/Shazam213/drone-terrain-reconstruction-.git',
+        githubLink:
+          'https://github.com/Shazam213/drone-terrain-reconstruction-.git',
       },
       {
         name: 'Smart Camera Stand',
@@ -70,110 +64,94 @@ const EklavyaProjectList = [
         name: 'Image processing on FPGA',
         imgName:
           'Eklavya/Eklavya2022/Image processing on FPGA - Harsh Bhosale.jpg',
-        sub:
-          'Implementing JPEG encoder algorithm with Verilog on FPGA',
+        sub: 'Implementing JPEG encoder algorithm with Verilog on FPGA',
         githubLink: 'https://github.com/harshbhosale01/image-processing-fpga',
       },
       {
         name: 'Neural Style Transfer',
-        imgName:
-          'Eklavya/Eklavya2022/NST.png',
+        imgName: 'Eklavya/Eklavya2022/NST.png',
         sub:
           'Neural style transfer is used to take two images—content image and style image and blend them together',
         githubLink: 'https://github.com/Greyless/Neural-Style-Transfer',
       },
       {
         name: 'Image Segmentation',
-        imgName:
-          'Eklavya/Eklavya2022/Image_seg.png',
+        imgName: 'Eklavya/Eklavya2022/Image_seg.png',
         sub:
           'We have performed image segmentation using K-means clustering and similar method, by implementing algorithm from scratch without using any prebuilt python functions/library.',
         githubLink: 'https://github.com/ChinmayMundane/Image_segmentation',
       },
       {
         name: 'Image Pipeline',
-        imgName:
-          'Eklavya/Eklavya2022/Image-Pipeline - Kedar Dhamankar.jpg',
+        imgName: 'Eklavya/Eklavya2022/Image-Pipeline - Kedar Dhamankar.jpg',
         sub:
           'The image pipeline takes raw image from sensor and convert it to meaningful image.',
         githubLink: 'https://github.com/HAWKEYE-HS/Image_Pipeline',
       },
       {
         name: 'Luke Arm',
-        imgName:
-          'Eklavya/Eklavya2022/Luke-arm.jpg',
-        sub:
-          'A low cost human emulating robotic hand',
+        imgName: 'Eklavya/Eklavya2022/Luke-arm.jpg',
+        sub: 'A low cost human emulating robotic hand',
         githubLink: 'https://github.com/K-dhokey/luke-arm',
       },
       {
         name: 'Copter-Control',
-        imgName:
-          'Eklavya/Eklavya2022/Copter-Control - Aryan Shah.jpg',
+        imgName: 'Eklavya/Eklavya2022/Copter-Control - Aryan Shah.jpg',
         sub:
           'Designing & Implementing Control System for Hexacopter with Co-axial Tilt-Rotors in Simulation',
         githubLink: 'https://github.com/aPR0T0/Eklavya-Copter-Control',
       },
       {
         name: '32 bit RISC V CPU on FPGA',
-        imgName:
-          'Eklavya/Eklavya2022/32-bit-risc-v - Zain Siddavatam.png',
-        sub:
-          'Implementing a RISC-V CPU on FPGA(Cyclone II)',
+        imgName: 'Eklavya/Eklavya2022/32-bit-risc-v - Zain Siddavatam.png',
+        sub: 'Implementing a RISC-V CPU on FPGA(Cyclone II)',
         githubLink: 'https://github.com/SuperChamp234/RISC-V-FPGA/',
       },
       {
         name: 'Balance On Wheels',
         imgName:
           'Eklavya/Eklavya2022/Balanece_On_Wheels - Arsh Ahmed Khan.jpeg',
-        sub:
-          'Variable Height Self Balancing and Jumping Robot',
+        sub: 'Variable Height Self Balancing and Jumping Robot',
         githubLink: 'https://github.com/KudoC0nan/Balance_On_Wheels',
       },
       {
         name: 'RL-Inator',
-        imgName:
-          'Eklavya/Eklavya2022/RLinatorThumbnail - Viraj Shah.jpg',
+        imgName: 'Eklavya/Eklavya2022/RLinatorThumbnail - Viraj Shah.jpg',
         sub:
           'A hands-on project utilizing concepts from Reinforcement Learning, Linear Algebra, and Robotics.',
         githubLink: 'https://github.com/virajbshah/rl-inator',
       },
       {
         name: 'Le - Transpiler',
-        imgName:
-          'Eklavya/Eklavya2022/Le - Transpiler - Khushi Balia.png',
+        imgName: 'Eklavya/Eklavya2022/Le - Transpiler - Khushi Balia.png',
         sub:
           'Building a toy compiler that converts a code in our custom language, PYLOX, to an equivalent code in C.',
         githubLink: 'https://github.com/Khushi-Balia/le-transpiler',
       },
       {
         name: 'ESP32_Group_Chat',
-        imgName:
-          'Eklavya/Eklavya2022/Esp32_Grp_Chat - Aryan Karawale.png',
+        imgName: 'Eklavya/Eklavya2022/Esp32_Grp_Chat - Aryan Karawale.png',
         sub:
           'To Establish a chat communication between 3 esps to form a self healing and self organising network.',
         githubLink: 'https://github.com/VanshPanchal0308/Esp32_Grp_chat',
       },
       {
         name: 'Racecar',
-        imgName:
-          'Eklavya/Eklavya2022/RACECAR - Yash Rajput.png',
+        imgName: 'Eklavya/Eklavya2022/RACECAR - Yash Rajput.png',
         sub:
           'This project is An Obstacle avoidance and Line following racecar using ODG-PF Algorithm and OpenCV , PID respectively . Mounted with hokuyo , camera and IMU sensors.',
         githubLink: 'https://github.com/sameergupta4873/racecar_eklavya.git',
       },
       {
         name: 'MazeBlaze-v2',
-        imgName:
-          'Eklavya/Eklavya2022/MazeBlaze-v2 - Prit Kanadiya.jpeg',
+        imgName: 'Eklavya/Eklavya2022/MazeBlaze-v2 - Prit Kanadiya.jpeg',
         sub:
           'MazeBlaze is a Maze-solving bot which finds the shortest path in the given maze.',
         githubLink: 'https://github.com/PritK99/MazeBlaze-v2.1.git',
       },
       {
         name: 'Alfetta',
-        imgName:
-          'Eklavya/Eklavya2022/Alfetta.png',
+        imgName: 'Eklavya/Eklavya2022/Alfetta.png',
         sub:
           'ESP32 based Self balancing + Line following bot implemented using PID controller using ESP-IDF and freeRTOS ',
         githubLink: 'https://github.com/Raghav323/Alfetta',
@@ -209,7 +187,8 @@ const EklavyaProjectList = [
       },
       {
         name: 'Wall-E-Simulation-ROS2',
-        imgName: 'Eklavya/Eklavya2021/Wall-E-Simulation-ROS2 - Marck koothoor.png',
+        imgName:
+          'Eklavya/Eklavya2021/Wall-E-Simulation-ROS2 - Marck koothoor.png',
         sub:
           'Self-Balancing and Line-Following WallE bot simulation using Gazebo and ROS2.',
         githubLink: 'https://github.com/Aryaman22102002/Wall-e-simulation-ros2',
@@ -297,7 +276,8 @@ const EklavyaProjectList = [
       },
       {
         name: 'Reinforcement Learning (RLagents) ',
-        imgName: 'Eklavya/Eklavya2021/Reinforcement_Learning_ - HIMANSHU CHOUGULE.png',
+        imgName:
+          'Eklavya/Eklavya2021/Reinforcement_Learning_ - HIMANSHU CHOUGULE.png',
         sub:
           'Understanding Reinforcement Learning and Implementing RL agents for OpenAI Gym.',
         githubLink: 'https://github.com/himanshu-02/rlagents',
