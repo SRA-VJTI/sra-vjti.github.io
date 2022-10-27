@@ -3,6 +3,46 @@ const BlogList = [
     year: '2022',
     blogs: [
       {
+        photo: '/static/images/Team/2023/Prathamesh_Profile.jpeg',
+        title: 'RI under Prof. Michel Steuwer, The University of Edinburgh',
+        author: 'Prathamesh Tagore',
+        time: 'Sept 2022 - Present',
+        short:
+          'The work is not complete yet. As of now, I am spending time to become more familiar with their custom infrastructure for domain-extensible compilers.',
+        content: require('./intern-exp/2022/2022_prathamesh_RI_edinburgh.md')
+          .default,
+      },
+      {
+        photo: '/static/images/Team/2023/Shreyas_Atre.jpg',
+        title: 'GSoC @ STE||AR Group, HPX ',
+        author: 'Shreyas Atre',
+        time: 'June 2022 - September 2022',
+        short:
+          'My project is about the Senders and Receivers Proposal P2300 of the ISO C++ Community which is about to be accepted into C++26. It is a generalized programming model for synchronous and asynchronous programming.',
+        content: require('./intern-exp/2022/2022_shreyas_gsoc.md')
+          .default,
+      },
+      {
+        photo: '/static/images/Team/2023/Shreyas_Atre.jpg',
+        title: 'HPC/C++ Contractor at Louisiana State University',
+        author: 'Shreyas Atre',
+        time: 'October 2022 - June 2023',
+        short:
+          'I am yet to complete it. But I plan to focus on getting papers out of it.',
+        content: require('./intern-exp/2022/2022_shreyas_louisiana.md')
+          .default,
+      },
+      {
+        photo: '/static/images/Team/2023/ninadgsoc.jpg',
+        title: 'MITACS GRI 2022 @ University of Quebec at Chicoutimi',
+        author: 'Ninad Jangle',
+        time: 'May 2022 - August 2022',
+        short:
+          'The goal of this project was to develop a test platform for RISC-V processors on FPGAs dedicated to artificial intelligence at the edge.',
+        content: require('./intern-exp/2022/2022_ninad_mitacs.md')
+          .default,
+      },
+      {
         photo: '/static/images/Team/2023/Dhairya_Shah.jpg',
         title: ' MITACS GRI 2022 @ École de Technologie Supérieure ÉTS',
         author: 'Dhairya Shah',
@@ -124,6 +164,26 @@ const BlogList = [
   {
     year: '2021',
     blogs: [
+      {
+        photo: '/static/images/Team/2023/Prathamesh_Profile.jpeg',
+        title: 'Research intern in PLCT Lab, ISCSAS',
+        author: 'Prathamesh Tagore',
+        time: 'December 2021 - Present',
+        short:
+          'We are developing a performance oriented C++ library for Image processing using MLIR as its backend.',
+        content: require('./intern-exp/2021/2021_prathamesh_RI_PLCT.md')
+          .default,
+      },
+      {
+        photo: '/static/images/Team/2023/Shreyas_Atre.jpg',
+        title: 'Contractor at WasmEdge',
+        author: 'Shreyas Atre',
+        time: 'October 2021 - Present',
+        short:
+          'It was about developing a Python API in C++. Later the major focus has been their installer script.',
+        content: require('./intern-exp/2021/2021_shreyas_wasmedge.md')
+          .default,
+      },
       {
         photo: '/static/images/Team/Vedant.jpg',
         title: 'MITACS GRI 2021 @ Carleton University',
