@@ -19,8 +19,7 @@ const BlogList = [
         time: 'June 2022 - September 2022',
         short:
           'My project is about the Senders and Receivers Proposal P2300 of the ISO C++ Community which is about to be accepted into C++26. It is a generalized programming model for synchronous and asynchronous programming.',
-        content: require('./intern-exp/2022/2022_shreyas_gsoc.md')
-          .default,
+        content: require('./intern-exp/2022/2022_shreyas_gsoc.md').default,
       },
       {
         photo: '/static/images/Team/2023/Shreyas_Atre.jpg',
@@ -29,8 +28,7 @@ const BlogList = [
         time: 'October 2022 - June 2023',
         short:
           'I am yet to complete it. But I plan to focus on getting papers out of it.',
-        content: require('./intern-exp/2022/2022_shreyas_louisiana.md')
-          .default,
+        content: require('./intern-exp/2022/2022_shreyas_louisiana.md').default,
       },
       {
         photo: '/static/images/Team/2023/ninadgsoc.jpg',
@@ -39,8 +37,7 @@ const BlogList = [
         time: 'May 2022 - August 2022',
         short:
           'The goal of this project was to develop a test platform for RISC-V processors on FPGAs dedicated to artificial intelligence at the edge.',
-        content: require('./intern-exp/2022/2022_ninad_mitacs.md')
-          .default,
+        content: require('./intern-exp/2022/2022_ninad_mitacs.md').default,
       },
       {
         photo: '/static/images/Team/2023/Dhairya_Shah.jpg',
@@ -181,8 +178,7 @@ const BlogList = [
         time: 'October 2021 - Present',
         short:
           'It was about developing a Python API in C++. Later the major focus has been their installer script.',
-        content: require('./intern-exp/2021/2021_shreyas_wasmedge.md')
-          .default,
+        content: require('./intern-exp/2021/2021_shreyas_wasmedge.md').default,
       },
       {
         photo: '/static/images/Team/Vedant.jpg',
