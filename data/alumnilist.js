@@ -528,6 +528,7 @@ const AlumniReachImgNames = [
   '15.png',
   '16.png',
   '17.png',
+  '18.png'
 ];
 
 const AlumniReachLinks = [
@@ -548,6 +549,7 @@ const AlumniReachLinks = [
   'https://www.nyu.edu/',
   'https://oregonstate.edu/',
   'https://www.epfl.ch/en/',
+  'https://www.ed.ac.uk/'
 ];
 
 const CorporateReachImgNames = [
@@ -559,6 +561,7 @@ const CorporateReachImgNames = [
   'c6.png',
   'c7.png',
   'c8.png',
+  'c9.png'
 ];
 
 const CorporateReachLinks = [
@@ -570,6 +573,7 @@ const CorporateReachLinks = [
   'https://www.qualcomm.com/home',
   'https://www.arm.com/company',
   'https://www.amd.com/en',
+  'https://www.apple.com/'
 ];
 export {
   AlumniList,
