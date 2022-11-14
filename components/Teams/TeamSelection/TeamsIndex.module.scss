@@ -25,7 +25,7 @@
     align-items: stretch;
     padding: 3em;
 
-    a {
+    .link {
       text-align: center;
       font-size: 2rem;
       border: 2px solid white;
@@ -47,7 +47,7 @@
     }
     @media (max-width: 750px) {
       width: 70%;
-      a {
+      .link {
         font-size: 1.5rem;
       }
     }
