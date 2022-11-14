@@ -58,7 +58,6 @@ const Navbar = () => {
           onClick={linkClick}
         >
           <Link href='/'>
-            <a>
               <div className={styles.navHome} id='nav-home'>
                 <img
                   className={styles.sraLogo}
@@ -66,15 +65,12 @@ const Navbar = () => {
                   alt=''
                 />
               </div>
-            </a>
           </Link>
 
           {NavbarData.map((navItem, idx) => {
             return (
               <Link key={`link_${idx}`} href={navItem.link}>
-                <a>
                   <div className={styles.navbarElem}>{navItem.name}</div>
-                </a>
               </Link>
             );
           })}

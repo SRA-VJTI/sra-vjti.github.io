@@ -7,13 +7,13 @@ const ProjectSelection = () => {
       <h1>Projects</h1>
       <div className={styles.projSelList}>
         <Link href='/projects/flagship'>
-          <a>Flagship Projects</a>
+          Flagship Projects
         </Link>
         <Link href='/projects/eklavya'>
-          <a>Eklavya Projects</a>
+          Eklavya Projects
         </Link>
         <Link href='/projects/ongoing'>
-          <a>Ongoing Projects</a>
+          Ongoing Projects
         </Link>
       </div>
     </div>
