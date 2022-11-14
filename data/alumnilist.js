@@ -531,7 +531,7 @@ const AlumniReachImgNames = [
   '18.jpg',
   '19.png',
   '20.png',
-  '21.png'
+  '21.png',
 ];
 
 const AlumniReachLinks = [
@@ -556,7 +556,6 @@ const AlumniReachLinks = [
   'https://www.northeastern.edu/',
   'https://www.nyu.edu/',
   'https://oregonstate.edu/',
-  
 ];
 
 const CorporateReachImgNames = [
@@ -581,7 +580,6 @@ const CorporateReachLinks = [
   'https://www.qualcomm.com/home',
   'https://www.arm.com/company',
   'https://airpix.in/',
-  
 ];
 export {
   AlumniList,
