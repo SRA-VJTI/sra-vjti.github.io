@@ -7,13 +7,13 @@ const TeamsIndex = () => {
       <h1>Teams</h1>
       <div className={styles.teamSelList}>
         <Link href='teams/teacherincharge'>
-          <a>Teachers Incharge</a>
+          Teachers Incharge
         </Link>
         <Link href='teams/alumni'>
-          <a>Alumni</a>
+          Alumni
         </Link>
         <Link href='teams/current'>
-          <a>Current Team</a>
+          Current Team
         </Link>
       </div>
     </div>
