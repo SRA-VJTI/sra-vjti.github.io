@@ -12,16 +12,16 @@ const SenateList = [
     githubLink: 'https://github.com/Jamm02',
   },
   {
-    name: 'Jash Shah',
-    imgName: 'Team/2024/Jash_Shah_24.jpg',
+    name: 'Marck Koothoor',
+    imgName: 'Team/2024/Marck_Koothoor_24.jpg',
     sub: (
       <>
         Jt. General Secretary <br />
-        B.Tech Computer Engineering ' 24
+        B.Tech Production ' 24
       </>
     ),
-    linkedInLink: 'https://www.linkedin.com/in/jash-shah-416173213/',
-    githubLink: 'https://github.com/Jash-Shah',
+    linkedInLink: 'https://www.linkedin.com/in/marck-koothoor-ab0058225/',
+    githubLink: 'https://github.com/marck3131',
   },
   {
     name: 'Chinmay Lonkar',
@@ -48,18 +48,6 @@ const SenateList = [
     githubLink: 'https://github.com/Ayush-Kaura',
   },
   {
-    name: 'Aryaman Shardul',
-    imgName: 'Team/2024/Aryaman_Shardul_24.jpg',
-    sub: (
-      <>
-        Software Head <br />
-        B.Tech Computer Engineering ' 24
-      </>
-    ),
-    linkedInLink: 'https://www.linkedin.com/in/aryaman-shardul-31150a227/',
-    githubLink: 'https://github.com/Aryaman22102002',
-  },
-  {
     name: 'Aniruddha Thakre',
     imgName: 'Team/2024/Aniruddha_Thakre_24.jpg',
     sub: (
@@ -82,30 +70,6 @@ const SenateList = [
     ),
     linkedInLink: 'https://www.linkedin.com/in/siddesh-patil-497b50206/',
     githubLink: 'https://github.com/Sidshx',
-  },
-  {
-    name: 'Toshan Luktuke ',
-    imgName: 'Team/2024/Toshan_Luktuke_24.jpeg',
-    sub: (
-      <>
-        Sponsorship Head <br />
-        B.Tech Computer Engineering ' 24
-      </>
-    ),
-    linkedInLink: 'https://in.linkedin.com/in/toshan-luktuke-63ba7b1b8',
-    githubLink: 'https://github.com/toshan-luktuke',
-  },
-  {
-    name: 'Sarrah Bastawala',
-    imgName: 'Team/2024/Sarrah_Bastawala_24.jpg',
-    sub: (
-      <>
-        PR Head <br />
-        B.Tech Information Technology ' 24
-      </>
-    ),
-    linkedInLink: 'https://www.linkedin.com/in/sarrah-bastawala',
-    githubLink: 'https://github.com/sarrah-basta',
   },
   {
     name: 'Himanshu Chougule',
@@ -132,32 +96,11 @@ const SenateList = [
     githubLink: 'https://github.com/Dhruv454000',
   },
   {
-    name: 'Neel Shah',
-    imgName: 'Team/2024/Neel_Shah_24.jpg',
-    sub: <>B.Tech Computer Engineering ' 24</>,
-    linkedInLink: 'https://www.linkedin.com/in/neel-shah-209997212/',
-    githubLink: 'https://github.com/Neel-Shah-29',
-  },
-  {
-    name: 'Kunal Agarwal',
-    imgName: 'Team/2024/Kunal_Agarwal_24.jpeg',
-    sub: <>B.Tech Computer Engineering ' 24</>,
-    linkedInLink: 'https://www.linkedin.com/in/kunal-agarwal-274641200',
-    githubLink: 'https://github.com/KunalA18',
-  },
-  {
     name: 'Pratham Shah',
     imgName: 'Team/2024/Pratham_Shah_24.jpeg',
     sub: <>B.Tech Information Technology ' 24</>,
     linkedInLink: 'https://www.linkedin.com/in/shahpratham',
     githubLink: 'https://github.com/shahpratham',
-  },
-  {
-    name: 'Priyal Awankar',
-    imgName: 'Team/2024/Priyal_Awankar_24.jpg',
-    sub: <>B.Tech Information Technology ' 24</>,
-    linkedInLink: 'https://www.linkedin.com/in/priyal-awankar-41193b1b0',
-    githubLink: 'https://github.com/Pixels123priyal',
   },
   {
     name: 'Rishabh Bali',
@@ -193,13 +136,6 @@ const SenateList = [
     sub: <>B.Tech Electronics ' 24</>,
     linkedInLink: 'https://www.linkedin.com/in/premraj-jadhav-448a33233',
     githubLink: 'https://github.com/Premraj02',
-  },
-  {
-    name: 'Marck Koothoor ',
-    imgName: 'Team/2024/Marck_Koothoor_24.jpg',
-    sub: <>B.Tech Production ' 24</>,
-    linkedInLink: 'https://www.linkedin.com/in/marck-koothoor-ab0058225/',
-    githubLink: 'https://github.com/marck3131',
   },
   {
     name: 'Viraj Jagadale',
