@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './ContactUs.module.scss';
 import emailjs from 'emailjs-com';
+import Head from 'next/head';
 
 const ContactUs = () => {
   // const [name, setName] = useState('');
@@ -33,6 +34,9 @@ const ContactUs = () => {
 
   return (
     <>
+      <Head>
+        <title>Contact Us | SRA VJTI</title>
+      </Head>
       <div className={styles.contactForm}>
         <div className={styles.formOverlay}></div>
         <form onSubmit={onFormSubmit}>

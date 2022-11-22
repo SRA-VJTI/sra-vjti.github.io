@@ -5,10 +5,14 @@ import OurSponsors from '../components/OurSponsors/OurSponsors';
 import OurCorporates from '../components/OurCorporates/OurCorporates';
 import HomeNotifications from '../components/HomeNotifications/HomeNotifications';
 import { HeroTags } from '../data';
+import Head from 'next/head';
 
 const Home = () => {
   return (
     <>
+      <Head>
+        <title>Home | SRA VJTI</title>
+      </Head>
       <Hero
         imgName={'landing-hero.jpg'}
         title={

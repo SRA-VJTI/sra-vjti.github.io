@@ -1,10 +1,14 @@
 import { Achievementlist } from '../../data';
 import Hero from '../Hero/Hero';
 import styles from './Achievements.module.scss';
+import Head from 'next/head';
 
 const Achievements = () => {
   return (
     <>
+      <Head>
+        <title>Achievements | SRA VJTI</title>
+      </Head>
       <Hero
         imgName={'achievements-hero.jpg'}
         backgroundPosition={'center top'}
