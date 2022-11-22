@@ -4,10 +4,14 @@ import React from 'react';
 import BlogList from '../../data/blogs';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import Head from 'next/head';
 
 const Blogs = () => {
   return (
     <React.Fragment>
+      <Head>
+        <title>Internship Experiences | SRA VJTI</title>
+      </Head>
       <Hero
         imgName={'internships-hero.jpg'}
         backgroundPosition={'center center'}

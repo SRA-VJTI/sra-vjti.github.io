@@ -1,12 +1,16 @@
 import styles from './Startups.module.scss';
 import Hero from '../Hero/Hero';
 import { StartupsList } from '../../data';
+import Head from 'next/head';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Startups = () => {
   return (
     <>
+      <Head>
+        <title>Startups | SRA VJTI</title>
+      </Head>
       <Hero
         imgName={'startups-hero.jpg'}
         backgroundPosition={'center top'}

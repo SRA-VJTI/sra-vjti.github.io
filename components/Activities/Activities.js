@@ -3,10 +3,14 @@ import Hero from '../Hero/Hero';
 import { ActivitiesList } from '../../data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
+import Head from 'next/head';
 
 const Activities = () => {
   return (
     <>
+      <Head>
+        <title>Activities | SRA VJTI</title>
+      </Head>
       <Hero
         imgName={'activities-hero.jpg'}
         backgroundPosition={'center top'}
