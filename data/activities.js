@@ -73,9 +73,9 @@ const ActivitiesList = [
         youtubeLink: '',
       },
       {
-        imgName: 'dimension.png',
-        name: 'Dimension',
-        sub: 'Dimension is a CAD workshop focusing on SOLIDWORKS. Students are taught 3D designing, making and assembling smaller parts and essential constraints such as types of constraints, etc.',
+        imgName: 'dimensions.png',
+        name: 'Dimensions',
+        sub: 'Dimensions is a CAD workshop focusing on SOLIDWORKS. Students are taught 3D designing, making and assembling smaller parts and essential constraints such as types of constraints, etc.',
         githubLink: 'https://github.com/SRA-VJTI/Dimensions-v1.0',
         youtubeLink: '',
       }
