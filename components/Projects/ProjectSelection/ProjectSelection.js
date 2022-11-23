@@ -1,13 +1,9 @@
 import styles from './ProjectSelection.module.scss';
 import Link from 'next/link';
-import Head from 'next/head';
 
 const ProjectSelection = () => {
   return (
     <>
-      <Head>
-        <title>Projects | SRA VJTI</title>
-      </Head>
       <div className={styles.projSelect}>
         <h1>Projects</h1>
         <div className={styles.projSelList}>
