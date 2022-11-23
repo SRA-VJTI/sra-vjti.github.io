@@ -1,13 +1,9 @@
 import Link from 'next/link';
 import styles from './TeamsIndex.module.scss';
-import Head from 'next/head';
 
 const TeamsIndex = () => {
   return (
     <>
-      <Head>
-        <title>Team | SRA VJTI</title>
-      </Head>
       <div className={styles.teamSelect}>
         <h1>Teams</h1>
         <div className={styles.teamSelList}>

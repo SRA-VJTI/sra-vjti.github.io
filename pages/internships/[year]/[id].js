@@ -1,10 +1,14 @@
 import SingleBlog from '../../../components/SingleBlog/SingleBlog';
 import BlogList from '../../../data/blogs';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 const SingleBlogPage = (props) => {
   return (
     <>
+      <Head>
+        <title>{props.title}</title>
+      </Head>
       <SingleBlog {...props} />
     </>
   );
