@@ -106,67 +106,66 @@
   }
 }
 .reach {
-    h1 {
-      margin: 50px 0 20px;
-      text-align: center;
-      font-size: 2.5rem;
-      font-family: 'Oswald', sans-serif;
+  h1 {
+    margin: 50px 0 20px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Oswald', sans-serif;
+  }
+  button {
+    display: block;
+    margin: 4rem auto;
+    font-size: 1.3rem;
+    border: 2px solid white;
+    padding: 0.7em 1em;
+    transition: all 0.2s;
+    &:hover {
+      border-radius: 5px;
+      border-color: $lightest;
+      color: $lightest;
     }
-    button {
-      display: block;
-      margin: 4rem auto;
-      font-size: 1.3rem;
-      border: 2px solid white;
-      padding: 0.7em 1em;
-      transition: all 0.2s;
-      &:hover {
-        border-radius: 5px;
-        border-color: $lightest;
-        color: $lightest;
-      }
-      @media (max-width: 650px) {
-        font-size: 1.2rem;
-      }
-    }
-    .levelImage{
-       display: block;
-       margin:  auto;
-       height: 200px;
-       width: 200px;
-       margin-top: 3rem;
-       @media (max-width: 650px) {
-        width: 150px;
-        height: 150px;
-      }
-    }
-    .reachGroup {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-evenly;
-      padding: 0 1em;
-      margin-bottom: 3em;
-      img {
-        margin: 1.5rem;
-        width: 150px;
-        transition: transform 0.2s;
-        &:hover {
-          transform: scale(1.1);
-
-        }
-        @media (max-width: 650px) {
-          margin: 0.5em;
-          width: 100px;
-        }
-      }
-      .platinumImg:hover{
-       box-shadow: #b0c9e7 0px 20px 30px -10px;
-      }
-      .goldImg:hover{
-        box-shadow: goldenrod 0px 20px 30px -10px;
-       }
-       .silverImg:hover{
-        box-shadow: #C0C0C0 0px 20px 30px -10px;
-       }
+    @media (max-width: 650px) {
+      font-size: 1.2rem;
     }
   }
+  .levelImage {
+    display: block;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    margin-top: 3rem;
+    @media (max-width: 650px) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  .reachGroup {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 1em;
+    margin-bottom: 3em;
+    img {
+      margin: 1.5rem;
+      width: 150px;
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+      @media (max-width: 650px) {
+        margin: 0.5em;
+        width: 100px;
+      }
+    }
+    .platinumImg:hover {
+      box-shadow: #b0c9e7 0px 20px 30px -10px;
+    }
+    .goldImg:hover {
+      box-shadow: goldenrod 0px 20px 30px -10px;
+    }
+    .silverImg:hover {
+      box-shadow: #c0c0c0 0px 20px 30px -10px;
+    }
+  }
+}

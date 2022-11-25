@@ -13,7 +13,7 @@ const NavbarData = [
   },
   {
     name: 'Sponsors us',
-    link: '/sponsors'
+    link: '/sponsors',
   },
   {
     name: 'Startups',
