@@ -12,6 +12,10 @@ const NavbarData = [
     link: '/activities',
   },
   {
+    name: 'Sponsors us',
+    link: '/sponsors'
+  },
+  {
     name: 'Startups',
     link: '/startups',
   },
