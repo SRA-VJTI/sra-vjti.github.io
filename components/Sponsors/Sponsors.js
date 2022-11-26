@@ -9,7 +9,8 @@ import {
   levelImages,
 } from '../../data/sponsors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faExternalLink, faExternalLinkAlt, faExternalLinkSquare, faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons';
+import { faOpencart, faOpenid } from '@fortawesome/free-brands-svg-icons';
 
 const Sponsors = () => {
   return (
@@ -31,9 +32,9 @@ const Sponsors = () => {
             download={'brochure'}
           >
             <button>
-              Download Brochure{' '}
+              Brochure{' '}
               <span>
-                <FontAwesomeIcon icon={faDownload} />
+                <FontAwesomeIcon icon={faExternalLink} />
               </span>
             </button>
           </a>
