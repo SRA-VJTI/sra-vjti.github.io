@@ -69,9 +69,9 @@ const silverSponsors = [
 ];
 
 const levelImages = [
-  'platinum-badge.jpg',
-  'gold-badge.jpg',
-  'silver-badge.jpg',
+  'platinum-badge.png',
+  'gold-badge.png',
+  'silver-badge.png',
 ];
 
 export {
