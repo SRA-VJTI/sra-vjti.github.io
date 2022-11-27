@@ -15,10 +15,10 @@ const NavbarData = [
     name: 'Sponsors us',
     link: '/sponsors',
   },
-  {
-    name: 'Startups',
-    link: '/startups',
-  },
+  // {
+  //   name: 'Startups',
+  //   link: '/startups',
+  // },
   {
     name: 'Achievements',
     link: '/achievements',

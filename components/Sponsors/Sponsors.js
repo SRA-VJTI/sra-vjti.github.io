@@ -3,13 +3,19 @@ import Hero from '../Hero/Hero';
 import {
   SponsorListImages,
   SponsorLinks,
-  platinumSponsors,
+  diamondSponsors,
   goldSponsors,
   silverSponsors,
   levelImages,
 } from '../../data/sponsors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDownload, faExternalLink, faExternalLinkAlt, faExternalLinkSquare, faExternalLinkSquareAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faDownload,
+  faExternalLink,
+  faExternalLinkAlt,
+  faExternalLinkSquare,
+  faExternalLinkSquareAlt,
+} from '@fortawesome/free-solid-svg-icons';
 import { faOpencart, faOpenid } from '@fortawesome/free-brands-svg-icons';
 
 const Sponsors = () => {
@@ -46,13 +52,13 @@ const Sponsors = () => {
             key={`level_1`}
           ></img>
           <div className={styles.reachGroup}>
-            {platinumSponsors.map((item, idx) => {
+            {diamondSponsors.map((item, idx) => {
               return (
-                <a href={`${SponsorLinks[idx]}`}>
+                <a href={item.link}>
                   <img
                     src={`/static/images/sponsors/${item.image}`}
                     alt=''
-                    className={styles.platinumImg}
+                    className={styles.diamondImg}
                     key={`alumni_reach_${idx}`}
                   ></img>
                 </a>
@@ -68,7 +74,7 @@ const Sponsors = () => {
           <div className={styles.reachGroup}>
             {goldSponsors.map((item, idx) => {
               return (
-                <a href={`${SponsorLinks[idx]}`}>
+                <a href={item.link}>
                   <img
                     src={`/static/images/sponsors/${item.image}`}
                     alt=''
@@ -88,7 +94,7 @@ const Sponsors = () => {
           <div className={styles.reachGroup}>
             {silverSponsors.map((item, idx) => {
               return (
-                <a href={`${SponsorLinks[idx]}`}>
+                <a href={item.link}>
                   <img
                     src={`/static/images/sponsors/${item.image}`}
                     alt=''

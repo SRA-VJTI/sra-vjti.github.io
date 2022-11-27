@@ -11,57 +11,25 @@ const SponsorLinks = [
   'https://solidspace.co.in/',
 ];
 
-const platinumSponsors = [
+const diamondSponsors = [
   {
     image: 'espressif.png',
     link: 'https://www.espressif.com/',
   },
   {
-    image: 'texas.png',
-    link: 'https://www.ti.com/',
-  },
-  {
     image: 'PCB_Power.jpeg',
     link: 'https://www.pcbpower.com/',
-  },
-  {
-    image: 'solidspace.png',
-    link: 'https://solidspace.co.in/',
   },
 ];
 
 const goldSponsors = [
   {
-    image: 'espressif.png',
-    link: 'https://www.espressif.com/',
-  },
-  {
     image: 'texas.png',
     link: 'https://www.ti.com/',
-  },
-  {
-    image: 'PCB_Power.jpeg',
-    link: 'https://www.pcbpower.com/',
-  },
-  {
-    image: 'solidspace.png',
-    link: 'https://solidspace.co.in/',
   },
 ];
 
 const silverSponsors = [
-  {
-    image: 'espressif.png',
-    link: 'https://www.espressif.com/',
-  },
-  {
-    image: 'texas.png',
-    link: 'https://www.ti.com/',
-  },
-  {
-    image: 'PCB_Power.jpeg',
-    link: 'https://www.pcbpower.com/',
-  },
   {
     image: 'solidspace.png',
     link: 'https://solidspace.co.in/',
@@ -69,7 +37,7 @@ const silverSponsors = [
 ];
 
 const levelImages = [
-  'platinum-badge.png',
+  'diamond-badge.png',
   'gold-badge.png',
   'silver-badge.png',
 ];
@@ -77,7 +45,7 @@ const levelImages = [
 export {
   SponsorListImages,
   SponsorLinks,
-  platinumSponsors,
+  diamondSponsors,
   goldSponsors,
   silverSponsors,
   levelImages,
