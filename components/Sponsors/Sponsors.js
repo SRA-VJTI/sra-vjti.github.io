@@ -1,24 +1,36 @@
 import styles from './Sponsors.module.scss';
 import Hero from '../Hero/Hero';
 import {
-  SponsorListImages,
-  SponsorLinks,
   diamondSponsors,
   goldSponsors,
   silverSponsors,
   levelImages,
+  sponsorsText_1,
+  sponsorsText_2,
+  sponsorsSubText
 } from '../../data/sponsors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faDownload,
   faExternalLink,
-  faExternalLinkAlt,
-  faExternalLinkSquare,
-  faExternalLinkSquareAlt,
+  faAngleDown,
+  faAngleUp,
 } from '@fortawesome/free-solid-svg-icons';
 import { faOpencart, faOpenid } from '@fortawesome/free-brands-svg-icons';
+import useWindowSize from '../../utils/ResizeHook';
+import { useEffect, useState } from 'react';
 
 const Sponsors = () => {
+  const [mobileView, setMobileView] = useState(false);
+  const size = useWindowSize();
+  useEffect(() =>{
+    if (size.width > 780) {
+      setMobileView(false)
+    } else {
+      // navbar.style.clipPath = "circle(15% at 100% 0%)";
+      setMobileView(true);
+    }
+  }, [size])
+
   return (
     <>
       <Hero
@@ -32,6 +44,28 @@ const Sponsors = () => {
       />
       <div className={styles.activityList} id='is'>
         <div className={styles.reach}>
+          <h1>Why Sponsor Us ?</h1>
+          <p>{sponsorsText_1}</p>
+          { 
+            mobileView ?  
+              <button className={styles.more} onClick={()=> setMobileView(false)}>
+                read more{" "}
+                <span>
+                  <FontAwesomeIcon icon={faAngleDown} />
+                </span>
+              </button> 
+              :  
+              <>
+                <p>{sponsorsText_2}</p>
+                {size.width < 780 ? <button className={styles.more} onClick={()=> setMobileView(true)}>
+                  Read Less{" "}
+                  <span>
+                    <FontAwesomeIcon icon={faAngleUp} />
+                  </span>
+                </button> : <></>}
+              </>
+           }
+          <p><b>{sponsorsSubText}</b></p>
           <a
             href='https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf'
             target={'_blank'}

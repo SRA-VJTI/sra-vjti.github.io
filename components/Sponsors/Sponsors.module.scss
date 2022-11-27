@@ -106,6 +106,17 @@
   }
 }
 .reach {
+  p {
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    width: 100%;
+    line-height: 165%;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 2em;
+    text-align: center;
+    // margin-top: 20px;
+  }
   h1 {
     margin: 50px 0 20px;
     text-align: center;
@@ -126,6 +137,22 @@
     }
     @media (max-width: 650px) {
       font-size: 1.2rem;
+    }
+  }
+  .more{
+      display: block;
+      margin: 1rem auto;
+      font-size: 0.6rem;
+      border: 2px solid white;
+      padding: 0.5em 0.5em;
+      transition: all 0.2s;
+      &:hover {
+        border-radius: 5px;
+        border-color: $lightest;
+        color: $lightest;
+      }
+      @media (max-width: 650px) {
+        font-size: 0.6rem;
     }
   }
   .levelImage {
