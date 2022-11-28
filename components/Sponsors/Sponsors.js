@@ -7,7 +7,7 @@ import {
   levelImages,
   sponsorsText_1,
   sponsorsText_2,
-  sponsorsSubText
+  sponsorsSubText,
 } from '../../data/sponsors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -22,14 +22,14 @@ import { useEffect, useState } from 'react';
 const Sponsors = () => {
   const [mobileView, setMobileView] = useState(false);
   const size = useWindowSize();
-  useEffect(() =>{
+  useEffect(() => {
     if (size.width > 780) {
-      setMobileView(false)
+      setMobileView(false);
     } else {
       // navbar.style.clipPath = "circle(15% at 100% 0%)";
       setMobileView(true);
     }
-  }, [size])
+  }, [size]);
 
   return (
     <>
@@ -46,38 +46,50 @@ const Sponsors = () => {
         <div className={styles.reach}>
           <h1>Why Sponsor Us ?</h1>
           <p>{sponsorsText_1}</p>
-          { 
-            mobileView ?  
-              <button className={styles.more} onClick={()=> setMobileView(false)}>
-                read more{" "}
-                <span>
-                  <FontAwesomeIcon icon={faAngleDown} />
-                </span>
-              </button> 
-              :  
-              <>
-                <p>{sponsorsText_2}</p>
-                {size.width < 780 ? <button className={styles.more} onClick={()=> setMobileView(true)}>
-                  Read Less{" "}
+          {mobileView ? (
+            <button
+              className={styles.more}
+              onClick={() => setMobileView(false)}
+            >
+              read more{' '}
+              <span>
+                <FontAwesomeIcon icon={faAngleDown} />
+              </span>
+            </button>
+          ) : (
+            <>
+              <p>{sponsorsText_2}</p>
+              {size.width < 780 ? (
+                <button
+                  className={styles.more}
+                  onClick={() => setMobileView(true)}
+                >
+                  Read Less{' '}
                   <span>
                     <FontAwesomeIcon icon={faAngleUp} />
                   </span>
-                </button> : <></>}
-              </>
-           }
-          <p><b>{sponsorsSubText}</b></p>
-          <a
+                </button>
+              ) : (
+                <></>
+              )}
+            </>
+          )}
+          <p>
+            <b>{sponsorsSubText}</b>
+          </p>
+          {/* <a
             href='https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf'
             target={'_blank'}
             download={'brochure'}
+            
           >
-            <button>
+            <button disabled={"true"}>
               Brochure{' '}
               <span>
                 <FontAwesomeIcon icon={faExternalLink} />
               </span>
             </button>
-          </a>
+          </a> */}
           <h1>Sponsors</h1>
           <img
             src={`/static/images/sponsors/sponsorsLevel/${levelImages[0]}`}
