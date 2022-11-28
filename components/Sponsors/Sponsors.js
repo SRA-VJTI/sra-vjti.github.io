@@ -39,18 +39,16 @@ const Sponsors = () => {
           <h1>Why Sponsor Us ?</h1>
           <p>{sponsorsText_1}</p>
           {size.width < 780 && !readLess ? (
-            <button
-              className={styles.more}
-              onClick={() => setReadLess(true)}
-            >
+            <button className={styles.more} onClick={() => setReadLess(true)}>
               read more{' '}
               <span>
                 <FontAwesomeIcon icon={faAngleDown} />
               </span>
             </button>
-          ) : <></>
-          }
-          { readLess ? (
+          ) : (
+            <></>
+          )}
+          {readLess ? (
             <>
               <p>{sponsorsText_2}</p>
               <button
@@ -63,8 +61,9 @@ const Sponsors = () => {
                 </span>
               </button>
             </>
-            ): (<></>)
-          }
+          ) : (
+            <></>
+          )}
           <p>
             <b>{sponsorsSubText}</b>
           </p>
