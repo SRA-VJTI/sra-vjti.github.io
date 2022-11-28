@@ -28,7 +28,7 @@ const Sponsors = () => {
       <Hero
         imgName={'sponsors-hero.jpg'}
         backgroundPosition={'center top'}
-        title={<>Sponsors us</>}
+        title={<>Sponsor us</>}
         subtitleList={[
           'Our sponsors helps us maintain our legacy of excellence',
         ]}
