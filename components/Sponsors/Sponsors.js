@@ -115,7 +115,7 @@ const Sponsors = () => {
             src={`/static/images/sponsors/sponsorsLevel/${levelImages[1]}`}
             alt=''
             className={styles.levelImage}
-            key={`level_1`}
+            key={`level_2`}
           ></img>
           <div className={styles.reachGroup}>
             {goldSponsors.map((item, idx) => {
@@ -135,7 +135,7 @@ const Sponsors = () => {
             src={`/static/images/sponsors/sponsorsLevel/${levelImages[2]}`}
             alt=''
             className={styles.levelImage}
-            key={`level_1`}
+            key={`level_3`}
           ></img>
           <div className={styles.reachGroup}>
             {silverSponsors.map((item, idx) => {

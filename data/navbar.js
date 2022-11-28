@@ -28,13 +28,14 @@ const NavbarData = [
     link: 'https://blog.sravjti.in/',
   },
   {
-    name: 'Contact us',
-    link: '/contactus',
-  },
-  {
     name: 'Sponsors us',
     link: '/sponsors',
   },
+  {
+    name: 'Contact us',
+    link: '/contactus',
+  },
+  
 ];
 
 export default NavbarData;
