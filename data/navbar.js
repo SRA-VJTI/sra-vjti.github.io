@@ -11,10 +11,6 @@ const NavbarData = [
     name: 'Activities',
     link: '/activities',
   },
-  {
-    name: 'Sponsors us',
-    link: '/sponsors',
-  },
   // {
   //   name: 'Startups',
   //   link: '/startups',
@@ -34,6 +30,10 @@ const NavbarData = [
   {
     name: 'Contact us',
     link: '/contactus',
+  },
+  {
+    name: 'Sponsors us',
+    link: '/sponsors',
   },
 ];
 
