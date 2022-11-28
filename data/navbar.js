@@ -11,10 +11,6 @@ const NavbarData = [
     name: 'Activities',
     link: '/activities',
   },
-  {
-    name: 'Sponsors us',
-    link: '/sponsors',
-  },
   // {
   //   name: 'Startups',
   //   link: '/startups',
@@ -32,9 +28,14 @@ const NavbarData = [
     link: 'https://blog.sravjti.in/',
   },
   {
+    name: 'Sponsors us',
+    link: '/sponsors',
+  },
+  {
     name: 'Contact us',
     link: '/contactus',
   },
+  
 ];
 
 export default NavbarData;
