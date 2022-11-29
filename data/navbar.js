@@ -35,7 +35,6 @@ const NavbarData = [
     name: 'Contact us',
     link: '/contactus',
   },
-  
 ];
 
 export default NavbarData;

@@ -21,15 +21,24 @@ import { useEffect, useState } from 'react';
 
 const Sponsors = () => {
   const [mobileView, setMobileView] = useState(false);
+  const [visiblePara, setvisiblePara] = useState(false);
   const size = useWindowSize();
+
   useEffect(() => {
     if (size.width > 780) {
       setMobileView(false);
     } else {
-      // navbar.style.clipPath = "circle(15% at 100% 0%)";
       setMobileView(true);
     }
-  }, [size]);
+  }, [size.width]);
+
+  useEffect(() => {
+    if (mobileView) {
+      setvisiblePara(false);
+    } else {
+      setvisiblePara(true);
+    }
+  }, [mobileView]);
 
   return (
     <>
@@ -46,33 +55,30 @@ const Sponsors = () => {
         <div className={styles.reach}>
           <h1>Why Sponsor Us ?</h1>
           <p>{sponsorsText_1}</p>
+          {visiblePara ? <p>{sponsorsText_2}</p> : <></>}
           {mobileView ? (
             <button
               className={styles.more}
-              onClick={() => setMobileView(false)}
+              onClick={() => setvisiblePara((visiblePara) => !visiblePara)}
             >
-              read more{' '}
-              <span>
-                <FontAwesomeIcon icon={faAngleDown} />
-              </span>
-            </button>
-          ) : (
-            <>
-              <p>{sponsorsText_2}</p>
-              {size.width < 780 ? (
-                <button
-                  className={styles.more}
-                  onClick={() => setMobileView(true)}
-                >
-                  Read Less{' '}
+              {visiblePara ? (
+                <>
+                  {'Read Less '}
                   <span>
                     <FontAwesomeIcon icon={faAngleUp} />
                   </span>
-                </button>
+                </>
               ) : (
-                <></>
+                <>
+                  {'Read More '}
+                  <span>
+                    <FontAwesomeIcon icon={faAngleDown} />
+                  </span>
+                </>
               )}
-            </>
+            </button>
+          ) : (
+            <></>
           )}
           <p>
             <b>{sponsorsSubText}</b>
@@ -81,7 +87,7 @@ const Sponsors = () => {
             href='https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf'
             target={'_blank'}
             download={'brochure'}
-            
+
           >
             <button disabled={"true"}>
               Brochure{' '}
