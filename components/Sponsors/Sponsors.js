@@ -46,11 +46,10 @@ const Sponsors = () => {
               </span>
             </button>
           ) : (
-            <></>
+            <><p>{sponsorsText_2}</p></>
           )}
           {readLess ? (
             <>
-              <p>{sponsorsText_2}</p>
               <button
                 className={styles.more}
                 onClick={() => setReadLess(false)}
