@@ -28,7 +28,7 @@ const NavbarData = [
     link: 'https://blog.sravjti.in/',
   },
   {
-    name: 'Sponsors us',
+    name: 'Sponsor us',
     link: '/sponsors',
   },
   {

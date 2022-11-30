@@ -170,6 +170,11 @@
       height: 175px;
     }
   }
+  hr{
+    width: 60%;
+    border:1px solid $lightest;
+    margin: auto;
+  }
   .reachGroup {
     display: flex;
     flex-wrap: wrap;
