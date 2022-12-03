@@ -11,10 +11,10 @@ const NavbarData = [
     name: 'Activities',
     link: '/activities',
   },
-  {
-    name: 'Startups',
-    link: '/startups',
-  },
+  // {
+  //   name: 'Startups',
+  //   link: '/startups',
+  // },
   {
     name: 'Achievements',
     link: '/achievements',
@@ -26,6 +26,10 @@ const NavbarData = [
   {
     name: 'Blogs',
     link: 'https://blog.sravjti.in/',
+  },
+  {
+    name: 'Sponsor us',
+    link: '/sponsors',
   },
   {
     name: 'Contact us',
