@@ -161,9 +161,9 @@
   }
   .levelImage {
     display: block;
-    margin: auto;
-    height: 250px;
-    width: 250px;
+    margin: 20px auto;
+    height: 150px;
+    width: 150px;
     margin-top: 3rem;
     @media (max-width: 650px) {
       width: 175px;
@@ -171,9 +171,10 @@
     }
   }
   hr{
-    width: 60%;
+    width: 40%;
     border:1px solid $lightest;
-    margin: auto;
+    margin: 0  auto;
+    margin-bottom: 30px;
   }
   .reachGroup {
     display: flex;
@@ -181,7 +182,7 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 0 1em;
-    margin-bottom: 3em;
+    margin-bottom: 5em;
     img {
       margin: 1.5rem;
       width: 150px;
