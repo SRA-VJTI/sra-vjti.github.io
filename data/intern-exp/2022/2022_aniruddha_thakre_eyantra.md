@@ -8,11 +8,11 @@ Candidates are chosen from contests like the E-YRC and E-YIC based on their perf
 
 # What was your project about ?
 
-The aim of my project, “Prota: The ROS Bot” was to build an efficient and modular CAD design of an Unmanned Ground Vehicle(UGV) from scratch and then build it in hardware. Following that, we had to implement Simultaneous Localization and Mapping(SLAM) on the hardware bot as well as in simulation.
+The goal of my project, "SBR: Self balancing bot," was to build an effective and modular CAD design of a self balancing bot that would be used as an educational product for various personas. We needed to provide slots for various required components and slots where the user can place, test, or use different sensors on the bot. For the same reason, we had to design a custom PCB for the e-Yantra developed board called the e-Yfi Mega.
 
 # How was the host University in terms of research and campus life ?
 
-The goal of my project, "SBR: Self balancing bot," was to build an effective and modular CAD design of a self balancing bot that would be used as an educational product for various personas. We needed to provide slots for various required components and slots where the user can place, test, or use different sensors on the bot. For the same reason, we had to design a custom PCB for the e-Yantra developed board called the e-Yfi Mega.
+The campus experience at IIT Bombay was amazing. The facilities related to our work such as a good working space, required hardware for our project, etc were provided to us. Even the other on-campus facilities were great. Also, we had to team up with people from all over the country which was a great learning experience for all of us.  
 
 # How much was your stipend ?
 

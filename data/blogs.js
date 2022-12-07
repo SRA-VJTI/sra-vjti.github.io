@@ -3,6 +3,46 @@ const BlogList = [
     year: '2022',
     blogs: [
       {
+        photo: '/static/images/Team/2024/Siddesh_Patil_24.jpg',
+        title: 'Internship at IIT Bombay @eyantra',
+        author: 'Siddesh Patil',
+        time: 'June 2022 - July 2022',
+        short:
+          'The objective of this project was to program an FPGA based robot using Haskell.',
+        content: require('./intern-exp/2022/2022_siddesh_eyantra.md')
+          .default,
+      },
+      {
+        photo: '/static/images/Team/2024/Premraj_Jadhav_24.jpg',
+        title: 'Internship at IIT Bombay @eyantra',
+        author: 'Premraj Jadhav',
+        time: 'June 2022 - July 2022',
+        short:
+          'My project was Ball levitation using computer vision on FPGA.',
+        content: require('./intern-exp/2022/2022_premraj_eyantra.md')
+          .default,
+      },
+      {
+        photo: '/static/images/Team/Abhinav.jpg',
+        title: 'GSOC 2022 @ INCF',
+        author: 'Abhinav Venkadatri',
+        time: 'May 2022 - Sept 2022',
+        short:
+          'My project was about replicating Google’s implementation of the Paper titled “ Accelerating eye movement research via accurate and affordable smartphone eye tracking”.',
+        content: require('./intern-exp/2022/2022_abhinav_venkadatri_gsoc.md')
+          .default,
+      },
+      {
+        photo: '/static/images/Team/2023/Dhruvi_Doshi.jpg',
+        title: 'GSOC 2022 Github pageOC 2022 @Score Labs',
+        author: 'Dhruvi Doshi',
+        time: 'May 2022 - Sept 2022',
+        short:
+          'My internship was about making a tool in python to capture IPv6 packets as a system service and develop a debian package for the same.',
+        content: require('./intern-exp/2022/2022_dhruvi_gsoc.md')
+          .default,
+      },
+      {
         photo: '/static/images/Team/2023/Prathamesh_Profile.jpeg',
         title: 'RI under Prof. Michel Steuwer, The University of Edinburgh',
         author: 'Prathamesh Tagore',
@@ -14,21 +54,12 @@ const BlogList = [
       },
       {
         photo: '/static/images/Team/2023/Shreyas_Atre.jpg',
-        title: 'GSoC @ STE||AR Group, HPX ',
+        title: 'Research Fellow @ IIT-KGP',
         author: 'Shreyas Atre',
-        time: 'June 2022 - September 2022',
+        time: 'May 2022 - July 2022',
         short:
-          'My project is about the Senders and Receivers Proposal P2300 of the ISO C++ Community which is about to be accepted into C++26. It is a generalized programming model for synchronous and asynchronous programming.',
-        content: require('./intern-exp/2022/2022_shreyas_gsoc.md').default,
-      },
-      {
-        photo: '/static/images/Team/2023/Shreyas_Atre.jpg',
-        title: 'HPC/C++ Contractor at Louisiana State University',
-        author: 'Shreyas Atre',
-        time: 'October 2022 - June 2023',
-        short:
-          'I am yet to complete it. But I plan to focus on getting papers out of it.',
-        content: require('./intern-exp/2022/2022_shreyas_louisiana.md').default,
+          'Worked on GPGPU co-scheduling algorithm.',
+        content: require('./intern-exp/2022/2022_shreyas_IITK.md').default,
       },
       {
         photo: '/static/images/Team/2023/ninadgsoc.jpg',
@@ -40,6 +71,15 @@ const BlogList = [
         content: require('./intern-exp/2022/2022_ninad_mitacs.md').default,
       },
       {
+        photo: '/static/images/Team/2023/Shreyas_Atre.jpg',
+        title: 'GSoC @ STE||AR Group, HPX ',
+        author: 'Shreyas Atre',
+        time: 'June 2022 - September 2022',
+        short:
+          'My project is about the Senders and Receivers Proposal P2300 of the ISO C++ Community which is about to be accepted into C++26. It is a generalized programming model for synchronous and asynchronous programming.',
+        content: require('./intern-exp/2022/2022_shreyas_gsoc.md').default,
+      },
+      {
         photo: '/static/images/Team/2023/Dhairya_Shah.jpg',
         title: ' MITACS GRI 2022 @ École de Technologie Supérieure ÉTS',
         author: 'Dhairya Shah',
@@ -48,6 +88,15 @@ const BlogList = [
           'Worked on developing firmware for and synchronize real-time multi sensor stream data.',
         content: require('./intern-exp/2022/2022_dhairya_shah_mitacs.md')
           .default,
+      },
+      {
+        photo: '/static/images/Team/2023/Shreyas_Atre.jpg',
+        title: 'HPC/C++ Contractor at Louisiana State University',
+        author: 'Shreyas Atre',
+        time: 'October 2022 - June 2023',
+        short:
+          'I am yet to complete it. But I plan to focus on getting papers out of it.',
+        content: require('./intern-exp/2022/2022_shreyas_louisiana.md').default,
       },
       {
         photo: '/static/images/Team/2024/Aniruddha_Thakre_24.jpg',
@@ -161,6 +210,25 @@ const BlogList = [
   {
     year: '2021',
     blogs: [
+      {
+        photo: '/static/images/Team/2023/Shreyas_Atre.jpg',
+        title: 'Research Fellow @ IIT-M under Dr. Rupesh Nasre',
+        author: 'Shreyas Atre',
+        time: 'December 2021 - January 2022',
+        short:
+          'Worked on link prediction using Graph Neural Networks.',
+        content: require('./intern-exp/2021/2021_shreyas_IITM.md').default,
+      },
+      {
+        photo: '/static/images/Team/2023/Prathamesh_Profile.jpeg',
+        title: 'The Linux Foundation mentorship program',
+        author: 'Prathamesh Tagore',
+        time: 'September 2021 - November 2021',
+        short:
+          'The work involved creation of a novel algorithm with custom boundary extrapolation, specifically suited for wider vector architectures such as RISC-V.',
+        content: require('./intern-exp/2021/2021_prathamesh_lfx.md')
+          .default,
+      },
       {
         photo: '/static/images/Team/2023/Prathamesh_Profile.jpeg',
         title: 'Research intern in PLCT Lab, ISCSAS',
