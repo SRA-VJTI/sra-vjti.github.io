@@ -27,7 +27,7 @@
     align-items: center;
     padding: 3em;
 
-    a {
+    .link {
       font-size: 2rem;
       border: 2px solid white;
       border-radius: 2px;
@@ -39,7 +39,7 @@
     }
 
     @media (max-width: 1000px) {
-      a {
+      .link {
         font-size: 1.5rem;
       }
     }

@@ -6,14 +6,14 @@ const ProjectSelection = () => {
     <div className={styles.projSelect}>
       <h1>Projects</h1>
       <div className={styles.projSelList}>
-        <Link href='/projects/flagship'>
-          <a>Flagship Projects</a>
+        <Link href='/projects/flagship' className={styles.link}>
+          Flagship Projects
         </Link>
-        <Link href='/projects/eklavya'>
-          <a>Eklavya Projects</a>
+        <Link href='/projects/eklavya' className={styles.link}>
+          Eklavya Projects
         </Link>
-        <Link href='/projects/ongoing'>
-          <a>Ongoing Projects</a>
+        <Link href='/projects/ongoing' className={styles.link}>
+          Ongoing Projects
         </Link>
       </div>
     </div>

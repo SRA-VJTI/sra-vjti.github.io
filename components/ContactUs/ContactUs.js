@@ -32,42 +32,40 @@ const ContactUs = () => {
   };
 
   return (
-    <>
-      <div className={styles.contactForm}>
-        <div className={styles.formOverlay}></div>
-        <form onSubmit={onFormSubmit}>
-          <label htmlFor='name'>Name:</label>
-          <input
-            type='text'
-            name='user_name'
-            id='name'
-            className={styles.name}
-            placeholder='Name'
-            autoComplete='name'
-          />
-          <label htmlFor='email'>Email:</label>
-          <input
-            type='text'
-            name='user_email'
-            id='email'
-            className={styles.email}
-            placeholder='Email'
-            autoComplete='email'
-          />
-          <label htmlFor='message'>Message for us:</label>
-          <textarea
-            name='user_message'
-            id='message'
-            className={styles.message}
-            placeholder='Message'
-            autoComplete='off'
-            rows='3'
-          ></textarea>
+    <div className={styles.contactForm}>
+      <div className={styles.formOverlay}></div>
+      <form onSubmit={onFormSubmit}>
+        <label htmlFor='name'>Name:</label>
+        <input
+          type='text'
+          name='user_name'
+          id='name'
+          className={styles.name}
+          placeholder='Name'
+          autoComplete='name'
+        />
+        <label htmlFor='email'>Email:</label>
+        <input
+          type='text'
+          name='user_email'
+          id='email'
+          className={styles.email}
+          placeholder='Email'
+          autoComplete='email'
+        />
+        <label htmlFor='message'>Message for us:</label>
+        <textarea
+          name='user_message'
+          id='message'
+          className={styles.message}
+          placeholder='Message'
+          autoComplete='off'
+          rows='3'
+        ></textarea>
 
-          <input type='submit' value='Submit!' />
-        </form>
-      </div>
-    </>
+        <input type='submit' value='Submit!' />
+      </form>
+    </div>
   );
 };
 

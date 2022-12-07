@@ -55,6 +55,32 @@ const ActivitiesList = [
       },
     ],
   },
+  {
+    name: 'Seminars',
+    activities: [
+      {
+        imgName: 'inception.png',
+        name: 'Inception',
+        sub: 'Inception is an intorductory seminar conducted by SRA for the first year students to prepare them for the world of robotics and automation. It covers the basics of Electronics, IOT, Mechanics and much more and acts as prerequisite knowledge for the upcoming workshops.',
+        githubLink: '',
+        youtubeLink: '',
+      },
+      {
+        imgName: 'pixels.png',
+        name: 'Pixels',
+        sub: 'Pixels is a dive into the field of Computer Vision. The workshop is designed to give the participants a basic understanding of the field of Computer Vision and its applications. It starts teaching students the very basics of Python and git, and than moves towards image processing and computer vision using the OpenCV library. Students also get to design their very own blob detection which will help track objects in videos or live camera',
+        githubLink: 'https://github.com/SRA-VJTI/Pixels_Seminar',
+        youtubeLink: '',
+      },
+      {
+        imgName: 'dimensions.png',
+        name: 'Dimensions',
+        sub: 'Dimensions is a CAD workshop focusing on SOLIDWORKS. Students are taught 3D designing, making and assembling smaller parts and essential constraints such as types of constraints, etc.',
+        githubLink: 'https://github.com/SRA-VJTI/Dimensions-v1.0',
+        youtubeLink: '',
+      }
+    ],
+  }
 ];
 
 export default ActivitiesList;
