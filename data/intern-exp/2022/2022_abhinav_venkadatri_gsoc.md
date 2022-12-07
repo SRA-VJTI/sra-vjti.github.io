@@ -1,11 +1,10 @@
 # What was your internship about, and what was the duration of it ?
 
-Google Summer of Code is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors. 
+Google Summer of Code is a global, online program focused on bringing new contributors into open source software development. GSoC Contributors work with an open source organization on a 12+ week programming project under the guidance of mentors.
 
 # How do you approach the Organization/University ?
 
 Approached them on Neurostars. The links was provided once the orgs where shortlisted.
-
 
 # What was your project about ?
 

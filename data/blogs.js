@@ -9,18 +9,15 @@ const BlogList = [
         time: 'June 2022 - July 2022',
         short:
           'The objective of this project was to program an FPGA based robot using Haskell.',
-        content: require('./intern-exp/2022/2022_siddesh_eyantra.md')
-          .default,
+        content: require('./intern-exp/2022/2022_siddesh_eyantra.md').default,
       },
       {
         photo: '/static/images/Team/2024/Premraj_Jadhav_24.jpg',
         title: 'Internship at IIT Bombay @eyantra',
         author: 'Premraj Jadhav',
         time: 'June 2022 - July 2022',
-        short:
-          'My project was Ball levitation using computer vision on FPGA.',
-        content: require('./intern-exp/2022/2022_premraj_eyantra.md')
-          .default,
+        short: 'My project was Ball levitation using computer vision on FPGA.',
+        content: require('./intern-exp/2022/2022_premraj_eyantra.md').default,
       },
       {
         photo: '/static/images/Team/Abhinav.jpg',
@@ -39,8 +36,7 @@ const BlogList = [
         time: 'May 2022 - Sept 2022',
         short:
           'My internship was about making a tool in python to capture IPv6 packets as a system service and develop a debian package for the same.',
-        content: require('./intern-exp/2022/2022_dhruvi_gsoc.md')
-          .default,
+        content: require('./intern-exp/2022/2022_dhruvi_gsoc.md').default,
       },
       {
         photo: '/static/images/Team/2023/Prathamesh_Profile.jpeg',
@@ -57,8 +53,7 @@ const BlogList = [
         title: 'Research Fellow @ IIT-KGP',
         author: 'Shreyas Atre',
         time: 'May 2022 - July 2022',
-        short:
-          'Worked on GPGPU co-scheduling algorithm.',
+        short: 'Worked on GPGPU co-scheduling algorithm.',
         content: require('./intern-exp/2022/2022_shreyas_IITK.md').default,
       },
       {
@@ -215,8 +210,7 @@ const BlogList = [
         title: 'Research Fellow @ IIT-M under Dr. Rupesh Nasre',
         author: 'Shreyas Atre',
         time: 'December 2021 - January 2022',
-        short:
-          'Worked on link prediction using Graph Neural Networks.',
+        short: 'Worked on link prediction using Graph Neural Networks.',
         content: require('./intern-exp/2021/2021_shreyas_IITM.md').default,
       },
       {
@@ -226,8 +220,7 @@ const BlogList = [
         time: 'September 2021 - November 2021',
         short:
           'The work involved creation of a novel algorithm with custom boundary extrapolation, specifically suited for wider vector architectures such as RISC-V.',
-        content: require('./intern-exp/2021/2021_prathamesh_lfx.md')
-          .default,
+        content: require('./intern-exp/2021/2021_prathamesh_lfx.md').default,
       },
       {
         photo: '/static/images/Team/2023/Prathamesh_Profile.jpeg',

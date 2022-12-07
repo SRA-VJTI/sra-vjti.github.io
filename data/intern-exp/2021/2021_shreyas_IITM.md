@@ -4,11 +4,11 @@ We fixed a problem statement over email about link prediction using Graph Neural
 
 # How do you approach the Organization/University ?
 
-I mailed the professor as per  the instructions on his website, which were to solve a problem in C/C++.
+I mailed the professor as per the instructions on his website, which were to solve a problem in C/C++.
 
 # What was your project about ?
 
-It was sh*t. Long story short, there were no novel inputs from me, and the professor wasn’t helpful in any way. I just re implemented the examples, and we called it done.
+It was sh\*t. Long story short, there were no novel inputs from me, and the professor wasn’t helpful in any way. I just re implemented the examples, and we called it done.
 
 # How was the host University in terms of research and campus life ?
 

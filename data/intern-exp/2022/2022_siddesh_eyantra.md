@@ -11,7 +11,6 @@ This opportunity can be approached by participating in the eYantra Robotics Comp
 The objective of this project was to program an FPGA based robot using Haskell - a Functional Programming Language, and Clash compiler which is capable of generating Verilog/VHDL/SystemVerilog code out of it. The
 objective also included comparing different parameters namely efficiency, cost matrix between the Functional approach and the Conventional approach.
 
-
 # How was the host University in terms of research and campus life ?
 
 The campus was incredibly welcoming and supportive of its students.

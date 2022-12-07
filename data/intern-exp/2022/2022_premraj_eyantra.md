@@ -1,10 +1,10 @@
 # What was your internship about, and what was the duration of it ?
 
-e-Yantra is a robotics outreach program funded by the Ministry of Education and hosted at IIT Bombay. I was a Summer Intern at the eYantra Lab, IIT Bombay  working on the project ‘Ball levitation using computer vision on FPGA’. This was a 6 to 7 week long project.
+e-Yantra is a robotics outreach program funded by the Ministry of Education and hosted at IIT Bombay. I was a Summer Intern at the eYantra Lab, IIT Bombay working on the project ‘Ball levitation using computer vision on FPGA’. This was a 6 to 7 week long project.
 
 # How do you approach the Organization/University ?
 
-E-Yantra gives a chance of internship to the winners of their annual robotics competition EYRC (E-yantra robotics competition) and E-Yantra innovation challenge (EYIC). In our case we did not win the competition but based on our performance throughout the competition, they gave us a chance to appear for an interview. 
+E-Yantra gives a chance of internship to the winners of their annual robotics competition EYRC (E-yantra robotics competition) and E-Yantra innovation challenge (EYIC). In our case we did not win the competition but based on our performance throughout the competition, they gave us a chance to appear for an interview.
 
 # What was your project about ?
 
