@@ -7,7 +7,7 @@ const EklavyaProjectsPage = () => {
     <Head>
       <title>Eklavya Projects | SRA VJTI</title>
     </Head>
-    <EklavyaProjects />;
+    <EklavyaProjects />
   </>
   );
 };
