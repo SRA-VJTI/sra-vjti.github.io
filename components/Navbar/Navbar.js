@@ -3,6 +3,7 @@ import styles from './Navbar.module.scss';
 import Link from 'next/link';
 import useWindowSize from '../../utils/ResizeHook';
 import { NavbarData } from '../../data';
+import NavbarItems from '../NavbarItem/NavbarItems';
 
 const Navbar = () => {
   const [isNavbarDown, setIsNavbarDown] = useState(false);
@@ -55,9 +56,8 @@ const Navbar = () => {
         <div
           className={styles.navbarElemList}
           id='navbar-elem-list'
-          onClick={linkClick}
         >
-          <Link href='/'>
+          <Link href='/' onClick={linkClick}>
             <div className={styles.navHome} id='nav-home'>
               <img
                 className={styles.sraLogo}
@@ -69,9 +69,7 @@ const Navbar = () => {
 
           {NavbarData.map((navItem, idx) => {
             return (
-              <Link key={`link_${idx}`} href={navItem.link}>
-                <div className={styles.navbarElem}>{navItem.name}</div>
-              </Link>
+              <NavbarItems navItem={navItem} idx={idx} linkClick={linkClick}/>
             );
           })}
         </div>

@@ -18,10 +18,38 @@ const NavbarData = [
   {
     name: 'Achievements',
     link: '/achievements',
+    subMenu: [
+      {
+        name: 'eYantra',
+        link: '/internships/#blogs_2021',
+      },
+      {
+        name: '2020',
+        link: '/internships/#blogs_2020',
+      },
+      {
+        name: '2019',
+        link: '/internships/#blogs_2019',
+      },
+    ],
   },
   {
     name: 'Internship Experiences',
     link: '/internships',
+    subMenu: [
+      {
+        name: '2021',
+        link: '/internships/#blogs_2021',
+      },
+      {
+        name: '2020',
+        link: '/internships/#blogs_2020',
+      },
+      {
+        name: '2019',
+        link: '/internships/#blogs_2019',
+      },
+    ],
   },
   {
     name: 'Blogs',
