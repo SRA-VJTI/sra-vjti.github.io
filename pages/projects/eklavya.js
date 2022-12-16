@@ -3,12 +3,12 @@ import Head from 'next/head';
 
 const EklavyaProjectsPage = () => {
   return (
-    <>
-      <Head>
-        <title>Eklavya Projects | SRA VJTI</title>
-      </Head>
-      <EklavyaProjects />;
-    </>
+  <>
+    <Head>
+      <title>Eklavya Projects | SRA VJTI</title>
+    </Head>
+    <EklavyaProjects />
+  </>
   );
 };
 
