@@ -12,7 +12,7 @@ I was involved in the mechanical team. Our work was divided into different probl
 
 # How was the host University in terms of research and campus life ?
 
-I got the opportunity to work in the Physical Mode for the first month at IISc Bangalore. There are a plethora of areas where research is going on at StochLab such as Quadrupeds, Bipeds, and Reinforcement Learning. I interacted with a lot of fellow students and Professors there which was a great experience. 
+I got the opportunity to work in the Physical Mode for the first month at IISc Bangalore. There are a plethora of areas where research is going on at StochLab such as Quadrupeds, Bipeds, and Reinforcement Learning. I interacted with a lot of fellow students and Professors there which was a great experience.
 
 # How much was your stipend ?
 

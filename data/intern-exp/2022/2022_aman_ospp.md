@@ -1,6 +1,6 @@
 # What was your internship about, and what was the duration of it ?
 
-This internship was about implementation of the Digital Audio Processing Dialect (DAP) using MLIR to improvise the performance of the audio processing filters such as Biquad and IIR filters. The duration was from July 2022 - September 2022. 
+This internship was about implementation of the Digital Audio Processing Dialect (DAP) using MLIR to improvise the performance of the audio processing filters such as Biquad and IIR filters. The duration was from July 2022 - September 2022.
 
 # How do you approach the Organization/University ?
 
@@ -13,7 +13,7 @@ Using the vector dialect of MLIR, a vectorized version of the standard Biquad an
 
 # How was the host University in terms of research and campus life ?
 
-It was a remote internship. The environment was supportive and helpful. 
+It was a remote internship. The environment was supportive and helpful.
 
 # How much was your stipend ?
 
@@ -33,7 +33,7 @@ https://github.com/buddy-compiler/buddy-benchmark/pull/44
 
 # Suggestions to the fellow VJTIians who want to go for this internship.
 
-Be thorough with C++, basics of compiler backend, LLVM style lowering. Make sure to present your work properly (with source code and relevant proofs). Make sure to communicate effectively. 
+Be thorough with C++, basics of compiler backend, LLVM style lowering. Make sure to present your work properly (with source code and relevant proofs). Make sure to communicate effectively.
 
 # What is the best way to contact you ?
 

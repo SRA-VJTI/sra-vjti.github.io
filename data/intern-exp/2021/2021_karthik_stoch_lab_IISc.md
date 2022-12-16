@@ -1,6 +1,6 @@
 # What was your internship about, and what was the duration of it ?
 
-I did my internship at Stochastic Robotics Lab at the Indian Institute of Science(IISc).The Lab focuses on implementing new technologies in the field of legged robotics(Quadruped, bipeds). My internship started in the month of December 2021 and I worked in offline mode for a month and later continued my internship in online mode for 3 months. The Lab is working on improving the current quadruped(Stoch-3) and is also developing a quadruped of small size focusing more on it being responsive and quick. 
+I did my internship at Stochastic Robotics Lab at the Indian Institute of Science(IISc).The Lab focuses on implementing new technologies in the field of legged robotics(Quadruped, bipeds). My internship started in the month of December 2021 and I worked in offline mode for a month and later continued my internship in online mode for 3 months. The Lab is working on improving the current quadruped(Stoch-3) and is also developing a quadruped of small size focusing more on it being responsive and quick.
 
 # How do you approach the Organization/University ?
 
@@ -24,7 +24,7 @@ N/A
 
 # Suggestions to the fellow VJTIians who want to go for this internship.
 
-The Lab works in three domains as I mentioned earlier. If you have an interest in Designing, Prototyping and Manufacturing you can join the Mechanical Team provided you have sufficient knowledge about structures, analysis and about manufacturing processes. If you are inclined more towards the software side, there are tasks that involve use of ROS, Mujoco and RL based implementations. For Embedded Side, there is always a constant modification in Circuit Design, experience in control using microcontroller(like RPi) is preferable. To get a complete overview of current projects and work there, directly contact Prof. Shishir Kolathaya (shishirk@iisc.ac.in) 
+The Lab works in three domains as I mentioned earlier. If you have an interest in Designing, Prototyping and Manufacturing you can join the Mechanical Team provided you have sufficient knowledge about structures, analysis and about manufacturing processes. If you are inclined more towards the software side, there are tasks that involve use of ROS, Mujoco and RL based implementations. For Embedded Side, there is always a constant modification in Circuit Design, experience in control using microcontroller(like RPi) is preferable. To get a complete overview of current projects and work there, directly contact Prof. Shishir Kolathaya (shishirk@iisc.ac.in)
 
 # What is the best way to contact you ?
 

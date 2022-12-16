@@ -171,16 +171,20 @@ const BlogList = [
         title: 'Stoch Lab IISc',
         author: 'Saad Hashmi',
         time: 'December 2021 - March 2022',
-        short: 'Create prototype for Contact Sensing Foot, improved design of original Foot, designed heat sink, solving overheating problems.',
-        content: require('./intern-exp/2021/2021_saad_stoch_lab_IISc.md').default,
+        short:
+          'Create prototype for Contact Sensing Foot, improved design of original Foot, designed heat sink, solving overheating problems.',
+        content: require('./intern-exp/2021/2021_saad_stoch_lab_IISc.md')
+          .default,
       },
       {
         photo: '/static/images/Team/2023/Karthik_Swaminathan.jpeg',
         title: 'Stoch Lab IISc',
         author: 'Karthik Swaminathan',
         time: 'December 2021 - March 2022',
-        short: 'Creating multiple prototypes of a responsive foot, current quadruped at the lab(Stoch-3) had some structural failures and parts used to bend after operation. So my task was to create a closed structure for abduction (abduction coupling).',
-        content: require('./intern-exp/2021/2021_karthik_stoch_lab_IISc.md').default,
+        short:
+          'Creating multiple prototypes of a responsive foot, current quadruped at the lab(Stoch-3) had some structural failures and parts used to bend after operation. So my task was to create a closed structure for abduction (abduction coupling).',
+        content: require('./intern-exp/2021/2021_karthik_stoch_lab_IISc.md')
+          .default,
       },
       {
         photo: '/static/images/Team/2023/Shreyas_Atre.jpg',
