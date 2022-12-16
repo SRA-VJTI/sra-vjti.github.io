@@ -9,7 +9,8 @@ const BlogList = [
         time: 'July 2022 - September 2022',
         short:
           'This internship was about implementation of the Digital Audio Processing Dialect (DAP) using MLIR to improvise the performance of the audio processing filters such as Biquad and IIR filters.',
-        content: require('./intern-exp/2022/2022_aman_chhaparia_ospp.md').default,
+        content: require('./intern-exp/2022/2022_aman_chhaparia_ospp.md')
+          .default,
       },
       {
         photo: '/static/images/Team/2024/Siddesh_Patil_24.jpg',
@@ -18,7 +19,8 @@ const BlogList = [
         time: 'June 2022 - July 2022',
         short:
           'The objective of this project was to program an FPGA based robot using Haskell.',
-        content: require('./intern-exp/2022/2022_siddesh_patil_eyantra.md').default,
+        content: require('./intern-exp/2022/2022_siddesh_patil_eyantra.md')
+          .default,
       },
       {
         photo: '/static/images/Team/2024/Premraj_Jadhav_24.jpg',
@@ -26,7 +28,8 @@ const BlogList = [
         author: 'Premraj Jadhav',
         time: 'June 2022 - July 2022',
         short: 'My project was Ball levitation using computer vision on FPGA.',
-        content: require('./intern-exp/2022/2022_premraj_jadhav_eyantra.md').default,
+        content: require('./intern-exp/2022/2022_premraj_jadhav_eyantra.md')
+          .default,
       },
       {
         photo: '/static/images/Team/Abhinav.jpg',
@@ -72,7 +75,8 @@ const BlogList = [
         time: 'May 2022 - August 2022',
         short:
           'The goal of this project was to develop a test platform for RISC-V processors on FPGAs dedicated to artificial intelligence at the edge.',
-        content: require('./intern-exp/2022/2022_ninad_jangle_mitacs.md').default,
+        content: require('./intern-exp/2022/2022_ninad_jangle_mitacs.md')
+          .default,
       },
       {
         photo: '/static/images/Team/2023/Shreyas_Atre.jpg',
@@ -100,7 +104,8 @@ const BlogList = [
         time: 'October 2022 - June 2023',
         short:
           'I am yet to complete it. But I plan to focus on getting papers out of it.',
-        content: require('./intern-exp/2022/2022_shreyas_atre_louisiana.md').default,
+        content: require('./intern-exp/2022/2022_shreyas_atre_louisiana.md')
+          .default,
       },
       {
         photo: '/static/images/Team/2024/Aniruddha_Thakre_24.jpg',
@@ -201,7 +206,8 @@ const BlogList = [
         time: 'September 2021 - November 2021',
         short:
           'The work involved creation of a novel algorithm with custom boundary extrapolation, specifically suited for wider vector architectures such as RISC-V.',
-        content: require('./intern-exp/2021/2021_prathamesh_tagore_lfx.md').default,
+        content: require('./intern-exp/2021/2021_prathamesh_tagore_lfx.md')
+          .default,
       },
       {
         photo: '/static/images/Team/2023/Prathamesh_Profile.jpeg',
@@ -220,7 +226,8 @@ const BlogList = [
         time: 'October 2021 - Present',
         short:
           'It was about developing a Python API in C++. Later the major focus has been their installer script.',
-        content: require('./intern-exp/2021/2021_shreyas_atre_wasmedge.md').default,
+        content: require('./intern-exp/2021/2021_shreyas_atre_wasmedge.md')
+          .default,
       },
       {
         photo: '/static/images/Team/Vedant.jpg',
@@ -287,7 +294,8 @@ const BlogList = [
         time: 'May - August 2021',
         short:
           ' Developed a Deep Learning System that can detect and count the number of strawberries (ripe, unripe) in the strawberry field and then predict the yield accordingly ',
-        content: require('./intern-exp/2021/2021_sravan_chittupalli_mitacs.md').default,
+        content: require('./intern-exp/2021/2021_sravan_chittupalli_mitacs.md')
+          .default,
       },
       {
         photo: '/static/images/Team/2023/Kush_Kothari.jpg',
