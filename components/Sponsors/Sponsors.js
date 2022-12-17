@@ -46,9 +46,7 @@ const Sponsors = () => {
         imgName={'sponsors-hero.jpg'}
         backgroundPosition={'center top'}
         title={<>Sponsor us</>}
-        subtitleList={[
-          'Help us maintain our legacy of excellence!',
-        ]}
+        subtitleList={['Help us maintain our legacy of excellence!']}
         isHome={false}
       />
       <div className={styles.activityList} id='is'>
