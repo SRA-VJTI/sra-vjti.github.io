@@ -211,7 +211,7 @@ const BlogList = [
       },
       {
         photo: '/static/images/Team/2023/Prathamesh_Profile.jpeg',
-        title: 'Research intern in PLCT Lab, ISCSAS',
+        title: 'Research intern in PLCT Lab, ISCAS',
         author: 'Prathamesh Tagore',
         time: 'December 2021 - Present',
         short:
