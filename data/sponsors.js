@@ -3,7 +3,7 @@ const SponsorListImages = [
   'texas.png',
   'PCB_Power.jpeg',
   'solidspace.png',
-  'smc.png'
+  'smc.png',
 ];
 const SponsorLinks = [
   'https://www.espressif.com/',

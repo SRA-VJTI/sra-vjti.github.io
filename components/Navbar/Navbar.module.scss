@@ -23,7 +23,6 @@
     min-height: 7vh;
     display: flex;
     align-items: center;
-    
 
     .navHome {
       width: 100px;
@@ -54,8 +53,8 @@
   }
 
   @media (max-width: 780px) {
-    overflow: scroll; 
-    scrollbar-width: none; 
+    overflow: scroll;
+    scrollbar-width: none;
     -ms-overflow-style: none;
     &::-webkit-scrollbar {
       display: none;
