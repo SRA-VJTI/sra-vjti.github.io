@@ -7,7 +7,7 @@ const EklavyaProjectList = [
         imgName: 'Eklavya/Eklavya2022/esp32_radio_Aryan Bawankar.jpg',
         sub:
           'Make a long range Transceiver using ESP32 boards and send control commands as well as messages over a long range.',
-        githubLink: 'https://github.com/Pratham-Bot/GPGPU-with-GLES/tree/main',
+        githubLink: 'https://github.com/SubodhBawankar/esp32-radio-tranciever',
       },
       {
         name: 'Wall-E on FPGA',
