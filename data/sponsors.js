@@ -3,6 +3,7 @@ const SponsorListImages = [
   'texas.png',
   'PCB_Power.jpeg',
   'solidspace.png',
+  'smc.png'
 ];
 const SponsorLinks = [
   'https://www.espressif.com/',
@@ -30,6 +31,10 @@ const goldSponsors = [
 ];
 
 const silverSponsors = [
+  {
+    image: 'smc.png',
+    link: 'https://smcin.com/',
+  },
   {
     image: 'solidspace.png',
     link: 'https://solidspace.co.in/',
