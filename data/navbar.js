@@ -23,15 +23,15 @@ const NavbarData = [
     subMenu: [
       {
         name: 'Teachers',
-        link: '/projects/teachersincharge/',
+        link: '/teams/teacherincharge/',
       },
       {
         name: 'Alumni',
-        link: '/projects/alumni/',
+        link: '/teams/alumni/',
       },
       {
-        name: 'Ongoing',
-        link: '/projects/ongoing/',
+        name: 'Current',
+        link: '/teams/current/',
       },
     ],
   },

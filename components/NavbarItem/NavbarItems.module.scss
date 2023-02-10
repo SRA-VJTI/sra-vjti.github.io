@@ -27,7 +27,7 @@
     width: 100%;
     font-size: 1rem;
     transition: background-color 0.2s;
-    background-color: rgba(0, 0, 0, 1.00);
+    background-color: rgba(0, 0, 0, 1);
 
     @supports (-moz-appearance: none) {
       background-color: rgba(0, 0, 0, 0.856);
@@ -51,14 +51,12 @@
   @media (max-width: 1000px) {
     .navbarElem {
       font-size: 1.2rem;
-
     }
   }
 
   @media (max-width: 1000px) {
     .navbarElem {
       font-size: 0.9rem;
-
     }
   }
 

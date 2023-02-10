@@ -53,10 +53,7 @@ const Navbar = () => {
             alt=''
           />
         </div>
-        <div
-          className={styles.navbarElemList}
-          id='navbar-elem-list'
-        >
+        <div className={styles.navbarElemList} id='navbar-elem-list'>
           <Link href='/' onClick={linkClick}>
             <div className={styles.navHome} id='nav-home'>
               <img
@@ -69,7 +66,7 @@ const Navbar = () => {
 
           {NavbarData.map((navItem, idx) => {
             return (
-              <NavbarItems navItem={navItem} idx={idx} linkClick={linkClick}/>
+              <NavbarItems navItem={navItem} idx={idx} linkClick={linkClick} />
             );
           })}
         </div>
