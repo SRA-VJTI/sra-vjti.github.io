@@ -2,10 +2,38 @@ const NavbarData = [
   {
     name: 'Projects',
     link: '/projects',
+    subMenu: [
+      {
+        name: 'Flagship',
+        link: '/projects/flagship/',
+      },
+      {
+        name: 'Eklavya',
+        link: '/projects/eklavya/',
+      },
+      {
+        name: 'Ongoing',
+        link: '/projects/ongoing/',
+      },
+    ],
   },
   {
     name: 'Teams',
     link: '/teams',
+    subMenu: [
+      {
+        name: 'Teachers',
+        link: '/projects/teachersincharge/',
+      },
+      {
+        name: 'Alumni',
+        link: '/projects/alumni/',
+      },
+      {
+        name: 'Ongoing',
+        link: '/projects/ongoing/',
+      },
+    ],
   },
   {
     name: 'Activities',
@@ -18,25 +46,15 @@ const NavbarData = [
   {
     name: 'Achievements',
     link: '/achievements',
-    subMenu: [
-      {
-        name: 'eYantra',
-        link: '/internships/#blogs_2021',
-      },
-      {
-        name: '2020',
-        link: '/internships/#blogs_2020',
-      },
-      {
-        name: '2019',
-        link: '/internships/#blogs_2019',
-      },
-    ],
   },
   {
     name: 'Internship Experiences',
     link: '/internships',
     subMenu: [
+      {
+        name: '2022',
+        link: '/internships/#blogs_2022',
+      },
       {
         name: '2021',
         link: '/internships/#blogs_2021',
