@@ -11,8 +11,8 @@ const SponsorLinks = [
   'https://www.pcbpower.com/',
   'https://andonstar.com/',
   'https://www.ti.com/',
-  'https://solidspace.co.in/',
   'https://www.smcin.com/',
+  'https://solidspace.co.in/',
 ];
 
 const diamondSponsors = [
@@ -39,12 +39,12 @@ const goldSponsors = [
 
 const silverSponsors = [
   {
-    image: 'solidspace.png',
-    link: 'https://solidspace.co.in/',
-  },
-  {
     image: 'smc.png',
     link: 'https://www.smcin.com/',
+  },
+  {
+    image: 'solidspace.png',
+    link: 'https://solidspace.co.in/',
   },
 ];
 
