@@ -9,11 +9,10 @@ const SponsorListImages = [
 const SponsorLinks = [
   'https://www.espressif.com/',
   'https://www.pcbpower.com/',
-   'https://andonstar.com/',
+  'https://andonstar.com/',
   'https://www.ti.com/',
   'https://solidspace.co.in/',
   'https://www.smcin.com/',
- 
 ];
 
 const diamondSponsors = [
