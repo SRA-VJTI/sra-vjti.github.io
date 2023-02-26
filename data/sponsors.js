@@ -3,8 +3,8 @@ const SponsorListImages = [
   'PCB_Power.jpeg',
   'andonstar.png',
   'texas.png',
-  'solidspace.png',
   'smc.png',
+  'solidspace.png',
 ];
 const SponsorLinks = [
   'https://www.espressif.com/',
