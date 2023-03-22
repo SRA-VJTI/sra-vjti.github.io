@@ -28,4 +28,4 @@ Be thorough with C++, Linux, Bash Scripting, Python Scripting, and know how to G
 
 # What is the best way to contact you ?
 
-You can contact me at my email, [shreyasatre16@gmail.com](mailto:shreyasatre16@gmail.com)
+If you are not on discord - shreyasatre16 AT gmail dot com
