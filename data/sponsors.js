@@ -2,6 +2,7 @@ const SponsorListImages = [
   'espressif.png',
   'PCB_Power.jpeg',
   'andonstar.png',
+  'tmotor.png',
   'texas.png',
   'smc.png',
   'solidspace.png',
@@ -10,6 +11,7 @@ const SponsorLinks = [
   'https://www.espressif.com/',
   'https://www.pcbpower.com/',
   'https://andonstar.com/',
+  'https://uav-en.tmotor.com/',
   'https://www.ti.com/',
   'https://www.smcin.com/',
   'https://solidspace.co.in/',
@@ -27,6 +29,10 @@ const diamondSponsors = [
   {
     image: 'andonstar.png',
     link: 'https://andonstar.com/',
+  },
+  {
+    image: 'tmotor.png',
+    link: 'https://uav-en.tmotor.com/',
   },
 ];
 
