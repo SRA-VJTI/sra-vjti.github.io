@@ -98,7 +98,7 @@ const Sponsors = () => {
           <img
             src={`/static/images/sponsors/sponsorsLevel/${levelImages[0]}`}
             alt=''
-            className={styles.levelImage}
+            className={styles.levelImage1}
             key={`level_1`}
           ></img>
           <hr />
@@ -119,7 +119,7 @@ const Sponsors = () => {
           <img
             src={`/static/images/sponsors/sponsorsLevel/${levelImages[1]}`}
             alt=''
-            className={styles.levelImage}
+            className={styles.levelImage2}
             key={`level_2`}
           ></img>
           <hr />
@@ -139,8 +139,8 @@ const Sponsors = () => {
           </div>
           <img
             src={`/static/images/sponsors/sponsorsLevel/${levelImages[2]}`}
-            alt=''
-            className={styles.levelImage}
+            alt='Silver Tier'
+            className={styles.levelImage3}
             key={`level_3`}
           ></img>
           <hr />

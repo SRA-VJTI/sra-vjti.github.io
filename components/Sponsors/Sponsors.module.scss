@@ -159,15 +159,37 @@
       font-size: 0.6rem;
     }
   }
-  .levelImage {
+  .levelImage1 {
     display: block;
     margin: 20px auto;
-    height: 150px;
-    width: 150px;
+    height: auto;
+    width: 400px;
     margin-top: 3rem;
     @media (max-width: 650px) {
-      width: 175px;
-      height: 175px;
+      width: 240px;
+      height: auto;
+    }
+  }
+  .levelImage2 {
+    display: block;
+    margin: 20px auto;
+    height: auto;
+    width: 200px;
+    margin-top: 3rem;
+    @media (max-width: 650px) {
+      width: 120px;
+      height: auto;
+    }
+  }
+  .levelImage3 {
+    display: block;
+    margin: 20px auto;
+    height: auto;
+    width: 260px;
+    margin-top: 3rem;
+    @media (max-width: 650px) {
+      width: 150px;
+      height: auto;
     }
   }
   hr {
