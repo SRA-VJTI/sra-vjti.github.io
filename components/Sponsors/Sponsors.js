@@ -1,5 +1,6 @@
 import styles from './Sponsors.module.scss';
 import Hero from '../Hero/Hero';
+import { saveAs } from 'file-saver';
 import {
   diamondSponsors,
   goldSponsors,
@@ -8,6 +9,7 @@ import {
   sponsorsText_1,
   sponsorsText_2,
   sponsorsSubText,
+  SponsorshipBrochure,
 } from '../../data/sponsors';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -39,6 +41,13 @@ const Sponsors = () => {
       setvisiblePara(true);
     }
   }, [mobileView]);
+
+  const saveFile = () => {
+    saveAs(
+      `/static/documents/${SponsorshipBrochure[0]}`,
+      `SRA_Brochure_2k23.pdf`
+    );
+  };
 
   return (
     <>
@@ -81,19 +90,14 @@ const Sponsors = () => {
           <p>
             <b>{sponsorsSubText}</b>
           </p>
-          {/* <a
-            href='https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf'
-            target={'_blank'}
-            download={'brochure'}
-
-          >
-            <button disabled={"true"}>
+          <a>
+            <button onClick={saveFile}>
               Brochure{' '}
               <span>
                 <FontAwesomeIcon icon={faExternalLink} />
               </span>
             </button>
-          </a> */}
+          </a>
           <h1>Sponsors</h1>
           <img
             src={`/static/images/sponsors/sponsorsLevel/${levelImages[0]}`}
@@ -139,7 +143,7 @@ const Sponsors = () => {
           </div>
           <img
             src={`/static/images/sponsors/sponsorsLevel/${levelImages[2]}`}
-            alt=''
+            alt='Silver Tier'
             className={styles.levelImage}
             key={`level_3`}
           ></img>

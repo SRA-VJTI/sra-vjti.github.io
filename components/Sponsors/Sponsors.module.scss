@@ -162,12 +162,12 @@
   .levelImage {
     display: block;
     margin: 20px auto;
-    height: 150px;
-    width: 150px;
+    height: 50px;
+    width: auto;
     margin-top: 3rem;
     @media (max-width: 650px) {
-      width: 175px;
-      height: 175px;
+      width: auto;
+      height: 25px;
     }
   }
   hr {

@@ -54,6 +54,8 @@ const silverSponsors = [
   },
 ];
 
+const SponsorshipBrochure = ['PR_Brochure_23-24.pdf'];
+
 const levelImages = ['diamond-badge.png', 'gold-badge.png', 'silver-badge.png'];
 
 const sponsorsText_1 =
@@ -75,4 +77,5 @@ export {
   sponsorsText_1,
   sponsorsText_2,
   sponsorsSubText,
+  SponsorshipBrochure,
 };
