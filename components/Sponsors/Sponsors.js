@@ -43,7 +43,10 @@ const Sponsors = () => {
   }, [mobileView]);
 
   const saveFile = () => {
-    saveAs(`/static/documents/${SponsorshipBrochure[0]}`);
+    saveAs(
+      `/static/documents/${SponsorshipBrochure[0]}`,
+      `SRA_Brochure_2k23.pdf`
+    );
   };
 
   return (
