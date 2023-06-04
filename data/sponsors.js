@@ -3,6 +3,7 @@ const SponsorListImages = [
   'PCB_Power.jpeg',
   'andonstar.png',
   'tmotor.png',
+  'Odrive.jpeg',
   'texas.png',
   'smc.png',
   'solidspace.png',
@@ -12,6 +13,7 @@ const SponsorLinks = [
   'https://www.pcbpower.com/',
   'https://andonstar.com/',
   'https://uav-en.tmotor.com/',
+  'https://odriverobotics.com/',
   'https://www.ti.com/',
   'https://www.smcin.com/',
   'https://solidspace.co.in/',
@@ -37,6 +39,10 @@ const diamondSponsors = [
 ];
 
 const goldSponsors = [
+  {
+    image: 'Odrive.jpeg',
+    link: 'https://odriverobotics.com/',
+  },
   {
     image: 'texas.png',
     link: 'https://www.ti.com/',
