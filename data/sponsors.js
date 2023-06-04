@@ -13,6 +13,7 @@ const SponsorLinks = [
   'https://www.pcbpower.com/',
   'https://andonstar.com/',
   'https://uav-en.tmotor.com/',
+  'https://odriverobotics.com/',
   'https://www.ti.com/',
   'https://www.smcin.com/',
   'https://solidspace.co.in/',
