@@ -6,6 +6,7 @@ const SponsorListImages = [
   'texas.png',
   'smc.png',
   'solidspace.png',
+  'Odrive.jpeg',
 ];
 const SponsorLinks = [
   'https://www.espressif.com/',
@@ -40,6 +41,10 @@ const goldSponsors = [
   {
     image: 'texas.png',
     link: 'https://www.ti.com/',
+  },
+  {
+    image: 'Odrive.jpeg',
+    link: 'https://odriverobotics.com/',
   },
 ];
 
