@@ -251,6 +251,15 @@ const AlumniList = [
     year: '2019',
     alumnis: [
       {
+        name: 'Mujammil Patel',
+        imgName: 'Mujammil Patel.jpg',
+        sub: (
+          <>Student at Indian Institute of Science (IISc)</>
+        ),
+        linkedInLink: 'https://www.linkedin.com/in/mujammil-patel-87803a112/',
+        githubLink: '',
+      },
+      {
         name: 'Chinmay Khopde',
         imgName: 'Chinmay Khopde.jpg',
         sub: (
