@@ -24,6 +24,10 @@ const NavbarData = [
     link: '/internships',
   },
   {
+    name: 'SRA talks',
+    link: '/talks',
+  },
+  {
     name: 'Blogs',
     link: 'https://blog.sravjti.in/',
   },
