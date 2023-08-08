@@ -5,42 +5,43 @@ const AlumniList = [
       {
         name: 'Saharsh Jain',
         imgName: 'Team/Saharsh.jpg',
-        sub: <>B.Tech Information Technology ' 22</>,
+        sub: <>
+        Program Associate at Wells Fargo</>,
         linkedInLink: 'https://www.linkedin.com/in/saharsh-jain/',
         githubLink: 'https://github.com/saharshleo/',
       },
       {
         name: 'Omkar Sargar',
         imgName: 'Team/Omkar.jpeg',
-        sub: <>B.Tech Electronics ' 22</>,
+        sub: <>Graduate student at Northeastern University</>,
         linkedInLink: 'https://www.linkedin.com/in/omkar-s-7ba8b3137',
         githubLink: 'https://github.com/OSSome01',
       },
       {
         name: 'Omkar Bhilare',
         imgName: 'Team/OmkarB.jpg',
-        sub: <>B.Tech Electronics ' 22</>,
+        sub: <>Silicon Design Engineer at AMD</>,
         linkedInLink: 'https://www.linkedin.com/in/omkar-bhilare-985aa2180',
         githubLink: 'https://github.com/ombhilare999',
       },
       {
         name: 'Vedant Paranjape',
         imgName: 'Team/Vedant.jpg',
-        sub: <>B.Tech Electronics ' 22</>,
+        sub: <>Software Developer engineer at AMD</>,
         linkedInLink: 'https://www.linkedin.com/in/vedantp16',
         githubLink: 'https://github.com/vedantparanjape',
       },
       {
         name: 'Dhruva Gole',
         imgName: 'Team/Dhruva.jpeg',
-        sub: <>B.Tech Electrical ' 22</>,
+        sub: <>Linux Developer at Texas Instruments</>,
         linkedInLink: 'https://www.linkedin.com/in/dhruva-g-75ab26a5/',
         githubLink: 'https://github.com/DhruvaG2000',
       },
       {
         name: 'Sravan Chittupalli',
         imgName: 'Team/Sravan.jpeg',
-        sub: <>B.Tech Electronics ' 22</>,
+        sub: <>Research Programmer Analyst at CMU </>,
         linkedInLink:
           'https://www.linkedin.com/in/sravan-chittupalli-a3777b16a/',
         githubLink: 'https://github.com/SravanChittupalli',
@@ -48,21 +49,21 @@ const AlumniList = [
       {
         name: 'Shantanu Pande',
         imgName: 'Team/Shantanu.jpg',
-        sub: <>B.Tech Electronics ' 22</>,
+        sub: <>Technology Analyst at Citi</>,
         linkedInLink: 'https://www.linkedin.com/in/shantanu-pande',
         githubLink: 'https://github.com/shan515',
       },
       {
         name: 'Abhinav Venkatadri',
         imgName: 'Team/Abhinav.jpg',
-        sub: <>B.Tech EXTC ' 22</>,
+        sub: <>Associate at PwC</>,
         linkedInLink: 'https://www.linkedin.com/in/abhinavvenkatadri/',
         githubLink: 'https://github.com/Abhinavvenkatadri',
       },
       {
         name: 'Rahul Singh',
         imgName: 'Team/Rahul.JPG',
-        sub: <>B.Tech Electronics ' 22</>,
+        sub: <>Associate Consultant at Praxis Global Alliance</>,
         linkedInLink: 'https://www.linkedin.com/in/rahul-singh-005965188/',
         githubLink: 'https://github.com/rahulsingh701',
       },
@@ -76,7 +77,7 @@ const AlumniList = [
       {
         name: 'Shamit Savant',
         imgName: 'Team/Shamit.jpg',
-        sub: <>B.Tech Electrical ' 22</>,
+        sub: <>Software Intern at Orangewood Labs</>,
         linkedInLink: 'https://www.linkedin.com/in/shamit-savant/',
         githubLink: 'https://github.com/ShaMiT19',
       },
@@ -90,21 +91,21 @@ const AlumniList = [
       {
         name: 'Shubham Singh',
         imgName: 'Team/Shubham.jpg',
-        sub: <>B.Tech Electrical ' 22</>,
+        sub: <>Digital engineer at Tata Digital</>,
         linkedInLink: 'https://www.linkedin.com/in/shubham-singh-520394168',
         githubLink: 'https://github.com/shubham92000',
       },
       {
         name: 'Lukesh Ankamwar',
         imgName: 'Team/Lukesh.jpg',
-        sub: <>B.Tech Electronics ' 22</>,
+        sub: <>Associate Application Developer @OFSS</>,
         linkedInLink: 'https://www.linkedin.com/in/lukesh-ankamwar-212566173/',
         githubLink: 'https://github.com/luke2103',
       },
       {
         name: 'Jitesh Sonkusare',
         imgName: 'Team/Jitesh.jpg',
-        sub: <>B.Tech Electrical ' 22</>,
+        sub: <>Graduaate student at Northeastern University</>,
         linkedInLink: 'https://www.linkedin.com/in/jitesh-sonkusare-11b118198/',
         githubLink: 'https://github.com/jitesh3023',
       },
@@ -118,7 +119,7 @@ const AlumniList = [
       {
         name: 'Maunil Shah',
         imgName: 'Team/Maunil.jpg',
-        sub: <>B.Tech Mechanical ' 22</>,
+        sub: <>Data scientist at Infinite Analytics</>,
         linkedInLink: 'https://www.linkedin.com/in/maunil-shah-2987421a7/',
         githubLink: 'https://github.com/Maunil2k',
       },
@@ -130,28 +131,29 @@ const AlumniList = [
       {
         name: 'Vishnu Parammal',
         imgName: 'Team/Vishnu.png',
-        sub: <>B.Tech EXTC ' 21</>,
+        sub: <>Senior Analyst at Deutsche Bank
+        </>,
         linkedInLink: 'https://www.linkedin.com/in/vishnu-parammal/',
         githubLink: 'https://github.com/vishnuparammal',
       },
       {
         name: 'Chinmay Nehate',
         imgName: 'Team/Chinmay.jpg',
-        sub: <>B.Tech Electronics ' 21</>,
+        sub: <>Software Engineer at Telstra</>,
         linkedInLink: 'https://www.linkedin.com/in/chinmay-nehate-3145a0184/',
         githubLink: 'https://github.com/chinmaynehate',
       },
       {
         name: 'Vednarayan Iyer',
         imgName: 'Team/Vednarayan.jpg',
-        sub: <>B.Tech EXTC ' 21</>,
+        sub: <>MSc Astronomy at IIT Indore</>,
         linkedInLink: 'https://www.linkedin.com/in/vednarayan-iyer',
         githubLink: 'https://github.com/ved29',
       },
       {
         name: 'Laukik Hase',
         imgName: 'Team/laukik.png',
-        sub: <>B.Tech EXTC ' 21</>,
+        sub: <>Embedded Software Engineer at Espressif Systems</>,
         linkedInLink:
           'https://www.linkedin.com/in/laukik-hase/detail/background-image/',
         githubLink: 'https://github.com/laukik-hase',
@@ -164,7 +166,7 @@ const AlumniList = [
       {
         name: 'Shweta Kumaran',
         imgName: 'Shweta Kumaran.jpg',
-        sub: <>Technology Consultant - Data and Analytics at PwC India</>,
+        sub: <>ASIC Engineer - Cisco</>,
         linkedInLink: 'https://www.linkedin.com/in/shweta-kumaran-b22773187/',
         githubLink: '',
       },
@@ -190,14 +192,14 @@ const AlumniList = [
       {
         name: 'Saaket Agashe',
         imgName: 'Saaket Agashe.jpg',
-        sub: <>AI, ML, CV expert at VJTI</>,
+        sub: <>Computer Science Student at the University of California, Santa Cruz</>,
         linkedInLink: 'https://www.linkedin.com/in/saaket-agashe-347988160/',
         githubLink: '',
       },
       {
         name: 'Shambhavi Kuthe',
         imgName: 'SHAMBHAVI KUTHE.jpg',
-        sub: <>Schneider Electric India Pvt. Limited</>,
+        sub: <>Graduate Student at Virginia Tech </>,
         linkedInLink: 'https://www.linkedin.com/in/shambhavikuthe/',
         githubLink: '',
       },
@@ -205,7 +207,7 @@ const AlumniList = [
         name: 'Aditya Gawali',
         imgName: 'Aditya Gawali.jpg',
         sub: (
-          <>Electrical System Design Engineer at Larsen &#38; Toubro Defence</>
+          <>Wireless Device Driver Intern at Qualcomm</>
         ),
         linkedInLink: 'https://www.linkedin.com/in/adityagawali/',
         githubLink: '',
@@ -230,8 +232,7 @@ const AlumniList = [
         imgName: 'sankalp vartak.jpg',
         sub: (
           <>
-            Graduate Engineering Trainee [Carbon Fibre] at Reliance Industries
-            Limited
+            Product Development Lead at Humbi Analytics LLC
           </>
         ),
         linkedInLink: 'https://www.linkedin.com/in/sankalpvartak/',
@@ -240,7 +241,7 @@ const AlumniList = [
       {
         name: 'Chirag Jaiswal',
         imgName: 'chirag jaiswal.jpg',
-        sub: <>MTech, Transportation and Highway Engineering, IIT Kanpur.</>,
+        sub: <>Senior Engineer at Samsung R&D Institute Indi</>,
         linkedInLink: 'https://www.linkedin.com/in/chirag-jaiswal-2462941a6/',
         githubLink: '',
       },
@@ -249,6 +250,15 @@ const AlumniList = [
   {
     year: '2019',
     alumnis: [
+      {
+        name: 'Mujammil Patel',
+        imgName: 'Mujammil Patel.jpg',
+        sub: (
+          <>Student at Indian Institute of Science (IISc)</>
+        ),
+        linkedInLink: 'https://www.linkedin.com/in/mujammil-patel-87803a112/',
+        githubLink: '',
+      },
       {
         name: 'Chinmay Khopde',
         imgName: 'Chinmay Khopde.jpg',
@@ -279,21 +289,21 @@ const AlumniList = [
       {
         name: 'Atharv Khadtare',
         imgName: 'Atharv Khadtare.jpg',
-        sub: <>Trainee Software Engineer - Development at CitiusTech</>,
+        sub: <>Java Developer, Associate at BlackRock</>,
         linkedInLink: 'https://www.linkedin.com/in/atharvkhadtare/',
         githubLink: '',
       },
       {
         name: 'Atharva Bhave',
         imgName: 'Atharva Bhave.jpg',
-        sub: <>Technology Consultant at PwC India</>,
+        sub: <>TCentral MME Associate at Pratham Education Foundation</>,
         linkedInLink: 'https://www.linkedin.com/in/atharvabhave21/',
         githubLink: '',
       },
       {
         name: 'Viraj Sonawane',
         imgName: 'Viraj Sonawane.jpg',
-        sub: <>Graduate Software Engineer at ARM</>,
+        sub: <>North Carolina State University Computer Engineering Graduate Student</>,
         linkedInLink: 'https://www.linkedin.com/in/virajsonawane/',
         githubLink: '',
       },
@@ -301,7 +311,7 @@ const AlumniList = [
         name: 'Suyash Junnarkar',
         imgName: 'Suyash Junnarkar.jpg',
         sub: (
-          <>Graduate Research Assistant at Georgia Institute of Technology</>
+          <>User Experience Designer at MathWorks</>
         ),
         linkedInLink: 'https://www.linkedin.com/in/suyashjunnarkar/',
         githubLink: '',
@@ -341,8 +351,7 @@ const AlumniList = [
         imgName: 'Awadhut Thube.jpg',
         sub: (
           <>
-            Graduate Student at Carnegie Mellon University, <br />
-            MS in Robotic Systems Development (MRSD)
+            Robotics Engineer at PROTOINNOVATIONS, LLC
           </>
         ),
         linkedInLink: 'https://www.linkedin.com/in/thube/',
@@ -351,7 +360,7 @@ const AlumniList = [
       {
         name: 'Amit Kharwandikar',
         imgName: 'Amit Kharwandikar.jpg',
-        sub: <>Master Thesis Student at Swiss Plasma Center, EPFL</>,
+        sub: <>Doctoral student at the Max Planck Institute for Plasma Physics</>,
         linkedInLink:
           'https://www.linkedin.com/in/amit-kharwandikar-9a6710117/',
         githubLink: '',
@@ -373,7 +382,7 @@ const AlumniList = [
       {
         name: 'Pranav Udupa',
         imgName: 'Pranav Udupa.jpg',
-        sub: <>Student at DTU, Denmark</>,
+        sub: <>Renewable energy engineer at JGH Group</>,
         linkedInLink: 'https://www.linkedin.com/in/udupa-pranav/',
         githubLink: '',
       },
@@ -382,8 +391,7 @@ const AlumniList = [
         imgName: 'Jheel Nagaria.jpg',
         sub: (
           <>
-            Analog/ Mixed Signal/ RFIC Design <br />
-            University of Southern California
+            Engineer at Qualcomm
           </>
         ),
         linkedInLink: 'https://www.linkedin.com/in/jheel-nagaria/',
@@ -392,7 +400,7 @@ const AlumniList = [
       {
         name: 'Himanshu Maheshwari',
         imgName: 'Himanshu Maheshwari.jpg',
-        sub: <>Associate at Deutsche Bank</>,
+        sub: <>Software Engineer at Miro</>,
         linkedInLink: 'https://www.linkedin.com/in/maheshwari-himanshu/',
         githubLink: '',
       },
@@ -406,7 +414,8 @@ const AlumniList = [
       {
         name: 'Breejesh Rathod',
         imgName: 'Breejesh Rathod.jpg',
-        sub: <>Manager at Morgan Stanley</>,
+        sub: <>
+        Full Stack Developer at M2P Fintech</>,
         linkedInLink: 'https://www.linkedin.com/in/breejesh-rathod/',
         githubLink: '',
       },
@@ -432,7 +441,7 @@ const AlumniList = [
       {
         name: 'Udit Patadia',
         imgName: 'Udit Patadia.jpg',
-        sub: <>Senior Software Engineer at Indus OS</>,
+        sub: <>Robotics at CMU</>,
         linkedInLink: 'https://www.linkedin.com/in/udit-patadia/',
         githubLink: '',
       },
@@ -446,7 +455,7 @@ const AlumniList = [
       {
         name: 'Rahul Solanki',
         imgName: 'Rahul Solanki.jpg',
-        sub: <>Machine Learning Engineer at Amazon</>,
+        sub: <>Senior Machine Learning Apps Engineer at Amazon</>,
         linkedInLink: 'https://www.linkedin.com/in/solankirahul411/',
         githubLink: '',
       },
@@ -472,14 +481,14 @@ const AlumniList = [
       {
         name: 'Tyagaraja Ramaswamy',
         imgName: 'Tyagaraja Ramaswamy.jpeg',
-        sub: <>Software Engineer at iRobot</>,
+        sub: <>Sr Computer Vision Engineer at iRobot</>,
         linkedInLink: 'https://www.linkedin.com/in/tyagaraja-ramaswamy/',
         githubLink: '',
       },
       {
         name: 'Vishnu Radhakrishnan',
         imgName: 'Vishnu Radhakrishnan.jpeg',
-        sub: <>Robotics Software Engineer at Dorabot</>,
+        sub: <>Senior Robotics Engineer at Mujin US</>,
         linkedInLink: 'https://www.linkedin.com/in/vishnu-radhakrishnan/',
         githubLink: '',
       },
@@ -500,7 +509,7 @@ const AlumniList = [
         imgName: 'Shweta Khushu.jpeg',
         sub: (
           <>
-            Senior Engineer and Growth Lead, AI at SkySpecs <br />
+            Engineering Manager at SkySpecs <br />
             Volunteer at Climate Mind
           </>
         ),
