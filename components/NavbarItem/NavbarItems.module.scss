@@ -1,0 +1,71 @@
+@import '../variables';
+
+.Menu {
+  .navbarElem {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    position: relative;
+    height: 100%;
+    border-bottom: 2px solid transparent;
+    padding: 15px 0px 15px 0px;
+    transition: background-color 0.2s;
+    text-align: center;
+
+    &:hover {
+      // top: 5px;
+      background-color: rgba(255, 255, 255, 0.151);
+    }
+
+    .title {
+      padding: 0 25px 0 25px;
+    }
+  }
+
+  .dropDown {
+    margin-top: 18px;
+    position: absolute;
+    width: 200px;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+    background-color: rgba(0, 0, 0, 1);
+
+    @supports (-moz-appearance: none) {
+      background-color: rgba(0, 0, 0, 0.856);
+    }
+
+    backdrop-filter: blur(11px);
+    // opacity: 0;
+    transition: clip-path 0.6s;
+
+    .subMenu {
+      padding: 0.7rem 1rem;
+      border-top: 2px solid rgba(255, 255, 255, 0.151);
+
+      &:hover {
+        // top: 5px;
+        background-color: rgba(255, 255, 255, 0.151);
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .navbarElem {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .navbarElem {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 780px) {
+    .dropDown {
+      position: relative;
+      margin-top: 0;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.432);
+    }
+  }
+}
