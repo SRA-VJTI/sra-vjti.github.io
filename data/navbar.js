@@ -1,5 +1,31 @@
 const NavbarData = [
   {
+    name: 'Our Lab',
+    link: '/', // Corporate page will be added
+    subMenu: [
+      {
+        name: 'About Us',
+        link: '/#about-us',
+      },
+      {
+        name: 'Activities',
+        link: '/activities',
+      },
+      {
+        name: 'Exhibition',
+        link: '/', // Coming Up Soon
+      },
+      {
+        name: 'Internship Experience',
+        link: '/internships',
+      },
+      {
+        name: 'Blogs',
+        link: 'https://blog.sravjti.in/',
+      },
+    ],
+  },
+  {
     name: 'Projects',
     link: '/projects',
     subMenu: [
@@ -18,16 +44,20 @@ const NavbarData = [
     ],
   },
   {
+    name: 'Publications',
+    link: '/', // Publications coming up soon
+  },
+  {
     name: 'Teams',
     link: '/teams',
     subMenu: [
       {
-        name: 'Teachers',
-        link: '/teams/teacherincharge/',
-      },
-      {
         name: 'Alumni',
         link: '/teams/alumni/',
+      },
+      {
+        name: 'Faculty Incharge',
+        link: '/teams/teacherincharge/',
       },
       {
         name: 'Current',
@@ -36,50 +66,26 @@ const NavbarData = [
     ],
   },
   {
-    name: 'Activities',
-    link: '/activities',
-  },
-  // {
-  //   name: 'Startups',
-  //   link: '/startups',
-  // },
-  {
     name: 'Achievements',
     link: '/achievements',
   },
   {
-    name: 'Internship Experiences',
-    link: '/internships',
+    name: 'Support Us',
+    link: '/sponsors', // A new page with two sections will be presented soon
     subMenu: [
+      // {
+      //   name: 'CSR',
+      //   link: '/sponsors/', // CSR links will be added soon
+      // },
       {
-        name: '2022',
-        link: '/internships/#blogs_2022',
-      },
-      {
-        name: '2021',
-        link: '/internships/#blogs_2021',
-      },
-      {
-        name: '2020',
-        link: '/internships/#blogs_2020',
-      },
-      {
-        name: '2019',
-        link: '/internships/#blogs_2019',
+        name: 'Sponsor us',
+        link: '/sponsors',
       },
     ],
   },
   {
-    name: 'Blogs',
-    link: 'https://blog.sravjti.in/',
-  },
-  {
-    name: 'Sponsor us',
-    link: '/sponsors',
-  },
-  {
-    name: 'Contact us',
-    link: '/contactus',
+    name: 'Start Ups',
+    link: '/startups',
   },
 ];
 
