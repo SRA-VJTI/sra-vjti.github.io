@@ -11,10 +11,10 @@ const NavbarData = [
         name: 'Activities',
         link: '/activities',
       },
-      {
-        name: 'Exhibition',
-        link: '/', // Coming Up Soon
-      },
+      // {
+      //   name: 'Exhibition',
+      //   link: '/', // Coming Up Soon
+      // },
       {
         name: 'Internship Experience',
         link: '/internships',
