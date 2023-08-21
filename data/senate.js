@@ -1,10 +1,45 @@
 const SenateList = [
   {
+    name: 'Mahesh Tupe',
+    imgName: 'Team/2025/Mahesh_Tupe_25.jpg',
+    sub: (
+      <>
+        General Secretary <br />
+        B.Tech Textile ' 25
+      </>
+    ),
+    linkedInLink: 'https://www.linkedin.com/in/mahesh-tupe-879393243/',
+    githubLink: 'https://github.com/Asc91',
+  },
+  {
+    name: 'Zain Siddavatam',
+    imgName: 'Team/2025/Zain_Siddavatam_25.jpeg',
+    sub: (
+      <>
+        Jt. General Secretary <br />
+        B.Tech Electrical ' 25
+      </>
+    ),
+    linkedInLink: 'https://www.linkedin.com/in/zain-siddavatam/',
+    githubLink: 'https://github.com/SuperChamp234',
+  },
+  {
+    name: 'Alqama Shaikh',
+    imgName: 'Team/2025/Alqama_Shaikh_25.jpeg',
+    sub: (
+      <>
+        Jt. General Secretary <br />
+        B.Tech Mechanical ' 25
+      </>
+    ),
+    linkedInLink: 'https://www.linkedin.com/in/mohd-alqama-shaikh-636587229/',
+    githubLink: 'github.com/aPR0T0',
+  },
+  {
     name: 'Moteen Shah',
     imgName: 'Team/2024/Moteen_Shah_24.jpeg',
     sub: (
       <>
-        General Secretary <br />
         B.Tech Electronics & Telecommunication ' 24
       </>
     ),
@@ -16,7 +51,6 @@ const SenateList = [
     imgName: 'Team/2024/Marck_Koothoor_24.jpg',
     sub: (
       <>
-        Jt. General Secretary <br />
         B.Tech Production ' 24
       </>
     ),
@@ -28,7 +62,6 @@ const SenateList = [
     imgName: 'Team/2024/Chinmay_Lonkar_24.JPG',
     sub: (
       <>
-        Jt. General Secretary <br />
         B.Tech Electrical ' 24
       </>
     ),
