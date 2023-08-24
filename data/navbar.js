@@ -52,16 +52,16 @@ const NavbarData = [
     link: '/teams',
     subMenu: [
       {
-        name: 'Alumni',
-        link: '/teams/alumni/',
-      },
-      {
         name: 'Faculty Incharge',
         link: '/teams/teacherincharge/',
       },
       {
         name: 'Current',
         link: '/teams/current/',
+      },
+      {
+        name: 'Alumni',
+        link: '/teams/alumni/',
       },
     ],
   },
@@ -84,7 +84,7 @@ const NavbarData = [
     ],
   },
   {
-    name: 'StartUps',
+    name: 'Startups',
     link: '/startups',
   },
 ];
