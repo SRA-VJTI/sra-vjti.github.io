@@ -27,11 +27,7 @@
     width: 200px;
     font-size: 1rem;
     transition: background-color 0.2s;
-    background-color: rgba(0, 0, 0, 1);
-
-    @supports (-moz-appearance: none) {
-      background-color: rgba(0, 0, 0, 0.856);
-    }
+    background-color: rgba(0, 0, 0, 0.74);
 
     backdrop-filter: blur(11px);
     // opacity: 0;
@@ -52,20 +48,31 @@
     .navbarElem {
       font-size: 1.2rem;
     }
-  }
-
-  @media (max-width: 1000px) {
-    .navbarElem {
-      font-size: 0.9rem;
+    .dropDown {
+      background-color: rgba(0, 0, 0, 0.492);
     }
   }
 
   @media (max-width: 780px) {
+    .navbarElem {
+      font-size: 1rem;
+      height: 100%;
+      width: 200px;
+      background-color: rgba(0, 0, 0, 0);
+    }
     .dropDown {
+      margin-top: 0px;
+      font-size: 1rem;
       position: relative;
-      margin-top: 0;
       text-align: center;
-      background-color: rgba(0, 0, 0, 0.432);
+      &:hover {
+        // top: 5px;
+        background-color: rgba(0, 0, 0, 0);
+      }
+    }
+    .subMenu {
+      margin-top: 10px;
+      background-color: rgba(0, 0, 0, 0);
     }
   }
 }

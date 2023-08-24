@@ -61,32 +61,39 @@ const NavbarItems = ({ navItem, idx, linkClick, set }) => {
       {!isNavbarDown &&
         (navItem.subMenu ? (
           <div className={styles.Menu}>
-            {/* <Link key={`link_${idx}`} href={navItem.link}> */}
+            {/* { <Link key={`link_${idx}`} href={navItem.link}> } */}
             <div
               className={styles.navbarElem}
-              onClick={() => setOnSubMenu(!onSubMenu)}
+              onMouseOver={() => setOnMenu(true)}
+              onMouseLeave={() => setOnMenu(false)}
+              onClick={() => setOnMenu(!onMenu)}
             >
-              <span className={styles.title}>
-                {!onSubMenu ? (
-                  <>
-                    {navItem.name} <FontAwesomeIcon icon={faCaretRight} />
-                  </>
-                ) : (
-                  <>
-                    {navItem.name} <FontAwesomeIcon icon={faCaretDown} />
-                  </>
-                )}
-              </span>
-            </div>
-            <div className={styles.dropDown}>
-              {onSubMenu &&
-                navItem.subMenu.map((item, idx) => {
-                  return (
-                    <Link key={idx} href={item.link} onClick={linkClick}>
-                      <div className={styles.subMenu}>{item.name} </div>
-                    </Link>
-                  );
-                })}
+              <div
+                className={styles.dropDown}
+                onMouseOver={() => setOnSubMenu(true)}
+                onMouseLeave={() => setOnSubMenu(false)}
+                onClick={() => setOnSubMenu(!onSubMenu)}
+              >
+                <span className={styles.title} id='elements'>
+                  {!onSubMenu ? (
+                    <>
+                      {navItem.name} <FontAwesomeIcon icon={faCaretRight} />
+                    </>
+                  ) : (
+                    <>
+                      {navItem.name} <FontAwesomeIcon icon={faCaretDown} />
+                    </>
+                  )}
+                </span>
+                {onSubMenu &&
+                  navItem.subMenu.map((item, idx) => {
+                    return (
+                      <Link key={idx} href={item.link} onClick={linkClick}>
+                        <div className={styles.subMenu}>{item.name} </div>
+                      </Link>
+                    );
+                  })}
+              </div>
             </div>
             {/* </Link> */}
           </div>

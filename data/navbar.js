@@ -5,7 +5,7 @@ const NavbarData = [
     subMenu: [
       {
         name: 'About Us',
-        link: '/#about-us',
+        link: '/#About-us',
       },
       {
         name: 'Activities',
@@ -16,7 +16,7 @@ const NavbarData = [
       //   link: '/', // Coming Up Soon
       // },
       {
-        name: 'Internship Experience',
+        name: 'Internship Diaries',
         link: '/internships',
       },
       {
@@ -43,10 +43,10 @@ const NavbarData = [
       },
     ],
   },
-  {
-    name: 'Publications',
-    link: '/', // Publications coming up soon
-  },
+  // {
+  //   name: 'Publications',
+  //   link: '/', // Publications coming up soon
+  // },
   {
     name: 'Teams',
     link: '/teams',
@@ -84,7 +84,7 @@ const NavbarData = [
     ],
   },
   {
-    name: 'Start Ups',
+    name: 'StartUps',
     link: '/startups',
   },
 ];

@@ -47,7 +47,7 @@ const Navbar = () => {
         <div className={styles.navbarToggle} id='navbar-toggle'>
           <img
             onClick={onKhopdiClick}
-            src='/static/images/KhopdiBaba.svg'
+            src='/static/images/KhopdiBaba.svg' // Need to remove this and just add SRA logo
             className={styles.khopdi}
             id='khopdi'
             alt=''

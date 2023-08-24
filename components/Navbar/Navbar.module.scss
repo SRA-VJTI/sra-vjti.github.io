@@ -63,7 +63,7 @@
     height: 100%;
     clip-path: circle(15% at 100% 0%);
     height: 100vh;
-
+    background-color: rgb(0, 0, 0);
     .navbarToggle {
       display: unset;
 
@@ -74,7 +74,6 @@
         z-index: 4;
       }
     }
-
     .navbarElemList {
       flex-direction: column;
       justify-content: start;
