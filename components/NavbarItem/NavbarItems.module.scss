@@ -27,7 +27,7 @@
     width: 200px;
     font-size: 1rem;
     transition: background-color 0.2s;
-    background-color: rgba(0, 0, 0, 0.74);
+    background-color: rgba(0, 0, 0, 0.7);
 
     backdrop-filter: blur(11px);
     // opacity: 0;
@@ -49,7 +49,7 @@
       font-size: 1.2rem;
     }
     .dropDown {
-      background-color: rgba(0, 0, 0, 0.492);
+      background-color: rgba(0, 0, 0, 0.35);
     }
   }
 
@@ -60,15 +60,19 @@
       width: 200px;
       background-color: rgba(0, 0, 0, 0);
     }
+    &:hover {
+      // top: 5px;
+      background-color: rgba(255, 255, 255, 0.155);
+    }
     .dropDown {
       margin-top: 0px;
       font-size: 1rem;
       position: relative;
       text-align: center;
-      background-color: transparent;
+      background-attachment: fixed;
       &:hover {
         // top: 5px;
-        background-color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.3);
       }
     }
     .subMenu {

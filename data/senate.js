@@ -38,33 +38,21 @@ const SenateList = [
   {
     name: 'Moteen Shah',
     imgName: 'Team/2024/Moteen_Shah_24.jpeg',
-    sub: (
-      <>
-        B.Tech Electronics & Telecommunication ' 24
-      </>
-    ),
+    sub: <>B.Tech Electronics & Telecommunication ' 24</>,
     linkedInLink: 'https://www.linkedin.com/in/moteen-shah-98997216b/',
     githubLink: 'https://github.com/Jamm02',
   },
   {
     name: 'Marck Koothoor',
     imgName: 'Team/2024/Marck_Koothoor_24.jpg',
-    sub: (
-      <>
-        B.Tech Production ' 24
-      </>
-    ),
+    sub: <>B.Tech Production ' 24</>,
     linkedInLink: 'https://www.linkedin.com/in/marck-koothoor-ab0058225/',
     githubLink: 'https://github.com/marck3131',
   },
   {
     name: 'Chinmay Lonkar',
     imgName: 'Team/2024/Chinmay_Lonkar_24.JPG',
-    sub: (
-      <>
-        B.Tech Electrical ' 24
-      </>
-    ),
+    sub: <>B.Tech Electrical ' 24</>,
     linkedInLink: 'https://in.linkedin.com/in/chinmay-lonkar-845207214',
     githubLink: 'https://github.com/ChinmayLonkar',
   },

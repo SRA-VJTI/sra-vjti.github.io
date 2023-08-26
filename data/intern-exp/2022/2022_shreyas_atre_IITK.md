@@ -1,6 +1,6 @@
 # What was your internship about, and what was the duration of it ?
 
-It was about the GPGPU co-scheduling algorithm. 
+It was about the GPGPU co-scheduling algorithm.
 It was about an interesting concept, and a new experience as it was about writing an algorithm to optimize memory for static budgets.
 I never did any DSA, and it got me hard. I nearly messed this up with a mediocre algorithm that did a 20% reduction in run time memory usage by destroying the parallel nature of CUDA streams.
 Couldn't think of something better. The mentor’s name was Danny Periera (very helpful) and the prof was Dr. Soumyajit Dey.

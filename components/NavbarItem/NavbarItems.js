@@ -3,11 +3,20 @@ import styles from './NavbarItems.module.scss';
 import Link from 'next/link';
 import useWindowSize from '../../utils/ResizeHook';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown, faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCaretDown,
+  faCaretRight,
+  faL,
+} from '@fortawesome/free-solid-svg-icons';
+
+let onSubMenu = false;
+
+function setSubMenu(newValue) {
+  onSubMenu = newValue;
+}
 
 const NavbarItems = ({ navItem, idx, linkClick, set }) => {
   const [onMenu, setOnMenu] = useState(false);
-  const [onSubMenu, setOnSubMenu] = useState(false);
   const [isNavbarDown, setIsNavbarDown] = useState(false);
   const size = useWindowSize();
 
@@ -34,10 +43,10 @@ const NavbarItems = ({ navItem, idx, linkClick, set }) => {
                 <span className={styles.title}>{navItem.name}</span>
                 <div
                   className={styles.dropDown}
-                  onMouseOver={() => setOnSubMenu(true)}
-                  onMouseLeave={() => setOnSubMenu(false)}
+                  onMouseOver={() => setSubMenu(true)}
+                  onMouseLeave={() => setSubMenu(false)}
                 >
-                  {(onMenu || onSubMenu) &&
+                  {onMenu &&
                     navItem.subMenu.map((item, idx) => {
                       return (
                         <Link key={idx} href={item.link}>
@@ -68,7 +77,7 @@ const NavbarItems = ({ navItem, idx, linkClick, set }) => {
             >
               <div
                 className={styles.dropDown}
-                onClick={() => setOnSubMenu(!onSubMenu)}
+                onClick={() => setSubMenu(!onSubMenu)}
               >
                 <span className={styles.title} id='elements'>
                   {!onSubMenu ? (
@@ -105,5 +114,5 @@ const NavbarItems = ({ navItem, idx, linkClick, set }) => {
     </>
   );
 };
-
+export { onSubMenu, setSubMenu };
 export default NavbarItems;

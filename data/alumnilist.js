@@ -5,8 +5,7 @@ const AlumniList = [
       {
         name: 'Saharsh Jain',
         imgName: 'Team/Saharsh.jpg',
-        sub: <>
-        Program Associate at Wells Fargo</>,
+        sub: <>Program Associate at Wells Fargo</>,
         linkedInLink: 'https://www.linkedin.com/in/saharsh-jain/',
         githubLink: 'https://github.com/saharshleo/',
       },
@@ -131,8 +130,7 @@ const AlumniList = [
       {
         name: 'Vishnu Parammal',
         imgName: 'Team/Vishnu.png',
-        sub: <>Senior Analyst at Deutsche Bank
-        </>,
+        sub: <>Senior Analyst at Deutsche Bank</>,
         linkedInLink: 'https://www.linkedin.com/in/vishnu-parammal/',
         githubLink: 'https://github.com/vishnuparammal',
       },
@@ -192,7 +190,11 @@ const AlumniList = [
       {
         name: 'Saaket Agashe',
         imgName: 'Saaket Agashe.jpg',
-        sub: <>Computer Science Student at the University of California, Santa Cruz</>,
+        sub: (
+          <>
+            Computer Science Student at the University of California, Santa Cruz
+          </>
+        ),
         linkedInLink: 'https://www.linkedin.com/in/saaket-agashe-347988160/',
         githubLink: '',
       },
@@ -206,9 +208,7 @@ const AlumniList = [
       {
         name: 'Aditya Gawali',
         imgName: 'Aditya Gawali.jpg',
-        sub: (
-          <>Wireless Device Driver Intern at Qualcomm</>
-        ),
+        sub: <>Wireless Device Driver Intern at Qualcomm</>,
         linkedInLink: 'https://www.linkedin.com/in/adityagawali/',
         githubLink: '',
       },
@@ -230,11 +230,7 @@ const AlumniList = [
       {
         name: 'Sankalp Vartak',
         imgName: 'sankalp vartak.jpg',
-        sub: (
-          <>
-            Product Development Lead at Humbi Analytics LLC
-          </>
-        ),
+        sub: <>Product Development Lead at Humbi Analytics LLC</>,
         linkedInLink: 'https://www.linkedin.com/in/sankalpvartak/',
         githubLink: '',
       },
@@ -253,9 +249,7 @@ const AlumniList = [
       {
         name: 'Mujammil Patel',
         imgName: 'Mujammil Patel.jpg',
-        sub: (
-          <>Student at Indian Institute of Science (IISc)</>
-        ),
+        sub: <>Student at Indian Institute of Science (IISc)</>,
         linkedInLink: 'https://www.linkedin.com/in/mujammil-patel-87803a112/',
         githubLink: '',
       },
@@ -303,16 +297,19 @@ const AlumniList = [
       {
         name: 'Viraj Sonawane',
         imgName: 'Viraj Sonawane.jpg',
-        sub: <>North Carolina State University Computer Engineering Graduate Student</>,
+        sub: (
+          <>
+            North Carolina State University Computer Engineering Graduate
+            Student
+          </>
+        ),
         linkedInLink: 'https://www.linkedin.com/in/virajsonawane/',
         githubLink: '',
       },
       {
         name: 'Suyash Junnarkar',
         imgName: 'Suyash Junnarkar.jpg',
-        sub: (
-          <>User Experience Designer at MathWorks</>
-        ),
+        sub: <>User Experience Designer at MathWorks</>,
         linkedInLink: 'https://www.linkedin.com/in/suyashjunnarkar/',
         githubLink: '',
       },
@@ -349,18 +346,16 @@ const AlumniList = [
       {
         name: 'Awadhut Thube',
         imgName: 'Awadhut Thube.jpg',
-        sub: (
-          <>
-            Robotics Engineer at PROTOINNOVATIONS, LLC
-          </>
-        ),
+        sub: <>Robotics Engineer at PROTOINNOVATIONS, LLC</>,
         linkedInLink: 'https://www.linkedin.com/in/thube/',
         githubLink: '',
       },
       {
         name: 'Amit Kharwandikar',
         imgName: 'Amit Kharwandikar.jpg',
-        sub: <>Doctoral student at the Max Planck Institute for Plasma Physics</>,
+        sub: (
+          <>Doctoral student at the Max Planck Institute for Plasma Physics</>
+        ),
         linkedInLink:
           'https://www.linkedin.com/in/amit-kharwandikar-9a6710117/',
         githubLink: '',
@@ -389,11 +384,7 @@ const AlumniList = [
       {
         name: 'Jheel Nagaria',
         imgName: 'Jheel Nagaria.jpg',
-        sub: (
-          <>
-            Engineer at Qualcomm
-          </>
-        ),
+        sub: <>Engineer at Qualcomm</>,
         linkedInLink: 'https://www.linkedin.com/in/jheel-nagaria/',
         githubLink: '',
       },
@@ -414,8 +405,7 @@ const AlumniList = [
       {
         name: 'Breejesh Rathod',
         imgName: 'Breejesh Rathod.jpg',
-        sub: <>
-        Full Stack Developer at M2P Fintech</>,
+        sub: <>Full Stack Developer at M2P Fintech</>,
         linkedInLink: 'https://www.linkedin.com/in/breejesh-rathod/',
         githubLink: '',
       },
