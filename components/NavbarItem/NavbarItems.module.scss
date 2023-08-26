@@ -59,13 +59,14 @@
       height: 100%;
       width: 200px;
       background-color: rgba(0, 0, 0, 0);
+      &:hover {
+        // top: 5px;
+        background-color: rgba(0, 0, 0, 0);
+      }
     }
-    &:hover {
-      // top: 5px;
-      background-color: rgba(0, 0, 0, 0.35);
-    }
-    .dropDown {
+    .subMenu {
       margin-top: 0px;
+      padding: 10px 0px 0px 10px;
       font-size: 1.5rem;
       position: relative;
       text-align: center;

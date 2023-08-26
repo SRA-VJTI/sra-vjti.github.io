@@ -76,7 +76,7 @@ const NavbarItems = ({ navItem, idx, linkClick, set }) => {
               onClick={() => setOnMenu(!onMenu)}
             >
               <div
-                className={styles.dropDown}
+                className={styles.navbarElem}
                 onClick={() => setSubMenu(!onSubMenu)}
               >
                 <span className={styles.title} id='elements'>
