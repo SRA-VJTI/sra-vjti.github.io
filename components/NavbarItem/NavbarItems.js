@@ -64,14 +64,10 @@ const NavbarItems = ({ navItem, idx, linkClick, set }) => {
             {/* { <Link key={`link_${idx}`} href={navItem.link}> } */}
             <div
               className={styles.navbarElem}
-              onMouseOver={() => setOnMenu(true)}
-              onMouseLeave={() => setOnMenu(false)}
               onClick={() => setOnMenu(!onMenu)}
             >
               <div
                 className={styles.dropDown}
-                onMouseOver={() => setOnSubMenu(true)}
-                onMouseLeave={() => setOnSubMenu(false)}
                 onClick={() => setOnSubMenu(!onSubMenu)}
               >
                 <span className={styles.title} id='elements'>
