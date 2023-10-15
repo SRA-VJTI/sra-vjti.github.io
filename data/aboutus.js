@@ -8,8 +8,8 @@ const AboutUsAlumniText =
   'With our alumni in many renowned colleges and companies... our alumni network grows more diverse every year.';
 
 const AboutUsImages = {
-  newgroup: 'group-new-final.jpg',
-  oldGroup: 'group-old-final.jpg',
+  newgroup: '/group/2021/group_pic_2021.jpg',
+  oldGroup: '/group/very_old/group-old-final.jpg',
 };
 
 export {
