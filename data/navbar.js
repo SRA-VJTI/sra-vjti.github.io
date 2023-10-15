@@ -43,10 +43,10 @@ const NavbarData = [
       },
     ],
   },
-  // {
-  //   name: 'Publications',
-  //   link: '/', // Publications coming up soon
-  // },
+  {
+    name: 'Publications',
+    link: '/publications',
+  },
   {
     name: 'Teams',
     link: '/teams',
