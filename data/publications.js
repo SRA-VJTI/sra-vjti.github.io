@@ -6,7 +6,7 @@ const PublicationsList = [
         photo: '/static/images/publications/2023_april_08.png',
         title: 'DEEPFAKE CLI: Accelerated Deepfake Detection using FPGAs',
         author:
-          'Omkar Bhilare | Rahul Singh | Vedant Paranjape | Sravan Chittupalli | Shraddha Suratkar | Prof. Faruk Kazi',
+          'Omkar Bhilare | Rahul Singh | Vedant Paranjape | Sravan Chittupalli | Dr. Shraddha Suratkar | Prof. Faruk Kazi',
         time: '08 April 2023',
         short:
           'Parallel and Distributed Computing, Applications and Technologies. PDCAT 2022',
