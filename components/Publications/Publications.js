@@ -9,21 +9,29 @@ const Publications = () => {
         imgName={'publications-hero.jpg'}
         backgroundPosition={'center top'}
         title={<>Publications</>}
-        subtitleList={['Research is looking in great depths, flying to new heights, Imagining the unimagined!']}
+        subtitleList={[
+          'Research is looking in great depths, flying to new heights, Imagining the unimagined!',
+        ]}
         isHome={false}
       />
       <div className={styles.publicationsList} id='is'>
         {PublicationsList.map((publicationSec, idx) => {
           return (
             <>
-              <div className={styles.publicationsSection} key={`publication_${idx}`}>
+              <div
+                className={styles.publicationsSection}
+                key={`publication_${idx}`}
+              >
                 <div className={styles.publicationsSectionTitle}>
                   {publicationSec.name}
                 </div>
 
                 {publicationSec.publications.map((startup, idx) => {
                   return (
-                    <PublicationCard {...startup} key={`publication_card_${idx}`} />
+                    <PublicationCard
+                      {...startup}
+                      key={`publication_card_${idx}`}
+                    />
                   );
                 })}
               </div>
@@ -35,8 +43,14 @@ const Publications = () => {
   );
 };
 
-
-const PublicationCard = ({ title, photo, author, time, short, externalLink }) => {
+const PublicationCard = ({
+  title,
+  photo,
+  author,
+  time,
+  short,
+  externalLink,
+}) => {
   return (
     <div onClick={() => (window.location = externalLink)}>
       <div className={styles.publications}>

@@ -45,7 +45,7 @@ const NavbarData = [
   },
   {
     name: 'Publications',
-    link: '/publications', 
+    link: '/publications',
   },
   {
     name: 'Teams',

@@ -48,7 +48,6 @@ const NavbarItems = ({
     }
   }, [ref, isNavbarDown]);
 
-  
   return (
     <>
       {isWebView &&
