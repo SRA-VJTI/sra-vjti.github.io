@@ -48,6 +48,7 @@ const NavbarItems = ({
     }
   }, [ref, isNavbarDown]);
 
+  
   return (
     <>
       {isWebView &&
@@ -86,6 +87,7 @@ const NavbarItems = ({
             </Link>
           </div>
         ))}
+
       {!isWebView &&
         (navItem.subMenu ? (
           <div className={styles.Menu}>

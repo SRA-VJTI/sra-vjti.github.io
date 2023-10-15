@@ -24,6 +24,7 @@ import OngoingProjectsData from './ongoingprojects';
 import EklavyaProjectList from './eklavyaprojects';
 import ActivitiesList from './activities';
 import FacultyInchargeList from './faculty';
+import PublicationsList from './publications'
 
 export {
   NavbarData,
@@ -48,4 +49,5 @@ export {
   Achievementlist,
   FacultyInchargeList,
   SenateList,
+  PublicationsList
 };
