@@ -71,7 +71,13 @@ const Navbar = () => {
 
           {NavbarData.map((navItem, idx) => {
             return (
-              <NavbarItems navItem={navItem} idx={idx} linkClick={linkClick} isNavbarDown={isNavbarDown} setIsNavbarDown={setIsNavbarDown} />
+              <NavbarItems
+                navItem={navItem}
+                idx={idx}
+                linkClick={linkClick}
+                isNavbarDown={isNavbarDown}
+                setIsNavbarDown={setIsNavbarDown}
+              />
             );
           })}
         </div>

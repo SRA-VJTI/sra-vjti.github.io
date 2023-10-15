@@ -9,8 +9,13 @@ import {
   faL,
 } from '@fortawesome/free-solid-svg-icons';
 
-
-const NavbarItems = ({ navItem, idx, linkClick, isNavbarDown, setIsNavbarDown }) => {
+const NavbarItems = ({
+  navItem,
+  idx,
+  linkClick,
+  isNavbarDown,
+  setIsNavbarDown,
+}) => {
   const [onMenu, setOnMenu] = useState(false);
   const [onSubMenu, setSubMenu] = useState(false);
   const [isWebView, setIsWebView] = useState(false);
@@ -18,7 +23,7 @@ const NavbarItems = ({ navItem, idx, linkClick, isNavbarDown, setIsNavbarDown })
 
   useEffect(() => {
     if (size.width > 780) {
-      setIsWebView(true)
+      setIsWebView(true);
     } else {
       setIsWebView(false);
     }
@@ -33,14 +38,14 @@ const NavbarItems = ({ navItem, idx, linkClick, isNavbarDown, setIsNavbarDown })
         setSubMenu(false);
       }
     };
-    
-    if (isNavbarDown){
-    window.addEventListener("click", handleOutSideClick);
 
-    return () => {
-      window.removeEventListener("click", handleOutSideClick);
-    };
-  }
+    if (isNavbarDown) {
+      window.addEventListener('click', handleOutSideClick);
+
+      return () => {
+        window.removeEventListener('click', handleOutSideClick);
+      };
+    }
   }, [ref, isNavbarDown]);
 
   return (
@@ -84,35 +89,35 @@ const NavbarItems = ({ navItem, idx, linkClick, isNavbarDown, setIsNavbarDown })
       {!isWebView &&
         (navItem.subMenu ? (
           <div className={styles.Menu}>
-              <div
-                ref = {ref}
-                className={styles.navbarElem}
-                onClick={() => setSubMenu(!onSubMenu)}
-              >
-                <span className={styles.title} id='elements'>
-                  {!onSubMenu ? (
-                    <>
-                      {navItem.name} <FontAwesomeIcon icon={faCaretRight} />
-                    </>
-                  ) : (
-                    <>
-                      {navItem.name} <FontAwesomeIcon icon={faCaretDown} />
-                    </>
-                  )}
-                </span>
-                { onSubMenu &&
-                  navItem.subMenu.map((item, idx) => {
-                    return (
-                      <Link key={idx} href={item.link} onClick={linkClick}>
-                        <div className={styles.subMenu}>{item.name} </div>
-                      </Link>
-                    );
-                  })}
-              </div>
+            <div
+              ref={ref}
+              className={styles.navbarElem}
+              onClick={() => setSubMenu(!onSubMenu)}
+            >
+              <span className={styles.title} id='elements'>
+                {!onSubMenu ? (
+                  <>
+                    {navItem.name} <FontAwesomeIcon icon={faCaretRight} />
+                  </>
+                ) : (
+                  <>
+                    {navItem.name} <FontAwesomeIcon icon={faCaretDown} />
+                  </>
+                )}
+              </span>
+              {onSubMenu &&
+                navItem.subMenu.map((item, idx) => {
+                  return (
+                    <Link key={idx} href={item.link} onClick={linkClick}>
+                      <div className={styles.subMenu}>{item.name} </div>
+                    </Link>
+                  );
+                })}
+            </div>
           </div>
         ) : (
-          <div className={styles.Menu}ref = {ref}>
-            <Link key={`link_${idx}`} href={navItem.link} onClick= {linkClick}>
+          <div className={styles.Menu} ref={ref}>
+            <Link key={`link_${idx}`} href={navItem.link} onClick={linkClick}>
               <div className={styles.navbarElem}>
                 <span className={styles.title}>{navItem.name}</span>
               </div>
