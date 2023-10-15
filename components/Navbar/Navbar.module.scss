@@ -3,11 +3,12 @@
   z-index: 1000000;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.432);
+
   @supports (-moz-appearance: none) {
     background-color: rgba(0, 0, 0, 0.856);
   }
+
   backdrop-filter: blur(11px);
-  // opacity: 0;
   transition: clip-path 0.6s;
 
   .khopdi {
@@ -23,39 +24,12 @@
     min-height: 7vh;
     display: flex;
     align-items: center;
-    .navbarElem {
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.3rem;
-      position: relative;
-      height: 100%;
-      border-bottom: 2px solid transparent;
-      padding: 15px 20px;
-      transition: background-color 0.2s;
-      text-align: center;
-
-      &:hover {
-        // top: 5px;
-        background-color: rgba(255, 255, 255, 0.151);
-      }
-    }
-    @media (max-width: 1000px) {
-      .navbarElem {
-        font-size: 1.2rem;
-      }
-    }
-    @media (max-width: 1000px) {
-      .navbarElem {
-        font-size: 0.9rem;
-      }
-    }
 
     .navHome {
       width: 100px;
-      // margin: 5px;
       display: flex;
       align-items: center;
       justify-content: center;
-
       font-family: 'Oswald', sans-serif;
       font-size: 1.3rem;
       position: relative;
@@ -66,7 +40,6 @@
       text-align: center;
 
       &:hover {
-        // top: 5px;
         background-color: rgba(255, 255, 255, 0.151);
       }
 
@@ -78,24 +51,36 @@
   }
 
   @media (max-width: 780px) {
+    // overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     width: 100%;
     height: 100%;
     clip-path: circle(15% at 100% 0%);
     height: 100vh;
+    background-color: rgba(0, 0, 0, 0.35);
     .navbarToggle {
       display: unset;
+
       .khopdi {
         width: 7%;
-        // height: 5%;
         margin: 20px;
         float: right;
         z-index: 4;
       }
     }
     .navbarElemList {
+      overflow: scroll;
+      height: 100%;
       flex-direction: column;
       justify-content: start;
       align-items: center;
+
       .navbarElem {
         font-size: 1.3rem;
       }

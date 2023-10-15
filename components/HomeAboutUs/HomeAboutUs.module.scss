@@ -8,7 +8,7 @@
     background-image: linear-gradient(#00000081, #00000081),
       url('/static/images/aboutus-final.jpg');
     min-height: 60vh;
-    padding: 3em 0.5em;
+    padding: 7em 0.5em;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -64,6 +64,9 @@
   }
 
   @media (max-width: 650px) {
+    .aboutUsMain {
+      padding: 3em 0.5em;
+    }
     .aboutUsTeam,
     .aboutUsAlumni {
       flex-direction: column;

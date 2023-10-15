@@ -11,7 +11,7 @@ import Link from 'next/link';
 const HomeAboutUs = () => {
   return (
     <>
-      <div className={styles.aboutUs}>
+      <div className={styles.aboutUs} id='About-us'>
         <div className={styles.aboutUsMain}>
           <h1>About Us</h1>
           <p>{AboutUsText}</p>

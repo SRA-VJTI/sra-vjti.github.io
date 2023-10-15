@@ -1,8 +1,18 @@
-import { useEffect, useState } from 'react';
+import {
+  useEffect,
+  useStateimport,
+  createContext,
+  useContext,
+  useState,
+} from 'react';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
 import useWindowSize from '../../utils/ResizeHook';
 import { NavbarData } from '../../data';
+import NavbarItems from '../NavbarItem/NavbarItems';
+import { faL } from '@fortawesome/free-solid-svg-icons';
+
+const StateContext = createContext();
 
 const Navbar = () => {
   const [isNavbarDown, setIsNavbarDown] = useState(false);
@@ -11,9 +21,9 @@ const Navbar = () => {
   useEffect(() => {
     let navbar = document.getElementById('navbar');
     if (size.width > 780) {
-      setIsNavbarDown(true);
+      setIsNavbarDown(false);
+      navbar.style.clipPath = 'circle(300% at 100% 0%)';
     } else {
-      // navbar.style.clipPath = "circle(15% at 100% 0%)";
       setIsNavbarDown(false);
     }
   }, [size]);
@@ -21,18 +31,14 @@ const Navbar = () => {
   useEffect(() => {
     let navbar = document.getElementById('navbar');
     if (isNavbarDown) {
-      navbar.style.clipPath = 'circle(150% at 100% 0%)';
+      navbar.style.clipPath = 'circle(300% at 100% 0%)';
     } else {
       navbar.style.clipPath = 'circle(15% at 100% 0%)';
     }
   }, [isNavbarDown]);
 
   const onKhopdiClick = () => {
-    if (isNavbarDown) {
-      setIsNavbarDown(false);
-    } else {
-      setIsNavbarDown(true);
-    }
+    setIsNavbarDown(!isNavbarDown);
   };
   const linkClick = () => {
     if (!(size.width > 780) && isNavbarDown) {
@@ -46,18 +52,14 @@ const Navbar = () => {
         <div className={styles.navbarToggle} id='navbar-toggle'>
           <img
             onClick={onKhopdiClick}
-            src='/static/images/KhopdiBaba.svg'
+            src='/static/images/KhopdiBaba.svg' // Need to remove this and just add SRA logo
             className={styles.khopdi}
             id='khopdi'
             alt=''
           />
         </div>
-        <div
-          className={styles.navbarElemList}
-          id='navbar-elem-list'
-          onClick={linkClick}
-        >
-          <Link href='/'>
+        <div className={styles.navbarElemList} id='navbar-elem-list'>
+          <Link href='/' onClick={linkClick}>
             <div className={styles.navHome} id='nav-home'>
               <img
                 className={styles.sraLogo}
@@ -69,9 +71,13 @@ const Navbar = () => {
 
           {NavbarData.map((navItem, idx) => {
             return (
-              <Link key={`link_${idx}`} href={navItem.link}>
-                <div className={styles.navbarElem}>{navItem.name}</div>
-              </Link>
+              <NavbarItems
+                navItem={navItem}
+                idx={idx}
+                linkClick={linkClick}
+                isNavbarDown={isNavbarDown}
+                setIsNavbarDown={setIsNavbarDown}
+              />
             );
           })}
         </div>
@@ -79,5 +85,4 @@ const Navbar = () => {
     </>
   );
 };
-
 export default Navbar;
