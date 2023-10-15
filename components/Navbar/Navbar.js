@@ -9,7 +9,7 @@ import styles from './Navbar.module.scss';
 import Link from 'next/link';
 import useWindowSize from '../../utils/ResizeHook';
 import { NavbarData } from '../../data';
-import NavbarItems, { onSubMenu, setSubMenu } from '../NavbarItem/NavbarItems';
+import NavbarItems from '../NavbarItem/NavbarItems';
 import { faL } from '@fortawesome/free-solid-svg-icons';
 
 const StateContext = createContext();
@@ -21,15 +21,9 @@ const Navbar = () => {
   useEffect(() => {
     let navbar = document.getElementById('navbar');
     if (size.width > 780) {
-      setIsNavbarDown(true);
+      setIsNavbarDown(false);
+      navbar.style.clipPath = 'circle(300% at 100% 0%)';
     } else {
-      const onKhopdiClick = () => {
-        if (isNavbarDown) {
-          setIsNavbarDown(false);
-        } else {
-          setIsNavbarDown(true);
-        }
-      }; // navbar.style.clipPath = "circle(15% at 100% 0%)";
       setIsNavbarDown(false);
     }
   }, [size]);
@@ -44,12 +38,7 @@ const Navbar = () => {
   }, [isNavbarDown]);
 
   const onKhopdiClick = () => {
-    if (isNavbarDown) {
-      setIsNavbarDown(false);
-      setSubMenu(false);
-    } else {
-      setIsNavbarDown(true);
-    }
+    setIsNavbarDown(!isNavbarDown);
   };
   const linkClick = () => {
     if (!(size.width > 780) && isNavbarDown) {
@@ -82,7 +71,7 @@ const Navbar = () => {
 
           {NavbarData.map((navItem, idx) => {
             return (
-              <NavbarItems navItem={navItem} idx={idx} linkClick={linkClick} />
+              <NavbarItems navItem={navItem} idx={idx} linkClick={linkClick} isNavbarDown={isNavbarDown} setIsNavbarDown={setIsNavbarDown} />
             );
           })}
         </div>

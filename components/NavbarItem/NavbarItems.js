@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styles from './NavbarItems.module.scss';
 import Link from 'next/link';
 import useWindowSize from '../../utils/ResizeHook';
@@ -9,29 +9,43 @@ import {
   faL,
 } from '@fortawesome/free-solid-svg-icons';
 
-let onSubMenu = false;
 
-function setSubMenu(newValue) {
-  onSubMenu = newValue;
-}
-
-const NavbarItems = ({ navItem, idx, linkClick, set }) => {
+const NavbarItems = ({ navItem, idx, linkClick, isNavbarDown, setIsNavbarDown }) => {
   const [onMenu, setOnMenu] = useState(false);
-  const [isNavbarDown, setIsNavbarDown] = useState(false);
+  const [onSubMenu, setSubMenu] = useState(false);
+  const [isWebView, setIsWebView] = useState(false);
   const size = useWindowSize();
 
   useEffect(() => {
     if (size.width > 780) {
-      setIsNavbarDown(true);
+      setIsWebView(true)
     } else {
-      // navbar.style.clipPath = "circle(15% at 100% 0%)";
-      setIsNavbarDown(false);
+      setIsWebView(false);
     }
   }, [size]);
 
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const handleOutSideClick = (event) => {
+      if (!ref.current?.contains(event.target)) {
+        // console.log("Outside Clicked. ");
+        setSubMenu(false);
+      }
+    };
+    
+    if (isNavbarDown){
+    window.addEventListener("click", handleOutSideClick);
+
+    return () => {
+      window.removeEventListener("click", handleOutSideClick);
+    };
+  }
+  }, [ref, isNavbarDown]);
+
   return (
     <>
-      {isNavbarDown &&
+      {isWebView &&
         (navItem.subMenu ? (
           <div className={styles.Menu}>
             <Link key={`link_${idx}`} href={navItem.link}>
@@ -67,15 +81,11 @@ const NavbarItems = ({ navItem, idx, linkClick, set }) => {
             </Link>
           </div>
         ))}
-      {!isNavbarDown &&
+      {!isWebView &&
         (navItem.subMenu ? (
           <div className={styles.Menu}>
-            {/* { <Link key={`link_${idx}`} href={navItem.link}> } */}
-            <div
-              className={styles.navbarElem}
-              onClick={() => setOnMenu(!onMenu)}
-            >
               <div
+                ref = {ref}
                 className={styles.navbarElem}
                 onClick={() => setSubMenu(!onSubMenu)}
               >
@@ -90,7 +100,7 @@ const NavbarItems = ({ navItem, idx, linkClick, set }) => {
                     </>
                   )}
                 </span>
-                {onSubMenu &&
+                { onSubMenu &&
                   navItem.subMenu.map((item, idx) => {
                     return (
                       <Link key={idx} href={item.link} onClick={linkClick}>
@@ -99,12 +109,10 @@ const NavbarItems = ({ navItem, idx, linkClick, set }) => {
                     );
                   })}
               </div>
-            </div>
-            {/* </Link> */}
           </div>
         ) : (
-          <div className={styles.Menu}>
-            <Link key={`link_${idx}`} href={navItem.link} onClick={linkClick}>
+          <div className={styles.Menu}ref = {ref}>
+            <Link key={`link_${idx}`} href={navItem.link} onClick= {linkClick}>
               <div className={styles.navbarElem}>
                 <span className={styles.title}>{navItem.name}</span>
               </div>
@@ -114,5 +122,5 @@ const NavbarItems = ({ navItem, idx, linkClick, set }) => {
     </>
   );
 };
-export { onSubMenu, setSubMenu };
+
 export default NavbarItems;

@@ -3,7 +3,7 @@
 .Menu {
   .navbarElem {
     font-family: 'Oswald', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     position: relative;
     height: 100%;
     border-bottom: 2px solid transparent;
@@ -55,7 +55,7 @@
 
   @media (max-width: 780px) {
     .navbarElem {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       height: 100%;
       width: 200px;
       background-color: rgba(0, 0, 0, 0);
@@ -67,9 +67,15 @@
     .subMenu {
       margin-top: 0px;
       padding: 10px 0px 0px 10px;
-      font-size: 1.5rem;
+      font-size: 1.1rem;
       position: relative;
       text-align: center;
     }
   }
+}
+
+@media (max-width: 780px){
+.Menu:last-child{
+  margin-bottom: 10vh;
+}
 }

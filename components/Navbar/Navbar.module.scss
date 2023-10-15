@@ -51,7 +51,7 @@
   }
 
   @media (max-width: 780px) {
-    overflow: scroll;
+    // overflow: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
 
@@ -75,6 +75,8 @@
       }
     }
     .navbarElemList {
+      overflow: scroll;
+      height: 100%;
       flex-direction: column;
       justify-content: start;
       align-items: center;
