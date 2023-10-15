@@ -87,6 +87,10 @@ const NavbarData = [
     name: 'Startups',
     link: '/startups',
   },
+  {
+    name: 'Contact Us',
+    link: '/contactus',
+  },
 ];
 
 export default NavbarData;
