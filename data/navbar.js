@@ -84,12 +84,12 @@ const NavbarData = [
     ],
   },
   {
-    name: 'Startups',
-    link: '/startups',
-  },
-  {
     name: 'Contact Us',
     link: '/contactus',
+  },
+  {
+    name: 'Startups',
+    link: '/startups',
   },
 ];
 
