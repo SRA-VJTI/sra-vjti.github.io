@@ -73,10 +73,10 @@ const NavbarData = [
     name: 'Support Us',
     link: '/sponsors', // A new page with two sections will be presented soon
     subMenu: [
-      // {
-      //   name: 'CSR',
-      //   link: '/sponsors/', // CSR links will be added soon
-      // },
+      {
+        name: 'CSR',
+        link: '/corporateSupport/', // CSR links will be added soon
+      },
       {
         name: 'Sponsor us',
         link: '/sponsors',
