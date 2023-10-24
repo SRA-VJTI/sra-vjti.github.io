@@ -8,9 +8,9 @@ import {
   CorpLinks,
   changesMadeThroughCSR,
   CorpSupport,
-  CorpText_1,
-  CorpText_2,
-  MessageToCurrentCorp_1,
+  CorporateSupport,
+  VoteOfThanks,
+  MsgCorp1,
 } from '../../data/corporateSupport';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -23,7 +23,28 @@ import {
 import { faOpencart, faOpenid } from '@fortawesome/free-brands-svg-icons';
 import useWindowSize from '../../utils/ResizeHook';
 import { useEffect, useState } from 'react';
+import { CSSProperties } from 'react';
 
+const arrowStylesLeft = {
+  position: 'absolute',
+  top: '.7em',
+  bottom: 'auto',
+  padding: '0em 0.6em 0em 0.4em',
+  backgroundColor: '#8314CC',
+  borderRadius: '20%',
+  borderColor: 'black',
+  zIndex: 2,
+};
+const arrowStylesRight = {
+  position: 'absolute',
+  top: '.7em',
+  bottom: 'auto',
+  padding: '0em 0.7em 0em 0.3em',
+  backgroundColor: '#8314CC',
+  borderRadius: '20%',
+  borderColor: 'black',
+  zIndex: 2,
+};
 const Sponsors = () => {
   const [mobileView, setMobileView] = useState(false);
   const [visiblePara, setvisiblePara] = useState(false);
@@ -59,8 +80,7 @@ const Sponsors = () => {
       <div className={styles.activityList} id='is'>
         <div className={styles.reach}>
           <h1>We are now updated!</h1>
-          <p>{CorpText_1}</p>
-          {visiblePara ? <p>{CorpText_2}</p> : <></>}
+          {visiblePara ? <p>{CorporateSupport}</p> : <></>}
           {mobileView ? (
             <button
               className={styles.more}
@@ -85,16 +105,17 @@ const Sponsors = () => {
           ) : (
             <></>
           )}
-          <p>
-            <b>{CorpText_1}</b>
-          </p>
           <h1>Our Corporate Partners</h1>
-          <img
-            src={`/static/images/corporateSupport/logo/${CorpListImages[0]}`}
-            alt=''
-            className={styles.CorpImage}
-            key={`level_1`}
-          ></img>
+          <div className={styles.CorpDiv}>
+            <img
+              src={`/static/images/corporateSupport/logo/${CorpListImages[0]}`}
+              alt=''
+              className={styles.CorpImage}
+              key={`corp_${0}`}
+            ></img>
+
+            <a className={styles.CorpText}>{MsgCorp1}</a>
+          </div>
           <hr />
           <Carousel
             showIndicators={true}
@@ -110,13 +131,10 @@ const Sponsors = () => {
                   <a
                     className={`control-arrow`}
                     style={{
+                      ...arrowStylesLeft,
                       marginTop: '25%',
-                      marginBottom: '37%',
-                      marginLeft: '2%',
+                      left: '1em',
                       opacity: 0.9,
-                      hover: {
-                        background: 'none',
-                      },
                     }}
                   >
                     <FontAwesomeIcon icon={faCaretLeft} size='2x' />
@@ -130,10 +148,9 @@ const Sponsors = () => {
                   <a
                     className={`control-arrow`}
                     style={{
+                      ...arrowStylesRight,
                       marginTop: '25%',
-                      marginBottom: '37%',
-                      marginRight: '2%',
-                      right: '0',
+                      right: '1em',
                       opacity: 0.9,
                     }}
                   >
@@ -149,7 +166,7 @@ const Sponsors = () => {
                   <img
                     src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
                     alt=''
-                    className={styles.diamondImg}
+                    className={styles.facilityUpdate}
                   ></img>
                 </div>
               );

@@ -1,110 +1,4 @@
 @import '../variables';
-
-.activitySectionTitle {
-  font-size: 2rem;
-  text-align: center;
-  width: 50%;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 1em;
-  padding-bottom: 0.5em;
-  border-bottom: 2px solid $light;
-
-  @media (max-width: 450px) {
-    width: 80%;
-  }
-}
-
-.activity {
-  width: 70%;
-  height: auto;
-  margin: 5em auto;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  .activityImg {
-    // margin-right: 1em;
-    width: 30%;
-    // height: 100%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .activityCont {
-    width: 70%;
-    height: 100%;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex;
-    line-height: 250%;
-    text-align: justify;
-    .activityContName {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      padding-bottom: 0.15em;
-      transition: border-bottom 0.3s;
-      border-bottom: 1px solid $lightest;
-      .activityIcon {
-        font-size: 1.2rem;
-        float: right;
-        a {
-          margin: 0 10px;
-          transition: color 0.2s;
-          :hover {
-            color: $light;
-            animation: wiggle 0.3s forwards;
-            // transform: translateY(10px);
-          }
-        }
-      }
-    }
-    .activityContSub {
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-  }
-
-  &:hover {
-    .activityCont {
-      .activityContName {
-        border-bottom: 1px solid $light;
-      }
-    }
-  }
-  @media (max-width: 900px) {
-    .activityImg {
-      height: auto;
-      width: 50%;
-    }
-  }
-  @media (max-width: 780px) {
-    width: 90%;
-    margin: 1em auto;
-    height: auto;
-    flex-direction: column;
-    .activityImg {
-      height: 45vh;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%;
-      // background-image: 100vw;
-    }
-    .activityCont {
-      width: 100%;
-      height: max-content;
-    }
-  }
-  @media (max-width: 375px) {
-    .activityImg {
-      width: 90%;
-    }
-  }
-}
 .reach {
   p {
     font-family: sans-serif;
@@ -159,15 +53,33 @@
       font-size: 0.6rem;
     }
   }
+  .CorpDiv {
+    display: inline-flexbox;
+  }
+  .CorpText {
+    position: absolute;
+    margin-top: 100px;
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    width: 100%;
+    line-height: 165%;
+    padding-top: 2em;
+    // margin-top: 20px;
+    @media (max-width: 650px) {
+      margin-top: 75px;
+      text-wrap: wrap;
+      font-size: 0.8rem;
+    }
+  }
   .CorpImage {
-    display: block;
-    margin: 20px auto;
-    height: 100px;
+    align-self: flex-start;
+    margin: 20px;
+    border-radius: 20px;
+    height: 300px;
     width: auto;
-    margin-top: 3rem;
     @media (max-width: 650px) {
       width: auto;
-      height: 25px;
+      height: 150px;
     }
   }
   hr {
@@ -194,18 +106,6 @@
         margin: 0.5em;
         width: 100px;
       }
-    }
-    .diamondImg {
-      width: 1000px;
-    }
-    .diamondImg:hover {
-      box-shadow: #b0c9e7 0px 20px 30px -10px;
-    }
-    .goldImg:hover {
-      box-shadow: goldenrod 0px 20px 30px -10px;
-    }
-    .silverImg:hover {
-      box-shadow: #c0c0c0 0px 20px 30px -10px;
     }
   }
 }
