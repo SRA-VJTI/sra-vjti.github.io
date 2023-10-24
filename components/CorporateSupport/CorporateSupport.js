@@ -1,5 +1,6 @@
 import styles from './CorporateSupport.module.scss';
 import Hero from '../Hero/Hero';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 import { saveAs } from 'file-saver';
 import {
@@ -16,6 +17,8 @@ import {
   faExternalLink,
   faAngleDown,
   faAngleUp,
+  faCaretRight,
+  faCaretLeft,
 } from '@fortawesome/free-solid-svg-icons';
 import { faOpencart, faOpenid } from '@fortawesome/free-brands-svg-icons';
 import useWindowSize from '../../utils/ResizeHook';
@@ -45,7 +48,7 @@ const Sponsors = () => {
   return (
     <>
       <Hero
-        imgName={'corporate_support.jpg'}
+        imgName={'corpSupport.webp'}
         backgroundPosition={'center top'}
         title={<>Corporate Support</>}
         subtitleList={[
@@ -93,21 +96,64 @@ const Sponsors = () => {
             key={`level_1`}
           ></img>
           <hr />
-          <Carousel>
-            <div className={styles.reachGroup}>
-              {changesMadeThroughCSR.map((item, idx) => {
-                return (
-                  <a href={item.link}>
-                    <img
-                      src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
-                      alt=''
-                      className={styles.diamondImg}
-                      key={`alumni_reach_${idx}`}
-                    ></img>
+          <Carousel
+            showIndicators={true}
+            // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
+            showThumbs={false}
+            showStatus={false}
+            swipeable={true}
+            autoPlay={true}
+            infiniteLoop={true}
+            renderArrowPrev={(onClickHandler, hasPrev, label) =>
+              hasPrev && (
+                <div onClick={onClickHandler}>
+                  <a
+                    className={`control-arrow`}
+                    style={{
+                      marginTop: '25%',
+                      marginBottom: '37%',
+                      marginLeft: '2%',
+                      opacity: 0.9,
+                      hover: {
+                        background: 'none',
+                      },
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faCaretLeft} size='2x' />
                   </a>
-                );
-              })}
-            </div>
+                </div>
+              )
+            }
+            renderArrowNext={(onClickHandler, hasNext, label) =>
+              hasNext && (
+                <div onClick={onClickHandler}>
+                  <a
+                    className={`control-arrow`}
+                    style={{
+                      marginTop: '25%',
+                      marginBottom: '37%',
+                      marginRight: '2%',
+                      right: '0',
+                      opacity: 0.9,
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faCaretRight} size='2x' />
+                  </a>
+                </div>
+              )
+            }
+          >
+            {changesMadeThroughCSR.map((item, idx) => {
+              return (
+                <div key={`csr_${idx}`}>
+                  <img
+                    src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
+                    alt=''
+                    className={styles.diamondImg}
+                  ></img>
+                </div>
+              );
+            })}
           </Carousel>
         </div>
       </div>
