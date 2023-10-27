@@ -1,15 +1,15 @@
 import Sponsors from '../components/CorporateSupport/CorporateSupport';
 import Head from 'next/head';
 
-const SponsorsPage = () => {
+const CSR = () => {
   return (
     <>
       <Head>
-        <title>Sponsors | SRA VJTI</title>
+        <title>CSR | SRA VJTI</title>
       </Head>
       <Sponsors />
     </>
   );
 };
 
-export default SponsorsPage;
+export default CSR;

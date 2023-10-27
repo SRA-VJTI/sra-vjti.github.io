@@ -10,7 +10,8 @@ import {
   CorpSupport,
   CorporateSupport,
   VoteOfThanks,
-  MsgCorp1,
+  MsgCorp,
+  facilities,
 } from '../../data/corporateSupport';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -30,7 +31,7 @@ const arrowStylesLeft = {
   top: '.7em',
   bottom: 'auto',
   padding: '0em 0.6em 0em 0.4em',
-  backgroundColor: '#8314CC',
+  backgroundColor: '#131516',
   borderRadius: '20%',
   borderColor: 'black',
   zIndex: 2,
@@ -40,7 +41,7 @@ const arrowStylesRight = {
   top: '.7em',
   bottom: 'auto',
   padding: '0em 0.7em 0em 0.3em',
-  backgroundColor: '#8314CC',
+  backgroundColor: '#131516',
   borderRadius: '20%',
   borderColor: 'black',
   zIndex: 2,
@@ -114,64 +115,105 @@ const Sponsors = () => {
               key={`corp_${0}`}
             ></img>
 
-            <a className={styles.CorpText}>{MsgCorp1}</a>
+            <a className={styles.CorpText}>{MsgCorp[0]}</a>
           </div>
           <hr />
-          <Carousel
-            showIndicators={true}
-            // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
-            showThumbs={false}
-            showStatus={false}
-            swipeable={true}
-            autoPlay={true}
-            infiniteLoop={true}
-            renderArrowPrev={(onClickHandler, hasPrev, label) =>
-              hasPrev && (
-                <div onClick={onClickHandler}>
-                  <a
-                    className={`control-arrow`}
-                    style={{
-                      ...arrowStylesLeft,
-                      marginTop: '25%',
-                      left: '1em',
-                      opacity: 0.9,
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faCaretLeft} size='2x' />
-                  </a>
-                </div>
-              )
-            }
-            renderArrowNext={(onClickHandler, hasNext, label) =>
-              hasNext && (
-                <div onClick={onClickHandler}>
-                  <a
-                    className={`control-arrow`}
-                    style={{
-                      ...arrowStylesRight,
-                      marginTop: '25%',
-                      right: '1em',
-                      opacity: 0.9,
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faCaretRight} size='2x' />
-                  </a>
-                </div>
-              )
-            }
-          >
-            {changesMadeThroughCSR.map((item, idx) => {
-              return (
-                <div key={`csr_${idx}`}>
-                  <img
-                    src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
-                    alt=''
-                    className={styles.facilityUpdate}
-                  ></img>
-                </div>
-              );
-            })}
-          </Carousel>
+          <div className={styles.Carousel}>
+            <div>
+              <Carousel
+                renderIndicator={(clickHandler, isSelected, index) => {
+                  return (
+                    <li
+                      onClick={clickHandler}
+                      className={`ind ${isSelected ? 'active' : ''}`}
+                      key={index}
+                      role='button'
+                    />
+                  );
+                }}
+                showIndicators={true}
+                // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
+                showThumbs={false}
+                showStatus={false}
+                swipeable={true}
+                autoPlay={true}
+                infiniteLoop={true}
+                renderArrowPrev={(onClickHandler, hasPrev, label) =>
+                  hasPrev && (
+                    <div onClick={onClickHandler}>
+                      <a
+                        className={`control-arrow`}
+                        style={{
+                          ...arrowStylesLeft,
+                          marginTop: '25%',
+                          left: '1em',
+                          opacity: 0.9,
+                        }}
+                      >
+                        <FontAwesomeIcon icon={faCaretLeft} size='2x' />
+                      </a>
+                    </div>
+                  )
+                }
+                renderArrowNext={(onClickHandler, hasNext, label) =>
+                  hasNext && (
+                    <div onClick={onClickHandler}>
+                      <a
+                        className={`control-arrow`}
+                        style={{
+                          ...arrowStylesRight,
+                          marginTop: '25%',
+                          right: '1em',
+                          opacity: 0.9,
+                        }}
+                      >
+                        <FontAwesomeIcon icon={faCaretRight} size='2x' />
+                      </a>
+                    </div>
+                  )
+                }
+              >
+                {facilities.map((item, idx) => {
+                  return (
+                    <div key={`csr_${idx}`}>
+                      <img
+                        src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
+                        alt=''
+                        className={styles.facilityUpdate}
+                      ></img>
+                    </div>
+                  );
+                })}
+              </Carousel>
+            </div>
+            <h2>Some of the new equipments and facilities added</h2>
+            <div className={styles.Carousel_items}>
+              <Carousel
+                showIndicators={false}
+                // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
+                showThumbs={false}
+                showStatus={false}
+                swipeable={true}
+                autoPlay={true}
+                infiniteLoop={true}
+                transitionTime={100}
+                showArrows={false}
+              >
+                {changesMadeThroughCSR.map((item, idx) => {
+                  return (
+                    <div key={`csr_${idx}`}>
+                      <img
+                        src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
+                        alt=''
+                        className={styles.facilityUpdate}
+                      ></img>
+                      <a>{item.Description}</a>
+                    </div>
+                  );
+                })}
+              </Carousel>
+            </div>
+          </div>
         </div>
       </div>
     </>
