@@ -77,7 +77,6 @@
     font-size: 1.5rem;
     // margin-top: 20px;
     @media (max-width: 650px) {
-      margin-top: 75px;
       text-wrap: wrap;
       font-size: 0.8rem;
     }
@@ -92,6 +91,7 @@
     @media (max-width: 650px) {
       width: auto;
       height: 150px;
+      margin: 5px;
     }
   }
   .Carousel {

@@ -22,7 +22,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faOpencart, faOpenid } from '@fortawesome/free-brands-svg-icons';
 import useWindowSize from '../../utils/ResizeHook';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { CSSProperties } from 'react';
 
 const arrowStylesLeft = {
@@ -48,6 +48,7 @@ const arrowStylesRight = {
 const Sponsors = () => {
   const [mobileView, setMobileView] = useState(false);
   const [visiblePara, setvisiblePara] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const size = useWindowSize();
 
   useEffect(() => {
@@ -123,7 +124,10 @@ const Sponsors = () => {
                   <hr />
 
                   <div className={styles.Carousel}>
-                    <div>
+                    <div
+                      onMouseEnter={() => setIsHovered(true)}
+                      onMouseLeave={() => setIsHovered(false)}
+                    >
                       {
                         // For webview
                         !mobileView ? (
@@ -144,6 +148,7 @@ const Sponsors = () => {
                                 />
                               );
                             }}
+                            pauseOnHover={true}
                             showIndicators={true}
                             // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
                             showThumbs={false}
@@ -200,6 +205,11 @@ const Sponsors = () => {
                                     alt=''
                                     className={styles.facilityUpdate}
                                   ></img>
+                                  {isHovered && (
+                                    <div className={styles.hoverText}>
+                                      {item.Description}
+                                    </div>
+                                  )}
                                 </div>
                               );
                             })}
@@ -230,6 +240,7 @@ const Sponsors = () => {
                             swipeable={true}
                             autoPlay={true}
                             infiniteLoop={true}
+                            showArrows={false}
                           >
                             {facilities.map((item, idx) => {
                               return (
