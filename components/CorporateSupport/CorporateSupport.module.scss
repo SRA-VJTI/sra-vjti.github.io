@@ -66,15 +66,15 @@
     }
   }
   .CorpDiv {
-    display: inline-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
   }
   .CorpText {
-    position: absolute;
-    margin-top: 100px;
+    position: relative;
     font-family: 'Oswald', sans-serif;
     font-size: 1.5rem;
-    line-height: 165%;
-    padding-top: 2em;
     // margin-top: 20px;
     @media (max-width: 650px) {
       margin-top: 75px;
@@ -83,7 +83,8 @@
     }
   }
   .CorpImage {
-    align-self: flex-start;
+    position: relative;
+    align-self: center;
     margin: 20px;
     border-radius: 20px;
     height: 300px;

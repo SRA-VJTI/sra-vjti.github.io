@@ -1,4 +1,9 @@
-const CorpListImages = ['GIC.png'];
+const CorpListImages = [
+  {
+    image: 'GIC.png',
+    msg: 'Thank to all our sponsors for their support and trust in us.',
+  },
+];
 const CorpLinks = ['https://www.espressif.com/'];
 
 const CorpSupport = [
@@ -34,10 +39,6 @@ const facilities = [
   },
 ];
 
-const MsgCorp = [
-  'Thank to all our sponsors for their support and trust in us.',
-];
-
 const CorporateSupport =
   'The journey at SRA begins with the organisation of various cutting-edge seminars attended by more than 200 freshers, followed by a month-long mentorship programme, ground-breaking projects, participation in competitions at a national and international level, peer-peer knowledge transfer and much more. While growing in the technology space, SRA is committed to its philosophy of "Ideate, Innovate, and Inspire", in order to take our ambitions to a whole new level.';
 
@@ -51,6 +52,5 @@ export {
   CorpSupport,
   CorporateSupport,
   VoteOfThanks,
-  MsgCorp,
   facilities,
 };

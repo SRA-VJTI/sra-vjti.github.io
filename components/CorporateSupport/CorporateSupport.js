@@ -10,7 +10,6 @@ import {
   CorpSupport,
   CorporateSupport,
   VoteOfThanks,
-  MsgCorp,
   facilities,
 } from '../../data/corporateSupport';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -107,112 +106,178 @@ const Sponsors = () => {
             <></>
           )}
           <h1>Our Corporate Partners</h1>
-          <div className={styles.CorpDiv}>
-            <img
-              src={`/static/images/corporateSupport/logo/${CorpListImages[0]}`}
-              alt=''
-              className={styles.CorpImage}
-              key={`corp_${0}`}
-            ></img>
+          <div>
+            {CorpListImages.map((item_i, idx_i) => {
+              return (
+                <div>
+                  <div className={styles.CorpDiv} key={`corp_${idx_i}`}>
+                    <img
+                      src={`/static/images/corporateSupport/logo/${item_i.image}`}
+                      alt=''
+                      className={styles.CorpImage}
+                    ></img>
 
-            <a className={styles.CorpText}>{MsgCorp[0]}</a>
-          </div>
-          <hr />
-          <div className={styles.Carousel}>
-            <div>
-              <Carousel
-                renderIndicator={(clickHandler, isSelected, index) => {
-                  return (
-                    <li
-                      onClick={clickHandler}
-                      className={`ind ${isSelected ? 'active' : ''}`}
-                      key={index}
-                      role='button'
-                    />
-                  );
-                }}
-                showIndicators={true}
-                // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
-                showThumbs={false}
-                showStatus={false}
-                swipeable={true}
-                autoPlay={true}
-                infiniteLoop={true}
-                renderArrowPrev={(onClickHandler, hasPrev, label) =>
-                  hasPrev && (
-                    <div onClick={onClickHandler}>
-                      <a
-                        className={`control-arrow`}
-                        style={{
-                          ...arrowStylesLeft,
-                          marginTop: '25%',
-                          left: '1em',
-                          opacity: 0.9,
-                        }}
+                    <a className={styles.CorpText}>{item_i.msg}</a>
+                  </div>
+
+                  <hr />
+
+                  <div className={styles.Carousel}>
+                    <div>
+                      {
+                        // For webview
+                        !mobileView ? (
+                          <Carousel
+                            renderIndicator={(
+                              clickHandler,
+                              isSelected,
+                              index
+                            ) => {
+                              return (
+                                <li
+                                  onClick={clickHandler}
+                                  className={`ind ${
+                                    isSelected ? 'active' : ''
+                                  }`}
+                                  key={index}
+                                  role='button'
+                                />
+                              );
+                            }}
+                            showIndicators={true}
+                            // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
+                            showThumbs={false}
+                            showStatus={false}
+                            swipeable={true}
+                            autoPlay={true}
+                            infiniteLoop={true}
+                            renderArrowPrev={(onClickHandler, hasPrev) =>
+                              hasPrev && (
+                                <div onClick={onClickHandler}>
+                                  <a
+                                    className={`control-arrow`}
+                                    style={{
+                                      ...arrowStylesLeft,
+                                      marginTop: '25%',
+                                      left: '1em',
+                                      opacity: 0.9,
+                                    }}
+                                  >
+                                    <FontAwesomeIcon
+                                      icon={faCaretLeft}
+                                      size='2x'
+                                    />
+                                  </a>
+                                </div>
+                              )
+                            }
+                            renderArrowNext={(onClickHandler, hasNext) =>
+                              hasNext && (
+                                <div onClick={onClickHandler}>
+                                  <a
+                                    className={`control-arrow`}
+                                    style={{
+                                      ...arrowStylesRight,
+                                      marginTop: '25%',
+                                      right: '1em',
+                                      opacity: 0.9,
+                                    }}
+                                  >
+                                    <FontAwesomeIcon
+                                      icon={faCaretRight}
+                                      size='2x'
+                                    />
+                                  </a>
+                                </div>
+                              )
+                            }
+                          >
+                            {facilities.map((item, idx) => {
+                              return (
+                                <div key={`csr_${idx}`}>
+                                  <img
+                                    src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
+                                    alt=''
+                                    className={styles.facilityUpdate}
+                                  ></img>
+                                </div>
+                              );
+                            })}
+                          </Carousel>
+                        ) : (
+                          // For mobile view, we don't render large arrows
+                          <Carousel
+                            renderIndicator={(
+                              clickHandler,
+                              isSelected,
+                              index
+                            ) => {
+                              return (
+                                <li
+                                  onClick={clickHandler}
+                                  className={`ind ${
+                                    isSelected ? 'active' : ''
+                                  }`}
+                                  key={index}
+                                  role='button'
+                                />
+                              );
+                            }}
+                            showIndicators={true}
+                            // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
+                            showThumbs={false}
+                            showStatus={false}
+                            swipeable={true}
+                            autoPlay={true}
+                            infiniteLoop={true}
+                          >
+                            {facilities.map((item, idx) => {
+                              return (
+                                <div key={`csr_${idx}`}>
+                                  <img
+                                    src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
+                                    alt=''
+                                    className={styles.facilityUpdate}
+                                  ></img>
+                                </div>
+                              );
+                            })}
+                          </Carousel>
+                        )
+                      }
+                    </div>
+
+                    <h2>Some of the new equipments and facilities added</h2>
+
+                    <div className={styles.Carousel_items}>
+                      <Carousel
+                        showIndicators={false}
+                        // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
+                        showThumbs={false}
+                        showStatus={false}
+                        swipeable={true}
+                        autoPlay={true}
+                        infiniteLoop={true}
+                        transitionTime={100}
                       >
-                        <FontAwesomeIcon icon={faCaretLeft} size='2x' />
-                      </a>
+                        {changesMadeThroughCSR.map((item, idx) => {
+                          return (
+                            <div key={`csr_${idx}`}>
+                              <img
+                                src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
+                                alt=''
+                                className={styles.facilityUpdate}
+                              ></img>
+                              <a>{item.Description}</a>
+                            </div>
+                          );
+                        })}
+                      </Carousel>
                     </div>
-                  )
-                }
-                renderArrowNext={(onClickHandler, hasNext, label) =>
-                  hasNext && (
-                    <div onClick={onClickHandler}>
-                      <a
-                        className={`control-arrow`}
-                        style={{
-                          ...arrowStylesRight,
-                          marginTop: '25%',
-                          right: '1em',
-                          opacity: 0.9,
-                        }}
-                      >
-                        <FontAwesomeIcon icon={faCaretRight} size='2x' />
-                      </a>
-                    </div>
-                  )
-                }
-              >
-                {facilities.map((item, idx) => {
-                  return (
-                    <div key={`csr_${idx}`}>
-                      <img
-                        src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
-                        alt=''
-                        className={styles.facilityUpdate}
-                      ></img>
-                    </div>
-                  );
-                })}
-              </Carousel>
-            </div>
-            <h2>Some of the new equipments and facilities added</h2>
-            <div className={styles.Carousel_items}>
-              <Carousel
-                showIndicators={false}
-                // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
-                showThumbs={false}
-                showStatus={false}
-                swipeable={true}
-                autoPlay={true}
-                infiniteLoop={true}
-                transitionTime={100}
-                showArrows={false}
-              >
-                {changesMadeThroughCSR.map((item, idx) => {
-                  return (
-                    <div key={`csr_${idx}`}>
-                      <img
-                        src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
-                        alt=''
-                        className={styles.facilityUpdate}
-                      ></img>
-                      <a>{item.Description}</a>
-                    </div>
-                  );
-                })}
-              </Carousel>
-            </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
