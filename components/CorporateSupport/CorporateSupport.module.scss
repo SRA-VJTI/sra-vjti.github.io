@@ -1,4 +1,59 @@
 @import '../variables';
+.CorpSupportMob {
+  width: 80%;
+  height: 300px;
+  // background-color: red;
+
+  position: relative;
+  left: 10%;
+
+  .facilitiesPic {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+
+  .iCard {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: $light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: clip-path 0.8s;
+
+    .iButton {
+      width: 25px;
+      height: 25px;
+      text-align: center;
+      position: absolute;
+      font-size: 1.2rem;
+      top: 4.5%;
+      left: 88.5%;
+      cursor: pointer;
+      // color: black;
+    }
+    .iInfo {
+      text-align: center;
+      width: 80%;
+      margin-bottom: 20px;
+    }
+    .iLink {
+      font-size: 1.5rem;
+    }
+
+    // 4% and 120%
+    clip-path: circle(4% at 90.75% 8%);
+  }
+}
 .reach {
   p {
     font-family: sans-serif;

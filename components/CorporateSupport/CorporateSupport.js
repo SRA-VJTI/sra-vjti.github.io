@@ -250,11 +250,10 @@ const Sponsors = () => {
                             {facilities.map((item, idx) => {
                               return (
                                 <div key={`csr_${idx}`}>
-                                  <img
-                                    src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
-                                    alt=''
-                                    className={styles.facilityUpdate}
-                                  ></img>
+                                  <ProjectCard
+                                    {...item}
+                                    key={`csr_mobile_${idx}`}
+                                  ></ProjectCard>
                                 </div>
                               );
                             })}
@@ -298,6 +297,41 @@ const Sponsors = () => {
         </div>
       </div>
     </>
+  );
+};
+
+const ProjectCard = ({ image, Description }) => {
+  const cardRef = useRef();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const onIClick = () => {
+    if (isOpen) {
+      cardRef.current.style.clipPath = 'circle(4% at 90.75% 8%)';
+      setIsOpen(false);
+    } else {
+      cardRef.current.style.clipPath = 'circle(120% at 90.75% 8%)';
+      setIsOpen(true);
+    }
+  };
+
+  return (
+    <div className={styles.CorpSupportMob}>
+      <div
+        style={{
+          backgroundImage: `url("/static/images/corporateSupport/facilityUpdate/${image}")`,
+        }}
+        className={styles.facilitiesPic}
+      ></div>
+      <div
+        ref={cardRef}
+        className={styles.iCard}
+        onMouseEnter={onIClick}
+        onMouseLeave={onIClick}
+      >
+        <div className={styles.iButton}>i</div>
+        <div className={styles.iInfo}>{Description}</div>
+      </div>
+    </div>
   );
 };
 
