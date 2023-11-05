@@ -207,13 +207,16 @@ const Sponsors = () => {
                                     <img
                                       src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
                                       alt=''
-                                      className={styles.facilityUpdate}
+                                      className={styles.facilitiesUpdate}
                                     ></img>
                                   </div>
                                   {isHovered && (
-                                    <div className={styles.hoverText}>
+                                    <a
+                                      className={styles.hoverText}
+                                      onMouseEnter={() => setIsHovered(true)}
+                                    >
                                       {item.Description}
-                                    </div>
+                                    </a>
                                   )}
                                 </div>
                               );
@@ -250,10 +253,10 @@ const Sponsors = () => {
                             {facilities.map((item, idx) => {
                               return (
                                 <div key={`csr_${idx}`}>
-                                  <ProjectCard
+                                  <CorpCard
                                     {...item}
                                     key={`csr_mobile_${idx}`}
-                                  ></ProjectCard>
+                                  ></CorpCard>
                                 </div>
                               );
                             })}
@@ -300,7 +303,7 @@ const Sponsors = () => {
   );
 };
 
-const ProjectCard = ({ image, Description }) => {
+const CorpCard = ({ image, Description }) => {
   const cardRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -325,8 +328,9 @@ const ProjectCard = ({ image, Description }) => {
       <div
         ref={cardRef}
         className={styles.iCard}
-        onMouseEnter={onIClick}
-        onMouseLeave={onIClick}
+        onClick={onIClick}
+        onTouchMove={onIClick}
+        onDrag={onIClick}
       >
         <div className={styles.iButton}>i</div>
         <div className={styles.iInfo}>{Description}</div>

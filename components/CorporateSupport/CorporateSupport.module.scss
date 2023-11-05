@@ -37,7 +37,7 @@
       position: absolute;
       font-size: 1.2rem;
       top: 4.5%;
-      left: 88.5%;
+      left: 88%;
       cursor: pointer;
       // color: black;
     }
@@ -123,19 +123,21 @@
   .CaroImg {
     position: relative;
     :hover {
-      transition-duration: 1000ms;
-      opacity: 0.5;
+      .facilitiesUpdate {
+        opacity: 0.5;
+        transition-duration: 1000ms;
+      }
     }
   }
   .hoverText {
     position: absolute;
     font-size: 2em;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50%;
+    padding: 100px 100px 100px 0px;
     border-radius: 15px;
-    border-color: black;
-    background-color: rgba(0, 0, 0, 0.501);
-    padding: 100px 1000px 100px 100px;
+    top: 55%;
     left: 50%;
-    top: 50%;
   }
   .CorpDiv {
     display: flex;
