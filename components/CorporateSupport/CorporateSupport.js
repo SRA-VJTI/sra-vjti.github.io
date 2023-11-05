@@ -199,12 +199,17 @@ const Sponsors = () => {
                           >
                             {facilities.map((item, idx) => {
                               return (
-                                <div key={`csr_${idx}`}>
-                                  <img
-                                    src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
-                                    alt=''
-                                    className={styles.facilityUpdate}
-                                  ></img>
+                                <div
+                                  key={`csr_${idx}`}
+                                  className={styles.CaroImg}
+                                >
+                                  <div>
+                                    <img
+                                      src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
+                                      alt=''
+                                      className={styles.facilityUpdate}
+                                    ></img>
+                                  </div>
                                   {isHovered && (
                                     <div className={styles.hoverText}>
                                       {item.Description}
@@ -277,7 +282,7 @@ const Sponsors = () => {
                               <img
                                 src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
                                 alt=''
-                                className={styles.facilityUpdate}
+                                className={styles.changesMadeThroughCSR}
                               ></img>
                               <a>{item.Description}</a>
                             </div>
