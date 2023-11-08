@@ -273,6 +273,7 @@ const Sponsors = () => {
                         // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
                         showThumbs={false}
                         showStatus={false}
+                        showArrows={false}
                         swipeable={true}
                         autoPlay={true}
                         infiniteLoop={true}
@@ -309,10 +310,10 @@ const CorpCard = ({ image, Description }) => {
 
   const onIClick = () => {
     if (isOpen) {
-      cardRef.current.style.clipPath = 'circle(4% at 90.75% 8%)';
+      cardRef.current.style.clipPath = 'circle(4% at 86% 10%)';
       setIsOpen(false);
     } else {
-      cardRef.current.style.clipPath = 'circle(120% at 90.75% 8%)';
+      cardRef.current.style.clipPath = 'circle(120% at 86% 10%)';
       setIsOpen(true);
     }
   };
@@ -328,9 +329,7 @@ const CorpCard = ({ image, Description }) => {
       <div
         ref={cardRef}
         className={styles.iCard}
-        onClick={onIClick}
-        onTouchMove={onIClick}
-        onDrag={onIClick}
+        onTouchStartCapture={onIClick}
       >
         <div className={styles.iButton}>i</div>
         <div className={styles.iInfo}>{Description}</div>
