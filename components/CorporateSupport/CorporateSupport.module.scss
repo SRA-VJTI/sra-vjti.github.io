@@ -116,15 +116,6 @@
       font-size: 0.6rem;
     }
   }
-  .Carousel {
-    position: relative;
-    :hover {
-      .facilitiesUpdate {
-        opacity: 0.5;
-        transition-duration: 1000ms;
-      }
-    }
-  }
   .hoverText {
     position: absolute;
     font-size: 2em;
@@ -167,6 +158,21 @@
   .Carousel {
     display: flex;
     flex-direction: column;
+    width: fit-content;
+    position: relative;
+    :hover {
+      .facilitiesUpdate {
+        opacity: 0.5;
+        transition-duration: 1000ms;
+      }
+    }
+  }
+  .facilitiesUpdate {
+    height: 720px;
+    object-fit: cover;
+    @media (max-width: 650px) {
+      width: 100%;
+    }
   }
   .Carousel_items {
     width: 45%;

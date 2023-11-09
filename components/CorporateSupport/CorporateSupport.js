@@ -52,7 +52,7 @@ const Sponsors = () => {
   const size = useWindowSize();
 
   useEffect(() => {
-    if (size.width > 780) {
+    if (size.width > 650) {
       setMobileView(false);
     } else {
       setMobileView(true);
