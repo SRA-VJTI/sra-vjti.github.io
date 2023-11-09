@@ -1,14 +1,10 @@
 @import '../variables';
 .CorpSupportMob {
-  width: 100%;
   height: 250px;
   // background-color: red;
 
   position: relative;
-  padding-left: 10%;
-  padding-right: 10%;
   .facilitiesPic {
-    width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -36,8 +32,8 @@
       text-align: center;
       position: absolute;
       font-size: 1.2rem;
-      top: 6.5%;
-      left: 83.6%;
+      top: 6%;
+      left: 82.5%;
       cursor: pointer;
       // color: black;
     }
@@ -120,7 +116,7 @@
       font-size: 0.6rem;
     }
   }
-  .CaroImg {
+  .Carousel {
     position: relative;
     :hover {
       .facilitiesUpdate {
@@ -175,6 +171,9 @@
   .Carousel_items {
     width: 45%;
     align-self: center;
+    @media (max-width: 650px) {
+      width: 250px;
+    }
   }
   hr {
     width: 40%;
