@@ -1,5 +1,113 @@
 const EklavyaProjectList = [
   {
+    year: '2023',
+    projects:[
+      {
+        name:'LangCraft',
+        imgName:'Eklavya/Eklavya2023/LANG-CRAFT.png',
+        sub:'The project is to create a custom programming language from scratch. It will involve defining the syntax of the language, implementing a lexer, developing a parser to construct an AST, and building a tree-walk interpreter to execute the code written in the custom language.',
+        githubLink:'https://github.com/siddhip2004/Lang-craft_eklavya23',
+      },
+      {
+        name:'OpenGl 3D Game Engine',
+        imgName:'Eklavya/Eklavya2023/OpenGL_3D_GameEngine.png',
+        sub:' The project aims to build a 3D Game, specifically Chess, using the libraries of OpenGL. ',
+        githubLink:'https://github.com/Ritika128/OpenGl-3d-GameEngine',
+      },
+      {
+        name:'EMG Armband',
+        imgName:'Eklavya/Eklavya2023/EMG_ARMBAND.png',
+        sub:'To create an EMG (Electromyography) Arm Band, which may be worn as a bracelet, to detect hand movements and orientation via muscle impulses transmitted through your forearm.',
+        githubLink:'https://github.com/anuj-akotkar/EMG_armband',
+      },
+      {
+        name:'Digital Signal Processing on FPGA',
+        imgName:'Eklavya/Eklavya2023/DSP on FPGA.png',
+        sub:'The aim of this project is to implement the Canny edge detection algorithm on an FPGA. The Canny edge detector is one of the most widely used edge detection algorithms due to its good performance and robustness to noise. It is a multi-stage algorithm that includes 5 steps to detect the edges of the given image or a real objects',
+        githubLink:'https://github.com/Herculoxz/DSP-ON-FPGA-',
+      },
+      {
+        name:'GPGPU with CUDA',
+        imgName:'Eklavya/Eklavya2023/default.png',
+        sub:'The project aims to leverage the speed and power of the multiple cores of the GPU to perform general purpose calculations on an NVIDIA GPU using CUDA C++ API. It also aims to demonstrate the usage of CUDA in research applications, and implement the algorithms of Image Pipeline using CUDA.',
+        githubLink:'https://github.com/adiawaskar/GPGPU-with-CUDA',
+      },
+      {
+        name:'WriteMate',
+        imgName:'Eklavya/Eklavya2023/WriteMate.png',
+        sub:'A RNN based model converting text into handwriting',
+        githubLink:'https://github.com/Sanika-k-1317/Write-mate_eklavya23',
+      },
+      {
+        name:'GestureSense',
+        imgName:'Eklavya/Eklavya2023/GestureSense.png',
+        sub:'The aim of this project is to develop a user-friendly navigation system for increased accessibility. By utilizing the webcam, the system will enable app navigation and computer interaction using hand gestures.',
+        githubLink:'https://github.com/AryanNanda17/GestureSense',
+      },
+      {
+        name:'ML model on FPGA',
+        imgName:'Eklavya/Eklavya2023/default.png',
+        sub:'The aim of this project is implementing ML model on FPGA to process the MNIST dataset. ML Model will be build using Convolutional Neural Networks and implemented on FPGA in verilog language.',
+        githubLink:'https://github.com/Atharv1035/ML_Model_FPGA_Eklavya23.git',
+      },
+      {
+        name:'Manipulator on Dynamixel',
+        imgName:'Eklavya/Eklavya2023/Manipulator_OnDynamixel.png',
+        sub:'Controlling and designing a 3-DOF Manipulator with the help of three dynamixel motors',
+        githubLink:'https://github.com/proatharv/Manipulator-on-Dynamixel-/tree/main',
+      },
+      {
+        name:'MazeBlaze',
+        imgName:'Eklavya/Eklavya2023/MazeBlaze.png',
+        sub:'Develop a Line following and Maze Solving bot based on PID controller which can find the shortest path in a given maze.',
+        githubLink:'https://github.com/SurajSonawane2415/MazeBlaze',
+      },
+      {
+        name:'Rotary Inverted Pendulum',
+        imgName:'Eklavya/Eklavya2023/Rotary_Inverted_Pendulum1.png',
+        sub:'This project aims to stabilise an Inverted Pendulum using a Linear Quadratic Controller (LQR) which provides optimally controlled feedback gains to enable the closed-loop stable and high performance design of systems.',
+        githubLink:'https://github.com/Shankari02/Rotary_Inverted_Pendulum_using_LQR',
+      },
+      {
+        name:"RISC-V CPU",
+        imgName:'Eklavya/Eklavya2023/Risc-v_logo.png',
+        sub:'Implement a RISC-V 32IM ISA based CPU.',
+        githubLink:'https://github.com/saishock1504/RISC-V-Eklavya-23',
+      },
+      {
+        name:'Scene Graph Generator',
+        imgName:'Eklavya/Eklavya2023/scene_graph_generator.png',
+        sub:'Detecting objects and their relations in images in the form of a graph data structure',
+        githubLink:'https://github.com/Kamakshi8104/Scene_graph_generator',
+      },
+      {
+        name:'Soft Quad',
+        imgName:'Eklavya/Eklavya2023/default.png',
+        sub:'Our project focuses on developing a Quadruped Robot which is capable of overcoming obstacles using soft materials. By using advanced sensors, intelligent algorithms and working on mechanical and PCB design, we can enable the robot to achieve seamless collaboration and efficient navigation within the environment.',
+        githubLink:'https://github.com/pavit15/softquad',
+      },
+      {
+        name:'ROSfunc',
+        imgName:'Eklavya/Eklavya2023/Rosfunc.png',
+        sub:'Build a ROS like publisher-subscriber communication model using functional programming',
+        githubLink:'https://github.com/richa-sawant/ROSfunc_EKLAVYA23',
+      },
+      {
+        name:'Leg of the Titan',
+        imgName:'Eklavya/Eklavya2023/titanlegs_design1.png',
+        sub:'This project aims to design a Leg for a Quadruped robot, test it against forces and torque, and stimulate in Gazebo as well as Manufacturing.',
+        githubLink:'https://github.com/SKYBIRDSGP/Titanleg_Design_EKLAVYA_2023/blob/main/README.md',
+      }, 
+      {
+        name:'ctRL',
+        imgName:'Eklavya/Eklavya2023/ctRL.jpg',
+        sub:'This project intends to be an introduction to reinforcement learning based control systems. It will involve the study and implementation of classic reinforcement learning algorithms, at least one of which will running on an RPi to solve a control problem.',
+        githubLink:'https://github.com/Ariv-Fernandes/ctRL_Eklavya23',
+      },
+    ]
+
+  },
+  {
     year: '2022',
     projects: [
       {
