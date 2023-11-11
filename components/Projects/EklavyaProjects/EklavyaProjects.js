@@ -83,6 +83,7 @@ const ProjectCard = ({ name, imgName, sub, githubLink }) => {
         className={styles.iCard}
         onMouseEnter={onIClick}
         onMouseLeave={onIClick}
+        onClick={onIClick}
       >
         <div className={styles.iButton}>i</div>
         <div className={styles.iInfo}>{sub}</div>
