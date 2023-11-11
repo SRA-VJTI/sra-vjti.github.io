@@ -32,7 +32,7 @@ const EklavyaProjectList = [
       },
       {
         name: 'GPGPU with CUDA',
-        imgName: 'Eklavya/Eklavya2023/default.png',
+        imgName: 'Eklavya/Eklavya2023/GPGPU_with_CUDA.png',
         sub:
           'The project aims to leverage the speed and power of the multiple cores of the GPU to perform general purpose calculations on an NVIDIA GPU using CUDA C++ API. It also aims to demonstrate the usage of CUDA in research applications, and implement the algorithms of Image Pipeline using CUDA.',
         githubLink: 'https://github.com/adiawaskar/GPGPU-with-CUDA',
@@ -52,7 +52,7 @@ const EklavyaProjectList = [
       },
       {
         name: 'ML model on FPGA',
-        imgName: 'Eklavya/Eklavya2023/default.png',
+        imgName: 'Eklavya/Eklavya2023/ML_model_on_FPGA.png',
         sub:
           'The aim of this project is implementing ML model on FPGA to process the MNIST dataset. ML Model will be build using Convolutional Neural Networks and implemented on FPGA in verilog language.',
         githubLink: 'https://github.com/Atharv1035/ML_Model_FPGA_Eklavya23.git',
