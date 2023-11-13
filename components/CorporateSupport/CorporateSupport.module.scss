@@ -41,6 +41,7 @@
       text-align: center;
       width: 80%;
       margin-bottom: 20px;
+      font-family: 'Oswald', sans-serif;
     }
     .iLink {
       font-size: 1.5rem;
@@ -72,11 +73,15 @@
     font-size: 2.5rem;
     font-family: 'Oswald', sans-serif;
   }
-  h2 {
+  .equipments {
+    padding: 20px 40px 20px 40px;
     margin: 10px;
     text-align: center;
     font-size: 1.5rem;
     font-family: 'Oswald', sans-serif;
+    @media (max-width: 650px) {
+      font-size: 1.2rem;
+    }
   }
   a {
     margin-bottom: 10px;
@@ -126,12 +131,6 @@
     top: 55%;
     left: 50%;
   }
-  .CorpDiv {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-  }
   .CorpText {
     position: relative;
     font-family: 'Oswald', sans-serif;
@@ -140,19 +139,6 @@
     @media (max-width: 650px) {
       text-wrap: wrap;
       font-size: 0.8rem;
-    }
-  }
-  .CorpImage {
-    position: relative;
-    align-self: center;
-    margin: 20px;
-    border-radius: 20px;
-    height: 300px;
-    width: auto;
-    @media (max-width: 650px) {
-      width: auto;
-      height: 150px;
-      margin: 5px;
     }
   }
   .Carousel {
@@ -172,6 +158,57 @@
     object-fit: cover;
     @media (max-width: 650px) {
       width: 100%;
+    }
+  }
+  .CorpDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .vl {
+      border-left: 2px solid $lightest;
+      height: 200px;
+      @media (max-width: 800px) {
+        display: none;
+      }
+    }
+    .CorpText {
+      font-family: 'Oswald', sans-serif;
+      margin-right: 100px;
+      text-align: center;
+      font-size: 1.8rem;
+      padding: 0 2rem;
+      transition: color 0.3s;
+      @media (max-width: 800px) {
+        text-wrap: wrap;
+        font-size: 0.8rem;
+        margin: auto;
+      }
+    }
+    .CorpImage {
+      margin: 20px 40px 20px 140px;
+      border-radius: 20px;
+      height: 300px;
+      width: auto;
+      @media (max-width: 800px) {
+        width: auto;
+        height: 150px;
+        margin: 5px;
+      }
+    }
+
+    &:hover {
+      .CorpText {
+        color: $lightest;
+      }
+    }
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+      .CorpText {
+        padding: 3em 1em;
+        margin: 0;
+      }
     }
   }
   .Carousel_items {

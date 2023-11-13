@@ -107,6 +107,7 @@ const Sponsors = () => {
             <></>
           )}
           <h1>Our Corporate Partners</h1>
+          <hr />
           <div>
             {CorpListImages.map((item_i, idx_i) => {
               return (
@@ -117,11 +118,9 @@ const Sponsors = () => {
                       alt=''
                       className={styles.CorpImage}
                     ></img>
-
+                    <div className={styles.vl} />
                     <a className={styles.CorpText}>{item_i.msg}</a>
                   </div>
-
-                  <hr />
 
                   <div className={styles.Carousel}>
                     <div
@@ -265,7 +264,9 @@ const Sponsors = () => {
                       }
                     </div>
 
-                    <h2>Some of the new equipments and facilities added</h2>
+                    <p className={styles.equipments}>
+                      Some of the new equipments and facilities added
+                    </p>
 
                     <div className={styles.Carousel_items}>
                       <Carousel
