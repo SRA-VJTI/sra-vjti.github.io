@@ -1,6 +1,7 @@
 import styles from './CorporateSupport.module.scss';
 import Hero from '../Hero/Hero';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { saveAs } from 'file-saver';
 import {
@@ -223,43 +224,10 @@ const Sponsors = () => {
                           </Carousel>
                         ) : (
                           // For mobile view, we don't render large arrows
-                          <Carousel
-                            renderIndicator={(
-                              clickHandler,
-                              isSelected,
-                              index
-                            ) => {
-                              return (
-                                <li
-                                  onClick={clickHandler}
-                                  className={`ind ${
-                                    isSelected ? 'active' : ''
-                                  }`}
-                                  key={index}
-                                  role='button'
-                                />
-                              );
-                            }}
-                            showIndicators={true}
-                            // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
-                            showThumbs={false}
-                            showStatus={false}
-                            swipeable={true}
-                            autoPlay={true}
-                            infiniteLoop={true}
-                            showArrows={false}
-                          >
-                            {facilities.map((item, idx) => {
-                              return (
-                                <div key={`csr_${idx}`}>
-                                  <CorpCard
-                                    {...item}
-                                    key={`csr_mobile_${idx}`}
-                                  ></CorpCard>
-                                </div>
-                              );
-                            })}
-                          </Carousel>
+                          <CorpCard
+                            {...facilities}
+                            key={`csr_mobile`}
+                          ></CorpCard>
                         )
                       }
                     </div>
@@ -306,36 +274,47 @@ const Sponsors = () => {
 };
 
 const CorpCard = ({ image, Description }) => {
-  const cardRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
 
   const onIClick = () => {
-    if (isOpen) {
-      cardRef.current.style.clipPath = 'circle(4% at 86% 10%)';
-      setIsOpen(false);
-    } else {
-      cardRef.current.style.clipPath = 'circle(120% at 86% 10%)';
-      setIsOpen(true);
-    }
+    isOpen ? setIsOpen(false) : setIsOpen(true);
   };
-
   return (
-    <div className={styles.CorpSupportMob}>
-      <div
-        style={{
-          backgroundImage: `url("/static/images/corporateSupport/facilityUpdate/${image}")`,
-        }}
-        className={styles.facilitiesPic}
-      ></div>
-      <div
-        ref={cardRef}
-        className={styles.iCard}
-        onTouchStartCapture={onIClick}
-      >
-        <div className={styles.iButton}>i</div>
-        <div className={styles.iInfo}>{Description}</div>
-      </div>
-    </div>
+    <Carousel
+      showThumbs={false}
+      showStatus={false}
+      swipeable={true}
+      autoPlay={isOpen ? false : true}
+      infiniteLoop={true}
+      showArrows={false}
+    >
+      {facilities.map((item, idx) => {
+        return (
+          <div key={`csr_${idx}`}>
+            <div className={styles.CorpSupportMob}>
+              <div
+                style={{
+                  backgroundImage: `url("/static/images/corporateSupport/facilityUpdate/${item.image}")`,
+                }}
+                className={styles.facilitiesPic}
+              ></div>
+              <div
+                className={styles.iCard}
+                style={
+                  isOpen
+                    ? { clipPath: 'circle(120% at 86% 10%)' }
+                    : { clipPath: 'circle(4% at 86% 10%)' }
+                }
+                onTouchStartCapture={onIClick}
+              >
+                <div className={styles.iButton}>i</div>
+                <div className={styles.iInfo}>{item.Description}</div>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </Carousel>
   );
 };
 
