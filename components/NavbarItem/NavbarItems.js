@@ -98,11 +98,11 @@ const NavbarItems = ({
               <span className={styles.title} id='elements'>
                 {!onSubMenu ? (
                   <>
-                    {navItem.name} <FontAwesomeIcon icon={faCaretRight} />
+                    {navItem.name}
                   </>
                 ) : (
                   <>
-                    {navItem.name} <FontAwesomeIcon icon={faCaretDown} />
+                    {navItem.name}
                   </>
                 )}
               </span>
