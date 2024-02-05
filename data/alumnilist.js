@@ -1,5 +1,123 @@
 const AlumniList = [
   {
+    year: '2023',
+    alumnis: [
+      {
+        name: 'Gautam Agrawal ',
+        imgName: 'Team/2023/Gautam_Agrawal.jpeg',
+        sub: <>B.Tech Information Technology ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/gautam-agrawal-523240196/',
+        githubLink: 'https://github.com/gautam-dev-maker',
+      },
+      {
+        name: 'Anushree Sabnis',
+        imgName: 'Team/2023/AnushreeSabnis.jpg',
+        sub: <>B.Tech Mechanical ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/anushreesabnis',
+        githubLink: 'https://github.com/MOLOCH-dev',
+      },
+      {
+        name: 'Dhairya Shah',
+        imgName: 'Team/2023/Dhairya_Shah.jpg',
+        sub: <>B.Tech Electronics & Telecommunication ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/dhairya-shah-489a4b14b/',
+        githubLink: 'https://github.com/dhairyashah1',
+      },
+      {
+        name: 'Shreyas Atre',
+        imgName: 'Team/2023/Shreyas_Atre.jpg',
+        sub: <>B.Tech Electronics & Telecommunication ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/atreshreyas/',
+        githubLink: 'https://github.com/SAtacker',
+      },
+      {
+        name: 'Aman Chhaparia',
+        imgName: 'Team/2023/Aman_Chhaparia.jpg',
+        sub: <>B.Tech Information Technology ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/aman-chhaparia-903a97195/',
+        githubLink: 'https://github.com/amanchhaparia',
+      },
+      {
+        name: 'Saad Hashmi',
+        imgName: 'Team/2023/Saad_Hashmi.jpg',
+        sub: <>B.Tech Mechanical ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/saad-hashmi-01722218b',
+        githubLink: 'https://github.com/hashmis79',
+      },
+      {
+        name: 'Ninad Jangle',
+        imgName: 'Team/2023/ninadgsoc.jpg',
+        sub: <>B.Tech Electronics ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/ninad-jangle-1588bb147/',
+        githubLink: 'https://github.com/ninja3011',
+      },
+      {
+        name: 'Dhruvi Doshi',
+        imgName: 'Team/2023/Dhruvi Doshi.jpg',
+        sub: <>B.Tech Computer Engineering ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/dhruvi-doshi-5007801a0/',
+        githubLink: 'https://github.com/dhruvi29/',
+      },
+      {
+        name: 'Chaitravi Chalke',
+        imgName: 'Team/2023/Chaitravi_Chalke.jpeg',
+        sub: <>B.Tech Electronics ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/chaitravi-chalke-6b4806190/',
+        githubLink: 'https://github.com/chaitravi-ce',
+      },
+      {
+        name: 'Kush Kothari',
+        imgName: 'Team/2023/Kush_Kothari.jpg',
+        sub: <>B.Tech Computer Engineering ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/kush-kothari-ba013218b/',
+        githubLink: 'https://github.com/kkothari2001',
+      },
+      {
+        name: 'Prathamesh Tagore',
+        imgName: 'Team/2023/Prathamesh_Profile.jpeg',
+        sub: <>B.Tech Electronics & Telecommunication ' 23</>,
+        linkedInLink: 'http://linkedin.com/in/prathamesh-tagore-61aa1a1b1/',
+        githubLink: 'https://github.com/meshtag',
+      },
+      {
+        name: 'Saurabh Powar',
+        imgName: 'Team/2023/Saurabh_Powar.jpeg',
+        sub: <>B.Tech Electronics ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/saurabh-powar-72b4701b4/',
+        githubLink: 'https://github.com/Spnetic-5',
+      },
+      {
+        name: 'Reshmika Nambiar',
+        imgName: 'Team/2023/Reshmika_Nambiar.jpeg',
+        sub: <>B.Tech Computer Engineering ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/reshmika-nambiar-b82056216/',
+        githubLink: 'https://github.com/Reshmika-Nambiar',
+      },
+      {
+        name: 'Mann Doshi',
+        imgName: 'Team/2023/Mann.jpg',
+        sub: <>B.Tech Information Technology ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/mann-doshi-35308b15a/',
+        githubLink: 'https://github.com/MannDoshi',
+      },
+      {
+        name: 'Tejal Jain',
+        imgName: 'Team/2023/Tejal_Jain.jpeg',
+        sub: <>B.Tech Textile ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/tejal-bedmutha-283181197/',
+        githubLink: 'https://github.com/Tejal-19',
+      },
+      {
+        name: 'Karthik Swaminathan',
+        imgName: 'Team/2023/Karthik_Swaminathan.jpeg',
+        sub: <>B.Tech Mechanical ' 23</>,
+        linkedInLink: 'https://www.linkedin.com/in/karthik-swaminathan-24644a1a2/',
+        githubLink: 'https://github.com/kart1802',
+      },    
+    ],
+  },
+  {
+  
     year: '2022',
     alumnis: [
       {
