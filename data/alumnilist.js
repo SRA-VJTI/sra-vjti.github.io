@@ -53,7 +53,7 @@ const AlumniList = [
       },
       {
         name: 'Dhruvi Doshi',
-        imgName: 'Team/2023/Dhruvi Doshi.jpg',
+        imgName: 'Team/2023/Dhruvi_Doshi.jpg',
         sub: <>B.Tech Computer Engineering ' 23</>,
         linkedInLink: 'https://www.linkedin.com/in/dhruvi-doshi-5007801a0/',
         githubLink: 'https://github.com/dhruvi29/',
@@ -111,13 +111,13 @@ const AlumniList = [
         name: 'Karthik Swaminathan',
         imgName: 'Team/2023/Karthik_Swaminathan.jpeg',
         sub: <>B.Tech Mechanical ' 23</>,
-        linkedInLink: 'https://www.linkedin.com/in/karthik-swaminathan-24644a1a2/',
+        linkedInLink:
+          'https://www.linkedin.com/in/karthik-swaminathan-24644a1a2/',
         githubLink: 'https://github.com/kart1802',
-      },    
+      },
     ],
   },
   {
-  
     year: '2022',
     alumnis: [
       {

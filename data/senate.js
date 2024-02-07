@@ -37,7 +37,7 @@ const SenateList = [
   },
   {
     name: 'Raj Gupta',
-    imgName: 'Team/2025/Raj.jpeg',
+    imgName: 'Team/2025/Raj.JPG',
     sub: (
       <>
         Electronics Head <br />
@@ -61,7 +61,7 @@ const SenateList = [
   },
   {
     name: 'Janhavi Deshpande',
-    imgName: 'Team/2025/Janhavi.jpeg',
+    imgName: 'Team/2025/Janhavi.jpg',
     sub: (
       <>
         Mechanical Head <br />
@@ -73,7 +73,7 @@ const SenateList = [
   },
   {
     name: 'Advait Dhamorikar',
-    imgName: 'Team/2025/Advait.jpeg',
+    imgName: 'Team/2025/Advait.jpg',
     sub: (
       <>
         PR Head <br />
@@ -85,7 +85,7 @@ const SenateList = [
   },
   {
     name: 'Vaidic Gupta',
-    imgName: 'Team/2025/Vaidic.jpeg',
+    imgName: 'Team/2025/Vaidic.JPG',
     sub: (
       <>
         PR Head <br />
@@ -97,38 +97,24 @@ const SenateList = [
   },
   {
     name: 'Pratham Deshmukh',
-    imgName: 'Team/2024/Pratham.jpeg',
+    imgName: 'Team/2025/Pratham.jpg',
     sub: <>B.Tech Electrical ' 23</>,
     linkedInLink: 'https://www.linkedin.com/in/pratham-deshmukh-a027a7227/',
     githubLink: 'https://github.com/Pratham-Bot',
   },
   {
     name: 'Prit Kanadiya',
-    imgName: 'Team/2024/Prit.jpeg',
+    imgName: 'Team/2025/Prit.jpg',
     sub: <>B.Tech Computer Science ' 23</>,
     linkedInLink: 'https://www.linkedin.com/in/prit-kanadiya-4a36a3236/',
     githubLink: 'https://github.com/PritK99',
   },
   {
     name: 'Aryan Karawale',
-    imgName: 'Team/2024/Aryan.jpeg',
+    imgName: 'Team/2025/Aryan.jpg',
     sub: <>B.Tech Electronics & Telecommunication ' 23</>,
     linkedInLink: 'https://www.linkedin.com/in/aryan-karawale-54b6b7233/',
     githubLink: 'https://github.com/Aryan-karawale',
-  },
-  {
-    name: 'Lakshaya Singhal',
-    imgName: 'Team/2024/Lakshaya.jpeg',
-    sub: <>B.Tech Electrical ' 23</>,
-    linkedInLink: 'https://www.linkedin.com/in/lakshaya-singhal/',
-    githubLink: 'https://github.com/LakshayaSinghal',
-  },
-  {
-    name: 'Chanchal Bahrani',
-    imgName: 'Team/2024/Chanchal.jpeg',
-    sub: <>B.Tech Electronics ' 23</>,
-    linkedInLink: 'https://www.linkedin.com/in/chanchal1010/',
-    githubLink: 'https://github.com/Chanchal1010',
   },
   {
     name: 'Moteen Shah',
@@ -208,7 +194,6 @@ const SenateList = [
     linkedInLink: 'https://www.linkedin.com/in/viraj-jagadale-173b23231',
     githubLink: 'https://github.com/Jviraj',
   },
-
 ];
 
 export default SenateList;
