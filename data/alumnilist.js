@@ -625,6 +625,13 @@ const AlumniList = [
         linkedInLink: 'https://www.linkedin.com/in/shubhankarborse/',
         githubLink: '',
       },
+      {
+        name: 'Suraj Maniyar',
+        imgName: 'Suraj M.jpeg',
+        sub: <>Research Scientist at Aware, Inc.</>,
+        linkedInLink: 'https://www.linkedin.com/in/suraj-maniyar/',
+        githubLink: 'https://github.com/suraj-maniyar',
+      },
     ],
   },
   {
