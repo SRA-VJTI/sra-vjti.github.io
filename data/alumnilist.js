@@ -445,6 +445,15 @@ const AlumniList = [
         linkedInLink: 'https://www.linkedin.com/in/apoorva-gokhale-063973147/',
         githubLink: '',
       },
+      {
+        name: 'Hem Kothari',
+        imgName: 'Hem K.jpeg',
+        sub: (
+          <>Mechatronics Engineer | Junior Consultant at Disrupt Experience</>
+        ),
+        linkedInLink: 'https://www.linkedin.com/in/hem-kothari-48329ab6/',
+        githubLink: '',
+      },
     ],
   },
   {
@@ -534,6 +543,88 @@ const AlumniList = [
         linkedInLink: 'https://www.linkedin.com/in/sachin-parekh/',
         githubLink: '',
       },
+      {
+        name: 'Rushikesh Shinde',
+        imgName: 'Rushikesh S.jpeg',
+        sub: <>Doctoral Student at Université Paris Cité</>,
+        linkedInLink: 'https://www.linkedin.com/in/rushikesh-shinde/',
+        githubLink: '',
+      },
+    ],
+  },
+  {
+    year: '2017',
+    alumnis: [
+      {
+        name: 'Rohit Bhaskar',
+        imgName: 'Rohit B.jpeg',
+        sub: <>Technical Team Lead at Elevar Sports</>,
+        linkedInLink: 'https://www.linkedin.com/in/rohitb1vs10/',
+        githubLink: '',
+      },
+      {
+        name: 'Gurjyot Singh',
+        imgName: 'Gurujyot S.jpeg',
+        sub: <>Co-Founder @ Yellow Eats</>,
+        linkedInLink: 'https://www.linkedin.com/in/gurjyot-singh-73b829193/',
+        githubLink: '',
+      },
+      {
+        name: 'Sagar S',
+        imgName: 'Sagar S.jpeg',
+        sub: <>Motor & ePowertrain Controls Engineer at Accelera by Cummins</>,
+        linkedInLink: 'https://www.linkedin.com/in/sagarsupe/',
+        githubLink: '',
+      },
+      {
+        name: 'Husain Kapadia',
+        imgName: 'Husain k.jpeg',
+        sub: <>Machine Learning Engineer at Albert Heijn</>,
+        linkedInLink: 'https://www.linkedin.com/in/husain-kapadia-28h11k95/',
+        githubLink: '',
+      },
+      {
+        name: 'Tanay Shah',
+        imgName: 'Tanay S.jpeg',
+        sub: <>Senior Lead Engineer at ElasticRun</>,
+        linkedInLink: 'https://www.linkedin.com/in/udupa-pranav/',
+        githubLink: '',
+      },
+      {
+        name: 'Sameer Karode',
+        imgName: 'Sameer K.jpeg',
+        sub: <>Full Stack Software Engineer at Qualio</>,
+        linkedInLink: 'https://www.linkedin.com/in/skarode/',
+        githubLink: '',
+      },
+      {
+        name: 'Viraj Sonawane',
+        imgName: 'Viraj S.jpeg',
+        sub: <>Senior Software Engineer at ARM</>,
+        linkedInLink: 'https://www.linkedin.com/in/virajsonawane/',
+        githubLink: '',
+      },
+      {
+        name: 'Mansi Jain',
+        imgName: 'Mansi J.jpeg',
+        sub: <>ASIC Engineer at NVIDIA</>,
+        linkedInLink: 'https://www.linkedin.com/in/mansipjain/',
+        githubLink: '',
+      },
+      {
+        name: 'Swachhand Lokhande',
+        imgName: 'Swachhand L.jpeg',
+        sub: <>Software Engineer at Google</>,
+        linkedInLink: 'https://www.linkedin.com/in/swachhandl/',
+        githubLink: '',
+      },
+      {
+        name: 'Shubhankar Borse',
+        imgName: 'Shubhankar Borse.jpeg',
+        sub: <>Staff Deep Learning Research Engineer at Qualcomm</>,
+        linkedInLink: 'https://www.linkedin.com/in/shubhankarborse/',
+        githubLink: '',
+      },
     ],
   },
   {
@@ -581,6 +672,57 @@ const AlumniList = [
         linkedInLink: 'https://www.linkedin.com/in/indranildchandra/',
         githubLink: '',
       },
+      {
+        name: 'Kewal Shah',
+        imgName: 'Kewal S.jpeg',
+        sub: <>Senior Embedded Engineer at Espressif Systems</>,
+        linkedInLink: 'https://www.linkedin.com/in/kewalmshah/',
+        githubLink: '',
+      },
+      {
+        name: 'Kishan Parihar',
+        imgName: 'Kishan P.jpeg',
+        sub: <>Senior Executive at Saifee Burhani Upliftment Trust</>,
+        linkedInLink: 'https://www.linkedin.com/in/kishan-parihar-026538100/',
+        githubLink: '',
+      },
+      {
+        name: 'Venali Sonone',
+        imgName: 'Venali S.jpeg',
+        sub: (
+          <>Manager - Intl Commercial Costumer Analytics at American Express</>
+        ),
+        linkedInLink: 'https://www.linkedin.com/in/venalisono/',
+        githubLink: 'https://github.com/venali',
+      },
+      {
+        name: 'Sushant Pathkar',
+        imgName: 'Sushant P.jpeg',
+        sub: <>Postdoctoral Researcher at National Cancer Institute (NCI)</>,
+        linkedInLink: 'https://www.linkedin.com/in/sushant-patkar-921359a0/',
+        githubLink: '',
+      },
+      {
+        name: 'Kushal Bheda',
+        imgName: 'Kushal B.jpeg',
+        sub: <>Business Development at Protosys Technologies Pvt. Ltd</>,
+        linkedInLink: 'https://www.linkedin.com/in/kushal-bheda-1a890994/',
+        githubLink: '',
+      },
+      {
+        name: 'Abhishek Sawarkar',
+        imgName: 'Abhishek S.jpeg',
+        sub: <>Product Manager at NVIDIA GPU Cloud (NGC)</>,
+        linkedInLink: 'https://www.linkedin.com/in/abhishek-sawarkar/',
+        githubLink: '',
+      },
+      {
+        name: 'Shubhankar Potdar',
+        imgName: 'Shubhankar P.jpeg',
+        sub: <>Product Manager at NVIDIA GPU Cloud (NGC)</>,
+        linkedInLink: 'https://www.linkedin.com/in/shubhankar-potdar-64956285/',
+        githubLink: 'https://github.com/smpotdar',
+      },
     ],
   },
   {
@@ -598,6 +740,60 @@ const AlumniList = [
         imgName: 'Vishnu Radhakrishnan.jpeg',
         sub: <>Senior Robotics Engineer at Mujin US</>,
         linkedInLink: 'https://www.linkedin.com/in/vishnu-radhakrishnan/',
+        githubLink: '',
+      },
+      {
+        name: 'Amardeepsingh Siglani',
+        imgName: 'Amardeep S.jpeg',
+        sub: <>Senior Sofware Engineer at AWS</>,
+        linkedInLink: 'https://www.linkedin.com/in/amardeepsingh-siglani/',
+        githubLink: 'https://github.com/adsingh',
+      },
+      {
+        name: 'Alok Rao',
+        imgName: 'Alok R.jpeg',
+        sub: <>Senior Sofware Engineer at Cruise</>,
+        linkedInLink: 'https://www.linkedin.com/in/alok-srao/',
+        githubLink: 'https://github.com/AlokSRao',
+      },
+      {
+        name: 'Tejas Barve',
+        imgName: 'Tejas B.jpeg',
+        sub: <>Assistant Manager at L&T Realty</>,
+        linkedInLink: 'https://www.linkedin.com/in/tejas-barve-738818290/',
+        githubLink: '',
+      },
+      {
+        name: 'Rehmat Shaikh',
+        imgName: 'Rehmat S.jpeg',
+        sub: <>Vice president at Jefferies</>,
+        linkedInLink: 'https://www.linkedin.com/in/rehmat-shaikh-460a8555/',
+        githubLink: '',
+      },
+      {
+        name: 'Kaushal Sharma',
+        imgName: 'Kaushal S.jpeg',
+        sub: <>Senior Big Data Engineer at Fractcal Analytics</>,
+        linkedInLink: 'https://www.linkedin.com/in/kaushal-sharma-a1b639a0/',
+        githubLink: '',
+      },
+      {
+        name: 'Ashwini Talele',
+        imgName: 'Ashwini T.jpeg',
+        sub: <>Software Dev Engineer at Nutanix</>,
+        linkedInLink: 'https://www.linkedin.com/in/ashwiniulhastalele/',
+        githubLink: '',
+      },
+      {
+        name: 'Sankalp Prabhavale',
+        imgName: 'Sankalp P.jpeg',
+        sub: (
+          <>
+            Management Consultant at Actuate Business Consulting private limited
+          </>
+        ),
+        linkedInLink:
+          'https://www.linkedin.com/in/sankalp-prabhavale-333240105',
         githubLink: '',
       },
     ],
@@ -663,8 +859,7 @@ const AlumniList = [
         name: 'Sneha Kamath',
         imgName: 'Person_Pic.png',
         sub: <>Senior Engineer at Qualcomm</>,
-        linkedInLink:
-          'https://www.linkedin.com/in/sneha-kamath-73a16652/?originalSubdomain=in',
+        linkedInLink: 'https://www.linkedin.com/in/sneha-kamath-73a16652/',
         githubLink: '',
       },
     ],
@@ -683,8 +878,7 @@ const AlumniList = [
         name: 'Jugal Panchal',
         imgName: 'Jugal P.jpeg',
         sub: <>Divisional Manager at Bajaj Auto</>,
-        linkedInLink:
-          'https://www.linkedin.com/in/jugal-panchal-2a12a837/?originalSubdomain=in',
+        linkedInLink: 'https://www.linkedin.com/in/jugal-panchal-2a12a837/',
         githubLink: '',
       },
     ],
@@ -732,15 +926,38 @@ const AlumniList = [
       //   imgName: 'Ankit D.jpeg',
       //   sub: <>Senior Product Manager - PhonePe</>,
       //   linkedInLink:
-      //     'https://www.linkedin.com/in/ankit-d-42451012/?originalSubdomain=in',
+      //     'https://www.linkedin.com/in/ankit-d-42451012/',
       //   githubLink: 'github.com/ankitdaf/',
       // },
       {
         name: 'Rajesh Mane',
         imgName: 'Rajesh m.jpeg',
         sub: <> Founding Member of 9Unicorns </>,
-        linkedInLink:
-          'https://www.linkedin.com/in/rajeshmane/?originalSubdomain=in',
+        linkedInLink: 'https://www.linkedin.com/in/rajeshmane/',
+        githubLink: '',
+      },
+    ],
+  },
+  {
+    year: '2011',
+    alumnis: [
+      {
+        name: 'Pranav Gupta',
+        imgName: 'Pranav G.jpeg',
+        sub: (
+          <>
+            Assistant Professor of Business Administration at University of
+            Illinois
+          </>
+        ),
+        linkedInLink: 'https://www.linkedin.com/in/guptapranav1/ ',
+        githubLink: '',
+      },
+      {
+        name: 'Bharat Gupta',
+        imgName: 'Bharat G.jpeg',
+        sub: <>Director of High Yield Credit Trading at Deutsche Bank</>,
+        linkedInLink: 'https://www.linkedin.com/in/bharatsgupta/',
         githubLink: '',
       },
     ],
