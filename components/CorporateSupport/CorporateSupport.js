@@ -73,15 +73,15 @@ const Sponsors = () => {
       <Hero
         imgName={'corpSupport.webp'}
         backgroundPosition={'center top'}
-        title={<>Corporate Support</>}
+        title={<>CSR Support</>}
         subtitleList={[
-          'Grateful for the corporate champions who empower researchers to turn dreams into discoveries, and ideas into impact',
+          'Nurturing Minds, Igniting Discovery, Building Nations: Corporate Support for Education and Research Excellence.',
         ]}
         isHome={false}
       />
       <div className={styles.activityList} id='is'>
         <div className={styles.reach}>
-          <h1>We are now updated!</h1>
+          <h1>Join Our Expedition: Our Spark, Your Impact!</h1>
           {visiblePara ? <p>{CorporateSupport}</p> : <></>}
           {mobileView ? (
             <button
