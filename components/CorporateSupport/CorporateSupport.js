@@ -6,7 +6,6 @@ import { Carousel } from 'react-responsive-carousel';
 import { saveAs } from 'file-saver';
 import {
   CorpListImages,
-  CorpLinks,
   changesMadeThroughCSR,
   CorpSupport,
   CorporateSupport,
@@ -114,11 +113,14 @@ const Sponsors = () => {
               return (
                 <div>
                   <div className={styles.CorpDiv} key={`corp_${idx_i}`}>
+
+                    <a href={`${item_i.link}`}>
                     <img
                       src={`/static/images/corporateSupport/logo/${item_i.image}`}
                       alt=''
                       className={styles.CorpImage}
                     ></img>
+                    </a>
                     <div className={styles.vl} />
                     <a className={styles.CorpText}>{item_i.msg}</a>
                   </div>
@@ -319,7 +321,7 @@ const Sponsors = () => {
                                       className={styles.changesMadeThroughCSR}
                                     ></img>
 
-                                    <a>{item.Description}</a>
+                                    <a className={styles.footer_pad}>{item.Description}</a>
                                   </div>
                                 </div>
                               );
@@ -350,7 +352,7 @@ const Sponsors = () => {
                                     alt=''
                                     className={styles.changesMadeThroughCSR}
                                   ></img>
-                                  <a>{item.Description}</a>
+                                  <a className={styles.footer_pad}>{item.Description}</a>
                                 </div>
                               );
                             })}

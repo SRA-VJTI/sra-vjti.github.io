@@ -245,7 +245,7 @@
 
   .CSR_Facility .changesMadeThroughCSR {
     width: 100%;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     object-position: 25% 25%;
     @media (max-width: 650px) {
@@ -254,5 +254,9 @@
       object-fit: cover;
       object-position: 25% 25%;
     }
+  }
+
+  .CSR_Facility {
+    margin-bottom: 50px;
   }
 }

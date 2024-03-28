@@ -1,10 +1,10 @@
 const CorpListImages = [
   {
     image: 'GIC.png',
-    msg: 'Thank to all our sponsors for their support and trust in us.',
+    msg: 'We extend our heartfelt appreciation to GIC Re for their unwavering support through their CSR initiative. Their generosity has been instrumental in our mission to advance robotics, providing the crucial funds needed to modernize our laboratory with cutting-edge equipment and infrastructure.',
+    link: 'https://www.gicre.in/en/',
   },
 ];
-const CorpLinks = ['https://www.espressif.com/'];
 
 const CorpSupport = [
   {
@@ -40,14 +40,13 @@ const facilities = [
 ];
 
 const CorporateSupport =
-  'The journey at SRA begins with the organisation of various cutting-edge seminars attended by more than 200 freshers, followed by a month-long mentorship programme, ground-breaking projects, participation in competitions at a national and international level, peer-peer knowledge transfer and much more. While growing in the technology space, SRA is committed to its philosophy of "Ideate, Innovate, and Inspire", in order to take our ambitions to a whole new level.';
+  'SRA Lab has been instrumental in cultivating individual student development within robotics and related disciplines, contributing to a robust scientific and research environment. Our request for CSR support aims to enhance societal progress by financing crucial research and infrastructure projects. SRA is dedicated to advancing knowledge, fostering development, and cultivating a skilled workforce for the future. We have the essential documentation, including Form 12A, Form 80G, MCA-CSR1 Form and audited financial reports making us eligible to receive CSR support.';
 
 const VoteOfThanks =
   'We would like to thank our sponsors for their support and trust in us.';
 
 export {
   CorpListImages,
-  CorpLinks,
   changesMadeThroughCSR,
   CorpSupport,
   CorporateSupport,
