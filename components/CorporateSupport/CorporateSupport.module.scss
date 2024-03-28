@@ -242,4 +242,17 @@
       }
     }
   }
+
+  .CSR_Facility .changesMadeThroughCSR {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 25% 25%;
+    @media (max-width: 650px) {
+      width: 250px;
+      height: 150px;
+      object-fit: cover;
+      object-position: 25% 25%;
+    }
+  }
 }

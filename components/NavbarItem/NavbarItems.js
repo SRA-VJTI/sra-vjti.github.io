@@ -96,15 +96,7 @@ const NavbarItems = ({
               onClick={() => setSubMenu(!onSubMenu)}
             >
               <span className={styles.title} id='elements'>
-                {!onSubMenu ? (
-                  <>
-                    {navItem.name}
-                  </>
-                ) : (
-                  <>
-                    {navItem.name}
-                  </>
-                )}
+                {!onSubMenu ? <>{navItem.name}</> : <>{navItem.name}</>}
               </span>
               {onSubMenu &&
                 navItem.subMenu.map((item, idx) => {
