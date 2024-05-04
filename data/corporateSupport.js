@@ -2,9 +2,9 @@ const CorpListImages = [
   {
     image: 'GIC.png',
     msg: 'We extend our heartfelt appreciation to GIC Re for their unwavering support through their CSR initiative. Their generosity has been instrumental in our mission to advance robotics, providing the crucial funds needed to modernize our laboratory with cutting-edge equipment and infrastructure.',
+    link: 'https://www.gicre.in/en/',
   },
 ];
-const CorpLinks = ['https://www.espressif.com/'];
 
 const CorpSupport = [
   {
@@ -19,22 +19,22 @@ const CorpSupport = [
 
 const changesMadeThroughCSR = [
   {
-    image: 'f1.jpg',
+    image: 'coming-soon.jpg',
     Description: 'Coming Soon...',
   },
   {
-    image: 'f2.jpeg',
+    image: 'coming-soon-2.jpg',
     Description: 'Coming Soon...',
   },
 ];
 
 const facilities = [
   {
-    image: 'f1.jpg',
+    image: 'coming-soon.jpg',
     Description: 'Coming Soon...',
   },
   {
-    image: 'f2.jpeg',
+    image: 'coming-soon-2.jpg',
     Description: 'Coming Soon...',
   },
 ];
@@ -47,7 +47,6 @@ const VoteOfThanks =
 
 export {
   CorpListImages,
-  CorpLinks,
   changesMadeThroughCSR,
   CorpSupport,
   CorporateSupport,
