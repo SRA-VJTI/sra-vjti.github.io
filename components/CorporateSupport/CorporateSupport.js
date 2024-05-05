@@ -5,12 +5,9 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { saveAs } from 'file-saver';
 import {
-  CorpListImages,
-  changesMadeThroughCSR,
-  CorpSupport,
+  CsrPartners,
   CorporateSupport,
   VoteOfThanks,
-  facilities,
 } from '../../data/corporateSupport';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -109,20 +106,30 @@ const Sponsors = () => {
           <h1>Our Corporate Partners</h1>
           <hr />
           <div>
-            {CorpListImages.map((item_i, idx_i) => {
+            {CsrPartners.map((item_i, idx_i) => {
               return (
                 <div>
                   <div className={styles.CorpDiv} key={`corp_${idx_i}`}>
-
                     <a href={`${item_i.link}`}>
-                    <img
-                      src={`/static/images/corporateSupport/logo/${item_i.image}`}
-                      alt=''
-                      className={styles.CorpImage}
-                    ></img>
+                      <img
+                        src={`/static/images/corporateSupport/logo/${item_i.image}`}
+                        alt=''
+                        className={styles.CorpImage}
+                      ></img>
                     </a>
                     <div className={styles.vl} />
                     <a className={styles.CorpText}>{item_i.msg}</a>
+                  </div>
+                  <div className={styles.CorpDiv} key={`impl_${idx_i}`}>
+                    <a href={`${item_i.implmentationPartner.link}`}>
+                      <img
+                        src={`/static/images/corporateSupport/logo/${item_i.implmentationPartner.image}`}
+                        alt=''
+                        className={styles.CorpImage}
+                      ></img>
+                    </a>
+                    <div className={styles.vl} />
+                    <a className={styles.CorpText}>{item_i.implmentationPartner.msg}</a>
                   </div>
 
                   <div className={styles.Carousel}>
@@ -199,7 +206,7 @@ const Sponsors = () => {
                               )
                             }
                           >
-                            {facilities.map((item, idx) => {
+                            {item_i.facilities.map((item, idx) => {
                               return (
                                 <div
                                   key={`csr_${idx}`}
@@ -227,7 +234,7 @@ const Sponsors = () => {
                         ) : (
                           // For mobile view, we don't render large arrows
                           <CorpCard
-                            {...facilities}
+                            {...item_i}
                             key={`csr_mobile`}
                           ></CorpCard>
                         )
@@ -274,7 +281,7 @@ const Sponsors = () => {
                                     className={`control-arrow`}
                                     style={{
                                       ...arrowStylesLeft,
-                                      marginTop: '20%',
+                                      marginTop: '40%',
                                       left: '0.2em',
                                       opacity: 0.4,
                                     }}
@@ -294,7 +301,7 @@ const Sponsors = () => {
                                     className={`control-arrow`}
                                     style={{
                                       ...arrowStylesRight,
-                                      marginTop: '20%',
+                                      marginTop: '40%',
                                       right: '0.2em',
                                       opacity: 0.4,
                                     }}
@@ -308,7 +315,7 @@ const Sponsors = () => {
                               )
                             }
                           >
-                            {facilities.map((item, idx) => {
+                            {item_i.changesMadeThroughCSR.map((item, idx) => {
                               return (
                                 <div
                                   key={`csr_${idx}`}
@@ -321,7 +328,9 @@ const Sponsors = () => {
                                       className={styles.changesMadeThroughCSR}
                                     ></img>
 
-                                    <a className={styles.footer_pad}>{item.Description}</a>
+                                    <a className={styles.footer_pad}>
+                                      {item.Description}
+                                    </a>
                                   </div>
                                 </div>
                               );
@@ -341,7 +350,7 @@ const Sponsors = () => {
                             infiniteLoop={true}
                             transitionTime={100}
                           >
-                            {changesMadeThroughCSR.map((item, idx) => {
+                            {item_i.changesMadeThroughCSR.map((item, idx) => {
                               return (
                                 <div
                                   key={`csr_${idx}`}
@@ -352,7 +361,9 @@ const Sponsors = () => {
                                     alt=''
                                     className={styles.changesMadeThroughCSR}
                                   ></img>
-                                  <a className={styles.footer_pad}>{item.Description}</a>
+                                  <a className={styles.footer_pad}>
+                                    {item.Description}
+                                  </a>
                                 </div>
                               );
                             })}
@@ -371,7 +382,7 @@ const Sponsors = () => {
   );
 };
 
-const CorpCard = ({ image, Description }) => {
+const CorpCard = ({image, message, link, changesMadeThroughCSR, facilities}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const onIClick = () => {
