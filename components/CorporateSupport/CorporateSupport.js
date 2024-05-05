@@ -120,12 +120,14 @@ const Sponsors = () => {
                     <div className={styles.vl} />
                     <a className={styles.CorpText}>{item_i.msg}</a>
                   </div>
+                  <h2>Our CSR implementation Partners</h2>
+                  <hr className={styles.hr2}/>
                   <div className={styles.CorpDiv} key={`impl_${idx_i}`}>
                     <a href={`${item_i.implmentationPartner.link}`}>
                       <img
                         src={`/static/images/corporateSupport/logo/${item_i.implmentationPartner.image}`}
                         alt=''
-                        className={styles.CorpImage}
+                        className={styles.CorpImpImage}
                       ></img>
                     </a>
                     <div className={styles.vl} />

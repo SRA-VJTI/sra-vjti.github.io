@@ -72,6 +72,12 @@
     font-size: 2.5rem;
     font-family: 'Oswald', sans-serif;
   }
+  h2 {
+    margin: 50px 0 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+  }
   .equipments {
     padding: 20px 60px 20px 60px;
     text-align: center;
@@ -124,7 +130,7 @@
     font-size: 2em;
     background-color: rgba(0, 0, 0, 0.5);
     width: 50%;
-    padding: 100px 100px 100px 0px;
+    padding: 50px 100px 50px 100px;
     border-radius: 15px;
     top: 55%;
     left: 50%;
@@ -144,6 +150,8 @@
     flex-direction: column;
     width: fit-content;
     position: relative;
+    object-fit: cover;  
+    top:0;
     :hover {
       .facilitiesUpdate {
         opacity: 0.5;
@@ -153,6 +161,8 @@
   }
   .facilitiesUpdate {
     height: 720px;
+    top:0;
+    object-position: 55%;
     object-fit: cover;
     @media (max-width: 650px) {
       width: 100%;
@@ -194,6 +204,17 @@
         margin: 5px;
       }
     }
+    .CorpImpImage {
+      margin: 20px 40px 20px 140px;
+      border-radius: 20px;
+      height: auto;
+      width: 200px;
+      @media (max-width: 800px) {
+        width: auto;
+        height: 150px;
+        margin: 5px;
+      }
+    }
 
     &:hover {
       .CorpText {
@@ -218,6 +239,12 @@
   }
   hr {
     width: 40%;
+    border: 1px solid $lightest;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .hr2 {
+    width: 30%;
     border: 1px solid $lightest;
     margin: 0 auto;
     margin-bottom: 30px;
