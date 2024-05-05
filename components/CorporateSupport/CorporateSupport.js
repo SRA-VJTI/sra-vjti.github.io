@@ -121,7 +121,7 @@ const Sponsors = () => {
                     <a className={styles.CorpText}>{item_i.msg}</a>
                   </div>
                   <h2>Our CSR implementation Partners</h2>
-                  <hr className={styles.hr2}/>
+                  <hr className={styles.hr2} />
                   <div className={styles.CorpDiv} key={`impl_${idx_i}`}>
                     <a href={`${item_i.implmentationPartner.link}`}>
                       <img
@@ -131,7 +131,9 @@ const Sponsors = () => {
                       ></img>
                     </a>
                     <div className={styles.vl} />
-                    <a className={styles.CorpText}>{item_i.implmentationPartner.msg}</a>
+                    <a className={styles.CorpText}>
+                      {item_i.implmentationPartner.msg}
+                    </a>
                   </div>
 
                   <div className={styles.Carousel}>
@@ -235,10 +237,7 @@ const Sponsors = () => {
                           </Carousel>
                         ) : (
                           // For mobile view, we don't render large arrows
-                          <CorpCard
-                            {...item_i}
-                            key={`csr_mobile`}
-                          ></CorpCard>
+                          <CorpCard {...item_i} key={`csr_mobile`}></CorpCard>
                         )
                       }
                     </div>
@@ -384,7 +383,13 @@ const Sponsors = () => {
   );
 };
 
-const CorpCard = ({image, message, link, changesMadeThroughCSR, facilities}) => {
+const CorpCard = ({
+  image,
+  message,
+  link,
+  changesMadeThroughCSR,
+  facilities,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const onIClick = () => {

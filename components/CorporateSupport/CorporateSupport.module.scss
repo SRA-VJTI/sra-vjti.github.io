@@ -150,8 +150,8 @@
     flex-direction: column;
     width: fit-content;
     position: relative;
-    object-fit: cover;  
-    top:0;
+    object-fit: cover;
+    top: 0;
     :hover {
       .facilitiesUpdate {
         opacity: 0.5;
@@ -161,7 +161,7 @@
   }
   .facilitiesUpdate {
     height: 720px;
-    top:0;
+    top: 0;
     object-position: 55%;
     object-fit: cover;
     @media (max-width: 650px) {
