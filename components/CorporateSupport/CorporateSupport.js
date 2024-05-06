@@ -120,8 +120,6 @@ const Sponsors = () => {
                     <div className={styles.vl} />
                     <a className={styles.CorpText}>{item_i.msg}</a>
                   </div>
-                  <h2>Our CSR implementation Partners</h2>
-                  <hr className={styles.hr2} />
                   <div className={styles.CorpDiv} key={`impl_${idx_i}`}>
                     <a href={`${item_i.implmentationPartner.link}`}>
                       <img
@@ -241,10 +239,13 @@ const Sponsors = () => {
                         )
                       }
                     </div>
-
+                    
+                    {/* <div> */}
                     <p className={styles.equipments}>
-                      Some of the new equipments and facilities added
+                      Glimpse of new latest equipments!
                     </p>
+                    <hr/>
+                    {/* </div> */}
 
                     <div className={styles.Carousel_items}>
                       {
@@ -329,7 +330,7 @@ const Sponsors = () => {
                                       className={styles.changesMadeThroughCSR}
                                     ></img>
 
-                                    <a className={styles.footer_pad}>
+                                    <a className={styles.changesMadeThroughCSR}>
                                       {item.Description}
                                     </a>
                                   </div>
@@ -362,9 +363,9 @@ const Sponsors = () => {
                                     alt=''
                                     className={styles.changesMadeThroughCSR}
                                   ></img>
-                                  <a className={styles.footer_pad}>
+                                  <p className={styles.changesMadeThroughCSRText}>
                                     {item.Description}
-                                  </a>
+                                  </p>
                                 </div>
                               );
                             })}

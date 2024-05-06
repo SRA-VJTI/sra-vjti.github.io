@@ -148,7 +148,7 @@
   .Carousel {
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    width: 100%;
     position: relative;
     object-fit: cover;
     top: 0;
@@ -163,7 +163,7 @@
     height: 720px;
     top: 0;
     object-position: 55%;
-    object-fit: cover;
+    object-fit: contain;
     @media (max-width: 650px) {
       width: 100%;
     }
@@ -189,7 +189,7 @@
       transition: color 0.3s;
       @media (max-width: 800px) {
         text-wrap: wrap;
-        font-size: 0.8rem;
+        font-size: 1rem;
         margin: auto;
       }
     }
@@ -233,6 +233,8 @@
   .Carousel_items {
     width: 45%;
     align-self: center;
+    align-items: center;
+    padding: auto;
     @media (max-width: 650px) {
       width: 250px;
     }
@@ -273,17 +275,27 @@
   .CSR_Facility .changesMadeThroughCSR {
     width: 100%;
     height: 600px;
-    object-fit: cover;
-    object-position: 25% 25%;
+    object-fit: contain;
+    object-position: center;
     @media (max-width: 650px) {
       width: 250px;
       height: 150px;
       object-fit: cover;
-      object-position: 25% 25%;
+      object-position: center;
     }
   }
 
   .CSR_Facility {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+  }
+
+  .changesMadeThroughCSRText {
+    @media (max-width: 650px) {
+      padding: auto;
+      margin-bottom: 40px;
+      text-align: center;
+      font-size: 0.8rem;
+      font-family: 'Oswald', sans-serif;
+    }
   }
 }

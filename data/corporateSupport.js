@@ -40,7 +40,7 @@ const CsrPartners = [
           'The ribbon cutting ceremony was performed by Smt. Sneha Nair, Assistant General Manager at GIC Re, on May 3rd, 2024.',
       },
       {
-        image: 'GIC_Momento_DGM.jpeg',
+        image: 'GIC_Momento_DGM.JPG',
         Description:
           'Shri. Mukesh Waghela, Deputy General Manager at GIC Re (on the left), is being honored by Dr. Sachin Kore, Director of VJTI (on the right), for his support in the development of the SRA Lab.',
       },
