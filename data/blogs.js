@@ -57,8 +57,9 @@ const BlogList = [
         time: 'Sept 2022 - Present',
         short:
           'The work is not complete yet. As of now, I am spending time to become more familiar with their custom infrastructure for domain-extensible compilers.',
-        content: require('./intern-exp/2022/2022_prathamesh_tagore_RI_edinburgh.md')
-          .default,
+        content:
+          require('./intern-exp/2022/2022_prathamesh_tagore_RI_edinburgh.md')
+            .default,
       },
       {
         photo: '/static/images/Team/2023/Shreyas_Atre.jpg',
@@ -188,8 +189,9 @@ const BlogList = [
         time: 'December 2021 - March 2022',
         short:
           'Creating multiple prototypes of a responsive foot, current quadruped at the lab(Stoch-3) had some structural failures and parts used to bend after operation. So my task was to create a closed structure for abduction (abduction coupling).',
-        content: require('./intern-exp/2021/2021_karthik_swaminathan_stoch_lab_IISc.md')
-          .default,
+        content:
+          require('./intern-exp/2021/2021_karthik_swaminathan_stoch_lab_IISc.md')
+            .default,
       },
       {
         photo: '/static/images/Team/2023/Shreyas_Atre.jpg',
