@@ -239,12 +239,12 @@ const Sponsors = () => {
                         )
                       }
                     </div>
-                    
+
                     {/* <div> */}
                     <p className={styles.equipments}>
                       Glimpse of new latest equipments!
                     </p>
-                    <hr/>
+                    <hr />
                     {/* </div> */}
 
                     <div className={styles.Carousel_items}>
@@ -363,7 +363,9 @@ const Sponsors = () => {
                                     alt=''
                                     className={styles.changesMadeThroughCSR}
                                   ></img>
-                                  <p className={styles.changesMadeThroughCSRText}>
+                                  <p
+                                    className={styles.changesMadeThroughCSRText}
+                                  >
                                     {item.Description}
                                   </p>
                                 </div>
