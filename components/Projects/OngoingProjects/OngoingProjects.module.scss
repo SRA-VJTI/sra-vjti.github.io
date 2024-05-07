@@ -48,3 +48,37 @@
     }
   }
 }
+.projectSelector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; // Adjust the space between buttons
+  justify-content: space-around; // Center buttons horizontally
+  margin-bottom: 20px; // Space between the button row and project cards
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid $lightest;
+}
+
+.projectName {
+  padding: 10px 20px; // Increased padding
+  cursor: pointer;
+  background-color: $black  ;
+  border: 2px solid transparent; // Default no visible border
+  transition: background-color 0.3s, border-color 0.3s;
+  font-size: 1.5rem;
+  justify-content: space-around;
+
+  &:hover {
+    background-color: $dark;
+  }
+}
+
+.active {
+  border-color: $light; // Blue border for the selected button
+}
+
+
+.mediaContainer {
+  display: grid;
+    
+}
