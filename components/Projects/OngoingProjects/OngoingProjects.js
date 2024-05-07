@@ -52,12 +52,18 @@ const OngoingProjectCard = ({ imgName, name, sub, githubLink, model_src, model_l
       <div className={styles.ongoingProjCont}>
         <div className={styles.ongoingProjContName}>{name}</div>
         <div className={styles.ongoingProjContSub}>{sub}</div>
-        <div className={styles.mediaContainer}>
+        <div className={styles.ongoingProjContLinks}>
+          <a href={githubLink}>
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+        </div>
+        
         <div 
             style={{ backgroundImage: `url("/static/images/${imgName}")` } }
             
             className={styles.ongoingProjImg}
           ></div> 
+          
           {model_link && model_src && (
             <div className="sketchfab-embed-wrapper" align="center">
               <iframe
@@ -83,12 +89,8 @@ const OngoingProjectCard = ({ imgName, name, sub, githubLink, model_src, model_l
          
         </div>
         
-        <div className={styles.ongoingProjContLinks}>
-          <a href={githubLink}>
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-        </div>
-      </div>
+        
+      
     </div>
   );
 };
