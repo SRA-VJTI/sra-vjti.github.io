@@ -7,7 +7,7 @@
   .facilitiesPic {
     height: 100%;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: contain;
     background-position: center;
   }
 
@@ -164,8 +164,10 @@
     top: 0;
     object-position: 55%;
     object-fit: contain;
+    object-position: center;
     @media (max-width: 650px) {
       width: 100%;
+      object-fit: contain;
     }
   }
   .CorpDiv {
