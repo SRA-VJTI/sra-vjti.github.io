@@ -51,29 +51,32 @@
 .projectSelector {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px; // Adjust the space between buttons
-  justify-content: space-around; // Center buttons horizontally
-  margin-bottom: 20px; // Space between the button row and project cards
+  gap: 30px; 
+  justify-content: space-around; 
+  margin-bottom: 20px; 
   margin-top: 20px;
   padding: 10px;
   border: 2px solid $lightest;
+  border-radius: 10px;
 }
 
 .projectName {
-  padding: 10px 20px; // Increased padding
+  padding: 10px 20px; 
   cursor: pointer;
-  background-color: $black  ;
-  border: 2px solid transparent; // Default no visible border
+  background-color: $black;
+  border: 2px solid transparent; 
   transition: background-color 0.3s, border-color 0.3s;
   font-size: 1.5rem;
   justify-content: space-around;
+  border-radius:10px ;
 
   &:hover {
-    background-color: $dark;
+    background-color: $light;
   }
 }
 
 .active {
-  border-color: $light; // Blue border for the selected button
+  border-color: $dark; 
+  background-color: $dark;
+  border-radius: 10px;
 }
-
