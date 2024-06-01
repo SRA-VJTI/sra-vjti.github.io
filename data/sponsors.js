@@ -1,6 +1,6 @@
 const SponsorListImages = [
   'espressif.png',
-  'PCB_Power.jpeg',
+  'Lion_circuits.png',
   'andonstar.png',
   'tmotor.png',
   'Odrive.jpeg',
