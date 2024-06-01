@@ -10,7 +10,7 @@ const SponsorListImages = [
 ];
 const SponsorLinks = [
   'https://www.espressif.com/',
-  'https://www.pcbpower.com/',
+  'https://www.lioncircuits.com/',
   'https://andonstar.com/',
   'https://uav-en.tmotor.com/',
   'https://odriverobotics.com/',
@@ -25,8 +25,8 @@ const diamondSponsors = [
     link: 'https://www.espressif.com/',
   },
   {
-    image: 'PCB_Power.jpeg',
-    link: 'https://www.pcbpower.com/',
+    image: 'Lion_circuits.png',
+    link: 'https://www.lioncircuits.com/',
   },
   {
     image: 'andonstar.png',
