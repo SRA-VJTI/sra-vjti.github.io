@@ -48,3 +48,35 @@
     }
   }
 }
+.projectSelector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; 
+  justify-content: space-around; 
+  margin-bottom: 20px; 
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid $lightest;
+  border-radius: 10px;
+}
+
+.projectName {
+  padding: 10px 20px; 
+  cursor: pointer;
+  background-color: $black;
+  border: 2px solid transparent; 
+  transition: background-color 0.3s, border-color 0.3s;
+  font-size: 1.5rem;
+  justify-content: space-around;
+  border-radius:10px ;
+
+  &:hover {
+    background-color: $light;
+  }
+}
+
+.active {
+  border-color: $dark; 
+  background-color: $dark;
+  border-radius: 10px;
+}

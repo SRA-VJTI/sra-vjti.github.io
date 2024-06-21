@@ -17,6 +17,7 @@ const OngoingProjectsData = [
       </>
     ),
     githubLink: 'https://github.com/SRA-VJTI/Delta2021',
+    
   },
   {
     imgName: 'smort.gif',
@@ -37,6 +38,7 @@ const OngoingProjectsData = [
       </>
     ),
     githubLink: 'https://github.com/saharshleo/OpenCV-Trackers',
+   
   },
   {
     imgName: 'titan_legs.jpeg',
@@ -56,6 +58,7 @@ const OngoingProjectsData = [
       </>
     ),
     githubLink: 'https://github.com/SRA-VJTI/TitanLegs',
+    
   },
   {
     imgName: 'mobman.jpeg',
@@ -73,6 +76,8 @@ const OngoingProjectsData = [
       </>
     ),
     githubLink: 'https://github.com/SRA-VJTI/Mobile_Manipulator',
+
+    
   },
 ];
 
