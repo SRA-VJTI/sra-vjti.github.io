@@ -7,6 +7,7 @@ const SponsorListImages = [
   'texas.png',
   'smc.png',
   'solidspace.png',
+  'dytspectrumowl.png'
 ];
 const SponsorLinks = [
   'https://www.espressif.com/',
@@ -17,6 +18,7 @@ const SponsorLinks = [
   'https://www.ti.com/',
   'https://www.smcin.com/',
   'https://solidspace.co.in/',
+  'https://www.dyt-ir.com/'
 ];
 
 const diamondSponsors = [
@@ -36,6 +38,10 @@ const diamondSponsors = [
     image: 'tmotor.png',
     link: 'https://uav-en.tmotor.com/',
   },
+  {
+    image: 'dytspectrumowl.png',
+    link: 'https://www.dyt-ir.com/',
+  }
 ];
 
 const goldSponsors = [
