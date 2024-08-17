@@ -44,8 +44,8 @@ const Sponsors = () => {
 
   const saveFile = () => {
     saveAs(
-      `/static/documents/${SponsorshipBrochure[0]}`,
-      `SRA_Brochure_2k23.pdf`
+      `/static/documents/PR_brochure_24-25.pdf`,
+      `SRA_Brochure_2k24.pdf`
     );
   };
 
