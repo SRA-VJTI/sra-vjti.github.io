@@ -3,6 +3,16 @@ const PublicationsList = [
     name: 'Research Papers',
     publications: [
       {
+        photo: '/static/images/publications/2024_august_21.png',
+        title: 'Acti-V-Link: An Active Surface, Visual Feedback Based, Mechanically Underactuated Gripper for In-Hand Manipulation',
+        author:
+          'Karthik Swaminathan | Mohammed Saad Hashmi | Alqama Shaikh | Vikas Phalle',
+        time: '21 August 2024',
+        short:
+          'In-hand manipulation, Active surfaces, Under-actuated mechanisms. RobCE 2024',
+        externalLink: 'https://dl.acm.org/doi/abs/10.1145/3674746.3674796#',
+      },
+      {
         photo: '/static/images/publications/2023_april_08.png',
         title: 'DEEPFAKE CLI: Accelerated Deepfake Detection using FPGAs',
         author:
