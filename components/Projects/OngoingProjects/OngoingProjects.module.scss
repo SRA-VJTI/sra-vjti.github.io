@@ -1,50 +1,100 @@
 @import '../../variables';
 
 .ongoingProj {
+  display: flex;
+  justify-content: space-between; /* Ensures space between content and image */
+  align-items: flex-start; /* Aligns the content to the top */
+  padding: 20px;
   width: 100%;
   min-height: 70vh;
-  // margin: 0 auto;
-  margin-bottom: 3em;
+  //margin-bottom: 3em;
 
-  .ongoingProjImg {
-    background-position: center center;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    background-repeat: no-repeat;
-    background-size: 25vw;
-    height: 75vh;
-    @media (max-width: 650px) {
-      height: 40vh;
-    }
-    @media (max-width: 450px) {
-      height: 30vh;
-    }
+  /* Responsive behavior for smaller screens */
+  @media (max-width: 900px) {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center align the content and image */
   }
+
   .ongoingProjCont {
-    width: 70%;
-    margin: auto;
-    border-bottom: 2px solid $light;
+    width: 50%; /* Left side for content */
+    margin-right: 20px; /* Space between content and image */
     padding-bottom: 1em;
+    //border-bottom: 2px solid $light;
+
     .ongoingProjContName {
-      font-size: 3rem;
-      text-align: center;
-      padding: 0em;
+      font-size: 2.5rem;
+      text-align: left;
+      margin-bottom: 0.5em;
     }
+
     .ongoingProjContSub {
-      padding: 0.1em;
       line-height: 160%;
       margin: 1em 0;
-      text-align: center;
+      text-align: left;
     }
+
     .ongoingProjContLinks {
-      text-align: center;
+      text-align: left;
+      margin-top: 1em;
+
       a {
         font-size: 1.5rem;
         transition: color 0.2s;
+
         &:hover {
           color: $dark;
         }
       }
     }
   }
+
+  .ongoingProjImg {
+    width: 45%; /* Right side for image */
+    height: 400px; /* Fixed height for the image */
+
+    @media (max-width: 900px) {
+      width: 100%; /* Image takes full width on smaller screens */
+      height: 300px; /* Adjust height for smaller screens */
+    }
+
+    @media (max-width: 650px) {
+      height: 250px; /* Further reduce height for very small screens */
+    }
+
+    @media (max-width: 450px) {
+      height: 200px; /* Minimum height for mobile devices */
+    }
+  }
+}
+.projectSelector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px; 
+  justify-content: space-around; 
+  margin-bottom: 20px; 
+  margin-top: 20px;
+  padding: 10px;
+  // border: 2px solid $lightest;
+  // border-radius: 10px;
+}
+
+.projectName {
+  padding: 10px 20px; 
+  cursor: pointer;
+  background-color: $black;
+  border: 2px solid transparent; 
+  transition: background-color 0.3s, border-color 0.3s;
+  font-size: 1.5rem;
+  justify-content: space-around;
+  //border-radius:10px ;
+
+  &:hover {
+    background-color: $light;
+  }
+}
+
+.active {
+  border-color: $dark; 
+  background-color: $dark;
+  //border-radius: 10px;
 }
