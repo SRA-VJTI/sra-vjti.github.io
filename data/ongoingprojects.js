@@ -1,43 +1,6 @@
+// To add your 3D model, upload it on https://p3d.in/ and add the embed link under modelLink
+
 const OngoingProjectsData = [
-  {
-    imgName: 'delta_bot.jpg',
-    name: 'DELTA - PSP Bot',
-    sub: (
-      <>
-        The Team DNS from SRA bagged Second Prize in the 7th Delta International
-        Automation Contest respresenting India globally.
-        <br />
-        PSP Bot : Pick Sort and Place Bot is customly designed, 3 Axis XYZ
-        Gantry based Pick and Place Robotic Solution for Industry Packaging
-        lines housing variable sized input items or boxes. It uses and efficient
-        item sorting and packaging algorithm to pick and place input items from
-        an incoming conveyor into an output container ensuring minimum space
-        wastage. Its primary use is in the Multinational Packaging supply chain
-        industry for variable sized item packaging and location based packaging.
-      </>
-    ),
-    githubLink: 'https://github.com/SRA-VJTI/Delta2021',
-  },
-  {
-    imgName: 'smort.gif',
-    name: 'SMORT',
-    sub: (
-      <>
-        Smart Multi-Object Realtime Tracking (SMORT) aims to study major types
-        of object tracking algorithms and finally build a robust object tracker
-        which can overcome some critical problems like occlusion, light
-        Intensity difference, re-identification etc.
-        <br />
-        This is a research oriented project in which a pre-existing algorithm is
-        studied in great detail from its official research record and a custom
-        implementation is created from it. This helps us understand some
-        intrinsic details of the algorithm which prove useful while creating our
-        original custom tracker. Implementation of object tracking research
-        papers.
-      </>
-    ),
-    githubLink: 'https://github.com/saharshleo/OpenCV-Trackers',
-  },
   {
     imgName: 'titan_legs.jpeg',
     name: 'TitanLegs',
@@ -57,23 +20,34 @@ const OngoingProjectsData = [
     ),
     githubLink: 'https://github.com/SRA-VJTI/TitanLegs',
   },
+ 
   {
-    imgName: 'mobman.jpeg',
-    name: 'MobMan',
+    name: 'EvoBorne',
     sub: (
       <>
-        MobMan project aims to build a model of a mobile manipulator capable of
-        performing various dexterous tasks autonomously. The project is divided
-        into two main components:
-        <br />
-        1. Manipulator Arm: Perform pick and place operations using object
-        detection
-        <br />
-        2. Mobile Base: Perform SLAM for navigation.
+       EvoBorne is a versatile multi-terrain modular robot designed to adapt to various surface and aerial environments, morphing its structure to meet the demands of its surroundings. 
+       It operates as a wheeled robot on land, navigating diverse terrains with speed and agility, and seamlessly transforms into a drone when flight is required.
+      Equipped with advanced mapping techniques and a dynamic morphing capability, EvoBorne can autonomously switch between ground and aerial modes, optimizing performance for complex tasks such as search and rescue, environmental monitoring, and exploration. 
+       Its robust, customizable design makes it a powerful tool for overcoming challenging environments.
       </>
     ),
-    githubLink: 'https://github.com/SRA-VJTI/Mobile_Manipulator',
+    githubLink: 'https://github.com/SRA-VJTI/evo-borne',
+    modelLink: 'https://p3d.in/e/RI78R'
   },
-];
+  
+  { 
+    imgName: 'synapse32.jpeg',
+    name: 'Synapse32',
+    sub: (
+      <>
+      Synapse32 is an ambitious and innovative project spearheaded by SRA, focused on the design, verification, and implementation of a RISC-V based CPU using Verilog HDL. 
+      Our goal is to develop a fully functional CPU core that we will initially deploy on FPGA platforms, with future plans to evolve it into a robust, high-performance softcore IP for Xilinx boards. 
+      Looking ahead, we also plan to enhance Synapse32 to a level where it can support more complex operations, including the capability to run Linux. This would demonstrate the core’s ability to handle sophisticated software environments and expand its potential applications.
+      </>
+    ),
+    githubLink: 'https://github.com/SRA-VJTI/evo-borne',
+   
+  }
+]
 
 export default OngoingProjectsData;
