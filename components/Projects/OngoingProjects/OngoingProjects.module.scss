@@ -2,24 +2,24 @@
 
 .ongoingProj {
   display: flex;
-  justify-content: space-between; /* Ensures space between content and image */
-  align-items: flex-start; /* Aligns the content to the top */
+  justify-content: space-between; 
+  align-items: flex-start; 
   padding: 20px;
   width: 100%;
   min-height: 70vh;
-  //margin-bottom: 3em;
+  
 
-  /* Responsive behavior for smaller screens */
+  
   @media (max-width: 900px) {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    align-items: center; /* Center align the content and image */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .ongoingProjCont {
-    width: 50%; /* Left side for content */
-    margin-right: 20px; /* Space between content and image */
+    width: 50%; 
+    margin-right: 20px; 
     padding-bottom: 1em;
-    //border-bottom: 2px solid $light;
+   
 
     .ongoingProjContName {
       font-size: 2.5rem;
@@ -49,20 +49,42 @@
   }
 
   .ongoingProjImg {
-    width: 45%; /* Right side for image */
-    height: 400px; /* Fixed height for the image */
+    width: 45%; 
+    height: 400px; 
 
     @media (max-width: 900px) {
-      width: 100%; /* Image takes full width on smaller screens */
-      height: 300px; /* Adjust height for smaller screens */
+      width: 100%; 
+      height: 300px; 
     }
 
     @media (max-width: 650px) {
-      height: 250px; /* Further reduce height for very small screens */
+      height: 250px; 
     }
 
     @media (max-width: 450px) {
-      height: 200px; /* Minimum height for mobile devices */
+      height: 200px; 
+    }
+  }
+
+  .ongoingProjModel {
+    width: 45%; 
+    height: auto;
+
+    iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9; 
+    }
+
+    @media (max-width: 900px) {
+      width: 100%; 
+      margin-top: 20px; 
+    }
+
+    @media (max-width: 450px) {
+      iframe {
+        height: 250px; 
+      }
     }
   }
 }
@@ -74,8 +96,6 @@
   margin-bottom: 20px; 
   margin-top: 20px;
   padding: 10px;
-  // border: 2px solid $lightest;
-  // border-radius: 10px;
 }
 
 .projectName {
@@ -86,7 +106,7 @@
   transition: background-color 0.3s, border-color 0.3s;
   font-size: 1.5rem;
   justify-content: space-around;
-  //border-radius:10px ;
+
 
   &:hover {
     background-color: $light;
@@ -96,5 +116,5 @@
 .active {
   border-color: $dark; 
   background-color: $dark;
-  //border-radius: 10px;
+
 }

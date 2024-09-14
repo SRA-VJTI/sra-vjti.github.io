@@ -59,16 +59,17 @@ const OngoingProjectCard = ({ imgName, name, sub, githubLink, modelLink }) => {
         style={{
           backgroundImage: `url("/static/images/${imgName}")`,
           backgroundPosition: 'center',
-          backgroundSize: 'contain', // Adjust if needed (can use 'cover' too)
+          backgroundSize: 'contain', 
           backgroundRepeat: 'no-repeat',
-          height: '400px', // Ensure the container has a fixed height
-          width: '45%', // Ensure the image takes up a certain width of the container
+          height: '400px', 
+          width: '45%', 
         }}
 
       ></div>)}
       {modelLink && (
-        <div style={{ paddingRight: 50}}>
+        <div className={styles.ongoingProjModel}>
         <iframe 
+          className={styles.iframeModel}
           allowfullscreen  
           width="640"
           height="480" 
