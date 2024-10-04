@@ -1,5 +1,83 @@
 const EklavyaProjectList = [
   {
+    year: '2024',
+    projects: [
+      {
+        name: 'ApexCore',
+        imgName: 'Eklavya/Eklavya2024/ApexCore.png',
+        sub: 'A single core cpu based on RV32 ISA',
+        githubLink: 'https://github.com/LOuLOu-THEKing/ApexCore_RISC-V_CPU',
+      },
+      {
+        name: 'Emg-Armband',
+        imgName: 'Eklavya/Eklavya2024/Emg-armband.jpg',
+        sub: 'The EMG-Armband project predicts hand gestures using EMG sensor data and machine learning for precise gesture recognition. It captures electrical signals from forearm muscle movements to identify gestures. Potential applications include assistive devices, robotics, and interactive systems.',
+        githubLink: 'https://github.com/vovw/emgband',
+      },
+      {
+        name: 'Titan Quadruped',
+        imgName: 'Eklavya/Eklavya2024/Titan Quadruped.png',
+        sub: 'The project focuses on designing, testing, and controlling quadruped robot legs, assessing torque, load, and shock capacities. It involves CAD software like SOLIDWORKS, ONSHAPE, or FUSION360 for assembly. Testing includes various terrains and environmental constraints.',
+        githubLink: 'https://github.com/Krusshhnnaa/Titan_quadruped_sra',
+      },
+      {
+        name: 'Video Card on FPGA',
+        imgName: 'Eklavya/Eklavya2024/Video card on FPGA.jpg',
+        sub: 'This project focuses on the design and implementation of a video card using FPGA technology, capable of displaying images with up to 64 colors through an analog VGA interface. ',
+        githubLink: 'https://github.com/MrCheese260/Eklavya-Video-Card-Project',
+      },
+      {
+        name: 'Voice-Video-Manipulator',
+        imgName: 'Eklavya/Eklavya2024/Video voice manipulator.png',
+        sub: 'Takes in video input via a camera,processes the images it captures and calculates the distance and the coordinates of the particular object and reaches out that particular point in the space',
+        githubLink: 'https://github.com/MASQUERADE-2005/SRA_VVM',
+      },
+      {
+        name: 'Raytracer from Scratch',
+        imgName: 'Eklavya/Eklavya2024/RayTracer From Scratch.png',
+        sub: 'A Raytracing application built entirely from scratch using C++ and OpenGL',
+        githubLink: 'https://github.com/JaytidaA/SRA-Ray_Tracer_from_Scratch/',
+      },
+      {
+        name: 'Vision Transformers From Scratch',
+        imgName: 'Eklavya/Eklavya2024/vision transformers from scratch.png',
+        sub: 'Implement vision transformers(ViTs) model from scratch and generate descriptive captions for images by combining the power of Vision Transformers and computer vision.',
+        githubLink:
+          'https://github.com/sneha31415/vision_transformers_from_scratch/',
+      },
+      {
+        name: 'Convolution on FPGA',
+        imgName: 'Eklavya/Eklavya2024/Convolution On FPGA.png',
+        sub: 'Implementing convolution on FPGA',
+        githubLink: 'https://github.com/5usu/convolutions-on-fpga',
+      },
+      {
+        name: 'LQR BALANCER',
+        imgName: 'Eklavya/Eklavya2024/LQR Balancer.jpeg',
+        sub: 'SELF BALANCING BOT (WALL E) USING LINEAR QUADRATIC REGULATOR',
+        githubLink: 'https://github.com/crisiumnih/LQR_Balancer',
+      },
+      {
+        name: 'Gymmaster',
+        imgName: 'Eklavya/Eklavya2024/gym master.jpg',
+        sub: 'Our project focuses on understanding and implementation of concepts of Reinforcement learning through various control problems',
+        githubLink: 'https://github.com/De-funkd/gym_master-Sra-.git',
+      },
+      {
+        name: 'Gyro Glider',
+        imgName: 'Eklavya/Eklavya2024/Gyro Glider.png',
+        sub: 'Project Gyroglider is to revolutionise the Evobourne bot by equipping it with self-balancing capabilities. By harnessing the power of two BLDC motors as thrusters and two N20 motors as wheels. ',
+        githubLink: 'https://github.com/AmeyaTikhe/Gyroglider',
+      },
+      {
+        name: 'Micromouse',
+        imgName: 'Eklavya/Eklavya2024/MicroMouse.png',
+        sub: 'Micromouse is a small, autonomous robot designed to navigate and solve a maze. It is a popular robotics competition where participants build and program a robot (“mouse”) to autonomously find its way from a starting point to the center of a maze in the shortest possible time. The competition combines aspects of robotics, algorithm development, and engineering design, making it a challenging and educational project for students, hobbyists, and professionals alike.',
+        githubLink: 'https://github.com/Ojasp21/Micromouse/',
+      },
+    ],
+  },
+  {
     year: '2023',
     projects: [
       {
