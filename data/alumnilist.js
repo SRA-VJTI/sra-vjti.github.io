@@ -12,21 +12,21 @@ const AlumniList = [
       {
         name: 'Anushree Sabnis',
         imgName: 'Team/2023/AnushreeSabnis.jpg',
-        sub: <>B.Tech Mechanical ' 23</>,
+        sub: <>Currently doing MS Mechanical Engineering at CMU, Previously at Acceleration Robotics </>,
         linkedInLink: 'https://www.linkedin.com/in/anushreesabnis',
         githubLink: 'https://github.com/MOLOCH-dev',
       },
       {
         name: 'Dhairya Shah',
         imgName: 'Team/2023/Dhairya_Shah.jpg',
-        sub: <>B.Tech Electronics & Telecommunication ' 23</>,
+        sub: <>Currently doing PhD at NUS, Singapore, Previously RA at NUS, Singapore ' 23</>,
         linkedInLink: 'https://www.linkedin.com/in/dhairya-shah-489a4b14b/',
         githubLink: 'https://github.com/dhairyashah1',
       },
       {
         name: 'Shreyas Atre',
         imgName: 'Team/2023/Shreyas_Atre.jpg',
-        sub: <>B.Tech Electronics & Telecommunication ' 23</>,
+        sub: <>Currently doing MS CS at LSU</>,
         linkedInLink: 'https://www.linkedin.com/in/atreshreyas/',
         githubLink: 'https://github.com/SAtacker',
       },
@@ -75,7 +75,7 @@ const AlumniList = [
       {
         name: 'Prathamesh Tagore',
         imgName: 'Team/2023/Prathamesh_Profile.jpeg',
-        sub: <>B.Tech Electronics & Telecommunication ' 23</>,
+        sub: <>AI Compiler Engineer @ PolyMage Labs</>,
         linkedInLink: 'http://linkedin.com/in/prathamesh-tagore-61aa1a1b1/',
         githubLink: 'https://github.com/meshtag',
       },
@@ -110,7 +110,7 @@ const AlumniList = [
       {
         name: 'Karthik Swaminathan',
         imgName: 'Team/2023/Karthik_Swaminathan.jpeg',
-        sub: <>B.Tech Mechanical ' 23</>,
+        sub: <>RA at IIITH</>,
         linkedInLink:
           'https://www.linkedin.com/in/karthik-swaminathan-24644a1a2/',
         githubLink: 'https://github.com/kart1802',
@@ -137,14 +137,14 @@ const AlumniList = [
       {
         name: 'Omkar Bhilare',
         imgName: 'Team/OmkarB.jpg',
-        sub: <>Silicon Design Engineer at AMD</>,
+        sub: <>Currently doing MS ECE at University of Toronto, Previously Silicon Design Engineer at AMD</>,
         linkedInLink: 'https://www.linkedin.com/in/omkar-bhilare-985aa2180',
         githubLink: 'https://github.com/ombhilare999',
       },
       {
         name: 'Vedant Paranjape',
         imgName: 'Team/Vedant.jpg',
-        sub: <>Software Developer engineer at AMD</>,
+        sub: <>Currently doing MS ECE at Purdue, Previously Compiler Engineer at AMD</>,
         linkedInLink: 'https://www.linkedin.com/in/vedantp16',
         githubLink: 'https://github.com/vedantparanjape',
       },
@@ -158,7 +158,7 @@ const AlumniList = [
       {
         name: 'Sravan Chittupalli',
         imgName: 'Team/Sravan.jpeg',
-        sub: <>Research Programmer Analyst at CMU </>,
+        sub: <>Currently doing MS Robotics at CMU, Previously Research Programmer Analyst at CMU </>,
         linkedInLink:
           'https://www.linkedin.com/in/sravan-chittupalli-a3777b16a/',
         githubLink: 'https://github.com/SravanChittupalli',
@@ -173,14 +173,14 @@ const AlumniList = [
       {
         name: 'Abhinav Venkatadri',
         imgName: 'Team/Abhinav.jpg',
-        sub: <>Associate at PwC</>,
+        sub: <>Current doing MS ECE-AI at CMU, Previously Associate at PwC</>,
         linkedInLink: 'https://www.linkedin.com/in/abhinavvenkatadri/',
         githubLink: 'https://github.com/Abhinavvenkatadri',
       },
       {
         name: 'Rahul Singh',
         imgName: 'Team/Rahul.JPG',
-        sub: <>Associate Consultant at Praxis Global Alliance</>,
+        sub: <>Associate Consultant at Deloitte, India</>,
         linkedInLink: 'https://www.linkedin.com/in/rahul-singh-005965188/',
         githubLink: 'https://github.com/rahulsingh701',
       },
