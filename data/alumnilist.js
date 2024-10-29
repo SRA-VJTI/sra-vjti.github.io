@@ -1,5 +1,88 @@
 const AlumniList = [
   {
+    year: '2024' ,
+    alumnis: [
+      {
+        name: 'Moteen Shah',
+        imgName: 'Team/2024/Moteen_Shah_24.jpeg',
+        sub: <>B.Tech Electronics & Telecommunication ' 24</>,
+        linkedInLink: 'https://www.linkedin.com/in/moteen-shah-98997216b/',
+        githubLink: 'https://github.com/Jamm02',
+      },
+    
+      {
+        name: 'Chinmay Lonkar',
+        imgName: 'Team/2024/Chinmay_Lonkar_24.JPG',
+        sub: <>B.Tech Electrical ' 24</>,
+        linkedInLink: 'https://in.linkedin.com/in/chinmay-lonkar-845207214',
+        githubLink: 'https://github.com/ChinmayLonkar',
+      },
+      {
+        name: 'Aniruddha Thakre',
+        imgName: 'Team/2024/Aniruddha_Thakre_24.jpg',
+        sub: <>B.Tech Production ' 24</>,
+        linkedInLink: 'https://www.linkedin.com/in/aniruddha-thakre-992a92213/',
+        githubLink: 'https://github.com/Aniruddha1261',
+      },
+      {
+        name: 'Siddesh Patil',
+        imgName: 'Team/2024/Siddesh_Patil_24.jpg',
+        sub: <>B.Tech Electronics ' 24</>,
+        linkedInLink: 'https://www.linkedin.com/in/siddesh-patil-497b50206/',
+        githubLink: 'https://github.com/Sidshx',
+      },
+      {
+        name: 'Pratham Shah',
+        imgName: 'Team/2024/Pratham_Shah_24.jpeg',
+        sub: <>B.Tech Information Technology ' 24</>,
+        linkedInLink: 'https://www.linkedin.com/in/shahpratham',
+        githubLink: 'https://github.com/shahpratham',
+      },
+      {
+        name: 'Rishabh Bali',
+        imgName: 'Team/2024/rishabh_24.jpeg',
+        sub: <>B.Tech Computer Engineering ' 24</>,
+        linkedInLink: 'https://www.linkedin.com/in/rishabh-bali-3ba925216/',
+        githubLink: 'https://github.com/Ris-Bali',
+      },
+      {
+        name: 'Krishna Narayanan',
+        imgName: 'Team/2024/Krishna_Narayanan_24.jpg',
+        sub: <>B.Tech Electronics & Telecommunication ' 24</>,
+        linkedInLink: 'https://www.linkedin.com/in/krishna-narayanan-295b57209/',
+        githubLink: 'https://github.com/Krishna-13-cyber',
+      },
+      {
+        name: 'Sagar Chotalia',
+        imgName: 'Team/2024/Sagar_Chotalia_2024.jpg',
+        sub: <>B.Tech Electronics & Telecommunication ' 24</>,
+        linkedInLink: 'https://www.linkedin.com/in/sagar-chotalia/',
+        githubLink: 'https://github.com/sagarchotalia',
+      },
+      {
+        name: 'Rishikesh Donadkar',
+        imgName: 'Team/2024/Rishikesh_Donadkar_2024.jpg',
+        sub: <>B.Tech Electronics & Telecommunication ' 24</>,
+        linkedInLink: 'https://www.linkedin.com/in/rishikesh-donadkar-a75320228/',
+        githubLink: 'https://github.com/RISHI27-dot',
+      },
+      {
+        name: 'Premraj Jadhav',
+        imgName: 'Team/2024/Premraj_Jadhav_24.jpg',
+        sub: <>B.Tech Electronics ' 24</>,
+        linkedInLink: 'https://www.linkedin.com/in/premraj-jadhav-448a33233',
+        githubLink: 'https://github.com/Premraj02',
+      },
+      {
+        name: 'Viraj Jagadale',
+        imgName: 'Team/2024/Viraj_Jagadale_24.jpg',
+        sub: <>B.Tech Mechanical ' 24</>,
+        linkedInLink: 'https://www.linkedin.com/in/viraj-jagadale-173b23231',
+        githubLink: 'https://github.com/Jviraj',
+      },
+    ]
+  },
+  {
     year: '2023',
     alumnis: [
       {
