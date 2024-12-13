@@ -43,10 +43,7 @@ const Sponsors = () => {
   }, [mobileView]);
 
   const saveFile = () => {
-    saveAs(
-      `/static/documents/PR_brochure_24-25.pdf`,
-      `SRA_Brochure_2k24.pdf`
-    );
+    saveAs(`/static/documents/PR_brochure_24-25.pdf`, `SRA_Brochure_2k24.pdf`);
   };
 
   return (

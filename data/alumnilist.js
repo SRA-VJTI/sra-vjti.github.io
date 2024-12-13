@@ -1,6 +1,6 @@
 const AlumniList = [
   {
-    year: '2024' ,
+    year: '2024',
     alumnis: [
       {
         name: 'Moteen Shah',
@@ -9,7 +9,7 @@ const AlumniList = [
         linkedInLink: 'https://www.linkedin.com/in/moteen-shah-98997216b/',
         githubLink: 'https://github.com/Jamm02',
       },
-    
+
       {
         name: 'Chinmay Lonkar',
         imgName: 'Team/2024/Chinmay_Lonkar_24.JPG',
@@ -49,7 +49,8 @@ const AlumniList = [
         name: 'Krishna Narayanan',
         imgName: 'Team/2024/Krishna_Narayanan_24.jpg',
         sub: <>B.Tech Electronics & Telecommunication ' 24</>,
-        linkedInLink: 'https://www.linkedin.com/in/krishna-narayanan-295b57209/',
+        linkedInLink:
+          'https://www.linkedin.com/in/krishna-narayanan-295b57209/',
         githubLink: 'https://github.com/Krishna-13-cyber',
       },
       {
@@ -63,7 +64,8 @@ const AlumniList = [
         name: 'Rishikesh Donadkar',
         imgName: 'Team/2024/Rishikesh_Donadkar_2024.jpg',
         sub: <>B.Tech Electronics & Telecommunication ' 24</>,
-        linkedInLink: 'https://www.linkedin.com/in/rishikesh-donadkar-a75320228/',
+        linkedInLink:
+          'https://www.linkedin.com/in/rishikesh-donadkar-a75320228/',
         githubLink: 'https://github.com/RISHI27-dot',
       },
       {
@@ -80,7 +82,7 @@ const AlumniList = [
         linkedInLink: 'https://www.linkedin.com/in/viraj-jagadale-173b23231',
         githubLink: 'https://github.com/Jviraj',
       },
-    ]
+    ],
   },
   {
     year: '2023',
@@ -95,14 +97,24 @@ const AlumniList = [
       {
         name: 'Anushree Sabnis',
         imgName: 'Team/2023/AnushreeSabnis.jpg',
-        sub: <>Currently doing MS Mechanical Engineering at CMU, Previously at Acceleration Robotics </>,
+        sub: (
+          <>
+            Currently doing MS Mechanical Engineering at CMU, Previously at
+            Acceleration Robotics{' '}
+          </>
+        ),
         linkedInLink: 'https://www.linkedin.com/in/anushreesabnis',
         githubLink: 'https://github.com/MOLOCH-dev',
       },
       {
         name: 'Dhairya Shah',
         imgName: 'Team/2023/Dhairya_Shah.jpg',
-        sub: <>Currently doing PhD at NUS, Singapore, Previously RA at NUS, Singapore ' 23</>,
+        sub: (
+          <>
+            Currently doing PhD at NUS, Singapore, Previously RA at NUS,
+            Singapore ' 23
+          </>
+        ),
         linkedInLink: 'https://www.linkedin.com/in/dhairya-shah-489a4b14b/',
         githubLink: 'https://github.com/dhairyashah1',
       },
@@ -220,14 +232,24 @@ const AlumniList = [
       {
         name: 'Omkar Bhilare',
         imgName: 'Team/OmkarB.jpg',
-        sub: <>Currently doing MS ECE at University of Toronto, Previously Silicon Design Engineer at AMD</>,
+        sub: (
+          <>
+            Currently doing MS ECE at University of Toronto, Previously Silicon
+            Design Engineer at AMD
+          </>
+        ),
         linkedInLink: 'https://www.linkedin.com/in/omkar-bhilare-985aa2180',
         githubLink: 'https://github.com/ombhilare999',
       },
       {
         name: 'Vedant Paranjape',
         imgName: 'Team/Vedant.jpg',
-        sub: <>Currently doing MS ECE at Purdue, Previously Compiler Engineer at AMD</>,
+        sub: (
+          <>
+            Currently doing MS ECE at Purdue, Previously Compiler Engineer at
+            AMD
+          </>
+        ),
         linkedInLink: 'https://www.linkedin.com/in/vedantp16',
         githubLink: 'https://github.com/vedantparanjape',
       },
@@ -241,7 +263,12 @@ const AlumniList = [
       {
         name: 'Sravan Chittupalli',
         imgName: 'Team/Sravan.jpeg',
-        sub: <>Currently doing MS Robotics at CMU, Previously Research Programmer Analyst at CMU </>,
+        sub: (
+          <>
+            Currently doing MS Robotics at CMU, Previously Research Programmer
+            Analyst at CMU{' '}
+          </>
+        ),
         linkedInLink:
           'https://www.linkedin.com/in/sravan-chittupalli-a3777b16a/',
         githubLink: 'https://github.com/SravanChittupalli',

@@ -13,18 +13,6 @@ const SenateList = [
     githubLink: 'https://github.com/RapidRoger18',
   },
   {
-    name: 'Atharva Atre',
-    imgName: 'Team/2026/Atharva Atre.jpg',
-    sub: (
-      <>
-        Jt. General Secretary <br />
-        B.Tech Electronics ' 26
-      </>
-    ),
-    linkedInLink: 'https://www.linkedin.com/in/atharva-atre-817694252/',
-    githubLink: 'https://github.com/AtharvaAtre',
-  },
-  {
     name: 'Shankari Anandakrishnan',
     imgName: 'Team/2026/Shankari.jpg',
     sub: (
@@ -35,6 +23,18 @@ const SenateList = [
     ),
     linkedInLink: 'https://www.linkedin.com/in/shankari-anand/',
     githubLink: 'https://github.com/Shankari02',
+  },
+  {
+    name: 'Atharva Atre',
+    imgName: 'Team/2026/Atharva Atre.jpg',
+    sub: (
+      <>
+        Jt. General Secretary <br />
+        B.Tech Electronics ' 26
+      </>
+    ),
+    linkedInLink: 'https://www.linkedin.com/in/atharva-atre-817694252/',
+    githubLink: 'https://github.com/AtharvaAtre',
   },
   {
     name: 'Atharv Shailesh Patil',
@@ -65,7 +65,7 @@ const SenateList = [
     imgName: 'Team/2026/Saish_Karole.jpg',
     sub: (
       <>
-        Sponsership head <br />
+        Sponsorship head <br />
         B.Tech Electronics ' 26
       </>
     ),
@@ -141,7 +141,7 @@ const SenateList = [
     imgName: 'Team/2026/Purva_Yeshi.jpg',
     sub: (
       <>
-        TY Core
+        Core member
         <br />
         B.Tech Electronics and Telecommunication ' 26
       </>
@@ -154,7 +154,7 @@ const SenateList = [
     imgName: 'Team/2026/Suraj Sonawane.jpg',
     sub: (
       <>
-        TY Core
+        Core member
         <br />
         B.Tech Electronics and Telecommunication ' 26
       </>
