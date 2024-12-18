@@ -7,7 +7,7 @@ const Current = () => {
   return (
     <>
       <Hero
-        imgName={'team2025.jpeg'}
+        imgName={'team_2026.webp'}
         backgroundPosition={'center top'}
         title={<>The Current Team</>}
         subtitleList={['The Torch Runners']}
