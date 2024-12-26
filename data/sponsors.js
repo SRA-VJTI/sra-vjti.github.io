@@ -77,7 +77,7 @@ const sponsorsText_2 =
   "This journey is made possible through the regular Monetary and Technical support of our sponsors and Industry collaborations. Each of our partners has been an instrumental pillar in all the success achieved as a whole so far. By associating with VJTI's most technologically proficient club, the reach of your organisation is enhanced. Due to your early involvement with students at VJTI, they are far more likely to pick you as their first option to work with. You can learn about your customers, promote your products, and build long-lasting relationships with future leaders all in one place by sponsoring our events.";
 
 const sponsorsSubText =
-  'Please review the brochure and event itinerary to learn more about where you can fit in perfectly with our team. We look forward to collaborating with you!';
+  'Please review the brochure and event itinerary to learn more about where you can fit in perfectly with our team. We look forward to collaborating with you! You can also donate to us by using the link provided below.';
 
 export {
   SponsorListImages,
