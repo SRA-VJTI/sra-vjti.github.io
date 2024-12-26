@@ -16,6 +16,8 @@ import {
   faExternalLink,
   faAngleDown,
   faAngleUp,
+  faHandHoldingDollar,
+  faDonate,
 } from '@fortawesome/free-solid-svg-icons';
 import { faOpencart, faOpenid } from '@fortawesome/free-brands-svg-icons';
 import useWindowSize from '../../utils/ResizeHook';
@@ -90,6 +92,7 @@ const Sponsors = () => {
           <p>
             <b>{sponsorsSubText}</b>
           </p>
+          <div style={{display: 'flex', gap:'50px', justifyContent:'center'}}>
           <a>
             <button onClick={saveFile}>
               Brochure{' '}
@@ -98,6 +101,15 @@ const Sponsors = () => {
               </span>
             </button>
           </a>
+          <a href='https://pages.razorpay.com/support-sra' target='_blank'>
+            <button>
+              Donate{' '}
+              <span>
+                <FontAwesomeIcon icon={faDonate} />
+              </span>
+            </button>
+          </a>
+          </div>
           <h1>Sponsors</h1>
           <img
             src={`/static/images/sponsors/sponsorsLevel/${levelImages[0]}`}
