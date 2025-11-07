@@ -1,4 +1,4 @@
-import FlagshipProjects from '../../components/Projects/FlagshipProjects/FlagshipProjects';
+import FlagshipProjects from '@/components/projects/FlagshipProjects/FlagshipProjects';
 import Head from 'next/head';
 
 const FlagshipProjectsPage = () => {

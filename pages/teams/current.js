@@ -1,4 +1,4 @@
-import Current from '../../components/Teams/Current/Current';
+import Current from '@/components/teams/Current/Current';
 import Head from 'next/head';
 
 const CurrentPage = () => {

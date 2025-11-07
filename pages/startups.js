@@ -1,4 +1,4 @@
-import Startups from '../components/Startups/Startups';
+import Startups from '@/components/pages/Startups/Startups';
 import Head from 'next/head';
 
 const StartupsPage = () => {

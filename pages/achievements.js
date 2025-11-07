@@ -1,4 +1,4 @@
-import Achievements from '../components/Achievements/Achievements';
+import Achievements from '@/components/pages/Achievements/Achievements';
 import Head from 'next/head';
 
 const AchievementsPage = () => {

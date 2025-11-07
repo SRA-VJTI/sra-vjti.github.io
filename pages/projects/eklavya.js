@@ -1,4 +1,4 @@
-import EklavyaProjects from '../../components/Projects/EklavyaProjects/EklavyaProjects';
+import EklavyaProjects from '@/components/projects/EklavyaProjects/EklavyaProjects';
 import Head from 'next/head';
 
 const EklavyaProjectsPage = () => {

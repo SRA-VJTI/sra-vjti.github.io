@@ -1,4 +1,4 @@
-import Activities from '../components/Activities/Activities';
+import Activities from '@/components/pages/Activities/Activities';
 import Head from 'next/head';
 
 const ActivitiesPage = () => {

@@ -1,4 +1,4 @@
-import Publications from '../components/Publications/Publications';
+import Publications from '@/components/pages/Publications/Publications';
 import Head from 'next/head';
 
 const PublicationsPage = () => {

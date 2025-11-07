@@ -1,4 +1,4 @@
-import ContactUs from '../components/ContactUs/ContactUs';
+import ContactUs from '@/components/pages/ContactUs/ContactUs';
 import Head from 'next/head';
 
 const ContactUsPage = () => {

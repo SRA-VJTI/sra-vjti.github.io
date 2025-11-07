@@ -1,4 +1,4 @@
-import Sponsors from '../components/CorporateSupport/CorporateSupport';
+import Sponsors from '@/components/pages/CorporateSupport/CorporateSupport';
 import Head from 'next/head';
 
 const CSR = () => {

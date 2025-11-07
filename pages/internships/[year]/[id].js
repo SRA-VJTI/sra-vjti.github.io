@@ -1,5 +1,5 @@
-import SingleBlog from '../../../components/SingleBlog/SingleBlog';
-import BlogList from '../../../data/blogs';
+import SingleBlog from '@/components/pages/SingleBlog/SingleBlog';
+import BlogList from '@/data/content/blogs';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 

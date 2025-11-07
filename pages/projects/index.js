@@ -1,4 +1,4 @@
-import ProjectSelection from '../../components/Projects/ProjectSelection/ProjectSelection';
+import ProjectSelection from '@/components/projects/ProjectSelection/ProjectSelection';
 import Head from 'next/head';
 
 const ProjectSelectionPage = () => {
