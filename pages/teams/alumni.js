@@ -1,4 +1,4 @@
-import Alumni from '@/components/teams/Alumni/Alumni';
+import Alumni from '../../components/Teams/Alumni/Alumni';
 import Head from 'next/head';
 
 const AlumniPage = () => {

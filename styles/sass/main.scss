@@ -1,0 +1,451 @@
+@import 'partials/nav';
+@import 'partials/hero';
+@import 'partials/common';
+@import 'partials/footer';
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.main-container-ravi {
+  background-color: red;
+}
+
+#hero {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('/static/images/landing-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+
+  #notif {
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-name: wobble;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes wobble {
+  30%,
+  70% {
+    transform: rotate(0deg);
+  }
+
+  35%,
+  65% {
+    transform: rotate(10deg);
+    color: $lightest;
+  }
+
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+
+  45%,
+  55% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+}
+
+#is {
+  height: 240vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .caption {
+    color: white;
+    width: 100%;
+    min-height: 80vh;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-head {
+      text-transform: uppercase;
+      font-size: 7rem;
+      font-family: 'Six Caps', sans-serif;
+      letter-spacing: 10px;
+    }
+    &-sub {
+      font-family: 'Merriweather', serif;
+      margin-top: 20px;
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .caption {
+      &-head {
+        font-size: 5rem;
+      }
+      &-sub {
+        font-size: 1rem;
+        padding: 0 2em;
+      }
+    }
+  }
+}
+
+#ideate {
+  background-image: linear-gradient(#00000081, #00000081),
+    url('/static/images/ideate.jpg');
+}
+
+#innovate {
+  background-image: linear-gradient(#00000098, #00000098),
+    url('/static/images/innovate.jpg');
+}
+
+#inspire {
+  background-image: linear-gradient(#00000081, #00000081),
+    url('/static/images/inspire.jpg');
+}
+
+#ideate,
+#innovate,
+#inspire {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 290vw auto;
+
+  @media (min-width: 550px) {
+    background-size: 250vw auto;
+  }
+  @media (min-width: 750px) {
+    background-size: 200vw auto;
+  }
+  @media (min-width: 900px) {
+    background-size: 100vw auto;
+  }
+}
+
+#about-us {
+  width: 100%;
+  // background-color: rgb(49, 49, 49);
+  &-main {
+    width: 100%;
+    background-image: linear-gradient(#00000081, #00000081),
+      url('/static/images/aboutus-final.jpg');
+    min-height: 60vh;
+    padding: 3em 0.5em;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    h1 {
+      font-size: 3rem;
+      // color: $lightest;
+    }
+    p {
+      font-family: sans-serif;
+      font-size: 1.1rem;
+      width: 90%;
+      line-height: 165%;
+      padding: 1em;
+      text-align: center;
+      // margin-top: 20px;
+    }
+  }
+
+  &-team,
+  &-alumni {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      width: 50%;
+      // height: 50vh;
+    }
+
+    p {
+      font-family: 'Oswald', sans-serif;
+      // height: 100%;
+      // width: 20%;
+      text-align: center;
+      font-size: 1.3rem;
+      padding: 0 2rem;
+      transition: color 0.3s;
+    }
+
+    &:hover {
+      p {
+        color: $lightest;
+      }
+    }
+  }
+
+  &-alumni {
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: 650px) {
+    &-team,
+    &-alumni {
+      flex-direction: column;
+      p {
+        padding: 3em 1em;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#our-projects {
+  width: 100%;
+  // min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+
+  background-image: linear-gradient(#000000ab, #000000ab),
+    url('/static/images/our-projects-final.jpg');
+  background-size: cover;
+  background-position: center;
+
+  h1 {
+    transition: color 0.3s;
+    padding: 1em;
+    font-size: 3rem;
+  }
+  button {
+    margin: 0.5em;
+    font-size: 1.3rem;
+    border: 2px solid white;
+    padding: 0.7em 1em;
+    transition: all 0.2s;
+    &:hover {
+      border-radius: 5px;
+      border-color: $lightest;
+      color: $lightest;
+    }
+  }
+  &:hover {
+    h1 {
+      color: $light;
+    }
+  }
+
+  @media (max-width: 650px) {
+    h1 {
+      font-size: 2rem;
+    }
+    button {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+#reach {
+  h1 {
+    margin: 50px 0 20px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Oswald', sans-serif;
+  }
+  #reach-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 1em;
+    img {
+      margin: 1.5em;
+      width: 150px;
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 650px) {
+        margin: 0.5em;
+        width: 100px;
+      }
+    }
+  }
+}
+
+#notifs {
+  width: 100%;
+  min-height: 50vh;
+  width: 80%;
+  margin: auto;
+  padding: 3em;
+
+  font-family: sans-serif;
+  h1 {
+    font-size: 2.5rem;
+    padding-bottom: 5px;
+    border-bottom: 5px solid $light;
+    border-bottom-left-radius: 20px;
+    padding-left: 10px;
+  }
+
+  &-main {
+    width: 100%;
+    .notif {
+      font-size: 1.1rem;
+      border-bottom: 3px solid $lightest;
+      border-left: 2px solid $lightest;
+      padding: 22px;
+      padding-left: 1.5em;
+      border-radius: 30px;
+      border-bottom-right-radius: 0px;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: translateX(1%);
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    width: 100%;
+    h1 {
+      font-size: 1.5rem;
+    }
+    &-main {
+      .notif {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  @media (max-width: 350px) {
+    width: 100%;
+    h1 {
+      font-size: 1.2rem;
+      padding-bottom: 1em;
+    }
+    &-main {
+      .notif {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+// Contact Us Page
+
+#contact-form {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  #form-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $light;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 50% 100%, 100% 50%, 50% 0);
+    z-index: -10;
+
+    @media (max-width: 750px) {
+      clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+    }
+  }
+
+  form {
+    width: 50%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+
+    // border: 2px solid $dark;
+    border-radius: 20px;
+
+    label {
+      font-size: 1.5rem;
+      margin: 10px 0;
+      color: $lightest;
+    }
+    input[type='text'] {
+      background-color: black;
+      color: white;
+      font-size: 1.2rem;
+      padding: 0.5em 1em;
+      border: 1px solid $lightest;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    textarea {
+      background-color: black;
+      color: white;
+      font-size: 1.2rem;
+      padding: 0.5em 1em;
+      border: 1px solid $lightest;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      font-family: sans-serif;
+      resize: none;
+    }
+    input[type='submit'] {
+      background-color: black;
+      color: $lightest;
+      width: max-content;
+      padding: 0.5em 1em;
+      margin: 20px auto 0;
+      border: 2px solid $lightest;
+      border-radius: 5px;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 1000px) {
+      width: 70%;
+    }
+    @media (max-width: 680px) {
+      width: 80%;
+    }
+    @media (max-width: 500px) {
+      width: 90%;
+    }
+    @media (max-width: 500px) {
+      width: 95%;
+      label {
+        font-size: 1.2rem;
+      }
+      input[type='text'] {
+        font-size: 1rem;
+        padding: 0.5em;
+      }
+      textarea {
+        font-size: 1rem;
+        padding: 0.5em;
+      }
+    }
+  }
+}

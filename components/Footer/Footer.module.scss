@@ -1,0 +1,42 @@
+@import '../variables';
+
+.footer {
+  border-top: 2px solid $light;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h3 {
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .footerIcons {
+    font-size: 1.2rem;
+    a {
+      margin: 0 10px;
+      transition: color 0.2s;
+      :hover {
+        color: $light;
+        animation: wiggle 0.3s forwards;
+        // transform: translateY(10px);
+      }
+    }
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(2px);
+  }
+  66% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
