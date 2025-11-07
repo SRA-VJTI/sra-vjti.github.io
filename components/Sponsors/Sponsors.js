@@ -45,10 +45,7 @@ const Sponsors = () => {
   }, [mobileView]);
 
   const saveFile = () => {
-    saveAs(
-      `/static/documents/PR_brochure_24-25.pdf`,
-      `SRA_Brochure_2k24.pdf`
-    );
+    saveAs(`/static/documents/PR_brochure_24-25.pdf`, `SRA_Brochure_2k24.pdf`);
   };
 
   return (
@@ -92,23 +89,25 @@ const Sponsors = () => {
           <p>
             <b>{sponsorsSubText}</b>
           </p>
-          <div style={{display: 'flex', gap:'50px', justifyContent:'center'}}>
-          <a>
-            <button onClick={saveFile}>
-              Brochure{' '}
-              <span>
-                <FontAwesomeIcon icon={faExternalLink} />
-              </span>
-            </button>
-          </a>
-          <a href='https://pages.razorpay.com/support-sra' target='_blank'>
-            <button>
-              Donate{' '}
-              <span>
-                <FontAwesomeIcon icon={faDonate} />
-              </span>
-            </button>
-          </a>
+          <div
+            style={{ display: 'flex', gap: '50px', justifyContent: 'center' }}
+          >
+            <a>
+              <button onClick={saveFile}>
+                Brochure{' '}
+                <span>
+                  <FontAwesomeIcon icon={faExternalLink} />
+                </span>
+              </button>
+            </a>
+            <a href='https://pages.razorpay.com/support-sra' target='_blank'>
+              <button>
+                Donate{' '}
+                <span>
+                  <FontAwesomeIcon icon={faDonate} />
+                </span>
+              </button>
+            </a>
           </div>
           <h1>Sponsors</h1>
           <img

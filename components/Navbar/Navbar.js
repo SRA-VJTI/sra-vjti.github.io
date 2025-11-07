@@ -1,9 +1,4 @@
-import {
-  useEffect,
-  useState,
-  useCallback,
-  useMemo,
-} from 'react';
+import { useEffect, useState, useCallback, useMemo } from 'react';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
 import useWindowSize from '../../utils/ResizeHook';
@@ -36,7 +31,7 @@ const Navbar = () => {
   }, [isNavbarDown]);
 
   const onKhopdiClick = useCallback(() => {
-    setIsNavbarDown(prev => !prev);
+    setIsNavbarDown((prev) => !prev);
   }, []);
 
   const linkClick = useCallback(() => {
@@ -45,18 +40,20 @@ const Navbar = () => {
     }
   }, [size.width, isNavbarDown]);
 
-  const navItems = useMemo(() => (
-    NavbarData.map((navItem, idx) => (
-      <NavbarItems
-        key={`nav-${navItem.name}-${idx}`}
-        navItem={navItem}
-        idx={idx}
-        linkClick={linkClick}
-        isNavbarDown={isNavbarDown}
-        setIsNavbarDown={setIsNavbarDown}
-      />
-    ))
-  ), [linkClick, isNavbarDown]);
+  const navItems = useMemo(
+    () =>
+      NavbarData.map((navItem, idx) => (
+        <NavbarItems
+          key={`nav-${navItem.name}-${idx}`}
+          navItem={navItem}
+          idx={idx}
+          linkClick={linkClick}
+          isNavbarDown={isNavbarDown}
+          setIsNavbarDown={setIsNavbarDown}
+        />
+      )),
+    [linkClick, isNavbarDown]
+  );
 
   return (
     <nav className={styles.navbar} id='navbar'>

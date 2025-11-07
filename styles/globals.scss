@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
 
 $black: #000000;
-$dark: #8B0000;
-$light: #DC143C;
-$lightest: #FF6B6B;
+$dark: #8b0000;
+$light: #dc143c;
+$lightest: #ff6b6b;
 
 // Resets
 * {
@@ -18,7 +18,8 @@ $lightest: #FF6B6B;
 body {
   background-color: #000000;
   color: white;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -45,7 +46,12 @@ button {
 }
 
 /* Minimal text shadows for readability over images */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
