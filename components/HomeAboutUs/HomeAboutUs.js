@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {
   AboutUsText,
   AboutVJTI,
@@ -20,16 +21,26 @@ const HomeAboutUs = () => {
         </div>
         <div className={styles.aboutUsTeam}>
           <p>{AboutUsTeamText}</p>
-          <img
+          <Image
             src={`/static/images/${AboutUsImages.newgroup}`}
-            alt='SRA Team group photo'
+            alt='SRA Team current members group photo'
+            width={1200}
+            height={800}
+            loading='lazy'
+            quality={85}
+            style={{ width: '100%', height: 'auto' }}
           />
         </div>
         <div className={styles.aboutUsAlumni}>
           <p>{AboutUsAlumniText}</p>
-          <img
+          <Image
             src={`/static/images/${AboutUsImages.oldGroup}`}
-            alt='SRA Team group photo'
+            alt='SRA Team alumni group photo'
+            width={1200}
+            height={800}
+            loading='lazy'
+            quality={85}
+            style={{ width: '100%', height: 'auto' }}
           />
         </div>
       </div>

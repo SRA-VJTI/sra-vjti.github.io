@@ -16,25 +16,45 @@ const SingleBlogPage = (props) => {
 export async function getStaticProps(context) {
   const year = context.params.year;
   const id = context.params.id;
-  const blog = BlogList.find((BlogYear) => BlogYear.year === year)?.blogs[id];
+  const blogYear = BlogList.find((BlogYear) => BlogYear.year === year);
+  const blog = blogYear?.blogs?.[id];
+
+  if (!blog || !blog.title || !blog.author || blog.content === undefined) {
+    return {
+      notFound: true,
+    };
+  }
+
+  // Ensure all fields are defined, use defaults for missing optional fields
   return {
     props: {
-      ...blog,
+      photo: blog.photo || '',
+      title: blog.title,
+      author: blog.author,
+      time: blog.time || '',
+      short: blog.short || '',
+      content: blog.content,
     },
   };
 }
 export function getStaticPaths() {
   const blogList = [];
-  for (var i = 0; i < BlogList.length; i++) {
-    var expYear = BlogList[i]?.year;
-    var listLength = BlogList[i]?.blogs?.length;
-    for (var j = 0; j < listLength; j++) {
-      blogList.push({
-        params: {
-          year: expYear,
-          id: j.toString(),
-        },
-      });
+  for (let i = 0; i < BlogList.length; i++) {
+    const expYear = BlogList[i]?.year;
+    const blogs = BlogList[i]?.blogs;
+    if (!blogs || !expYear) continue;
+
+    for (let j = 0; j < blogs.length; j++) {
+      const blog = blogs[j];
+      // Only add paths for blogs that have all required fields
+      if (blog && blog.title && blog.author && blog.content !== undefined) {
+        blogList.push({
+          params: {
+            year: expYear,
+            id: j.toString(),
+          },
+        });
+      }
     }
   }
   return {

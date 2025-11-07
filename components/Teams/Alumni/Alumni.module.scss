@@ -26,21 +26,63 @@
   border-radius: 20px;
   // border-bottom: 2px solid $light;
   .alumniCloudElem {
-    // margin: 1em;
     padding: 1em;
     flex-grow: 1;
     text-align: center;
     font-size: 1.5rem;
-    transition: background-color 0.2s;
-
+    transition: all 0.2s;
     border-radius: 10px;
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+
     &:hover {
       background-color: rgba(255, 255, 255, 0.199);
+      transform: translateY(-2px);
     }
-    // border-right: 1px solid $lightest;
 
-    // &:last-of-type {
-    // 	border-right: none;
-    // }
+    &.active {
+      background-color: rgba(255, 255, 255, 0.3);
+      font-weight: bold;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin: 3em 0;
+  padding: 2em;
+
+  .paginationBtn {
+    padding: 0.8em 1.5em;
+    background-color: $light;
+    color: $black;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover:not(:disabled) {
+      background-color: $lightest;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  .paginationInfo {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $lightest;
   }
 }

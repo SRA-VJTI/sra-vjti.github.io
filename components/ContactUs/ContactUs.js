@@ -1,40 +1,38 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import styles from './ContactUs.module.scss';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 const ContactUs = () => {
-  // const [name, setName] = useState('');
-  // const [email, setEmail] = useState('');
-  // const [message, setMessage] = useState('');
+  const formRef = useRef(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
-  const onFormSubmit = (e) => {
+  const onFormSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
 
-    emailjs
-      .sendForm(
+    try {
+      const result = await emailjs.sendForm(
         'contact_service_sra',
         'contact_form_to_sra',
-        e.target,
+        formRef.current,
         'user_NyS5GVNsxnRp1kX3UZeSO'
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
       );
-
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('message').value = '';
+      setSubmitStatus('success');
+      formRef.current.reset();
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className={styles.contactForm}>
       <div className={styles.formOverlay}></div>
-      <form onSubmit={onFormSubmit}>
+      <form ref={formRef} onSubmit={onFormSubmit}>
         <label htmlFor='name'>Name:</label>
         <input
           type='text'
@@ -43,15 +41,19 @@ const ContactUs = () => {
           className={styles.name}
           placeholder='Name'
           autoComplete='name'
+          required
+          disabled={isSubmitting}
         />
         <label htmlFor='email'>Email:</label>
         <input
-          type='text'
+          type='email'
           name='user_email'
           id='email'
           className={styles.email}
           placeholder='Email'
           autoComplete='email'
+          required
+          disabled={isSubmitting}
         />
         <label htmlFor='message'>Message for us:</label>
         <textarea
@@ -61,9 +63,24 @@ const ContactUs = () => {
           placeholder='Message'
           autoComplete='off'
           rows='3'
+          required
+          disabled={isSubmitting}
         ></textarea>
 
-        <input type='submit' value='Submit!' />
+        {submitStatus === 'success' && (
+          <p className={styles.successMessage}>Message sent successfully!</p>
+        )}
+        {submitStatus === 'error' && (
+          <p className={styles.errorMessage}>
+            Failed to send message. Please try again.
+          </p>
+        )}
+
+        <input
+          type='submit'
+          value={isSubmitting ? 'Sending...' : 'Submit!'}
+          disabled={isSubmitting}
+        />
       </form>
     </div>
   );
