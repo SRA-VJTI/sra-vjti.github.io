@@ -10,13 +10,17 @@
   font-family: 'Oswald', sans-serif;
   .heroHead {
     font-size: 4.6rem;
-    letter-spacing: 1px;
+    font-weight: 600;
+    letter-spacing: 2px;
     line-height: 130%;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
   }
   .heroSub {
     font-size: 1.5rem;
     margin-top: 30px;
     text-align: center;
+    font-weight: 400;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   }
   @media (max-width: 650px) {
     .heroHead {
@@ -139,11 +143,16 @@
       font-size: 7rem;
       font-family: 'Six Caps', sans-serif;
       letter-spacing: 10px;
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
     }
     .captionSub {
-      font-family: 'Merriweather', serif;
+      font-family: 'Inter', sans-serif;
       margin-top: 20px;
       font-size: 1.3rem;
+      font-weight: 400;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+      max-width: 600px;
+      padding: 0 20px;
     }
   }
 

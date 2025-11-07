@@ -22,9 +22,9 @@ function Hero({
         style={{
           backgroundImage: `linear-gradient(
                             to bottom,
-                            rgba(0, 0, 0, 0.5),
-                            rgba(0, 0, 0, 0.5),
-                            rgba(0, 0, 0, 0.5)), url("/static/images/hero/${imgName}")`,
+                            rgba(0, 0, 0, 0.15),
+                            rgba(0, 0, 0, 0.25),
+                            rgba(0, 0, 0, 0.15)), url("/static/images/hero/${imgName}")`,
           backgroundPosition: backgroundPosition,
         }}
         className={styles.hero}
@@ -58,7 +58,7 @@ function Hero({
         <div className={styles.is} id='is'>
           <div
             style={{
-              backgroundImage: `linear-gradient(#00000081, #00000081),
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
 		url("/static/images/ideate.png")`,
             }}
             className={styles.caption}
@@ -70,7 +70,7 @@ function Hero({
           </div>
           <div
             style={{
-              backgroundImage: `linear-gradient(#00000098, #00000098),
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
 		url("/static/images/innovate.png")`,
             }}
             className={styles.caption}
@@ -83,7 +83,7 @@ function Hero({
           </div>
           <div
             style={{
-              backgroundImage: `linear-gradient(#00000081, #00000081),
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
 		url("/static/images/inspire.png")`,
             }}
             className={styles.caption}
