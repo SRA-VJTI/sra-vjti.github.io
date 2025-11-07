@@ -1,4 +1,4 @@
-import Sponsors from '../components/Sponsors/Sponsors';
+import Sponsors from '@/components/pages/Sponsors/Sponsors';
 import Head from 'next/head';
 
 const SponsorsPage = () => {

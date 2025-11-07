@@ -1,4 +1,4 @@
-import OngoingProjects from '../../components/Projects/OngoingProjects/OngoingProjects';
+import OngoingProjects from '@/components/projects/OngoingProjects/OngoingProjects';
 import Head from 'next/head';
 
 const OngoingProjectsPage = () => {

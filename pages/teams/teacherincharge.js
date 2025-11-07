@@ -1,4 +1,4 @@
-import TeacherIncharge from '../../components/Teams/TeacherIncharge/TeacherIncharge';
+import TeacherIncharge from '@/components/teams/TeacherIncharge/TeacherIncharge';
 import Head from 'next/head';
 
 const TeacherInchargePage = () => {
