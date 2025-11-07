@@ -1,0 +1,83 @@
+@import '../variables';
+
+.blogDetails {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //   background-color: rebeccapurple;
+  .blogTitle {
+    font-size: 5rem;
+    font-family: 'Oswald';
+    border-bottom: 3px solid $light;
+  }
+  .blogAuthor {
+    font-size: 2rem;
+    position: relative;
+    margin-top: 50px;
+    left: 180px;
+  }
+
+  @media (max-width: 1300px) {
+    .blogTitle {
+      font-size: 4rem;
+    }
+    .blogAuthor {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .blogTitle {
+      font-size: 3rem;
+    }
+    .blogAuthor {
+      font-size: 1.5rem;
+      margin-top: 25px;
+      left: 100px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .blogTitle {
+      font-size: 2rem;
+    }
+    .blogAuthor {
+      font-size: 1.2rem;
+      left: 80px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    height: 40vh;
+  }
+}
+
+.blogContent {
+  width: 70%;
+  margin: 0 auto;
+  line-height: 150%;
+
+  .blogImg {
+    display: block;
+    width: 60%;
+    margin: 50px auto;
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
+  .blogSubtitle {
+    font-size: 200rem;
+    margin-bottom: 10px;
+    line-height: 200%;
+  }
+  .blogText {
+    margin-bottom: 50px;
+  }
+
+  @media (max-width: 1000px) {
+    width: 80%;
+  }
+}

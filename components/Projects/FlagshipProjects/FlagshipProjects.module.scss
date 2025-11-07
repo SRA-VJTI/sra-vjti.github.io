@@ -1,0 +1,50 @@
+@import '../../variables';
+
+.flagshipProj {
+  width: 100%;
+  min-height: 70vh;
+  // margin: 0 auto;
+  margin-bottom: 3em;
+
+  .flagshipProjImg {
+    background-position: center center;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: 100vw;
+    height: 60vh;
+    @media (max-width: 650px) {
+      height: 40vh;
+    }
+    @media (max-width: 450px) {
+      height: 30vh;
+    }
+  }
+  .flagshipProjCont {
+    width: 70%;
+    margin: auto;
+    border-bottom: 2px solid $light;
+    padding-bottom: 1em;
+    .flagshipProjContName {
+      font-size: 3rem;
+      text-align: center;
+      padding: 0em;
+    }
+    .flagshipProjContSub {
+      padding: 0.1em;
+      line-height: 160%;
+      margin: 1em 0;
+      text-align: center;
+    }
+    .flagshipProjContLinks {
+      text-align: center;
+      a {
+        font-size: 1.5rem;
+        transition: color 0.2s;
+        &:hover {
+          color: $dark;
+        }
+      }
+    }
+  }
+}

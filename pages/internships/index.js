@@ -1,4 +1,4 @@
-import Blogs from '@/components/pages/Blogs/Blogs';
+import Blogs from '../../components/Blogs/Blogs';
 import Head from 'next/head';
 const BlogPage = () => {
   return (

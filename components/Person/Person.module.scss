@@ -1,0 +1,178 @@
+@import '../variables';
+
+.person {
+  .personImg {
+    background-image: url('/static/images/prof-plac1.jpg');
+    // background-size: 100%;
+  }
+}
+.personr {
+  .personImg {
+    background-image: url('/static/images/prof-plac2.jpg');
+    // background-size: 100%;
+  }
+}
+
+.person {
+  width: 70%;
+  height: 45vh;
+  margin: 5em auto;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .personImg {
+    // margin-right: 1em;
+    width: 30%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .personCont {
+    width: 70%;
+    height: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: 250%;
+    .personContName {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      padding-bottom: 0.15em;
+      transition: border-bottom 0.3s;
+      border-bottom: 1px solid $lightest;
+    }
+    .personContSub {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .links {
+      width: 100%;
+      font-size: 1.4rem;
+      a {
+        &:hover {
+          color: $light;
+        }
+        transition: color 0.2s;
+        padding-right: 0.5em;
+      }
+    }
+
+    @media (max-width: 950px) {
+      .personContName {
+        font-size: 1.5rem;
+      }
+
+      .personContSub {
+        font-size: 1rem;
+      }
+    }
+  }
+  &:hover {
+    .personCont {
+      .personContName {
+        border-bottom: 1px solid $light;
+      }
+    }
+  }
+  @media (max-width: 750px) {
+    width: 90%;
+    margin: 1em auto;
+    height: 90vh;
+    flex-direction: column;
+    .personImg {
+      width: 100%;
+      // height: 80%;
+    }
+    .personCont {
+      width: 100%;
+      // height: 50%;
+    }
+  }
+}
+
+.personr {
+  width: 70%;
+  height: 45vh;
+  margin: 5em auto;
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  .personImg {
+    // margin-right: 1em;
+    width: 30%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .personCont {
+    width: 70%;
+    height: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: right;
+    line-height: 250%;
+    .personContName {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      padding-bottom: 0.15em;
+      border-bottom: 1px solid $lightest;
+    }
+    .personContSub {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    .links {
+      width: 100%;
+      font-size: 1.4rem;
+      a {
+        &:hover {
+          color: $light;
+        }
+        transition: color 0.2s;
+        padding-right: 0.5em;
+      }
+    }
+    @media (max-width: 950px) {
+      .personContName {
+        font-size: 1.5rem;
+      }
+
+      .personContSub {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &:hover {
+    .personCont {
+      .personContName {
+        border-bottom: 1px solid $light;
+      }
+    }
+  }
+
+  @media (max-width: 750px) {
+    width: 90%;
+    margin: 1em auto;
+    height: 90vh;
+    flex-direction: column;
+    .personImg {
+      width: 100%;
+      // height: 80%;
+    }
+    .personCont {
+      width: 100%;
+      // height: 50%;
+    }
+  }
+}

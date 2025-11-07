@@ -1,4 +1,4 @@
-import TeamsIndex from '@/components/teams/TeamSelection/TeamsIndex';
+import TeamsIndex from '../../components/Teams/TeamSelection/TeamsIndex';
 import Head from 'next/head';
 
 const TeamsPage = () => {

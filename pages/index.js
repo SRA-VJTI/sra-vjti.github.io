@@ -1,10 +1,10 @@
-import Hero from '@/components/common/Hero/Hero';
-import HomeAboutUs from '@/components/home/HomeAboutUs/HomeAboutUs';
-import OurReach from '@/components/home/OurReach/OurReach';
-import OurSponsors from '@/components/home/OurSponsors/OurSponsors';
-import OurCorporates from '@/components/home/OurCorporates/OurCorporates';
-import HomeNotifications from '@/components/home/HomeNotifications/HomeNotifications';
-import { HeroTags } from '@/data';
+import Hero from '../components/Hero/Hero';
+import HomeAboutUs from '../components/HomeAboutUs/HomeAboutUs';
+import OurReach from '../components/OurReach/OurReach';
+import OurSponsors from '../components/OurSponsors/OurSponsors';
+import OurCorporates from '../components/OurCorporates/OurCorporates';
+import HomeNotifications from '../components/HomeNotifications/HomeNotifications';
+import { HeroTags } from '../data';
 import Head from 'next/head';
 
 const Home = () => {

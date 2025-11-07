@@ -1,0 +1,303 @@
+@import '../variables';
+.CorpSupportMob {
+  height: 250px;
+  // background-color: red;
+
+  position: relative;
+  .facilitiesPic {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .iCard {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: $light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: clip-path 0.8s;
+
+    .iButton {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      font-size: 1.2rem;
+      top: 0.9rem;
+      margin-left: 72%;
+      cursor: pointer;
+      // color: black;
+    }
+    .iInfo {
+      text-align: center;
+      width: 80%;
+      margin-bottom: 20px;
+      font-family: 'Oswald', sans-serif;
+    }
+    .iLink {
+      font-size: 1.5rem;
+    }
+
+    // 4% and 120%
+    clip-path: circle(6% at 86% 10%);
+  }
+}
+.reach {
+  p {
+    font-family: sans-serif;
+    font-size: 1.1rem;
+    width: 100%;
+    line-height: 165%;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 2em;
+    text-align: center;
+    // margin-top: 20px;
+    @media (max-width: 650px) {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+  }
+  h1 {
+    margin: 50px 0 20px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Oswald', sans-serif;
+  }
+  h2 {
+    margin: 50px 0 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+  }
+  .equipments {
+    padding: 20px 60px 20px 60px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    @media (max-width: 650px) {
+      font-size: 1.2rem;
+    }
+  }
+  a {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Oswald', sans-serif;
+  }
+  button {
+    display: block;
+    margin: 4rem auto;
+    font-size: 1.3rem;
+    border: 2px solid white;
+    padding: 0.7em 1em;
+    transition: all 0.2s;
+    &:hover {
+      border-radius: 5px;
+      border-color: $lightest;
+      color: $lightest;
+    }
+    @media (max-width: 650px) {
+      font-size: 1.2rem;
+    }
+  }
+  .more {
+    display: block;
+    margin: 1rem auto;
+    font-size: 0.6rem;
+    border: 2px solid white;
+    padding: 0.5em 0.5em;
+    transition: all 0.2s;
+    &:hover {
+      border-radius: 5px;
+      border-color: $lightest;
+      color: $lightest;
+    }
+    @media (max-width: 650px) {
+      font-size: 0.6rem;
+    }
+  }
+  .hoverText {
+    position: absolute;
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 50%;
+    padding: 50px 100px 50px 100px;
+    border-radius: 15px;
+    top: 55%;
+    left: 50%;
+  }
+  .CorpText {
+    position: relative;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    // margin-top: 20px;
+    @media (max-width: 650px) {
+      text-wrap: wrap;
+      font-size: 0.8rem;
+    }
+  }
+  .Carousel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+    top: 0;
+    :hover {
+      .facilitiesUpdate {
+        opacity: 0.5;
+        transition-duration: 1000ms;
+      }
+    }
+  }
+  .facilitiesUpdate {
+    height: 720px;
+    top: 0;
+    object-position: 55%;
+    object-fit: contain;
+    object-position: center;
+    @media (max-width: 650px) {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .CorpDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .vl {
+      border-left: 2px solid $lightest;
+      height: 200px;
+      @media (max-width: 800px) {
+        display: none;
+      }
+    }
+    .CorpText {
+      font-family: 'Oswald', sans-serif;
+      margin-right: 100px;
+      text-align: center;
+      font-size: 1.8rem;
+      padding: 0 2rem;
+      transition: color 0.3s;
+      @media (max-width: 800px) {
+        text-wrap: wrap;
+        font-size: 1rem;
+        margin: auto;
+      }
+    }
+    .CorpImage {
+      margin: 20px 40px 20px 140px;
+      border-radius: 20px;
+      height: 300px;
+      width: auto;
+      @media (max-width: 800px) {
+        width: auto;
+        height: 150px;
+        margin: 5px;
+      }
+    }
+    .CorpImpImage {
+      margin: 20px 40px 20px 140px;
+      border-radius: 20px;
+      height: auto;
+      width: 200px;
+      @media (max-width: 800px) {
+        width: auto;
+        height: 150px;
+        margin: 5px;
+      }
+    }
+
+    &:hover {
+      .CorpText {
+        color: $lightest;
+      }
+    }
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+      .CorpText {
+        padding: 3em 1em;
+        margin: 0;
+      }
+    }
+  }
+  .Carousel_items {
+    width: 45%;
+    align-self: center;
+    align-items: center;
+    padding: auto;
+    @media (max-width: 650px) {
+      width: 250px;
+    }
+  }
+  hr {
+    width: 40%;
+    border: 1px solid $lightest;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .hr2 {
+    width: 30%;
+    border: 1px solid $lightest;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .reachGroup {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 1em;
+    margin-bottom: 5em;
+    img {
+      margin: 1.5rem;
+      width: 150px;
+      transition: transform 0.2s;
+      &:hover {
+        transform: scale(1.01);
+      }
+      @media (max-width: 650px) {
+        margin: 0.5em;
+        width: 100px;
+      }
+    }
+  }
+
+  .CSR_Facility .changesMadeThroughCSR {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+    object-position: center;
+    @media (max-width: 650px) {
+      width: 250px;
+      height: 150px;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .CSR_Facility {
+    margin-bottom: 40px;
+  }
+
+  .changesMadeThroughCSRText {
+    @media (max-width: 650px) {
+      padding: auto;
+      margin-bottom: 40px;
+      text-align: center;
+      font-size: 0.8rem;
+      font-family: 'Oswald', sans-serif;
+    }
+  }
+}

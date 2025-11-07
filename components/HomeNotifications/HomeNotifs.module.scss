@@ -1,0 +1,60 @@
+@import '../variables';
+
+.notifs {
+  width: 100%;
+  min-height: 50vh;
+  width: 80%;
+  margin: auto;
+  padding: 3em;
+
+  font-family: sans-serif;
+  h1 {
+    font-size: 2.5rem;
+    padding-bottom: 5px;
+    border-bottom: 5px solid $light;
+    border-bottom-left-radius: 20px;
+    padding-left: 10px;
+  }
+
+  .notifsMain {
+    width: 100%;
+    .notif {
+      font-size: 1.1rem;
+      border-bottom: 3px solid $lightest;
+      border-left: 2px solid $lightest;
+      padding: 22px;
+      padding-left: 1.5em;
+      border-radius: 30px;
+      border-bottom-right-radius: 0px;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: translateX(1%);
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    width: 100%;
+    h1 {
+      font-size: 1.5rem;
+    }
+    .notifsMain {
+      .notif {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  @media (max-width: 350px) {
+    width: 100%;
+    h1 {
+      font-size: 1.2rem;
+      padding-bottom: 1em;
+    }
+    .notifsMain {
+      .notif {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
