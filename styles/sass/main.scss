@@ -15,7 +15,8 @@ body {
 }
 
 #hero {
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5),
@@ -107,18 +108,18 @@ body {
 }
 
 #ideate {
-  background-image: linear-gradient(#00000081, #00000081),
-    url('/static/images/ideate.jpg');
+  background-image:
+    linear-gradient(#00000081, #00000081), url('/static/images/ideate.jpg');
 }
 
 #innovate {
-  background-image: linear-gradient(#00000098, #00000098),
-    url('/static/images/innovate.jpg');
+  background-image:
+    linear-gradient(#00000098, #00000098), url('/static/images/innovate.jpg');
 }
 
 #inspire {
-  background-image: linear-gradient(#00000081, #00000081),
-    url('/static/images/inspire.jpg');
+  background-image:
+    linear-gradient(#00000081, #00000081), url('/static/images/inspire.jpg');
 }
 
 #ideate,
@@ -145,7 +146,8 @@ body {
   // background-color: rgb(49, 49, 49);
   &-main {
     width: 100%;
-    background-image: linear-gradient(#00000081, #00000081),
+    background-image:
+      linear-gradient(#00000081, #00000081),
       url('/static/images/aboutus-final.jpg');
     min-height: 60vh;
     padding: 3em 0.5em;
@@ -228,7 +230,8 @@ body {
   color: white;
   font-family: 'Oswald', sans-serif;
 
-  background-image: linear-gradient(#000000ab, #000000ab),
+  background-image:
+    linear-gradient(#000000ab, #000000ab),
     url('/static/images/our-projects-final.jpg');
   background-size: cover;
   background-position: center;

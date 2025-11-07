@@ -4,7 +4,8 @@ const PublicationsList = [
     publications: [
       {
         photo: '/static/images/publications/2024_august_21.png',
-        title: 'Acti-V-Link: An Active Surface, Visual Feedback Based, Mechanically Underactuated Gripper for In-Hand Manipulation',
+        title:
+          'Acti-V-Link: An Active Surface, Visual Feedback Based, Mechanically Underactuated Gripper for In-Hand Manipulation',
         author:
           'Karthik Swaminathan | Mohammed Saad Hashmi | Alqama Shaikh | Vikas Phalle',
         time: '21 August 2024',
