@@ -7,7 +7,9 @@ import Hero from '../../Hero/Hero';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const OngoingProjects = () => {
-  const [selectedProject, setSelectedProject] = useState(OngoingProjectsData[0])
+  const [selectedProject, setSelectedProject] = useState(
+    OngoingProjectsData[0]
+  );
 
   return (
     <>
@@ -21,7 +23,9 @@ const OngoingProjects = () => {
         {OngoingProjectsData.map((proj, idx) => (
           <button
             key={idx}
-            className={`${styles.projectName} ${proj === selectedProject ? styles.active : ''}`}
+            className={`${styles.projectName} ${
+              proj === selectedProject ? styles.active : ''
+            }`}
             onClick={() => setSelectedProject(proj)}
           >
             {proj.name}
@@ -39,8 +43,8 @@ const OngoingProjects = () => {
         />
       </div>
     </>
-  )
-}
+  );
+};
 
 const OngoingProjectCard = ({ imgName, name, sub, githubLink, modelLink }) => {
   return (
@@ -49,37 +53,38 @@ const OngoingProjectCard = ({ imgName, name, sub, githubLink, modelLink }) => {
         <div className={styles.ongoingProjContName}>{name}</div>
         <div className={styles.ongoingProjContSub}>{sub}</div>
         <div className={styles.ongoingProjContLinks}>
-          <a href={githubLink} target="_blank" rel="noopener noreferrer">
+          <a href={githubLink} target='_blank' rel='noopener noreferrer'>
             <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
       </div>
-      {imgName && ( <div
-        className={styles.ongoingProjImg}
-        style={{
-          backgroundImage: `url("/static/images/${imgName}")`,
-          backgroundPosition: 'center',
-          backgroundSize: 'contain', 
-          backgroundRepeat: 'no-repeat',
-          height: '400px', 
-          width: '45%', 
-        }}
-
-      ></div>)}
+      {imgName && (
+        <div
+          className={styles.ongoingProjImg}
+          style={{
+            backgroundImage: `url("/static/images/${imgName}")`,
+            backgroundPosition: 'center',
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+            height: '400px',
+            width: '45%',
+          }}
+        ></div>
+      )}
       {modelLink && (
         <div className={styles.ongoingProjModel}>
-        <iframe 
-          className={styles.iframeModel}
-          allowfullscreen  
-          width="640"
-          height="480" 
-          loading="lazy" 
-          frameborder="1" 
-          src={modelLink}>
-            </iframe>
-        </div>)}
-      
+          <iframe
+            className={styles.iframeModel}
+            allowfullscreen
+            width='640'
+            height='480'
+            loading='lazy'
+            frameborder='1'
+            src={modelLink}
+          ></iframe>
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 export default OngoingProjects;

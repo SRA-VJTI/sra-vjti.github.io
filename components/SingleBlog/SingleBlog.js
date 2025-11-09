@@ -8,7 +8,7 @@ const QuestionStyle = {
   // letterSpacing: '1px',
   fontWeight: 'light',
   paddingBottom: '0px',
-  color: '#892cdc',
+  color: '#DC143C',
   lineHeight: '1.5',
 };
 
