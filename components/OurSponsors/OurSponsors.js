@@ -8,12 +8,11 @@ const OurSponsors = () => {
         <div className={styles.reachGroup}>
           {SponsorListImages.map((name, idx) => {
             return (
-              <a href={`${SponsorLinks[idx]}`}>
+              <a href={`${SponsorLinks[idx]}`} key={`sponsor_${idx}`}>
                 <img
                   src={`/static/images/sponsors/${name}`}
                   alt=''
                   className={styles.reachImg}
-                  key={`alumni_reach_${idx}`}
                 ></img>
               </a>
             );

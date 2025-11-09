@@ -1,41 +1,134 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SRA VJTI Official Website
 
-## Getting Started
+Official website for the Society of Robotics and Automation (SRA) at VJTI Mumbai.
 
-First, install all the dependencies:
+## 🚀 Getting Started
 
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm install package.json
+git clone <repository-url>
+cd sra-vjti.github.io
+```
+
+2. Install dependencies:
+```bash
+npm install
 # or
 yarn install
 ```
 
-Run the development server:
-
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-## Learn More
+```
+sra-vjti.github.io/
+├── components/          # React components
+│   ├── Achievements/    # Achievements section
+│   ├── Activities/      # Activities section
+│   ├── Blogs/           # Blog components
+│   ├── ContactUs/       # Contact form
+│   ├── CorporateSupport/# Corporate support section
+│   ├── Footer/          # Footer component
+│   ├── Hero/            # Hero section
+│   ├── HomeAboutUs/     # Home page about section
+│   ├── Navbar/          # Navigation bar
+│   ├── Projects/         # Projects showcase
+│   ├── Publications/     # Publications section
+│   ├── Sponsors/         # Sponsors section
+│   ├── Startups/         # Startups section
+│   └── Teams/            # Team members
+├── data/                # Data files (JSON/JS)
+│   ├── aboutus.js
+│   ├── blogs.js
+│   ├── sponsors.js
+│   └── ...
+├── pages/               # Next.js pages
+├── public/              # Static assets (images, etc.)
+├── styles/              # Global styles
+└── utils/               # Utility functions
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run export` - Export static site
+- `npm run prettier` - Format code with Prettier
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🎨 Tech Stack
 
-## Contributing
+- **Framework**: Next.js 13.5.6
+- **React**: 18.2.0
+- **Styling**: SCSS/Sass
+- **Icons**: Font Awesome
+- **Markdown**: markdown-to-jsx
+- **Carousel**: react-responsive-carousel, react-owl-carousel
 
-1. Create a fork
-2. Make the changes
-3. Compile the project and check if it works as expected without breaking any other functionality.
-4. Create a PR on the `contribute` branch on the upstream repo.
-5. Don't forgot to put a description in the PR, Pull requests without a description would be closed and buried 10m deep in the earth xD
-6. Commits should be atomic, and descriptive message is a must.
+## 📝 Features
+
+- Responsive design
+- Dynamic content management through data files
+- Blog system with markdown support
+- Project showcase (Flagship, Ongoing, Eklavya)
+- Team member profiles
+- Publications and achievements
+- Corporate support information
+- Contact form integration
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Ensure the project compiles and works as expected without breaking any functionality
+5. Run Prettier to format your code (`npm run prettier`)
+6. Commit your changes with descriptive messages (`git commit -m 'Add amazing feature'`)
+7. Push to your branch (`git push origin feature/amazing-feature`)
+8. Create a Pull Request on the `contribute` branch of the upstream repository
+
+### Important Notes
+
+- **Pull requests without descriptions will be closed**
+- Commits should be atomic and have descriptive messages
+- Test your changes thoroughly before submitting
+- Follow the existing code style and structure
+
+## 📄 License
+
+This project is private and unlicensed.
+
+## 👥 Authors
+
+SRA Team
+
+## 🌐 Deployment
+
+The site is deployed using GitHub Pages. The build process generates a static export that can be served directly.
+
+For production builds:
+```bash
+npm run build
+npm run export
+```
+
+The exported files will be in the `out/` directory.
+
+## 📧 Contact
+
+For questions or support, please contact the SRA team through the website's contact form or reach out via the official channels.
