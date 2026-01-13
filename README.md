@@ -68,12 +68,12 @@ sra-vjti.github.io/
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run start` - Start production server
-- `npm run export` - Export static site
+- `npm run export` - Build the production static export (alias for `npm run build` with `output: 'export'`)
 - `npm run prettier` - Format code with Prettier
 
 ## 🎨 Tech Stack
 
-- **Framework**: Next.js 13.5.6
+- **Framework**: Next.js 14.2.32
 - **React**: 18.2.0
 - **Styling**: SCSS/Sass
 - **Icons**: Font Awesome
@@ -123,11 +123,10 @@ The site is deployed using GitHub Pages. The build process generates a static ex
 
 For production builds:
 ```bash
-npm run build
 npm run export
 ```
 
-The exported files will be in the `out/` directory.
+Running `npm run export` now executes `next build` and respects `next.config.js`'s `output: 'export'`, producing a static `out/` directory.
 
 ## 📧 Contact
 
