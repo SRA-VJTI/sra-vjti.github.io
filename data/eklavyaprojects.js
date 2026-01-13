@@ -1,5 +1,119 @@
 const EklavyaProjectList = [
   {
+    year: '2025',
+    projects: [
+      {
+        name: 'AutoPort',
+        imgName: 'Eklavya/Eklavya2025/AutoPort.png',
+        sub: 'Build an autonomous robot capable of navigating an indoor environment, avoiding obstacles, and delivering items from one location to another.',
+        githubLink: 'https://github.com/f0rgotteng0d/autoport',
+      },
+      {
+        name: 'Ballerina Cappucina',
+        imgName: 'Eklavya/Eklavya2025/BallerinaCappucina.png',
+        sub: 'Build an omnidirectional robot that autonomously collects and sorts colored objects using custom hardware and computer vision.',
+        githubLink: 'https://github.com/vedantmalkar/Ballerina-Cappucina',
+      },
+      {
+        name: 'CustomBoot-32',
+        imgName: 'Eklavya/Eklavya2025/CustomBoot32.png',
+        sub: 'Design a STM32+ESP32 development board with custom bootloader and OTA support.',
+        githubLink: 'https://github.com/avm1234567/Customboot-32',
+      },
+      {
+        name: 'EchoCore',
+        imgName: 'Eklavya/Eklavya2025/EchoCore.png',
+        sub: 'Implement both B-mode ultrasound imaging and 16-QAM digital communication systems on FPGA using Verilog.',
+        githubLink: 'https://github.com/Shri-2112/Flexsonic',
+      },
+      {
+        name: 'FlexSonic',
+        imgName: 'Eklavya/Eklavya2025/FlexSonic.png',
+        sub: 'Design a smart glove that translates hand gestures into audible speech, empowering communication for the speech-impaired.',
+        githubLink: 'https://github.com/cupx0j0e/EchoCore',
+      },
+      {
+        name: 'FPGA-Based Tetris',
+        imgName: 'Eklavya/Eklavya2025/FPGA_Tetris.png',
+        sub: 'Build a tiny FPGA console that plays Tetris in real time rendered entirely in Verilog on a BeagleVFire.',
+        githubLink: 'https://github.com/Harshit6-b/SRA-FPGA-based-tetris',
+      },
+      {
+        name: 'GantryMate-200',
+        imgName: 'Eklavya/Eklavya2025/EklavyaGantry.png',
+        sub: 'Design and development of a gantry-style CNC system focusing on precision motion control, mechanical design, and firmware integration.',
+        githubLink: 'https://github.com/pushkardube/Eklavya_Gantry',
+      },
+      {
+        name: 'T5 Grammarator',
+        imgName: 'Eklavya/Eklavya2025/T5Grammarator.png',
+        sub: 'Fine-tune a T5 transformer model to fix grammar mistakes and serve it through a FastAPI endpoint.',
+        githubLink: 'https://github.com/sarayusapa/t5_grammarator',
+      },
+      {
+        name: 'Handheld Gaming Console',
+        imgName: 'Eklavya/Eklavya2025/HandheldGamingConsole.png',
+        sub: 'Build a custom STM32-based board that runs a simple Snake-style game on an LCD with bare-metal C and custom I²C drivers.',
+        githubLink: 'https://github.com/Paarth-Shirsat/Handheld-Gaming-Console',
+      },
+      {
+        name: 'Quad-Move',
+        imgName: 'Eklavya/Eklavya2025/QuadMoveTrain.png',
+        sub: 'Train a PPO-based gait policy in MuJoCo and deploy it on a low-cost, tortoise-style quadruped.',
+        githubLink: 'https://github.com/Advait2211/quad_move_eklavya',
+      },
+      {
+        name: 'NovaPI',
+        imgName: 'Eklavya/Eklavya2025/NovaPI.png',
+        sub: 'Build a bare-metal OS on Raspberry Pi with HDMI and a Pong game from scratch.',
+        githubLink: 'https://github.com/dark-knightshanks/NovaPi',
+      },
+      {
+        name: 'RC Ornithopter',
+        imgName: 'Eklavya/Eklavya2025/RCOrnithopter.png',
+        sub: 'Build a remote-controlled, bird-scale ornithopter from scratch with bio-inspired design and precision engineering.',
+        githubLink: 'https://github.com/MAX090706/RC-ORNITHOPTER',
+      },
+      {
+        name: 'Re:Fine',
+        imgName: 'Eklavya/Eklavya2025/ReFine.png',
+        sub: 'Re:Fine is focused on improving large language model alignment using a dataset-free reinforcement learning pipeline combining synthetic data generation, rule-based evaluation (RULER), and GRPO optimization for controllable LLM behavior.',
+        githubLink: 'https://github.com/Coffeempty/Re-Fine---Eklavya-2025',
+      },
+      {
+        name: 'Robot Learning from First Principals',
+        imgName: 'Eklavya/Eklavya2025/RobotLearningFromFirstPrincipals.png',
+        sub: 'Combine simulation and real-world control of a SO100 robotic arm using vision, language, and machine learning.',
+        githubLink: 'https://github.com/vruga/lerobot-sim2real',
+      },
+      {
+        name: 'RubikNet',
+        imgName: 'Eklavya/Eklavya2025/RubikNet.png',
+        sub: 'Deep Reinforcement Learning for Rubiks Cube solving with stepper motor apparatus.',
+        githubLink: 'https://github.com/badboy1606/RubikNet',
+      },
+      {
+        name: 'Stewart Platform',
+        imgName: 'Eklavya/Eklavya2025/StewartPlatform.png',
+        sub: 'Design and control of a 6-DOF Stewart Platform for precise motion control, kinematics analysis, and real-time actuation.',
+        githubLink: 'https://github.com/Siddharth-33/Stewart-Platform',
+      },
+      {
+        name: 'Synapse32',
+        imgName: 'Eklavya/Eklavya2025/Synapse32.png',
+        sub: 'Design and verify a direct-mapped and set-associative cache subsystem for an existing RISC-V pipeline to reduce memory-access latency.',
+        githubLink: 'https://github.com/shashvatprabhu/SynapseCache',
+      },
+      
+      {
+        name: 'ESP32 Flight Controller',
+        imgName: 'Eklavya/Eklavya2025/ESP32_Flight_Controller.png',
+        sub: 'Design and development of a quadcopter and a custom ESP32-based flight controller from scratch and control systems with the goal of achieving stable autonomous flight.',
+        githubLink: 'https://github.com/su1gets4/esp32-fc',
+      },
+    ],
+  },
+  {
     year: '2024',
     projects: [
       {
