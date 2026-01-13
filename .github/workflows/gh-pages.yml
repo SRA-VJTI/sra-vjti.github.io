@@ -15,8 +15,7 @@ jobs:
       - name: Install and Build
         uses: actions/setup-node@v3.5.1
       - run: npm install
-      - run: npm run build # runs `next build`
-      - run: npm run export # runs `next export`
+      - run: npm run export # runs `next build` with output: 'export'
         env:
           CI: true
           DEPLOY_TARGET: gh-pages
