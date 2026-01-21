@@ -1,6 +1,6 @@
 import Hero from '../../Hero/Hero';
 import styles from './Current.module.scss';
-import Person from '../../Person/Person';
+import Card from '../../Card/Card';
 import { SenateList } from '../../../data';
 
 const Current = () => {
@@ -13,17 +13,18 @@ const Current = () => {
         subtitleList={['The Torch Runners']}
         isHome={false}
       />
-      <div className={styles.currentTeam} id='is'>
-        {SenateList.map((person, index) => {
+
+      <div className={styles.cardGrp}>
+        {SenateList.map((member, index) => {
           return (
-            <Person
-              key={`senate_${index}`}
+            <Card
+              key={`senate_member_${index}`}
               index={index}
-              name={person.name}
-              sub={person.sub}
-              imgName={person.imgName}
-              linkedInLink={person.linkedInLink}
-              githubLink={person.githubLink}
+              name={member.name}
+              sub={member.sub}
+              imgName={member.imgName}
+              linkedInLink={member.linkedInLink}
+              githubLink={member.githubLink}
             />
           );
         })}
