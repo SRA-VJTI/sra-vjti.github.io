@@ -104,7 +104,7 @@ const EklavyaProjectList = [
         sub: 'Design and verify a direct-mapped and set-associative cache subsystem for an existing RISC-V pipeline to reduce memory-access latency.',
         githubLink: 'https://github.com/shashvatprabhu/SynapseCache',
       },
-      
+
       {
         name: 'ESP32 Flight Controller',
         imgName: 'Eklavya/Eklavya2025/ESP32_Flight_Controller.png',
