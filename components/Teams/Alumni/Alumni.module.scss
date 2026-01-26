@@ -1,46 +1,86 @@
 @import '../../variables';
 
-.alumniGrp {
-  margin-top: 5em;
-  .alumniGrpHead {
-    color: $lightest;
-    width: 30%;
-    margin: 0 auto;
-    padding-bottom: 0.5em;
-    border-bottom: 2px solid $light;
-    font-size: 2rem;
-    text-align: center;
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 2rem;
+
+  .search {
+    background-color: #0d0d0d;
+    border: 1px solid #0d0d0d;
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 1.35rem;
+    font-family: 'Tomorrow', sans-serif;
+    border-radius: 5px;
+    color: #f5f5f5;
+  }
+
+  .dropdown {
+    position: relative;
+
+    button {
+      font-size: 1.35rem;
+      font-family: 'Tomorrow', sans-serif;
+      border-radius: 5px;
+      color: #f5f5f5;
+      background-color: #0d0d0d;
+      border: 1px solid #0d0d0d;
+      padding: 0.75rem;
+      cursor: pointer;
+    }
+
+    .options {
+      position: absolute;
+      margin-top: 2rem;
+      z-index: 3;
+      font-family: 'Tomorrow', sans-serif;
+      display: none;
+      flex-direction: column;
+      width: 10rem;
+      max-height: 20rem;
+      overflow-y: scroll;
+      border-radius: 5px;
+
+      .option {
+        background-color: #0d0d0d;
+        color: #f5f5f5;
+        padding: 0.75rem;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+      }
+
+      .option:hover {
+        background-color: #1a1a1a;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    flex-direction: column;
   }
 }
 
-.alumniCloud {
-  width: 50%;
-  padding: 1em;
-  margin: 3em auto;
+.cardGrp {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-  border: 2px solid $light;
-  border-radius: 20px;
-  // border-bottom: 2px solid $light;
-  .alumniCloudElem {
-    // margin: 1em;
-    padding: 1em;
-    flex-grow: 1;
-    text-align: center;
-    font-size: 1.5rem;
-    transition: background-color 0.2s;
-
-    border-radius: 10px;
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.199);
-    }
-    // border-right: 1px solid $lightest;
-
-    // &:last-of-type {
-    // 	border-right: none;
-    // }
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr 1fr;
   }
+
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.selYear {
+  margin-left: 1.25rem;
+  color: #f5f5f5;
 }
