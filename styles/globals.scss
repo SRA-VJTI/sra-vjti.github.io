@@ -25,21 +25,29 @@ body {
   background-color: #08080a;
   background-image:
     // Electric Crimson glow — top-left
-    radial-gradient(ellipse at 10% 20%,
+    radial-gradient(
+      ellipse at 10% 20%,
       rgba(247, 28, 50, 0.14) 0%,
-      transparent 50%),
+      transparent 50%
+    ),
     // Deep Wine glow — center-right
-    radial-gradient(ellipse at 90% 50%,
-      rgba(125, 13, 29, 0.2) 0%,
-      transparent 45%),
+    radial-gradient(
+        ellipse at 90% 50%,
+        rgba(125, 13, 29, 0.2) 0%,
+        transparent 45%
+      ),
     // Persimmon warmth — bottom-left
-    radial-gradient(ellipse at 20% 85%,
-      rgba(255, 94, 58, 0.1) 0%,
-      transparent 40%),
+    radial-gradient(
+        ellipse at 20% 85%,
+        rgba(255, 94, 58, 0.1) 0%,
+        transparent 40%
+      ),
     // Bright Orange accent — bottom-right corner
-    radial-gradient(ellipse at 80% 95%,
-      rgba(255, 159, 28, 0.06) 0%,
-      transparent 35%);
+    radial-gradient(
+        ellipse at 80% 95%,
+        rgba(255, 159, 28, 0.06) 0%,
+        transparent 35%
+      );
   background-attachment: fixed;
   color: $text-white;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
@@ -57,9 +65,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right,
+    background-image: linear-gradient(
+        to right,
         rgba(247, 28, 50, 0.03) 1px,
-        transparent 1px),
+        transparent 1px
+      ),
       linear-gradient(to bottom, rgba(247, 28, 50, 0.03) 1px, transparent 1px);
     background-size: 60px 60px;
     pointer-events: none;

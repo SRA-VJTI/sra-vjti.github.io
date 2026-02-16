@@ -23,8 +23,9 @@ const EklavyaProjects = () => {
           {EklavyaProjectList.map((year, idx) => (
             <span
               key={`year_${idx}`}
-              className={`${styles.eklavyaYearTag} ${activeYear === year.year ? styles.activeYearTag : ''
-                }`}
+              className={`${styles.eklavyaYearTag} ${
+                activeYear === year.year ? styles.activeYearTag : ''
+              }`}
               onClick={() => setActiveYear(year.year)}
               style={{ cursor: 'pointer' }}
             >

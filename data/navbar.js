@@ -29,7 +29,6 @@ const NavbarData = [
     name: 'Projects',
     link: '/projects',
     subMenu: [
-
       {
         name: 'Eklavya',
         link: '/projects/eklavya/',

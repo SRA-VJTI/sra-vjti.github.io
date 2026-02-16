@@ -25,15 +25,13 @@ $accent: #ff9f1c; // Bright Orange
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: radial-gradient(circle at 2px 2px,
+    background-image: radial-gradient(
+        circle at 2px 2px,
         rgba(255, 255, 255, 0.08) 1px,
-        transparent 0),
-      linear-gradient(to right,
-        rgba(255, 255, 255, 0.03) 1px,
-        transparent 1px),
-      linear-gradient(to bottom,
-        rgba(255, 255, 255, 0.03) 1px,
-        transparent 1px);
+        transparent 0
+      ),
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 20px 20px, 40px 40px, 40px 40px;
     opacity: 0.65;
     pointer-events: none;
@@ -48,19 +46,20 @@ $accent: #ff9f1c; // Bright Orange
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg,
-        transparent,
-        #f71c32,
-        #ff5e3a,
-        transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      #f71c32,
+      #ff5e3a,
+      transparent
+    );
     box-shadow: 0 0 12px rgba(247, 28, 50, 0.6);
     z-index: 1;
   }
 
   &:hover {
     background: rgba(8, 8, 10, 0.25);
-    box-shadow: 0 0 30px rgba(247, 28, 50, 0.2),
-      0 0 60px rgba(125, 13, 29, 0.1);
+    box-shadow: 0 0 30px rgba(247, 28, 50, 0.2), 0 0 60px rgba(125, 13, 29, 0.1);
     border-color: rgba(247, 28, 50, 0.5);
   }
 }
