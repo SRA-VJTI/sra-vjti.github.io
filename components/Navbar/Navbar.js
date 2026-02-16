@@ -18,6 +18,7 @@ const Navbar = () => {
       navbar.style.clipPath = 'circle(300% at 100% 0%)';
     } else {
       setIsNavbarDown(false);
+      navbar.style.clipPath = 'circle(15% at 100% 0%)';
     }
   }, [size.width]);
 

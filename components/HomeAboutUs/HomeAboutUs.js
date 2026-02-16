@@ -18,6 +18,20 @@ const HomeAboutUs = () => {
           <h1>About VJTI</h1>
           <p>{AboutVJTI}</p>
         </div>
+        <div className={styles.aboutUsTeam}>
+          <p>{AboutUsTeamText}</p>
+          <img
+            src={`/static/images/${AboutUsImages.newgroup}`}
+            alt='SRA Team group photo'
+          />
+        </div>
+        <div className={styles.aboutUsAlumni}>
+          <p>{AboutUsAlumniText}</p>
+          <img
+            src={`/static/images/${AboutUsImages.oldGroup}`}
+            alt='SRA Team group photo'
+          />
+        </div>
       </div>
       <div className={styles.ourProjects}>
         <h1>Projects</h1>
