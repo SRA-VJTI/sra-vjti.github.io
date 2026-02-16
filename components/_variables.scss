@@ -1,4 +1,66 @@
 $black: #000000;
-$dark: #8b0000;
-$light: #dc143c;
-$lightest: #ff6b6b;
+$white: #ffffff;
+$dark: #7d0d1d; // Deep Wine
+$light: #f71c32; // Electric Crimson
+$lightest: #ff5e3a; // Persimmon
+$accent: #ff9f1c; // Bright Orange
+
+// Tech/Futuristic Theme Mixin
+@mixin tech-card {
+  background: rgba(8, 8, 10, 0.35);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(247, 28, 50, 0.2); // Electric Crimson tint
+  box-shadow: 0 0 20px rgba(125, 13, 29, 0.5);
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  // Circuit pattern overlay
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 2px 2px,
+        rgba(255, 255, 255, 0.08) 1px,
+        transparent 0),
+      linear-gradient(to right,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px),
+      linear-gradient(to bottom,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px);
+    background-size: 20px 20px, 40px 40px, 40px 40px;
+    opacity: 0.65;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  // Top accent line — Electric Crimson → Persimmon gradient
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+        transparent,
+        #f71c32,
+        #ff5e3a,
+        transparent);
+    box-shadow: 0 0 12px rgba(247, 28, 50, 0.6);
+    z-index: 1;
+  }
+
+  &:hover {
+    background: rgba(8, 8, 10, 0.25);
+    box-shadow: 0 0 30px rgba(247, 28, 50, 0.2),
+      0 0 60px rgba(125, 13, 29, 0.1);
+    border-color: rgba(247, 28, 50, 0.5);
+  }
+}

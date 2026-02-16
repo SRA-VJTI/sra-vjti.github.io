@@ -1,20 +1,30 @@
+@import '../variables';
+
 .reach {
+  width: 90%;
+  margin: 2rem auto;
+  @include tech-card;
+  padding: 2rem;
+
   h1 {
     margin: 50px 0 20px;
     text-align: center;
     font-size: 2.5rem;
     font-family: 'Oswald', sans-serif;
   }
+
   .reachGroup {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     padding: 0 1em;
+
     img {
       margin: 1.5em;
       width: 150px;
       transition: transform 0.2s;
+
       &:hover {
         transform: scale(1.1);
       }

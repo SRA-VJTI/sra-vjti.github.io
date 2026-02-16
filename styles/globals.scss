@@ -2,10 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
 
+// Color Variables
 $black: #000000;
-$dark: #8b0000;
-$light: #dc143c;
-$lightest: #ff6b6b;
+$dark: #7d0d1d; // Deep Wine
+$light: #f71c32; // Electric Crimson
+$lightest: #ff5e3a; // Persimmon
+$accent: #ff9f1c; // Bright Orange
+$bg-dark: #0a0a0c;
+$bg-medium: #161618;
+$text-white: #ffffff;
+$text-muted: #b0b0b0;
 
 // Resets
 * {
@@ -16,12 +22,49 @@ $lightest: #ff6b6b;
 }
 
 body {
-  background-color: #000000;
-  color: white;
+  background-color: #08080a;
+  background-image:
+    // Electric Crimson glow — top-left
+    radial-gradient(ellipse at 10% 20%,
+      rgba(247, 28, 50, 0.14) 0%,
+      transparent 50%),
+    // Deep Wine glow — center-right
+    radial-gradient(ellipse at 90% 50%,
+      rgba(125, 13, 29, 0.2) 0%,
+      transparent 45%),
+    // Persimmon warmth — bottom-left
+    radial-gradient(ellipse at 20% 85%,
+      rgba(255, 94, 58, 0.1) 0%,
+      transparent 40%),
+    // Bright Orange accent — bottom-right corner
+    radial-gradient(ellipse at 80% 95%,
+      rgba(255, 159, 28, 0.06) 0%,
+      transparent 35%);
+  background-attachment: fixed;
+  color: $text-white;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  position: relative;
+
+  // Circuit-grid overlay
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right,
+        rgba(247, 28, 50, 0.03) 1px,
+        transparent 1px),
+      linear-gradient(to bottom, rgba(247, 28, 50, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: -1;
+  }
 }
 
 html {
@@ -31,6 +74,11 @@ html {
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $light;
+  }
 }
 
 li {
@@ -43,9 +91,18 @@ button {
   background-color: transparent;
   color: inherit;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 }
 
-/* Minimal text shadows for readability over images */
+// Headings with subtle enhancements
 h1,
 h2,
 h3,
@@ -53,6 +110,49 @@ h4,
 h5,
 h6 {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+}
+
+// Selection styling
+::selection {
+  background-color: #00ff2a;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #00ff2a;
+  color: white;
+}
+
+// Scrollbar styling
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $dark;
+  border-radius: 5px;
+
+  &:hover {
+    background: $light;
+  }
 }
 
 .temp {

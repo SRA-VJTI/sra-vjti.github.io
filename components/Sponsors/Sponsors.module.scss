@@ -42,18 +42,22 @@
     justify-content: flex;
     line-height: 250%;
     text-align: justify;
+
     .activityContName {
       font-size: 2rem;
       margin-bottom: 20px;
       padding-bottom: 0.15em;
       transition: border-bottom 0.3s;
       border-bottom: 1px solid $lightest;
+
       .activityIcon {
         font-size: 1.2rem;
         float: right;
+
         a {
           margin: 0 10px;
           transition: color 0.2s;
+
           :hover {
             color: $light;
             animation: wiggle 0.3s forwards;
@@ -62,6 +66,7 @@
         }
       }
     }
+
     .activityContSub {
       font-size: 1rem;
       margin-bottom: 10px;
@@ -75,17 +80,20 @@
       }
     }
   }
+
   @media (max-width: 900px) {
     .activityImg {
       height: auto;
       width: 50%;
     }
   }
+
   @media (max-width: 780px) {
     width: 90%;
     margin: 1em auto;
     height: auto;
     flex-direction: column;
+
     .activityImg {
       height: 45vh;
       display: block;
@@ -94,17 +102,20 @@
       width: 80%;
       // background-image: 100vw;
     }
+
     .activityCont {
       width: 100%;
       height: max-content;
     }
   }
+
   @media (max-width: 375px) {
     .activityImg {
       width: 90%;
     }
   }
 }
+
 .reach {
   p {
     font-family: sans-serif;
@@ -115,18 +126,21 @@
     padding-right: 5em;
     padding-top: 2em;
     text-align: center;
+
     // margin-top: 20px;
     @media (max-width: 650px) {
       padding-left: 2em;
       padding-right: 2em;
     }
   }
+
   h1 {
     margin: 50px 0 20px;
     text-align: center;
     font-size: 2.5rem;
     font-family: 'Oswald', sans-serif;
   }
+
   button {
     display: block;
     margin: 4rem auto;
@@ -134,15 +148,18 @@
     border: 2px solid white;
     padding: 0.7em 1em;
     transition: all 0.2s;
+
     &:hover {
       border-radius: 5px;
       border-color: $lightest;
       color: $lightest;
     }
+
     @media (max-width: 650px) {
       font-size: 1.2rem;
     }
   }
+
   .more {
     display: block;
     margin: 1rem auto;
@@ -150,32 +167,38 @@
     border: 2px solid white;
     padding: 0.5em 0.5em;
     transition: all 0.2s;
+
     &:hover {
       border-radius: 5px;
       border-color: $lightest;
       color: $lightest;
     }
+
     @media (max-width: 650px) {
       font-size: 0.6rem;
     }
   }
+
   .levelImage {
     display: block;
     margin: 20px auto;
     height: 50px;
     width: auto;
     margin-top: 3rem;
+
     @media (max-width: 650px) {
       width: auto;
       height: 25px;
     }
   }
+
   hr {
     width: 40%;
     border: 1px solid $lightest;
     margin: 0 auto;
     margin-bottom: 30px;
   }
+
   .reachGroup {
     display: flex;
     flex-wrap: wrap;
@@ -183,24 +206,30 @@
     justify-content: space-evenly;
     padding: 0 1em;
     margin-bottom: 5em;
+
     img {
       margin: 1.5rem;
-      width: 150px;
+      width: 180px;
       transition: transform 0.2s;
+
       &:hover {
         transform: scale(1.1);
       }
+
       @media (max-width: 650px) {
         margin: 0.5em;
         width: 100px;
       }
     }
+
     .diamondImg:hover {
       box-shadow: #b0c9e7 0px 20px 30px -10px;
     }
+
     .goldImg:hover {
       box-shadow: goldenrod 0px 20px 30px -10px;
     }
+
     .silverImg:hover {
       box-shadow: #c0c0c0 0px 20px 30px -10px;
     }
