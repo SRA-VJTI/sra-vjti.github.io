@@ -1,6 +1,4 @@
 import styles from './Hero.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { useEffect, useState } from 'react';
 
 function Hero({
@@ -41,6 +39,9 @@ function Hero({
             );
           })}
         </div>
+        <a href='#is'>
+          <div className={styles.scrollIndicator}></div>
+        </a>
       </div>
       {isHome && (
         <div className={styles.is} id='is'>

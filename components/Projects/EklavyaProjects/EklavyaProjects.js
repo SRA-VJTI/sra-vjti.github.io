@@ -7,7 +7,7 @@ import Hero from '../../Hero/Hero';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const EklavyaProjects = () => {
-  const [activeYear, setActiveYear] = useState('2025');
+  const [activeYear, setActiveYear] = useState(EklavyaProjectList[0]?.year);
 
   return (
     <div className={styles.eklavyaProjectsContainer}>

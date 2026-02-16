@@ -1,59 +1,62 @@
 import styles from './Footer.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faXTwitter,
   faInstagram,
-  faYoutubeSquare,
+  faYoutube,
   faGithub,
   faLinkedinIn,
+  faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
-import SocialMediaLinks from '../../data/socialmedia';
+import { useEffect, useState } from 'react';
+import { SocialMediaLinks } from '../../data';
 
 function Footer() {
-  const socialIcons = [
-    {
-      name: 'github',
-      icon: faGithub,
-      link: SocialMediaLinks.github,
-    },
-    {
-      name: 'instagram',
-      icon: faInstagram,
-      link: SocialMediaLinks.instagram,
-    },
-    {
-      name: 'youtube',
-      icon: faYoutubeSquare,
-      link: SocialMediaLinks.youtube,
-    },
-    {
-      name: 'linkedin',
-      icon: faLinkedinIn,
-      link: SocialMediaLinks.linkedin,
-    },
-    {
-      name: 'x',
-      icon: faXTwitter,
-      link: SocialMediaLinks.x,
-    },
-  ];
-
+  const [isLoad, setIsLoad] = useState('none');
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoad('');
+    }, 2000);
+  }, []);
   return (
     <>
       <footer className={styles.footer}>
         <h3>Connect with us</h3>
         <div className={styles.footerIcons}>
-          {socialIcons.map((social) => (
-            <a
-              key={social.name}
-              href={social.link}
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label={social.name}
-            >
-              <FontAwesomeIcon icon={social.icon} />
-            </a>
-          ))}
+          <a
+            href={SocialMediaLinks.github}
+            target='_blank'
+            style={{ display: isLoad }}
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a
+            href={SocialMediaLinks.instagram}
+            target='_blank'
+            style={{ display: isLoad }}
+          >
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          <a
+            href={SocialMediaLinks.youtube}
+            target='_blank'
+            style={{ display: isLoad }}
+          >
+            <FontAwesomeIcon icon={faYoutube} />
+          </a>
+          <a
+            href={SocialMediaLinks.linkedin}
+            target='_blank'
+            style={{ display: isLoad }}
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>
+          <a
+            href={SocialMediaLinks.twitter}
+            target='_blank'
+            style={{ display: isLoad }}
+          >
+            <FontAwesomeIcon icon={faXTwitter} />
+          </a>
         </div>
       </footer>
     </>

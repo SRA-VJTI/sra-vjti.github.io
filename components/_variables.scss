@@ -7,11 +7,11 @@ $accent: #ff9f1c; // Bright Orange
 
 // Tech/Futuristic Theme Mixin
 @mixin tech-card {
-  background: rgba(8, 8, 10, 0.35);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(247, 28, 50, 0.2); // Electric Crimson tint
-  box-shadow: 0 0 20px rgba(125, 13, 29, 0.5);
+  background: rgba(30, 30, 35, 0.5);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border: 1px solid rgba(247, 28, 50, 0.15);
+  box-shadow: 0 0 15px rgba(247, 28, 50, 0.2), 0 0 40px rgba(125, 13, 29, 0.15);
   border-radius: 12px;
   position: relative;
   overflow: hidden;
@@ -27,13 +27,13 @@ $accent: #ff9f1c; // Bright Orange
     bottom: 0;
     background-image: radial-gradient(
         circle at 2px 2px,
-        rgba(255, 255, 255, 0.08) 1px,
+        rgba(255, 255, 255, 0.05) 1px,
         transparent 0
       ),
-      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     background-size: 20px 20px, 40px 40px, 40px 40px;
-    opacity: 0.65;
+    opacity: 0.05;
     pointer-events: none;
     z-index: 0;
   }
@@ -58,8 +58,9 @@ $accent: #ff9f1c; // Bright Orange
   }
 
   &:hover {
-    background: rgba(8, 8, 10, 0.25);
-    box-shadow: 0 0 30px rgba(247, 28, 50, 0.2), 0 0 60px rgba(125, 13, 29, 0.1);
-    border-color: rgba(247, 28, 50, 0.5);
+    background: rgba(8, 8, 10, 0.05);
+    box-shadow: 0 0 25px rgba(247, 28, 50, 0.35),
+      0 0 60px rgba(125, 13, 29, 0.2);
+    border-color: rgba(247, 28, 50, 0.3);
   }
 }

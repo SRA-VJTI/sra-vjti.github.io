@@ -3,15 +3,12 @@
   z-index: 1000000;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.432);
-  // border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
   @supports (-moz-appearance: none) {
     background-color: rgba(0, 0, 0, 0.856);
   }
 
   backdrop-filter: blur(11px);
-  -webkit-backdrop-filter: blur(11px);
   transition: clip-path 0.6s;
 
   .khopdi {
@@ -44,17 +41,11 @@
 
       &:hover {
         background-color: rgba(255, 255, 255, 0.151);
-
-        .sraLogo {
-          filter: grayscale(0) invert(0) brightness(1.2) sepia(1)
-            hue-rotate(-30deg) saturate(5);
-        }
       }
 
       .sraLogo {
         width: 100%;
         filter: grayscale(1) invert(1);
-        transition: filter 0.3s ease;
       }
     }
   }
@@ -73,13 +64,6 @@
     clip-path: circle(15% at 100% 0%);
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.35);
-    pointer-events: none; // Don't block page when collapsed
-
-    .navbarToggle,
-    .navbarElemList {
-      pointer-events: auto; // Re-enable for menu items
-    }
-
     .navbarToggle {
       display: unset;
 
@@ -90,7 +74,6 @@
         z-index: 4;
       }
     }
-
     .navbarElemList {
       overflow: scroll;
       height: 100%;

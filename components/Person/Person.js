@@ -24,7 +24,7 @@ const Person = ({ index, imgName, name, sub, linkedInLink, githubLink }) => {
 const LinkedInLink = ({ linkedInLink }) => {
   if (linkedInLink !== '') {
     return (
-      <a href={linkedInLink} target='_blank' rel='noopener noreferrer'>
+      <a href={linkedInLink} target='blank'>
         <FontAwesomeIcon icon={faLinkedinIn} />
       </a>
     );
@@ -36,7 +36,7 @@ const LinkedInLink = ({ linkedInLink }) => {
 const GitHubLink = ({ githubLink }) => {
   if (githubLink !== '') {
     return (
-      <a href={githubLink} target='_blank' rel='noopener noreferrer'>
+      <a href={githubLink} target='blank'>
         <FontAwesomeIcon icon={faGithub} />
       </a>
     );

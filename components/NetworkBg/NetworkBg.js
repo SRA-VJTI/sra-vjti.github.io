@@ -46,12 +46,12 @@ const NetworkBg = () => {
           const dist = Math.sqrt(dx * dx + dy * dy);
 
           if (dist < CONNECTION_DIST) {
-            const opacity = (1 - dist / CONNECTION_DIST) * 0.15;
+            const opacity = (1 - dist / CONNECTION_DIST) * 0.3;
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
             ctx.strokeStyle = `rgba(247, 28, 50, ${opacity})`;
-            ctx.lineWidth = 0.5;
+            ctx.lineWidth = 0.8;
             ctx.stroke();
           }
         }
@@ -61,7 +61,7 @@ const NetworkBg = () => {
         const mdy = nodes[i].y - mouse.y;
         const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
         if (mDist < MOUSE_DIST) {
-          const opacity = (1 - mDist / MOUSE_DIST) * 0.4;
+          const opacity = (1 - mDist / MOUSE_DIST) * 0.6;
           ctx.beginPath();
           ctx.moveTo(nodes[i].x, nodes[i].y);
           ctx.lineTo(mouse.x, mouse.y);
@@ -76,7 +76,7 @@ const NetworkBg = () => {
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
         ctx.fillStyle = node.color;
-        ctx.globalAlpha = 0.7;
+        ctx.globalAlpha = 0.85;
         ctx.fill();
         ctx.globalAlpha = 1;
 

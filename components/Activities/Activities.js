@@ -60,7 +60,7 @@ const ActivityCard = ({ imgName, name, sub, githubLink, youtubeLink }) => {
 const YoutubeLink = ({ youtubeLink }) => {
   if (youtubeLink !== '') {
     return (
-      <a href={youtubeLink} target='_blank' rel='noopener noreferrer'>
+      <a href={youtubeLink} target='blank'>
         <FontAwesomeIcon icon={faYoutube} />
       </a>
     );
@@ -72,7 +72,7 @@ const YoutubeLink = ({ youtubeLink }) => {
 const GitHubLink = ({ githubLink }) => {
   if (githubLink !== '') {
     return (
-      <a href={githubLink} target='_blank' rel='noopener noreferrer'>
+      <a href={githubLink} target='blank'>
         <FontAwesomeIcon icon={faGithub} />
       </a>
     );

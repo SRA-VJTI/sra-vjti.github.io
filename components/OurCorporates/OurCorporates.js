@@ -12,6 +12,8 @@ const OurCorporates = () => {
               <a
                 href={`${CorporateReachLinks[idx]}`}
                 key={`corporate_reach_${idx}`}
+                target='_blank'
+                rel='noopener noreferrer'
               >
                 <img
                   src={`/static/images/corporates/${name}`}

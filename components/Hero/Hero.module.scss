@@ -1,12 +1,14 @@
 @import '../variables';
 
 .hero {
+  position: relative;
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 80px;
   font-family: 'Oswald', sans-serif;
 
   .heroHead {
@@ -51,54 +53,65 @@
   background-position: center;
   color: white;
 
-  .scroll-indicator::before {
-    animation: bounce 1s ease infinite;
-    bottom: 2rem;
-    color: #fff;
-    content: '╲╱';
-    font-size: 1rem;
-    height: 4rem;
-    left: 50%;
-    letter-spacing: -1px;
-    line-height: 4rem;
-    margin-left: -3rem;
-    opacity: 0.8;
+  .notif {
+    font-size: 1.5rem;
     position: absolute;
-    text-align: center;
-    width: 6rem;
+    bottom: 40px;
+    left: 40px;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-name: wobble;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.scroll-indicator::before {
+  animation: bounce 1s ease infinite;
+  bottom: 2rem;
+  color: #fff;
+  content: '╲╱';
+  font-size: 1rem;
+  height: 4rem;
+  left: 50%;
+  letter-spacing: -1px;
+  line-height: 4rem;
+  margin-left: -3rem;
+  opacity: 0.8;
+  position: absolute;
+  text-align: center;
+  width: 6rem;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-10%);
+  }
+}
+
+@keyframes wobble {
+  30%,
+  70% {
+    transform: rotate(0deg);
   }
 
-  @keyframes bounce {
-    50% {
-      transform: translateY(-10%);
-    }
+  35%,
+  65% {
+    transform: rotate(10deg);
+    color: $lightest;
   }
 
-  @keyframes wobble {
-    30%,
-    70% {
-      transform: rotate(0deg);
-    }
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
 
-    35%,
-    65% {
-      transform: rotate(10deg);
-      color: $lightest;
-    }
+  45%,
+  55% {
+    transform: rotate(10deg);
+  }
 
-    40%,
-    60% {
-      transform: rotate(-10deg);
-    }
-
-    45%,
-    55% {
-      transform: rotate(10deg);
-    }
-
-    50% {
-      transform: rotate(-10deg);
-    }
+  50% {
+    transform: rotate(-10deg);
   }
 }
 
@@ -118,6 +131,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 80px;
 
     background-position: center;
     background-repeat: no-repeat;
@@ -169,21 +183,28 @@
   }
 }
 
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6rem;
+  height: 4rem;
+  pointer-events: auto;
+}
+
 .scrollIndicator::before {
   animation: bounce 1s ease infinite;
-  bottom: 2rem;
   color: #fff;
   content: '╲╱';
   font-size: 1rem;
   height: 4rem;
-  left: 50%;
   letter-spacing: -1px;
   line-height: 4rem;
-  margin-left: -3rem;
   opacity: 0.8;
-  position: absolute;
   text-align: center;
   width: 6rem;
+  display: block;
 }
 
 @keyframes bounce {

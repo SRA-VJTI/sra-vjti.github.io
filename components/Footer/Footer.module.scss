@@ -2,37 +2,41 @@
 
 .footer {
   border-top: 2px solid $light;
-  padding: 2rem 0;
+  height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  z-index: 100;
-  background-color: rgba(0, 0, 0, 0.8); // Add background for better visibility
-
   h3 {
     font-weight: normal;
     font-size: 1.5rem;
-    margin-bottom: 1.5rem; // Add spacing instead of negative margin
-    color: $white;
-    letter-spacing: 1px;
+    margin-bottom: 20px;
   }
-
   .footerIcons {
-    font-size: 1.5rem; // Slightly larger icons
-    display: flex;
-    gap: 10px;
-
+    font-size: 1.2rem;
     a {
-      margin: 0 15px;
-      transition: all 0.3s ease;
-      color: $white;
-
-      &:hover {
+      margin: 0 10px;
+      transition: color 0.2s;
+      :hover {
         color: $light;
-        transform: translateY(-5px); // Simple lift effect
+        animation: wiggle 0.3s forwards;
+        // transform: translateY(10px);
       }
     }
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(2px);
+  }
+  66% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
