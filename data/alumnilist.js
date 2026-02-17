@@ -1227,11 +1227,14 @@ const CorporateReachImgNames = [
   'c7.png',
   'c8.png',
   'c9.png',
+  'c10.png',
+  'c11.png',
+  'c12.png',
 ];
 
 const CorporateReachLinks = [
   'https://www.microsoft.com/en-in',
-  'https://landing.ai/',
+  'https://lossfunk.com/',
   'https://www.espressif.com/',
   'https://www.apple.com/',
   'https://www.amd.com/en',
@@ -1239,6 +1242,9 @@ const CorporateReachLinks = [
   'https://www.qualcomm.com/home',
   'https://www.arm.com/company',
   'https://airpix.in/',
+  'https://www.eyecandyrobotics.com/',
+  'https://asperaindustries.com/',
+  'https://x.company/',
 ];
 export {
   AlumniList,

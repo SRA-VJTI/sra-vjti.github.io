@@ -1,24 +1,24 @@
 const SponsorListImages = [
   'espressif.png',
   'Lion_circuits.png',
-  'andonstar.png',
-  'tmotor.png',
-  'Odrive.jpeg',
   'texas.png',
-  'smc.png',
   'solidspace.png',
-  'dytspectrumowl.png',
+  // 'andonstar.png',
+  // 'tmotor.png',
+  // 'Odrive.jpeg',
+  // 'smc.png',
+  // 'dytspectrumowl.png',
 ];
 const SponsorLinks = [
   'https://www.espressif.com/',
   'https://www.lioncircuits.com/',
-  'https://andonstar.com/',
-  'https://uav-en.tmotor.com/',
-  'https://odriverobotics.com/',
   'https://www.ti.com/',
-  'https://www.smcin.com/',
   'https://solidspace.co.in/',
-  'https://www.dyt-ir.com/',
+  // 'https://andonstar.com/',
+  // 'https://uav-en.tmotor.com/',
+  // 'https://odriverobotics.com/',
+  // 'https://www.smcin.com/',
+  // 'https://www.dyt-ir.com/',
 ];
 
 const diamondSponsors = [
@@ -30,36 +30,36 @@ const diamondSponsors = [
     image: 'Lion_circuits.png',
     link: 'https://www.lioncircuits.com/',
   },
-  {
-    image: 'andonstar.png',
-    link: 'https://andonstar.com/',
-  },
-  {
-    image: 'tmotor.png',
-    link: 'https://uav-en.tmotor.com/',
-  },
-  {
-    image: 'dytspectrumowl.png',
-    link: 'https://www.dyt-ir.com/',
-  },
+  // {
+  //   image: 'andonstar.png',
+  //   link: 'https://andonstar.com/',
+  // },
+  // {
+  //   image: 'tmotor.png',
+  //   link: 'https://uav-en.tmotor.com/',
+  // },
+  // {
+  //   image: 'dytspectrumowl.png',
+  //   link: 'https://www.dyt-ir.com/',
+  // },
 ];
 
 const goldSponsors = [
-  {
-    image: 'Odrive.jpeg',
-    link: 'https://odriverobotics.com/',
-  },
-  {
-    image: 'texas.png',
-    link: 'https://www.ti.com/',
-  },
+  // {
+  //   image: 'Odrive.jpeg',
+  //   link: 'https://odriverobotics.com/',
+  // },
+  // {
+  //   image: 'texas.png',
+  //   link: 'https://www.ti.com/',
+  // },
 ];
 
 const silverSponsors = [
-  {
-    image: 'smc.png',
-    link: 'https://www.smcin.com/',
-  },
+  // {
+  //   image: 'smc.png',
+  //   link: 'https://www.smcin.com/',
+  // },
   {
     image: 'solidspace.png',
     link: 'https://solidspace.co.in/',

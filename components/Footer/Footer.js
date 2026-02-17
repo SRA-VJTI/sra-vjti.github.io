@@ -1,16 +1,14 @@
 import styles from './Footer.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faFacebook,
-  faTwitter,
   faInstagram,
   faYoutube,
   faGithub,
   faLinkedinIn,
+  faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { useEffect, useState } from 'react';
 import { SocialMediaLinks } from '../../data';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function Footer() {
   const [isLoad, setIsLoad] = useState('none');
@@ -32,18 +30,11 @@ function Footer() {
             <FontAwesomeIcon icon={faGithub} />
           </a>
           <a
-            href={SocialMediaLinks.linkedin}
+            href={SocialMediaLinks.instagram}
             target='_blank'
             style={{ display: isLoad }}
           >
-            <FontAwesomeIcon icon={faLinkedinIn} />
-          </a>
-          <a
-            href={SocialMediaLinks.facebook}
-            target='_blank'
-            style={{ display: isLoad }}
-          >
-            <FontAwesomeIcon icon={faFacebook} />
+            <FontAwesomeIcon icon={faInstagram} />
           </a>
           <a
             href={SocialMediaLinks.youtube}
@@ -53,25 +44,18 @@ function Footer() {
             <FontAwesomeIcon icon={faYoutube} />
           </a>
           <a
+            href={SocialMediaLinks.linkedin}
+            target='_blank'
+            style={{ display: isLoad }}
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>
+          <a
             href={SocialMediaLinks.twitter}
             target='_blank'
             style={{ display: isLoad }}
           >
-            <FontAwesomeIcon icon={faTwitter} />
-          </a>
-          <a
-            href={SocialMediaLinks.instagram}
-            target='_blank'
-            style={{ display: isLoad }}
-          >
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
-          <a
-            href={SocialMediaLinks.email}
-            target='_blank'
-            style={{ display: isLoad }}
-          >
-            <FontAwesomeIcon icon={faEnvelope} />
+            <FontAwesomeIcon icon={faXTwitter} />
           </a>
         </div>
       </footer>
