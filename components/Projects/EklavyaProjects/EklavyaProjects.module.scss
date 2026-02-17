@@ -1,4 +1,5 @@
 @import '../../variables';
+
 .eklavyaProj {
   width: 300px;
   height: 350px;
@@ -29,72 +30,87 @@
     width: 100%;
     height: 100%;
 
-    background-color: $light;
+    background-color: darken($light, 10%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: clip-path 0.8s;
 
-    .iButton {
-      width: 25px;
-      height: 25px;
-      text-align: center;
-      position: absolute;
-      font-size: 1.2rem;
-      top: 5%;
-      left: 86.5%;
-      cursor: pointer;
-      // color: black;
-    }
     .iInfo {
-      text-align: center;
-      width: 80%;
+      text-align: justify;
+      width: 90%;
       margin-bottom: 20px;
     }
+
     .iLink {
       font-size: 1.5rem;
     }
 
-    // 4% and 120%
-    clip-path: circle(4% at 90.75% 8%);
+    // 0% and 120%
+    clip-path: circle(0% at 90.75% 8%);
   }
 }
+
 .eklavyaYearCloud {
-  width: 50%;
-  padding: 1em;
+  width: 90%; // Use more width to fit all years
+  max-width: 1200px;
+  padding: 1.5em;
   margin: 3em auto;
 
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-wrap: nowrap; // Force single row
+  overflow-x: auto; // Allow horizontal scroll if needed
+  gap: 15px;
+  justify-content: center; // Center items if they fit, start if they overflow
+  align-items: center;
 
   border: 2px solid $light;
   border-radius: 20px;
-  // border-bottom: 2px solid $light;
+
+  // Hide scrollbar for cleaner look but keep functionality
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+
+  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   .eklavyaYearTag {
-    // margin: 1em;
-    padding: 1em;
-    flex-grow: 1;
+    flex: 0 0 auto; // Don't shrink, don't grow, base on content/width
+    min-width: 100px; // Ensure decent clickable area
+    padding: 0.8em;
     text-align: center;
     font-size: 1.5rem;
-    transition: background-color 0.2s;
-
+    transition: all 0.3s ease;
     border-radius: 10px;
+    cursor: pointer;
+
     &:hover {
-      background-color: rgba(255, 255, 255, 0.199);
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
     }
+  }
 
-    // border-right: 1px solid $lightest;
+  .activeYearTag {
+    background-color: $light;
+    color: $white;
+    font-weight: bold;
+    transform: scale(1.05); // Reduced scale slightly to fit grid better
+    box-shadow: 0 4px 15px rgba(247, 28, 50, 0.4);
+  }
 
-    // &:last-of-type {
-    // 	border-right: none;
-    // }
+  @media (max-width: 768px) {
+    width: 80%;
   }
 
   @media (max-width: 550px) {
-    width: 70%;
-    padding: 0.5em;
+    width: 90%;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+
     .eklavyaYearTag {
       padding: 0.5em;
       font-size: 1.1rem;
@@ -102,8 +118,27 @@
   }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate {
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-name: fadeInUp;
+}
+
 .eklavyaYear {
   margin-top: 20px;
+
   h2 {
     width: 50%;
     margin: auto;
@@ -112,7 +147,9 @@
     padding: 0.5em 0;
     border-bottom: 2px solid $light;
   }
+
   width: 100%;
+
   .eklavyaYearList {
     width: 100%;
     padding: 0em;

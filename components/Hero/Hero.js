@@ -1,6 +1,4 @@
 import styles from './Hero.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 
 function Hero({
@@ -44,15 +42,6 @@ function Hero({
         <a href='#is'>
           <div className={styles.scrollIndicator}></div>
         </a>
-        {isHome && (
-          <a
-            href='#notifs'
-            className={styles.notif}
-            style={{ display: isLoad }}
-          >
-            <FontAwesomeIcon icon={faBell} />
-          </a>
-        )}
       </div>
       {isHome && (
         <div className={styles.is} id='is'>

@@ -12,12 +12,14 @@ Official website for the Society of Robotics and Automation (SRA) at VJTI Mumbai
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd sra-vjti.github.io
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -25,6 +27,7 @@ yarn install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 # or
@@ -122,6 +125,7 @@ SRA Team
 The site is deployed using GitHub Pages. The build process generates a static export that can be served directly.
 
 For production builds:
+
 ```bash
 npm run export
 ```

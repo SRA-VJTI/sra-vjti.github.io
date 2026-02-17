@@ -9,7 +9,12 @@ const OurCorporates = () => {
         <div className={styles.reachGroup}>
           {CorporateReachImgNames.map((name, idx) => {
             return (
-              <a href={`${CorporateReachLinks[idx]}`} key={`corporate_reach_${idx}`}>
+              <a
+                href={`${CorporateReachLinks[idx]}`}
+                key={`corporate_reach_${idx}`}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
                 <img
                   src={`/static/images/corporates/${name}`}
                   alt=''

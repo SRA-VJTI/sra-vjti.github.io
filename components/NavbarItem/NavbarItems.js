@@ -77,6 +77,19 @@ const NavbarItems = ({
               </div>
             </Link>
           </div>
+        ) : navItem.link.startsWith('http') ? (
+          <div className={styles.Menu}>
+            <a
+              key={`link_${idx}`}
+              href={navItem.link}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <div className={styles.navbarElem}>
+                <span className={styles.title}>{navItem.name}</span>
+              </div>
+            </a>
+          </div>
         ) : (
           <div className={styles.Menu}>
             <Link key={`link_${idx}`} href={navItem.link}>
@@ -107,6 +120,20 @@ const NavbarItems = ({
                   );
                 })}
             </div>
+          </div>
+        ) : navItem.link.startsWith('http') ? (
+          <div className={styles.Menu} ref={ref}>
+            <a
+              key={`link_${idx}`}
+              href={navItem.link}
+              target='_blank'
+              rel='noopener noreferrer'
+              onClick={linkClick}
+            >
+              <div className={styles.navbarElem}>
+                <span className={styles.title}>{navItem.name}</span>
+              </div>
+            </a>
           </div>
         ) : (
           <div className={styles.Menu} ref={ref}>

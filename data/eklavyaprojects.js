@@ -24,13 +24,13 @@ const EklavyaProjectList = [
         name: 'EchoCore',
         imgName: 'Eklavya/Eklavya2025/EchoCore.png',
         sub: 'Implement both B-mode ultrasound imaging and 16-QAM digital communication systems on FPGA using Verilog.',
-        githubLink: 'https://github.com/Shri-2112/Flexsonic',
+        githubLink: 'https://github.com/cupx0j0e/EchoCore',
       },
       {
         name: 'FlexSonic',
         imgName: 'Eklavya/Eklavya2025/FlexSonic.png',
         sub: 'Design a smart glove that translates hand gestures into audible speech, empowering communication for the speech-impaired.',
-        githubLink: 'https://github.com/cupx0j0e/EchoCore',
+        githubLink: 'https://github.com/Shri-2112/Flexsonic',
       },
       {
         name: 'FPGA-Based Tetris',
@@ -104,7 +104,7 @@ const EklavyaProjectList = [
         sub: 'Design and verify a direct-mapped and set-associative cache subsystem for an existing RISC-V pipeline to reduce memory-access latency.',
         githubLink: 'https://github.com/shashvatprabhu/SynapseCache',
       },
-      
+
       {
         name: 'ESP32 Flight Controller',
         imgName: 'Eklavya/Eklavya2025/ESP32_Flight_Controller.png',
