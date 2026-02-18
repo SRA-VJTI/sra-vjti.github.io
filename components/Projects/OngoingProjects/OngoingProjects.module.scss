@@ -1,115 +1,325 @@
 @import '../../variables';
 
-.ongoingProj {
+.projectBar {
+  width: 95vw;
+  max-width: none;
+  padding: 1em 1.5em;
+  margin: 1.5em auto 0;
+
   display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0;
   justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  width: 100%;
-  min-height: 70vh;
+  align-items: center;
 
-  @media (max-width: 900px) {
-    flex-direction: column;
-    align-items: center;
-  }
+  border: 2px solid $light;
+  border-radius: 20px;
 
-  .ongoingProjCont {
-    width: 50%;
-    margin-right: 20px;
-    padding-bottom: 1em;
-
-    .ongoingProjContName {
-      font-size: 2.5rem;
-      text-align: left;
-      margin-bottom: 0.5em;
-    }
-
-    .ongoingProjContSub {
-      line-height: 160%;
-      margin: 1em 0;
-      text-align: left;
-    }
-
-    .ongoingProjContLinks {
-      text-align: left;
-      margin-top: 1em;
-
-      a {
-        font-size: 1.5rem;
-        transition: color 0.2s;
-
-        &:hover {
-          color: $dark;
-        }
-      }
-    }
-  }
-
-  .ongoingProjImg {
-    width: 45%;
-    height: 400px;
-
-    @media (max-width: 900px) {
-      width: 100%;
-      height: 300px;
-    }
-
-    @media (max-width: 650px) {
-      height: 250px;
-    }
-
-    @media (max-width: 450px) {
-      height: 200px;
-    }
-  }
-
-  .ongoingProjModel {
-    width: 45%;
-    height: auto;
-
-    iframe {
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9;
-    }
-
-    @media (max-width: 900px) {
-      width: 100%;
-      margin-top: 20px;
-    }
-
-    @media (max-width: 450px) {
-      iframe {
-        height: 250px;
-      }
-    }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
-.projectSelector {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-around;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  padding: 10px;
-}
 
-.projectName {
-  padding: 10px 20px;
+.projectTag {
+  flex: 1 1 0;
+  padding: 0.7em 0.5em;
+  text-align: center;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border-radius: 10px;
   cursor: pointer;
-  background-color: $black;
-  border: 2px solid transparent;
-  transition: background-color 0.3s, border-color 0.3s;
-  font-size: 1.5rem;
-  justify-content: space-around;
+  white-space: nowrap;
 
   &:hover {
-    background-color: $light;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
   }
 }
 
-.active {
-  border-color: $dark;
-  background-color: $dark;
+.activeTag {
+  background-color: $light;
+  color: $white;
+  font-weight: bold;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(247, 28, 50, 0.4);
 }
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 200px);
+  max-width: 95vw;
+  margin: 0 auto;
+  padding: 1rem 4rem;
+}
+
+.arrowLeft,
+.arrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: $white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 1rem;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.arrowLeft {
+  left: 0;
+}
+
+.arrowRight {
+  right: 0;
+}
+
+.card {
+  @include tech-card;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardImage {
+  flex: 0 0 60%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+.cardImageGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  width: 100%;
+  height: 100%;
+}
+
+.cardImageTop {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  object-fit: contain;
+}
+
+.cardImageRow {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  flex: 1 1 0;
+  min-height: 0;
+
+  img {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.cardBody {
+  padding: 2rem 3.5rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  overflow-y: auto;
+
+  h2 {
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.9;
+    opacity: 0.85;
+  }
+}
+
+.cardLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+  a {
+    font-size: 1.5rem;
+    color: $white;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $light;
+    }
+  }
+}
+
+.dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba($white, 0.5);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, border-color 0.2s;
+
+  &:hover {
+    border-color: $light;
+  }
+}
+
+.dotActive {
+  background: $light;
+  border-color: $light;
+}
+
+@media (max-width: 768px) {
+  .projectBar {
+    width: 95%;
+    gap: 8px;
+    padding: 0.8em;
+    justify-content: flex-start;
+
+    .projectTag {
+      padding: 0.5em 0.8em;
+      font-size: 0.9rem;
+    }
+  }
+
+  .carousel {
+    padding: 1rem 1.5rem;
+    height: auto;
+    min-height: 70vh;
+  }
+
+  .arrowLeft,
+  .arrowRight {
+    font-size: 1.4rem;
+    padding: 0.5rem;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  .cardImage {
+    flex: 0 0 40vh;
+  }
+
+  .cardBody {
+    padding: 1.5rem;
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+/* ===== OLD GRID-BASED STYLES (commented out) =====
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  @include tech-card;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.cardBody {
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.85;
+  }
+}
+
+.cardLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+
+  a {
+    font-size: 1.4rem;
+    color: $white;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $light;
+    }
+  }
+}
+
+===== END OLD STYLES ===== */

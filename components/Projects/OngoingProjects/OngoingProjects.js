@@ -1,15 +1,33 @@
+import { useState, useEffect, useCallback } from 'react';
 import styles from './OngoingProjects.module.scss';
-import Link from 'next/link';
-import React, { useState } from 'react';
 import { OngoingProjectsData } from '../../../data';
-import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import {
+  faArrowUpRightFromSquare,
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
 import Hero from '../../Hero/Hero';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const OngoingProjects = () => {
-  const [selectedProject, setSelectedProject] = useState(
-    OngoingProjectsData[0]
-  );
+  const [current, setCurrent] = useState(0);
+  const total = OngoingProjectsData.length;
+
+  const next = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % total);
+  }, [total]);
+
+  const prev = useCallback(() => {
+    setCurrent((prev) => (prev - 1 + total) % total);
+  }, [total]);
+
+  useEffect(() => {
+    const timer = setInterval(next, 10000);
+    return () => clearInterval(timer);
+  }, [next]);
+
+  const proj = OngoingProjectsData[current];
 
   return (
     <>
@@ -19,72 +37,129 @@ const OngoingProjects = () => {
         subtitleList={['Ingenuinity in progress.']}
         isHome={false}
       />
-      <div className={styles.projectSelector}>
+      <div className={styles.projectBar}>
         {OngoingProjectsData.map((proj, idx) => (
-          <button
+          <span
             key={idx}
-            className={`${styles.projectName} ${
-              proj === selectedProject ? styles.active : ''
-            }`}
-            onClick={() => setSelectedProject(proj)}
+            className={`${styles.projectTag} ${idx === current ? styles.activeTag : ''}`}
+            onClick={() => setCurrent(idx)}
           >
             {proj.name}
-          </button>
+          </span>
         ))}
       </div>
-      <div className={styles.ongoingProjects}>
-        <OngoingProjectCard
-          key={selectedProject.name}
-          imgName={selectedProject.imgName}
-          name={selectedProject.name}
-          sub={selectedProject.sub}
-          githubLink={selectedProject.githubLink}
-          modelLink={selectedProject.modelLink}
-        />
+
+      <div className={styles.carousel}>
+        <button className={styles.arrowLeft} onClick={prev} aria-label="Previous project">
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </button>
+
+        <div className={styles.card}>
+          {proj.imgNames ? (
+            <div className={styles.cardImage}>
+              <div className={styles.cardImageGrid}>
+                <img src={`/static/images/${proj.imgNames[0]}`} alt={`${proj.name} 1`} className={styles.cardImageTop} />
+                <div className={styles.cardImageRow}>
+                  {proj.imgNames.slice(1).map((name, i) => (
+                    <img key={i} src={`/static/images/${name}`} alt={`${proj.name} ${i + 2}`} />
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : proj.imgName && (
+            <div className={styles.cardImage}>
+              <img
+                src={`/static/images/${proj.imgName}`}
+                alt={proj.name}
+              />
+            </div>
+          )}
+          <div className={styles.cardBody}>
+            <h2>{proj.name}</h2>
+            <p>{proj.sub}</p>
+            <div className={styles.cardLinks}>
+              {proj.githubLink && (
+                <a href={proj.githubLink} target='_blank' rel='noopener noreferrer'>
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+              )}
+              {proj.notionLink && (
+                <a href={proj.notionLink} target='_blank' rel='noopener noreferrer'>
+                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+
+        <button className={styles.arrowRight} onClick={next} aria-label="Next project">
+          <FontAwesomeIcon icon={faChevronRight} />
+        </button>
+
+        <div className={styles.dots}>
+          {OngoingProjectsData.map((_, idx) => (
+            <button
+              key={idx}
+              className={`${styles.dot} ${idx === current ? styles.dotActive : ''}`}
+              onClick={() => setCurrent(idx)}
+              aria-label={`Go to project ${idx + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </>
   );
 };
 
-const OngoingProjectCard = ({ imgName, name, sub, githubLink, modelLink }) => {
+export default OngoingProjects;
+
+/* ===== OLD GRID-BASED COMPONENT (commented out) =====
+
+const OngoingProjects = () => {
   return (
-    <div className={styles.ongoingProj}>
-      <div className={styles.ongoingProjCont}>
-        <div className={styles.ongoingProjContName}>{name}</div>
-        <div className={styles.ongoingProjContSub}>{sub}</div>
-        <div className={styles.ongoingProjContLinks}>
-          <a href={githubLink} target='_blank' rel='noopener noreferrer'>
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
+    <>
+      <Hero
+        imgName={'ongoing-hero.jpg'}
+        title={<>Ongoing Projects</>}
+        subtitleList={['Ingenuinity in progress.']}
+        isHome={false}
+      />
+      <div className={styles.cardGrid}>
+        {OngoingProjectsData.map((proj, idx) => (
+          <OngoingProjectCard
+            key={idx}
+            name={proj.name}
+            sub={proj.sub}
+            githubLink={proj.githubLink}
+            notionLink={proj.notionLink}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
+
+const OngoingProjectCard = ({ name, sub, githubLink, notionLink }) => {
+  return (
+    <div className={styles.card}>
+      <div className={styles.cardBody}>
+        <h3>{name}</h3>
+        <p>{sub}</p>
+        <div className={styles.cardLinks}>
+          {githubLink && (
+            <a href={githubLink} target='_blank' rel='noopener noreferrer'>
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          )}
+          {notionLink && (
+            <a href={notionLink} target='_blank' rel='noopener noreferrer'>
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            </a>
+          )}
         </div>
       </div>
-      {imgName && (
-        <div
-          className={styles.ongoingProjImg}
-          style={{
-            backgroundImage: `url("/static/images/${imgName}")`,
-            backgroundPosition: 'center',
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            height: '400px',
-            width: '45%',
-          }}
-        ></div>
-      )}
-      {modelLink && (
-        <div className={styles.ongoingProjModel}>
-          <iframe
-            className={styles.iframeModel}
-            allowfullscreen
-            width='640'
-            height='480'
-            loading='lazy'
-            frameborder='1'
-            src={modelLink}
-          ></iframe>
-        </div>
-      )}
     </div>
   );
 };
-export default OngoingProjects;
+
+===== END OLD COMPONENT ===== */

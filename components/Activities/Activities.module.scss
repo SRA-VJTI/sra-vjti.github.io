@@ -1,107 +1,314 @@
 @import '../variables';
 
-.activitySectionTitle {
-  font-size: 2rem;
-  text-align: center;
-  width: 50%;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 1em;
-  padding-bottom: 0.5em;
-  border-bottom: 2px solid $light;
+.projectBar {
+  width: 95vw;
+  max-width: none;
+  padding: 1em 1.5em;
+  margin: 1.5em auto 0;
 
-  @media (max-width: 450px) {
-    width: 80%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 2px solid $light;
+  border-radius: 20px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
-.activity {
-  width: 70%;
-  height: auto;
-  margin: 5em auto;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  .activityImg {
-    // margin-right: 1em;
-    width: 30%;
-    // height: 100%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .activityCont {
-    width: 70%;
-    height: 100%;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex;
-    line-height: 250%;
-    text-align: justify;
-    .activityContName {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      padding-bottom: 0.15em;
-      transition: border-bottom 0.3s;
-      border-bottom: 1px solid $lightest;
-      .activityIcon {
-        font-size: 1.2rem;
-        float: right;
-        a {
-          margin: 0 10px;
-          transition: color 0.2s;
-          :hover {
-            color: $light;
-            animation: wiggle 0.3s forwards;
-            // transform: translateY(10px);
-          }
-        }
-      }
-    }
-    .activityContSub {
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-  }
+.projectTag {
+  flex: 1 1 0;
+  padding: 0.7em 0.5em;
+  text-align: center;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
 
   &:hover {
-    .activityCont {
-      .activityContName {
-        border-bottom: 1px solid $light;
-      }
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+.activeTag {
+  background-color: $light;
+  color: $white;
+  font-weight: bold;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(247, 28, 50, 0.4);
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 200px);
+  max-width: 95vw;
+  margin: 0 auto;
+  padding: 1rem 4rem;
+}
+
+.arrowLeft,
+.arrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: $white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  padding: 1rem;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.arrowLeft {
+  left: 0;
+}
+
+.arrowRight {
+  right: 0;
+}
+
+.card {
+  @include tech-card;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardImage {
+  flex: 0 0 60%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+.cardImageGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  width: 100%;
+  height: 100%;
+}
+
+.cardImageTop {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  object-fit: contain;
+}
+
+.cardImageRow {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  flex: 1 1 0;
+  min-height: 0;
+
+  img {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.cardBody {
+  padding: 2rem 3.5rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  overflow-y: auto;
+
+  h2 {
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.9;
+    opacity: 0.85;
+  }
+}
+
+.cardLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+
+  a {
+    font-size: 1.5rem;
+    color: $white;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $light;
     }
   }
-  @media (max-width: 900px) {
-    .activityImg {
-      height: auto;
-      width: 50%;
+}
+
+.cardGroup {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  height: 100%;
+
+  .card {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cardImage {
+    flex: 0 0 60%;
+    padding: 1rem;
+  }
+
+  .cardBody {
+    padding: 1.5rem 2rem;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.8;
     }
   }
-  @media (max-width: 780px) {
-    width: 90%;
-    margin: 1em auto;
+}
+
+.dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba($white, 0.5);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s, border-color 0.2s;
+
+  &:hover {
+    border-color: $light;
+  }
+}
+
+.dotActive {
+  background: $light;
+  border-color: $light;
+}
+
+@media (max-width: 768px) {
+  .projectBar {
+    width: 95%;
+    gap: 8px;
+    padding: 0.8em;
+    justify-content: flex-start;
+
+    .projectTag {
+      padding: 0.5em 0.8em;
+      font-size: 0.9rem;
+    }
+  }
+
+  .carousel {
+    padding: 1rem 1.5rem;
     height: auto;
-    flex-direction: column;
-    .activityImg {
-      height: 45vh;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%;
-      // background-image: 100vw;
+    min-height: 70vh;
+  }
+
+  .arrowLeft,
+  .arrowRight {
+    font-size: 1.4rem;
+    padding: 0.5rem;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  .cardImage {
+    flex: 0 0 40vh;
+  }
+
+  .cardBody {
+    padding: 1.5rem;
+
+    h2 {
+      font-size: 1.6rem;
     }
-    .activityCont {
-      width: 100%;
-      height: max-content;
+
+    p {
+      font-size: 1.1rem;
     }
   }
-  @media (max-width: 375px) {
-    .activityImg {
-      width: 90%;
+
+  .cardGroup {
+    flex-direction: column;
+    overflow-y: auto;
+
+    .card {
+      height: auto;
+    }
+
+    .cardImage {
+      flex: 0 0 35vh;
+    }
+
+    .cardBody {
+      padding: 1.5rem;
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
   }
 }
