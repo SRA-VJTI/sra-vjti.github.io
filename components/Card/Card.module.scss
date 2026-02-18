@@ -52,6 +52,62 @@
       font-family: 'Tomorrow', sans-serif;
     }
 
+    .statusContent {
+      width: 85%;
+      margin: 0 auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .statusSection {
+        &.hoverOnlySection {
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden;
+          transition: all 0.3s ease;
+        }
+
+        .statusLabel {
+          font-size: 0.6em;
+          text-transform: uppercase;
+          color: #777;
+          letter-spacing: 0.1em;
+          margin-bottom: 0.3rem;
+          font-family: 'Michroma', sans-serif;
+        }
+
+        .pills {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.3rem;
+        }
+
+        .pill {
+          font-size: 0.7em;
+          padding: 0.2rem 0.5rem;
+          border-radius: 4px;
+          font-family: 'Tomorrow', sans-serif;
+          line-height: 1.4;
+
+          &.highlight {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+          }
+
+          &.hoverOnly {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding: 0 0.5rem;
+            transition: all 0.3s ease;
+          }
+        }
+      }
+    }
+
     .icons {
       margin-top: auto;
       display: flex;
@@ -65,5 +121,58 @@
   @media (max-width: 650px) {
     width: 80%;
     margin: 0 auto;
+  }
+
+  &.alumni {
+    background-color: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    height: auto;
+    min-height: 22rem;
+
+    .desc {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .icons {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      background-color: rgba(26, 26, 26, 0.9);
+
+      .desc {
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
+      }
+
+      .statusContent .statusSection.hoverOnlySection {
+        max-height: 200px;
+        opacity: 1;
+      }
+
+      .statusContent .statusSection .pill.hoverOnly {
+        max-height: 40px;
+        opacity: 1;
+        padding: 0.2rem 0.5rem;
+      }
+
+      .icons {
+        max-height: 50px;
+        opacity: 1;
+        margin-top: auto;
+        padding-bottom: 1rem;
+      }
+    }
   }
 }
