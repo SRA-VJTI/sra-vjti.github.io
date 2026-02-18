@@ -97,14 +97,14 @@
 }
 
 .cardImage {
-  flex: 0 0 60%;
+  flex: 0 0 50%;
   position: relative;
   z-index: 1;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1rem;
 
   img {
     max-width: 100%;
@@ -145,7 +145,7 @@
 }
 
 .cardBody {
-  padding: 2rem 3.5rem;
+  padding: 1.2rem 2rem;
   position: relative;
   z-index: 1;
   display: flex;
@@ -155,13 +155,13 @@
   overflow-y: auto;
 
   h2 {
-    font-size: 2.4rem;
-    margin-bottom: 0.8rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
   }
 
   p {
-    font-size: 1.6rem;
-    line-height: 1.9;
+    font-size: 1rem;
+    line-height: 1.75;
     opacity: 0.85;
   }
 }
@@ -169,10 +169,10 @@
 .cardLinks {
   display: flex;
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 
   a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: $white;
     transition: color 0.2s;
 
@@ -194,21 +194,21 @@
   }
 
   .cardImage {
-    flex: 0 0 60%;
-    padding: 1rem;
+    flex: 0 0 50%;
+    padding: 0.75rem;
   }
 
   .cardBody {
-    padding: 1.5rem 2rem;
+    padding: 1rem 1.5rem;
 
     h2 {
-      font-size: 2rem;
-      margin-bottom: 0.6rem;
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
     }
 
     p {
-      font-size: 1.4rem;
-      line-height: 1.8;
+      font-size: 0.95rem;
+      line-height: 1.7;
     }
   }
 }
