@@ -4,7 +4,12 @@ import Hero from '../Hero/Hero';
 import { ActivitiesList } from '../../data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faBlog, faChevronLeft, faChevronRight, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBlog,
+  faChevronLeft,
+  faChevronRight,
+  faArrowUpRightFromSquare,
+} from '@fortawesome/free-solid-svg-icons';
 
 const CardLinks = ({ card }) => (
   <div className={styles.cardLinks}>
@@ -64,7 +69,9 @@ const Activities = () => {
         {ActivitiesList.map((item, idx) => (
           <span
             key={idx}
-            className={`${styles.projectTag} ${idx === current ? styles.activeTag : ''}`}
+            className={`${styles.projectTag} ${
+              idx === current ? styles.activeTag : ''
+            }`}
             onClick={() => setCurrent(idx)}
           >
             {item.shortName || item.name}
@@ -73,7 +80,11 @@ const Activities = () => {
       </div>
 
       <div className={styles.carousel}>
-        <button className={styles.arrowLeft} onClick={prev} aria-label="Previous activity">
+        <button
+          className={styles.arrowLeft}
+          onClick={prev}
+          aria-label='Previous activity'
+        >
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
 
@@ -84,18 +95,31 @@ const Activities = () => {
                 {card.imgNames ? (
                   <div className={styles.cardImage}>
                     <div className={styles.cardImageGrid}>
-                      <img src={`/static/images/${card.imgNames[0]}`} alt={`${card.name} 1`} className={styles.cardImageTop} />
+                      <img
+                        src={`/static/images/${card.imgNames[0]}`}
+                        alt={`${card.name} 1`}
+                        className={styles.cardImageTop}
+                      />
                       <div className={styles.cardImageRow}>
                         {card.imgNames.slice(1).map((name, j) => (
-                          <img key={j} src={`/static/images/${name}`} alt={`${card.name} ${j + 2}`} />
+                          <img
+                            key={j}
+                            src={`/static/images/${name}`}
+                            alt={`${card.name} ${j + 2}`}
+                          />
                         ))}
                       </div>
                     </div>
                   </div>
-                ) : card.imgName && (
-                  <div className={styles.cardImage}>
-                    <img src={`/static/images/${card.imgName}`} alt={card.name} />
-                  </div>
+                ) : (
+                  card.imgName && (
+                    <div className={styles.cardImage}>
+                      <img
+                        src={`/static/images/${card.imgName}`}
+                        alt={card.name}
+                      />
+                    </div>
+                  )
                 )}
                 <div className={styles.cardBody}>
                   <h2>{card.name}</h2>
@@ -120,7 +144,11 @@ const Activities = () => {
           </div>
         )}
 
-        <button className={styles.arrowRight} onClick={next} aria-label="Next activity">
+        <button
+          className={styles.arrowRight}
+          onClick={next}
+          aria-label='Next activity'
+        >
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
 
@@ -128,7 +156,9 @@ const Activities = () => {
           {ActivitiesList.map((_, idx) => (
             <button
               key={idx}
-              className={`${styles.dot} ${idx === current ? styles.dotActive : ''}`}
+              className={`${styles.dot} ${
+                idx === current ? styles.dotActive : ''
+              }`}
               onClick={() => setCurrent(idx)}
               aria-label={`Go to activity ${idx + 1}`}
             />

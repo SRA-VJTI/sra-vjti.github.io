@@ -41,7 +41,9 @@ const OngoingProjects = () => {
         {OngoingProjectsData.map((proj, idx) => (
           <span
             key={idx}
-            className={`${styles.projectTag} ${idx === current ? styles.activeTag : ''}`}
+            className={`${styles.projectTag} ${
+              idx === current ? styles.activeTag : ''
+            }`}
             onClick={() => setCurrent(idx)}
           >
             {proj.name}
@@ -50,7 +52,11 @@ const OngoingProjects = () => {
       </div>
 
       <div className={styles.carousel}>
-        <button className={styles.arrowLeft} onClick={prev} aria-label="Previous project">
+        <button
+          className={styles.arrowLeft}
+          onClick={prev}
+          aria-label='Previous project'
+        >
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
 
@@ -58,33 +64,48 @@ const OngoingProjects = () => {
           {proj.imgNames ? (
             <div className={styles.cardImage}>
               <div className={styles.cardImageGrid}>
-                <img src={`/static/images/${proj.imgNames[0]}`} alt={`${proj.name} 1`} className={styles.cardImageTop} />
+                <img
+                  src={`/static/images/${proj.imgNames[0]}`}
+                  alt={`${proj.name} 1`}
+                  className={styles.cardImageTop}
+                />
                 <div className={styles.cardImageRow}>
                   {proj.imgNames.slice(1).map((name, i) => (
-                    <img key={i} src={`/static/images/${name}`} alt={`${proj.name} ${i + 2}`} />
+                    <img
+                      key={i}
+                      src={`/static/images/${name}`}
+                      alt={`${proj.name} ${i + 2}`}
+                    />
                   ))}
                 </div>
               </div>
             </div>
-          ) : proj.imgName && (
-            <div className={styles.cardImage}>
-              <img
-                src={`/static/images/${proj.imgName}`}
-                alt={proj.name}
-              />
-            </div>
+          ) : (
+            proj.imgName && (
+              <div className={styles.cardImage}>
+                <img src={`/static/images/${proj.imgName}`} alt={proj.name} />
+              </div>
+            )
           )}
           <div className={styles.cardBody}>
             <h2>{proj.name}</h2>
             <p>{proj.sub}</p>
             <div className={styles.cardLinks}>
               {proj.githubLink && (
-                <a href={proj.githubLink} target='_blank' rel='noopener noreferrer'>
+                <a
+                  href={proj.githubLink}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   <FontAwesomeIcon icon={faGithub} />
                 </a>
               )}
               {proj.notionLink && (
-                <a href={proj.notionLink} target='_blank' rel='noopener noreferrer'>
+                <a
+                  href={proj.notionLink}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                 </a>
               )}
@@ -92,7 +113,11 @@ const OngoingProjects = () => {
           </div>
         </div>
 
-        <button className={styles.arrowRight} onClick={next} aria-label="Next project">
+        <button
+          className={styles.arrowRight}
+          onClick={next}
+          aria-label='Next project'
+        >
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
 
@@ -100,7 +125,9 @@ const OngoingProjects = () => {
           {OngoingProjectsData.map((_, idx) => (
             <button
               key={idx}
-              className={`${styles.dot} ${idx === current ? styles.dotActive : ''}`}
+              className={`${styles.dot} ${
+                idx === current ? styles.dotActive : ''
+              }`}
               onClick={() => setCurrent(idx)}
               aria-label={`Go to project ${idx + 1}`}
             />
