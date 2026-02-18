@@ -43,7 +43,9 @@ const Card = ({
               </div>
             )}
             {previous && previous.length > 0 && (
-              <div className={`${styles.statusSection} ${styles.hoverOnlySection}`}>
+              <div
+                className={`${styles.statusSection} ${styles.hoverOnlySection}`}
+              >
                 <div className={styles.statusLabel}>Previously</div>
                 <div className={styles.pills}>
                   {previous.map((item, i) => (

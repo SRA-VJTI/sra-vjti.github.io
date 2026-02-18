@@ -5,7 +5,10 @@ const AlumniList = [
       {
         name: 'Moteen Shah',
         imgName: 'Team/2024/Moteen_Shah_24.jpeg',
-        previous: [{ t: 'Research Intern NUS', b: true }, { t: 'OSPP Internship', b: false }],
+        previous: [
+          { t: 'Research Intern NUS', b: true },
+          { t: 'OSPP Internship', b: false },
+        ],
         current: [{ t: 'Texas Instruments Software Engineer', b: true }],
         linkedInLink: 'https://www.linkedin.com/in/moteen-shah-98997216b/',
         githubLink: 'https://github.com/Jamm02',
@@ -13,7 +16,10 @@ const AlumniList = [
       {
         name: 'Chinmay Lonkar',
         imgName: 'Team/2024/Chinmay_Lonkar_24.JPG',
-        previous: [{ t: 'Internship at TI', b: true }, { t: 'Intern at Espressif Systems', b: false }],
+        previous: [
+          { t: 'Internship at TI', b: true },
+          { t: 'Intern at Espressif Systems', b: false },
+        ],
         current: [{ t: 'Associate Engineer at Espressif Systems', b: false }],
         linkedInLink: 'https://in.linkedin.com/in/chinmay-lonkar-845207214',
         githubLink: 'https://github.com/ChinmayLonkar',
@@ -21,7 +27,12 @@ const AlumniList = [
       {
         name: 'Pratham Shah',
         imgName: 'Team/2024/Pratham_Shah_24.jpeg',
-        previous: [{ t: 'GSOC', b: true }, { t: 'Research Intern at NTU', b: true }, { t: 'AWS Intern', b: false }, { t: 'Research Intern at IIT B', b: false }],
+        previous: [
+          { t: 'GSOC', b: true },
+          { t: 'Research Intern at NTU', b: true },
+          { t: 'AWS Intern', b: false },
+          { t: 'Research Intern at IIT B', b: false },
+        ],
         current: [{ t: 'MS in CS at Stony Brook University', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/shahpratham',
         githubLink: 'https://github.com/shahpratham',
@@ -29,7 +40,10 @@ const AlumniList = [
       {
         name: 'Rishabh Bali',
         imgName: 'Team/2024/rishabh_24.jpeg',
-        previous: [{ t: 'OSPP', b: true }, { t: 'SWE Intern at Intel', b: true }],
+        previous: [
+          { t: 'OSPP', b: true },
+          { t: 'SWE Intern at Intel', b: true },
+        ],
         current: [{ t: 'Software Engineer at Qualcomm', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/rishabh-bali-3ba925216/',
         githubLink: 'https://github.com/Ris-Bali',
@@ -37,7 +51,10 @@ const AlumniList = [
       {
         name: 'Aniruddha Thakre',
         imgName: 'Team/2024/Aniruddha_Thakre_24.jpg',
-        previous: [{ t: "GSOC '23 @ UC OSPO", b: true }, { t: 'Ex eYSIP-2022 Intern @IIT Bombay', b: true }],
+        previous: [
+          { t: "GSOC '23 @ UC OSPO", b: true },
+          { t: 'Ex eYSIP-2022 Intern @IIT Bombay', b: true },
+        ],
         current: [{ t: 'SWE @ Nielsen (gracenote)', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/aniruddha-thakre-992a92213/',
         githubLink: 'https://github.com/Aniruddha1261',
@@ -45,23 +62,38 @@ const AlumniList = [
       {
         name: 'Rishikesh Donadkar',
         imgName: 'Team/2024/Rishikesh_Donadkar_2024.jpg',
-        previous: [{ t: "GSoC'22 @libcamera", b: true }, { t: 'Intern at Texas Instruments', b: true }],
+        previous: [
+          { t: "GSoC'22 @libcamera", b: true },
+          { t: 'Intern at Texas Instruments', b: true },
+        ],
         current: [{ t: 'Embedded Engineer @ Texas Instruments', b: false }],
-        linkedInLink: 'https://www.linkedin.com/in/rishikesh-donadkar-a75320228/',
+        linkedInLink:
+          'https://www.linkedin.com/in/rishikesh-donadkar-a75320228/',
         githubLink: 'https://github.com/RISHI27-dot',
       },
       {
         name: 'Siddesh Patil',
         imgName: 'Team/2024/Siddesh_Patil_24.jpg',
-        previous: [{ t: 'Ex-DSP Validation Intern @ Qualcomm, Austin', b: true }],
-        current: [{ t: 'RISC-V CPU DV Intern @ Tenstorrent', b: false }, { t: 'Masters in Electrical & Computer Engineering, Portland State University', b: false }],
+        previous: [
+          { t: 'Ex-DSP Validation Intern @ Qualcomm, Austin', b: true },
+        ],
+        current: [
+          { t: 'RISC-V CPU DV Intern @ Tenstorrent', b: false },
+          {
+            t: 'Masters in Electrical & Computer Engineering, Portland State University',
+            b: false,
+          },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/siddesh-patil-497b50206/',
         githubLink: 'https://github.com/Sidshx',
       },
       {
         name: 'Premraj Jadhav',
         imgName: 'Team/2024/Premraj_Jadhav_24.jpg',
-        previous: [{ t: 'Intern at AMD', b: true }, { t: 'Intern at IIT B', b: false }],
+        previous: [
+          { t: 'Intern at AMD', b: true },
+          { t: 'Intern at IIT B', b: false },
+        ],
         current: [{ t: 'Silicon Design Engineer @AMD', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/premraj-jadhav-448a33233',
         githubLink: 'https://github.com/Premraj02',
@@ -69,24 +101,44 @@ const AlumniList = [
       {
         name: 'Krishna Narayanan',
         imgName: 'Team/2024/Krishna_Narayanan_24.jpg',
-        previous: [{ t: "GSoC '22 @ BeagleBoard.Org", b: true }, { t: "GSoC '23 @ LLVM", b: true }],
+        previous: [
+          { t: "GSoC '22 @ BeagleBoard.Org", b: true },
+          { t: "GSoC '23 @ LLVM", b: true },
+        ],
         current: [{ t: 'Developer Associate@SAP', b: false }],
-        linkedInLink: 'https://www.linkedin.com/in/krishna-narayanan-295b57209/',
+        linkedInLink:
+          'https://www.linkedin.com/in/krishna-narayanan-295b57209/',
         githubLink: 'https://github.com/Krishna-13-cyber',
       },
       {
         name: 'Sagar Chotalia',
         imgName: 'Team/2024/Sagar_Chotalia_2024.jpg',
-        previous: [{ t: "GSoC'22 @ OpenAstronomy", b: true }, { t: 'Ex eYSIP-2022 Intern @IIT Bombay', b: false }, { t: 'Research Intern @ IISER Bhopal', b: true }, { t: 'Research Intern @ CSIR-NAL', b: false }],
-        current: [{ t: 'R&D Intern @ Procter and Gamble', b: false }, { t: 'MS in Robotics System Engineering @ RWTH Aachen University', b: false }],
+        previous: [
+          { t: "GSoC'22 @ OpenAstronomy", b: true },
+          { t: 'Ex eYSIP-2022 Intern @IIT Bombay', b: false },
+          { t: 'Research Intern @ IISER Bhopal', b: true },
+          { t: 'Research Intern @ CSIR-NAL', b: false },
+        ],
+        current: [
+          { t: 'R&D Intern @ Procter and Gamble', b: false },
+          {
+            t: 'MS in Robotics System Engineering @ RWTH Aachen University',
+            b: false,
+          },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/sagar-chotalia/',
         githubLink: 'https://github.com/sagarchotalia',
       },
       {
         name: 'Viraj Jagadale',
         imgName: 'Team/2024/Viraj_Jagadale_24.jpg',
-        previous: [{ t: 'Project Trainee @ BARC', b: true }, { t: 'Intern at Schneider Electric', b: true }],
-        current: [{ t: 'Data and Analytics - Associate @ PwC India', b: false }],
+        previous: [
+          { t: 'Project Trainee @ BARC', b: true },
+          { t: 'Intern at Schneider Electric', b: true },
+        ],
+        current: [
+          { t: 'Data and Analytics - Associate @ PwC India', b: false },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/viraj-jagadale-173b23231',
         githubLink: 'https://github.com/Jviraj',
       },
@@ -98,15 +150,29 @@ const AlumniList = [
       {
         name: 'Anushree Sabnis',
         imgName: 'Team/2023/AnushreeSabnis.jpg',
-        previous: [{ t: 'Research Intern@EPFL', b: true }, { t: 'Research Intern at IISC', b: false }, { t: 'LFX', b: true }],
-        current: [{ t: 'MS in Mechanical Engineering @ Carnegie Mellon University', b: false }],
+        previous: [
+          { t: 'Research Intern@EPFL', b: true },
+          { t: 'Research Intern at IISC', b: false },
+          { t: 'LFX', b: true },
+        ],
+        current: [
+          {
+            t: 'MS in Mechanical Engineering @ Carnegie Mellon University',
+            b: false,
+          },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/anushreesabnis',
         githubLink: 'https://github.com/MOLOCH-dev',
       },
       {
         name: 'Dhairya Shah',
         imgName: 'Team/2023/Dhairya_Shah.jpg',
-        previous: [{ t: 'Mentee at Linux Foundation for RISC V', b: true }, { t: 'Research Intern at EPFL', b: true }, { t: 'Intern at Espressif Systems', b: true }, { t: 'Research Intern at Nokia Bell Labs', b: true }],
+        previous: [
+          { t: 'Mentee at Linux Foundation for RISC V', b: true },
+          { t: 'Research Intern at EPFL', b: true },
+          { t: 'Intern at Espressif Systems', b: true },
+          { t: 'Research Intern at Nokia Bell Labs', b: true },
+        ],
         current: [{ t: 'PhD at NUS in CS', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/dhairya-shah-489a4b14b/',
         githubLink: 'https://github.com/dhairyashah1',
@@ -114,7 +180,11 @@ const AlumniList = [
       {
         name: 'Saad Hashmi',
         imgName: 'Team/2023/Saad_Hashmi.jpg',
-        previous: [{ t: 'Research Intern at IISC', b: true }, { t: 'Intern at DRDO', b: false }, { t: 'Research Intern at IIIT Hyd', b: true }],
+        previous: [
+          { t: 'Research Intern at IISC', b: true },
+          { t: 'Intern at DRDO', b: false },
+          { t: 'Research Intern at IIIT Hyd', b: true },
+        ],
         current: [{ t: 'MS in Robotics @ TU Delft', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/saad-hashmi-01722218b',
         githubLink: 'https://github.com/hashmis79',
@@ -130,7 +200,11 @@ const AlumniList = [
       {
         name: 'Kush Kothari',
         imgName: 'Team/2023/Kush_Kothari.jpg',
-        previous: [{ t: 'GSOC@NumFOCUS', b: true }, { t: 'Intern at NTU', b: true }, { t: 'GSOC at CETN-HSF', b: true }],
+        previous: [
+          { t: 'GSOC@NumFOCUS', b: true },
+          { t: 'Intern at NTU', b: true },
+          { t: 'GSOC at CETN-HSF', b: true },
+        ],
         current: [{ t: 'SDE II @ Deutsche bank', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/kush-kothari-ba013218b/',
         githubLink: 'https://github.com/kkothari2001',
@@ -138,8 +212,18 @@ const AlumniList = [
       {
         name: 'Prathamesh Tagore',
         imgName: 'Team/2023/Prathamesh_Profile.jpeg',
-        previous: [{ t: 'GSOC at Boost C++ Libraries', b: true }, { t: 'Mentee at Linux Foundation for RISC V', b: true }, { t: 'Research Intern at PLCT Lab', b: false }, { t: 'Research Intern at EPFL', b: true }],
-        current: [{ t: 'Masters in Electrical Engineering and IT @ETH Zurich', b: false }],
+        previous: [
+          { t: 'GSOC at Boost C++ Libraries', b: true },
+          { t: 'Mentee at Linux Foundation for RISC V', b: true },
+          { t: 'Research Intern at PLCT Lab', b: false },
+          { t: 'Research Intern at EPFL', b: true },
+        ],
+        current: [
+          {
+            t: 'Masters in Electrical Engineering and IT @ETH Zurich',
+            b: false,
+          },
+        ],
         linkedInLink: 'http://linkedin.com/in/prathamesh-tagore-61aa1a1b1/',
         githubLink: 'https://github.com/meshtag',
       },
@@ -147,14 +231,23 @@ const AlumniList = [
         name: 'Gautam Agrawal',
         imgName: 'Team/2023/Gautam_Agrawal.jpeg',
         previous: [{ t: "OSPP'21 @ Project C", b: true }],
-        current: [{ t: 'Embedded Systems Engineer @ Espressif Systems', b: false }],
+        current: [
+          { t: 'Embedded Systems Engineer @ Espressif Systems', b: false },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/gautam-agrawal-523240196/',
         githubLink: 'https://github.com/gautam-dev-maker',
       },
       {
         name: 'Shreyas Atre',
         imgName: 'Team/2023/Shreyas_Atre.jpg',
-        previous: [{ t: "GSoC'21 @ BeagleBoard", b: true }, { t: "GSoC'22 @ STE||AR Group", b: true }, { t: 'Research Intern @ IITM and IIT KGP', b: true }, { t: 'Intern at Louisiana State University', b: false }, { t: 'NVIDIA', b: true }, { t: 'Intern at AMD', b: true }],
+        previous: [
+          { t: "GSoC'21 @ BeagleBoard", b: true },
+          { t: "GSoC'22 @ STE||AR Group", b: true },
+          { t: 'Research Intern @ IITM and IIT KGP', b: true },
+          { t: 'Intern at Louisiana State University', b: false },
+          { t: 'NVIDIA', b: true },
+          { t: 'Intern at AMD', b: true },
+        ],
         current: [{ t: 'MS in CS at Louisiana State University', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/atreshreyas/',
         githubLink: 'https://github.com/SAtacker',
@@ -170,7 +263,11 @@ const AlumniList = [
       {
         name: 'Tejal Jain',
         imgName: 'Team/2023/Tejal_Jain.jpeg',
-        previous: [{ t: 'Research Intern at EPFL', b: true }, { t: 'JRF@IIT B', b: true }, { t: 'Robotics Engineer at Miko', b: false }],
+        previous: [
+          { t: 'Research Intern at EPFL', b: true },
+          { t: 'JRF@IIT B', b: true },
+          { t: 'Robotics Engineer at Miko', b: false },
+        ],
         current: [{ t: 'MS in CS at Columbia University', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/tejal-bedmutha-283181197/',
         githubLink: 'https://github.com/Tejal-19',
@@ -178,15 +275,22 @@ const AlumniList = [
       {
         name: 'Aman Chhaparia',
         imgName: 'Team/2023/Aman_Chhaparia.jpg',
-        previous: [{ t: "OSPP'22 @ Buddy Compiler", b: true }, { t: 'Intern at AIRPIX', b: false }, { t: 'Intern at Barclays', b: true }],
+        previous: [
+          { t: "OSPP'22 @ Buddy Compiler", b: true },
+          { t: 'Intern at AIRPIX', b: false },
+          { t: 'Intern at Barclays', b: true },
+        ],
         current: [{ t: 'Developer at Barclays', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/aman-chhaparia-903a97195/',
         githubLink: 'https://github.com/amanchhaparia',
       },
-       {
+      {
         name: 'Omkar Sargar',
         imgName: 'Team/Omkar.jpeg',
-        previous: [{ t: 'Intern at rStream', b: false }, { t: 'MS Robotics at Northeastern University', b: true }],
+        previous: [
+          { t: 'Intern at rStream', b: false },
+          { t: 'MS Robotics at Northeastern University', b: true },
+        ],
         current: [{ t: 'Computer Vision Engineer @ rStream', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/omkar-s-7ba8b3137',
         githubLink: 'https://github.com/OSSome01',
@@ -194,12 +298,15 @@ const AlumniList = [
       {
         name: 'Dhruvi Doshi',
         imgName: 'Team/2023/Dhruvi_Doshi.jpg',
-        previous: [{ t: "GSoC'22 and '23 @ ScoreLab", b: true }, { t: 'Intern at JPMorganChase', b: false }],
+        previous: [
+          { t: "GSoC'22 and '23 @ ScoreLab", b: true },
+          { t: 'Intern at JPMorganChase', b: false },
+        ],
         current: [],
         linkedInLink: 'https://www.linkedin.com/in/dhruvi-doshi-5007801a0/',
         githubLink: 'https://github.com/dhruvi29/',
       },
-       {
+      {
         name: 'Shantanu Pande',
         imgName: 'Team/Shantanu.jpg',
         previous: [],
@@ -210,7 +317,12 @@ const AlumniList = [
       {
         name: 'Chaitravi Chalke',
         imgName: 'Team/2023/Chaitravi_Chalke.jpeg',
-        previous: [{ t: "OSPP'21 @ CNCF", b: true }, { t: 'Research Intern @ IITB', b: false }, { t: 'Intern @ Citi India', b: false }, { t: "GSoC'23 @FOSSi", b: true }],
+        previous: [
+          { t: "OSPP'21 @ CNCF", b: true },
+          { t: 'Research Intern @ IITB', b: false },
+          { t: 'Intern @ Citi India', b: false },
+          { t: "GSoC'23 @FOSSi", b: true },
+        ],
         current: [{ t: 'Technology Analyst @ Citi India', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/chaitravi-chalke-6b4806190/',
         githubLink: 'https://github.com/chaitravi-ce',
@@ -218,7 +330,15 @@ const AlumniList = [
       {
         name: 'Saurabh Powar',
         imgName: 'Team/2023/Saurabh_Powar.jpeg',
-        previous: [{ t: "OSPP'22 @ The Milvus Project", b: true }, { t: "GSoC'23 @ Fortran-lang", b: true }, { t: "GSoC'24", b: true }, { t: 'Intern @ AIRPIX', b: false }, { t: 'Intern @ GroundUp', b: false }, { t: 'Research Intern @ INRS Montreal', b: false }, { t: 'Software Dev @ axefinance', b: false }],
+        previous: [
+          { t: "OSPP'22 @ The Milvus Project", b: true },
+          { t: "GSoC'23 @ Fortran-lang", b: true },
+          { t: "GSoC'24", b: true },
+          { t: 'Intern @ AIRPIX', b: false },
+          { t: 'Intern @ GroundUp', b: false },
+          { t: 'Research Intern @ INRS Montreal', b: false },
+          { t: 'Software Dev @ axefinance', b: false },
+        ],
         current: [{ t: 'Software Engineer @ TruckX Inc', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/saurabh-powar-72b4701b4/',
         githubLink: 'https://github.com/Spnetic-5',
@@ -234,9 +354,17 @@ const AlumniList = [
       {
         name: 'Karthik Swaminathan',
         imgName: 'Team/2023/Karthik_Swaminathan.jpeg',
-        previous: [{ t: 'Intern @ IISC', b: true }, { t: 'Intern @ DRDO', b: true }, { t: 'Research Assistant @ IIITH', b: true }, { t: 'Pre-Doctoral Fellow @ IISc', b: true }],
-        current: [{ t: 'MS in Robotics Delft University of Technology', b: false }],
-        linkedInLink: 'https://www.linkedin.com/in/karthik-swaminathan-24644a1a2/',
+        previous: [
+          { t: 'Intern @ IISC', b: true },
+          { t: 'Intern @ DRDO', b: true },
+          { t: 'Research Assistant @ IIITH', b: true },
+          { t: 'Pre-Doctoral Fellow @ IISc', b: true },
+        ],
+        current: [
+          { t: 'MS in Robotics Delft University of Technology', b: false },
+        ],
+        linkedInLink:
+          'https://www.linkedin.com/in/karthik-swaminathan-24644a1a2/',
         githubLink: 'https://github.com/kart1802',
       },
     ],
@@ -247,7 +375,16 @@ const AlumniList = [
       {
         name: 'Omkar Bhilare',
         imgName: 'Team/OmkarB.jpg',
-        previous: [{ t: 'SDE@AMD', b: true }, { t: 'Intern at IIT M', b: true }, { t: 'GSOC@Beagleboard', b: true }, { t: 'Summer Intern@EPFL', b: true }, { t: 'Masters from University of Toronto in Electrical Computer Engineering', b: true }],
+        previous: [
+          { t: 'SDE@AMD', b: true },
+          { t: 'Intern at IIT M', b: true },
+          { t: 'GSOC@Beagleboard', b: true },
+          { t: 'Summer Intern@EPFL', b: true },
+          {
+            t: 'Masters from University of Toronto in Electrical Computer Engineering',
+            b: true,
+          },
+        ],
         current: [{ t: 'PhD Student @ UofT', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/omkar-bhilare-985aa2180',
         githubLink: 'https://github.com/ombhilare999',
@@ -255,24 +392,47 @@ const AlumniList = [
       {
         name: 'Sravan Chittupalli',
         imgName: 'Team/Sravan.jpeg',
-        previous: [{ t: 'ADAS Intern @ Lucid Motors', b: true }, { t: 'Research Intern @ University of Dalhousie', b: false }],
-        current: [{ t: 'MS by research @ Carnegie Mellon University', b: false }],
-        linkedInLink: 'https://www.linkedin.com/in/sravan-chittupalli-a3777b16a/',
+        previous: [
+          { t: 'ADAS Intern @ Lucid Motors', b: true },
+          { t: 'Research Intern @ University of Dalhousie', b: false },
+        ],
+        current: [
+          { t: 'MS by research @ Carnegie Mellon University', b: false },
+        ],
+        linkedInLink:
+          'https://www.linkedin.com/in/sravan-chittupalli-a3777b16a/',
         githubLink: 'https://github.com/SravanChittupalli',
       },
       {
         name: 'Priti Jain',
         imgName: 'Team/Priti.jpg',
-        previous: [{ t: 'Research Intern at Polytechnique Montreal', b: true }, { t: 'Intern at Unbox Robotics', b: true }],
-        current: [{ t: 'Innovation Manager at Aditya Birla Capital', b: false }],
+        previous: [
+          { t: 'Research Intern at Polytechnique Montreal', b: true },
+          { t: 'Intern at Unbox Robotics', b: true },
+        ],
+        current: [
+          { t: 'Innovation Manager at Aditya Birla Capital', b: false },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/priti-jain-006567173/',
         githubLink: 'https://github.com/preetijain7681',
       },
       {
         name: 'Shamit Savant',
         imgName: 'Team/Shamit.jpg',
-        previous: [{ t: 'PwC', b: true }, { t: 'Technology Consultant', b: false }, { t: 'Research Intern @ UF Herbert Wertheim College of Engineering', b: true }],
-        current: [{ t: 'MS in Electrical and Computer Engineering @ University of Florida', b: false }],
+        previous: [
+          { t: 'PwC', b: true },
+          { t: 'Technology Consultant', b: false },
+          {
+            t: 'Research Intern @ UF Herbert Wertheim College of Engineering',
+            b: true,
+          },
+        ],
+        current: [
+          {
+            t: 'MS in Electrical and Computer Engineering @ University of Florida',
+            b: false,
+          },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/shamit-savant/',
         githubLink: 'https://github.com/ShaMiT19',
       },
@@ -287,7 +447,11 @@ const AlumniList = [
       {
         name: 'Jitesh Sonkusare',
         imgName: 'Team/Jitesh.jpg',
-        previous: [{ t: 'MS Robotics@Northeastern University', b: true }, { t: 'Intern at Noah Medical', b: true }, { t: 'Researcher at Institute for Experiential Robotics', b: false }],
+        previous: [
+          { t: 'MS Robotics@Northeastern University', b: true },
+          { t: 'Intern at Noah Medical', b: true },
+          { t: 'Researcher at Institute for Experiential Robotics', b: false },
+        ],
         current: [{ t: 'Robotics Software Engineer@forREAL', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/jitesh-sonkusare-11b118198/',
         githubLink: 'https://github.com/jitesh3023',
@@ -295,7 +459,11 @@ const AlumniList = [
       {
         name: 'Saharsh Jain',
         imgName: 'Team/Saharsh.jpg',
-        previous: [{ t: 'Intern @ AIRPIX', b: false }, { t: 'Intern @ Wells Fargo', b: true }, { t: 'Software Engineer @ Wells Fargo', b: true }],
+        previous: [
+          { t: 'Intern @ AIRPIX', b: false },
+          { t: 'Intern @ Wells Fargo', b: true },
+          { t: 'Software Engineer @ Wells Fargo', b: true },
+        ],
         current: [{ t: 'Senior Python Engineer @ Docsumo', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/saharsh-jain/',
         githubLink: 'https://github.com/saharshleo/',
@@ -303,23 +471,48 @@ const AlumniList = [
       {
         name: 'Vedant Paranjape',
         imgName: 'Team/Vedant.jpg',
-        previous: [{ t: "GSoC'20 @ BeagleBoard", b: true }, { t: "GSoC'21 @ libcamera", b: true }, { t: 'Research Assistant, Intern @ Carleton University', b: false }, { t: 'Intern @ AMD', b: true }, { t: 'Research Intern @ EPFL Switzerland', b: true }, { t: 'SDE @ AMD', b: true }, { t: 'Intern @ NVIDIA', b: true }],
-        current: [{ t: 'Graduate Research Assistant @ Purdue University', b: false }],
+        previous: [
+          { t: "GSoC'20 @ BeagleBoard", b: true },
+          { t: "GSoC'21 @ libcamera", b: true },
+          { t: 'Research Assistant, Intern @ Carleton University', b: false },
+          { t: 'Intern @ AMD', b: true },
+          { t: 'Research Intern @ EPFL Switzerland', b: true },
+          { t: 'SDE @ AMD', b: true },
+          { t: 'Intern @ NVIDIA', b: true },
+        ],
+        current: [
+          { t: 'Graduate Research Assistant @ Purdue University', b: false },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/vedantp16',
         githubLink: 'https://github.com/vedantparanjape',
       },
       {
         name: 'Dhruva Gole',
         imgName: 'Team/Dhruva.jpeg',
-        previous: [{ t: "GSoC'21 @ BeagleBoard", b: true }, { t: "GSoC'22 @ The Zephyr Project", b: true }],
-        current: [{ t: 'Embedded Linux Engineer @ Texas Instruments', b: false }],
+        previous: [
+          { t: "GSoC'21 @ BeagleBoard", b: true },
+          { t: "GSoC'22 @ The Zephyr Project", b: true },
+        ],
+        current: [
+          { t: 'Embedded Linux Engineer @ Texas Instruments', b: false },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/dhruva-gole/',
         githubLink: 'https://github.com/DhruvaG2000',
       },
       {
         name: 'Abhinav Venkatadri',
         imgName: 'Team/Abhinav.jpg',
-        previous: [{ t: "GSoC'22 @ INCF", b: true }, { t: 'Intern @ AIRPIX', b: false }, { t: 'Associate @ PwC', b: false }, { t: 'Research Assistant @ Carnegie Mellon University (CMU)', b: true }, { t: 'Teaching Assistant @ CMU', b: false }, { t: 'Intern @ unstructured.io', b: false }],
+        previous: [
+          { t: "GSoC'22 @ INCF", b: true },
+          { t: 'Intern @ AIRPIX', b: false },
+          { t: 'Associate @ PwC', b: false },
+          {
+            t: 'Research Assistant @ Carnegie Mellon University (CMU)',
+            b: true,
+          },
+          { t: 'Teaching Assistant @ CMU', b: false },
+          { t: 'Intern @ unstructured.io', b: false },
+        ],
         current: [{ t: 'AI Engineer @ Klarity', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/abhinavvenkatadri/',
         githubLink: 'https://github.com/Abhinavvenkatadri',
@@ -327,7 +520,11 @@ const AlumniList = [
       {
         name: 'Rahul Singh',
         imgName: 'Team/Rahul.JPG',
-        previous: [{ t: 'Intern @ AIRPIX', b: false }, { t: 'Intern @ Metlife', b: false }, { t: 'Machine Learning Engineer @ Deloitte', b: true }],
+        previous: [
+          { t: 'Intern @ AIRPIX', b: false },
+          { t: 'Intern @ Metlife', b: false },
+          { t: 'Machine Learning Engineer @ Deloitte', b: true },
+        ],
         current: [{ t: 'AI Engineer @ Fractal', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/rahul-singh-005965188/',
         githubLink: 'https://github.com/rahulsingh701',
@@ -351,28 +548,39 @@ const AlumniList = [
       {
         name: 'Pradeep Suresh',
         imgName: 'Pradeep Suresh.jpg',
-        previous: [{ t: 'MS in Robotics@University of Michigan', b: true }, { t: 'Research Intern@Siemens', b: false }],
+        previous: [
+          { t: 'MS in Robotics@University of Michigan', b: true },
+          { t: 'Research Intern@Siemens', b: false },
+        ],
         current: [{ t: 'ML Engineer@Torc Robotics', b: false }],
         linkedInLink: 'https://de.linkedin.com/in/prad33p',
       },
       {
         name: 'Neha Kurian',
         imgName: 'Team/Neha.jpg',
-        previous: [{ t: 'Intern @ PwC India', b: true }, { t: 'Technology Consultant @ PwC India', b: false }],
-        current: [{ t: 'IIM Mumbai \'26', b: false }],
+        previous: [
+          { t: 'Intern @ PwC India', b: true },
+          { t: 'Technology Consultant @ PwC India', b: false },
+        ],
+        current: [{ t: "IIM Mumbai '26", b: false }],
         linkedInLink: 'https://www.linkedin.com/in/neha-kurian-469b791b3/',
         githubLink: 'https://github.com/Neha-Kurian',
       },
       {
         name: 'Maunil Shah',
         imgName: 'Team/Maunil.jpg',
-        previous: [{ t: 'Intern @ Orangewood Labs', b: true }, { t: 'Intern @ Infinite Analytics', b: false }, { t: 'Data Scientist @ Infinite Analytics', b: true }, { t: 'Intern @ Accenture Strategy', b: false }],
-        current: [{ t: 'M.Tech Computational and Data Sciences @ IISc', b: false }],
+        previous: [
+          { t: 'Intern @ Orangewood Labs', b: true },
+          { t: 'Intern @ Infinite Analytics', b: false },
+          { t: 'Data Scientist @ Infinite Analytics', b: true },
+          { t: 'Intern @ Accenture Strategy', b: false },
+        ],
+        current: [
+          { t: 'M.Tech Computational and Data Sciences @ IISc', b: false },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/maunil-shah-2987421a7/',
         githubLink: 'https://github.com/Maunil2k',
       },
-      
-     
     ],
   },
   {
@@ -381,7 +589,10 @@ const AlumniList = [
       {
         name: 'Vishnu Parammal',
         imgName: 'Team/Vishnu.png',
-        previous: [{ t: 'Associate Engineer at Deutsche Bank', b: false }, { t: 'SDR@ HBK', b: true }],
+        previous: [
+          { t: 'Associate Engineer at Deutsche Bank', b: false },
+          { t: 'SDR@ HBK', b: true },
+        ],
         current: [{ t: 'SDE2 @Amazon', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/vishnu-parammal/',
         githubLink: 'https://github.com/vishnuparammal',
@@ -389,17 +600,30 @@ const AlumniList = [
       {
         name: 'Chinmay Nehate',
         imgName: 'Team/Chinmay.jpg',
-        previous: [{ t: 'MS at University of Central Florida', b: true }, { t: 'Software Engineer at Telstra', b: true }],
-        current: [{ t: 'PhD in Computer Engineering at University of Central Florida', b: false }],
+        previous: [
+          { t: 'MS at University of Central Florida', b: true },
+          { t: 'Software Engineer at Telstra', b: true },
+        ],
+        current: [
+          {
+            t: 'PhD in Computer Engineering at University of Central Florida',
+            b: false,
+          },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/chinmay-nehate-3145a0184/',
         githubLink: 'https://github.com/chinmaynehate',
       },
-      
+
       {
         name: 'Vednarayan Iyer',
         imgName: 'Team/Vednarayan.jpg',
-        previous: [{ t: 'Research Intern @ DU', b: true }, { t: 'MS, Astronomy and Astrophysics @ IIT Indore', b: true }],
-        current: [{ t: 'PhD in Physics @ The University of Alabama', b: false }],
+        previous: [
+          { t: 'Research Intern @ DU', b: true },
+          { t: 'MS, Astronomy and Astrophysics @ IIT Indore', b: true },
+        ],
+        current: [
+          { t: 'PhD in Physics @ The University of Alabama', b: false },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/vednarayan-iyer',
         githubLink: 'https://github.com/ved29',
       },
@@ -407,7 +631,9 @@ const AlumniList = [
         name: 'Laukik Hase',
         imgName: 'Team/laukik.png',
         previous: [{ t: 'Intern @ Marjan Machinery', b: true }],
-        current: [{ t: 'Senior Software Engineer @ Espressif Systems', b: false }],
+        current: [
+          { t: 'Senior Software Engineer @ Espressif Systems', b: false },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/laukik-hase/',
         githubLink: 'https://github.com/laukik-hase',
       },
@@ -419,7 +645,14 @@ const AlumniList = [
       {
         name: 'Shweta Kumaran',
         imgName: 'Shweta Kumaran.jpg',
-        previous: [{ t: 'Intern at NVIDIA', b: true }, { t: 'DFT Intern at Apple', b: true }, { t: 'MS in Computer Engineering@University of Southern California', b: true }],
+        previous: [
+          { t: 'Intern at NVIDIA', b: true },
+          { t: 'DFT Intern at Apple', b: true },
+          {
+            t: 'MS in Computer Engineering@University of Southern California',
+            b: true,
+          },
+        ],
         current: [{ t: 'ASIC Engineer at Cisco', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/shweta-kumaran-b22773187/',
         githubLink: '',
@@ -428,14 +661,19 @@ const AlumniList = [
         name: 'Akshay Paralikar',
         imgName: 'Akshay Paralikar.jpg',
         previous: [{ t: 'MS in Electrical Engineering@ NYU', b: true }],
-        current: [{ t: 'Applied AI ML Senior Associate@JPMorganChase', b: false }],
+        current: [
+          { t: 'Applied AI ML Senior Associate@JPMorganChase', b: false },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/akshay-paralikar/',
         githubLink: '',
       },
       {
         name: 'Shambhavi Kuthe',
         imgName: 'SHAMBHAVI KUTHE.jpg',
-        previous: [{ t: 'MS in Computer Engineering at Virginia Tech', b: true }, { t: 'Embedded Systems Engineer@Schneider', b: true }],
+        previous: [
+          { t: 'MS in Computer Engineering at Virginia Tech', b: true },
+          { t: 'Embedded Systems Engineer@Schneider', b: true },
+        ],
         current: [{ t: 'Graduate Research Assistant@Virginia Tech', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/shambhavikuthe/',
         githubLink: '',
@@ -443,15 +681,24 @@ const AlumniList = [
       {
         name: 'Aditya Gawali',
         imgName: 'Aditya Gawali.jpg',
-        previous: [{ t: 'MS in Computer Engineering@ Virginia Tech', b: true }, { t: 'Wireless Device Driver Engineer at Qualcomm', b: true }, { t: 'Intern at Qualcomm', b: false }],
-        current: [{ t: 'Senior Runtime Software Engineer at d-Matrix', b: false }],
+        previous: [
+          { t: 'MS in Computer Engineering@ Virginia Tech', b: true },
+          { t: 'Wireless Device Driver Engineer at Qualcomm', b: true },
+          { t: 'Intern at Qualcomm', b: false },
+        ],
+        current: [
+          { t: 'Senior Runtime Software Engineer at d-Matrix', b: false },
+        ],
         linkedInLink: 'https://www.linkedin.com/in/adityagawali/',
         githubLink: '',
       },
       {
         name: 'Sankalp Vartak',
         imgName: 'sankalp vartak.jpg',
-        previous: [{ t: 'Trainee at Siemens', b: true }, { t: 'Summer Intern@RIL', b: true }],
+        previous: [
+          { t: 'Trainee at Siemens', b: true },
+          { t: 'Summer Intern@RIL', b: true },
+        ],
         current: [{ t: 'Product Development Lead@Humbi Analytics', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/sankalpvartak/',
         githubLink: '',
@@ -475,15 +722,23 @@ const AlumniList = [
       {
         name: 'Shashank Deshmukh',
         imgName: 'SHASHANK DESHMUKH.jpg',
-        previous: [{ t: 'MS EE, Technical University of Denmark', b: true }, { t: 'MS EPFL, Robotics', b: true }],
+        previous: [
+          { t: 'MS EE, Technical University of Denmark', b: true },
+          { t: 'MS EPFL, Robotics', b: true },
+        ],
         current: [{ t: 'Motion Planning Engineer @ MOTOR Ai', b: false }],
-        linkedInLink: 'https://www.linkedin.com/in/shashank-deshmukh-97b70318a/',
+        linkedInLink:
+          'https://www.linkedin.com/in/shashank-deshmukh-97b70318a/',
         githubLink: '',
       },
       {
         name: 'Saaket Agashe',
         imgName: 'Saaket Agashe.jpg',
-        previous: [{ t: 'MS CS @ University of California, Santa Cruz', b: true }, { t: 'PhD CS, University of California, Santa Cruz', b: false }, { t: 'Intern @ Code Dog Tech Group', b: false }],
+        previous: [
+          { t: 'MS CS @ University of California, Santa Cruz', b: true },
+          { t: 'PhD CS, University of California, Santa Cruz', b: false },
+          { t: 'Intern @ Code Dog Tech Group', b: false },
+        ],
         current: [{ t: 'PhD @ UC Santa Barbara', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/saaket-agashe-347988160/',
         githubLink: '',
@@ -491,7 +746,10 @@ const AlumniList = [
       {
         name: 'Nikita Chaube',
         imgName: 'Nikita Chaube.jpg',
-        previous: [{ t: 'Intern @ Godrej', b: true }, { t: 'Associate Consultant and Analyst @ IQVIA', b: true }],
+        previous: [
+          { t: 'Intern @ Godrej', b: true },
+          { t: 'Associate Consultant and Analyst @ IQVIA', b: true },
+        ],
         current: [{ t: 'Project Leader @ Axtria', b: false }],
         linkedInLink: 'https://www.linkedin.com/in/nikitachaube/',
         githubLink: '',
@@ -519,7 +777,7 @@ const AlumniList = [
         linkedInLink: 'https://www.linkedin.com/in/chinmay-khopde-867a2211a/',
         githubLink: '',
       },
-      
+
       {
         name: 'Rishabh Shah',
         imgName: 'Rishabh Shah.jpg',
