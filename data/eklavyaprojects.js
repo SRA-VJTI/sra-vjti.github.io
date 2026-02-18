@@ -42,7 +42,7 @@ const EklavyaProjectList = [
         name: 'GantryMate-200',
         imgName: 'Eklavya/Eklavya2025/EklavyaGantry.png',
         sub: 'Design and development of a gantry-style CNC system focusing on precision motion control, mechanical design, and firmware integration.',
-        githubLink: 'https://github.com/pushkardube/Eklavya_Gantry',
+        githubLink: 'https://github.com/SarvaarthN/Eklavya_Gantry',
       },
       {
         name: 'T5 Grammarator',
