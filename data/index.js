@@ -17,6 +17,7 @@ import {
   CorporateReachImgNames,
   CorporateReachLinks,
 } from './alumnilist';
+import { OpenSourceList } from './opensource.js';
 import Achievementlist from './achievementlist';
 import StartupsList from './startups';
 
@@ -36,6 +37,7 @@ export {
   AboutUsImages,
   AlumniReachImgNames,
   AlumniList,
+  OpenSourceList,
   AlumniReachLinks,
   CorporateReachImgNames,
   CorporateReachLinks,
