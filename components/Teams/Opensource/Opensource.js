@@ -2,31 +2,10 @@ import Hero from '../../Hero/Hero';
 import styles from './Opensource.module.scss';
 import ContributionCard from '../../ContributionCard/ContributionCard.js';
 import { OpenSourceList } from '../../../data';
-import { useState } from 'react';
-
-let updatedList = [];
+import { useState, useEffect, useMemo } from 'react';
 
 const competitions = ['GSoC', 'OSPP', 'LFX', 'Other'];
-
 const years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018];
-
-OpenSourceList.forEach((year) => {
-  year.contributions.forEach((contribution) => {
-    updatedList.push({
-      repoName: contribution.repoName,
-      repoIcon: contribution.repoIcon,
-      description: contribution.description,
-      prLink: contribution.prLink,
-
-      githubLink: contribution.githubLink,
-      contributor: contribution.contributor,
-      competition: contribution.competition,
-      year: year.year,
-    });
-  });
-});
-
-let filteredList = updatedList;
 
 const OpenSource = () => {
   const [clicked, setClicked] = useState(false);
@@ -34,6 +13,52 @@ const OpenSource = () => {
   const [filYear, setFilYear] = useState('Show all');
   const [filComp, setFilComp] = useState('Show all');
   const [key, setKey] = useState('');
+
+  // Memoize the flattened list to avoid re-calculation on every render
+  const updatedList = useMemo(() => {
+    const list = [];
+    if (OpenSourceList) {
+      OpenSourceList.forEach((year) => {
+        year.contributions.forEach((contribution) => {
+          list.push({
+            repoName: contribution.repoName,
+            repoIcon: contribution.repoIcon,
+            description: contribution.description,
+            prLink: contribution.prLink,
+            githubLink: contribution.githubLink,
+            contributor: contribution.contributor,
+            competition: contribution.competition,
+            year: year.year,
+            language: contribution.language || '', // Ensure language exists
+          });
+        });
+      });
+    }
+    return list;
+  }, []);
+
+  const [filteredList, setFilteredList] = useState(updatedList);
+
+  // Update filteredList whenever filters change
+  useEffect(() => {
+    const newList = updatedList.filter((contribution) => {
+      const matchesYear = filYear === 'Show all' || contribution.year == filYear;
+      const matchesComp =
+        filComp === 'Show all' || contribution.competition === filComp;
+
+      const keyword = key.toLowerCase();
+      const matchesKeyword =
+        keyword === '' ||
+        (contribution.repoName && contribution.repoName.toLowerCase().includes(keyword)) ||
+        (contribution.description && contribution.description.toLowerCase().includes(keyword)) ||
+        (contribution.language && contribution.language.toLowerCase().includes(keyword)) ||
+        (contribution.contributor && contribution.contributor.toLowerCase().includes(keyword));
+
+      return matchesYear && matchesComp && matchesKeyword;
+    });
+    setFilteredList(newList);
+  }, [filYear, filComp, key, updatedList]);
+
 
   const toggleYear = () => {
     setClicked(!clicked);
@@ -45,45 +70,18 @@ const OpenSource = () => {
     setClicked(false);
   };
 
-  const applyFilters = (year, comp, keyword) => {
-    filteredList = updatedList.filter((contribution) => {
-      const matchesYear = year === 'Show all' || contribution.year == year;
-      const matchesComp =
-        comp === 'Show all' || contribution.competition === comp;
-      const matchesKeyword =
-        keyword === '' ||
-        contribution.repoName.toLowerCase().includes(keyword) ||
-        contribution.description.toLowerCase().includes(keyword) ||
-        contribution.language.toLowerCase().includes(keyword) ||
-        contribution.contributor.toLowerCase().includes(keyword);
-
-      return matchesYear && matchesComp && matchesKeyword;
-    });
-  };
-
   const selYear = (year) => {
     setFilYear(year);
-    applyFilters(year, filComp, key);
     setClicked(false);
   };
 
   const selComp = (comp) => {
     setFilComp(comp);
-    applyFilters(filYear, comp, key);
     setClickedComp(false);
   };
 
   const selKeyword = (ev) => {
-    const value = ev.currentTarget.value.toLowerCase();
-    setKey(value);
-
-    if (value === '') {
-      setFilYear('Show all');
-      setFilComp('Show all');
-      filteredList = updatedList;
-    } else {
-      applyFilters(filYear, filComp, value);
-    }
+    setKey(ev.currentTarget.value);
   };
 
   return (
@@ -99,7 +97,8 @@ const OpenSource = () => {
         <input
           className={styles.search}
           type='search'
-          placeholder='Search by repo, language or contributor'
+          placeholder='Search name of the contributor'
+          value={key}
           onChange={(ev) => selKeyword(ev)}
         />
 

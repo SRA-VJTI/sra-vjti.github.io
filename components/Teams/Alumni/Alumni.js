@@ -88,7 +88,7 @@ const Alumni = () => {
         <input
           className={styles.search}
           type='search'
-          placeholder='Search by keyword'
+          placeholder='Search name of Alumni'
           onChange={(ev) => selKeyword(ev)}
         />
         <div className={styles.dropdown}>
