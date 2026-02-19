@@ -1,5 +1,27 @@
 const AchievementsList = [
   {
+    year: '2025',
+    achs: [
+      {
+        name: 'Smart India Hackathon Finalists',
+        imgName: 'sih_benzene.png',
+      },
+      {
+        name: 'Smart India Hackathon Finalists',
+        imgName: 'sih_thomas.png',
+      },
+    ],
+  },
+  {
+    year: '2024',
+    achs: [
+      {
+        name: 'Smart India Hackathon winners',
+        imgName: 'sih_hexadecimals.png',
+      },
+    ],
+  },
+  {
     year: '2022',
     achs: [
       {
