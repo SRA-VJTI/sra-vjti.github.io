@@ -38,6 +38,10 @@ const NavbarData = [
     link: '/teams/alumni',
   },
   {
+    name: 'Opensource',
+    link: '/teams/opensource',
+  },
+  {
     name: 'Achievements',
     link: '/achievements',
   },
