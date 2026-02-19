@@ -23,7 +23,8 @@ const OngoingProjectsData = [
         measurement applications.
       </>
     ),
-    notionLink: 'https://www.notion.so/Localization-using-Ultra-Wide-Band-Technology-30a0ab71179880578c96ef9e045deb5d',
+    notionLink:
+      'https://www.notion.so/Localization-using-Ultra-Wide-Band-Technology-30a0ab71179880578c96ef9e045deb5d',
   },
 
   {
@@ -49,7 +50,8 @@ const OngoingProjectsData = [
         accessible to educational institutions worldwide.
       </>
     ),
-    notionLink: 'https://www.notion.so/HackerFab_VJTI-30a84e95a0f1806faab9dde628306dc9',
+    notionLink:
+      'https://www.notion.so/HackerFab_VJTI-30a84e95a0f1806faab9dde628306dc9',
   },
 
   {

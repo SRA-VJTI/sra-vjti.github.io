@@ -2,10 +2,7 @@ import styles from './Sponsors.module.scss';
 import Hero from '../Hero/Hero';
 import { saveAs } from 'file-saver';
 import {
-  diamondSponsors,
-  goldSponsors,
-  silverSponsors,
-  levelImages,
+  allSponsors,
   sponsorsText_1,
   sponsorsText_2,
   sponsorsSubText,
@@ -110,64 +107,14 @@ const Sponsors = () => {
             </a>
           </div>
           <h1>Sponsors</h1>
-          <img
-            src={`/static/images/sponsors/sponsorsLevel/${levelImages[0]}`}
-            alt=''
-            className={styles.levelImage}
-            key={`level_1`}
-          ></img>
           <hr />
           <div className={styles.reachGroup}>
-            {diamondSponsors.map((item, idx) => {
+            {allSponsors.map((item, idx) => {
               return (
-                <a href={item.link}>
+                <a href={item.link} key={`sponsor_${idx}`}>
                   <img
                     src={`/static/images/sponsors/${item.image}`}
                     alt=''
-                    className={styles.diamondImg}
-                    key={`alumni_reach_${idx}`}
-                  ></img>
-                </a>
-              );
-            })}
-          </div>
-          <img
-            src={`/static/images/sponsors/sponsorsLevel/${levelImages[1]}`}
-            alt=''
-            className={styles.levelImage}
-            key={`level_2`}
-          ></img>
-          <hr />
-          <div className={styles.reachGroup}>
-            {goldSponsors.map((item, idx) => {
-              return (
-                <a href={item.link}>
-                  <img
-                    src={`/static/images/sponsors/${item.image}`}
-                    alt=''
-                    className={styles.goldImg}
-                    key={`alumni_reach_${idx}`}
-                  ></img>
-                </a>
-              );
-            })}
-          </div>
-          <img
-            src={`/static/images/sponsors/sponsorsLevel/${levelImages[2]}`}
-            alt='Silver Tier'
-            className={styles.levelImage}
-            key={`level_3`}
-          ></img>
-          <hr />
-          <div className={styles.reachGroup}>
-            {silverSponsors.map((item, idx) => {
-              return (
-                <a href={item.link}>
-                  <img
-                    src={`/static/images/sponsors/${item.image}`}
-                    alt=''
-                    className={styles.silverImg}
-                    key={`alumni_reach_${idx}`}
                   ></img>
                 </a>
               );

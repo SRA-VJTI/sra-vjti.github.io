@@ -21,11 +21,6 @@ const HomeAboutUs = () => {
       </div>
       <div className={styles.ourProjects}>
         <h1>Projects</h1>
-        <Link href='/projects/flagship'>
-          <button>
-            Flagship Projects &nbsp;<span>&#8594;</span>
-          </button>
-        </Link>
         <Link href='/projects/eklavya'>
           <button>
             Eklavya Projects &nbsp;<span>&#8594;</span>

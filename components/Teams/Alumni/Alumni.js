@@ -20,6 +20,8 @@ AlumniList.forEach((year) => {
       linkedInLink: alumni.linkedInLink,
       githubLink: alumni.githubLink,
       year: year.year,
+      previous: alumni.previous,
+      current: alumni.current,
     });
   });
 });
@@ -55,10 +57,17 @@ const Alumni = () => {
 
     if (value != '') {
       filteredList = updatedList.filter((alumni) => {
-        return (
-          alumni.name.toLowerCase().includes(value) ||
-          `${alumni.sub}`.toLowerCase().includes(value)
-        );
+        const nameMatch = alumni.name.toLowerCase().includes(value);
+        const subMatch = alumni.sub
+          ? `${alumni.sub}`.toLowerCase().includes(value)
+          : false;
+        const prevMatch = alumni.previous
+          ? alumni.previous.some((p) => p.t.toLowerCase().includes(value))
+          : false;
+        const currMatch = alumni.current
+          ? alumni.current.some((c) => c.t.toLowerCase().includes(value))
+          : false;
+        return nameMatch || subMatch || prevMatch || currMatch;
       });
     } else {
       setFilYear('Show all');
@@ -126,6 +135,9 @@ const Alumni = () => {
               imgName={alumni.imgName}
               linkedInLink={alumni.linkedInLink}
               githubLink={alumni.githubLink}
+              isAlumni={true}
+              previous={alumni.previous}
+              current={alumni.current}
             />
           );
         })}

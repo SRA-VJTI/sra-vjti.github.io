@@ -21,7 +21,7 @@ const SponsorLinks = [
   // 'https://www.dyt-ir.com/',
 ];
 
-const diamondSponsors = [
+const allSponsors = [
   {
     image: 'espressif.png',
     link: 'https://www.espressif.com/',
@@ -30,36 +30,10 @@ const diamondSponsors = [
     image: 'Lion_circuits.png',
     link: 'https://www.lioncircuits.com/',
   },
-  // {
-  //   image: 'andonstar.png',
-  //   link: 'https://andonstar.com/',
-  // },
-  // {
-  //   image: 'tmotor.png',
-  //   link: 'https://uav-en.tmotor.com/',
-  // },
-  // {
-  //   image: 'dytspectrumowl.png',
-  //   link: 'https://www.dyt-ir.com/',
-  // },
-];
-
-const goldSponsors = [
-  // {
-  //   image: 'Odrive.jpeg',
-  //   link: 'https://odriverobotics.com/',
-  // },
-  // {
-  //   image: 'texas.png',
-  //   link: 'https://www.ti.com/',
-  // },
-];
-
-const silverSponsors = [
-  // {
-  //   image: 'smc.png',
-  //   link: 'https://www.smcin.com/',
-  // },
+  {
+    image: 'texas.png',
+    link: 'https://www.ti.com/',
+  },
   {
     image: 'solidspace.png',
     link: 'https://solidspace.co.in/',
@@ -67,8 +41,6 @@ const silverSponsors = [
 ];
 
 const SponsorshipBrochure = ['PR_Brochure_23-24.pdf'];
-
-const levelImages = ['diamond-badge.png', 'gold-badge.png', 'silver-badge.png'];
 
 const sponsorsText_1 =
   'The journey at SRA begins with the organisation of various cutting-edge seminars attended by more than 200 freshers, followed by a month-long mentorship programme, ground-breaking projects, participation in competitions at a national and international level, peer-peer knowledge transfer and much more. While growing in the technology space, SRA is committed to its philosophy of "Ideate, Innovate, and Inspire", in order to take our ambitions to a whole new level.';
@@ -82,10 +54,7 @@ const sponsorsSubText =
 export {
   SponsorListImages,
   SponsorLinks,
-  diamondSponsors,
-  goldSponsors,
-  silverSponsors,
-  levelImages,
+  allSponsors,
   sponsorsText_1,
   sponsorsText_2,
   sponsorsSubText,

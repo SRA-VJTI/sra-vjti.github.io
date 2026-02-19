@@ -491,8 +491,8 @@ const OpenSourceList = [
       githubLink: 'https://github.com/SAtacker',
     },
 
-    ]
-  }
+    ],
+  },
 ];
 
 export { OpenSourceList };
