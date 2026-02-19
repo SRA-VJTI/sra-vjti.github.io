@@ -27,8 +27,9 @@ const ContributionCard = ({
         <div className={styles.desc}>{description}</div>
         <div className={styles.meta}>
           <span
-            className={`${styles.competition} ${styles[competition?.toLowerCase()] || ''
-              }`}
+            className={`${styles.competition} ${
+              styles[competition?.toLowerCase()] || ''
+            }`}
           >
             {competition}
           </span>

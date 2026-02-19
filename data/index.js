@@ -6,7 +6,6 @@ import {
   AboutUsImages,
 } from './aboutus';
 
-
 import SocialMediaLinks from './socialmedia';
 import HeroTags from './herotags';
 import NavbarData from './navbar';
@@ -47,7 +46,5 @@ export {
   ActivitiesList,
   StartupsList,
   Achievementlist,
-
-
   PublicationsList,
 };

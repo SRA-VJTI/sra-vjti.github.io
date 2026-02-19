@@ -2,14 +2,14 @@ import OpenSource from '../components/Opensource/Opensource';
 import Head from 'next/head';
 
 const OpenSourcePage = () => {
-    return (
-        <>
-            <Head>
-                <title>Open Source | SRA VJTI</title>
-            </Head>
-            <OpenSource />
-        </>
-    );
+  return (
+    <>
+      <Head>
+        <title>Open Source | SRA VJTI</title>
+      </Head>
+      <OpenSource />
+    </>
+  );
 };
 
 export default OpenSourcePage;
