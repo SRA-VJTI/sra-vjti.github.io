@@ -4,7 +4,7 @@ const AboutVJTI =
   "Veermata Jijabai Technological Institute, established in 1887, pioneered India's engineering education, research, and training ecosystem. Located in South Mumbai, VJTI is known for its high-quality teaching, collaborative research, strong industry connect, and alumni network.";
 
 const AboutUsImages = {
-  newgroup: '/group/2021/group_pic_2021.jpg',
+  newgroup: '/hero/full_team_2027.jpg',
   oldGroup: '/group/very_old/group-old-final.jpg',
 };
 
