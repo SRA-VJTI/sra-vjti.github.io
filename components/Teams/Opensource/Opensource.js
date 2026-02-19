@@ -1,5 +1,5 @@
 import Hero from '../../Hero/Hero';
-import styles from './OpenSource.module.scss';
+import styles from './Opensource.module.scss';
 import ContributionCard from '../../ContributionCard/ContributionCard.js';
 import { OpenSourceList } from '../../../data';
 import { useState } from 'react';

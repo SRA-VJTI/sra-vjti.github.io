@@ -1470,6 +1470,8 @@ const AlumniReachImgNames = [
   '19.png',
   '20.png',
   '21.png',
+  '22.png',
+  '23.png',
 ];
 
 const AlumniReachLinks = [
@@ -1493,7 +1495,9 @@ const AlumniReachLinks = [
   'https://www.wpi.edu/',
   'https://www.northeastern.edu/',
   'https://www.nyu.edu/',
-  'https://oregonstate.edu/',
+  'https://ethz.ch/en.html',
+  'https://nus.edu.sg/',
+  'https://iitm-riselab.github.io/',
 ];
 
 const CorporateReachImgNames = [
