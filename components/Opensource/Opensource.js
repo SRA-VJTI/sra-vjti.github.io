@@ -1,10 +1,10 @@
-import Hero from '../../Hero/Hero';
+import Hero from '../Hero/Hero';
 import styles from './Opensource.module.scss';
-import ContributionCard from '../../ContributionCard/ContributionCard.js';
-import { OpenSourceList } from '../../../data';
+import ContributionCard from '../ContributionCard/ContributionCard.js';
+import { OpenSourceList } from '../../data';
 import { useState, useEffect, useMemo } from 'react';
 
-const competitions = ['GSoC', 'OSPP', 'LFX', 'Other'];
+const competitions = ['GSoC', 'OSPP', 'LFX'];
 const years = [2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018];
 
 const OpenSource = () => {
@@ -20,17 +20,19 @@ const OpenSource = () => {
     if (OpenSourceList) {
       OpenSourceList.forEach((year) => {
         year.contributions.forEach((contribution) => {
-          list.push({
-            repoName: contribution.repoName,
-            repoIcon: contribution.repoIcon,
-            description: contribution.description,
-            prLink: contribution.prLink,
-            githubLink: contribution.githubLink,
-            contributor: contribution.contributor,
-            competition: contribution.competition,
-            year: year.year,
-            language: contribution.language || '', // Ensure language exists
-          });
+          if (competitions.includes(contribution.competition)) {
+            list.push({
+              repoName: contribution.repoName,
+              repoIcon: contribution.repoIcon,
+              description: contribution.description,
+              prLink: contribution.prLink,
+              githubLink: contribution.githubLink,
+              contributor: contribution.contributor,
+              competition: contribution.competition,
+              year: year.year,
+              language: contribution.language || '', // Ensure language exists
+            });
+          }
         });
       });
     }
@@ -42,23 +44,27 @@ const OpenSource = () => {
   // Update filteredList whenever filters change
   useEffect(() => {
     const newList = updatedList.filter((contribution) => {
-      const matchesYear = filYear === 'Show all' || contribution.year == filYear;
+      const matchesYear =
+        filYear === 'Show all' || contribution.year == filYear;
       const matchesComp =
         filComp === 'Show all' || contribution.competition === filComp;
 
       const keyword = key.toLowerCase();
       const matchesKeyword =
         keyword === '' ||
-        (contribution.repoName && contribution.repoName.toLowerCase().includes(keyword)) ||
-        (contribution.description && contribution.description.toLowerCase().includes(keyword)) ||
-        (contribution.language && contribution.language.toLowerCase().includes(keyword)) ||
-        (contribution.contributor && contribution.contributor.toLowerCase().includes(keyword));
+        (contribution.repoName &&
+          contribution.repoName.toLowerCase().includes(keyword)) ||
+        (contribution.description &&
+          contribution.description.toLowerCase().includes(keyword)) ||
+        (contribution.language &&
+          contribution.language.toLowerCase().includes(keyword)) ||
+        (contribution.contributor &&
+          contribution.contributor.toLowerCase().includes(keyword));
 
       return matchesYear && matchesComp && matchesKeyword;
     });
     setFilteredList(newList);
   }, [filYear, filComp, key, updatedList]);
-
 
   const toggleYear = () => {
     setClicked(!clicked);

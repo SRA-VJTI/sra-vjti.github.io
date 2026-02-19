@@ -35,11 +35,15 @@ const NavbarData = [
   },
   {
     name: 'Alumni',
-    link: '/teams/alumni',
+    link: '/alumni',
+  },
+  {
+    name: 'Startups',
+    link: '/startups',
   },
   {
     name: 'Opensource',
-    link: '/teams/opensource',
+    link: '/opensource',
   },
   {
     name: 'Achievements',
@@ -58,10 +62,6 @@ const NavbarData = [
         link: '/sponsors',
       },
     ],
-  },
-  {
-    name: 'Startups',
-    link: '/startups',
   },
 ];
 

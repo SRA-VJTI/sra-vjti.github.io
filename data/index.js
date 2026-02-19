@@ -6,7 +6,7 @@ import {
   AboutUsImages,
 } from './aboutus';
 
-import SenateList from './senate';
+
 import SocialMediaLinks from './socialmedia';
 import HeroTags from './herotags';
 import NavbarData from './navbar';
@@ -24,7 +24,7 @@ import StartupsList from './startups';
 import OngoingProjectsData from './ongoingprojects';
 import EklavyaProjectList from './eklavyaprojects';
 import ActivitiesList from './activities';
-import FacultyInchargeList from './faculty';
+
 import PublicationsList from './publications';
 
 export {
@@ -47,7 +47,7 @@ export {
   ActivitiesList,
   StartupsList,
   Achievementlist,
-  FacultyInchargeList,
-  SenateList,
+
+
   PublicationsList,
 };

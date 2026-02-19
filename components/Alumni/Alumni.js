@@ -1,7 +1,7 @@
-import Hero from '../../Hero/Hero';
+import Hero from '../Hero/Hero';
 import styles from './Alumni.module.scss';
-import Card from '../../Card/Card';
-import { AlumniList } from '../../../data';
+import Card from '../Card/Card';
+import { AlumniList } from '../../data';
 import { useState } from 'react';
 
 let updatedList = [];
