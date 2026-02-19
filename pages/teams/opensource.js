@@ -1,4 +1,4 @@
-import OpenSource from '../../components/Teams/OpenSource/OpenSource';
+import OpenSource from '../../components/Teams/Opensource/Opensource';
 import Head from 'next/head';
 
 const OpenSourcePage = () => {
