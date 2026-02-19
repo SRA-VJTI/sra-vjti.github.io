@@ -179,19 +179,6 @@
     }
   }
 
-  .levelImage {
-    display: block;
-    margin: 20px auto;
-    height: 50px;
-    width: auto;
-    margin-top: 3rem;
-
-    @media (max-width: 650px) {
-      width: auto;
-      height: 25px;
-    }
-  }
-
   hr {
     width: 40%;
     border: 1px solid $lightest;
@@ -222,16 +209,5 @@
       }
     }
 
-    .diamondImg:hover {
-      box-shadow: #b0c9e7 0px 20px 30px -10px;
-    }
-
-    .goldImg:hover {
-      box-shadow: goldenrod 0px 20px 30px -10px;
-    }
-
-    .silverImg:hover {
-      box-shadow: #c0c0c0 0px 20px 30px -10px;
-    }
   }
 }
