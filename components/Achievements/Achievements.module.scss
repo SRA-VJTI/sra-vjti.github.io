@@ -3,6 +3,7 @@
 .achYear {
   width: 100%;
   margin: 50px auto;
+
   h3 {
     text-align: center;
     width: 40%;
@@ -10,6 +11,7 @@
     color: $light;
     font-size: 1.8rem;
     border-bottom: 2px solid $light;
+
     padding: {
       bottom: 10px;
     }
@@ -24,9 +26,10 @@
     flex-wrap: wrap;
 
     .ach {
-      width: 250px;
-      height: 300px;
+      width: 300px;
+      height: 360px;
       margin: 30px;
+
       // background-color: rebeccapurple;
       .achImg {
         height: 70%;
@@ -35,6 +38,7 @@
         background-position: center;
         background-repeat: no-repeat;
       }
+
       .achName {
         padding-top: 10px;
         height: 30%;
