@@ -73,107 +73,110 @@ const Activities = () => {
           </div>
 
           <div className={styles.projectBar}>
-        {ActivitiesList.map((item, idx) => (
-          <span
-            key={idx}
-            className={`${styles.projectTag} ${
-              idx === current ? styles.activeTag : ''
-            }`}
-            onClick={() => setCurrent(idx)}
-          >
-            {item.shortName || item.name}
-          </span>
-        ))}
-      </div>
-
-      <div className={styles.carousel}>
-        <div className={styles.cardWrapper}>
-        <button
-          className={styles.arrowLeft}
-          onClick={prev}
-          aria-label='Previous activity'
-        >
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </button>
-
-        {act.cards ? (
-          <div className={styles.cardGroup}>
-            {act.cards.map((card, i) => (
-              <div key={i} className={styles.card}>
-                {card.imgNames ? (
-                  <div className={styles.cardImage}>
-                    <div className={styles.cardImageGrid}>
-                      <img
-                        src={`/static/images/${card.imgNames[0]}`}
-                        alt={`${card.name} 1`}
-                        className={styles.cardImageTop}
-                      />
-                      <div className={styles.cardImageRow}>
-                        {card.imgNames.slice(1).map((name, j) => (
-                          <img
-                            key={j}
-                            src={`/static/images/${name}`}
-                            alt={`${card.name} ${j + 2}`}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  card.imgName && (
-                    <div className={styles.cardImage}>
-                      <img
-                        src={`/static/images/${card.imgName}`}
-                        alt={card.name}
-                      />
-                    </div>
-                  )
-                )}
-                <div className={styles.cardBody}>
-                  <h2>{card.name}</h2>
-                  <p>{card.sub}</p>
-                  <CardLinks card={card} />
-                </div>
-              </div>
+            {ActivitiesList.map((item, idx) => (
+              <span
+                key={idx}
+                className={`${styles.projectTag} ${
+                  idx === current ? styles.activeTag : ''
+                }`}
+                onClick={() => setCurrent(idx)}
+              >
+                {item.shortName || item.name}
+              </span>
             ))}
           </div>
-        ) : (
-          <div className={styles.card}>
-            {act.imgName && (
-              <div className={styles.cardImage}>
-                <img src={`/static/images/${act.imgName}`} alt={act.name} />
-              </div>
-            )}
-            <div className={styles.cardBody}>
-              <h2>{act.name}</h2>
-              <p>{act.sub}</p>
-              <CardLinks card={act} />
+
+          <div className={styles.carousel}>
+            <div className={styles.cardWrapper}>
+              <button
+                className={styles.arrowLeft}
+                onClick={prev}
+                aria-label='Previous activity'
+              >
+                <FontAwesomeIcon icon={faChevronLeft} />
+              </button>
+
+              {act.cards ? (
+                <div className={styles.cardGroup}>
+                  {act.cards.map((card, i) => (
+                    <div key={i} className={styles.card}>
+                      {card.imgNames ? (
+                        <div className={styles.cardImage}>
+                          <div className={styles.cardImageGrid}>
+                            <img
+                              src={`/static/images/${card.imgNames[0]}`}
+                              alt={`${card.name} 1`}
+                              className={styles.cardImageTop}
+                            />
+                            <div className={styles.cardImageRow}>
+                              {card.imgNames.slice(1).map((name, j) => (
+                                <img
+                                  key={j}
+                                  src={`/static/images/${name}`}
+                                  alt={`${card.name} ${j + 2}`}
+                                />
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      ) : (
+                        card.imgName && (
+                          <div className={styles.cardImage}>
+                            <img
+                              src={`/static/images/${card.imgName}`}
+                              alt={card.name}
+                            />
+                          </div>
+                        )
+                      )}
+                      <div className={styles.cardBody}>
+                        <h2>{card.name}</h2>
+                        <p>{card.sub}</p>
+                        <CardLinks card={card} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className={styles.card}>
+                  {act.imgName && (
+                    <div className={styles.cardImage}>
+                      <img
+                        src={`/static/images/${act.imgName}`}
+                        alt={act.name}
+                      />
+                    </div>
+                  )}
+                  <div className={styles.cardBody}>
+                    <h2>{act.name}</h2>
+                    <p>{act.sub}</p>
+                    <CardLinks card={act} />
+                  </div>
+                </div>
+              )}
+
+              <button
+                className={styles.arrowRight}
+                onClick={next}
+                aria-label='Next activity'
+              >
+                <FontAwesomeIcon icon={faChevronRight} />
+              </button>
+            </div>
+
+            <div className={styles.dots}>
+              {ActivitiesList.map((_, idx) => (
+                <button
+                  key={idx}
+                  className={`${styles.dot} ${
+                    idx === current ? styles.dotActive : ''
+                  }`}
+                  onClick={() => setCurrent(idx)}
+                  aria-label={`Go to activity ${idx + 1}`}
+                />
+              ))}
             </div>
           </div>
-        )}
-
-        <button
-          className={styles.arrowRight}
-          onClick={next}
-          aria-label='Next activity'
-        >
-          <FontAwesomeIcon icon={faChevronRight} />
-        </button>
-        </div>
-
-        <div className={styles.dots}>
-          {ActivitiesList.map((_, idx) => (
-            <button
-              key={idx}
-              className={`${styles.dot} ${
-                idx === current ? styles.dotActive : ''
-              }`}
-              onClick={() => setCurrent(idx)}
-              aria-label={`Go to activity ${idx + 1}`}
-            />
-          ))}
-        </div>
-        </div>
         </section>
       </div>
     </>

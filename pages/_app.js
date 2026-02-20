@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 
 // Import FontAwesome CSS
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 config.autoAddCss = false; // Tell Font Awesome to skip adding the css automatically since it's being imported above
 

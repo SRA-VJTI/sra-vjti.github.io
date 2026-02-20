@@ -1,6 +1,5 @@
 import styles from './CorporateSupport.module.scss';
 import Hero from '../Hero/Hero';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { saveAs } from 'file-saver';

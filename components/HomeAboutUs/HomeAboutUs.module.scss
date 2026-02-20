@@ -1,8 +1,8 @@
 @import '../variables';
 
 // ─── Apple-style font stack ────────────────────────────────────────────────────
-$apple-font: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
-  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
+  'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // ─── About Us ─────────────────────────────────────────────────────────────────
 .aboutUs {
@@ -179,4 +179,3 @@ $apple-font: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
     }
   }
 }
-

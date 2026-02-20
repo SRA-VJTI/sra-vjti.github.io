@@ -1,7 +1,4 @@
-import {
-  AboutUsText,
-  AboutVJTI,
-} from '../../data';
+import { AboutUsText, AboutVJTI } from '../../data';
 import styles from './HomeAboutUs.module.scss';
 import Link from 'next/link';
 

@@ -1,7 +1,6 @@
 @import '../variables';
 
 .footer {
-  border-top: 2px solid $light;
   height: 20vh;
   background: transparent;
   display: flex;
@@ -9,6 +8,7 @@
   align-items: center;
   justify-content: center;
   h3 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: normal;
     font-size: 1.5rem;
     margin-bottom: 20px;

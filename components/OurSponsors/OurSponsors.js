@@ -27,4 +27,3 @@ const OurSponsors = () => {
 };
 
 export default OurSponsors;
-

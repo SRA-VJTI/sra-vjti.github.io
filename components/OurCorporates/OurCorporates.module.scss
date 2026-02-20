@@ -1,6 +1,6 @@
 // ─── Apple-style font stack ────────────────────────────────────────────────────
-$apple-font: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
-  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
+  'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // ─── Industrial Reach — dark section ─────────────────────────────────────────
 .reach {
@@ -56,8 +56,7 @@ $apple-font: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
       padding: 18px 28px;
       min-width: 140px;
       min-height: 72px;
-      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-        background 0.2s;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s;
 
       &:hover {
         transform: scale(1.05);
@@ -96,4 +95,3 @@ $apple-font: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
     }
   }
 }
-

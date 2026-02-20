@@ -5,21 +5,21 @@ import styles from './CatScratchZone.module.scss';
 const PARALLAX_RANGE = 120;
 
 const CatScratchZone = ({ children }) => {
-  const zoneRef  = useRef(null);
-  const imgRef   = useRef(null);
+  const zoneRef = useRef(null);
+  const imgRef = useRef(null);
 
   useEffect(() => {
     const zone = zoneRef.current;
-    const img  = imgRef.current;
+    const img = imgRef.current;
     if (!zone || !img) return;
 
     const onScroll = () => {
-      const rect            = zone.getBoundingClientRect();
-      const zoneHeight      = zone.offsetHeight;
-      const vh              = window.innerHeight;
-      const scrolled        = Math.max(0, -rect.top);
+      const rect = zone.getBoundingClientRect();
+      const zoneHeight = zone.offsetHeight;
+      const vh = window.innerHeight;
+      const scrolled = Math.max(0, -rect.top);
       const totalScrollable = Math.max(1, zoneHeight - vh);
-      const progress        = Math.min(1, scrolled / totalScrollable);
+      const progress = Math.min(1, scrolled / totalScrollable);
       // Shift image upward as user scrolls — creates a gentle parallax
       img.style.transform = `translateY(${progress * -PARALLAX_RANGE}px)`;
     };
@@ -45,9 +45,7 @@ const CatScratchZone = ({ children }) => {
       </div>
 
       {/* ── Sectioned content sits on top ─────────────────────────────── */}
-      <div className={styles.catContent}>
-        {children}
-      </div>
+      <div className={styles.catContent}>{children}</div>
     </div>
   );
 };

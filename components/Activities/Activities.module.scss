@@ -10,8 +10,8 @@
 .section {
   background: rgba(0, 0, 0, 0.72);
   padding: 120px 40px 0;
-  font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
-    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'SF Pro Display', 'SF Pro Text', -apple-system,
+    BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .sectionHeader {
@@ -59,7 +59,9 @@
 
   -ms-overflow-style: none;
   scrollbar-width: none;
-  &::-webkit-scrollbar { display: none; }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .projectTag {
@@ -69,8 +71,7 @@
   font-size: 15px;
   font-weight: 400;
   color: #a1a1a6;
-  transition: background 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-    color 0.2s;
+  transition: background 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.2s;
   border-radius: 12px;
   cursor: pointer;
   white-space: nowrap;
@@ -124,8 +125,8 @@
   align-items: center;
   justify-content: center;
   opacity: 0.7;
-  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.2s, border-color 0.2s;
+  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s,
+    border-color 0.2s;
 
   &:hover {
     opacity: 1;
@@ -134,8 +135,12 @@
   }
 }
 
-.arrowLeft  { left: 0; }
-.arrowRight { right: 0; }
+.arrowLeft {
+  left: 0;
+}
+.arrowRight {
+  right: 0;
+}
 
 // ─── Card ────────────────────────────────────────────────────────
 // Single-card: image on LEFT, body on RIGHT (row layout)
@@ -216,7 +221,7 @@
   flex-direction: column;
   justify-content: center;
   flex: 1;
-  min-width: 0;        // prevents flex blowout
+  min-width: 0; // prevents flex blowout
   overflow-y: auto;
 
   h2 {
@@ -252,8 +257,7 @@
     border: 1px solid rgba(255, 255, 255, 0.12);
     font-size: 1rem;
     color: #f5f5f7;
-    transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
-      border-color 0.2s;
+    transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s;
 
     &:hover {
       background: #0071e3;
@@ -274,12 +278,12 @@
   .card {
     flex: 1;
     min-width: 0;
-    flex-direction: column;  // override to column for narrower two-up cards
-    min-height: 0;           // let content drive height
+    flex-direction: column; // override to column for narrower two-up cards
+    min-height: 0; // let content drive height
   }
 
   .cardImage {
-    flex: 0 0 240px;         // fixed pixel height — no more 50%-of-fixed-height squeeze
+    flex: 0 0 240px; // fixed pixel height — no more 50%-of-fixed-height squeeze
     width: 100%;
   }
 
@@ -387,12 +391,18 @@
   .cardGroup {
     flex-direction: column;
 
-    .cardImage { flex: 0 0 200px; }
+    .cardImage {
+      flex: 0 0 200px;
+    }
 
     .cardBody {
       padding: 20px 18px;
-      h2 { font-size: 20px; }
-      p  { font-size: 14px; }
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -409,7 +419,11 @@
   .cardBody {
     padding: 18px 16px;
 
-    h2 { font-size: 20px; }
-    p  { font-size: 14px; }
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
   }
 }

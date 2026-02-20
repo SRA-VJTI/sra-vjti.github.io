@@ -1,8 +1,8 @@
 @import '../variables';
 
 // ─── Apple-style font stack ────────────────────────────────────────────────────
-$apple-font: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
-  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
+  'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 .hero {
@@ -172,11 +172,26 @@ $apple-font: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
 
 // keep wobble so the .notif animation in .hero still compiles
 @keyframes wobble {
-  30%, 70% { transform: rotate(0deg); }
-  35%, 65% { transform: rotate(10deg); color: $lightest; }
-  40%, 60% { transform: rotate(-10deg); }
-  45%, 55% { transform: rotate(10deg); }
-  50%       { transform: rotate(-10deg); }
+  30%,
+  70% {
+    transform: rotate(0deg);
+  }
+  35%,
+  65% {
+    transform: rotate(10deg);
+    color: $lightest;
+  }
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+  45%,
+  55% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
 }
 
 // ─── Dead code preserved so nothing breaks if referenced elsewhere ─────────────
