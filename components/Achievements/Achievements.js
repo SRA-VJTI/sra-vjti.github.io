@@ -10,7 +10,10 @@ const Achievements = () => {
       if (!bgRef.current) return;
       const scrollY = window.scrollY;
       const maxShift = 120;
-      const progress = Math.min(scrollY / (document.body.scrollHeight - window.innerHeight), 1);
+      const progress = Math.min(
+        scrollY / (document.body.scrollHeight - window.innerHeight),
+        1
+      );
       bgRef.current.style.transform = `translateY(-${progress * maxShift}px)`;
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -24,7 +27,9 @@ const Achievements = () => {
         <div
           ref={bgRef}
           className={styles.bgImage}
-          style={{ backgroundImage: `url('/static/images/sra_board_2026.png')` }}
+          style={{
+            backgroundImage: `url('/static/images/sra_board_2026.png')`,
+          }}
         />
         <div className={styles.bgOverlay} />
       </div>
@@ -52,7 +57,9 @@ const Achievements = () => {
                   <div className={styles.achCard} key={`ach_${i}`}>
                     <div
                       className={styles.achImg}
-                      style={{ backgroundImage: `url('/static/images/${ach.imgName}')` }}
+                      style={{
+                        backgroundImage: `url('/static/images/${ach.imgName}')`,
+                      }}
                     />
                     <div className={styles.achName}>{ach.name}</div>
                   </div>

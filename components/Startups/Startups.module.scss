@@ -1,24 +1,84 @@
 @import '../variables';
 
+$apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
+  'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// ─── Page Header ─────────────────────────────────────────────────────────────
+.pageHeader {
+  background: transparent;
+  padding: 140px 40px 80px;
+  text-align: center;
+
+  .eyebrow {
+    font-family: $apple-font;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6e6e73;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .pageTitle {
+    font-family: $apple-font;
+    font-size: 56px;
+    font-weight: 700;
+    color: #f5f5f7;
+    letter-spacing: -0.003em;
+    line-height: 1.07;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+  }
+
+  .pageSubtitle {
+    font-family: $apple-font;
+    font-size: 20px;
+    font-weight: 400;
+    color: #a1a1a6;
+  }
+
+  @media (max-width: 768px) {
+    padding: 120px 24px 60px;
+
+    .pageTitle { font-size: 36px; }
+    .pageSubtitle { font-size: 17px; }
+  }
+}
+
+// ─── Startups List ────────────────────────────────────────────────────────────
+.startupsList {
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+.startupSection {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
 .startupsSectionTitle {
-  font-size: 2rem;
+  font-family: $apple-font;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f5f5f7;
   text-align: center;
   width: 50%;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 1em;
+  margin: 40px auto 1em;
   padding-bottom: 0.5em;
-  border-bottom: 2px solid $light;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  letter-spacing: -0.003em;
 
   @media (max-width: 450px) {
     width: 80%;
+    font-size: 1.4rem;
   }
 }
 
 .startup {
   width: 70%;
   height: auto;
-  margin: 5em auto;
+  margin: 3em auto;
 
   display: flex;
   flex-direction: row;
@@ -26,23 +86,27 @@
 
   min-height: 300px;
   cursor: pointer;
-  border: 2px solid $light;
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   align-items: center;
   padding: 2em;
-  border-radius: 10px;
-  transition: transform 0.2s;
+  border-radius: 14px;
+  transition: background 0.3s ease, transform 0.2s ease;
 
   &:hover {
-    transform: scale(1.03);
+    background: rgba(26, 26, 26, 0.9);
+    transform: scale(1.02);
   }
 
   .startupImg {
-    // margin-right: 1em;
     width: 30%;
     height: 15em;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    opacity: 0.9;
   }
 
   .startupCont {
@@ -51,66 +115,64 @@
     padding: 2em;
     display: flex;
     flex-direction: column;
-    justify-content: flex;
-    line-height: 250%;
+    justify-content: flex-start;
+    line-height: 180%;
     text-align: justify;
+
     .startupContName {
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-family: $apple-font;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #f5f5f7;
+      letter-spacing: -0.003em;
+      margin-bottom: 16px;
       padding-bottom: 0.15em;
-      transition: border-bottom 0.3s;
-      border-bottom: 1px solid $lightest;
-      .startupIcon {
-        font-size: 1.2rem;
-        float: right;
-        a {
-          margin: 0 10px;
-          transition: color 0.2s;
-          :hover {
-            color: $light;
-            animation: wiggle 0.3s forwards;
-            // transform: translateY(10px);
-          }
-        }
-      }
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      transition: border-color 0.3s ease;
     }
+
     .startupContSub {
-      font-size: 1rem;
+      font-family: $apple-font;
+      font-size: 0.97rem;
+      color: #b3b3b3;
       margin-bottom: 10px;
+      line-height: 175%;
     }
   }
 
   &:hover {
-    .startupCont {
-      .startupContName {
-        border-bottom: 1px solid $light;
-      }
+    .startupCont .startupContName {
+      border-color: rgba(255, 255, 255, 0.25);
     }
   }
+
   @media (max-width: 900px) {
     .startupImg {
       height: auto;
       width: 50%;
     }
   }
+
   @media (max-width: 780px) {
     width: 90%;
-    margin: 1em auto;
+    margin: 1.5em auto;
     height: auto;
     flex-direction: column;
+
     .startupImg {
       height: 45vh;
       display: block;
       margin-left: auto;
       margin-right: auto;
       width: 80%;
-      // background-image: 100vw;
     }
+
     .startupCont {
       width: 100%;
       height: max-content;
     }
   }
+
   @media (max-width: 375px) {
     .startupImg {
       width: 90%;

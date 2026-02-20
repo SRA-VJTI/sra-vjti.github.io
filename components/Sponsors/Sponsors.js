@@ -1,5 +1,5 @@
 import styles from './Sponsors.module.scss';
-import Hero from '../Hero/Hero';
+import CatScratchZone from '../CatScratchZone/CatScratchZone';
 import { saveAs } from 'file-saver';
 import {
   allSponsors,
@@ -47,62 +47,55 @@ const Sponsors = () => {
 
   return (
     <>
-      <Hero
-        imgName={'sponsors-hero.jpg'}
-        backgroundPosition={'center top'}
-        title={<>Sponsor us</>}
-        subtitleList={['Help us maintain our legacy of excellence!']}
-        isHome={false}
-      />
+      <CatScratchZone>
+        <div className={styles.pageHeader}>
+          <p className={styles.eyebrow}>SRA VJTI</p>
+          <h1 className={styles.pageTitle}>Sponsor Us</h1>
+          <p className={styles.pageSubtitle}>
+            Help us maintain our legacy of excellence!
+          </p>
+        </div>
       <div className={styles.activityList} id='is'>
         <div className={styles.reach}>
-          <h1>Why Sponsor Us ?</h1>
-          <p>{sponsorsText_1}</p>
-          {visiblePara ? <p>{sponsorsText_2}</p> : <></>}
-          {mobileView ? (
-            <button
-              className={styles.more}
-              onClick={() => setvisiblePara((visiblePara) => !visiblePara)}
-            >
-              {visiblePara ? (
-                <>
-                  {'Read Less '}
-                  <span>
-                    <FontAwesomeIcon icon={faAngleUp} />
-                  </span>
-                </>
-              ) : (
-                <>
-                  {'Read More '}
-                  <span>
-                    <FontAwesomeIcon icon={faAngleDown} />
-                  </span>
-                </>
-              )}
-            </button>
-          ) : (
-            <></>
-          )}
-          <p>
-            <b>{sponsorsSubText}</b>
-          </p>
-          <div
-            style={{ display: 'flex', gap: '50px', justifyContent: 'center' }}
-          >
-            <a>
-              <button onClick={saveFile}>
-                Brochure{' '}
-                <span>
-                  <FontAwesomeIcon icon={faExternalLink} />
-                </span>
+          <div className={styles.textCard}>
+            <h1>Why Sponsor Us?</h1>
+            <p>{sponsorsText_1}</p>
+            {visiblePara ? <p>{sponsorsText_2}</p> : <></>}
+            {mobileView ? (
+              <button
+                className={styles.more}
+                onClick={() => setvisiblePara((visiblePara) => !visiblePara)}
+              >
+                {visiblePara ? (
+                  <>
+                    {'Read Less '}
+                    <span>
+                      <FontAwesomeIcon icon={faAngleUp} />
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    {'Read More '}
+                    <span>
+                      <FontAwesomeIcon icon={faAngleDown} />
+                    </span>
+                  </>
+                )}
               </button>
-            </a>
+            ) : (
+              <></>
+            )}
+            <p className={styles.subText}>{sponsorsSubText}</p>
+          </div>
+          <div className={styles.ctaRow}>
+            <button className={styles.ctaBtn} onClick={saveFile}>
+              Download Brochure&nbsp;
+              <FontAwesomeIcon icon={faExternalLink} />
+            </button>
             <a href='https://pages.razorpay.com/support-sra' target='_blank'>
-              <button>
-                Donate{' '}
-                <span>
-                  <FontAwesomeIcon icon={faDonate} />
-                </span>
+              <button className={`${styles.ctaBtn} ${styles.ctaBtnAccent}`}>
+                Donate Now&nbsp;
+                <FontAwesomeIcon icon={faDonate} />
               </button>
             </a>
           </div>
@@ -122,6 +115,7 @@ const Sponsors = () => {
           </div>
         </div>
       </div>
+      </CatScratchZone>
     </>
   );
 };

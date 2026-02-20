@@ -12,7 +12,8 @@ const ContributionCard = ({
   contributor,
   competition,
 }) => {
-  const hasIcons = (githubLink && githubLink !== '') || (prLink && prLink !== '');
+  const hasIcons =
+    (githubLink && githubLink !== '') || (prLink && prLink !== '');
 
   return (
     <div className={styles.card}>

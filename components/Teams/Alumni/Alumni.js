@@ -82,48 +82,51 @@ const Alumni = () => {
         <div className={styles.pageHeader}>
           <p className={styles.eyebrow}>SRA VJTI</p>
           <h1 className={styles.pageTitle}>Alumni</h1>
-          <p className={styles.pageSubtitle}>Lighting the way for generations to come.</p>
+          <p className={styles.pageSubtitle}>
+            Lighting the way for generations to come.
+          </p>
         </div>
         <div className={styles.filterWrapper}>
-        <div className={styles.filter} id='is'>
-        <input
-          className={styles.search}
-          type='search'
-          placeholder='Search by keyword'
-          onChange={(ev) => selKeyword(ev)}
-        />
-        <div className={styles.dropdown}>
-          <button onClick={toggle}>
-            Filter By Year: <span className={styles.selYear}>{filYear}</span>
-          </button>
-          <div
-            className={styles.options}
-            style={{ display: clicked ? 'flex' : 'none' }}
-          >
-            <div
-              className={styles.option}
-              onClick={() => {
-                selYear('Show all');
-              }}
-            >
-              Show all
-            </div>
-            {years.map((year, index) => {
-              return (
+          <div className={styles.filter} id='is'>
+            <input
+              className={styles.search}
+              type='search'
+              placeholder='Search by keyword'
+              onChange={(ev) => selKeyword(ev)}
+            />
+            <div className={styles.dropdown}>
+              <button onClick={toggle}>
+                Filter By Year:{' '}
+                <span className={styles.selYear}>{filYear}</span>
+              </button>
+              <div
+                className={styles.options}
+                style={{ display: clicked ? 'flex' : 'none' }}
+              >
                 <div
-                  key={index}
                   className={styles.option}
                   onClick={() => {
-                    selYear(`${year}`);
+                    selYear('Show all');
                   }}
                 >
-                  {year}
+                  Show all
                 </div>
-              );
-            })}
+                {years.map((year, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className={styles.option}
+                      onClick={() => {
+                        selYear(`${year}`);
+                      }}
+                    >
+                      {year}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
         </div>
 
         <div className={styles.cardGrp}>

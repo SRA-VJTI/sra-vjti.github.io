@@ -1,187 +1,172 @@
 @import '../variables';
 
-.activitySectionTitle {
-  font-size: 2rem;
-  text-align: center;
-  width: 50%;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 1em;
-  padding-bottom: 0.5em;
-  border-bottom: 2px solid $light;
+$apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
+  'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-  @media (max-width: 450px) {
-    width: 80%;
+// ─── Page Header ─────────────────────────────────────────────────────────────
+.pageHeader {
+  background: transparent;
+  padding: 140px 40px 80px;
+  text-align: center;
+
+  .eyebrow {
+    font-family: $apple-font;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6e6e73;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .pageTitle {
+    font-family: $apple-font;
+    font-size: 56px;
+    font-weight: 700;
+    color: #f5f5f7;
+    letter-spacing: -0.003em;
+    line-height: 1.07;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+  }
+
+  .pageSubtitle {
+    font-family: $apple-font;
+    font-size: 20px;
+    font-weight: 400;
+    color: #a1a1a6;
+  }
+
+  @media (max-width: 768px) {
+    padding: 120px 24px 60px;
+
+    .pageTitle { font-size: 36px; }
+    .pageSubtitle { font-size: 17px; }
   }
 }
 
-.activity {
-  width: 70%;
-  height: auto;
-  margin: 5em auto;
+// ─── Content wrapper ─────────────────────────────────────────────────────────
+.activityList {
+  width: 100%;
+}
 
+// ─── Glass text card ─────────────────────────────────────────────────────────
+.textCard {
+  background: rgba(26, 26, 26, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  max-width: 860px;
+  margin: 0 auto 48px;
+  padding: 40px 48px;
+
+  @media (max-width: 650px) {
+    padding: 28px 24px;
+    border-radius: 14px;
+  }
+}
+
+// ─── CTA buttons ─────────────────────────────────────────────────────────────
+.ctaRow {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  gap: 24px;
+  justify-content: center;
+  margin: 48px 0 64px;
+  flex-wrap: wrap;
+}
 
-  .activityImg {
-    // margin-right: 1em;
-    width: 30%;
-    // height: 100%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .activityCont {
-    width: 70%;
-    height: 100%;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex;
-    line-height: 250%;
-    text-align: justify;
-
-    .activityContName {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      padding-bottom: 0.15em;
-      transition: border-bottom 0.3s;
-      border-bottom: 1px solid $lightest;
-
-      .activityIcon {
-        font-size: 1.2rem;
-        float: right;
-
-        a {
-          margin: 0 10px;
-          transition: color 0.2s;
-
-          :hover {
-            color: $light;
-            animation: wiggle 0.3s forwards;
-            // transform: translateY(10px);
-          }
-        }
-      }
-    }
-
-    .activityContSub {
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-  }
+.ctaBtn {
+  font-family: $apple-font;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #1d1d1f;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #f5f5f7;
+  border-radius: 980px;
+  padding: 1em 2.4em;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    transform 0.15s ease;
 
   &:hover {
-    .activityCont {
-      .activityContName {
-        border-bottom: 1px solid $light;
-      }
-    }
+    background-color: #2a2a2d;
+    border-color: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
   }
 
-  @media (max-width: 900px) {
-    .activityImg {
-      height: auto;
-      width: 50%;
-    }
+  @media (max-width: 650px) {
+    font-size: 1rem;
+    padding: 0.85em 2em;
   }
+}
 
-  @media (max-width: 780px) {
-    width: 90%;
-    margin: 1em auto;
-    height: auto;
-    flex-direction: column;
+.ctaBtnAccent {
+  background: #0071e3;
+  border-color: #0071e3;
+  color: #f5f5f7;
 
-    .activityImg {
-      height: 45vh;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%;
-      // background-image: 100vw;
-    }
-
-    .activityCont {
-      width: 100%;
-      height: max-content;
-    }
-  }
-
-  @media (max-width: 375px) {
-    .activityImg {
-      width: 90%;
-    }
+  &:hover {
+    background: #0077ed;
+    border-color: #0077ed;
+    transform: translateY(-2px);
   }
 }
 
 .reach {
   p {
-    font-family: sans-serif;
-    font-size: 1.1rem;
+    font-family: $apple-font;
+    font-size: 1.05rem;
+    color: #b3b3b3;
     width: 100%;
-    line-height: 165%;
-    padding-left: 5em;
-    padding-right: 5em;
-    padding-top: 2em;
+    line-height: 175%;
+    padding-top: 1.2em;
     text-align: center;
+    margin: 0;
+  }
 
-    // margin-top: 20px;
-    @media (max-width: 650px) {
-      padding-left: 2em;
-      padding-right: 2em;
-    }
+  .subText {
+    font-family: $apple-font;
+    font-size: 1rem;
+    color: #a1a1a6;
+    font-style: italic;
+    margin-top: 1.2em;
+    text-align: center;
   }
 
   h1 {
-    margin: 50px 0 20px;
+    margin: 0 0 20px;
     text-align: center;
-    font-size: 2.5rem;
-    font-family: 'Oswald', sans-serif;
-  }
-
-  button {
-    display: block;
-    margin: 4rem auto;
-    font-size: 1.3rem;
-    border: 2px solid white;
-    padding: 0.7em 1em;
-    transition: all 0.2s;
-
-    &:hover {
-      border-radius: 5px;
-      border-color: $lightest;
-      color: $lightest;
-    }
-
-    @media (max-width: 650px) {
-      font-size: 1.2rem;
-    }
+    font-size: 2rem;
+    font-family: $apple-font;
+    font-weight: 700;
+    color: #f5f5f7;
+    letter-spacing: -0.003em;
   }
 
   .more {
-    display: block;
-    margin: 1rem auto;
-    font-size: 0.6rem;
-    border: 2px solid white;
-    padding: 0.5em 0.5em;
-    transition: all 0.2s;
+    display: inline-block;
+    margin: 1.2rem auto 0;
+    font-size: 0.82rem;
+    font-family: $apple-font;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #a1a1a6;
+    border-radius: 980px;
+    padding: 0.45em 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
 
     &:hover {
-      border-radius: 5px;
-      border-color: $lightest;
-      color: $lightest;
-    }
-
-    @media (max-width: 650px) {
-      font-size: 0.6rem;
+      background-color: rgba(255, 255, 255, 0.07);
+      color: #f5f5f7;
     }
   }
 
   hr {
     width: 40%;
-    border: 1px solid $lightest;
+    border: 1px solid rgba(255, 255, 255, 0.12);
     margin: 0 auto;
     margin-bottom: 30px;
   }
@@ -198,9 +183,11 @@
       margin: 1.5rem;
       width: 180px;
       transition: transform 0.2s;
+      filter: brightness(0.9);
 
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.08);
+        filter: brightness(1);
       }
 
       @media (max-width: 650px) {
@@ -210,3 +197,4 @@
     }
   }
 }
+

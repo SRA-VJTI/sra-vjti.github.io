@@ -1,5 +1,5 @@
 import styles from './CorporateSupport.module.scss';
-import Hero from '../Hero/Hero';
+import CatScratchZone from '../CatScratchZone/CatScratchZone';
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { saveAs } from 'file-saver';
@@ -44,7 +44,6 @@ const arrowStylesRight = {
 const Sponsors = () => {
   const [mobileView, setMobileView] = useState(false);
   const [visiblePara, setvisiblePara] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
   const size = useWindowSize();
 
   useEffect(() => {
@@ -65,15 +64,14 @@ const Sponsors = () => {
 
   return (
     <>
-      <Hero
-        imgName={'corpSupport.webp'}
-        backgroundPosition={'center top'}
-        title={<>CSR Support</>}
-        subtitleList={[
-          'Nurturing Minds, Igniting Discovery, Building Nations: Corporate Support for Education and Research Excellence.',
-        ]}
-        isHome={false}
-      />
+      <CatScratchZone>
+        <div className={styles.pageHeader}>
+          <p className={styles.eyebrow}>SRA VJTI</p>
+          <h1 className={styles.pageTitle}>CSR Support</h1>
+          <p className={styles.pageSubtitle}>
+            Nurturing Minds, Igniting Discovery, Building Nations.
+          </p>
+        </div>
       <div className={styles.activityList} id='is'>
         <div className={styles.reach}>
           <h1>Join Our Expedition: Our Spark, Your Impact!</h1>
@@ -134,13 +132,11 @@ const Sponsors = () => {
                   </div>
 
                   <div className={styles.Carousel}>
-                    <div
-                      onMouseEnter={() => setIsHovered(true)}
-                      onMouseLeave={() => setIsHovered(false)}
-                    >
+                    <div>
                       {
                         // For webview
                         !mobileView ? (
+                          <div className={styles.facilitiesCarousel}>
                           <Carousel
                             renderIndicator={(
                               clickHandler,
@@ -160,11 +156,10 @@ const Sponsors = () => {
                             }}
                             pauseOnHover={true}
                             showIndicators={true}
-                            // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
                             showThumbs={false}
                             showStatus={false}
                             swipeable={true}
-                            autoPlay={true}
+                            autoPlay={false}
                             infiniteLoop={true}
                             renderArrowPrev={(onClickHandler, hasPrev) =>
                               hasPrev && (
@@ -213,25 +208,19 @@ const Sponsors = () => {
                                   key={`csr_${idx}`}
                                   className={styles.CaroImg}
                                 >
-                                  <div>
-                                    <img
-                                      src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
-                                      alt=''
-                                      className={styles.facilitiesUpdate}
-                                    ></img>
-                                  </div>
-                                  {isHovered && (
-                                    <a
-                                      className={styles.hoverText}
-                                      onMouseEnter={() => setIsHovered(true)}
-                                    >
-                                      {item.Description}
-                                    </a>
-                                  )}
+                                  <img
+                                    src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
+                                    alt=''
+                                    className={styles.facilitiesUpdate}
+                                  />
+                                  <p className={styles.facilityDesc}>
+                                    {item.Description}
+                                  </p>
                                 </div>
                               );
                             })}
                           </Carousel>
+                          </div>
                         ) : (
                           // For mobile view, we don't render large arrows
                           <CorpCard {...item_i} key={`csr_mobile`}></CorpCard>
@@ -269,11 +258,10 @@ const Sponsors = () => {
                             }}
                             pauseOnHover={true}
                             showIndicators={true}
-                            // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
                             showThumbs={false}
                             showStatus={false}
                             swipeable={true}
-                            autoPlay={true}
+                            autoPlay={false}
                             infiniteLoop={true}
                             renderArrowPrev={(onClickHandler, hasPrev) =>
                               hasPrev && (
@@ -282,14 +270,14 @@ const Sponsors = () => {
                                     className={`control-arrow`}
                                     style={{
                                       ...arrowStylesLeft,
-                                      marginTop: '40%',
-                                      left: '0.2em',
-                                      opacity: 0.4,
+                                      marginTop: '25%',
+                                      left: '1em',
+                                      opacity: 0.9,
                                     }}
                                   >
                                     <FontAwesomeIcon
                                       icon={faCaretLeft}
-                                      size='1x'
+                                      size='2x'
                                     />
                                   </a>
                                 </div>
@@ -302,9 +290,9 @@ const Sponsors = () => {
                                     className={`control-arrow`}
                                     style={{
                                       ...arrowStylesRight,
-                                      marginTop: '40%',
-                                      right: '0.2em',
-                                      opacity: 0.4,
+                                      marginTop: '25%',
+                                      right: '1em',
+                                      opacity: 0.9,
                                     }}
                                   >
                                     <FontAwesomeIcon
@@ -322,17 +310,14 @@ const Sponsors = () => {
                                   key={`csr_${idx}`}
                                   className={styles.CSR_Facility}
                                 >
-                                  <div>
-                                    <img
-                                      src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
-                                      alt=''
-                                      className={styles.changesMadeThroughCSR}
-                                    ></img>
-
-                                    <a className={styles.changesMadeThroughCSR}>
-                                      {item.Description}
-                                    </a>
-                                  </div>
+                                  <img
+                                    src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
+                                    alt=''
+                                    className={styles.csrImg}
+                                  />
+                                  <p className={styles.csrItemDesc}>
+                                    {item.Description}
+                                  </p>
                                 </div>
                               );
                             })}
@@ -342,12 +327,11 @@ const Sponsors = () => {
 
                           <Carousel
                             showIndicators={false}
-                            // renderIndicator={(onClickHandler, isSelected, index, label) => {}}
                             showThumbs={false}
                             showStatus={false}
                             showArrows={false}
                             swipeable={true}
-                            autoPlay={true}
+                            autoPlay={false}
                             infiniteLoop={true}
                             transitionTime={100}
                           >
@@ -360,11 +344,9 @@ const Sponsors = () => {
                                   <img
                                     src={`/static/images/corporateSupport/facilityUpdate/${item.image}`}
                                     alt=''
-                                    className={styles.changesMadeThroughCSR}
-                                  ></img>
-                                  <p
-                                    className={styles.changesMadeThroughCSRText}
-                                  >
+                                    className={styles.csrImg}
+                                  />
+                                  <p className={styles.csrItemDesc}>
                                     {item.Description}
                                   </p>
                                 </div>
@@ -381,6 +363,7 @@ const Sponsors = () => {
           </div>
         </div>
       </div>
+      </CatScratchZone>
     </>
   );
 };
@@ -402,7 +385,7 @@ const CorpCard = ({
       showThumbs={false}
       showStatus={false}
       swipeable={true}
-      autoPlay={isOpen ? false : true}
+      autoPlay={false}
       infiniteLoop={true}
       showArrows={false}
     >

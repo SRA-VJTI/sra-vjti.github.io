@@ -1,4 +1,55 @@
 @import '../variables';
+
+$apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
+  'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// ─── Page Header ─────────────────────────────────────────────────────────────
+.pageHeader {
+  background: transparent;
+  padding: 140px 40px 80px;
+  text-align: center;
+
+  .eyebrow {
+    font-family: $apple-font;
+    font-size: 12px;
+    font-weight: 600;
+    color: #6e6e73;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .pageTitle {
+    font-family: $apple-font;
+    font-size: 56px;
+    font-weight: 700;
+    color: #f5f5f7;
+    letter-spacing: -0.003em;
+    line-height: 1.07;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+  }
+
+  .pageSubtitle {
+    font-family: $apple-font;
+    font-size: 20px;
+    font-weight: 400;
+    color: #a1a1a6;
+  }
+
+  @media (max-width: 768px) {
+    padding: 120px 24px 60px;
+
+    .pageTitle { font-size: 36px; }
+    .pageSubtitle { font-size: 17px; }
+  }
+}
+
+// ─── Content wrapper ─────────────────────────────────────────────────────────
+.activityList {
+  width: 100%;
+}
+
 .CorpSupportMob {
   height: 250px;
   // background-color: red;
@@ -19,7 +70,8 @@
     width: 100%;
     height: 100%;
 
-    background-color: $light;
+    background-color: rgba(26, 26, 26, 0.92);
+    color: #f5f5f7;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,13 +86,14 @@
       top: 0.9rem;
       margin-left: 72%;
       cursor: pointer;
-      // color: black;
+      color: #f5f5f7;
     }
     .iInfo {
       text-align: center;
       width: 80%;
       margin-bottom: 20px;
-      font-family: 'Oswald', sans-serif;
+      font-family: $apple-font;
+      color: #b3b3b3;
     }
     .iLink {
       font-size: 1.5rem;
@@ -52,15 +105,15 @@
 }
 .reach {
   p {
-    font-family: sans-serif;
-    font-size: 1.1rem;
+    font-family: $apple-font;
+    font-size: 1.05rem;
+    color: #b3b3b3;
     width: 100%;
-    line-height: 165%;
+    line-height: 175%;
     padding-left: 5em;
     padding-right: 5em;
     padding-top: 2em;
     text-align: center;
-    // margin-top: 20px;
     @media (max-width: 650px) {
       padding-left: 2em;
       padding-right: 2em;
@@ -69,80 +122,94 @@
   h1 {
     margin: 50px 0 20px;
     text-align: center;
-    font-size: 2.5rem;
-    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    font-family: $apple-font;
+    font-weight: 700;
+    color: #f5f5f7;
+    letter-spacing: -0.003em;
   }
   h2 {
     margin: 50px 0 20px;
     text-align: center;
-    font-size: 2rem;
-    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    font-family: $apple-font;
+    font-weight: 600;
+    color: #f5f5f7;
   }
   .equipments {
     padding: 20px 60px 20px 60px;
     text-align: center;
-    font-size: 1.5rem;
-    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    font-family: $apple-font;
+    color: #a1a1a6;
     @media (max-width: 650px) {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
   }
   a {
     margin-bottom: 10px;
     text-align: center;
-    font-size: 1.2rem;
-    font-family: 'Oswald', sans-serif;
+    font-size: 1.1rem;
+    font-family: $apple-font;
+    color: #b3b3b3;
   }
   button {
     display: block;
-    margin: 4rem auto;
-    font-size: 1.3rem;
-    border: 2px solid white;
-    padding: 0.7em 1em;
-    transition: all 0.2s;
+    margin: 3rem auto;
+    font-size: 1rem;
+    font-family: $apple-font;
+    background: #1d1d1f;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #f5f5f7;
+    border-radius: 980px;
+    padding: 0.7em 1.6em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
     &:hover {
-      border-radius: 5px;
-      border-color: $lightest;
-      color: $lightest;
+      background-color: #2a2a2d;
+      border-color: rgba(255, 255, 255, 0.25);
     }
     @media (max-width: 650px) {
-      font-size: 1.2rem;
+      font-size: 0.9rem;
     }
   }
   .more {
     display: block;
     margin: 1rem auto;
-    font-size: 0.6rem;
-    border: 2px solid white;
-    padding: 0.5em 0.5em;
-    transition: all 0.2s;
+    font-size: 0.75rem;
+    font-family: $apple-font;
+    background: #1d1d1f;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #f5f5f7;
+    border-radius: 980px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
     &:hover {
-      border-radius: 5px;
-      border-color: $lightest;
-      color: $lightest;
-    }
-    @media (max-width: 650px) {
-      font-size: 0.6rem;
+      background-color: #2a2a2d;
+      border-color: rgba(255, 255, 255, 0.22);
     }
   }
   .hoverText {
     position: absolute;
-    font-size: 2em;
-    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1.2em;
+    font-family: $apple-font;
+    color: #f5f5f7;
+    background-color: rgba(0, 0, 0, 0.72);
     width: 50%;
-    padding: 50px 100px 50px 100px;
-    border-radius: 15px;
+    padding: 40px 80px;
+    border-radius: 14px;
     top: 55%;
     left: 50%;
   }
   .CorpText {
     position: relative;
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.5rem;
-    // margin-top: 20px;
+    font-family: $apple-font;
+    font-size: 1.2rem;
+    color: #b3b3b3;
     @media (max-width: 650px) {
       text-wrap: wrap;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
     }
   }
   .Carousel {
@@ -150,24 +217,47 @@
     flex-direction: column;
     width: 100%;
     position: relative;
-    object-fit: cover;
     top: 0;
-    :hover {
-      .facilitiesUpdate {
-        opacity: 0.5;
-        transition-duration: 1000ms;
-      }
-    }
   }
-  .facilitiesUpdate {
-    height: 720px;
-    top: 0;
-    object-position: 55%;
-    object-fit: contain;
-    object-position: center;
+
+  // Match the facilities (first) carousel to the same size as the lower one
+  .facilitiesCarousel {
+    width: 70%;
+    margin: 0 auto;
+    @media (max-width: 900px) {
+      width: 90%;
+    }
     @media (max-width: 650px) {
       width: 100%;
-      object-fit: contain;
+    }
+  }
+
+  .facilitiesUpdate {
+    width: 100%;
+    // contain shows the full image without cropping
+    max-height: 420px;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    background: #0d0d0d;
+    @media (max-width: 650px) {
+      max-height: 240px;
+    }
+  }
+
+  // Caption always shown below each facility slide
+  .facilityDesc {
+    font-family: $apple-font;
+    font-size: 1rem;
+    color: #b3b3b3;
+    text-align: center;
+    padding: 14px 24px 20px;
+    line-height: 1.6;
+    background: rgba(13, 13, 13, 0.85);
+    margin: 0;
+    @media (max-width: 650px) {
+      font-size: 0.88rem;
+      padding: 10px 16px 14px;
     }
   }
   .CorpDiv {
@@ -176,17 +266,18 @@
     justify-content: space-between;
 
     .vl {
-      border-left: 2px solid $lightest;
+      border-left: 2px solid rgba(255, 255, 255, 0.15);
       height: 200px;
       @media (max-width: 800px) {
         display: none;
       }
     }
     .CorpText {
-      font-family: 'Oswald', sans-serif;
+      font-family: $apple-font;
       margin-right: 100px;
       text-align: center;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
+      color: #b3b3b3;
       padding: 0 2rem;
       transition: color 0.3s;
       @media (max-width: 800px) {
@@ -196,31 +287,39 @@
       }
     }
     .CorpImage {
-      margin: 20px 40px 20px 140px;
-      border-radius: 20px;
-      height: 300px;
-      width: auto;
+      flex-shrink: 0;
+      width: 220px;
+      height: 120px;
+      object-fit: contain;
+      object-position: center;
+      margin: 20px 40px 20px 60px;
+      border-radius: 10px;
+      opacity: 0.9;
       @media (max-width: 800px) {
-        width: auto;
-        height: 150px;
-        margin: 5px;
+        width: 140px;
+        height: 80px;
+        margin: 8px;
       }
     }
     .CorpImpImage {
-      margin: 20px 40px 20px 140px;
-      border-radius: 20px;
-      height: auto;
-      width: 200px;
+      flex-shrink: 0;
+      width: 220px;
+      height: 120px;
+      object-fit: contain;
+      object-position: center;
+      margin: 20px 40px 20px 60px;
+      border-radius: 10px;
+      opacity: 0.9;
       @media (max-width: 800px) {
-        width: auto;
-        height: 150px;
-        margin: 5px;
+        width: 140px;
+        height: 80px;
+        margin: 8px;
       }
     }
 
     &:hover {
       .CorpText {
-        color: $lightest;
+        color: #f5f5f7;
       }
     }
 
@@ -233,23 +332,24 @@
     }
   }
   .Carousel_items {
-    width: 45%;
-    align-self: center;
-    align-items: center;
-    padding: auto;
+    width: 70%;
+    margin: 0 auto;
+    @media (max-width: 900px) {
+      width: 90%;
+    }
     @media (max-width: 650px) {
-      width: 250px;
+      width: 100%;
     }
   }
   hr {
     width: 40%;
-    border: 1px solid $lightest;
+    border: 1px solid rgba(255, 255, 255, 0.12);
     margin: 0 auto;
     margin-bottom: 30px;
   }
   .hr2 {
     width: 30%;
-    border: 1px solid $lightest;
+    border: 1px solid rgba(255, 255, 255, 0.12);
     margin: 0 auto;
     margin-bottom: 30px;
   }
@@ -265,7 +365,7 @@
       width: 150px;
       transition: transform 0.2s;
       &:hover {
-        transform: scale(1.01);
+        transform: scale(1.05);
       }
       @media (max-width: 650px) {
         margin: 0.5em;
@@ -274,30 +374,35 @@
     }
   }
 
-  .CSR_Facility .changesMadeThroughCSR {
+  // Equipment image in the second carousel
+  .csrImg {
     width: 100%;
-    height: 600px;
-    object-fit: contain;
+    height: 480px;
+    object-fit: cover;
     object-position: center;
+    display: block;
     @media (max-width: 650px) {
-      width: 250px;
-      height: 150px;
-      object-fit: cover;
-      object-position: center;
+      height: 220px;
+    }
+  }
+
+  // Caption below each equipment slide
+  .csrItemDesc {
+    font-family: $apple-font;
+    font-size: 1.05rem;
+    color: #b3b3b3;
+    text-align: center;
+    padding: 16px 28px 24px;
+    line-height: 1.65;
+    background: rgba(13, 13, 13, 0.85);
+    margin: 0;
+    @media (max-width: 650px) {
+      font-size: 0.92rem;
+      padding: 12px 16px 18px;
     }
   }
 
   .CSR_Facility {
-    margin-bottom: 40px;
-  }
-
-  .changesMadeThroughCSRText {
-    @media (max-width: 650px) {
-      padding: auto;
-      margin-bottom: 40px;
-      text-align: center;
-      font-size: 0.8rem;
-      font-family: 'Oswald', sans-serif;
-    }
+    margin-bottom: 0;
   }
 }

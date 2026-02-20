@@ -1,5 +1,5 @@
 import styles from './Startups.module.scss';
-import Hero from '../Hero/Hero';
+import CatScratchZone from '../CatScratchZone/CatScratchZone';
 import { StartupsList } from '../../data';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
@@ -7,31 +7,31 @@ import { StartupsList } from '../../data';
 const Startups = () => {
   return (
     <>
-      <Hero
-        imgName={'startups-hero.jpg'}
-        backgroundPosition={'center top'}
-        title={<>Startups</>}
-        subtitleList={['Launching... into space!']}
-        isHome={false}
-      />
-      <div className={styles.startupsList} id='is'>
-        {StartupsList.map((startupSec, idx) => {
-          return (
-            <>
-              <div className={styles.startupSection} key={`startup_${idx}`}>
-                <div className={styles.startupsSectionTitle}>
-                  {startupSec.name}
+      <CatScratchZone>
+        <div className={styles.pageHeader}>
+          <p className={styles.eyebrow}>SRA VJTI</p>
+          <h1 className={styles.pageTitle}>Startups</h1>
+          <p className={styles.pageSubtitle}>Launching... into space!</p>
+        </div>
+        <div className={styles.startupsList} id='is'>
+          {StartupsList.map((startupSec, idx) => {
+            return (
+              <>
+                <div className={styles.startupSection} key={`startup_${idx}`}>
+                  <div className={styles.startupsSectionTitle}>
+                    {startupSec.name}
+                  </div>
+                  {startupSec.startups.map((startup, idx) => {
+                    return (
+                      <StartupCard {...startup} key={`startup_card_${idx}`} />
+                    );
+                  })}
                 </div>
-                {startupSec.startups.map((startup, idx) => {
-                  return (
-                    <StartupCard {...startup} key={`startup_card_${idx}`} />
-                  );
-                })}
-              </div>
-            </>
-          );
-        })}
-      </div>
+              </>
+            );
+          })}
+        </div>
+      </CatScratchZone>
     </>
   );
 };

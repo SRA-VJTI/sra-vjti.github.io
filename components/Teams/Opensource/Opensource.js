@@ -47,7 +47,8 @@ const OpenSource = () => {
   const applyFilters = (year, comp, keyword) => {
     filteredList = updatedList.filter((contribution) => {
       const matchesYear = year === 'Show all' || contribution.year == year;
-      const matchesComp = comp === 'Show all' || contribution.competition === comp;
+      const matchesComp =
+        comp === 'Show all' || contribution.competition === comp;
       const matchesKeyword =
         keyword === '' ||
         (contribution.repoName || '').toLowerCase().includes(keyword) ||
@@ -112,11 +113,18 @@ const OpenSource = () => {
               className={styles.options}
               style={{ display: clickedComp ? 'flex' : 'none' }}
             >
-              <div className={styles.option} onClick={() => selComp('Show all')}>
+              <div
+                className={styles.option}
+                onClick={() => selComp('Show all')}
+              >
                 Show all
               </div>
               {competitions.map((comp, i) => (
-                <div key={i} className={styles.option} onClick={() => selComp(comp)}>
+                <div
+                  key={i}
+                  className={styles.option}
+                  onClick={() => selComp(comp)}
+                >
                   {comp}
                 </div>
               ))}
@@ -132,11 +140,18 @@ const OpenSource = () => {
               className={styles.options}
               style={{ display: clickedYear ? 'flex' : 'none' }}
             >
-              <div className={styles.option} onClick={() => selYear('Show all')}>
+              <div
+                className={styles.option}
+                onClick={() => selYear('Show all')}
+              >
                 Show all
               </div>
               {years.map((year, i) => (
-                <div key={i} className={styles.option} onClick={() => selYear(`${year}`)}>
+                <div
+                  key={i}
+                  className={styles.option}
+                  onClick={() => selYear(`${year}`)}
+                >
                   {year}
                 </div>
               ))}

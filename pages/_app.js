@@ -16,7 +16,8 @@ const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
   const isHome = router.pathname === '/';
   // These pages include Footer inside their own CatScratchZone
-  const hasOwnFooter = isHome ||
+  const hasOwnFooter =
+    isHome ||
     router.pathname === '/projects' ||
     router.pathname === '/projects/eklavya' ||
     router.pathname === '/projects/ongoing';
