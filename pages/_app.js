@@ -15,6 +15,11 @@ config.autoAddCss = false; // Tell Font Awesome to skip adding the css automatic
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
   const isHome = router.pathname === '/';
+  // These pages include Footer inside their own CatScratchZone
+  const hasOwnFooter = isHome ||
+    router.pathname === '/projects' ||
+    router.pathname === '/projects/eklavya' ||
+    router.pathname === '/projects/ongoing';
   return (
     <>
       <Head>
@@ -25,7 +30,7 @@ const MyApp = ({ Component, pageProps }) => {
         <Navbar />
         <Component {...pageProps} />
         {/* Footer for home page is rendered inside CatScratchZone so the board bg extends through it */}
-        {!isHome && <Footer />}
+        {!hasOwnFooter && <Footer />}
       </div>
     </>
   );

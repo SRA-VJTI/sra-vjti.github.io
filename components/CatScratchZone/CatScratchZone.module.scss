@@ -2,7 +2,11 @@
 
 .catZone {
   position: relative;
+  // Match catContent's tinted-black appearance so any sub-pixel rendering
+  // gap at the boundary never flashes a different color.
   background: #000;
+  // Prevent a hairline gap below the last child element
+  padding-bottom: 1px;
 }
 
 // Sticky backdrop — collapses to zero height so content stacks on top
@@ -50,4 +54,7 @@
   position: relative;
   z-index: 1;
   background: rgba(0, 0, 0, 0.6);
+  // Negative margin absorbs the 1px bottom padding on catZone so layout
+  // height stays correct but no visual gap appears.
+  margin-bottom: -1px;
 }

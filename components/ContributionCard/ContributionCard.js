@@ -4,61 +4,76 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faCodePullRequest } from '@fortawesome/free-solid-svg-icons';
 
 const ContributionCard = ({
-  index,
   repoName,
   repoIcon,
   description,
-  language,
-  languageColor,
-  prBadge,
   prLink,
   githubLink,
   contributor,
   competition,
 }) => {
+  const hasIcons = (githubLink && githubLink !== '') || (prLink && prLink !== '');
+
   return (
-    <div className={styles.cont}>
-      <div className={styles.top}>
-        <img className={styles.repoImg} src={repoIcon} alt={contributor} />
+    <div className={styles.card}>
+      {/* ── Header strip with overhanging avatar ─────────────────── */}
+      <div className={styles.header}>
+        <div
+          className={styles.avatar}
+          style={{ backgroundImage: `url(${repoIcon})` }}
+        />
       </div>
-      <div className={styles.txtCont}>
+
+      {/* ── Text body ────────────────────────────────────────────── */}
+      <div className={styles.body}>
         <div className={styles.name}>{contributor}</div>
-        <div className={styles.contributor}>{repoName}</div>
-        <div className={styles.desc}>{description}</div>
-        <div className={styles.meta}>
-          <span className={styles.competition}>{competition}</span>
-        </div>
-        <div className={styles.icons}>
-          <GitHubLink githubLink={githubLink} />
-          <PRLink prLink={prLink} />
-        </div>
+
+        {/* Repo — always visible */}
+        {repoName && (
+          <div className={styles.section}>
+            <div className={styles.sectionLabel}>Repo</div>
+            <div className={styles.pills}>
+              <span className={styles.pill}>{repoName}</span>
+            </div>
+          </div>
+        )}
+
+        {/* Program tag — always visible */}
+        {competition && (
+          <div className={styles.section}>
+            <div className={styles.sectionLabel}>Program</div>
+            <div className={styles.pills}>
+              <span className={styles.pill}>{competition}</span>
+            </div>
+          </div>
+        )}
+
+        {/* Description — revealed on card hover */}
+        {description && (
+          <div className={styles.descSection}>
+            <div className={styles.sectionLabel}>Contribution</div>
+            <p className={styles.desc}>{description}</p>
+          </div>
+        )}
+
+        {/* Social icons — revealed on card hover */}
+        {hasIcons && (
+          <div className={styles.icons}>
+            {githubLink && githubLink !== '' && (
+              <a href={githubLink} target='_blank' rel='noreferrer'>
+                <FontAwesomeIcon icon={faGithub} size='lg' />
+              </a>
+            )}
+            {prLink && prLink !== '' && (
+              <a href={prLink} target='_blank' rel='noreferrer'>
+                <FontAwesomeIcon icon={faCodePullRequest} size='lg' />
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
-};
-
-const GitHubLink = ({ githubLink }) => {
-  if (githubLink !== '') {
-    return (
-      <a href={githubLink} target='blank'>
-        <FontAwesomeIcon icon={faGithub} size='lg' />
-      </a>
-    );
-  } else {
-    return null;
-  }
-};
-
-const PRLink = ({ prLink }) => {
-  if (prLink !== '') {
-    return (
-      <a href={prLink} target='blank'>
-        <FontAwesomeIcon icon={faCodePullRequest} size='lg' />
-      </a>
-    );
-  } else {
-    return null;
-  }
 };
 
 export default ContributionCard;

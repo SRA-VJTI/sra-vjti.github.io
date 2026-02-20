@@ -1,51 +1,129 @@
 @import '../../variables';
 
+$apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
+  'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// ─── Page Header (sits over sticky board photo) ──────────────────────────────
+
+.pageHeader {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 40px 80px;
+  text-align: center;
+  font-family: $apple-font;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6e6e73;
+  margin-bottom: 16px;
+}
+
+.pageTitle {
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  line-height: 1.06;
+  color: #f5f5f7;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+  margin-bottom: 24px;
+}
+
+.pageSubtitle {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a1a1a6;
+}
+
+@media (max-width: 768px) {
+  .pageHeader {
+    padding: 100px 24px 60px;
+  }
+
+  .pageTitle {
+    font-size: 48px;
+  }
+
+  .pageSubtitle {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .pageTitle {
+    font-size: 36px;
+  }
+}
+
+// ─── Project selector bar ─────────────────────────────────────────────────────
+
 .projectBar {
-  width: 95vw;
-  max-width: none;
-  padding: 1em 1.5em;
-  margin: 1.5em auto 0;
+  width: 90%;
+  max-width: 1200px;
+  padding: 1.5em;
+  margin: 0 auto 40px;
 
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  gap: 0;
-  justify-content: space-between;
+  gap: 8px;
+  justify-content: center;
   align-items: center;
 
-  border: 2px solid $light;
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
 
   -ms-overflow-style: none;
   scrollbar-width: none;
+
   &::-webkit-scrollbar {
     display: none;
   }
 }
 
 .projectTag {
-  flex: 1 1 0;
-  padding: 0.7em 0.5em;
+  flex: 0 0 auto;
+  padding: 0.6em 1.2em;
   text-align: center;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  border-radius: 10px;
+  font-size: 1rem;
+  font-family: $apple-font;
+  font-weight: 400;
+  color: #a1a1a6;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 980px;
   cursor: pointer;
   white-space: nowrap;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.09);
+    color: #f5f5f7;
     transform: translateY(-2px);
   }
 }
 
 .activeTag {
-  background-color: $light;
-  color: $white;
-  font-weight: bold;
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(247, 28, 50, 0.4);
+  background-color: #0071e3;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 113, 227, 0.4);
+
+  &:hover {
+    background-color: #0077ed;
+  }
 }
+
+// ─── Carousel ─────────────────────────────────────────────────────────────────
 
 .carousel {
   position: relative;
@@ -53,8 +131,8 @@
   align-items: center;
   justify-content: center;
   height: calc(100vh - 200px);
-  max-width: 95vw;
-  margin: 0 auto;
+  max-width: 90%;
+  margin: 0 auto 120px;
   padding: 1rem 4rem;
 }
 
@@ -65,12 +143,12 @@
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  color: $white;
+  color: #f5f5f7;
   font-size: 2rem;
   cursor: pointer;
   z-index: 10;
   padding: 1rem;
-  opacity: 0.6;
+  opacity: 0.5;
   transition: opacity 0.2s;
 
   &:hover {
@@ -86,31 +164,45 @@
   right: 0;
 }
 
+// ─── Glass card ───────────────────────────────────────────────────────────────
+
 .card {
-  @include tech-card;
   width: 100%;
   height: 100%;
   padding: 0;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.18);
+  }
 }
 
 .cardImage {
   flex: 0 0 50%;
-  position: relative;
-  z-index: 1;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
 
   img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     display: block;
+    border-radius: 8px;
   }
 }
 
@@ -145,9 +237,7 @@
 }
 
 .cardBody {
-  padding: 1.2rem 2rem;
-  position: relative;
-  z-index: 1;
+  padding: 40px 36px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -155,25 +245,31 @@
   overflow-y: auto;
 
   h2 {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
+    font-family: $apple-font;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.003em;
+    line-height: 1.07;
+    color: #f5f5f7;
+    margin-bottom: 16px;
   }
 
   p {
-    font-size: 1rem;
-    line-height: 1.75;
-    opacity: 0.85;
+    font-family: $apple-font;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #a1a1a6;
   }
 }
 
 .cardLinks {
   display: flex;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 24px;
 
   a {
-    font-size: 1.2rem;
-    color: $white;
+    font-size: 1.4rem;
+    color: #f5f5f7;
     transition: color 0.2s;
 
     &:hover {
@@ -181,6 +277,8 @@
     }
   }
 }
+
+// ─── Progress dots ────────────────────────────────────────────────────────────
 
 .dots {
   position: absolute;
@@ -192,35 +290,37 @@
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  border: 1px solid rgba($white, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   background: transparent;
   cursor: pointer;
   padding: 0;
   transition: background 0.2s, border-color 0.2s;
 
   &:hover {
-    border-color: $light;
+    border-color: #f5f5f7;
   }
 }
 
 .dotActive {
-  background: $light;
-  border-color: $light;
+  background: #f5f5f7;
+  border-color: #f5f5f7;
 }
+
+// ─── Responsive ───────────────────────────────────────────────────────────────
 
 @media (max-width: 768px) {
   .projectBar {
-    width: 95%;
-    gap: 8px;
-    padding: 0.8em;
+    width: 90%;
+    gap: 6px;
+    padding: 1em;
     justify-content: flex-start;
 
     .projectTag {
       padding: 0.5em 0.8em;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
   }
 
@@ -245,81 +345,14 @@
   }
 
   .cardBody {
-    padding: 1.5rem;
+    padding: 24px;
 
     h2 {
-      font-size: 1.6rem;
+      font-size: 32px;
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: 15px;
     }
   }
 }
-
-/* ===== OLD GRID-BASED STYLES (commented out) =====
-
-.cardGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  max-width: 1700px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.card {
-  @include tech-card;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 280px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: scale(1.02);
-  }
-}
-
-.cardBody {
-  padding: 2rem;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-
-  h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.8rem;
-  }
-
-  p {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    opacity: 0.85;
-  }
-}
-
-.cardLinks {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.2rem;
-
-  a {
-    font-size: 1.4rem;
-    color: $white;
-    transition: color 0.2s;
-
-    &:hover {
-      color: $light;
-    }
-  }
-}
-
-===== END OLD STYLES ===== */

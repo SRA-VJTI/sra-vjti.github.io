@@ -1,14 +1,16 @@
 @import '../variables';
 
 .footer {
-  height: 20vh;
+  min-height: 20vh;
+  padding-bottom: 2vh;
   background: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   h3 {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      sans-serif;
     font-weight: normal;
     font-size: 1.5rem;
     margin-bottom: 20px;

@@ -1,6 +1,7 @@
-import Hero from '../../Hero/Hero';
 import styles from './Alumni.module.scss';
 import Card from '../../Card/Card';
+import CatScratchZone from '../../CatScratchZone/CatScratchZone';
+import Footer from '../../Footer/Footer';
 import { AlumniList } from '../../../data';
 import { useState } from 'react';
 
@@ -77,14 +78,14 @@ const Alumni = () => {
 
   return (
     <>
-      <Hero
-        imgName={'alumni-hero.jpg'}
-        title={<>Alumni</>}
-        subtitleList={['Lighting the way for generations to come.']}
-        isHome={false}
-      />
-
-      <div className={styles.filter} id='is'>
+      <CatScratchZone>
+        <div className={styles.pageHeader}>
+          <p className={styles.eyebrow}>SRA VJTI</p>
+          <h1 className={styles.pageTitle}>Alumni</h1>
+          <p className={styles.pageSubtitle}>Lighting the way for generations to come.</p>
+        </div>
+        <div className={styles.filterWrapper}>
+        <div className={styles.filter} id='is'>
         <input
           className={styles.search}
           type='search'
@@ -122,26 +123,30 @@ const Alumni = () => {
             })}
           </div>
         </div>
-      </div>
+        </div>
+        </div>
 
-      <div className={styles.cardGrp}>
-        {filteredList.map((alumni, index) => {
-          return (
-            <Card
-              key={`alumni_member_${index}`}
-              index={index}
-              name={alumni.name}
-              sub={alumni.sub}
-              imgName={alumni.imgName}
-              linkedInLink={alumni.linkedInLink}
-              githubLink={alumni.githubLink}
-              isAlumni={true}
-              previous={alumni.previous}
-              current={alumni.current}
-            />
-          );
-        })}
-      </div>
+        <div className={styles.cardGrp}>
+          {filteredList.map((alumni, index) => {
+            return (
+              <Card
+                key={`alumni_member_${index}`}
+                index={index}
+                name={alumni.name}
+                sub={alumni.sub}
+                imgName={alumni.imgName}
+                linkedInLink={alumni.linkedInLink}
+                githubLink={alumni.githubLink}
+                isAlumni={true}
+                previous={alumni.previous}
+                current={alumni.current}
+              />
+            );
+          })}
+        </div>
+
+        <Footer />
+      </CatScratchZone>
     </>
   );
 };

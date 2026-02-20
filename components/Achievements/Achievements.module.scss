@@ -1,45 +1,191 @@
-@import '../variables';
+// ── Achievements page — Apple dark-mode theme ──────────────────────
+
+$font-apple: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
+  'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Wrapper keeps the sticky background contained
+.pageWrapper {
+  position: relative;
+  background: #000;
+  min-height: 100vh;
+}
+
+// ── Background system ──────────────────────────────────────────────
+.stickyBg {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  margin-bottom: -100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: calc(100% + 120px);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
+
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.45) 40%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+}
+
+// ── Content layer sits above the sticky background ─────────────────
+.content {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+// ── Page header ────────────────────────────────────────────────────
+.pageHeader {
+  padding: 140px 40px 80px;
+  text-align: center;
+  background: transparent;
+
+  @media (max-width: 768px) {
+    padding: 120px 24px 60px;
+  }
+}
+
+.eyebrow {
+  font-family: $font-apple;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6e6e73;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+
+.pageTitle {
+  font-family: $font-apple;
+  font-size: 56px;
+  font-weight: 700;
+  color: #f5f5f7;
+  letter-spacing: -0.003em;
+  line-height: 1.07;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+  margin: 0 0 20px;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
+}
+
+.pageSubtitle {
+  font-family: $font-apple;
+  font-size: 20px;
+  font-weight: 400;
+  color: #a1a1a6;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 17px;
+  }
+}
+
+// ── Year sections ──────────────────────────────────────────────────
+.achievements {
+  padding: 0 40px 120px;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  @media (max-width: 850px) {
+    padding: 0 24px 80px;
+  }
+}
 
 .achYear {
+  margin-bottom: 72px;
+}
+
+.yearLabel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.yearLine {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.yearText {
+  font-family: $font-apple;
+  font-size: 18px;
+  font-weight: 600;
+  color: #6e6e73;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+// ── Card grid ──────────────────────────────────────────────────────
+.achGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 850px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ── Individual achievement card ────────────────────────────────────
+.achCard {
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  transition: background 0.3s ease;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    background: rgba(26, 26, 26, 0.9);
+  }
+}
+
+.achImg {
   width: 100%;
-  margin: 50px auto;
-  h3 {
-    text-align: center;
-    width: 40%;
-    margin: auto;
-    color: $light;
-    font-size: 1.8rem;
-    border-bottom: 2px solid $light;
-    padding: {
-      bottom: 10px;
-    }
-  }
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #0d0d0d;
+}
 
-  .achList {
-    width: 100%;
-    padding: 1em;
-
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    .ach {
-      width: 250px;
-      height: 300px;
-      margin: 30px;
-      // background-color: rebeccapurple;
-      .achImg {
-        height: 70%;
-
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-      .achName {
-        padding-top: 10px;
-        height: 30%;
-        text-align: center;
-      }
-    }
-  }
+.achName {
+  font-family: $font-apple;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #f5f5f5;
+  letter-spacing: -0.003em;
+  text-align: center;
+  padding: 16px 14px 20px;
+  line-height: 1.45;
 }
