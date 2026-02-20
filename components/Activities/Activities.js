@@ -65,7 +65,14 @@ const Activities = () => {
         isHome={false}
       />
 
-      <div className={styles.projectBar}>
+      <div className={styles.activitiesPage}>
+        <section className={styles.section}>
+          <div className={styles.sectionHeader}>
+            <span className={styles.eyebrow}>Explore</span>
+            <h1 className={styles.sectionTitle}>What We Do</h1>
+          </div>
+
+          <div className={styles.projectBar}>
         {ActivitiesList.map((item, idx) => (
           <span
             key={idx}
@@ -80,6 +87,7 @@ const Activities = () => {
       </div>
 
       <div className={styles.carousel}>
+        <div className={styles.cardWrapper}>
         <button
           className={styles.arrowLeft}
           onClick={prev}
@@ -151,6 +159,7 @@ const Activities = () => {
         >
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
+        </div>
 
         <div className={styles.dots}>
           {ActivitiesList.map((_, idx) => (
@@ -164,6 +173,8 @@ const Activities = () => {
             />
           ))}
         </div>
+        </div>
+        </section>
       </div>
     </>
   );

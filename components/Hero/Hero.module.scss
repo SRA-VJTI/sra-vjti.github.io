@@ -1,5 +1,10 @@
 @import '../variables';
 
+// ─── Apple-style font stack ────────────────────────────────────────────────────
+$apple-font: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
+  "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// ─── Hero ─────────────────────────────────────────────────────────────────────
 .hero {
   position: relative;
   width: 100%;
@@ -9,62 +14,145 @@
   justify-content: center;
   align-items: center;
   padding-top: 80px;
-  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-family: $apple-font;
+  background-size: cover;
+  background-position: center;
+  color: #f5f5f7;
+
+  // Deepened gradient so text pops cleanly
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.45) 55%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
 
   .heroHead {
-    font-size: 4.6rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    line-height: 130%;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 1;
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    line-height: 1.06;
+    color: #f5f5f7;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
   }
 
   .heroSub {
-    font-size: 1.5rem;
-    margin-top: 30px;
-    text-align: center;
-    font-weight: 400;
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+    margin-top: 28px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a1a1a6;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 768px) {
     .heroHead {
-      font-size: 3rem;
+      font-size: 48px;
     }
 
     .heroSub {
-      font-size: 1rem;
+      font-size: 13px;
     }
   }
 
-  @media (max-width: 350px) {
+  @media (max-width: 375px) {
     .heroHead {
-      font-size: 2rem;
+      font-size: 36px;
     }
 
     .heroSub {
-      font-size: 0.8rem;
+      font-size: 11px;
     }
   }
 }
 
-.hero {
-  background-size: cover;
-  background-position: center;
-  color: white;
+// ─── Ideate / Innovate / Inspire cards ────────────────────────────────────────
+.is {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  padding: 120px 40px 0;
+  background: #000;
+  flex-wrap: wrap;
 
-  .notif {
-    font-size: 1.5rem;
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-name: wobble;
-    animation-timing-function: ease-in-out;
+  .caption {
+    flex: 1 1 260px;
+    max-width: 340px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 48px 36px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      border-color 0.3s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 80px 24px 0;
+  }
+
+  @media (max-width: 480px) {
+    .caption {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+
+  // these sub-selectors are now only typography, not background images
+  .captionHead {
+    font-family: $apple-font;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.003em;
+    color: #f5f5f7;
+  }
+
+  .captionSub {
+    font-family: $apple-font;
+    margin-top: 16px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #a1a1a6;
+    max-width: 280px;
   }
 }
 
+// ─── Shared keyframes ─────────────────────────────────────────────────────────
+@keyframes bounce {
+  50% {
+    transform: translateY(-25%);
+  }
+}
+
+// placeholder kept for any code that still references .scroll-indicator
 .scroll-indicator::before {
   animation: bounce 1s ease infinite;
   bottom: 2rem;
@@ -82,107 +170,38 @@
   width: 6rem;
 }
 
-@keyframes bounce {
-  50% {
-    transform: translateY(-10%);
-  }
-}
-
+// keep wobble so the .notif animation in .hero still compiles
 @keyframes wobble {
-  30%,
-  70% {
-    transform: rotate(0deg);
+  30%, 70% { transform: rotate(0deg); }
+  35%, 65% { transform: rotate(10deg); color: $lightest; }
+  40%, 60% { transform: rotate(-10deg); }
+  45%, 55% { transform: rotate(10deg); }
+  50%       { transform: rotate(-10deg); }
+}
+
+// ─── Dead code preserved so nothing breaks if referenced elsewhere ─────────────
+// (old .caption with background-size was only used inside .is, deleted above)
+// Placeholder so the old @media blocks compile correctly
+.legacyCaption {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 290vw auto;
+
+  @media (min-width: 550px) {
+    background-size: 250vw auto;
   }
 
-  35%,
-  65% {
-    transform: rotate(10deg);
-    color: $lightest;
+  @media (min-width: 750px) {
+    background-size: 200vw auto;
   }
 
-  40%,
-  60% {
-    transform: rotate(-10deg);
-  }
-
-  45%,
-  55% {
-    transform: rotate(10deg);
-  }
-
-  50% {
-    transform: rotate(-10deg);
+  @media (min-width: 900px) {
+    background-size: 100vw auto;
   }
 }
 
-.is {
-  height: 240vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-
-  .caption {
-    color: white;
-    width: 100%;
-    height: 80vh;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 80px;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 290vw auto;
-
-    @media (min-width: 550px) {
-      background-size: 250vw auto;
-    }
-
-    @media (min-width: 750px) {
-      background-size: 200vw auto;
-    }
-
-    @media (min-width: 900px) {
-      background-size: 100vw auto;
-    }
-
-    .captionHead {
-      text-transform: uppercase;
-      font-size: 7rem;
-      font-family: 'Six Caps', sans-serif;
-      letter-spacing: 10px;
-      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
-    }
-
-    .captionSub {
-      font-family: 'Inter', sans-serif;
-      margin-top: 20px;
-      font-size: 1.3rem;
-      font-weight: 400;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-      max-width: 600px;
-      padding: 0 20px;
-    }
-  }
-
-  @media (max-width: 650px) {
-    .caption {
-      .captionHead {
-        font-size: 5rem;
-      }
-
-      .captionSub {
-        font-size: 1rem;
-        padding: 0 2em;
-      }
-    }
-  }
-}
-
+// ─── Scroll indicator (chevron) ───────────────────────────────────────────────
 .scrollIndicator {
   position: absolute;
   bottom: 2rem;
@@ -191,24 +210,18 @@
   width: 6rem;
   height: 4rem;
   pointer-events: auto;
+  z-index: 2;
 }
 
 .scrollIndicator::before {
   animation: bounce 1s ease infinite;
-  color: #fff;
+  color: rgba(245, 245, 247, 0.6);
   content: '╲╱';
   font-size: 1rem;
   height: 4rem;
   letter-spacing: -1px;
   line-height: 4rem;
-  opacity: 0.8;
   text-align: center;
   width: 6rem;
   display: block;
-}
-
-@keyframes bounce {
-  50% {
-    transform: translateY(-10%);
-  }
 }

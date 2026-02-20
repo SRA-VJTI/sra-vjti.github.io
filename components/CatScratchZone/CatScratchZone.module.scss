@@ -1,0 +1,53 @@
+// ─── Board Photo Scroll Zone ─────────────────────────────────────────────────
+
+.catZone {
+  position: relative;
+  background: #000;
+}
+
+// Sticky backdrop — collapses to zero height so content stacks on top
+.stickyBg {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  margin-bottom: -100vh;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+// Board photo — covers the full viewport, extra height for parallax travel
+.boardImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  // Slightly taller than viewport so parallax shift stays in-frame
+  width: 100%;
+  height: calc(100% + 120px);
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  will-change: transform;
+}
+
+// Semi-transparent gradient overlay so text content remains legible
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.45) 40%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+}
+
+// Content layer — sits on top of the sticky background.
+// Single uniform dark tint across every child section.
+.catContent {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.60);
+}

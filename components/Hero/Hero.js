@@ -1,5 +1,6 @@
 import styles from './Hero.module.scss';
 import { useEffect, useState } from 'react';
+import MayaViewer from '../MayaViewer/MayaViewer';
 
 function Hero({
   imgName,
@@ -43,48 +44,7 @@ function Hero({
           <div className={styles.scrollIndicator}></div>
         </a>
       </div>
-      {isHome && (
-        <div className={styles.is} id='is'>
-          <div
-            style={{
-              backgroundImage: `linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
-		url("/static/images/ideate.png")`,
-            }}
-            className={styles.caption}
-          >
-            <div className={styles.captionHead}>Ideate</div>
-            <div className={styles.captionSub}>
-              Changing the world, one solution at a time.
-            </div>
-          </div>
-          <div
-            style={{
-              backgroundImage: `linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
-		url("/static/images/innovate.png")`,
-            }}
-            className={styles.caption}
-          >
-            <div className={styles.captionHead}>Innovate</div>
-            <div className={styles.captionSub}>
-              Creativity is thinking up new things. Innovation is doing new
-              things.
-            </div>
-          </div>
-          <div
-            style={{
-              backgroundImage: `linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
-		url("/static/images/inspire.png")`,
-            }}
-            className={styles.caption}
-          >
-            <div className={styles.captionHead}>Inspire</div>
-            <div className={styles.captionSub}>
-              Don't inspire by being perfect, inspire by embracing your
-              imperfections.
-            </div>
-          </div>
-        </div>
-      )}
+      {isHome && <MayaViewer />}
     </>
   );
 }
