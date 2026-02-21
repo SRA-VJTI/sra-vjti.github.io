@@ -1,8 +1,8 @@
 import styles from './Opensource.module.scss';
-import ContributionCard from '../../ContributionCard/ContributionCard.js';
-import CatScratchZone from '../../CatScratchZone/CatScratchZone';
-import Footer from '../../Footer/Footer';
-import { OpenSourceList } from '../../../data';
+import ContributionCard from '../ContributionCard/ContributionCard.js';
+import CatScratchZone from '../CatScratchZone/CatScratchZone';
+import Footer from '../Footer/Footer';
+import { OpenSourceList } from '../../data';
 import { useState } from 'react';
 
 const competitions = ['GSoC', 'OSPP', 'LFX', 'Other'];

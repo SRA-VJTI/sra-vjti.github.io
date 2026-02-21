@@ -1,9 +1,9 @@
-@import '../../variables';
+@import '../variables';
 
 $apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
   'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-// ─── Page Header (replaces hero photo) ────────────────────────────────────────
+// ─── Page Header ─────────────────────────────────────────────────────────────
 .pageHeader {
   background: transparent;
   padding: 140px 40px 80px;
@@ -67,7 +67,7 @@ $apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
   align-items: center;
   justify-content: center;
   gap: 12px;
-  max-width: 860px;
+  max-width: 960px;
   margin: 0 auto;
 
   .search {
