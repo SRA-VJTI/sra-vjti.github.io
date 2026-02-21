@@ -23,7 +23,6 @@ import StartupsList from './startups';
 import OngoingProjectsData from './ongoingprojects';
 import EklavyaProjectList from './eklavyaprojects';
 import ActivitiesList from './activities';
-
 import PublicationsList from './publications';
 
 export {

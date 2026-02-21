@@ -1,105 +1,126 @@
 @import '../../variables';
 
-.eklavyaProj {
-  width: 300px;
-  height: 350px;
-  margin: 30px;
-  // background-color: red;
+$apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
+  'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-  position: relative;
+// ─── Page Header (sits over sticky board photo) ──────────────────────────────
 
-  .projPhoto {
-    width: 100%;
-    height: 70%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
+.pageHeader {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 40px 80px;
+  text-align: center;
+  font-family: $apple-font;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6e6e73;
+  margin-bottom: 16px;
+}
+
+.pageTitle {
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  line-height: 1.06;
+  color: #f5f5f7;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+  margin-bottom: 24px;
+}
+
+.pageSubtitle {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a1a1a6;
+}
+
+@media (max-width: 768px) {
+  .pageHeader {
+    padding: 100px 24px 60px;
   }
 
-  .projName {
-    text-align: center;
-    font-size: 1.3rem;
-    margin: 20px 0;
+  .pageTitle {
+    font-size: 48px;
   }
 
-  .iCard {
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background-color: darken($light, 10%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: clip-path 0.8s;
-
-    .iInfo {
-      text-align: justify;
-      width: 90%;
-      margin-bottom: 20px;
-    }
-
-    .iLink {
-      font-size: 1.5rem;
-    }
-
-    // 0% and 120%
-    clip-path: circle(0% at 90.75% 8%);
+  .pageSubtitle {
+    font-size: 14px;
   }
 }
 
+@media (max-width: 375px) {
+  .pageTitle {
+    font-size: 36px;
+  }
+}
+
+// ─── Year selector ────────────────────────────────────────────────────────────
+
 .eklavyaYearCloud {
-  width: 90%; // Use more width to fit all years
+  width: 90%;
   max-width: 1200px;
   padding: 1.5em;
-  margin: 3em auto;
+  margin: 0 auto 60px;
 
   display: flex;
-  flex-wrap: nowrap; // Force single row
-  overflow-x: auto; // Allow horizontal scroll if needed
+  flex-wrap: nowrap;
+  overflow-x: auto;
   gap: 15px;
-  justify-content: center; // Center items if they fit, start if they overflow
+  justify-content: center;
   align-items: center;
 
-  border: 2px solid $light;
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
 
-  // Hide scrollbar for cleaner look but keep functionality
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
 
-  /* Firefox */
   &::-webkit-scrollbar {
     display: none;
   }
 
   .eklavyaYearTag {
-    flex: 0 0 auto; // Don't shrink, don't grow, base on content/width
-    min-width: 100px; // Ensure decent clickable area
+    flex: 0 0 auto;
+    min-width: 100px;
     padding: 0.8em;
     text-align: center;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    border-radius: 10px;
+    font-size: 1.1rem;
+    font-family: $apple-font;
+    font-weight: 400;
+    color: #a1a1a6;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 12px;
     cursor: pointer;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.09);
+      color: #f5f5f7;
       transform: translateY(-2px);
     }
   }
 
   .activeYearTag {
-    background-color: $light;
-    color: $white;
-    font-weight: bold;
-    transform: scale(1.05); // Reduced scale slightly to fit grid better
-    box-shadow: 0 4px 15px rgba(247, 28, 50, 0.4);
+    background-color: #0071e3;
+    color: #ffffff;
+    font-weight: 600;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 113, 227, 0.4);
+
+    &:hover {
+      background-color: #0077ed;
+    }
   }
 
   @media (max-width: 768px) {
@@ -109,14 +130,15 @@
   @media (max-width: 550px) {
     width: 90%;
     gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
 
     .eklavyaYearTag {
       padding: 0.5em;
-      font-size: 1.1rem;
+      font-size: 0.9rem;
     }
   }
 }
+
+// ─── Fade-in animation ────────────────────────────────────────────────────────
 
 @keyframes fadeInUp {
   from {
@@ -136,25 +158,146 @@
   animation-name: fadeInUp;
 }
 
+// ─── Year group ───────────────────────────────────────────────────────────────
+
 .eklavyaYear {
-  margin-top: 20px;
+  padding: 0 40px 120px;
+  width: 100%;
 
   h2 {
+    font-family: $apple-font;
     width: 50%;
-    margin: auto;
+    margin: 0 auto 48px;
     text-align: center;
-    color: $lightest;
-    padding: 0.5em 0;
-    border-bottom: 2px solid $light;
+    font-size: 40px;
+    font-weight: 700;
+    color: #f5f5f7;
+    letter-spacing: -0.003em;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
-
-  width: 100%;
 
   .eklavyaYearList {
     width: 100%;
-    padding: 0em;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 24px 80px;
+
+    h2 {
+      font-size: 32px;
+      width: 80%;
+    }
+  }
+}
+
+// ─── Project card ─────────────────────────────────────────────────────────────
+
+.eklavyaProj {
+  width: 300px;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-4px);
+  }
+
+  .projPhoto {
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .projName {
+    font-family: $apple-font;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    color: #f5f5f7;
+    letter-spacing: -0.003em;
+    padding: 20px 20px 24px;
+  }
+
+  .iCard {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 24px 24px 20px;
+    overflow: hidden;
+    transition: clip-path 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    .iInfo {
+      font-family: $apple-font;
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #a1a1a6;
+      width: 90%;
+      flex: 1;
+      overflow-y: auto;
+      margin-bottom: 16px;
+      padding-right: 4px;
+
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 2px;
+      }
+    }
+
+    .iLink {
+      flex-shrink: 0;
+      font-size: 1.5rem;
+      color: #f5f5f7;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $light;
+      }
+    }
+
+    clip-path: circle(0% at 90.75% 8%);
   }
 }

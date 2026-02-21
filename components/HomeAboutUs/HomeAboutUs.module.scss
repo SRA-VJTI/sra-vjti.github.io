@@ -1,130 +1,181 @@
 @import '../variables';
 
+// ─── Apple-style font stack ────────────────────────────────────────────────────
+$apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
+  'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// ─── About Us ─────────────────────────────────────────────────────────────────
 .aboutUs {
   width: 100%;
-  // background-color: rgb(49, 49, 49);
-  .aboutUsMain {
-    width: 100%;
-    background-image: linear-gradient(#00000081, #00000081),
-      url('/static/images/aboutus-final.jpg');
-    min-height: 60vh;
-    padding: 7em 0.5em;
-    background-position: center;
-    background-size: cover;
+  background: transparent;
+  padding: 120px 40px 0;
+
+  // Two-card row — mirrors the Ideate/Innovate/Inspire layout
+  .aboutCards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .aboutCard {
+    flex: 1 1 480px;
+    max-width: 580px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 48px 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Oswald', sans-serif;
-    color: white;
-    h1 {
-      font-size: 3rem;
-      // color: $lightest;
-    }
-    p {
-      font-family: sans-serif;
-      font-size: 1.1rem;
-      width: 90%;
-      line-height: 165%;
-      padding: 1em;
-      text-align: center;
-      // margin-top: 20px;
-    }
-  }
-
-  .aboutUsTeam,
-  .aboutUsAlumni {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    img {
-      width: 50%;
-      // height: 50vh;
-    }
-
-    p {
-      font-family: 'Oswald', sans-serif;
-      // height: 100%;
-      // width: 20%;
-      text-align: center;
-      font-size: 1.3rem;
-      padding: 0 2rem;
-      transition: color 0.3s;
-    }
+    font-family: $apple-font;
+    color: #f5f5f7;
+    transition: background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      border-color 0.3s;
 
     &:hover {
-      p {
-        color: $lightest;
-      }
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(255, 255, 255, 0.18);
     }
   }
 
-  .aboutUsAlumni {
-    flex-direction: row-reverse;
+  .eyebrow {
+    font-family: $apple-font;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6e6e73;
+    margin-bottom: 16px;
   }
 
-  @media (max-width: 650px) {
-    .aboutUsMain {
-      padding: 3em 0.5em;
+  h2 {
+    font-family: $apple-font;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.003em;
+    line-height: 1.07;
+    color: #f5f5f7;
+    margin-bottom: 20px;
+    text-shadow: none;
+  }
+
+  p:not(.eyebrow) {
+    font-family: $apple-font;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #a1a1a6;
+  }
+
+  @media (max-width: 768px) {
+    padding: 80px 24px 0;
+
+    .aboutCard {
+      flex: 1 1 100%;
+      max-width: 100%;
+      padding: 36px 28px;
     }
-    .aboutUsTeam,
-    .aboutUsAlumni {
-      flex-direction: column;
-      p {
-        padding: 3em 1em;
-      }
-      img {
-        width: 100%;
-      }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    p:not(.eyebrow) {
+      font-size: 15px;
     }
   }
 }
 
+// ─── Projects ─────────────────────────────────────────────────────────────────
 .ourProjects {
   width: 100%;
-  // min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2em;
-  color: white;
-  font-family: 'Oswald', sans-serif;
+  padding: 120px 40px 0;
+  font-family: $apple-font;
 
-  background-image: linear-gradient(#000000ab, #000000ab),
-    url('/static/images/our-projects-final.jpg');
-  background-size: cover;
-  background-position: center;
+  background: transparent;
+
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #a1a1a6;
+    margin-bottom: 16px;
+  }
 
   h1 {
-    transition: color 0.3s;
-    padding: 1em;
-    font-size: 3rem;
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -0.003em;
+    color: #f5f5f7;
+    text-align: center;
+    margin-bottom: 48px;
   }
+
+  // CTA pill buttons ─────────────────────────────────────────
+  .ctaGroup {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   button {
-    margin: 0.5em;
-    font-size: 1.3rem;
-    border: 2px solid white;
-    padding: 0.7em 1em;
-    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #0071e3;
+    color: #fff;
+    font-family: $apple-font;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 12px 24px;
+    border-radius: 980px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+
     &:hover {
-      border-radius: 5px;
-      border-color: $lightest;
-      color: $lightest;
+      background: #0077ed;
     }
-  }
-  &:hover {
-    h1 {
-      color: $light;
+
+    // second button gets ghost style
+    &:nth-child(2) {
+      background: transparent;
+      border: 1px solid rgba(245, 245, 247, 0.3);
+      color: #f5f5f7;
+
+      &:hover {
+        background: transparent;
+        border-color: rgba(245, 245, 247, 0.6);
+      }
+    }
+
+    span {
+      font-size: 1.1em;
     }
   }
 
-  @media (max-width: 650px) {
+  @media (max-width: 768px) {
+    padding: 80px 24px 0;
+
     h1 {
-      font-size: 2rem;
+      font-size: 36px;
     }
+
     button {
-      font-size: 1.2rem;
+      font-size: 15px;
     }
   }
 }

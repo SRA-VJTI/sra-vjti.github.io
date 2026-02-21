@@ -1,135 +1,219 @@
 @import '../variables';
 
-.publicationsSectionTitle {
-  font-size: 2rem;
-  text-align: center;
-  width: 50%;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 1em;
-  padding-bottom: 0.5em;
-  border-bottom: 2px solid $light;
+// ─── Apple-style font stack ───────────────────────────────────────────────────
+$apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
+  'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-  @media (max-width: 450px) {
-    width: 80%;
+// ─── Page header ──────────────────────────────────────────────────────────────
+.pageHeader {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 160px 40px 80px;
+  min-height: 40vh;
+  font-family: $apple-font;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6e6e73;
+  margin-bottom: 16px;
+}
+
+.pageTitle {
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  line-height: 1.06;
+  color: #f5f5f7;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55);
+  margin-bottom: 24px;
+
+  @media (max-width: 768px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 36px;
   }
 }
 
-.publications {
-  width: 80%;
-  margin: 70px auto;
-  min-height: 200px;
+.pageSubtitle {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #a1a1a6;
+  max-width: 600px;
+  line-height: 1.5;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+}
+
+// ─── Publications list ────────────────────────────────────────────────────────
+.publicationsList {
+  background: transparent;
+  padding-bottom: 80px;
+}
+
+// ─── Section ──────────────────────────────────────────────────────────────────
+.publicationsSection {
+  background: transparent;
+  padding: 120px 40px 0;
+
+  @media (max-width: 768px) {
+    padding: 80px 24px 0;
+  }
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  cursor: pointer;
-  border: 2px solid $light;
+  flex-direction: column;
   align-items: center;
-  padding: 2em;
-  border-radius: 10px;
-  transition: transform 0.2s;
+}
+
+.sectionEyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6e6e73;
+  margin-bottom: 12px;
+}
+
+.sectionTitle {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -0.003em;
+  line-height: 1.07;
+  color: #f5f5f7;
+  margin-bottom: 60px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+}
+
+// ─── Cards group ──────────────────────────────────────────────────────────────
+.cardsGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+// ─── Glass publication card ───────────────────────────────────────────────────
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 36px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 36px 40px;
+  cursor: pointer;
+  transition: background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
   &:hover {
-    transform: scale(1.03);
-  }
-  .publicationsImage {
-    width: 30%;
-    height: 100%;
-    min-height: 200px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  .publicationsDetails {
-    width: 60%;
-    margin-left: 50px;
-    border-left: 1px solid $light;
-    padding-left: 50px;
-
-    .publicationsTitle {
-      font-size: 2rem;
-    }
-    .publicationsAuthor {
-      margin-top: 10px;
-      font-size: 1rem;
-    }
-    .publicationsTime {
-      text-align: right;
-    }
-    .publicationsShort {
-      margin-top: 40px;
-    }
-
-    @media (max-width: 1300px) {
-      .publicationsTitle {
-        font-size: 1.5rem;
-      }
-      .publicationsAuthor {
-        margin-top: 10px;
-        font-size: 1rem;
-      }
-      .publicationsTime {
-        margin-top: 10px;
-        text-align: right;
-      }
-      .publicationsShort {
-        margin-top: 40px;
-      }
-    }
-
-    @media (max-width: 1000px) {
-      .publicationsTitle {
-        font-size: 1.3rem;
-      }
-      .publicationsAuthor {
-        margin-top: 10px;
-        font-size: 0.8rem;
-      }
-      .publicationsTime {
-        font-size: 0.8rem;
-        text-align: right;
-      }
-      .publicationsShort {
-        font-size: 0.8rem;
-        margin-top: 40px;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .publicationsTitle {
-        font-size: 1rem;
-      }
-      .publicationsAuthor {
-        margin-top: 10px;
-        font-size: 0.7rem;
-      }
-      .publicationsTime {
-        font-size: 0.7rem;
-        text-align: right;
-      }
-      .publicationsShort {
-        font-size: 0.7rem;
-        margin-top: 40px;
-      }
-    }
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 768px) {
     flex-direction: column;
-    .publicationsImage {
-      width: 80%;
-    }
-    .publicationsDetails {
-      width: 80%;
-      margin: 0;
-      padding: 0;
-      margin-top: 20px;
-      padding-top: 20px;
-      border: none;
-      border-top: 1px solid $light;
-    }
+    padding: 28px 24px;
+    gap: 24px;
   }
+}
 
-  @media (max-width: 500px) {
-    .publicationsDetails {
-      width: 95%;
-    }
+// ─── Card thumbnail ───────────────────────────────────────────────────────────
+.cardImage {
+  flex-shrink: 0;
+  width: 180px;
+  height: 130px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.04);
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+// ─── Card text area ───────────────────────────────────────────────────────────
+.cardDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardTitle {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.003em;
+  line-height: 1.3;
+  color: #f5f5f7;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.cardAuthor {
+  font-size: 14px;
+  font-weight: 400;
+  color: #a1a1a6;
+  line-height: 1.6;
+}
+
+.cardTime {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6e6e73;
+}
+
+.cardShort {
+  font-size: 15px;
+  font-weight: 400;
+  color: #a1a1a6;
+  line-height: 1.7;
+  margin-top: 4px;
+}
+
+// ─── Card CTA link ────────────────────────────────────────────────────────────
+.cardCta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #0071e3;
+  transition: color 0.2s;
+
+  .card:hover & {
+    color: #0077ed;
   }
 }

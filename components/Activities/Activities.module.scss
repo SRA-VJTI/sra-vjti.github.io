@@ -1,20 +1,61 @@
 @import '../variables';
 
+// ─── Page wrapper ────────────────────────────────────────────────
+.activitiesPage {
+  background: transparent;
+  min-height: 100vh;
+}
+
+// ─── Section ─────────────────────────────────────────────────────
+.section {
+  background: transparent;
+  padding: 120px 40px 0;
+  font-family: 'SF Pro Display', 'SF Pro Text', -apple-system,
+    BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6e6e73;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -0.003em;
+  line-height: 1.07;
+  color: #f5f5f7;
+  margin: 0;
+}
+
+// ─── Tab bar ─────────────────────────────────────────────────────
 .projectBar {
   width: 95vw;
-  max-width: none;
-  padding: 1em 1.5em;
-  margin: 1.5em auto 0;
+  max-width: 980px;
+  padding: 8px 12px;
+  margin: 0 auto 56px;
 
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
-  gap: 0;
-  justify-content: space-between;
+  gap: 4px;
   align-items: center;
 
-  border: 2px solid $light;
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
 
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -25,37 +66,45 @@
 
 .projectTag {
   flex: 1 1 0;
-  padding: 0.7em 0.5em;
+  padding: 10px 18px;
   text-align: center;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #a1a1a6;
+  transition: background 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), color 0.2s;
+  border-radius: 12px;
   cursor: pointer;
   white-space: nowrap;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.08);
+    color: #f5f5f7;
   }
 }
 
 .activeTag {
-  background-color: $light;
-  color: $white;
-  font-weight: bold;
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(247, 28, 50, 0.4);
+  background: #0071e3;
+  color: #fff;
+  font-weight: 500;
+
+  &:hover {
+    background: #0077ed;
+    color: #fff;
+  }
 }
 
+// ─── Carousel wrapper ────────────────────────────────────────────
 .carousel {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: calc(100vh - 200px);
-  max-width: 95vw;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 4rem;
+  padding: 0 56px;
+}
+
+// Card + arrows wrapper — arrows center against card only
+.cardWrapper {
+  position: relative;
+  width: 100%;
 }
 
 .arrowLeft,
@@ -63,61 +112,80 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  color: $white;
-  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: #f5f5f7;
+  font-size: 1.2rem;
   cursor: pointer;
   z-index: 10;
-  padding: 1rem;
-  opacity: 0.6;
-  transition: opacity 0.2s;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s,
+    border-color 0.2s;
 
   &:hover {
     opacity: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.22);
   }
 }
 
 .arrowLeft {
   left: 0;
 }
-
 .arrowRight {
   right: 0;
 }
 
+// ─── Card ────────────────────────────────────────────────────────
+// Single-card: image on LEFT, body on RIGHT (row layout)
 .card {
-  @include tech-card;
   width: 100%;
-  height: 100%;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-direction: row;
+  height: 600px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.3s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.18);
+  }
 }
 
 .cardImage {
-  flex: 0 0 50%;
-  position: relative;
-  z-index: 1;
+  flex: 0 0 42%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.25);
 
   img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     display: block;
+    border-radius: 10px;
   }
 }
 
 .cardImageGrid {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
+  gap: 0.5rem;
   width: 100%;
   height: 100%;
 }
@@ -127,6 +195,7 @@
   min-height: 0;
   width: 100%;
   object-fit: contain;
+  border-radius: 8px;
 }
 
 .cardImageRow {
@@ -141,174 +210,228 @@
     min-width: 0;
     height: 100%;
     object-fit: contain;
+    border-radius: 8px;
   }
 }
 
 .cardBody {
-  padding: 1.2rem 2rem;
-  position: relative;
-  z-index: 1;
+  padding: 40px 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex: 1;
+  min-width: 0; // prevents flex blowout
   overflow-y: auto;
 
   h2 {
-    font-size: 1.6rem;
-    margin-bottom: 0.5rem;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.003em;
+    line-height: 1.07;
+    color: #f5f5f7 !important;
+    margin-bottom: 16px;
+    text-shadow: none;
   }
 
   p {
-    font-size: 1rem;
-    line-height: 1.75;
-    opacity: 0.85;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #a1a1a6;
   }
 }
 
 .cardLinks {
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 12px;
+  margin-top: 28px;
 
   a {
-    font-size: 1.2rem;
-    color: $white;
-    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 1rem;
+    color: #f5f5f7;
+    transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s;
 
     &:hover {
-      color: $light;
+      background: #0071e3;
+      border-color: #0071e3;
+      color: #fff;
     }
   }
 }
 
+// ─── Card group (two-up layout) ───────────────────────────────────
+// Two-up: cards sit side-by-side, each in column mode
+// (image on TOP with fixed pixel height, body below)
 .cardGroup {
   display: flex;
-  gap: 1.5rem;
+  gap: 24px;
   width: 100%;
-  height: 100%;
+  height: 600px;
 
   .card {
     flex: 1;
     min-width: 0;
+    flex-direction: column; // override to column for narrower two-up cards
+    height: 100%;
   }
 
   .cardImage {
-    flex: 0 0 50%;
-    padding: 0.75rem;
+    flex: 0 0 240px; // fixed pixel height — no more 50%-of-fixed-height squeeze
+    width: 100%;
   }
 
   .cardBody {
-    padding: 1rem 1.5rem;
+    padding: 28px 32px;
+    justify-content: flex-start;
 
     h2 {
-      font-size: 1.4rem;
-      margin-bottom: 0.4rem;
+      font-size: 24px;
     }
 
     p {
-      font-size: 0.95rem;
-      line-height: 1.7;
+      font-size: 15px;
     }
   }
 }
 
+// ─── Dots ────────────────────────────────────────────────────────
+// Normal flow (not absolute) since the carousel no longer has a fixed height
 .dots {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
-  gap: 0.5rem;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 28px;
+  padding-bottom: 8px;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  border: 1px solid rgba($white, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   background: transparent;
   cursor: pointer;
   padding: 0;
-  transition: background 0.2s, border-color 0.2s;
+  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.2s;
 
   &:hover {
-    border-color: $light;
+    border-color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.3);
   }
 }
 
 .dotActive {
-  background: $light;
-  border-color: $light;
+  background: #0071e3;
+  border-color: #0071e3;
 }
 
+// ─── Responsive ──────────────────────────────────────────────────
 @media (max-width: 768px) {
+  .section {
+    padding: 80px 24px 0;
+  }
+
+  .sectionTitle {
+    font-size: 36px;
+  }
+
   .projectBar {
     width: 95%;
-    gap: 8px;
-    padding: 0.8em;
+    gap: 4px;
+    padding: 6px 8px;
     justify-content: flex-start;
+  }
 
-    .projectTag {
-      padding: 0.5em 0.8em;
-      font-size: 0.9rem;
-    }
+  .projectTag {
+    padding: 8px 14px;
+    font-size: 13px;
   }
 
   .carousel {
-    padding: 1rem 1.5rem;
-    height: auto;
-    min-height: 70vh;
+    padding: 0 1rem;
   }
 
   .arrowLeft,
   .arrowRight {
-    font-size: 1.4rem;
-    padding: 0.5rem;
+    font-size: 1rem;
+    width: 36px;
+    height: 36px;
   }
 
+  // Single card: stack to column on mobile
   .card {
+    flex-direction: column;
     height: auto;
+    min-height: 420px;
   }
 
   .cardImage {
-    flex: 0 0 40vh;
+    flex: 0 0 220px;
+    width: 100%;
   }
 
   .cardBody {
-    padding: 1.5rem;
+    padding: 24px 20px;
 
     h2 {
-      font-size: 1.6rem;
+      font-size: 22px;
     }
 
     p {
-      font-size: 1.1rem;
+      font-size: 15px;
     }
   }
 
+  // Two-up group: already column cards, stack the group vertically
   .cardGroup {
     flex-direction: column;
-    overflow-y: auto;
+    height: auto;
 
     .card {
       height: auto;
+      min-height: 420px;
     }
 
     .cardImage {
-      flex: 0 0 35vh;
+      flex: 0 0 200px;
     }
 
     .cardBody {
-      padding: 1.5rem;
-
+      padding: 20px 18px;
       h2 {
-        font-size: 1.4rem;
+        font-size: 20px;
       }
-
       p {
-        font-size: 1rem;
+        font-size: 14px;
       }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .cardImage {
+    flex: 0 0 180px;
+  }
+
+  .cardBody {
+    padding: 18px 16px;
+
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
     }
   }
 }

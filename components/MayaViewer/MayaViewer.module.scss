@@ -1,0 +1,74 @@
+@import '../variables';
+
+$apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
+  'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+.section {
+  position: relative;
+  width: 100%;
+  padding: 120px 40px 100px;
+  background: transparent;
+
+  &#is {
+    scroll-margin-top: 0;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  flex: 1 1 260px;
+  max-width: 340px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 48px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.3s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.18);
+  }
+
+  @media (max-width: 480px) {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 36px 28px;
+  }
+}
+
+.cardHead {
+  font-family: $apple-font;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.003em;
+  line-height: 1.07;
+  color: #f5f5f7;
+  margin: 0 0 20px;
+}
+
+.cardSub {
+  font-family: $apple-font;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #a1a1a6;
+  max-width: 280px;
+}

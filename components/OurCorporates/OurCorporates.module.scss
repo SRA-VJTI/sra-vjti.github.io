@@ -1,58 +1,97 @@
-@import '../variables';
+// ─── Apple-style font stack ────────────────────────────────────────────────────
+$apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
+  'Helvetica Neue', Helvetica, Arial, sans-serif;
 
+// ─── Industrial Reach — dark section ─────────────────────────────────────────
 .reach {
-  width: 90%;
-  margin: 2rem auto;
-  @include tech-card;
-  padding: 2rem;
+  width: 100%;
+  background: transparent;
+  padding: 120px 40px;
+
+  .inner {
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eyebrow {
+    font-family: $apple-font;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6e6e73;
+    margin-bottom: 16px;
+    text-align: center;
+  }
 
   h1 {
-    margin: 50px 0 20px;
+    font-family: $apple-font;
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -0.003em;
+    line-height: 1.07;
+    color: #f5f5f7;
     text-align: center;
-    font-size: 2.5rem;
-    font-family: 'Oswald', sans-serif;
+    margin-bottom: 60px;
+    text-shadow: none;
   }
 
   .reachGroup {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    /* Added to center items vertically */
-    gap: 2em;
-    padding: 0 1em;
-    margin-bottom: 50px;
+    gap: 24px 28px;
+    width: 100%;
 
-    img {
-      margin: 0;
-      width: 150px;
-      transition: transform 0.2s;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1d1d1f;
+      border-radius: 14px;
+      padding: 18px 28px;
+      min-width: 140px;
+      min-height: 72px;
+      transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s;
 
       &:hover {
-        transform: scale(1.1);
-        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+        transform: scale(1.05);
+        background: #2a2a2d;
       }
+    }
+
+    img {
+      width: 110px;
+      height: 48px;
+      object-fit: contain;
+      filter: none;
 
       @media (max-width: 1024px) {
-        width: 130px;
+        width: 90px;
+        height: 42px;
       }
 
       @media (max-width: 650px) {
-        width: 100px;
+        width: 70px;
+        height: 36px;
       }
     }
 
-    @media (max-width: 1200px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    @media (max-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
     @media (max-width: 480px) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1em;
+      gap: 16px 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 80px 24px;
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 40px;
     }
   }
 }

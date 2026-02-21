@@ -1,5 +1,6 @@
 import styles from './Sponsors.module.scss';
-import Hero from '../Hero/Hero';
+import CatScratchZone from '../CatScratchZone/CatScratchZone';
+import Footer from '../Footer/Footer';
 import { saveAs } from 'file-saver';
 import {
   allSponsors,
@@ -47,81 +48,76 @@ const Sponsors = () => {
 
   return (
     <>
-      <Hero
-        imgName={'sponsors-hero.jpg'}
-        backgroundPosition={'center top'}
-        title={<>Sponsor us</>}
-        subtitleList={['Help us maintain our legacy of excellence!']}
-        isHome={false}
-      />
-      <div className={styles.activityList} id='is'>
-        <div className={styles.reach}>
-          <h1>Why Sponsor Us ?</h1>
-          <p>{sponsorsText_1}</p>
-          {visiblePara ? <p>{sponsorsText_2}</p> : <></>}
-          {mobileView ? (
-            <button
-              className={styles.more}
-              onClick={() => setvisiblePara((visiblePara) => !visiblePara)}
-            >
-              {visiblePara ? (
-                <>
-                  {'Read Less '}
-                  <span>
-                    <FontAwesomeIcon icon={faAngleUp} />
-                  </span>
-                </>
-              ) : (
-                <>
-                  {'Read More '}
-                  <span>
-                    <FontAwesomeIcon icon={faAngleDown} />
-                  </span>
-                </>
-              )}
-            </button>
-          ) : (
-            <></>
-          )}
-          <p>
-            <b>{sponsorsSubText}</b>
+      <CatScratchZone>
+        <div className={styles.pageHeader}>
+          <p className={styles.eyebrow}>SRA VJTI</p>
+          <h1 className={styles.pageTitle}>Sponsor Us</h1>
+          <p className={styles.pageSubtitle}>
+            Help us maintain our legacy of excellence!
           </p>
-          <div
-            style={{ display: 'flex', gap: '50px', justifyContent: 'center' }}
-          >
-            <a>
-              <button onClick={saveFile}>
-                Brochure{' '}
-                <span>
-                  <FontAwesomeIcon icon={faExternalLink} />
-                </span>
+        </div>
+        <div className={styles.activityList} id='is'>
+          <div className={styles.reach}>
+            <div className={styles.textCard}>
+              <h1>Why Sponsor Us?</h1>
+              <p>{sponsorsText_1}</p>
+              {visiblePara ? <p>{sponsorsText_2}</p> : <></>}
+              {mobileView ? (
+                <button
+                  className={styles.more}
+                  onClick={() => setvisiblePara((visiblePara) => !visiblePara)}
+                >
+                  {visiblePara ? (
+                    <>
+                      {'Read Less '}
+                      <span>
+                        <FontAwesomeIcon icon={faAngleUp} />
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      {'Read More '}
+                      <span>
+                        <FontAwesomeIcon icon={faAngleDown} />
+                      </span>
+                    </>
+                  )}
+                </button>
+              ) : (
+                <></>
+              )}
+              <p className={styles.subText}>{sponsorsSubText}</p>
+            </div>
+            <div className={styles.ctaRow}>
+              <button className={styles.ctaBtn} onClick={saveFile}>
+                Download Brochure&nbsp;
+                <FontAwesomeIcon icon={faExternalLink} />
               </button>
-            </a>
-            <a href='https://pages.razorpay.com/support-sra' target='_blank'>
-              <button>
-                Donate{' '}
-                <span>
+              <a href='https://pages.razorpay.com/support-sra' target='_blank'>
+                <button className={`${styles.ctaBtn} ${styles.ctaBtnAccent}`}>
+                  Donate Now&nbsp;
                   <FontAwesomeIcon icon={faDonate} />
-                </span>
-              </button>
-            </a>
-          </div>
-          <h1>Sponsors</h1>
-          <hr />
-          <div className={styles.reachGroup}>
-            {allSponsors.map((item, idx) => {
-              return (
-                <a href={item.link} key={`sponsor_${idx}`}>
-                  <img
-                    src={`/static/images/sponsors/${item.image}`}
-                    alt=''
-                  ></img>
-                </a>
-              );
-            })}
+                </button>
+              </a>
+            </div>
+            <h1>Sponsors</h1>
+            <hr />
+            <div className={styles.reachGroup}>
+              {allSponsors.map((item, idx) => {
+                return (
+                  <a href={item.link} key={`sponsor_${idx}`}>
+                    <img
+                      src={`/static/images/sponsors/${item.image}`}
+                      alt=''
+                    ></img>
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
+        <Footer />
+      </CatScratchZone>
     </>
   );
 };

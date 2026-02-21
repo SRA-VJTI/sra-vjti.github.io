@@ -7,7 +7,8 @@ import {
   faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
-import Hero from '../../Hero/Hero';
+import CatScratchZone from '../../CatScratchZone/CatScratchZone';
+import Footer from '../../Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const OngoingProjects = () => {
@@ -30,13 +31,12 @@ const OngoingProjects = () => {
   const proj = OngoingProjectsData[current];
 
   return (
-    <>
-      <Hero
-        imgName={'ongoing-hero.jpg'}
-        title={<>Ongoing Projects</>}
-        subtitleList={['Ingenuinity in progress.']}
-        isHome={false}
-      />
+    <CatScratchZone>
+      <div className={styles.pageHeader}>
+        <p className={styles.eyebrow}>SRA VJTI</p>
+        <h1 className={styles.pageTitle}>Ongoing Projects</h1>
+        <p className={styles.pageSubtitle}>Ingenuity in progress</p>
+      </div>
       <div className={styles.projectBar}>
         {OngoingProjectsData.map((proj, idx) => (
           <span
@@ -134,7 +134,8 @@ const OngoingProjects = () => {
           ))}
         </div>
       </div>
-    </>
+      <Footer />
+    </CatScratchZone>
   );
 };
 

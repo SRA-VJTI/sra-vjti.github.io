@@ -1,42 +1,78 @@
 import { Achievementlist } from '../../data';
-import Hero from '../Hero/Hero';
+import { useEffect, useRef } from 'react';
 import styles from './Achievements.module.scss';
+import Footer from '../Footer/Footer';
 
 const Achievements = () => {
+  const bgRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!bgRef.current) return;
+      const scrollY = window.scrollY;
+      const maxShift = 120;
+      const progress = Math.min(
+        scrollY / (document.body.scrollHeight - window.innerHeight),
+        1
+      );
+      bgRef.current.style.transform = `translateY(-${progress * maxShift}px)`;
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <>
-      <Hero
-        imgName={'achievements-hero.jpg'}
-        backgroundPosition={'center top'}
-        title={<>Achievements</>}
-        subtitleList={["What we're proud of!"]}
-        isHome={false}
-      />
-      <div className={styles.achievements} id='is'>
-        {Achievementlist.map((achYear, idx) => {
-          return (
-            <div className={styles.achYear} key={`year_${idx}`}>
-              <h3>{achYear.year}</h3>
-              <div className={styles.achList}>
-                {achYear.achs.map((ach, idx) => {
-                  return (
-                    <div className={styles.ach} key={`achievement_${idx}`}>
-                      <div
-                        style={{
-                          backgroundImage: `url("/static/images/${ach.imgName}")`,
-                        }}
-                        className={styles.achImg}
-                      ></div>
-                      <div className={styles.achName}>{ach.name}</div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
+    <div className={styles.pageWrapper}>
+      {/* Sticky parallax background */}
+      <div className={styles.stickyBg}>
+        <div
+          ref={bgRef}
+          className={styles.bgImage}
+          style={{
+            backgroundImage: `url('/static/images/sra_board_2026.png')`,
+          }}
+        />
+        <div className={styles.bgOverlay} />
       </div>
-    </>
+
+      {/* Page content */}
+      <div className={styles.content}>
+        {/* Page header */}
+        <header className={styles.pageHeader}>
+          <p className={styles.eyebrow}>SRA VJTI</p>
+          <h1 className={styles.pageTitle}>Achievements</h1>
+          <p className={styles.pageSubtitle}>What we&apos;re proud of.</p>
+        </header>
+
+        {/* Year sections */}
+        <div className={styles.achievements}>
+          {Achievementlist.map((achYear, idx) => (
+            <section className={styles.achYear} key={`year_${idx}`}>
+              <div className={styles.yearLabel}>
+                <span className={styles.yearLine} />
+                <span className={styles.yearText}>{achYear.year}</span>
+                <span className={styles.yearLine} />
+              </div>
+              <div className={styles.achGrid}>
+                {achYear.achs.map((ach, i) => (
+                  <div className={styles.achCard} key={`ach_${i}`}>
+                    <div
+                      className={styles.achImg}
+                      style={{
+                        backgroundImage: `url('/static/images/${ach.imgName}')`,
+                        ...(ach.imgPosition && { backgroundPosition: ach.imgPosition }),
+                      }}
+                    />
+                    <div className={styles.achName}>{ach.name}</div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+        <Footer />
+      </div>
+    </div>
   );
 };
 

@@ -3,6 +3,9 @@ import HomeAboutUs from '../components/HomeAboutUs/HomeAboutUs';
 import OurReach from '../components/OurReach/OurReach';
 import OurSponsors from '../components/OurSponsors/OurSponsors';
 import OurCorporates from '../components/OurCorporates/OurCorporates';
+import CatScratchZone from '../components/CatScratchZone/CatScratchZone';
+import MayaViewer from '../components/MayaViewer/MayaViewer';
+import Footer from '../components/Footer/Footer';
 import { HeroTags } from '../data';
 import Head from 'next/head';
 
@@ -24,12 +27,17 @@ const Home = () => {
           </>
         }
         subtitleList={HeroTags}
-        isHome={true}
+        isHome={false}
       />
-      <HomeAboutUs />
-      <OurSponsors />
-      <OurReach />
-      <OurCorporates />
+      {/* Board photo sticky background starts right after the hero image */}
+      <CatScratchZone>
+        <MayaViewer />
+        <HomeAboutUs />
+        <OurSponsors />
+        <OurReach />
+        <OurCorporates />
+        <Footer />
+      </CatScratchZone>
     </>
   );
 };
