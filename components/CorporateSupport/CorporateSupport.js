@@ -1,5 +1,6 @@
 import styles from './CorporateSupport.module.scss';
 import CatScratchZone from '../CatScratchZone/CatScratchZone';
+import Footer from '../Footer/Footer';
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import { saveAs } from 'file-saver';
@@ -363,6 +364,7 @@ const Sponsors = () => {
             </div>
           </div>
         </div>
+        <Footer />
       </CatScratchZone>
     </>
   );

@@ -18,7 +18,7 @@ const StartupsList = [
         imgName: 'eyecandy.png',
         name: 'Mohd Alqama Shaikh',
         sub: 'Eye Candy Robotics is a robotics company founded by a VJTI alumnus and former SRA member. The company focuses on building innovative robotic solutions, combining engineering expertise with creative design to develop cutting-edge products in the robotics space.',
-        externalLink: '',
+        externalLink: 'https://www.eyecandyrobotics.com/',
       },
     ],
   },

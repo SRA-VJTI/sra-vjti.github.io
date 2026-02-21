@@ -1,5 +1,6 @@
 import styles from './Startups.module.scss';
 import CatScratchZone from '../CatScratchZone/CatScratchZone';
+import Footer from '../Footer/Footer';
 import { StartupsList } from '../../data';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
@@ -31,6 +32,7 @@ const Startups = () => {
             );
           })}
         </div>
+        <Footer />
       </CatScratchZone>
     </>
   );

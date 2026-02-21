@@ -1,6 +1,7 @@
 import { Achievementlist } from '../../data';
 import { useEffect, useRef } from 'react';
 import styles from './Achievements.module.scss';
+import Footer from '../Footer/Footer';
 
 const Achievements = () => {
   const bgRef = useRef(null);
@@ -59,6 +60,7 @@ const Achievements = () => {
                       className={styles.achImg}
                       style={{
                         backgroundImage: `url('/static/images/${ach.imgName}')`,
+                        ...(ach.imgPosition && { backgroundPosition: ach.imgPosition }),
                       }}
                     />
                     <div className={styles.achName}>{ach.name}</div>
@@ -68,6 +70,7 @@ const Achievements = () => {
             </section>
           ))}
         </div>
+        <Footer />
       </div>
     </div>
   );

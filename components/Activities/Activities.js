@@ -1,6 +1,8 @@
 import { useState, useEffect, useCallback } from 'react';
 import styles from './Activities.module.scss';
 import Hero from '../Hero/Hero';
+import CatScratchZone from '../CatScratchZone/CatScratchZone';
+import Footer from '../Footer/Footer';
 import { ActivitiesList } from '../../data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -65,6 +67,7 @@ const Activities = () => {
         isHome={false}
       />
 
+      <CatScratchZone>
       <div className={styles.activitiesPage}>
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
@@ -179,6 +182,8 @@ const Activities = () => {
           </div>
         </section>
       </div>
+      <Footer />
+      </CatScratchZone>
     </>
   );
 };

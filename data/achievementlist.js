@@ -10,6 +10,11 @@ const AchievementsList = [
         name: 'Smart India Hackathon Finalists',
         imgName: 'sih_thomas.png',
       },
+      {
+        name: 'ICPC India Regionalists',
+        imgName: 'achievements_icpc_2025.jpg',
+        imgPosition: 'center 30%',
+      },
     ],
   },
   {

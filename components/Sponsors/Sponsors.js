@@ -1,5 +1,6 @@
 import styles from './Sponsors.module.scss';
 import CatScratchZone from '../CatScratchZone/CatScratchZone';
+import Footer from '../Footer/Footer';
 import { saveAs } from 'file-saver';
 import {
   allSponsors,
@@ -115,6 +116,7 @@ const Sponsors = () => {
             </div>
           </div>
         </div>
+        <Footer />
       </CatScratchZone>
     </>
   );

@@ -2,13 +2,13 @@
 
 // ─── Page wrapper ────────────────────────────────────────────────
 .activitiesPage {
-  background: #000;
+  background: transparent;
   min-height: 100vh;
 }
 
 // ─── Section ─────────────────────────────────────────────────────
 .section {
-  background: rgba(0, 0, 0, 0.72);
+  background: transparent;
   padding: 120px 40px 0;
   font-family: 'SF Pro Display', 'SF Pro Text', -apple-system,
     BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -149,8 +149,7 @@
   padding: 0;
   display: flex;
   flex-direction: row;
-  min-height: 420px;
-  background: rgba(255, 255, 255, 0.05);
+  height: 600px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -274,12 +273,13 @@
   display: flex;
   gap: 24px;
   width: 100%;
+  height: 600px;
 
   .card {
     flex: 1;
     min-width: 0;
     flex-direction: column; // override to column for narrower two-up cards
-    min-height: 0; // let content drive height
+    height: 100%;
   }
 
   .cardImage {
@@ -368,6 +368,8 @@
   // Single card: stack to column on mobile
   .card {
     flex-direction: column;
+    height: auto;
+    min-height: 420px;
   }
 
   .cardImage {
@@ -390,6 +392,12 @@
   // Two-up group: already column cards, stack the group vertically
   .cardGroup {
     flex-direction: column;
+    height: auto;
+
+    .card {
+      height: auto;
+      min-height: 420px;
+    }
 
     .cardImage {
       flex: 0 0 200px;

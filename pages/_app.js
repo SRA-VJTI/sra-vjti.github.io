@@ -18,6 +18,14 @@ const MyApp = ({ Component, pageProps }) => {
   // These pages include Footer inside their own CatScratchZone
   const hasOwnFooter =
     isHome ||
+    router.pathname === '/alumni' ||
+    router.pathname === '/activities' ||
+    router.pathname === '/achievements' ||
+    router.pathname === '/publications' ||
+    router.pathname === '/opensource' ||
+    router.pathname === '/startups' ||
+    router.pathname === '/sponsors' ||
+    router.pathname === '/corporateSupport' ||
     router.pathname === '/projects' ||
     router.pathname === '/projects/eklavya' ||
     router.pathname === '/projects/ongoing';
