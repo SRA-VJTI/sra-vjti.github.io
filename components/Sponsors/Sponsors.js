@@ -55,66 +55,66 @@ const Sponsors = () => {
             Help us maintain our legacy of excellence!
           </p>
         </div>
-      <div className={styles.activityList} id='is'>
-        <div className={styles.reach}>
-          <div className={styles.textCard}>
-            <h1>Why Sponsor Us?</h1>
-            <p>{sponsorsText_1}</p>
-            {visiblePara ? <p>{sponsorsText_2}</p> : <></>}
-            {mobileView ? (
-              <button
-                className={styles.more}
-                onClick={() => setvisiblePara((visiblePara) => !visiblePara)}
-              >
-                {visiblePara ? (
-                  <>
-                    {'Read Less '}
-                    <span>
-                      <FontAwesomeIcon icon={faAngleUp} />
-                    </span>
-                  </>
-                ) : (
-                  <>
-                    {'Read More '}
-                    <span>
-                      <FontAwesomeIcon icon={faAngleDown} />
-                    </span>
-                  </>
-                )}
+        <div className={styles.activityList} id='is'>
+          <div className={styles.reach}>
+            <div className={styles.textCard}>
+              <h1>Why Sponsor Us?</h1>
+              <p>{sponsorsText_1}</p>
+              {visiblePara ? <p>{sponsorsText_2}</p> : <></>}
+              {mobileView ? (
+                <button
+                  className={styles.more}
+                  onClick={() => setvisiblePara((visiblePara) => !visiblePara)}
+                >
+                  {visiblePara ? (
+                    <>
+                      {'Read Less '}
+                      <span>
+                        <FontAwesomeIcon icon={faAngleUp} />
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      {'Read More '}
+                      <span>
+                        <FontAwesomeIcon icon={faAngleDown} />
+                      </span>
+                    </>
+                  )}
+                </button>
+              ) : (
+                <></>
+              )}
+              <p className={styles.subText}>{sponsorsSubText}</p>
+            </div>
+            <div className={styles.ctaRow}>
+              <button className={styles.ctaBtn} onClick={saveFile}>
+                Download Brochure&nbsp;
+                <FontAwesomeIcon icon={faExternalLink} />
               </button>
-            ) : (
-              <></>
-            )}
-            <p className={styles.subText}>{sponsorsSubText}</p>
-          </div>
-          <div className={styles.ctaRow}>
-            <button className={styles.ctaBtn} onClick={saveFile}>
-              Download Brochure&nbsp;
-              <FontAwesomeIcon icon={faExternalLink} />
-            </button>
-            <a href='https://pages.razorpay.com/support-sra' target='_blank'>
-              <button className={`${styles.ctaBtn} ${styles.ctaBtnAccent}`}>
-                Donate Now&nbsp;
-                <FontAwesomeIcon icon={faDonate} />
-              </button>
-            </a>
-          </div>
-          <h1>Sponsors</h1>
-          <hr />
-          <div className={styles.reachGroup}>
-            {allSponsors.map((item, idx) => {
-              return (
-                <a href={item.link} key={`sponsor_${idx}`}>
-                  <img
-                    src={`/static/images/sponsors/${item.image}`}
-                    alt=''
-                  ></img>
-                </a>
-              );
-            })}
+              <a href='https://pages.razorpay.com/support-sra' target='_blank'>
+                <button className={`${styles.ctaBtn} ${styles.ctaBtnAccent}`}>
+                  Donate Now&nbsp;
+                  <FontAwesomeIcon icon={faDonate} />
+                </button>
+              </a>
+            </div>
+            <h1>Sponsors</h1>
+            <hr />
+            <div className={styles.reachGroup}>
+              {allSponsors.map((item, idx) => {
+                return (
+                  <a href={item.link} key={`sponsor_${idx}`}>
+                    <img
+                      src={`/static/images/sponsors/${item.image}`}
+                      alt=''
+                    ></img>
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
       </CatScratchZone>
     </>
   );

@@ -40,8 +40,12 @@ $apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
   @media (max-width: 768px) {
     padding: 120px 24px 60px;
 
-    .pageTitle { font-size: 36px; }
-    .pageSubtitle { font-size: 17px; }
+    .pageTitle {
+      font-size: 36px;
+    }
+    .pageSubtitle {
+      font-size: 17px;
+    }
   }
 }
 
@@ -197,4 +201,3 @@ $apple-font: 'SF Pro Display', 'SF Pro Text', -apple-system, BlinkMacSystemFont,
     }
   }
 }
-
