@@ -1,58 +1,116 @@
 @import '../variables';
 
 .reach {
-  width: 90%;
-  margin: 2rem auto;
-  @include tech-card;
-  padding: 2rem;
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 3.6vw, 2.5rem);
+  border-radius: 24px;
+  border: 1px solid rgba(42, 41, 40, 0.18);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 252, 243, 0.95) 0%,
+      rgba(255, 252, 243, 0.9) 100%
+    ),
+    repeating-linear-gradient(
+      to right,
+      rgba(160, 157, 152, 0.09),
+      rgba(160, 157, 152, 0.09) 1px,
+      transparent 1px,
+      transparent 28px
+    );
 
   h1 {
-    margin: 50px 0 20px;
     text-align: center;
-    font-size: 2.5rem;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.88rem, 3.9vw, 2.85rem);
+    font-weight: 450;
+    color: #2a2928;
+    text-shadow: none;
   }
 
   .reachGroup {
+    margin-top: clamp(1rem, 2.5vw, 1.5rem);
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    justify-items: center;
-    align-items: center;
-    /* Added to center items vertically */
-    gap: 2em;
-    padding: 0 1em;
-    margin-bottom: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: clamp(0.55rem, 1.6vw, 0.9rem);
+
+    a {
+      min-height: 96px;
+      border-radius: 14px;
+      border: 1px solid rgba(42, 41, 40, 0.14);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(248, 245, 236, 0.9) 0%,
+          rgba(255, 252, 243, 0.9) 100%
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          rgba(42, 41, 40, 0.04) 0,
+          rgba(42, 41, 40, 0.04) 6px,
+          transparent 6px,
+          transparent 12px
+        );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem;
+      transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        background-color 0.22s ease;
+    }
 
     img {
+      max-width: 100%;
+      width: auto;
+      max-height: 50px;
       margin: 0;
-      width: 150px;
-      transition: transform 0.2s;
-
-      &:hover {
-        transform: scale(1.1);
-        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
-      }
-
-      @media (max-width: 1024px) {
-        width: 130px;
-      }
-
-      @media (max-width: 650px) {
-        width: 100px;
-      }
+      opacity: 0.9;
+      transition:
+        transform 0.22s ease,
+        opacity 0.22s ease;
     }
 
-    @media (max-width: 1200px) {
-      grid-template-columns: repeat(4, 1fr);
+    a:hover {
+      transform: translateY(-3px);
+      border-color: rgba(42, 41, 40, 0.3);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(251, 248, 239, 0.96) 0%,
+          rgba(242, 238, 228, 0.96) 100%
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          rgba(42, 41, 40, 0.045) 0,
+          rgba(42, 41, 40, 0.045) 6px,
+          transparent 6px,
+          transparent 12px
+        );
     }
 
-    @media (max-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
+    a:hover img {
+      opacity: 1;
+      transform: scale(1.04);
     }
+  }
+}
 
-    @media (max-width: 480px) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1em;
+@media (max-width: 650px) {
+  .reach {
+    .reachGroup {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      a {
+        min-height: 84px;
+        padding: 0.5rem;
+      }
+
+      img {
+        max-height: 38px;
+      }
     }
   }
 }

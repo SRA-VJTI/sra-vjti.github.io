@@ -1,48 +1,60 @@
 @import '../variables';
 
+.achievements {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding-bottom: clamp(2.2rem, 5vw, 4rem);
+}
+
 .achYear {
-  width: 100%;
-  margin: 50px auto;
+  margin-top: clamp(1.2rem, 3vw, 2rem);
 
   h3 {
     text-align: center;
-    width: 40%;
-    margin: auto;
-    color: $light;
-    font-size: 1.8rem;
-    border-bottom: 2px solid $light;
-
-    padding: {
-      bottom: 10px;
-    }
+    width: fit-content;
+    margin: 0 auto;
+    color: #2a2928;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px dashed rgba(42, 41, 40, 0.34);
+    border-radius: 999px;
+    padding: 0.45rem 0.8rem;
   }
 
   .achList {
+    margin-top: 0.85rem;
     width: 100%;
-    padding: 1em;
-
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.9rem;
 
     .ach {
-      width: 300px;
-      height: 360px;
-      margin: 30px;
+      @include tech-card;
+      min-height: 340px;
+      padding: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
 
-      // background-color: rebeccapurple;
       .achImg {
-        height: 70%;
-
-        background-size: contain;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        border-radius: 10px;
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        border: 1px solid rgba(42, 41, 40, 0.12);
       }
 
       .achName {
-        padding-top: 10px;
-        height: 30%;
-        text-align: center;
+        margin-top: 0.7rem;
+        text-align: left;
+        color: #2a2928;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        line-height: 1.55;
       }
     }
   }

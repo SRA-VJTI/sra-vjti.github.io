@@ -60,20 +60,17 @@ const NavbarItems = ({
                 onMouseLeave={() => setOnMenu(false)}
               >
                 <span className={styles.title}>{navItem.name}</span>
-                <div
-                  className={styles.dropDown}
-                  onMouseOver={() => setSubMenu(true)}
-                  onMouseLeave={() => setSubMenu(false)}
-                >
-                  {onMenu &&
-                    navItem.subMenu.map((item, idx) => {
+                {onMenu && (
+                  <div className={styles.dropDown}>
+                    {navItem.subMenu.map((item, idx) => {
                       return (
                         <Link key={idx} href={item.link}>
                           <div className={styles.subMenu}>{item.name} </div>
                         </Link>
                       );
                     })}
-                </div>
+                  </div>
+                )}
               </div>
             </Link>
           </div>

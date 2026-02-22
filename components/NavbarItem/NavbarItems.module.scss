@@ -2,18 +2,19 @@
 
 .Menu {
   .navbarElem {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.3rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
     position: relative;
     height: 100%;
     border-bottom: 2px solid transparent;
     padding: 15px 0px 15px 0px;
     transition: background-color 0.2s;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     text-align: center;
 
     &:hover {
-      // top: 5px;
-      background-color: rgba(255, 255, 255, 0.151);
+      background-color: rgba(42, 41, 40, 0.08);
     }
 
     .title {
@@ -25,49 +26,49 @@
     margin-top: 18px;
     position: absolute;
     width: 200px;
-    font-size: 1rem;
+    font-size: 0.72rem;
     transition: background-color 0.2s;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 252, 243, 0.98);
+    border: 1px solid rgba(42, 41, 40, 0.18);
+    border-radius: 14px;
 
     backdrop-filter: blur(11px);
-    // opacity: 0;
     transition: clip-path 0.6s;
 
     .subMenu {
       padding: 0.7rem 1rem;
-      border-top: 2px solid rgba(255, 255, 255, 0.151);
+      border-top: 1px solid rgba(42, 41, 40, 0.12);
+      color: #2a2928;
 
       &:hover {
-        // top: 5px;
-        background-color: rgba(255, 255, 255, 0.151);
+        background-color: rgba(42, 41, 40, 0.08);
       }
     }
   }
 
   @media (max-width: 1000px) {
     .navbarElem {
-      font-size: 1.2rem;
+      font-size: 0.68rem;
     }
     .dropDown {
-      background-color: rgba(0, 0, 0, 0.35);
+      background-color: rgba(255, 252, 243, 0.98);
     }
   }
 
   @media (max-width: 780px) {
     .navbarElem {
-      font-size: 1.2rem;
+      font-size: 0.75rem;
       height: 100%;
       width: 200px;
-      background-color: rgba(0, 0, 0, 0);
+      background-color: transparent;
       &:hover {
-        // top: 5px;
-        background-color: rgba(0, 0, 0, 0);
+        background-color: transparent;
       }
     }
     .subMenu {
       margin-top: 0px;
       padding: 10px 0px 0px 10px;
-      font-size: 1.1rem;
+      font-size: 0.7rem;
       position: relative;
       text-align: center;
     }

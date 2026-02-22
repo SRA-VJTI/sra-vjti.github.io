@@ -1,38 +1,109 @@
 @import '../variables';
 
 .reach {
-  width: 90%;
-  margin: 2rem auto;
-  @include tech-card;
-  padding: 2rem;
+  width: min(1200px, 92%);
+  margin: 0 auto clamp(0.9rem, 2.7vw, 1.6rem);
+  padding: clamp(1.4rem, 3.5vw, 2.4rem);
+  border-radius: 24px;
+  border: 1px solid rgba(42, 41, 40, 0.18);
+  background: rgba(255, 252, 243, 0.88);
+  box-shadow: 0 16px 36px rgba(42, 41, 40, 0.09);
 
   h1 {
-    margin: 50px 0 20px;
     text-align: center;
-    font-size: 2.5rem;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.85rem, 3.8vw, 2.85rem);
+    font-weight: 450;
+    line-height: 1;
+    color: #2a2928;
+    text-shadow: none;
   }
 
   .reachGroup {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 0 1em;
+    margin-top: clamp(1rem, 2.5vw, 1.4rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: clamp(0.6rem, 1.6vw, 0.9rem);
+
+    a {
+      min-height: 96px;
+      border-radius: 14px;
+      border: 1px solid rgba(42, 41, 40, 0.15);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(248, 245, 236, 0.9) 0%,
+          rgba(255, 252, 243, 0.9) 100%
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          rgba(42, 41, 40, 0.04) 0,
+          rgba(42, 41, 40, 0.04) 6px,
+          transparent 6px,
+          transparent 12px
+        );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem;
+      transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        background-color 0.22s ease;
+    }
 
     img {
-      margin: 1.5em;
-      width: 150px;
-      transition: transform 0.2s;
+      max-width: 100%;
+      width: auto;
+      max-height: 52px;
+      margin: 0;
+      opacity: 1;
+      filter:
+        drop-shadow(0 0 1px rgba(42, 41, 40, 0.45))
+        drop-shadow(0 1px 1px rgba(42, 41, 40, 0.2));
+      transition:
+        transform 0.22s ease,
+        filter 0.22s ease,
+        opacity 0.22s ease;
+    }
 
-      &:hover {
-        transform: scale(1.1);
-        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+    a:hover {
+      transform: translateY(-3px);
+      border-color: rgba(42, 41, 40, 0.3);
+      background:
+        linear-gradient(
+          145deg,
+          rgba(251, 248, 239, 0.96) 0%,
+          rgba(242, 238, 228, 0.96) 100%
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          rgba(42, 41, 40, 0.045) 0,
+          rgba(42, 41, 40, 0.045) 6px,
+          transparent 6px,
+          transparent 12px
+        );
+    }
+
+    a:hover img {
+      opacity: 1;
+      transform: scale(1.04);
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .reach {
+    .reachGroup {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      a {
+        min-height: 84px;
+        padding: 0.5rem;
       }
 
-      @media (max-width: 650px) {
-        margin: 0.5em;
-        width: 100px;
+      img {
+        max-height: 40px;
       }
     }
   }

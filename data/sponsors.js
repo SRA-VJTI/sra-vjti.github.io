@@ -1,7 +1,7 @@
 const SponsorListImages = [
   'espressif.png',
   'Lion_circuits.png',
-  'texas.png',
+  'texas.svg',
   'solidspace.png',
   // 'andonstar.png',
   // 'tmotor.png',
@@ -31,7 +31,7 @@ const allSponsors = [
     link: 'https://www.lioncircuits.com/',
   },
   {
-    image: 'texas.png',
+    image: 'texas.svg',
     link: 'https://www.ti.com/',
   },
   {

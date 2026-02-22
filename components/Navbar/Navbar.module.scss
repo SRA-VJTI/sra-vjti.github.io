@@ -2,10 +2,10 @@
   position: fixed;
   z-index: 1000000;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.432);
+  background-color: rgba(251, 248, 239, 0.9);
 
   @supports (-moz-appearance: none) {
-    background-color: rgba(0, 0, 0, 0.856);
+    background-color: rgba(251, 248, 239, 0.94);
   }
 
   backdrop-filter: blur(11px);
@@ -30,8 +30,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Oswald', sans-serif;
-      font-size: 1.3rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.75rem;
       position: relative;
       height: 100%;
       border-bottom: 2px solid transparent;
@@ -40,12 +40,12 @@
       text-align: center;
 
       &:hover {
-        background-color: rgba(255, 255, 255, 0.151);
+        background-color: rgba(42, 41, 40, 0.08);
       }
 
       .sraLogo {
         width: 100%;
-        filter: grayscale(1) invert(1);
+        filter: none;
       }
     }
   }
@@ -63,7 +63,8 @@
     height: 100%;
     clip-path: circle(15% at 100% 0%);
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.35);
+    background-color: rgba(251, 248, 239, 0.98);
+
     .navbarToggle {
       display: unset;
 

@@ -1,75 +1,92 @@
 @import '../variables';
 
 .filter {
+  width: min(1200px, 92%);
+  margin: 1.4rem auto 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
-  gap: 2rem;
+  padding: 0;
+  gap: 0.75rem;
 
   .search {
-    background-color: #0d0d0d;
-    border: 1px solid #0d0d0d;
+    background: rgba(255, 252, 243, 0.9);
+    border: 1px solid rgba(42, 41, 40, 0.2);
     flex: 1;
-    padding: 0.75rem;
-    font-size: 1.35rem;
-    font-family: 'Tomorrow', sans-serif;
-    border-radius: 5px;
-    color: #f5f5f5;
+    padding: 0.72rem 0.95rem;
+    font-size: 0.96rem;
+    font-family: 'Inter', sans-serif;
+    border-radius: 999px;
+    color: #2a2928;
   }
 
   .dropdown {
     position: relative;
 
     button {
-      font-size: 1.35rem;
-      font-family: 'Tomorrow', sans-serif;
-      border-radius: 5px;
-      color: #f5f5f5;
-      background-color: #0d0d0d;
-      border: 1px solid #0d0d0d;
-      padding: 0.75rem;
+      font-size: 0.68rem;
+      font-family: 'IBM Plex Mono', monospace;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      color: #2a2928;
+      background: rgba(255, 252, 243, 0.9);
+      border: 1px solid rgba(42, 41, 40, 0.2);
+      padding: 0.75rem 0.94rem;
       cursor: pointer;
     }
 
     .options {
       position: absolute;
-      margin-top: 2rem;
-      z-index: 3;
-      font-family: 'Tomorrow', sans-serif;
+      right: 0;
+      margin-top: 0.56rem;
+      z-index: 6;
+      font-family: 'IBM Plex Mono', monospace;
       display: none;
       flex-direction: column;
-      width: 10rem;
+      width: 11rem;
       max-height: 20rem;
       overflow-y: scroll;
-      border-radius: 5px;
+      border-radius: 14px;
+      border: 1px solid rgba(42, 41, 40, 0.18);
+      background: rgba(255, 252, 243, 0.98);
+      box-shadow: 0 16px 34px rgba(42, 41, 40, 0.14);
 
       .option {
-        background-color: #0d0d0d;
-        color: #f5f5f5;
-        padding: 0.75rem;
-        font-size: 1rem;
+        color: #2a2928;
+        padding: 0.74rem;
+        font-size: 0.65rem;
+        letter-spacing: 0.06em;
+        border-top: 1px solid rgba(42, 41, 40, 0.09);
         width: 100%;
         text-align: center;
       }
 
+      .option:first-child {
+        border-top: 0;
+      }
+
       .option:hover {
-        background-color: #1a1a1a;
+        background: rgba(42, 41, 40, 0.08);
         cursor: pointer;
       }
     }
   }
 
   @media (max-width: 650px) {
+    margin-top: 1rem;
     flex-direction: column;
+    align-items: stretch;
   }
 }
 
 .contributionGrp {
+  width: min(1200px, 92%);
+  margin: 0.75rem auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1rem;
+  padding: 0 0 clamp(2rem, 5vw, 3.8rem);
 
   @media (max-width: 850px) {
     grid-template-columns: 1fr 1fr;
@@ -81,7 +98,7 @@
 }
 
 .contributionCard {
-  background-color: #0d0d0d;
+  background: rgba(255, 252, 243, 0.9);
   border-radius: 8px;
   padding: 1.5rem;
   display: flex;
@@ -90,7 +107,7 @@
   transition: transform 0.2s ease, background-color 0.2s ease;
 
   &:hover {
-    background-color: #1a1a1a;
+    background: #fff;
     transform: translateY(-3px);
     cursor: pointer;
   }
@@ -108,24 +125,23 @@
     }
 
     .repoName {
-      font-family: 'Tomorrow', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 1.1rem;
-      color: #f5f5f5;
+      color: #2a2928;
       font-weight: 600;
     }
   }
 
   .repoDescription {
-    font-family: 'Tomorrow', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 0.9rem;
-    color: #a0a0a0;
+    color: #4a4948;
     line-height: 1.5;
   }
 
   .repoMeta {
     display: flex;
     align-items: center;
-
     gap: 1rem;
     flex-wrap: wrap;
     margin-top: auto;
@@ -134,31 +150,32 @@
       display: flex;
       align-items: center;
       gap: 0.4rem;
-      font-family: 'Tomorrow', sans-serif;
-      font-size: 0.85rem;
-      color: #f5f5f5;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      color: #2a2928;
 
       .languageDot {
         width: 0.65rem;
         height: 0.65rem;
         border-radius: 50%;
-        background-color: #f5a623;
+        background-color: #899248;
       }
     }
 
     .prBadge {
-      font-family: 'Tomorrow', sans-serif;
-      font-size: 0.8rem;
-      padding: 0.25rem 0.6rem;
-      border-radius: 20px;
-      background-color: #1a1a1a;
-      color: #4caf50;
-      border: 1px solid #4caf50;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      padding: 0.32rem 0.68rem;
+      border-radius: 999px;
+      background: rgba(137, 146, 72, 0.12);
+      color: #2a2928;
+      border: 1px solid rgba(137, 146, 72, 0.38);
+      letter-spacing: 0.05em;
     }
   }
 }
 
 .selYear {
-  margin-left: 1.25rem;
-  color: #f5f5f5;
+  margin-left: 0.5rem;
+  color: #706f6b;
 }

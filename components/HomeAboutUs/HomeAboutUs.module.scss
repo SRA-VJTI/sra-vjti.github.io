@@ -1,130 +1,185 @@
 @import '../variables';
 
+.homeIntroBand {
+  width: min(1200px, 92%);
+  margin: 0 auto clamp(2rem, 5vw, 3.8rem);
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: clamp(0.8rem, 2vw, 1rem);
+  align-items: stretch;
+}
+
 .aboutUs {
-  width: 100%;
-  // background-color: rgb(49, 49, 49);
+  position: relative;
+  border-radius: 24px;
+  border: 1px solid rgba(42, 41, 40, 0.2);
+  overflow: hidden;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 252, 243, 0.58) 0%,
+      rgba(255, 252, 243, 0.58) 100%
+    ),
+    url('/static/images/aboutus-final.jpg');
+  background-position: center;
+  background-size: cover;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(
+        0deg,
+        rgba(160, 157, 152, 0.08) 0px,
+        rgba(160, 157, 152, 0.08) 1px,
+        transparent 1px,
+        transparent 30px
+      );
+    opacity: 0.32;
+    pointer-events: none;
+  }
+
   .aboutUsMain {
-    width: 100%;
-    background-image: linear-gradient(#00000081, #00000081),
-      url('/static/images/aboutus-final.jpg');
-    min-height: 60vh;
-    padding: 7em 0.5em;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Oswald', sans-serif;
-    color: white;
+    position: relative;
+    z-index: 1;
+    padding: clamp(1.5rem, 4vw, 2.6rem);
+
     h1 {
-      font-size: 3rem;
-      // color: $lightest;
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.9rem, 3.7vw, 3rem);
+      font-weight: 460;
+      letter-spacing: -0.01em;
+      color: #2a2928;
+      text-shadow: none;
     }
-    p {
-      font-family: sans-serif;
-      font-size: 1.1rem;
-      width: 90%;
-      line-height: 165%;
-      padding: 1em;
-      text-align: center;
-      // margin-top: 20px;
-    }
-  }
 
-  .aboutUsTeam,
-  .aboutUsAlumni {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    img {
-      width: 50%;
-      // height: 50vh;
+    h1 + p {
+      margin-top: 0.5rem;
     }
 
     p {
-      font-family: 'Oswald', sans-serif;
-      // height: 100%;
-      // width: 20%;
-      text-align: center;
-      font-size: 1.3rem;
-      padding: 0 2rem;
-      transition: color 0.3s;
+      color: #4f4d4a;
+      font-size: clamp(0.95rem, 1.35vw, 1.05rem);
+      line-height: 1.8;
+      max-width: 67ch;
+      font-family: 'Inter', sans-serif;
     }
 
-    &:hover {
-      p {
-        color: $lightest;
-      }
-    }
-  }
-
-  .aboutUsAlumni {
-    flex-direction: row-reverse;
-  }
-
-  @media (max-width: 650px) {
-    .aboutUsMain {
-      padding: 3em 0.5em;
-    }
-    .aboutUsTeam,
-    .aboutUsAlumni {
-      flex-direction: column;
-      p {
-        padding: 3em 1em;
-      }
-      img {
-        width: 100%;
-      }
+    p + h1 {
+      margin-top: 1rem;
     }
   }
 }
 
 .ourProjects {
-  width: 100%;
-  // min-height: 60vh;
+  position: relative;
+  border-radius: 24px;
+  border: 1px solid rgba(42, 41, 40, 0.18);
+  padding: clamp(1.4rem, 3vw, 2.4rem);
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 2em;
-  color: white;
-  font-family: 'Oswald', sans-serif;
+  gap: 0.62rem;
+  color: #2a2928;
+  background:
+    radial-gradient(
+      circle at 14% 20%,
+      rgba(198, 72, 44, 0.25),
+      rgba(198, 72, 44, 0) 40%
+    ),
+    linear-gradient(
+      150deg,
+      rgba(255, 252, 243, 0.95) 12%,
+      rgba(255, 252, 243, 0.88) 100%
+    );
+  overflow: hidden;
 
-  background-image: linear-gradient(#000000ab, #000000ab),
-    url('/static/images/our-projects-final.jpg');
-  background-size: cover;
-  background-position: center;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(
+        -45deg,
+        rgba(160, 157, 152, 0.08) 0,
+        rgba(160, 157, 152, 0.08) 1px,
+        transparent 1px,
+        transparent 12px
+      );
+    pointer-events: none;
+  }
 
   h1 {
-    transition: color 0.3s;
-    padding: 1em;
-    font-size: 3rem;
+    position: relative;
+    z-index: 1;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 440;
+    text-shadow: none;
   }
+
+  a {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
   button {
-    margin: 0.5em;
-    font-size: 1.3rem;
-    border: 2px solid white;
-    padding: 0.7em 1em;
-    transition: all 0.2s;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px dashed rgba(251, 248, 239, 0.55);
+    border: 1px dashed rgba(42, 41, 40, 0.42);
+    border-radius: 999px;
+    padding: 0.86rem 1.1rem;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #2a2928;
+    background: rgba(255, 252, 243, 0.66);
+    transition:
+      color 0.22s ease,
+      background-color 0.22s ease,
+      border-color 0.22s ease;
+
+    span {
+      transition: transform 0.22s ease;
+    }
+
     &:hover {
-      border-radius: 5px;
-      border-color: $lightest;
-      color: $lightest;
+      color: #fbf8ef;
+      background: #2a2928;
+      border-color: #2a2928;
+
+      span {
+        transform: translateX(4px);
+      }
     }
   }
-  &:hover {
-    h1 {
-      color: $light;
+}
+
+@media (max-width: 980px) {
+  .homeIntroBand {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .aboutUs {
+    .aboutUsMain {
+      p {
+        line-height: 1.7;
+      }
     }
   }
 
-  @media (max-width: 650px) {
-    h1 {
-      font-size: 2rem;
-    }
+  .ourProjects {
     button {
-      font-size: 1.2rem;
+      font-size: 0.64rem;
+      padding: 0.8rem 1rem;
     }
   }
 }

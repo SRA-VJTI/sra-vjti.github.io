@@ -1,16 +1,13 @@
 import {
   AboutUsText,
   AboutVJTI,
-  AboutUsTeamText,
-  AboutUsAlumniText,
-  AboutUsImages,
 } from '../../data';
 import styles from './HomeAboutUs.module.scss';
 import Link from 'next/link';
 
 const HomeAboutUs = () => {
   return (
-    <>
+    <div className={styles.homeIntroBand}>
       <div className={styles.aboutUs} id='About-us'>
         <div className={styles.aboutUsMain}>
           <h1>About Us</h1>
@@ -32,7 +29,7 @@ const HomeAboutUs = () => {
           </button>
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 
