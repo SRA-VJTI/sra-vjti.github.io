@@ -1,211 +1,128 @@
 @import '../variables';
 
-.activitySectionTitle {
-  font-size: 2rem;
-  text-align: center;
-  width: 50%;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 1em;
-  padding-bottom: 0.5em;
-  border-bottom: 2px solid $light;
-
-  @media (max-width: 450px) {
-    width: 80%;
-  }
-}
-
-.activity {
-  width: 70%;
-  height: auto;
-  margin: 5em auto;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
-  .activityImg {
-    // margin-right: 1em;
-    width: 30%;
-    // height: 100%;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  .activityCont {
-    width: 70%;
-    height: 100%;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex;
-    line-height: 250%;
-    text-align: justify;
-
-    .activityContName {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      padding-bottom: 0.15em;
-      transition: border-bottom 0.3s;
-      border-bottom: 1px solid $lightest;
-
-      .activityIcon {
-        font-size: 1.2rem;
-        float: right;
-
-        a {
-          margin: 0 10px;
-          transition: color 0.2s;
-
-          :hover {
-            color: $light;
-            animation: wiggle 0.3s forwards;
-            // transform: translateY(10px);
-          }
-        }
-      }
-    }
-
-    .activityContSub {
-      font-size: 1rem;
-      margin-bottom: 10px;
-    }
-  }
-
-  &:hover {
-    .activityCont {
-      .activityContName {
-        border-bottom: 1px solid $light;
-      }
-    }
-  }
-
-  @media (max-width: 900px) {
-    .activityImg {
-      height: auto;
-      width: 50%;
-    }
-  }
-
-  @media (max-width: 780px) {
-    width: 90%;
-    margin: 1em auto;
-    height: auto;
-    flex-direction: column;
-
-    .activityImg {
-      height: 45vh;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 80%;
-      // background-image: 100vw;
-    }
-
-    .activityCont {
-      width: 100%;
-      height: max-content;
-    }
-  }
-
-  @media (max-width: 375px) {
-    .activityImg {
-      width: 90%;
-    }
-  }
+.activityList {
+  width: 100%;
 }
 
 .reach {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding: clamp(1.2rem, 3vw, 2rem) 0 clamp(2.2rem, 5vw, 4rem);
+
   p {
-    font-family: sans-serif;
-    font-size: 1.1rem;
-    width: 100%;
-    line-height: 165%;
-    padding-left: 5em;
-    padding-right: 5em;
-    padding-top: 2em;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.98rem;
+    color: #4a4948;
+    width: min(92ch, 100%);
+    line-height: 1.78;
+    margin: 0 auto;
+    padding-top: 0.8rem;
     text-align: center;
 
-    // margin-top: 20px;
     @media (max-width: 650px) {
-      padding-left: 2em;
-      padding-right: 2em;
+      font-size: 0.92rem;
     }
   }
 
   h1 {
-    margin: 50px 0 20px;
+    margin: 1.4rem 0 0.7rem;
     text-align: center;
-    font-size: 2.5rem;
-    font-family: 'Oswald', sans-serif;
+    color: #2a2928;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1;
   }
 
   button {
     display: block;
-    margin: 4rem auto;
-    font-size: 1.3rem;
-    border: 2px solid white;
-    padding: 0.7em 1em;
-    transition: all 0.2s;
+    margin: 1.4rem auto;
+    font-size: 0.68rem;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid rgba(42, 41, 40, 0.28);
+    border-radius: 999px;
+    padding: 0.7rem 1rem;
+    background: rgba(255, 252, 243, 0.9);
+    color: #2a2928;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
 
     &:hover {
-      border-radius: 5px;
-      border-color: $lightest;
-      color: $lightest;
-    }
-
-    @media (max-width: 650px) {
-      font-size: 1.2rem;
+      border-color: #2a2928;
+      background: #2a2928;
+      color: #fbf8ef;
     }
   }
 
   .more {
-    display: block;
-    margin: 1rem auto;
-    font-size: 0.6rem;
-    border: 2px solid white;
-    padding: 0.5em 0.5em;
-    transition: all 0.2s;
-
-    &:hover {
-      border-radius: 5px;
-      border-color: $lightest;
-      color: $lightest;
-    }
-
-    @media (max-width: 650px) {
-      font-size: 0.6rem;
-    }
+    margin-top: 0.6rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.64rem;
+    padding: 0.58rem 0.72rem;
   }
 
   hr {
-    width: 40%;
-    border: 1px solid $lightest;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    width: min(360px, 60%);
+    border: 0;
+    border-top: 1px solid rgba(42, 41, 40, 0.2);
+    margin: 0.75rem auto 1rem;
   }
 
   .reachGroup {
-    display: flex;
-    flex-wrap: wrap;
+    margin-top: 0.9rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     align-items: center;
-    justify-content: space-evenly;
-    padding: 0 1em;
-    margin-bottom: 5em;
+    gap: 0.9rem;
+    padding: 0;
+    margin-bottom: 0;
+
+    a {
+      min-height: 98px;
+      border-radius: 14px;
+      border: 1px solid rgba(42, 41, 40, 0.16);
+      background: rgba(255, 252, 243, 0.96);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem;
+      transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease;
+    }
 
     img {
-      margin: 1.5rem;
-      width: 180px;
-      transition: transform 0.2s;
+      width: auto;
+      max-width: 100%;
+      max-height: 64px;
+      margin: 0;
+      transition: transform 0.2s ease;
+    }
 
-      &:hover {
-        transform: scale(1.1);
+    a:hover {
+      transform: translateY(-3px);
+      border-color: rgba(42, 41, 40, 0.3);
+      box-shadow: 0 12px 26px rgba(42, 41, 40, 0.12);
+    }
+
+    a:hover img {
+      transform: scale(1.04);
+    }
+
+    @media (max-width: 650px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      a {
+        min-height: 84px;
+        padding: 0.5rem;
       }
 
-      @media (max-width: 650px) {
-        margin: 0.5em;
-        width: 100px;
+      img {
+        max-height: 40px;
       }
     }
   }

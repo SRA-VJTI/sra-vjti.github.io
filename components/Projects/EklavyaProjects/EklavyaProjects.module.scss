@@ -1,25 +1,30 @@
 @import '../../variables';
 
 .eklavyaProj {
-  width: 300px;
-  height: 350px;
-  margin: 30px;
-  // background-color: red;
-
+  width: 280px;
+  min-height: 330px;
+  margin: 0.45rem;
   position: relative;
+  @include tech-card;
+  padding: 0.72rem;
 
   .projPhoto {
     width: 100%;
-    height: 70%;
+    aspect-ratio: 4 / 3;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
+    border-radius: 10px;
+    border: 1px solid rgba(42, 41, 40, 0.12);
   }
 
   .projName {
-    text-align: center;
+    text-align: left;
+    font-family: 'Fraunces', serif;
     font-size: 1.3rem;
-    margin: 20px 0;
+    line-height: 1.2;
+    margin: 0.75rem 0 0.3rem;
+    color: #2a2928;
   }
 
   .iCard {
@@ -29,92 +34,75 @@
     left: 0;
     width: 100%;
     height: 100%;
-
-    background-color: darken($light, 10%);
+    border-radius: 16px;
+    background: rgba(42, 41, 40, 0.88);
+    color: #fbf8ef;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: clip-path 0.8s;
+    clip-path: circle(0% at 90.75% 8%);
 
     .iInfo {
-      text-align: justify;
-      width: 90%;
-      margin-bottom: 20px;
+      text-align: left;
+      width: 86%;
+      margin-bottom: 18px;
+      font-size: 0.92rem;
+      line-height: 1.62;
     }
 
     .iLink {
-      font-size: 1.5rem;
+      font-size: 1.15rem;
     }
-
-    // 0% and 120%
-    clip-path: circle(0% at 90.75% 8%);
   }
 }
 
 .eklavyaYearCloud {
-  width: 90%; // Use more width to fit all years
-  max-width: 1200px;
-  padding: 1.5em;
-  margin: 3em auto;
-
+  width: min(1200px, 92%);
+  padding: 1em 1.2em;
+  margin: 1.4rem auto 0;
   display: flex;
-  flex-wrap: nowrap; // Force single row
-  overflow-x: auto; // Allow horizontal scroll if needed
-  gap: 15px;
-  justify-content: center; // Center items if they fit, start if they overflow
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0.55rem;
+  justify-content: flex-start;
   align-items: center;
-
-  border: 2px solid $light;
-  border-radius: 20px;
-
-  // Hide scrollbar for cleaner look but keep functionality
+  border: 1px solid rgba(42, 41, 40, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 252, 243, 0.86);
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
 
-  /* Firefox */
   &::-webkit-scrollbar {
     display: none;
   }
 
   .eklavyaYearTag {
-    flex: 0 0 auto; // Don't shrink, don't grow, base on content/width
-    min-width: 100px; // Ensure decent clickable area
-    padding: 0.8em;
+    flex: 0 0 auto;
+    min-width: 86px;
+    padding: 0.48rem 0.7rem;
     text-align: center;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    border-radius: 10px;
+    font-size: 0.66rem;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #2a2928;
+    transition: all 0.25s ease;
+    border-radius: 999px;
     cursor: pointer;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      transform: translateY(-2px);
+      background: rgba(42, 41, 40, 0.08);
+      transform: translateY(-1px);
     }
   }
 
   .activeYearTag {
-    background-color: $light;
-    color: $white;
-    font-weight: bold;
-    transform: scale(1.05); // Reduced scale slightly to fit grid better
-    box-shadow: 0 4px 15px rgba(247, 28, 50, 0.4);
-  }
-
-  @media (max-width: 768px) {
-    width: 80%;
-  }
-
-  @media (max-width: 550px) {
-    width: 90%;
-    gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-
-    .eklavyaYearTag {
-      padding: 0.5em;
-      font-size: 1.1rem;
-    }
+    background-color: #c6482c;
+    color: #fbf8ef;
+    transform: scale(1.02);
+    box-shadow: 0 8px 18px rgba(198, 72, 44, 0.28);
   }
 }
 
@@ -137,22 +125,28 @@
 }
 
 .eklavyaYear {
-  margin-top: 20px;
+  margin-top: 0.9rem;
+  width: min(1200px, 92%);
+  margin-left: auto;
+  margin-right: auto;
 
   h2 {
-    width: 50%;
-    margin: auto;
+    width: fit-content;
+    margin: 0 auto;
     text-align: center;
-    color: $lightest;
-    padding: 0.5em 0;
-    border-bottom: 2px solid $light;
+    color: #2a2928;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px dashed rgba(42, 41, 40, 0.34);
+    border-radius: 999px;
+    padding: 0.45rem 0.8rem;
   }
-
-  width: 100%;
 
   .eklavyaYearList {
     width: 100%;
-    padding: 0em;
+    margin-top: 0.85rem;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

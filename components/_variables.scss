@@ -1,23 +1,31 @@
-$black: #000000;
-$white: #ffffff;
-$dark: #7d0d1d; // Deep Wine
-$light: #f71c32; // Electric Crimson
-$lightest: #ff5e3a; // Persimmon
-$accent: #ff9f1c; // Bright Orange
+$black: #2a2928;
+$white: #fbf8ef;
+$dark: #2a2928;
+$light: #c6482c;
+$lightest: #cdc19f;
+$accent: #899248;
 
-// Tech/Futuristic Theme Mixin
+// Warm editorial card style used across legacy modules
 @mixin tech-card {
-  background: rgba(30, 30, 35, 0.5);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
-  border: 1px solid rgba(247, 28, 50, 0.15);
-  box-shadow: 0 0 15px rgba(247, 28, 50, 0.2), 0 0 40px rgba(125, 13, 29, 0.15);
-  border-radius: 12px;
+  background: linear-gradient(
+    170deg,
+    rgba(255, 252, 243, 0.93),
+    rgba(251, 248, 239, 0.83)
+  );
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(42, 41, 40, 0.16);
+  box-shadow: 0 16px 34px rgba(42, 41, 40, 0.1);
+  border-radius: 16px;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
 
-  // Circuit pattern overlay
+  // Subtle line texture
   &::before {
     content: '';
     position: absolute;
@@ -25,20 +33,19 @@ $accent: #ff9f1c; // Bright Orange
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: radial-gradient(
-        circle at 2px 2px,
-        rgba(255, 255, 255, 0.05) 1px,
-        transparent 0
-      ),
-      linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    background-size: 20px 20px, 40px 40px, 40px 40px;
-    opacity: 0.05;
+    background: repeating-linear-gradient(
+      0deg,
+      rgba(160, 157, 152, 0.09) 0,
+      rgba(160, 157, 152, 0.09) 1px,
+      transparent 1px,
+      transparent 28px
+    );
+    opacity: 0.35;
     pointer-events: none;
     z-index: 0;
   }
 
-  // Top accent line — Electric Crimson → Persimmon gradient
+  // Accent line
   &::after {
     content: '';
     position: absolute;
@@ -48,19 +55,19 @@ $accent: #ff9f1c; // Bright Orange
     height: 2px;
     background: linear-gradient(
       90deg,
-      transparent,
-      #f71c32,
-      #ff5e3a,
-      transparent
+      rgba(198, 72, 44, 0),
+      rgba(198, 72, 44, 0.75),
+      rgba(137, 146, 72, 0.68),
+      rgba(198, 72, 44, 0)
     );
-    box-shadow: 0 0 12px rgba(247, 28, 50, 0.6);
+    opacity: 0.75;
     z-index: 1;
   }
 
   &:hover {
-    background: rgba(8, 8, 10, 0.05);
-    box-shadow: 0 0 25px rgba(247, 28, 50, 0.35),
-      0 0 60px rgba(125, 13, 29, 0.2);
-    border-color: rgba(247, 28, 50, 0.3);
+    background: rgba(255, 252, 243, 0.99);
+    box-shadow: 0 22px 42px rgba(42, 41, 40, 0.16);
+    border-color: rgba(42, 41, 40, 0.28);
+    transform: translateY(-4px);
   }
 }

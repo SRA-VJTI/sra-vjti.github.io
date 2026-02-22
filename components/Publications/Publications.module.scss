@@ -1,135 +1,102 @@
 @import '../variables';
 
-.publicationsSectionTitle {
-  font-size: 2rem;
-  text-align: center;
-  width: 50%;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 1em;
-  padding-bottom: 0.5em;
-  border-bottom: 2px solid $light;
+.publicationsList {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding-bottom: clamp(2.2rem, 5vw, 4rem);
+}
 
-  @media (max-width: 450px) {
-    width: 80%;
-  }
+.publicationsSection {
+  width: 100%;
+}
+
+.publicationsSectionTitle {
+  width: fit-content;
+  margin: 1.6rem auto 0.95rem;
+  border: 1px dashed rgba(42, 41, 40, 0.34);
+  border-radius: 999px;
+  padding: 0.44rem 0.9rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2a2928;
 }
 
 .publications {
-  width: 80%;
-  margin: 70px auto;
-  min-height: 200px;
+  width: min(1100px, 100%);
+  margin: 0 auto 0.95rem;
+  min-height: 240px;
   display: flex;
   cursor: pointer;
-  border: 2px solid $light;
+  @include tech-card;
   align-items: center;
-  padding: 2em;
-  border-radius: 10px;
-  transition: transform 0.2s;
-  &:hover {
-    transform: scale(1.03);
-  }
+  padding: clamp(0.9rem, 2.6vw, 1.4rem);
+  border-radius: 16px;
+
   .publicationsImage {
-    width: 30%;
+    width: 32%;
     height: 100%;
-    min-height: 200px;
-    background-size: contain;
+    min-height: 215px;
+    border-radius: 10px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    border: 1px solid rgba(42, 41, 40, 0.14);
   }
+
   .publicationsDetails {
-    width: 60%;
-    margin-left: 50px;
-    border-left: 1px solid $light;
-    padding-left: 50px;
+    width: 68%;
+    margin-left: 1.2rem;
+    border-left: 1px solid rgba(42, 41, 40, 0.16);
+    padding-left: 1.2rem;
 
     .publicationsTitle {
-      font-size: 2rem;
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.4rem, 2.8vw, 2rem);
+      color: #2a2928;
+      line-height: 1.2;
     }
+
     .publicationsAuthor {
-      margin-top: 10px;
-      font-size: 1rem;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #4a4948;
+      line-height: 1.6;
     }
+
     .publicationsTime {
-      text-align: right;
+      margin-top: 0.48rem;
+      text-align: left;
+      color: #706f6b;
+      font-size: 0.72rem;
+      font-family: 'IBM Plex Mono', monospace;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
+
     .publicationsShort {
-      margin-top: 40px;
-    }
-
-    @media (max-width: 1300px) {
-      .publicationsTitle {
-        font-size: 1.5rem;
-      }
-      .publicationsAuthor {
-        margin-top: 10px;
-        font-size: 1rem;
-      }
-      .publicationsTime {
-        margin-top: 10px;
-        text-align: right;
-      }
-      .publicationsShort {
-        margin-top: 40px;
-      }
-    }
-
-    @media (max-width: 1000px) {
-      .publicationsTitle {
-        font-size: 1.3rem;
-      }
-      .publicationsAuthor {
-        margin-top: 10px;
-        font-size: 0.8rem;
-      }
-      .publicationsTime {
-        font-size: 0.8rem;
-        text-align: right;
-      }
-      .publicationsShort {
-        font-size: 0.8rem;
-        margin-top: 40px;
-      }
-    }
-
-    @media (max-width: 700px) {
-      .publicationsTitle {
-        font-size: 1rem;
-      }
-      .publicationsAuthor {
-        margin-top: 10px;
-        font-size: 0.7rem;
-      }
-      .publicationsTime {
-        font-size: 0.7rem;
-        text-align: right;
-      }
-      .publicationsShort {
-        font-size: 0.7rem;
-        margin-top: 40px;
-      }
+      margin-top: 0.7rem;
+      color: #4a4948;
+      line-height: 1.7;
+      font-size: 0.93rem;
     }
   }
 
   @media (max-width: 900px) {
     flex-direction: column;
-    .publicationsImage {
-      width: 80%;
-    }
-    .publicationsDetails {
-      width: 80%;
-      margin: 0;
-      padding: 0;
-      margin-top: 20px;
-      padding-top: 20px;
-      border: none;
-      border-top: 1px solid $light;
-    }
-  }
 
-  @media (max-width: 500px) {
+    .publicationsImage {
+      width: 100%;
+      min-height: 220px;
+    }
+
     .publicationsDetails {
-      width: 95%;
+      width: 100%;
+      margin: 0.8rem 0 0;
+      padding: 0.8rem 0 0;
+      border: none;
+      border-top: 1px solid rgba(42, 41, 40, 0.16);
     }
   }
 }

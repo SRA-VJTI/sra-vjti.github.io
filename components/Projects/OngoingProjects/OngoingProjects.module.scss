@@ -1,8 +1,8 @@
 @import '../../variables';
 
 .projectBar {
-  width: 95vw;
-  max-width: none;
+  width: min(1200px, 92%);
+  max-width: 1200px;
   padding: 1em 1.5em;
   margin: 1.5em auto 0;
 
@@ -13,8 +13,9 @@
   justify-content: space-between;
   align-items: center;
 
-  border: 2px solid $light;
-  border-radius: 20px;
+  border: 1px solid rgba(42, 41, 40, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 252, 243, 0.86);
 
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -27,24 +28,27 @@
   flex: 1 1 0;
   padding: 0.7em 0.5em;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 0.68rem;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #2a2928;
   transition: all 0.3s ease;
-  border-radius: 10px;
+  border-radius: 999px;
   cursor: pointer;
   white-space: nowrap;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(42, 41, 40, 0.08);
     transform: translateY(-2px);
   }
 }
 
 .activeTag {
   background-color: $light;
-  color: $white;
-  font-weight: bold;
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(247, 28, 50, 0.4);
+  color: #fbf8ef;
+  transform: scale(1.02);
+  box-shadow: 0 8px 18px rgba(198, 72, 44, 0.28);
 }
 
 .carousel {
@@ -53,7 +57,7 @@
   align-items: center;
   justify-content: center;
   height: calc(100vh - 200px);
-  max-width: 95vw;
+  max-width: min(1200px, 92%);
   margin: 0 auto;
   padding: 1rem 4rem;
 }
@@ -65,7 +69,7 @@
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  color: $white;
+  color: #2a2928;
   font-size: 2rem;
   cursor: pointer;
   z-index: 10;
@@ -155,14 +159,16 @@
   overflow-y: auto;
 
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.65rem;
+    font-family: 'Fraunces', serif;
+    color: #2a2928;
     margin-bottom: 0.5rem;
   }
 
   p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.75;
-    opacity: 0.85;
+    color: #4a4948;
   }
 }
 
@@ -173,7 +179,7 @@
 
   a {
     font-size: 1.2rem;
-    color: $white;
+    color: #2a2928;
     transition: color 0.2s;
 
     &:hover {
@@ -195,7 +201,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  border: 1px solid rgba($white, 0.5);
+  border: 1px solid rgba(42, 41, 40, 0.32);
   background: transparent;
   cursor: pointer;
   padding: 0;

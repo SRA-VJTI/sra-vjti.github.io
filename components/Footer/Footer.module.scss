@@ -1,26 +1,32 @@
 @import '../variables';
 
 .footer {
-  border-top: 2px solid $light;
-  height: 20vh;
+  border-top: 1px solid rgba(42, 41, 40, 0.2);
+  min-height: 0;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   h3 {
-    font-weight: normal;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.2rem, 2.8vw, 1.65rem);
+    font-weight: 450;
+    margin-bottom: 0.95rem;
   }
+
   .footerIcons {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+
     a {
-      margin: 0 10px;
+      color: #706f6b;
+      margin: 0 0.6rem;
       transition: color 0.2s;
+
       :hover {
-        color: $light;
+        color: #c6482c;
         animation: wiggle 0.3s forwards;
-        // transform: translateY(10px);
       }
     }
   }

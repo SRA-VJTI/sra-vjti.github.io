@@ -1,4 +1,8 @@
 @import '../variables';
+.activityList {
+  width: 100%;
+}
+
 .CorpSupportMob {
   height: 250px;
   // background-color: red;
@@ -298,6 +302,201 @@
       text-align: center;
       font-size: 0.8rem;
       font-family: 'Oswald', sans-serif;
+    }
+  }
+}
+
+/* Theme overrides */
+.reach {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  padding-bottom: clamp(2.2rem, 5vw, 4rem);
+
+  p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.98rem;
+    color: #4a4948;
+    width: min(92ch, 100%);
+    line-height: 1.78;
+    margin: 0 auto;
+    padding-top: 0.8rem;
+    text-align: center;
+  }
+
+  h1 {
+    margin: 1.4rem 0 0.7rem;
+    text-align: center;
+    color: #2a2928;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.75rem, 3.9vw, 2.7rem);
+    line-height: 1;
+  }
+
+  h2 {
+    color: #2a2928;
+    font-family: 'Fraunces', serif;
+  }
+
+  .equipments {
+    color: #2a2928;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  a {
+    color: #2a2928;
+    font-family: 'Inter', sans-serif;
+  }
+
+  button {
+    margin: 1.2rem auto;
+    font-size: 0.68rem;
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid rgba(42, 41, 40, 0.28);
+    border-radius: 999px;
+    padding: 0.7rem 1rem;
+    background: rgba(255, 252, 243, 0.9);
+    color: #2a2928;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  button:hover {
+    border-color: #2a2928;
+    background: #2a2928;
+    color: #fbf8ef;
+  }
+
+  .more {
+    margin-top: 0.6rem;
+    margin-bottom: 0.4rem;
+    font-size: 0.64rem;
+    padding: 0.58rem 0.72rem;
+  }
+
+  .hoverText {
+    font-size: 1.05rem;
+    color: #fbf8ef;
+    background: rgba(42, 41, 40, 0.58);
+    max-width: min(80vw, 680px);
+    width: auto;
+    padding: 1.2rem 1.6rem;
+    border-radius: 14px;
+    transform: translate(-50%, -50%);
+  }
+
+  .CorpDiv {
+    @include tech-card;
+    display: grid;
+    grid-template-columns: minmax(130px, 240px) 1px 1fr;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.95rem;
+    margin-bottom: 0.85rem;
+
+    .vl {
+      border-left: 1px solid rgba(42, 41, 40, 0.2);
+      height: 100%;
+      min-height: 80px;
+    }
+
+    .CorpText {
+      margin: 0;
+      padding: 0.2rem 0.2rem 0.2rem 0.8rem;
+      font-family: 'Inter', sans-serif;
+      color: #4a4948;
+      line-height: 1.6;
+      font-size: 0.95rem;
+      text-align: left;
+    }
+
+    .CorpImage,
+    .CorpImpImage {
+      margin: 0;
+      width: 100%;
+      max-height: 180px;
+      object-fit: contain;
+      border-radius: 10px;
+      background: rgba(255, 252, 243, 0.95);
+      border: 1px solid rgba(42, 41, 40, 0.12);
+      padding: 0.5rem;
+    }
+  }
+
+  .CorpDiv:hover .CorpText {
+    color: #2a2928;
+  }
+
+  .Carousel {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .facilitiesUpdate {
+    height: 640px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .Carousel_items {
+    width: min(560px, 100%);
+  }
+
+  hr,
+  .hr2 {
+    width: min(360px, 60%);
+    border: 0;
+    border-top: 1px solid rgba(42, 41, 40, 0.2);
+    margin: 0.75rem auto 1rem;
+  }
+
+  .CSR_Facility .changesMadeThroughCSR {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    border: 1px solid rgba(42, 41, 40, 0.14);
+  }
+
+  .changesMadeThroughCSRText {
+    color: #4a4948;
+    font-family: 'Inter', sans-serif;
+  }
+
+  @media (max-width: 800px) {
+    .CorpDiv {
+      grid-template-columns: 1fr;
+      text-align: center;
+
+      .vl {
+        display: none;
+      }
+
+      .CorpText {
+        padding: 0.4rem 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.CorpSupportMob {
+  .iCard {
+    background: rgba(42, 41, 40, 0.82);
+    color: #fbf8ef;
+
+    .iInfo {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
     }
   }
 }
