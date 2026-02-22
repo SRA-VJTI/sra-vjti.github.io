@@ -26,7 +26,13 @@ const ContributionCard = ({
         <div className={styles.contributor}>{repoName}</div>
         <div className={styles.desc}>{description}</div>
         <div className={styles.meta}>
-          <span className={styles.competition}>{competition}</span>
+          <span
+            className={`${styles.competition} ${
+              styles[competition?.toLowerCase()] || ''
+            }`}
+          >
+            {competition}
+          </span>
         </div>
         <div className={styles.icons}>
           <GitHubLink githubLink={githubLink} />
