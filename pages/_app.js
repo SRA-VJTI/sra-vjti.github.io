@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import '../styles/globals.scss';
 import Navbar from '../components/Navbar/Navbar';
+import TopBar from '../components/TopBar/TopBar';
 import Footer from '../components/Footer/Footer';
 import NetworkBg from '../components/NetworkBg/NetworkBg';
 
@@ -16,8 +17,9 @@ const MyApp = ({ Component, pageProps }) => {
         <link rel='icon' href='/favicon.ico?v=2' />
       </Head>
       <NetworkBg />
-      <div style={{ position: 'relative', zIndex: 2 }}>
+      <div className='pageWrapper'>
         <Navbar />
+        <TopBar />
         <Component {...pageProps} />
         <Footer />
       </div>

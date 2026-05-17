@@ -59,3 +59,13 @@ h6 {
   width: 100%;
   height: 100vh;
 }
+
+.pageWrapper {
+  position: relative;
+  z-index: 2;
+  padding-left: 68px;
+
+  @media (max-width: 780px) {
+    padding-left: 50px;
+  }
+}

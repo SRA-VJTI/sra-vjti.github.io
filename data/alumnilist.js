@@ -145,17 +145,26 @@ const AlumniList = [
       {
         name: 'Alqama Shaikh',
         imgName: 'Team/2025/Alqama_Shaikh_25.jpeg',
-        previous: [{ t: 'BruBotics - Vrije Universiteit Brussel, Project Intern', b: true },
-        { t: 'National University of Singapore, Research Intern', b: true },],
+        previous: [
+          {
+            t: 'BruBotics - Vrije Universiteit Brussel, Project Intern',
+            b: true,
+          },
+          { t: 'National University of Singapore, Research Intern', b: true },
+        ],
         current: [{ t: 'Co-Founder, EyeCandy Robotrics', b: false }],
-        linkedInLink: 'https://www.linkedin.com/in/alqama-shaikh/?originalSubdomain=in',
+        linkedInLink:
+          'https://www.linkedin.com/in/alqama-shaikh/?originalSubdomain=in',
         githubLink: 'https://github.com/aPR0T0',
       },
       {
         name: 'Zain Siddavatam',
         imgName: 'Team/2025/Zain_Siddavatam_25.jpeg',
         previous: [
-          { t: 'Embedded Software Engineer Intern at BeagleBoard.org', b: true },
+          {
+            t: 'Embedded Software Engineer Intern at BeagleBoard.org',
+            b: true,
+          },
           { t: 'Robotics Software Intern at Acceleration Robotics', b: true },
         ],
         current: [{ t: 'Engineer 1 @ InCore Semiconductors', b: false }],

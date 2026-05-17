@@ -1,0 +1,54 @@
+@import '../variables';
+
+.topBar {
+  position: fixed;
+  top: 0;
+  left: 68px;
+  right: 0;
+  height: 52px;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(11px);
+  z-index: 999998;
+  display: flex;
+  align-items: stretch;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  @supports (-moz-appearance: none) {
+    background-color: rgba(0, 0, 0, 0.88);
+  }
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s, color 0.2s;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  &:last-child {
+    border-right: none;
+  }
+
+  &:hover {
+    background-color: rgba(247, 28, 50, 0.15);
+    color: $light;
+  }
+}
+
+@media (max-width: 780px) {
+  .topBar {
+    left: 50px;
+  }
+
+  .tab {
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+  }
+}
