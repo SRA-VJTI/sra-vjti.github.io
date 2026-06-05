@@ -10,29 +10,27 @@ import Link from 'next/link';
 
 const HomeAboutUs = () => {
   return (
-    <>
-      <div className={styles.aboutUs} id='About-us'>
-        <div className={styles.aboutUsMain}>
-          <h1>About Us</h1>
-          <p>{AboutUsText}</p>
-          <h1>About VJTI</h1>
-          <p>{AboutVJTI}</p>
+    <div className={styles.container} id='About-us'>
+      <div className={styles.card}>
+        <h2>About Us</h2>
+        <p>{AboutUsText}</p>
+      </div>
+      <div className={styles.card}>
+        <h2>Projects</h2>
+        <div className={styles.buttonGroup}>
+          <Link href='/projects/eklavya'>
+            <button>
+              Eklavya Projects &nbsp;<span>&#8594;</span>
+            </button>
+          </Link>
+          <Link href='/projects/ongoing'>
+            <button>
+              Ongoing Projects &nbsp;<span>&#8594;</span>
+            </button>
+          </Link>
         </div>
       </div>
-      <div className={styles.ourProjects}>
-        <h1>Projects</h1>
-        <Link href='/projects/eklavya'>
-          <button>
-            Eklavya Projects &nbsp;<span>&#8594;</span>
-          </button>
-        </Link>
-        <Link href='/projects/ongoing'>
-          <button>
-            Ongoing Projects &nbsp;<span>&#8594;</span>
-          </button>
-        </Link>
-      </div>
-    </>
+    </div>
   );
 };
 

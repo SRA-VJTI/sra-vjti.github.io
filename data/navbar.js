@@ -12,7 +12,7 @@ const NavbarData = [
     link: 'https://blog.sravjti.in/',
   },
   {
-    name: 'Webring',
+    name: 'People',
     link: 'https://sravjti.in/webring/',
   },
   {
