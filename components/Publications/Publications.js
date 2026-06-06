@@ -1,20 +1,9 @@
 import styles from './Publications.module.scss';
-import Hero from '../Hero/Hero';
 import { PublicationsList } from '../../data';
 
 const Publications = () => {
   return (
-    <>
-      <Hero
-        imgName={'publications-hero.jpg'}
-        backgroundPosition={'center top'}
-        title={<>Publications</>}
-        subtitleList={[
-          'Research is looking in great depths, flying to new heights, Imagining the unimagined!',
-        ]}
-        isHome={false}
-      />
-      <div className={styles.publicationsList} id='is'>
+    <div className={styles.publicationsList} id='is'>
         {PublicationsList.map((publicationSec, idx) => {
           return (
             <>
@@ -39,7 +28,6 @@ const Publications = () => {
           );
         })}
       </div>
-    </>
   );
 };
 

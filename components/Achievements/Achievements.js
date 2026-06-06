@@ -1,18 +1,9 @@
 import { Achievementlist } from '../../data';
-import Hero from '../Hero/Hero';
 import styles from './Achievements.module.scss';
 
 const Achievements = () => {
   return (
-    <>
-      <Hero
-        imgName={'achievements-hero.jpg'}
-        backgroundPosition={'center top'}
-        title={<>Achievements</>}
-        subtitleList={["What we're proud of!"]}
-        isHome={false}
-      />
-      <div className={styles.achievements} id='is'>
+    <div className={styles.achievements} id='is'>
         {Achievementlist.map((achYear, idx) => {
           return (
             <div className={styles.achYear} key={`year_${idx}`}>
@@ -35,8 +26,7 @@ const Achievements = () => {
             </div>
           );
         })}
-      </div>
-    </>
+    </div>
   );
 };
 

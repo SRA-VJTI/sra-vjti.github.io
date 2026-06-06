@@ -1,4 +1,3 @@
-import Hero from '../Hero/Hero';
 import styles from './Alumni.module.scss';
 import Card from '../Card/Card';
 import { AlumniList } from '../../data';
@@ -77,13 +76,6 @@ const Alumni = () => {
 
   return (
     <>
-      <Hero
-        imgName={'alumni-hero.jpg'}
-        title={<>Alumni</>}
-        subtitleList={['Lighting the way for generations to come.']}
-        isHome={false}
-      />
-
       <div className={styles.filter} id='is'>
         <input
           className={styles.search}
