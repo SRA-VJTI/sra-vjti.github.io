@@ -1,4 +1,3 @@
-import Hero from '../Hero/Hero';
 import styles from './Opensource.module.scss';
 import ContributionCard from '../ContributionCard/ContributionCard.js';
 import { OpenSourceList } from '../../data';
@@ -92,13 +91,6 @@ const OpenSource = () => {
 
   return (
     <>
-      <Hero
-        imgName={'opensource-hero.jpg'}
-        title={<>Open Source Contributions</>}
-        subtitleList={['Building the future, one pull request at a time.']}
-        isHome={false}
-      />
-
       <div className={styles.filter} id='is'>
         <input
           className={styles.search}

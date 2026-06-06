@@ -1,20 +1,11 @@
 import styles from './Startups.module.scss';
-import Hero from '../Hero/Hero';
 import { StartupsList } from '../../data';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Startups = () => {
   return (
-    <>
-      <Hero
-        imgName={'startups-hero.jpg'}
-        backgroundPosition={'center top'}
-        title={<>Startups</>}
-        subtitleList={['Launching... into space!']}
-        isHome={false}
-      />
-      <div className={styles.startupsList} id='is'>
+    <div className={styles.startupsList} id='is'>
         {StartupsList.map((startupSec, idx) => {
           return (
             <>
@@ -31,8 +22,7 @@ const Startups = () => {
             </>
           );
         })}
-      </div>
-    </>
+    </div>
   );
 };
 

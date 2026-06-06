@@ -6,6 +6,7 @@
   justify-content: space-between;
   padding: 2rem;
   gap: 2rem;
+  padding-top: 13vh;
 
   .search {
     background-color: #0d0d0d;
@@ -67,16 +68,24 @@
 
 .contributionGrp {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-  padding: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  padding: 1.5rem;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
 
   @media (max-width: 850px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
   }
 
   @media (max-width: 650px) {
     grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
 }
 
