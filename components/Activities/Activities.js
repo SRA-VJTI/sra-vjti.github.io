@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
 import styles from './Activities.module.scss';
-import Hero from '../Hero/Hero';
 import { ActivitiesList } from '../../data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -9,6 +8,8 @@ import {
   faChevronLeft,
   faChevronRight,
   faArrowUpRightFromSquare,
+  faGlobe,
+  faFileLines,
 } from '@fortawesome/free-solid-svg-icons';
 
 const CardLinks = ({ card }) => (
@@ -25,12 +26,12 @@ const CardLinks = ({ card }) => (
     )}
     {card.blogLink && (
       <a href={card.blogLink} target='_blank' rel='noopener noreferrer'>
-        <FontAwesomeIcon icon={faBlog} />
+        <FontAwesomeIcon icon={faGlobe} />
       </a>
     )}
     {card.notionLink && (
       <a href={card.notionLink} target='_blank' rel='noopener noreferrer'>
-        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+        <FontAwesomeIcon icon={faFileLines} />
       </a>
     )}
   </div>
@@ -48,23 +49,11 @@ const Activities = () => {
     setCurrent((prev) => (prev - 1 + total) % total);
   }, [total]);
 
-  useEffect(() => {
-    const timer = setInterval(next, 10000);
-    return () => clearInterval(timer);
-  }, [next]);
 
   const act = ActivitiesList[current];
 
   return (
-    <>
-      <Hero
-        imgName={'activities-hero.jpg'}
-        backgroundPosition={'center top'}
-        title={<>Activities</>}
-        subtitleList={['All the fun, passed all along.']}
-        isHome={false}
-      />
-
+    <div className={styles.container}>
       <div className={styles.projectBar}>
         {ActivitiesList.map((item, idx) => (
           <span
@@ -130,16 +119,18 @@ const Activities = () => {
             ))}
           </div>
         ) : (
-          <div className={styles.card}>
-            {act.imgName && (
-              <div className={styles.cardImage}>
-                <img src={`/static/images/${act.imgName}`} alt={act.name} />
+          <div className={styles.singleCardWrapper}>
+            <div className={styles.card}>
+              {act.imgName && (
+                <div className={styles.cardImage}>
+                  <img src={`/static/images/${act.imgName}`} alt={act.name} />
+                </div>
+              )}
+              <div className={styles.cardBody}>
+                <h2>{act.name}</h2>
+                <p>{act.sub}</p>
+                <CardLinks card={act} />
               </div>
-            )}
-            <div className={styles.cardBody}>
-              <h2>{act.name}</h2>
-              <p>{act.sub}</p>
-              <CardLinks card={act} />
             </div>
           </div>
         )}
@@ -165,7 +156,7 @@ const Activities = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
