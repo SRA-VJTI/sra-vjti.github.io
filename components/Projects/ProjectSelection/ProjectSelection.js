@@ -1,17 +1,36 @@
+import { useState } from 'react';
 import styles from './ProjectSelection.module.scss';
-import Link from 'next/link';
+import OngoingProjects from '../OngoingProjects/OngoingProjects';
+import EklavyaProjects from '../EklavyaProjects/EklavyaProjects';
 
 const ProjectSelection = () => {
+  const [activeTab, setActiveTab] = useState('ongoing');
+
   return (
-    <div className={styles.projSelect}>
-      <h1>Projects</h1>
-      <div className={styles.projSelList}>
-        <Link href='/projects/eklavya' className={styles.link}>
-          Eklavya Projects
-        </Link>
-        <Link href='/projects/ongoing' className={styles.link}>
-          Ongoing Projects
-        </Link>
+    <div className={styles.projectsPage}>
+      <div className={styles.toggleWrapper} id='is'>
+        <div className={styles.toggleContainer}>
+          <div 
+            className={`${styles.slider} ${activeTab === 'eklavya' ? styles.right : ''}`}
+          ></div>
+          
+          <button
+            className={`${styles.toggleBtn} ${activeTab === 'ongoing' ? styles.active : ''}`}
+            onClick={() => setActiveTab('ongoing')}
+          >
+            Ongoing Projects
+          </button>
+          
+          <button
+            className={`${styles.toggleBtn} ${activeTab === 'eklavya' ? styles.active : ''}`}
+            onClick={() => setActiveTab('eklavya')}
+          >
+            Eklavya Projects
+          </button>
+        </div>
+      </div>
+      <div className={styles.contentArea}>
+        {activeTab === 'ongoing' ? <OngoingProjects /> : <EklavyaProjects />}
       </div>
     </div>
   );

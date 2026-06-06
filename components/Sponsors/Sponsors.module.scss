@@ -1,5 +1,13 @@
 @import '../variables';
 
+.sponsorsPage {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  scroll-margin-top: 100px;
+}
+
 .activitySectionTitle {
   font-size: 2rem;
   text-align: center;

@@ -1,5 +1,4 @@
 import styles from './CorporateSupport.module.scss';
-import Hero from '../Hero/Hero';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
@@ -66,16 +65,7 @@ const Sponsors = () => {
 
   return (
     <>
-      <Hero
-        imgName={'corpSupport.webp'}
-        backgroundPosition={'center top'}
-        title={<>CSR Support</>}
-        subtitleList={[
-          'Nurturing Minds, Igniting Discovery, Building Nations: Corporate Support for Education and Research Excellence.',
-        ]}
-        isHome={false}
-      />
-      <div className={styles.activityList} id='is'>
+      <div className={styles.corporatePage} id='is'>
         <div className={styles.reach}>
           <h1>Join Our Expedition: Our Spark, Your Impact!</h1>
           {visiblePara ? <p>{CorporateSupport}</p> : <></>}

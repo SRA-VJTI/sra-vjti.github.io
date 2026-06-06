@@ -1,4 +1,13 @@
 @import '../variables';
+
+.corporatePage {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  scroll-margin-top: 100px;
+}
+
 .CorpSupportMob {
   height: 250px;
   // background-color: red;
