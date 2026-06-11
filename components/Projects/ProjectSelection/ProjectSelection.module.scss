@@ -1,51 +1,72 @@
-.projSelect {
+@import '../../variables';
+
+.projectsPage {
   width: 100%;
-  height: 100vh;
-  // overflow: auto;
+  min-height: 100vh;
+  background-color: #000000;
+}
 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('/static/images/hero/proj-selection-hero.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.toggleWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 8rem 1rem 2rem; 
+  scroll-margin-top: 100px; 
+}
 
+.toggleContainer {
+  display: flex;
+  background-color: rgba(30, 30, 35, 0.8);
+  border: 1px solid rgba(220, 20, 60, 0.3);
+  border-radius: 10px; 
+  position: relative;
+  padding: 5px;
+  box-shadow: 0 0 20px rgba(220, 20, 60, 0.15);
+}
+
+.toggleBtn {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-family: 'Oswald', sans-serif;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  transition: color 0.3s ease;
+  width: 200px;
   text-align: center;
-  h1 {
-    font-size: 5rem;
-    font-family: 'Oswald', sans-serif;
-    padding-top: 1.5em;
 
-    @media (max-width: 550px) {
-      font-size: 3rem;
-      padding-top: 2em;
-    }
+  &.active {
+    color: #ffffff;
+    font-weight: 500;
   }
 
-  .projSelList {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3em;
-
-    .link {
-      font-size: 2rem;
-      border: 2px solid white;
-      border-radius: 2px;
-      padding: 0.5em 1em;
-      margin: 1em;
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.164);
-      }
-    }
-
-    @media (max-width: 1000px) {
-      .link {
-        font-size: 1.5rem;
-      }
-    }
-
-    @media (max-width: 675px) {
-      flex-direction: column;
-    }
+  @media (max-width: 500px) {
+    width: 150px;
+    font-size: 1rem;
+    padding: 10px 15px;
   }
+}
+
+.slider {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  height: calc(100% - 10px);
+  width: calc(50% - 5px);
+  background-color: #dc143c; 
+  border-radius: 8px; 
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.26, 1.55);
+  z-index: 1;
+
+  &.right {
+    transform: translateX(100%);
+  }
+}
+
+.contentArea {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  width: 100%;
 }
