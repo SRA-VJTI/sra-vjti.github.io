@@ -3,7 +3,6 @@ import styles from './EklavyaProjects.module.scss';
 import Link from 'next/link';
 import { EklavyaProjectList } from '../../../data';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import Hero from '../../Hero/Hero';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const EklavyaProjects = () => {
@@ -11,13 +10,6 @@ const EklavyaProjects = () => {
 
   return (
     <div className={styles.eklavyaProjectsContainer}>
-      <Hero
-        imgName={'eklavya-hero.jpg'}
-        backgroundPosition={'center top'}
-        title={<>Eklavya Projects</>}
-        subtitleList={['Nurturing the future']}
-        isHome={false}
-      />
       <div className={styles.eklavyaTotal} id='is'>
         <div className={styles.eklavyaYearCloud}>
           {EklavyaProjectList.map((year, idx) => (

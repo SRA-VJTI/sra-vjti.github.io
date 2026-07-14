@@ -1,5 +1,4 @@
 import styles from './Sponsors.module.scss';
-import Hero from '../Hero/Hero';
 import { saveAs } from 'file-saver';
 import {
   allSponsors,
@@ -47,14 +46,7 @@ const Sponsors = () => {
 
   return (
     <>
-      <Hero
-        imgName={'sponsors-hero.jpg'}
-        backgroundPosition={'center top'}
-        title={<>Sponsor us</>}
-        subtitleList={['Help us maintain our legacy of excellence!']}
-        isHome={false}
-      />
-      <div className={styles.activityList} id='is'>
+      <div className={styles.sponsorsPage} id='is'>
         <div className={styles.reach}>
           <h1>Why Sponsor Us ?</h1>
           <p>{sponsorsText_1}</p>

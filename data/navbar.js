@@ -12,22 +12,12 @@ const NavbarData = [
     link: 'https://blog.sravjti.in/',
   },
   {
-    name: 'Webring',
+    name: 'People',
     link: 'https://sravjti.in/webring/',
   },
   {
     name: 'Projects',
     link: '/projects',
-    subMenu: [
-      {
-        name: 'Eklavya',
-        link: '/projects/eklavya/',
-      },
-      {
-        name: 'Ongoing',
-        link: '/projects/ongoing/',
-      },
-    ],
   },
   {
     name: 'Publications',

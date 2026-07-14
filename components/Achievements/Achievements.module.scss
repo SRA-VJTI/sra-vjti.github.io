@@ -2,18 +2,22 @@
 
 .achYear {
   width: 100%;
-  margin: 50px auto;
+  margin: 1.5em auto;
+}
+
+.achievements {
+  padding-top: 10vh;
 
   h3 {
     text-align: center;
     width: 40%;
     margin: auto;
     color: $light;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     border-bottom: 2px solid $light;
 
     padding: {
-      bottom: 10px;
+      bottom: 8px;
     }
   }
 
@@ -24,15 +28,15 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem;
 
     .ach {
-      width: 300px;
-      height: 360px;
-      margin: 30px;
+      width: 180px;
+      height: 220px;
+      margin: 0;
 
-      // background-color: rebeccapurple;
       .achImg {
-        height: 70%;
+        height: 75%;
 
         background-size: contain;
         background-position: center;
@@ -40,9 +44,16 @@
       }
 
       .achName {
-        padding-top: 10px;
-        height: 30%;
+        padding-top: 8px;
+        height: 25%;
         text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.2;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
       }
     }
   }

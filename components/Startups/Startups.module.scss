@@ -1,5 +1,9 @@
 @import '../variables';
 
+.startupsList {
+  padding-top: 10vh;
+}
+
 .startupsSectionTitle {
   font-size: 2rem;
   text-align: center;
@@ -16,52 +20,54 @@
 }
 
 .startup {
-  width: 70%;
+  width: 85%;
   height: auto;
-  margin: 5em auto;
+  margin: 1.2em auto;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
-  min-height: 300px;
+  min-height: auto;
   cursor: pointer;
   border: 2px solid $light;
-  align-items: center;
-  padding: 2em;
+  align-items: flex-start;
+  padding: 1.2em;
   border-radius: 10px;
   transition: transform 0.2s;
+  gap: 1.2em;
 
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
 
   .startupImg {
-    // margin-right: 1em;
-    width: 30%;
-    height: 15em;
+    width: 25%;
+    min-width: 100px;
+    height: 100px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    flex-shrink: 0;
   }
 
   .startupCont {
-    width: 70%;
-    height: 100%;
-    padding: 2em;
+    width: 75%;
+    height: auto;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex;
-    line-height: 250%;
-    text-align: justify;
+    justify-content: flex-start;
+    line-height: 1.4;
+    text-align: left;
     .startupContName {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      padding-bottom: 0.15em;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      padding-bottom: 0.1em;
       transition: border-bottom 0.3s;
       border-bottom: 1px solid $lightest;
       .startupIcon {
-        font-size: 1.2rem;
+        font-size: 1rem;
         float: right;
         a {
           margin: 0 10px;
@@ -69,14 +75,13 @@
           :hover {
             color: $light;
             animation: wiggle 0.3s forwards;
-            // transform: translateY(10px);
           }
         }
       }
     }
     .startupContSub {
-      font-size: 1rem;
-      margin-bottom: 10px;
+      font-size: 0.9rem;
+      margin-bottom: 0;
     }
   }
 
@@ -89,31 +94,33 @@
   }
   @media (max-width: 900px) {
     .startupImg {
-      height: auto;
-      width: 50%;
+      height: 80px;
+      width: 22%;
     }
   }
   @media (max-width: 780px) {
     width: 90%;
-    margin: 1em auto;
+    margin: 0.8em auto;
     height: auto;
     flex-direction: column;
+    gap: 1em;
+    padding: 1em;
     .startupImg {
-      height: 45vh;
+      height: 120px;
       display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 80%;
-      // background-image: 100vw;
+      width: 70%;
     }
     .startupCont {
       width: 100%;
-      height: max-content;
+      height: auto;
     }
   }
   @media (max-width: 375px) {
     .startupImg {
-      width: 90%;
+      width: 80%;
+      height: 100px;
     }
   }
 }

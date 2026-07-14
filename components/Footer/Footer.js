@@ -7,6 +7,7 @@ import {
   faLinkedinIn,
   faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 import { SocialMediaLinks } from '../../data';
 
@@ -56,6 +57,12 @@ function Footer() {
             style={{ display: isLoad }}
           >
             <FontAwesomeIcon icon={faXTwitter} />
+          </a>
+          <a
+            href='mailto:sra@vjti.ac.in'
+            style={{ display: isLoad }}
+          >
+            <FontAwesomeIcon icon={faEnvelope} />
           </a>
         </div>
       </footer>

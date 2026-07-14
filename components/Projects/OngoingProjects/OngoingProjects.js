@@ -7,7 +7,6 @@ import {
   faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
-import Hero from '../../Hero/Hero';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const OngoingProjects = () => {
@@ -22,21 +21,12 @@ const OngoingProjects = () => {
     setCurrent((prev) => (prev - 1 + total) % total);
   }, [total]);
 
-  useEffect(() => {
-    const timer = setInterval(next, 10000);
-    return () => clearInterval(timer);
-  }, [next]);
+
 
   const proj = OngoingProjectsData[current];
 
   return (
     <>
-      <Hero
-        imgName={'ongoing-hero.jpg'}
-        title={<>Ongoing Projects</>}
-        subtitleList={['Ingenuinity in progress.']}
-        isHome={false}
-      />
       <div className={styles.projectBar}>
         {OngoingProjectsData.map((proj, idx) => (
           <span

@@ -1,5 +1,9 @@
 @import '../variables';
 
+.container {
+  padding-top: 80px;
+}
+
 .projectBar {
   width: 95vw;
   max-width: none;
@@ -178,6 +182,37 @@
 
     &:hover {
       color: $light;
+    }
+  }
+}
+
+.singleCardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  .card {
+    width: calc(50% - 0.75rem);
+    height: 100%;
+  }
+
+  .cardImage {
+    flex: 0 0 75%;
+  }
+
+  .cardBody {
+    flex: 0 0 25%;
+    padding: 1rem;
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    p {
+      font-size: 0.85rem;
     }
   }
 }
