@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import { getPage } from '../lib/content';
+import HeroLines from '../components/HeroLines';
+import HeroModel from '../components/HeroModel';
+import ReachMarquee from '../components/ReachMarquee';
+import SponsorsRow from '../components/SponsorsRow';
 
 // Homepage uses the site title verbatim (no "— suffix").
 const site = getPage('site');
@@ -12,7 +16,9 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="hero">
-        <div className="container">
+        <HeroLines />
+        <div className="container hero__grid">
+          <div className="hero__copy">
           <p className="hero__eyebrow">{hero.eyebrow}</p>
           <h1 className="hero__title">
             {hero.title.split('\n').filter(Boolean).map((line, i, arr) => (
@@ -34,6 +40,9 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          </div>
+
+          <HeroModel model="random" />
         </div>
       </section>
 
@@ -50,6 +59,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Sponsors first: they carry more weight than the ambient reach strip */}
+      <SponsorsRow />
+
+      {/* Where alumni end up, as a slow scrolling logo strip */}
+      <ReachMarquee />
     </>
   );
 }

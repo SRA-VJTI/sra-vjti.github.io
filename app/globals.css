@@ -2,21 +2,26 @@
    VARIABLES
    ============================================= */
 :root {
-  --bg: #F7F6F3;
-  --bg-card: #FFFFFF;
-  --text: #111111;
-  --text-muted: #666666;
-  --accent: #D64000;
-  --accent-bg: #FFF3EE;
-  --border: #E3E3DF;
-  --border-strong: #C4C4BE;
+  /* Matte red / black / white. */
+  --bg: #232222;
+  --bg-card: #2B2A2A;
+  --text: #F2F1EF;
+  --text-muted: #A3A0A0;
+  --accent: #9C2327;
+  --accent-text: #C7383D; /* lifted accent for small text on dark */
+  --accent-bg: #2E1F20;
+  --border: #3A3838;
+  --border-strong: #565252;
 
-  --font-display: var(--syne);
+  --font-display: var(--ultra);
   --font-body: var(--manrope);
   --font-mono: var(--fira-code);
 
   --nav-height: 64px;
   --container: 1160px;
+  /* Shared left inset for the full-bleed navbar and hero, so the logo and the
+     headline sit on the same vertical line. */
+  --edge: clamp(24px, 4vw, 72px);
   --radius: 3px;
 
   --s1: 4px;
@@ -103,15 +108,17 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: var(--s3);
 }
 
 .page-header__title {
-  font-family: var(--font-display), sans-serif;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-family: var(--font-display), serif;
+  font-size: clamp(1.75rem, 4.2vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  text-transform: uppercase;
   color: var(--text);
 }
 
@@ -137,7 +144,7 @@ img { max-width: 100%; display: block; }
 }
 
 .btn--solid { background: var(--text); color: var(--bg); }
-.btn--solid:hover { background: var(--accent); }
+.btn--solid:hover { background: var(--accent); color: var(--text); }
 .btn--outline { border: 1.5px solid var(--border-strong); color: var(--text); }
 .btn--outline:hover { border-color: var(--text); }
 
@@ -158,8 +165,8 @@ img { max-width: 100%; display: block; }
 
 .tag--accent {
   background: var(--accent-bg);
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-text);
+  color: var(--accent-text);
 }
 
 /* External link */
@@ -173,7 +180,7 @@ img { max-width: 100%; display: block; }
   gap: 4px;
 }
 
-.ext-link:hover { color: var(--accent); }
+.ext-link:hover { color: var(--accent-text); }
 
 /* Year section */
 .year-section { margin-bottom: var(--s12); }
@@ -192,10 +199,11 @@ img { max-width: 100%; display: block; }
 
 /* Section title */
 .section-title {
-  font-family: var(--font-display), sans-serif;
-  font-size: 1.375rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-family: var(--font-display), serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: uppercase;
   margin-bottom: var(--s6);
 }
 
@@ -214,9 +222,18 @@ img { max-width: 100%; display: block; }
 
 .navbar--scrolled {
   border-bottom-color: var(--border);
-  background: rgba(247, 246, 243, 0.95);
+  background: rgba(35, 34, 34, 0.92);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+}
+
+/* Full-bleed like the hero, on the same --edge inset, so the logo lines up
+   with the headline below it. */
+.navbar .container {
+  max-width: none;
+  margin: 0;
+  padding-left: var(--edge);
+  padding-right: var(--edge);
 }
 
 .navbar__inner {
@@ -227,14 +244,38 @@ img { max-width: 100%; display: block; }
 }
 
 .navbar__logo {
-  font-family: var(--font-display), sans-serif;
-  font-weight: 800;
-  font-size: 1.125rem;
-  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
   color: var(--text);
 }
 
-.navbar__logo span { color: var(--accent); }
+/* The source PNG is solid black with the letterforms knocked out to
+   transparent, so it vanishes on a dark background. Inverting paints the
+   plate white and lets the lettering read as the page colour through it. */
+.navbar__logo img {
+  height: 34px;
+  width: auto;
+  filter: invert(1);
+  transition: opacity 0.15s;
+}
+
+.navbar__logo:hover img { opacity: 0.75; }
+
+.navbar__logo-text {
+  font-family: var(--font-mono), monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-left: var(--s3);
+  border-left: 1px solid var(--border);
+}
+
+@media (max-width: 480px) {
+  .navbar__logo-text { display: none; }
+}
 
 .navbar__links {
   display: flex;
@@ -277,7 +318,7 @@ img { max-width: 100%; display: block; }
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.15s, visibility 0.15s, transform 0.15s;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
 }
 
 .navbar__dropdown--open {
@@ -339,7 +380,7 @@ img { max-width: 100%; display: block; }
 
   .navbar__links--open { display: flex; }
 
-  .navbar__links > li { padding: 0 var(--s8); }
+  .navbar__links > li { padding: 0 var(--edge); }
 
   .navbar__links > li > a,
   .navbar__drop-trigger {
@@ -390,15 +431,9 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid var(--border);
 }
 
-.footer__logo {
-  font-family: var(--font-display), sans-serif;
-  font-size: 1.125rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: var(--s4);
-}
+.footer__logo { margin-bottom: var(--s4); }
 
-.footer__logo span { color: var(--accent); }
+.footer__logo img { height: 34px; width: auto; filter: invert(1); }
 
 .footer__tagline {
   font-size: 0.9375rem;
@@ -454,7 +489,7 @@ img { max-width: 100%; display: block; }
   transition: color 0.15s;
 }
 
-.footer__email:hover { color: var(--accent); }
+.footer__email:hover { color: var(--accent-text); }
 
 @media (max-width: 768px) {
   .footer__top { grid-template-columns: 1fr; gap: var(--s8); }
@@ -471,37 +506,88 @@ img { max-width: 100%; display: block; }
   position: relative;
 }
 
-.hero::before {
-  content: '';
+.hero { overflow: hidden; }
+
+.hero__lines {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, var(--border-strong) 1px, transparent 1px);
-  background-size: 24px 24px;
-  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
-.hero > .container { position: relative; z-index: 1; }
+/* The hero breaks out of the centred 1160px container: on a wide screen that
+   container starts ~380px in from the window edge, which reads as centred
+   rather than left-aligned. Here the content hugs the left instead. */
+.hero > .container {
+  position: relative;
+  z-index: 1;
+  max-width: none;
+  margin: 0;
+  padding-left: var(--edge);
+  padding-right: var(--edge);
+}
+
+/* Copy left, wireframe right. The object column collapses on narrow screens
+   rather than squeezing the headline. */
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.62fr);
+  gap: var(--s8);
+  align-items: center;
+}
+
+/* The model itself is the link to its repository. `is-over` is toggled by a
+   raycast against the geometry, so the surrounding empty stage is inert. */
+.hero__object {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 42vh, 420px);
+  cursor: default;
+  transition: opacity 0.2s;
+}
+
+.hero__object.is-over { opacity: 0.86; }
+
+.hero__object:focus-visible {
+  outline: 1px solid var(--accent-text);
+  outline-offset: 6px;
+  border-radius: var(--radius);
+}
+
+.hero__object-stage { width: 100%; height: 100%; }
+
+@media (max-width: 900px) {
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero__object { display: none; }
+}
 
 .hero__eyebrow {
   font-family: var(--font-mono), monospace;
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: var(--s6);
 }
 
 .hero__title {
-  font-family: var(--font-display), sans-serif;
-  font-size: clamp(1.5rem, 9vw, 7rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.0;
+  font-family: var(--font-display), serif;
+  /* The vh term is what keeps the whole hero on one screen: three lines at
+     11vh plus the eyebrow, sub and buttons always clear the viewport. */
+  font-size: clamp(1.5rem, min(8vw, 11vh), 7rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.02;
+  text-transform: uppercase;
   margin-bottom: var(--s6);
 }
+
+/* Second line carries the red so the lockup reads red/white on black. */
+.hero__title span:nth-child(2) { color: var(--accent-text); }
 
 .hero__sub {
   font-family: var(--font-mono), monospace;
@@ -545,6 +631,196 @@ img { max-width: 100%; display: block; }
 }
 
 /* =============================================
+   REACH MARQUEE (home)
+   ============================================= */
+.reach-marquee {
+  border-top: 1px solid var(--border);
+  padding-top: var(--s12);
+  overflow: hidden;
+}
+
+.reach-marquee__label {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--s8);
+}
+
+.reach-marquee__row {
+  overflow: hidden;
+  /* Fade both ends so logos enter and leave instead of being cut off. */
+  -webkit-mask-image: linear-gradient(
+    to right, transparent, black 12%, black 88%, transparent
+  );
+  mask-image: linear-gradient(
+    to right, transparent, black 12%, black 88%, transparent
+  );
+}
+
+.reach-marquee__row + .reach-marquee__row { margin-top: var(--s3); }
+
+.reach-marquee__track {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  width: max-content;
+  animation-name: reach-scroll-left;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.reach-marquee__track--right { animation-name: reach-scroll-right; }
+
+/* Half the track is a duplicate, so -50% is exactly one full cycle. */
+@keyframes reach-scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes reach-scroll-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+.reach-marquee:hover .reach-marquee__track { animation-play-state: paused; }
+
+/* The logo set is mixed: most ship their own light background, a few are
+   dark artwork on transparency. A uniform muted chip is the only treatment
+   that keeps all of them legible on the dark page. */
+.reach-marquee__logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 132px;
+  height: 64px;
+  padding: var(--s2) var(--s3);
+  background: rgba(242, 241, 239, 0.92);
+  border-radius: var(--radius);
+  opacity: 0.72;
+  transition: opacity 0.2s;
+}
+
+.reach-marquee__logo:hover,
+.reach-marquee__logo:focus-visible {
+  opacity: 1;
+}
+
+.reach-marquee__logo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reach-marquee__track { animation: none; }
+  .reach-marquee__row {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .reach-marquee__logo { width: 104px; height: 52px; }
+}
+
+/* =============================================
+   SPONSORS (home)
+   ============================================= */
+.sponsors { padding-top: var(--s16); }
+
+.sponsors__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--s6);
+  flex-wrap: wrap;
+  margin-bottom: var(--s8);
+}
+
+/* Same treatment as the reach marquee label, so the two sections read as a
+   matched pair. Sized to match the "Become a sponsor" link beside it. */
+.sponsors__title {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Matches the section labels, so the whole row reads as one system. */
+.sponsors__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.15s, gap 0.15s;
+}
+
+.sponsors__cta:hover { color: var(--accent-text); gap: var(--s3); }
+
+.sponsors__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--s4);
+}
+
+/* Full opacity: these are partners, not ambient texture. */
+.sponsors__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 108px;
+  padding: var(--s6);
+  background: var(--text);
+  border-radius: var(--radius);
+  transition: transform 0.2s;
+}
+
+.sponsors__logo:hover { transform: translateY(-3px); }
+
+.sponsors__logo img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* White artwork would disappear against the light chip. */
+.sponsors__logo img.is-inverted { filter: invert(1); }
+
+.sponsors__name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 108px;
+  padding: var(--s6);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.sponsors__name:hover { border-color: var(--border-strong); color: var(--text); }
+
+@media (max-width: 600px) {
+  .sponsors__logo, .sponsors__name { height: 88px; padding: var(--s4); }
+}
+
+/* =============================================
    ACTIVITIES INDEX
    ============================================= */
 .activities-grid {
@@ -567,7 +843,7 @@ img { max-width: 100%; display: block; }
 .activity-card:hover { border-color: var(--border-strong); }
 
 .activity-card__title {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -583,7 +859,7 @@ img { max-width: 100%; display: block; }
 .activity-card__link {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-text);
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -616,7 +892,7 @@ img { max-width: 100%; display: block; }
 .project-card:hover { border-color: var(--border-strong); }
 
 .project-card__name {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 1.0625rem;
   font-weight: 700;
 }
@@ -884,7 +1160,7 @@ img { max-width: 100%; display: block; }
 }
 
 .pub-item__title {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-weight: 700;
   font-size: 1.0625rem;
   letter-spacing: -0.01em;
@@ -911,7 +1187,7 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* =============================================
@@ -940,7 +1216,7 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-mono), monospace;
   font-size: 11px;
   letter-spacing: 0.06em;
-  color: var(--accent);
+  color: var(--accent-text);
   margin-bottom: var(--s3);
 }
 
@@ -977,7 +1253,7 @@ img { max-width: 100%; display: block; }
 }
 
 .startup-card__name {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -1061,7 +1337,7 @@ img { max-width: 100%; display: block; }
 }
 
 .event-card__name {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -1092,9 +1368,9 @@ img { max-width: 100%; display: block; }
 }
 
 .support-block__title {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-display), serif;
   font-size: 1.375rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.01em;
   margin-bottom: var(--s4);
 }
@@ -1115,9 +1391,9 @@ img { max-width: 100%; display: block; }
 }
 
 .csr-block__amount {
-  font-family: var(--font-display), sans-serif;
+  font-family: var(--font-display), serif;
   font-size: 2.25rem;
-  font-weight: 800;
+  font-weight: 400;
   letter-spacing: -0.02em;
   margin-bottom: 4px;
 }
@@ -1155,7 +1431,6 @@ img { max-width: 100%; display: block; }
 }
 
 .sponsor-chip:hover { border-color: var(--border-strong); }
-
 
 @media (max-width: 768px) {
   .support-cols { grid-template-columns: 1fr; }

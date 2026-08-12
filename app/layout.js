@@ -1,13 +1,14 @@
-import { Syne, Manrope, Fira_Code } from 'next/font/google';
+import { Ultra, Manrope, Fira_Code } from 'next/font/google';
 import './globals.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { getPage } from '../lib/content';
 
-const syne = Syne({
+// Ultra ships a single weight (400); all display sizing is done with size, not weight.
+const ultra = Ultra({
   subsets: ['latin'],
-  variable: '--syne',
-  weight: ['400', '600', '700', '800'],
+  variable: '--ultra',
+  weight: ['400'],
 });
 
 const manrope = Manrope({
@@ -31,7 +32,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${syne.variable} ${manrope.variable} ${firaCode.variable}`}
+      className={`${ultra.variable} ${manrope.variable} ${firaCode.variable}`}
     >
       <body>
         <Navbar main={nav.main} activities={nav.activities} />

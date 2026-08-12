@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getPage } from '../lib/content';
 
 export default function Footer() {
@@ -9,9 +10,14 @@ export default function Footer() {
       <div className="container">
         <div className="footer__top">
           <div>
-            <p className="footer__logo">
-              SRA <span>VJTI</span>
-            </p>
+            <div className="footer__logo">
+              <Image
+                src="/sra-logo.png"
+                alt="Society of Robotics and Automation"
+                width={1999}
+                height={1200}
+              />
+            </div>
             <p className="footer__tagline" style={{ whiteSpace: 'pre-line' }}>
               {tagline}
             </p>

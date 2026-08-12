@@ -37,13 +37,23 @@ sponsor:
     making you their first choice when it matters.
   ctaLabel: Get in touch
   ctaHref: 'mailto:sra@vjti.ac.in'
+# img is optional: without it the sponsor renders as its name in text.
+# Set `invert: true` for artwork that is white, so it stays visible on the
+# light logo chip (the Texas Instruments file is a white silhouette).
+# `scale` (0-1) optically balances a logo that reads heavier than the rest.
 sponsors:
   - name: Espressif
     href: 'https://www.espressif.com/'
+    img: /sponsors/espressif.png
   - name: Lion Circuits
     href: 'https://www.lioncircuits.com/'
+    img: /sponsors/Lion_circuits.png
   - name: Solid Space
     href: 'https://solidspace.co.in/'
+    img: /sponsors/solidspace.png
   - name: Texas Instruments
     href: 'https://www.ti.com/'
+    img: /sponsors/texas.png
+    invert: true
+    scale: 0.82
 ---

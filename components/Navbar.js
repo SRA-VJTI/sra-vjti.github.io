@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
@@ -26,8 +27,15 @@ export default function Navbar({ main, activities }) {
   return (
     <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <div className="container navbar__inner">
-        <Link href="/" className="navbar__logo">
-          SRA <span>VJTI</span>
+        <Link href="/" className="navbar__logo" aria-label="SRA VJTI — home">
+          <Image
+            src="/sra-logo.png"
+            alt="Society of Robotics and Automation"
+            width={1999}
+            height={1200}
+            priority
+          />
+          <span className="navbar__logo-text">VJTI</span>
         </Link>
 
         <button
