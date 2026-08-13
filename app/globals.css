@@ -626,6 +626,61 @@ img { max-width: 100%; display: block; }
   color: var(--text-muted);
 }
 
+.aboutev {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.aboutev__text {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  margin-bottom: var(--s3);
+  color: var(--text-muted);
+}
+
+/* PHOTO STACK */
+
+.photo-stack {
+  position:relative;
+  width:100%;
+  max-width:380px;        /* constrain so it doesn't stretch with the column */
+  aspect-ratio:16/9;       /* shorter than 4/3 */
+}
+
+.events-stack {
+  margin-left:auto;       /* keeps it right-aligned in its column */
+}
+
+.photo-stack img {
+  position: absolute;
+  width: 80%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.photo-stack img:nth-child(1) {
+  top: 0; left: 0;
+  transform: rotate(-6deg);
+  z-index: 1;
+}
+.photo-stack img:nth-child(2) {
+  top: 5%; left: 15%;
+  transform: rotate(4deg);
+  z-index: 2;
+}
+.photo-stack img:nth-child(3) {
+  top: 12%; left: 8%;
+  transform: rotate(-2deg);
+  z-index: 3;
+}
+
+/* optional: fan out on hover */
+.photo-stack:hover img:nth-child(1) { transform: rotate(-14deg) translateX(-10px); }
+.photo-stack:hover img:nth-child(2) { transform: rotate(10deg) translateX(10px); }
+.photo-stack:hover img:nth-child(3) { transform: rotate(-4deg) translateY(-8px); }
+
 @media (max-width: 768px) {
   .about__grid { grid-template-columns: 1fr; gap: var(--s8); }
 }

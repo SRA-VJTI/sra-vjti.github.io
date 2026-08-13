@@ -4,6 +4,8 @@ import HeroLines from '../components/HeroLines';
 import HeroModel from '../components/HeroModel';
 import ReachMarquee from '../components/ReachMarquee';
 import SponsorsRow from '../components/SponsorsRow';
+import AboutEvents from '../components/AboutEvents.js';
+import AboutProjects from '../components/AboutProjects.js';
 
 // Homepage uses the site title verbatim (no "— suffix").
 const site = getPage('site');
@@ -59,6 +61,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <AboutEvents/ >
+
+      <AboutProjects/ >
 
       {/* Sponsors first: they carry more weight than the ambient reach strip */}
       <SponsorsRow />
