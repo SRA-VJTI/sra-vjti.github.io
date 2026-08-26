@@ -12,21 +12,21 @@
 main:
   - label: Home
     href: /
+  - label: Projects
+    href: /activities/projects
   - label: Activities
     dropdown: true
-  - label: Blogs
-    href: 'https://blog.sravjti.in/'
-    external: true
   - label: People
     href: 'https://sravjti.in/webring/'
     external: true
   - label: Alumni
     href: /alumni
+  - label: Blogs
+    href: 'https://blog.sravjti.in/'
+    external: true
   - label: Support Us
     href: /support
 activities:
-  - label: Projects
-    href: /activities/projects
   - label: Startups
     href: /activities/startups
   - label: Open Source

@@ -561,7 +561,7 @@ img { max-width: 100%; display: block; }
 .hero__object-stage { width: 100%; height: 100%; }
 
 @media (max-width: 900px) {
-  .hero__grid { grid-template-columns: 1fr; }
+  .hero__grid { grid-template-columns: minmax(0, 1fr); }
   .hero__object { display: none; }
 }
 
@@ -683,6 +683,9 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
   .about__grid { grid-template-columns: 1fr; gap: var(--s8); }
+  .aboutev { grid-template-columns: 1fr; gap: var(--s8); }
+  .photo-stack { max-width: 320px; }
+  .events-stack { margin-left: 0; }
 }
 
 /* =============================================
@@ -880,7 +883,7 @@ img { max-width: 100%; display: block; }
    ============================================= */
 .activities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
   gap: var(--s4);
 }
 
@@ -928,7 +931,7 @@ img { max-width: 100%; display: block; }
    ============================================= */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: var(--s4);
   margin-bottom: var(--s12);
 }
@@ -1005,7 +1008,7 @@ img { max-width: 100%; display: block; }
 
 .eklavya-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
   gap: var(--s2);
 }
 
@@ -1064,7 +1067,7 @@ img { max-width: 100%; display: block; }
    ============================================= */
 .alumni-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
   gap: var(--s3);
   align-items: start;
 }
@@ -1250,7 +1253,7 @@ img { max-width: 100%; display: block; }
    ============================================= */
 .oss-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: var(--s3);
 }
 
@@ -1293,7 +1296,7 @@ img { max-width: 100%; display: block; }
    ============================================= */
 .startup-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: var(--s4);
 }
 
@@ -1334,7 +1337,7 @@ img { max-width: 100%; display: block; }
    ============================================= */
 .event-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(560px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(560px, 100%), 1fr));
   gap: var(--s4);
 }
 
