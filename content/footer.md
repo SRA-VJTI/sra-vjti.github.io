@@ -19,7 +19,7 @@ links:
     href: /alumni
   - label: Support Us
     href: /support
-  - label: Our Team ↗
+  - label: People ↗
     href: 'https://sravjti.in/webring/'
     external: true
   - label: Blogs ↗
@@ -32,6 +32,8 @@ social:
     href: 'https://github.com/SRA-VJTI'
   - label: LinkedIn ↗
     href: 'https://www.linkedin.com/company/sra-vjti/'
+  - label: Facebook ↗
+    href: 'https://www.facebook.com/sra.vjti/'
   - label: YouTube ↗
     href: 'https://www.youtube.com/channel/UC-g67CbV2Iu30n7TvipRiCA'
   - label: Instagram ↗

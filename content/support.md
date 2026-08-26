@@ -3,6 +3,7 @@
 #
 # - csr:        the Corporate Social Responsibility section and the
 #               highlight block (amount + label + description).
+#               `brochureHref` links the sponsorship brochure PDF.
 # - sponsor:    the "Become a Sponsor" pitch + CTA button.
 # - sponsors:   the list of current sponsors shown as chips at the
 #               bottom of the page.
@@ -26,7 +27,11 @@ csr:
     desc: |
       Created the modern SRA Lab — equipped with electronics and mechanical
       workbenches, ESD safety stations, an Ultimaker S5 Pro 3D printer, and
-      high-performance computing hardware. Inaugurated on May 3rd, 2024.
+      high-performance computing hardware. Inaugurated on May 3rd, 2024 by
+      Shri Mukesh Waghela, Deputy General Manager at GIC Re, in the presence
+      of Dr. Sachin Kore, Director of VJTI. Implemented with support from the
+      VJTI Alumni Association.
+  brochureHref: /documents/PR_brochure_24-25.pdf
 sponsor:
   title: Become a Sponsor
   body: |

@@ -25,6 +25,16 @@ export default function Support() {
               <p className="csr-block__label">{page.csr.highlight.label}</p>
               <p className="csr-block__desc">{page.csr.highlight.desc}</p>
             </div>
+            {page.csr.brochureHref && (
+              <a
+                href={page.csr.brochureHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ext-link"
+              >
+                Sponsorship Brochure ↗
+              </a>
+            )}
           </div>
 
           {/* Sponsor */}
