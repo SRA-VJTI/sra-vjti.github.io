@@ -17,7 +17,7 @@ main:
   - label: Blogs
     href: 'https://blog.sravjti.in/'
     external: true
-  - label: Our Team
+  - label: People
     href: 'https://sravjti.in/webring/'
     external: true
   - label: Alumni

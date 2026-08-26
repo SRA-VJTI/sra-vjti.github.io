@@ -27,31 +27,31 @@ events:
     blog: 'https://eklavya.sravjti.in/'
     order: 1
     description: >-
-      SRA's premier selection process — the gateway to becoming a core member of the committee. Two rigorous rounds: a task-based coding challenge, followed by a personal interview. Selected
-      participants are allocated real ongoing projects and begin a 2-month mentorship journey as full-fledged members of the SRA ecosystem.
+      SRA's premier selection process to become a core member. Two rounds: a coding challenge testing technical depth, and an interview evaluating passion for robotics. Selected members work on real
+      projects over 2 months, growing as full-fledged SRA members.
   - name: Open Door
     category: Eklavya
     image: /events/open-door.png
     order: 2
     description: >-
-      An annual showcase where second-year students present the projects they have built over the past two months to the incoming first-year batch. Open to all — it provides students an opportunity to
-      explore ongoing projects, interact with teams, and gain firsthand insight into the kind of innovation that defines life at SRA.
+      Annual showcase where second-year students present their projects to incoming first-years. An introduction to SRA culture, welcoming new members and providing insight into the innovation and
+      hands-on engineering that defines the community.
   - name: Inception
     category: Seminar
     image: /events/inception.png
     notion: 'https://drive.google.com/drive/folders/1_NKatYnyHZbBHTQoK_7MMWsWR7rIZ8mP'
     order: 3
     description: >-
-      SRA's flagship introductory seminar for first-year students. Covers core concepts in Electronics, IoT, and Mechanics — building the essential prerequisite knowledge required for upcoming
-      workshops and hands-on projects.
+      SRA's flagship introductory seminar for first-year students. Covers Electronics, IoT, and Mechanics with practical insights into real-world robotic systems. Builds essential prerequisite
+      knowledge for workshops and hands-on projects.
   - name: Pixels
     category: Seminar
     image: /events/pixels.jpg
-    github: 'https://github.com/SRA-VJTI/Pixels-Seminar'
+    github: 'https://github.com/SRA-VJTI/Pixels'
     order: 4
     description: >-
-      A deep dive into Computer Vision. Students progress from C++ and Git basics into image processing with OpenCV, culminating in building their own blob detection algorithm to track objects in live
-      camera feeds.
+      Deep dive into Computer Vision. Learn C++, git, and OpenCV. Design blob detection algorithms to track objects in videos and live camera feeds. Theory meets hands-on implementation for practical
+      robotics skills.
   - name: Wall-E
     category: Workshop
     image: /events/wall-e.jpg
@@ -59,8 +59,7 @@ events:
     youtube: 'https://www.youtube.com/watch?v=-AbwiFBjHl0&t=36s'
     order: 5
     description: >-
-      Line-following and self-balancing using the ESP32. Covers PID Control, Embedded Communication Protocols, PWM, Filters, and RTOS. First-year students build and tune a real robot — where theory
-      meets hardware for the very first time.
+      Line-following and self-balancing with ESP32. Learn PID Control, Communication Protocols, PWM, and RTOS. Build and tune a real robot, applying theory to hardware.
   - name: MARIO
     category: Workshop
     image: /events/mario.jpg
@@ -68,13 +67,12 @@ events:
     youtube: 'https://www.youtube.com/watch?v=qkdTsRB-te4'
     order: 6
     description: >-
-      A three-day flagship workshop and the final technical workshop for first-year students. Participants build and control a ROS-based 3-DOF robotic manipulator, gaining hands-on exposure to forward
-      and inverse kinematics, actuator control, and real-time communication with Gazebo and RViz.
+      Three-day flagship workshop. Build a ROS-based 3-DOF robotic manipulator. Learn kinematics, actuator control, and real-time hardware-simulation communication with Gazebo and RViz.
   - name: SAC — SRA Autosim Challenge
     category: SAC
     image: /events/sac.png
     order: 7
     description: >-
-      SRA's exclusive maze-solving competition for second-year students. The maze includes colorblind paths, object detection challenges, and intricate junctions requiring strategic, algorithmic
-      thinking. Participants leverage the full suite of available sensors and push the limits of their software and hardware integration skills.
+      Exclusive maze-solving competition for second-year students. Navigate obstacles including colorblind paths and object detection. Use all sensors and push software-hardware integration to the
+      limits.
 ---

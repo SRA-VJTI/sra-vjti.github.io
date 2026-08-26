@@ -20,10 +20,9 @@ ctas:
 about:
   - eyebrow: About SRA
     body: |
-      Started in September 2008, the Society of Robotics and Automation
-      is a student society at VJTI dealing with robotics, machine vision,
-      automation and allied fields. SRA creates awareness and promotes
-      robotics among students at VJTI and other leading colleges in Mumbai.
+      Our mission is to build cool things and advance the next generation
+      of open source robotics. We are proud to be part of Veermata
+      Jijabai Technological Institute.
   - eyebrow: About VJTI
     body: |
       Veermata Jijabai Technological Institute, established in 1887,
