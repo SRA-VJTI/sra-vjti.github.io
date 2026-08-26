@@ -1,36 +1,82 @@
 import styles from './Alumni.module.scss';
 import Card from '../Card/Card';
-import { AlumniList } from '../../data';
-import { useState } from 'react';
+import { AlumniList as FallbackAlumniList } from '../../data';
+import { fetchAlumniFromSheet } from '../../utils/fetchAlumniSheet';
+import { useEffect, useMemo, useState } from 'react';
 
-let updatedList = [];
-
-const years = [
-  2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012,
-  2011, 2010, 2009,
-];
-
-AlumniList.forEach((year) => {
-  year.alumnis.forEach((alumni) => {
-    updatedList.push({
-      name: alumni.name,
-      imgName: alumni.imgName,
-      sub: alumni.sub,
-      linkedInLink: alumni.linkedInLink,
-      githubLink: alumni.githubLink,
-      year: year.year,
-      previous: alumni.previous,
-      current: alumni.current,
+function flattenFallback() {
+  const list = [];
+  FallbackAlumniList.forEach((yearGroup) => {
+    yearGroup.alumnis.forEach((alumni) => {
+      list.push({
+        name: alumni.name,
+        imgName: alumni.imgName,
+        linkedInLink: alumni.linkedInLink,
+        githubLink: alumni.githubLink,
+        year: yearGroup.year,
+        previous: alumni.previous || [],
+        current: alumni.current || (alumni.sub ? [{ t: alumni.sub }] : []),
+      });
     });
   });
-});
-
-let filteredList = updatedList;
+  return list;
+}
 
 const Alumni = () => {
+  const [alumniList, setAlumniList] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [clicked, setClicked] = useState(false);
   const [filYear, setFilYear] = useState('Show all');
   const [key, setKey] = useState('');
+
+  useEffect(() => {
+    let cancelled = false;
+
+    fetchAlumniFromSheet()
+      .then((list) => {
+        if (cancelled) return;
+        if (list.length === 0) throw new Error('Empty sheet response');
+        setAlumniList(list);
+      })
+      .catch(() => {
+        if (!cancelled) setAlumniList(flattenFallback());
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const years = useMemo(() => {
+    const uniqueYears = [...new Set(alumniList.map((a) => a.year))];
+    return uniqueYears.sort((a, b) => b - a);
+  }, [alumniList]);
+
+  const filteredList = useMemo(() => {
+    let list = alumniList;
+
+    if (filYear !== 'Show all') {
+      list = list.filter((alumni) => alumni.year === filYear);
+    }
+
+    if (key) {
+      list = list.filter((alumni) => {
+        const nameMatch = alumni.name.toLowerCase().includes(key);
+        const prevMatch = alumni.previous.some((p) =>
+          p.t.toLowerCase().includes(key)
+        );
+        const currMatch = alumni.current.some((c) =>
+          c.t.toLowerCase().includes(key)
+        );
+        return nameMatch || prevMatch || currMatch;
+      });
+    }
+
+    return list;
+  }, [alumniList, filYear, key]);
 
   const toggle = () => {
     setClicked(!clicked);
@@ -38,40 +84,13 @@ const Alumni = () => {
 
   const selYear = (year) => {
     setFilYear(year);
-
-    if (year != 'Show all') {
-      filteredList = updatedList.filter((alumni) => {
-        return alumni.year == year;
-      });
-    } else {
-      filteredList = updatedList;
-    }
-
-    setClicked(!clicked);
+    setClicked(false);
   };
 
   const selKeyword = (ev) => {
     const value = ev.currentTarget.value.toLowerCase();
     setKey(value);
-
-    if (value != '') {
-      filteredList = updatedList.filter((alumni) => {
-        const nameMatch = alumni.name.toLowerCase().includes(value);
-        const subMatch = alumni.sub
-          ? `${alumni.sub}`.toLowerCase().includes(value)
-          : false;
-        const prevMatch = alumni.previous
-          ? alumni.previous.some((p) => p.t.toLowerCase().includes(value))
-          : false;
-        const currMatch = alumni.current
-          ? alumni.current.some((c) => c.t.toLowerCase().includes(value))
-          : false;
-        return nameMatch || subMatch || prevMatch || currMatch;
-      });
-    } else {
-      setFilYear('Show all');
-      filteredList = updatedList;
-    }
+    if (value === '') setFilYear('Show all');
   };
 
   return (
@@ -116,24 +135,27 @@ const Alumni = () => {
         </div>
       </div>
 
-      <div className={styles.cardGrp}>
-        {filteredList.map((alumni, index) => {
-          return (
-            <Card
-              key={`alumni_member_${index}`}
-              index={index}
-              name={alumni.name}
-              sub={alumni.sub}
-              imgName={alumni.imgName}
-              linkedInLink={alumni.linkedInLink}
-              githubLink={alumni.githubLink}
-              isAlumni={true}
-              previous={alumni.previous}
-              current={alumni.current}
-            />
-          );
-        })}
-      </div>
+      {loading ? (
+        <div className={styles.loading}>Loading alumni...</div>
+      ) : (
+        <div className={styles.cardGrp}>
+          {filteredList.map((alumni, index) => {
+            return (
+              <Card
+                key={`alumni_member_${index}`}
+                index={index}
+                name={alumni.name}
+                imgName={alumni.imgName}
+                linkedInLink={alumni.linkedInLink}
+                githubLink={alumni.githubLink}
+                isAlumni={true}
+                previous={alumni.previous}
+                current={alumni.current}
+              />
+            );
+          })}
+        </div>
+      )}
     </>
   );
 };
