@@ -1,0 +1,12 @@
+:HL["/_next/static/chunks/0h3f51yijjuxy.css","style"]
+:HL["/_next/static/media/8bda34f14a064581-s.p.0_ldlkf6_6_xh.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/a343f882a40d2cc9-s.p.0kho-wj7-y-w1.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/b8b552e8609c5636-s.p.0vinx1niofu4y.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/events/eklavya.png","image"]
+:HL["/events/open-door.png","image"]
+:HL["/events/inception.png","image"]
+:HL["/events/pixels.jpg","image"]
+:HL["/events/wall-e.jpg","image"]
+:HL["/events/mario.jpg","image"]
+:HL["/events/sac.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"activities","param":null,"prefetchHints":0,"slots":{"children":{"name":"events","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"cGg2vnsoqwqcL_MO-eEwU"}
