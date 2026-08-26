@@ -40,30 +40,11 @@ yarn dev
 
 ```
 sra-vjti.github.io/
-├── components/          # React components
-│   ├── Achievements/    # Achievements section
-│   ├── Activities/      # Activities section
-│   ├── Blogs/           # Blog components
-│   ├── ContactUs/       # Contact form
-│   ├── CorporateSupport/# Corporate support section
-│   ├── Footer/          # Footer component
-│   ├── Hero/            # Hero section
-│   ├── HomeAboutUs/     # Home page about section
-│   ├── Navbar/          # Navigation bar
-│   ├── Projects/         # Projects showcase
-│   ├── Publications/     # Publications section
-│   ├── Sponsors/         # Sponsors section
-│   ├── Startups/         # Startups section
-│   └── Teams/            # Team members
-├── data/                # Data files (JSON/JS)
-│   ├── aboutus.js
-│   ├── blogs.js
-│   ├── sponsors.js
-│   └── ...
-├── pages/               # Next.js pages
-├── public/              # Static assets (images, etc.)
-├── styles/              # Global styles
-└── utils/               # Utility functions
+├── app/                  # Next.js pages (App Router)
+├── components/           # React components
+├── content/              # Site content as markdown files
+├── lib/                  # content.js — reads content/*.md
+└── public/               # Static assets (images, etc.)
 ```
 
 ## 🛠️ Available Scripts
@@ -76,23 +57,19 @@ sra-vjti.github.io/
 
 ## 🎨 Tech Stack
 
-- **Framework**: Next.js 14.2.32
-- **React**: 18.2.0
-- **Styling**: SCSS/Sass
-- **Icons**: Font Awesome
-- **Markdown**: markdown-to-jsx
-- **Carousel**: react-responsive-carousel, react-owl-carousel
+- **Framework**: Next.js 16.2.4
+- **React**: 19.2.4
+- **Styling**: Plain CSS
+- **Markdown**: gray-matter
 
 ## 📝 Features
 
 - Responsive design
-- Dynamic content management through data files
-- Blog system with markdown support
-- Project showcase (Flagship, Ongoing, Eklavya)
-- Team member profiles
+- Dynamic content management through markdown files
+- Project showcase (Ongoing, Eklavya)
 - Publications and achievements
 - Corporate support information
-- Contact form integration
+- Contact links in the footer
 
 ## 🤝 Contributing
 
@@ -134,4 +111,4 @@ Running `npm run export` now executes `next build` and respects `next.config.js`
 
 ## 📧 Contact
 
-For questions or support, please contact the SRA team through the website's contact form or reach out via the official channels.
+For questions or support, please contact the SRA team or reach out via the official channels.

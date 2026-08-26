@@ -42,14 +42,16 @@ function parseCSV(text) {
   return rows;
 }
 
-function toPillList(cell) {
+function toList(cell) {
   return (cell || '')
     .split('|')
     .map((t) => t.trim())
-    .filter(Boolean)
-    .map((t) => ({ t }));
+    .filter(Boolean);
 }
 
+// Fetches the public alumni Google Sheet (published as CSV) and shapes rows
+// to match the `alumni:` entries in content/alumni.md, so the caller can
+// swap between live and static data without touching the rendering layer.
 export async function fetchAlumniFromSheet() {
   const res = await fetch(SHEET_CSV_URL);
   if (!res.ok) {
@@ -65,7 +67,6 @@ export async function fetchAlumniFromSheet() {
     year: header.indexOf('Year'),
     current: header.indexOf('Current'),
     previous: header.indexOf('Previous'),
-    image: header.indexOf('Image'),
     linkedin: header.indexOf('LinkedIn'),
     github: header.indexOf('GitHub'),
   };
@@ -75,10 +76,9 @@ export async function fetchAlumniFromSheet() {
     .map((r) => ({
       name: r[idx.name].trim(),
       year: (r[idx.year] || '').trim(),
-      imgName: (r[idx.image] || '').trim(),
-      linkedInLink: (r[idx.linkedin] || '').trim(),
-      githubLink: (r[idx.github] || '').trim(),
-      current: toPillList(r[idx.current]),
-      previous: toPillList(r[idx.previous]),
+      linkedin: (r[idx.linkedin] || '').trim(),
+      github: (r[idx.github] || '').trim(),
+      current: toList(r[idx.current]),
+      previous: toList(r[idx.previous]),
     }));
 }
