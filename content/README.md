@@ -48,7 +48,7 @@ Indentation matters. Use **two spaces** for each level. Do not use tabs.
 `Controls`, `Robotics`, `RL`, `Embedded`, `ML`, `Computer Vision`,
 `Compilers`, `LLM`, `Computer Architecture`, `Verilog`,
 `Mechanical Design`, `PCB Design`, `Operating Systems`,
-`Signal Processing`.
+`Signal Processing`, `Graphics`.
 
 **Event categories** (used in `events.md`):
 `Eklavya`, `Seminar`, `Workshop`, `SAC`.

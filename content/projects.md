@@ -20,7 +20,6 @@ ongoing:
     tags:
       - Embedded
       - RL
-      - PCB Design
     github: 'https://github.com/sahilapage/Bionic-Hand-Controlled-Over-EEG'
     description: Bionic hand controlled through brain signals using electroencephalography. 3D-printed prosthetic with imitation and reinforcement learning capabilities.
   - name: GantryMate-200
@@ -86,7 +85,6 @@ eklavya:
     tags:
       - Embedded
       - PCB Design
-      - Operating Systems
     github: 'https://github.com/avm1234567/Customboot-32'
     description: STM32+ESP32 development board with custom bootloader and OTA support.
   - name: EchoCore
@@ -94,7 +92,6 @@ eklavya:
     tags:
       - Verilog
       - Signal Processing
-      - Embedded
     github: 'https://github.com/cupx0j0e/EchoCore'
     description: B-mode ultrasound imaging and 16-QAM digital communication on FPGA using Verilog.
   - name: ESP32 Flight Controller
@@ -102,7 +99,6 @@ eklavya:
     tags:
       - Embedded
       - Controls
-      - Robotics
     github: 'https://github.com/su1gets4/esp32-fc'
     description: Custom ESP32-based quadcopter flight controller with stable autonomous flight.
   - name: FlexSonic
@@ -110,15 +106,12 @@ eklavya:
     tags:
       - Embedded
       - ML
-      - PCB Design
     github: 'https://github.com/Shri-2112/Flexsonic'
     description: Smart glove that translates hand gestures into audible speech for the speech-impaired.
   - name: FPGA-Based Tetris
     year: 2025
     tags:
       - Verilog
-      - Computer Architecture
-      - Embedded
     github: 'https://github.com/Harshit6-b/SRA-FPGA-based-tetris'
     description: Tetris game rendered entirely in Verilog on a BeagleVFire FPGA.
   - name: GantryMate-200
@@ -127,13 +120,13 @@ eklavya:
       - Robotics
       - Controls
       - Mechanical Design
+      - Embedded
     github: 'https://github.com/SarvaarthN/Eklavya_Gantry'
     description: 'Gantry-style CNC system for precision motion control, mechanical design, and firmware integration.'
   - name: Handheld Gaming Console
     year: 2025
     tags:
       - Embedded
-      - Operating Systems
       - PCB Design
     github: 'https://github.com/Paarth-Shirsat/Handheld-Gaming-Console'
     description: Custom STM32-based board running a Snake-style game on LCD with bare-metal C and custom I²C drivers.
@@ -173,6 +166,7 @@ eklavya:
       - Robotics
       - RL
       - Computer Vision
+      - ML
     github: 'https://github.com/vruga/lerobot-sim2real'
     description: 'Simulation and real-world control of a SO100 robotic arm using vision, language, and machine learning.'
   - name: RubikNet
@@ -263,8 +257,7 @@ eklavya:
   - name: Raytracer from Scratch
     year: 2024
     tags:
-      - Computer Architecture
-      - Compilers
+      - Graphics
     github: 'https://github.com/JaytidaA/SRA-Ray_Tracer_from_Scratch/'
     description: Raytracing application built entirely from scratch using C++ and OpenGL.
   - name: Titan Quadruped
@@ -286,7 +279,6 @@ eklavya:
     tags:
       - ML
       - Computer Vision
-      - LLM
     github: 'https://github.com/sneha31415/vision_transformers_from_scratch/'
     description: ViT model from scratch with image captioning using Vision Transformers and computer vision.
   - name: Voice-Video-Manipulator
@@ -332,7 +324,6 @@ eklavya:
     year: 2023
     tags:
       - Computer Architecture
-      - ML
       - Computer Vision
     github: 'https://github.com/adiawaskar/GPGPU-with-CUDA'
     description: General-purpose GPU computations using CUDA C++ for image pipeline algorithms.
@@ -374,8 +365,7 @@ eklavya:
   - name: OpenGL 3D Game Engine
     year: 2023
     tags:
-      - Computer Architecture
-      - Compilers
+      - Graphics
     github: 'https://github.com/Ritika128/OpenGl-3d-GameEngine'
     description: 3D Chess game built using OpenGL libraries.
   - name: RISC-V CPU
@@ -389,7 +379,6 @@ eklavya:
     year: 2023
     tags:
       - Robotics
-      - Operating Systems
     github: 'https://github.com/richa-sawant/ROSfunc_EKLAVYA23'
     description: ROS-like publisher-subscriber communication model using functional programming.
   - name: Rotary Inverted Pendulum
@@ -412,14 +401,12 @@ eklavya:
     tags:
       - Robotics
       - Mechanical Design
-      - PCB Design
     github: 'https://github.com/pavit15/softquad'
     description: Soft-material quadruped robot with obstacle avoidance using sensors and intelligent algorithms.
   - name: WriteMate
     year: 2023
     tags:
       - ML
-      - LLM
     github: 'https://github.com/Sanika-k-1317/Write-mate_eklavya23'
     description: RNN-based model converting text into handwriting.
   - name: 32-bit RISC-V CPU on FPGA
@@ -434,7 +421,6 @@ eklavya:
     tags:
       - Controls
       - Embedded
-      - Operating Systems
     github: 'https://github.com/Raghav323/Alfetta'
     description: ESP32-based self-balancing and line-following bot using PID via ESP-IDF and FreeRTOS.
   - name: Balance on Wheels
@@ -463,14 +449,12 @@ eklavya:
     year: 2022
     tags:
       - Embedded
-      - PCB Design
     github: 'https://github.com/VanshPanchal0308/Esp32_Grp_chat'
     description: Self-healing and self-organising mesh chat network between 3 ESP32s.
   - name: ESP32 Radio Transceiver
     year: 2022
     tags:
       - Embedded
-      - PCB Design
     github: 'https://github.com/SubodhBawankar/esp32-radio-tranciever'
     description: Long-range transceiver using ESP32 boards for control commands and messages.
   - name: GPGPU with GLES
@@ -587,21 +571,18 @@ eklavya:
     year: 2021
     tags:
       - Computer Architecture
-      - Verilog
     github: 'https://github.com/siddharth23-8/32-bit-RISC-V-Cpu-Core'
     description: 32-bit RISC-V processor core in Logisim capable of running Fibonacci series.
   - name: ARA — Deep Learning Library
     year: 2021
     tags:
       - ML
-      - Compilers
     github: 'https://github.com/rishabh2002-lang/ARA'
     description: Deep learning library supporting binary classification model training.
   - name: Bluetooth Joystick
     year: 2021
     tags:
       - Embedded
-      - PCB Design
     github: 'https://github.com/Krishna-13-cyber/BluetoothJoystick'
     description: 2-axis Bluetooth game controller using ESP32 and joystick module.
   - name: Delta Pick and Place
@@ -621,9 +602,6 @@ eklavya:
     description: 'SolidWorks drone design, Gazebo simulation, and hovering control system.'
   - name: Email TUI
     year: 2021
-    tags:
-      - Operating Systems
-      - Compilers
     github: 'https://github.com/ParthShirole/email_tui'
     description: Terminal-based email client built with VMime and FTXUI libraries.
   - name: Enter Darknet
@@ -644,7 +622,6 @@ eklavya:
     year: 2021
     tags:
       - Embedded
-      - PCB Design
     github: 'https://github.com/RISHI27-dot/ESP32-chat-communication-over-wifi'
     description: Chat communication between two ESP32 boards using ESP-NOW protocol.
   - name: Gesture Detection and Replication
@@ -681,7 +658,6 @@ eklavya:
     year: 2021
     tags:
       - Signal Processing
-      - ML
     github: 'https://github.com/Dhriti03/ai-noise-reduction'
     description: Environmental noise reduction from audio signals using DSP in Python.
   - name: Quadruped Gait Analysis
@@ -716,7 +692,6 @@ eklavya:
     year: 2020
     tags:
       - Embedded
-      - PCB Design
     github: 'https://github.com/SRA-VJTI/Eklavya2020/blob/master/Eklavya/eklavya2020.md'
     description: Cursor movement and click control using ESP32 and MPU sensor.
   - name: Automated Parking System
@@ -844,7 +819,6 @@ eklavya:
     year: 2017
     tags:
       - Embedded
-      - PCB Design
     github: 'https://drive.google.com/drive/folders/0B7Gv3-tG3f0fWVVLTGYxRzQxVTg'
     description: Electronic version of the classic strategy board game.
   - name: Eye Writer
@@ -865,7 +839,6 @@ eklavya:
     year: 2017
     tags:
       - Embedded
-      - PCB Design
     github: 'https://drive.google.com/drive/folders/0B7Gv3-tG3f0fWVVLTGYxRzQxVTg'
     description: 'Tests soil samples, reads physical properties, and stores data in an app.'
 ---
