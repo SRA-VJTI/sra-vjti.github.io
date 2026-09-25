@@ -4,21 +4,37 @@ import { useState, useMemo } from 'react';
 
 const ALL = 'All';
 
+// Domain filtering only applies to Ongoing projects + the most recent
+// Eklavya batches. Bump RECENT_YEARS_COUNT to widen or narrow that window —
+// years are picked automatically (highest years present in the data), so
+// adding a new year's projects to content/projects.md needs no other change.
+const RECENT_YEARS_COUNT = 1;
+
 export default function ProjectsFilter({ ongoing, eklavya }) {
   const [active, setActive] = useState(ALL);
+
+  const eklavyaYears = useMemo(
+    () => Object.keys(eklavya).sort((a, b) => b - a),
+    [eklavya]
+  );
+  const recentYears = eklavyaYears.slice(0, RECENT_YEARS_COUNT);
+  const recentEklavya = useMemo(
+    () => recentYears.flatMap(year => eklavya[year]),
+    [recentYears, eklavya]
+  );
 
   const tags = useMemo(() => {
     const set = new Set();
     ongoing.forEach(p => p.tags?.forEach(t => set.add(t)));
-    Object.values(eklavya).flat().forEach(p => p.tags?.forEach(t => set.add(t)));
+    recentEklavya.forEach(p => p.tags?.forEach(t => set.add(t)));
     return [ALL, ...[...set].sort()];
-  }, [ongoing, eklavya]);
+  }, [ongoing, recentEklavya]);
 
   const filteredOngoing = active === ALL
     ? ongoing
     : ongoing.filter(p => p.tags?.includes(active));
 
-  const eklavyaYears = Object.keys(eklavya).sort((a, b) => b - a);
+  const yearsToShow = active === ALL ? eklavyaYears : recentYears;
 
   return (
     <div>
@@ -70,7 +86,7 @@ export default function ProjectsFilter({ ongoing, eklavya }) {
 
       {/* Eklavya */}
       <p className="section-title">Eklavya Projects</p>
-      {eklavyaYears.map(year => {
+      {yearsToShow.map(year => {
         const items = active === ALL
           ? eklavya[year]
           : eklavya[year].filter(p => p.tags?.includes(active));
