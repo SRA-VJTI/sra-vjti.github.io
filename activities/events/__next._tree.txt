@@ -9,4 +9,4 @@
 :HL["/events/wall-e.jpg","image"]
 :HL["/events/mario.jpg","image"]
 :HL["/events/sac.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"activities","param":null,"prefetchHints":0,"slots":{"children":{"name":"events","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"iZ0WYZQCPLS_OdQVqwjjq"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"activities","param":null,"prefetchHints":0,"slots":{"children":{"name":"events","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"mPrEPVb0qu5p8T859zM6t"}
