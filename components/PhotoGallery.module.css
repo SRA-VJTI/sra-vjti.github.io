@@ -1,0 +1,57 @@
+.stackWrapper { min-width: 0; }
+.stack { display: block; margin: 0 auto; text-align: left; }
+.stack:focus-visible, .dialog button:focus-visible {
+  outline: 3px solid var(--accent-text);
+  outline-offset: 4px;
+}
+.dialog {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  border: 0;
+  padding: 1rem;
+  background: transparent;
+  color: var(--text);
+}
+.dialog[open] { display: grid; place-items: center; }
+.dialog::backdrop {
+  background: #0005;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.viewer {
+  width: min(800px, 88vw);
+  height: min(660px, 76dvh);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 20px 80px #0006;
+}
+.toolbar { display: flex; align-items: center; gap: 1rem; padding-bottom: 1rem; }
+.toolbar h2 { flex: 1; font-size: 1.5rem; }
+.toolbar button { width: 44px; height: 44px; font-size: 1.5rem; }
+.stage { position: relative; flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; touch-action: pan-y; container-type: size; }
+.stage img { width: 100%; height: 100%; object-fit: contain; }
+.photoFrame { width: 100%; height: 100%; }
+/* The front-view source is a portrait screenshot containing a centered 4:3 photo. */
+.landscapeFrame { width: min(100%, calc(100cqh * 4 / 3)); aspect-ratio: 4 / 3; overflow: hidden; }
+.landscapeFrame img { object-fit: cover; filter: brightness(1.15); }
+.stack img[src$='/projects/ballerina-front-view.jpg'], .thumbnails img[src$='/projects/ballerina-front-view.jpg'] { filter: brightness(1.15); }
+.stage button { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 56px; font-size: 2.5rem; border-radius: 8px; background: #000b; }
+.previous { left: 0.5rem; }
+.next { right: 0.5rem; }
+.thumbnails { display: flex; gap: 0.5rem; overflow-x: auto; flex-shrink: 0; padding: 1rem 0.25rem 0.25rem; }
+.thumbnails button { flex: 0 0 80px; height: 64px; border: 2px solid transparent; border-radius: 4px; overflow: hidden; }
+.thumbnails button[aria-pressed='true'] { border-color: var(--accent-text); }
+.thumbnails img { width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 700px) {
+  .dialog { padding: 0.75rem; }
+  .viewer { height: 70dvh; padding: 0.75rem; }
+}

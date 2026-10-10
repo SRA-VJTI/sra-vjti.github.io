@@ -54,7 +54,7 @@ events:
       robotics skills.
   - name: Wall-E
     category: Workshop
-    image: /events/wall-e.jpg
+    image: /static/images/home-gallery/events/walle-2.7.jpeg
     github: 'https://github.com/SRA-VJTI/Wall-E'
     youtube: 'https://www.youtube.com/watch?v=-AbwiFBjHl0&t=36s'
     order: 5
@@ -62,7 +62,7 @@ events:
       Line-following and self-balancing with ESP32. Learn PID Control, Communication Protocols, PWM, and RTOS. Build and tune a real robot, applying theory to hardware.
   - name: MARIO
     category: Workshop
-    image: /events/mario.jpg
+    image: /static/images/home-gallery/events/mario.webp
     github: 'https://github.com/SRA-VJTI/MARIO'
     youtube: 'https://www.youtube.com/watch?v=qkdTsRB-te4'
     order: 6
