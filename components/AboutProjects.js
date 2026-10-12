@@ -1,14 +1,11 @@
 import Link from 'next/link';
+import PhotoGallery from './PhotoGallery';
 
 export default function AboutProjects() {
     return (
       <section className="section about">
         <div className="container aboutev">
-           <div className="photo-stack">
-            <img src="/events/pixels.jpg" alt="" />
-            <img src="/events/wall-e.jpg" alt="" />
-            <img src="/events/mario.jpg" alt="" />
-           </div>
+           <PhotoGallery group="projects" className="" />
            
            <div>
              <p className="about__eyebrow">Projects</p>
