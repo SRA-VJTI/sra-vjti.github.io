@@ -492,7 +492,12 @@ img { max-width: 100%; display: block; }
 .footer__email:hover { color: var(--accent-text); }
 
 @media (max-width: 768px) {
-  .footer__top { grid-template-columns: 1fr; gap: var(--s8); }
+  .footer { margin-top: var(--s12); padding-top: var(--s12); }
+  .footer__top { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s8) var(--s4); }
+  .footer__top > :first-child { grid-column: 1 / -1; }
+  .footer__col li { margin-bottom: 0; }
+  .footer__col a { display: flex; align-items: center; min-height: 44px; }
+  .footer__email { display: inline-flex; align-items: center; min-height: 44px; overflow-wrap: anywhere; }
 }
 
 /* =============================================
@@ -683,9 +688,40 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
   .about__grid { grid-template-columns: 1fr; gap: var(--s8); }
-  .aboutev { grid-template-columns: 1fr; gap: var(--s8); }
-  .photo-stack { max-width: 320px; }
+  .aboutev {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'heading' 'description' 'gallery' 'action';
+    gap: var(--s6);
+  }
+  .aboutev__copy { display: contents; }
+  .aboutev__copy .about__eyebrow { grid-area: heading; margin-bottom: -12px; }
+  .aboutev__copy .aboutev__text { grid-area: description; }
+  .aboutev__gallery { grid-area: gallery; }
+  .aboutev__action { grid-area: action; }
+  .aboutev__text { margin-bottom: 0; }
+  .photo-stack { max-width: 360px; aspect-ratio: 4 / 3; }
+  .photo-stack img { width: 92%; border-radius: 8px; }
+  .photo-stack img:nth-child(1) { top: 1%; left: 1%; transform: rotate(-3deg); }
+  .photo-stack img:nth-child(2) { top: 3%; left: 6%; transform: rotate(2deg); }
+  .photo-stack img:nth-child(3) { top: 6%; left: 4%; transform: rotate(-1deg); }
   .events-stack { margin-left: 0; }
+  .hero__title {
+    font-size: clamp(1.5rem, 7.5vw, 3.5rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+  }
+  .hero__sub { letter-spacing: 0.035em; line-height: 1.7; }
+  .page-header__title { font-size: clamp(1.5rem, 6vw, 2.5rem); line-height: 1.18; overflow-wrap: anywhere; }
+  .page-header__desc, .about__text, .aboutev__text { font-size: 1rem; line-height: 1.75; }
+  .btn { min-height: 48px; justify-content: center; text-align: center; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .aboutev__action { width: 100%; }
+}
+
+@media (hover: none) and (max-width: 768px) {
+  .photo-stack:hover img:nth-child(1) { transform: rotate(-3deg); }
+  .photo-stack:hover img:nth-child(2) { transform: rotate(2deg); }
+  .photo-stack:hover img:nth-child(3) { transform: rotate(-1deg); }
 }
 
 /* =============================================
@@ -875,7 +911,13 @@ img { max-width: 100%; display: block; }
 .sponsors__name:hover { border-color: var(--border-strong); color: var(--text); }
 
 @media (max-width: 600px) {
+  .sponsors__list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s3); }
+  .sponsors__list > li { min-width: 0; }
+  .sponsors__title, .sponsors__cta { font-size: 0.75rem; letter-spacing: 0.06em; }
+  .sponsors__head { gap: var(--s2) var(--s4); margin-bottom: var(--s4); }
+  .sponsors__cta { min-height: 44px; }
   .sponsors__logo, .sponsors__name { height: 88px; padding: var(--s4); }
+  .sponsors__name { font-size: 0.875rem; text-align: center; overflow-wrap: anywhere; }
 }
 
 /* =============================================

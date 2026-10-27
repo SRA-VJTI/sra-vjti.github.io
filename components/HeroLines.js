@@ -9,6 +9,7 @@ import { useEffect, useRef } from 'react';
 
 const CELL = 14; // sampling grid, in px. Coarser reads as smoother curves.
 const LEVELS = 18; // number of contour rings; spacing is BAND / LEVELS
+const MOBILE_LEVELS = 8;
 // The field's values cluster around 0.5, so the levels are packed into a band
 // around the middle. Spreading them evenly over 0..1 leaves the outer rings
 // almost never crossed, which renders as three lonely lines.
@@ -57,10 +58,16 @@ export default function HeroLines() {
     let field = new Float32Array(0);
     let raf = 0;
     let last = 0;
+    let levels = LEVELS;
+    let frequencyScale = 1;
     const start = performance.now();
 
     const resize = () => {
       const { width, height } = canvas.getBoundingClientRect();
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      // Fewer, broader contours leave breathing room on narrow screens.
+      levels = isMobile ? MOBILE_LEVELS : LEVELS;
+      frequencyScale = isMobile ? 0.65 : 1;
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
       canvas.width = Math.max(1, Math.floor(width * dpr));
       canvas.height = Math.max(1, Math.floor(height * dpr));
@@ -95,7 +102,7 @@ export default function HeroLines() {
           for (let s = 0; s < sources.length; s++) {
             const o = sources[s];
             const d = Math.hypot(x - o.cx, y - o.cy);
-            v += Math.sin(d * o.freq - t * o.speed + o.phase) * o.amp;
+            v += Math.sin(d * o.freq * frequencyScale - t * o.speed + o.phase) * o.amp;
           }
 
           field[j * cols + i] = 0.5 + v / (2 * total);
@@ -105,8 +112,8 @@ export default function HeroLines() {
       ctx.lineWidth = 1;
       ctx.lineCap = 'round';
 
-      for (let l = 0; l < LEVELS; l++) {
-        const level = 0.5 + (l / (LEVELS - 1) - 0.5) * BAND;
+      for (let l = 0; l < levels; l++) {
+        const level = 0.5 + (l / (levels - 1) - 0.5) * BAND;
 
         // Every fourth ring picks up a trace of the accent; the rest stay
         // near-invisible so the contours never compete with the headline.
