@@ -39,7 +39,7 @@ const galleries = [
 const photoUrl = (gallery, index) =>
   `/static/images/home-gallery/${gallery.folder}/${gallery.photos[index][0]}`;
 
-export default function PhotoGallery({ group, className = '' }) {
+export default function PhotoGallery({ group, className = '', wrapperClassName = '' }) {
   const groupIndex = group === 'events' ? 0 : 1;
   const previewGallery = galleries[groupIndex];
   const [selection, setSelection] = useState(null);
@@ -78,7 +78,7 @@ export default function PhotoGallery({ group, className = '' }) {
 
   return (
     <>
-      <div className={styles.stackWrapper}>
+      <div className={`${styles.stackWrapper} ${wrapperClassName}`}>
         <button
           className={`photo-stack ${styles.stack} ${className}`}
           aria-label={`Open ${previewGallery.title} gallery, ${previewGallery.photos.length} photos`}
