@@ -34,7 +34,7 @@ publications:
       - Vrushtee Gaikwad
     venue: 'RL4VLA Workshop, RSS 2026'
     date: 17 July 2026
-    link: 'https://openreview.net/forum?id=vgtocVNz0V'
+    link: 'https://openreview.net/pdf?id=vgtocVNz0V'
   - title: 'IMBench: A Benchmark for Intuitive Robotic Manipulation'
     authors:
       - Anurag Maurya
@@ -55,13 +55,13 @@ publications:
       - Atharva Kshirsagar
     venue: 'Conference on Robot Learning (CoRL 2026)'
     date: 18 October 2026
-    link: 'https://openreview.net/forum?id=GRyPwVAxpq'
+    link: 'https://imbench.org/assets/paper/IMBench_CoRL2026.pdf'
   - title: "When Life Doesn't Give You Q-Values: Diagnosing Q-Exploitation in Test-Time Guidance of Flow-Matching Policies"
     authors:
       - Prajwal Avhad
     venue: 'Diff4RL Workshop, RSS 2026'
     date: 17 August 2026
-    link: 'https://openreview.net/forum?id=473pN6k5sX'
+    link: 'https://openreview.net/pdf?id=473pN6k5sX'
   - title: 'Acti-V-Link: An Active Surface, Visual Feedback Based, Mechanically Underactuated Gripper for In-Hand Manipulation'
     authors:
       - Karthik Swaminathan
