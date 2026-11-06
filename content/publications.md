@@ -11,6 +11,13 @@ eyebrow: Activities
 title: Publications
 desc: Research papers authored by SRA members at international conferences.
 publications:
+  - title: 'Plans Are Not Interventions: Measuring and Repairing Plan Leakage in Driving World Models'
+    authors:
+      - Sahil Apage
+      - Medhansh Abhilash
+    venue: 'Grounded 4D Multimodal World Models for Autonomous Driving Decision Making Workshop, CoRL 2026'
+    date: 5 November 2026
+    link: 'https://sahilapage.github.io/plan-leak/'
   - title: 'Seen, Then Deleted: 4D Occupancy World Models Erase the Agents They Cannot Forecast'
     authors:
       - Sahil Apage
@@ -18,7 +25,7 @@ publications:
       - Kartik Tagore
     venue: 'World Action Models for Autonomous Driving (WAM-AD) Workshop, WACV 2027'
     date: 4 November 2026
-    link: 'https://sahilapage.github.io/seen-then-deleted/assets/Seen_Then_Deleted_WAM-AD_camera_ready.pdf'
+    link: 'https://sahilapage.github.io/seen-then-deleted/'
   - title: 'YAMI: A Robot-Native, SLAM-Free Handheld YAM Interface'
     authors:
       - Atharva Kshirsagar
