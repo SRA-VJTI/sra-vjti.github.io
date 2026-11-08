@@ -64,6 +64,149 @@ ongoing:
       High-accuracy indoor positioning using Ultra-Wideband radios. Achieved ~3cm accuracy across basketball-court-scale environments. Next stage: TDoA architecture for scalable multi-anchor
       deployments.
 eklavya:
+  - name: Amazedex
+    year: 2026
+    tags:
+      - RL
+      - Robotics
+      - Controls
+    github: 'https://github.com/OMSONTAKKE003/AmazeDex'
+    description: 'Reinforcement learning project for autonomous in-hand dexterous manipulation using a four-fingered Amazing Hand. Trains control policies in MuJoCo to reorient a cube to target poses, with visual tracking for deployment on real hardware.'
+  - name: AstraRTOS
+    year: 2026
+    tags:
+      - Embedded
+      - Operating Systems
+    github: 'https://github.com/SRA-VJTI/AstraRTOS'
+    description: 'Real-time operating system built from scratch for ARM Cortex-M4 microcontrollers, targeting the STM32F4 Discovery board. Features preemptive priority-based scheduling, queues, mutexes, semaphores, timers, and low-level peripheral drivers.'
+  - name: AURA
+    year: 2026
+    tags:
+      - Embedded
+      - Signal Processing
+    github: 'https://github.com/moonknightnotfound/Aura'
+    description: 'Battery-free communication system that harvests energy from ambient FM signals and uses FM backscatter to transmit messages. Modulates existing radio signals through an RF switch, allowing reception using standard FM receivers and software-defined radios.'
+  - name: Blazescript
+    year: 2026
+    tags:
+      - Compilers
+    github: 'https://github.com/kashyap404/BlazeScript'
+    description: 'Custom programming language and compiler built from scratch using ahead-of-time compilation. Designed to generate WebAssembly object files and improve performance over JavaScript for selected web workloads.'
+  - name: Columbus Maximus
+    year: 2026
+    tags:
+      - Robotics
+      - Controls
+      - Embedded
+      - Mechanical Design
+    github: 'https://github.com/Diopurp/Columbus-Maximus'
+    description: 'Autonomous indoor mobile robot using LiDAR, UWB positioning, wheel encoders, and sensor fusion for mapping and navigation. Runs ROS 2 on a Raspberry Pi 4B with ESP32-based motor control and PID feedback.'
+  - name: Flexwalk
+    year: 2026
+    tags:
+      - Mechanical Design
+      - Controls
+      - Robotics
+    github: 'https://github.com/Dhruva245/Flexwalk'
+    description: 'Robotic walking platform integrating mechanical design, electronics, kinematics, and gait-generation control systems to achieve stable, precise, and human-like locomotion.'
+  - name: Icarus
+    year: 2026
+    tags:
+      - Embedded
+      - PCB Design
+      - Robotics
+    github: 'https://github.com/Aryan2804/Icarus'
+    description: 'Compact FPV quadcopter built using an ESP32-S3-WROOM microcontroller and brushed coreless motors. Designed for wireless control through a mobile phone using Wi-Fi and Bluetooth.'
+  - name: McQueen
+    year: 2026
+    tags:
+      - Computer Vision
+      - Robotics
+      - ML
+      - Controls
+    github: 'https://github.com/medhansh2808/McQueen'
+    description: 'Vision-based autonomous RC car using a single RGB camera for perception. A Jetson Nano streams camera data to a remote NVIDIA RTX 4090, where a pretrained driving model predicts steering and throttle for real-time closed-loop control.'
+  - name: MicroMouse
+    year: 2026
+    tags:
+      - Embedded
+      - PCB Design
+      - Controls
+      - Robotics
+    github: 'https://github.com/typewriter13/Micromouse'
+    description: 'Autonomous maze-solving robot using onboard sensors and maze-solving algorithms to map and navigate mazes. Designed to find the shortest route and complete the maze in the minimum possible time.'
+  - name: Mission Mimosa
+    year: 2026
+    tags:
+      - Robotics
+      - Computer Vision
+      - ML
+    github: 'https://github.com/zademahi238/mission-mimosa'
+    description: 'Robot learning project combining vision and tactile sensing to help robots understand physical interactions and manipulate objects more effectively, extending robotic perception beyond visual information alone.'
+  - name: PicoLink
+    year: 2026
+    tags:
+      - Embedded
+      - PCB Design
+    github: 'https://github.com/ashmita0307/PicoLink'
+    description: 'RP2040-based embedded hardware project providing VGA display output and USB connectivity through a composite USB device. Uses PIO and DMA for real-time graphics and communication, with custom PCB design and USB HID and CDC interfaces.'
+  - name: PlatyPulse
+    year: 2026
+    tags:
+      - Embedded
+      - PCB Design
+      - Signal Processing
+    github: 'https://github.com/harshthorat-cpu/PLATYPULSE'
+    description: 'Custom handheld wireless experimentation platform inspired by the Flipper Zero. Built around the ESP32-S3, combining sub-GHz RF, RFID/NFC, and infrared communication for capturing, analyzing, storing, and transmitting supported wireless signals.'
+  - name: Reforge
+    year: 2026
+    tags:
+      - Verilog
+      - PCB Design
+      - Embedded
+    github: 'https://github.com/kishoriju-vrind/Reforge'
+    description: 'Custom FPGA development board based on the Lattice iCE40 FPGA and ESP32-WROOM-32E. Integrates programmable digital logic and embedded control for hands-on experimentation with FPGA-based digital systems and firmware.'
+  - name: Splaterra
+    year: 2026
+    tags:
+      - Computer Vision
+      - ML
+      - Robotics
+    github: 'https://github.com/javAmeya/splaterra'
+    description: 'Scalable 3D reconstruction project that transforms campus walkthrough videos into photorealistic interactive environments using Gaussian Splatting, camera pose estimation, and depth prediction.'
+  - name: TinyGPU
+    year: 2026
+    tags:
+      - Computer Architecture
+      - Verilog
+      - Embedded
+    github: 'https://github.com/athralk/TinyGPU'
+    description: 'Custom RISC-V vector extension supporting matrix multiplication acceleration for the CVA6 CPU. Uses a SIMD-style architecture implemented on a Zynq-7020 FPGA, demonstrating a reported 16x speedup for 4x4 matrix multiplication.'
+  - name: ViReL
+    year: 2026
+    tags:
+      - ML
+      - RL
+      - Computer Vision
+      - Robotics
+    github: 'https://github.com/ssdunit/ViReL'
+    description: 'Spatially grounded vision-language model using GRPO policy optimization to improve visual reasoning, reduce spatial hallucinations, and support reliable perception-driven decision-making for robotic manipulation.'
+  - name: Waddle
+    year: 2026
+    tags:
+      - RL
+      - Robotics
+      - Controls
+    github: 'https://github.com/palaksinghi/waddle/tree/hindraj/duck'
+    description: 'Reinforcement learning-based bipedal locomotion project. Trains a control policy to learn balancing and walking through observations, actions, and rewards, enabling two-legged robots to achieve stable locomotion.'
+  - name: "Where's Waldo"
+    year: 2026
+    tags:
+      - Verilog
+      - Computer Architecture
+      - Computer Vision
+    github: 'https://github.com/Anish-Ogale/Wheres-Waldo'
+    description: 'Custom FPGA hardware accelerator for real-time YOLO object detection. Parallelizes matrix multiplication and convolution operations in hardware to process live camera feeds and generate object bounding boxes and class labels.'
   - name: AutoPort
     year: 2025
     tags:
