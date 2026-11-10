@@ -1,40 +1,61 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useMemo, useState } from 'react';
 
 const ALL = 'All';
+const CURRENT_NAMES = ['AURA', 'AstraRTOS', 'HackerFab', 'RISC-V GPU', 'Synapse32', 'WiFi CSI'];
+const FEATURED_YEAR = '2026';
 
-// Domain filtering only applies to Ongoing projects + the most recent
-// Eklavya batches. Bump RECENT_YEARS_COUNT to widen or narrow that window —
-// years are picked automatically (highest years present in the data), so
-// adding a new year's projects to content/projects.md needs no other change.
-const RECENT_YEARS_COUNT = 1;
+function ProjectCards({ projects, archive = false }) {
+  return (
+    <div className={archive ? 'eklavya-grid' : 'project-grid'}>
+      {projects.map(p => (
+        <div key={`${p.name}-${p.year ?? 'non-eklavya'}`} className={archive ? 'eklavya-item' : 'project-card'}>
+          <p className={archive ? 'eklavya-item__name' : 'project-card__name'}>{p.name}</p>
+          {p.description && (
+            <p className={archive ? 'eklavya-item__desc' : 'project-card__desc'}>{p.description}</p>
+          )}
+          {p.tags?.length > 0 && (
+            <div className="project-card__tags">
+              {p.tags.map(tag => <span className="tag" key={tag}>{tag}</span>)}
+            </div>
+          )}
+          {(p.github || p.notion) && (
+            <div className="project-card__links">
+              {p.github && (
+                <a href={p.github} target="_blank" rel="noopener noreferrer" className="ext-link">GitHub ↗</a>
+              )}
+              {p.notion && (
+                <a href={p.notion} target="_blank" rel="noopener noreferrer" className="ext-link">Notion ↗</a>
+              )}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function ProjectsFilter({ ongoing, eklavya }) {
   const [active, setActive] = useState(ALL);
+  const eklavya2026 = eklavya[FEATURED_YEAR] ?? [];
+  const archiveYears = Object.keys(eklavya)
+    .filter(year => Number(year) < Number(FEATURED_YEAR))
+    .sort((a, b) => Number(b) - Number(a));
 
-  const eklavyaYears = useMemo(
-    () => Object.keys(eklavya).sort((a, b) => b - a),
-    [eklavya]
-  );
-  const recentYears = eklavyaYears.slice(0, RECENT_YEARS_COUNT);
-  const recentEklavya = useMemo(
-    () => recentYears.flatMap(year => eklavya[year]),
-    [recentYears, eklavya]
-  );
+  // Current projects are stored in ongoing; Eklavya 2026 only contains its remaining batch entries.
+  const current = CURRENT_NAMES.map(name => ongoing.find(p => p.name === name)).filter(Boolean);
+  const past = ongoing.filter(p => !CURRENT_NAMES.includes(p.name));
 
   const tags = useMemo(() => {
-    const set = new Set();
-    ongoing.forEach(p => p.tags?.forEach(t => set.add(t)));
-    recentEklavya.forEach(p => p.tags?.forEach(t => set.add(t)));
-    return [ALL, ...[...set].sort()];
-  }, [ongoing, recentEklavya]);
+    const available = new Set();
+    [...current, ...eklavya2026].forEach(p => p.tags?.forEach(t => available.add(t)));
+    return [ALL, ...[...available].sort()];
+  }, [current, eklavya2026]);
 
-  const filteredOngoing = active === ALL
-    ? ongoing
-    : ongoing.filter(p => p.tags?.includes(active));
-
-  const yearsToShow = active === ALL ? eklavyaYears : recentYears;
+  const matches = p => active === ALL || p.tags?.includes(active);
+  const filteredCurrent = current.filter(matches);
+  const filteredEklavya = eklavya2026.filter(matches);
 
   return (
     <div>
@@ -50,73 +71,28 @@ export default function ProjectsFilter({ ongoing, eklavya }) {
         ))}
       </div>
 
-      {/* Ongoing */}
-      {filteredOngoing.length > 0 && (
-        <>
-          <p className="section-title">Ongoing</p>
-          <div className="project-grid">
-            {filteredOngoing.map(p => (
-              <div key={p.name} className="project-card">
-                <p className="project-card__name">{p.name}</p>
-                <p className="project-card__desc">{p.description}</p>
-                {p.tags?.length > 0 && (
-                  <div className="project-card__tags">
-                    {p.tags.map(t => <span key={t} className="tag">{t}</span>)}
-                  </div>
-                )}
-                {(p.github || p.notion) && (
-                  <div className="project-card__links">
-                    {p.github && (
-                      <a href={p.github} target="_blank" rel="noopener noreferrer" className="ext-link">
-                        GitHub ↗
-                      </a>
-                    )}
-                    {p.notion && (
-                      <a href={p.notion} target="_blank" rel="noopener noreferrer" className="ext-link">
-                        Notion ↗
-                      </a>
-                    )}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </>
-      )}
+      <p className="section-title">Current Projects</p>
+      <ProjectCards projects={filteredCurrent} />
 
-      {/* Eklavya */}
-      <p className="section-title">Eklavya Projects</p>
-      {yearsToShow.map(year => {
-        const items = active === ALL
-          ? eklavya[year]
-          : eklavya[year].filter(p => p.tags?.includes(active));
+      {/* The year-section wrapper gives the same vertical gap before Past Projects
+          and Eklavya Archive as the other project sections. */}
+      <div className="year-section">
+        <p className="section-title">Eklavya 2026</p>
+        <ProjectCards projects={filteredEklavya} archive />
+      </div>
 
-        if (!items.length) return null;
+      <div className="year-section">
+        <p className="section-title">Past Projects</p>
+        <ProjectCards projects={past} archive />
+      </div>
 
-        return (
-          <div key={year} className="year-section">
-            <p className="year-section__heading">{year}</p>
-            <div className="eklavya-grid">
-              {items.map(p => (
-                <div key={p.name} className="eklavya-item">
-                  <p className="eklavya-item__name">{p.name}</p>
-                  <p className="eklavya-item__desc">{p.description}</p>
-                  {p.tags?.length > 0 && (
-                    <div className="project-card__tags">
-                      {p.tags.map(t => <span key={t} className="tag">{t}</span>)}
-                    </div>
-                  )}
-                  {p.github && (
-                    <a href={p.github} target="_blank" rel="noopener noreferrer" className="ext-link">
-                      GitHub ↗
-                    </a>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        );
-      })}
+      <p className="section-title">Eklavya Archive</p>
+      {archiveYears.map(year => (
+        <div className="year-section" key={year}>
+          <p className="year-section__heading">{year}</p>
+          <ProjectCards projects={eklavya[year]} archive />
+        </div>
+      ))}
     </div>
   );
 }

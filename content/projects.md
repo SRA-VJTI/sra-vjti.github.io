@@ -14,14 +14,20 @@
 
 eyebrow: Activities
 title: Projects
-desc: Ongoing research and the yearly Eklavya batch projects.
+desc: Current research, Eklavya 2026 projects, past work, and the Eklavya archive.
 ongoing:
-  - name: EEG Bionic Arm
+  - name: AURA
     tags:
       - Embedded
-      - RL
-    github: 'https://github.com/sahilapage/Bionic-Hand-Controlled-Over-EEG'
-    description: Bionic hand controlled through brain signals using electroencephalography. 3D-printed prosthetic with imitation and reinforcement learning capabilities.
+      - Signal Processing
+    github: 'https://github.com/moonknightnotfound/Aura'
+    description: 'Battery-free communication system that harvests energy from ambient FM signals and uses FM backscatter to transmit messages. Modulates existing radio signals through an RF switch, allowing reception using standard FM receivers and software-defined radios.'
+  - name: AstraRTOS
+    tags:
+      - Embedded
+      - Operating Systems
+    github: 'https://github.com/SRA-VJTI/AstraRTOS'
+    description: 'Real-time operating system built from scratch for ARM Cortex-M4 microcontrollers, targeting the STM32F4 Discovery board. Features preemptive priority-based scheduling, queues, mutexes, semaphores, timers, and low-level peripheral drivers.'
   - name: GantryMate-200
     tags:
       - Robotics
@@ -48,6 +54,12 @@ ongoing:
       - Verilog
     github: 'https://github.com/cupx0j0e/riscv-gpu/'
     description: Extending a systolic array into an RVV-oriented accelerator. Combines deterministic hardware throughput with software-level adaptability.
+  - name: WiFi CSI
+    tags:
+      - Embedded
+      - Signal Processing
+      - ML
+    description: 'Wi-Fi CSI Based Sensing: A human action sensing system made using a commodity router and ESP32-S3 modules, which uses signal processing and machine learning to classify various actions, and studies how these models transfer across rooms.'
   - name: Synapse32
     tags:
       - Computer Architecture
@@ -72,20 +84,6 @@ eklavya:
       - Controls
     github: 'https://github.com/OMSONTAKKE003/AmazeDex'
     description: 'Reinforcement learning project for autonomous in-hand dexterous manipulation using a four-fingered Amazing Hand. Trains control policies in MuJoCo to reorient a cube to target poses, with visual tracking for deployment on real hardware.'
-  - name: AstraRTOS
-    year: 2026
-    tags:
-      - Embedded
-      - Operating Systems
-    github: 'https://github.com/SRA-VJTI/AstraRTOS'
-    description: 'Real-time operating system built from scratch for ARM Cortex-M4 microcontrollers, targeting the STM32F4 Discovery board. Features preemptive priority-based scheduling, queues, mutexes, semaphores, timers, and low-level peripheral drivers.'
-  - name: AURA
-    year: 2026
-    tags:
-      - Embedded
-      - Signal Processing
-    github: 'https://github.com/moonknightnotfound/Aura'
-    description: 'Battery-free communication system that harvests energy from ambient FM signals and uses FM backscatter to transmit messages. Modulates existing radio signals through an RF switch, allowing reception using standard FM receivers and software-defined radios.'
   - name: Blazescript
     year: 2026
     tags:
