@@ -14,21 +14,20 @@
 
 eyebrow: Activities
 title: Projects
-desc: Ongoing research and the yearly Eklavya batch projects.
+desc: Current projects, past projects, and Eklavya batches by year.
 ongoing:
-  - name: EEG Bionic Arm
+  - name: AURA
     tags:
       - Embedded
-      - RL
-    github: 'https://github.com/sahilapage/Bionic-Hand-Controlled-Over-EEG'
-    description: Bionic hand controlled through brain signals using electroencephalography. 3D-printed prosthetic with imitation and reinforcement learning capabilities.
-  - name: GantryMate-200
+      - Signal Processing
+    github: 'https://github.com/moonknightnotfound/Aura'
+    description: 'Battery-free communication system that harvests energy from ambient FM signals and uses FM backscatter to transmit messages. Modulates existing radio signals through an RF switch, allowing reception using standard FM receivers and software-defined radios.'
+  - name: AstraRTOS
     tags:
-      - Robotics
-      - Controls
-      - Mechanical Design
-    github: 'https://github.com/SarvaarthN/Eklavya_Gantry'
-    description: Precision gantry-based automation system for handling miniature screws on delicate electronics. Demonstrates sub-millimeter positioning accuracy.
+      - Embedded
+      - Operating Systems
+    github: 'https://github.com/SRA-VJTI/AstraRTOS'
+    description: 'Real-time operating system built from scratch for ARM Cortex-M4 microcontrollers, targeting the STM32F4 Discovery board. Features preemptive priority-based scheduling, queues, mutexes, semaphores, timers, and low-level peripheral drivers.'
   - name: HackerFab
     tags:
       - Mechanical Design
@@ -48,6 +47,12 @@ ongoing:
       - Verilog
     github: 'https://github.com/cupx0j0e/riscv-gpu/'
     description: Extending a systolic array into an RVV-oriented accelerator. Combines deterministic hardware throughput with software-level adaptability.
+  - name: WiFi CSI
+    tags:
+      - Embedded
+      - Signal Processing
+      - ML
+    description: 'Wi-Fi CSI Based Sensing: A human action sensing system made using a commodity router and ESP32-S3 modules, which uses signal processing and machine learning to classify various actions, and studies how these models transfer across rooms.'
   - name: Synapse32
     tags:
       - Computer Architecture
@@ -64,6 +69,129 @@ ongoing:
       High-accuracy indoor positioning using Ultra-Wideband radios. Achieved ~3cm accuracy across basketball-court-scale environments. Next stage: TDoA architecture for scalable multi-anchor
       deployments.
 eklavya:
+  - name: Amazedex
+    year: 2026
+    tags:
+      - RL
+      - Robotics
+      - Controls
+    github: 'https://github.com/OMSONTAKKE003/AmazeDex'
+    description: 'Trains a multi-fingered robotic hand with reinforcement learning to rotate a cube to target orientations in simulation and on hardware.'
+  - name: Blazescript
+    year: 2026
+    tags:
+      - Compilers
+    github: 'https://github.com/kashyap404/BlazeScript'
+    description: 'Builds a custom programming language and LLVM-based ahead-of-time compiler targeting WebAssembly for efficient browser workloads.'
+  - name: Columbus Maximus
+    year: 2026
+    tags:
+      - Robotics
+      - Controls
+      - Embedded
+      - Mechanical Design
+    github: 'https://github.com/Diopurp/Columbus-Maximus'
+    description: 'Combines UWB, LiDAR SLAM and wheel odometry with an Extended Kalman Filter for precise indoor robot navigation using ROS 2.'
+  - name: Flexwalk
+    year: 2026
+    tags:
+      - Mechanical Design
+      - Controls
+      - Robotics
+    github: 'https://github.com/Dhruva245/Flexwalk'
+    description: 'Designs a 40–50 cm humanoid bipedal lower body with hip, knee and ankle joints using CAD, 3D printing and kinematics.'
+  - name: Icarus
+    year: 2026
+    tags:
+      - Embedded
+      - PCB Design
+      - Controls
+    github: 'https://github.com/Aryan2804/Icarus'
+    description: 'Builds an ESP32-S3 quadcopter flight controller with a custom PCB, IMU sensing, sensor fusion and PID stabilization.'
+  - name: McQueen
+    year: 2026
+    tags:
+      - Computer Vision
+      - Robotics
+      - ML
+      - Controls
+    github: 'https://github.com/medhansh2808/McQueen'
+    description: 'Turns an RC car into a camera-based self-driving vehicle using imitation learning and a compact neural network for steering and throttle.'
+  - name: MicroMouse
+    year: 2026
+    tags:
+      - Embedded
+      - PCB Design
+      - Controls
+    github: 'https://github.com/typewriter13/Micromouse'
+    description: 'Builds an ESP32-S3 autonomous maze-solving robot with custom PCB, sensors, motor control and path planning.'
+  - name: Mission Mimosa
+    year: 2026
+    tags:
+      - Embedded
+      - RL
+    github: 'https://github.com/zademahi238/mission-mimosa'
+    description: 'Integrates low-cost tactile sensors and vision with an SO100 robot arm to improve manipulation and robot learning.'
+  - name: PicoLink
+    year: 2026
+    tags:
+      - Embedded
+      - PCB Design
+    github: 'https://github.com/ashmita0307/PicoLink'
+    description: 'Uses an RP2040 to generate VGA graphics, implement USB device interfaces and integrate both on a custom PCB.'
+  - name: PlatyPulse
+    year: 2026
+    tags:
+      - Embedded
+      - PCB Design
+      - Signal Processing
+    github: 'https://github.com/harshthorat-cpu/PLATYPULSE'
+    description: 'Builds a handheld wireless toolkit for capturing, analyzing and replaying supported RF, RFID, NFC and infrared signals.'
+  - name: Reforge
+    year: 2026
+    tags:
+      - Verilog
+      - PCB Design
+      - Embedded
+    github: 'https://github.com/kishoriju-vrind/Reforge'
+    description: 'Creates a custom FPGA development board combining an ESP32 and iCE40 FPGA with SPI communication and Verilog designs.'
+  - name: Splaterra
+    year: 2026
+    tags:
+      - Computer Vision
+      - ML
+      - Robotics
+    github: 'https://github.com/javAmeya/splaterra'
+    description: 'Reconstructs VJTI campus walkthrough videos into navigable 3D scenes using camera tracking and Gaussian Splatting.'
+  - name: TinyGPU
+    year: 2026
+    tags:
+      - Computer Architecture
+      - Verilog
+      - Embedded
+    github: 'https://github.com/athralk/TinyGPU'
+    description: 'Implements a four-unit parallel processor on FPGA, integrates it with RISC-V and benchmarks matrix operations.'
+  - name: ViReL
+    year: 2026
+    tags:
+      - RL
+      - LLM
+    github: 'https://github.com/ssdunit/ViReL'
+    description: 'Fine-tunes vision-language models with reinforcement learning, covering GRPO, reward design and benchmark evaluation.'
+  - name: Waddle
+    year: 2026
+    tags:
+      - RL
+    github: 'https://github.com/palaksinghi/waddle/tree/hindraj/duck'
+    description: 'Trains bipedal walking policies in MuJoCo and Isaac Lab, comparing PPO and SAC under disturbances and rough terrain.'
+  - name: "Where's Waldo"
+    year: 2026
+    tags:
+      - Verilog
+      - Computer Architecture
+      - Computer Vision
+    github: 'https://github.com/Anish-Ogale/Wheres-Waldo'
+    description: 'Accelerates real-time YOLO object detection on FPGA using parallel matrix multiplication and convolution for camera feeds.'
   - name: AutoPort
     year: 2025
     tags:
