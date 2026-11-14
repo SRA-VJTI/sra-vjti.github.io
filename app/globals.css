@@ -1274,6 +1274,11 @@ img { max-width: 100%; display: block; }
   margin-bottom: var(--s3);
 }
 
+.pub-item__author-highlight {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .pub-item__meta {
   display: flex;
   align-items: center;

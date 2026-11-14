@@ -18,7 +18,18 @@ export default function Publications() {
           {page.publications.map((p) => (
             <div key={p.title} className="pub-item">
               <p className="pub-item__title">{p.title}</p>
-              <p className="pub-item__authors">{p.authors.join(', ')}</p>
+              <p className="pub-item__authors">
+                {p.authors.map((author, index) => (
+                  <span key={author}>
+                    {p.highlightAuthors?.includes(author) ? (
+                      <strong className="pub-item__author-highlight">{author}</strong>
+                    ) : (
+                      author
+                    )}
+                    {index < p.authors.length - 1 ? ', ' : ''}
+                  </span>
+                ))}
+              </p>
               <div className="pub-item__meta">
                 <span className="pub-item__venue">{p.venue}</span>
                 <span className="tag">{p.date}</span>
